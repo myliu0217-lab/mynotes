@@ -2,11 +2,17 @@
 
 本文统一比较三种电极阵列：第一种为 **柔性单晶硅衬底 2T 源极侧选通电压型阵列**，第二种为 **MoS₂ 2T 漏极侧选通电流/TIA 型阵列**，第三种为 **IGZO 1T 被动电压复用阵列**。全文严格按六章组织，并令第一、二、四章使用相同分析框架和相近篇幅。
 
-统一符号如下：$v_E$ 为电极小信号电压， $Z_E(f)$ 为电极—组织界面阻抗， $g_m$ 、 $g_{ds}$ 、 $r_o=1/g_{ds}$ 分别为传感晶体管的跨导、输出电导和输出电阻， $R_{\mathrm{on}}$ 为开关晶体管的总导通电阻， $C_{\mathrm{COL}}$ 为列线总电容， $Z_L$ 为外部负载， $Z_F$ 为跨阻放大器反馈阻抗。
+统一符号如下： $v_E$ 为电极小信号电压， $Z_E(f)$ 为电极—组织界面阻抗， $g_m$ 、 $g_{ds}$ 、 $r_o=1/g_{ds}$ 分别为传感晶体管的跨导、输出电导和输出电阻， $R_{\mathrm{on}}$ 为开关晶体管的总导通电阻， $C_{\mathrm{COL}}$ 为列线总电容， $Z_L$ 为外部负载， $Z_F$ 为跨阻放大器反馈阻抗。
 
 ---
 
 # 第一章　第一种 2T：柔性单晶硅衬底的源极侧选通电压型阵列
+
+<div align="center">
+<img src="TFT1-images/image.png" width="60%">
+</div>
+<br>
+
 
 ## 1.1 pixel 内两只晶体管的功能与次序
 
@@ -35,17 +41,17 @@ $$
 
 所以该 pixel 的原始输出是 **电压**。其中 $V_E$ 为电极电压， $V_{GS}$ 是传感晶体管的栅源电压，受阈值电压、迁移率、温度、陷阱态和偏置应力影响。 $V_{DS,R}(I_B,V_{\mathrm{ROW}})$ 是开关晶体管 $T_R$ 在偏置电流和 ROW 电压共同决定的工作点上的直流压降。该结构更适合测量电极电压的变化量；若测绝对电位，需要逐像素校准。
 
-TLC2274 在图中接成单位增益缓冲器，其作用是隔离列线和后级，不提供显著电压增益。 $15\,\mu\mathrm{F}$ 与 $1\,\mathrm{M\Omega}$ 构成高通滤波器：
+TLC2274 在图中接成单位增益缓冲器，其作用是隔离列线和后级，不提供显著电压增益。 $15\mu\mathrm{F}$ 与 $1\mathrm{M\Omega}$ 构成高通滤波器：
 
 $$
-f_c=\frac{1}{2\pi(1\,\mathrm{M\Omega})(15\,\mu\mathrm{F})}
-\approx0.0106\,\mathrm{Hz},
+f_c=\frac{1}{2\pi(1\mathrm{M\Omega})(15\mu\mathrm{F})}
+\approx0.0106\mathrm{Hz},
 $$
 
 时间常数为：
 
 $$
-\tau=RC=15\,\mathrm{s}.
+\tau=RC=15\mathrm{s}.
 $$
 
 ## 1.3 小信号模型、节点方程与电压增益
@@ -59,8 +65,7 @@ $$
 令 $T_R$ 的漏极接内部节点 $v_x$、源极接 $v_o$，其漏极小信号电流为：
 
 $$
-i_R=g_{mR}v_{gsR}+g_{dsR}v_{dsR}
-=g_{dsR}v_x-(g_{dsR}+g_{mR})v_o.
+i_R=g_{mR}v_{gsR}+g_{dsR}v_{dsR}=g_{dsR}v_x-(g_{dsR}+g_{mR})v_o.
 $$
 
 列负载，即指从列线节点 $v_o$ 向外看，所有连接到 COL 线上的小信号负载，用导纳 $Y_L(s)$ 表示。
@@ -69,7 +74,7 @@ $$
 Y_L(s)=Y_{\mathrm{REF200}}(s)+Y_{\mathrm{opamp}}(s)+sC_{\mathrm{COL}}+Y_{\mathrm{parasitic}}(s).
 $$
 
-其中，
+其中， $Y_{\mathrm{REF200}}(s)$ 为电流镜负载， $Y_{\mathrm{opamp}}(s)$ 为运放负载，理想运放的阻抗无穷大，导纳为零， $C_{\mathrm{COL}}$ 为连接到该节点的所有电容之和， $Y_{\mathrm{parasitic}}(s)$ 为其它寄生阻抗。
 
 ```mermaid
 flowchart LR
@@ -84,71 +89,55 @@ flowchart LR
 
 对输出节点 $v_o$ 列写 KCL：
 
-$
-Y_Lv_o-i_R=0.
-$
+$$
+Y_Lv_o-i_R=0
+$$
 
 代入 $i_R$：
 
-$
--g_{dsR}v_x+
-(Y_L+g_{dsR}+g_{mR})v_o=0,
-$
+$$
+-g_{dsR}v_x+(Y_L+g_{dsR}+g_{mR})v_o=0
+$$
 
 故：
 
-$
-\frac{v_o}{v_x}=
-\frac{g_{dsR}}
-{Y_L+g_{dsR}+g_{mR}}.
-$
+$$
+\frac{v_o}{v_x}=\frac{g_{dsR}}{Y_L+g_{dsR}+g_{mR}}
+$$
 
-在内部节点 $v_x$ 写 KCL。$T_S$ 从源极节点吸收的小信号电流为 $(g_{mS}+g_{dsS})v_x-g_{mS}v_E$，因此：
+对节点 $v_x$ 列写 KCL：
 
-$
-(g_{mS}+g_{dsS})v_x-g_{mS}v_E+i_R=0.
-$
+$$
+g_{mS}(v_E-v_x)-g_{dsS}v_x=i_R
+$$
 
 由输出节点 KCL 有 $i_R=Y_Lv_o$，代入 $v_o/v_x$ 后：
 
-$
-\left[
-g_{mS}+g_{dsS}
-\frac{Y_Lg_{dsR}}
-{Y_L+g_{dsR}+g_{mR}}
-\right]v_x=g_{mS}v_E.
-$
+$$
+\left[g_{mS}+g_{dsS}\frac{Y_Lg_{dsR}}{Y_L+g_{dsR}+g_{mR}}\right]v_x=g_{mS}v_E
+$$
 
 于是：
 
-$
-\frac{v_x}{v_E}=
-\frac{g_{mS}}
-{g_{mS}+g_{dsS}+
-\dfrac{Y_Lg_{dsR}}
-{Y_L+g_{dsR}+g_{mR}}}.
-$
+$$
+\frac{v_x}{v_E}=\frac{g_{mS}}{g_{mS}+g_{dsS}+\dfrac{Y_Lg_{dsR}}{Y_L+g_{dsR}+g_{mR}}}
+$$
 
 完整电压增益为：
 
-$
-\boxed{
-A_{v1}(s)=\frac{v_o}{v_E}
-=
-\frac{g_{mS}}
-{g_{mS}+g_{dsS}+
-\dfrac{Y_Lg_{dsR}}
-{Y_L+g_{dsR}+g_{mR}}}
-\frac{g_{dsR}}
-{Y_L+g_{dsR}+g_{mR}}
-}.
-$
+$$
+A_{v1}(s)=\frac{v_o}{v_E}=\frac{g_{mS}}{g_{mS}+g_{dsS}+\dfrac{Y_Lg_{dsR}}{Y_L+g_{dsR}+g_{mR}}}\frac{g_{dsR}}{Y_L+g_{dsR}+g_{mR}}
+$$
 
-该式明确包含 $T_R$ 因 $v_o$ 变化产生的 $g_{mR}v_{gsR}$ 效应；即使其栅极交流接地，也不能删除 $g_{mR}$。
+理想情况下，考虑 $Y_L=0$，电压增益为：
 
-## 1.4 完整输出阻抗推导
+$$
+A_{v1}(s)=\frac{v_o}{v_E}=\frac{g_{mS}}{g_{mS}+g_{dsS}}\frac{g_{dsR}}{g_{dsR}+g_{mR}}
+$$
 
-求输出阻抗时令独立输入 $v_E=0$，移除外部列负载，在 COL 端施加测试电压 $v_t=v_o$，并求流入 pixel 的测试电流 $i_t$。
+## 1.4 输出阻抗推导
+
+求输出阻抗时令独立输入 $v_E=0$，移除外部列负载，用加压求流的方法，在 COL 端施加测试电压 $v_t=v_o$，并求流入 pixel 的测试电流 $i_t$。
 
 ```mermaid
 flowchart LR
@@ -159,68 +148,39 @@ flowchart LR
     TS --> G["交流地"]
 ```
 
-此时内部节点 KCL 为：
+对 $v_x$ ：
 
-$
-(g_{mS}+g_{dsS})v_x+i_R=0,
-$
+$$
+(g_{mS}+g_{dsS})v_x+g_{dsR}(v_x-v_t)-g_{mR}v_t=0
+$$
 
-其中：
+可得
 
-$
-i_R=g_{dsR}v_x-(g_{dsR}+g_{mR})v_t.
-$
+$$
+v_x=\frac{g_{dsR}+g_{mR}}{g_{mS}+g_{dsS}+g_{dsR}}v_t
+$$
 
-因此：
+测试电流为
 
-$
-(g_{mS}+g_{dsS}+g_{dsR})v_x
-=(g_{dsR}+g_{mR})v_t,
-$
+$$
+i_t=-g_{dsR}(v_x-v_t)+g_{mR}v_t=\frac{(g_{dsR}+g_{mR})(g_{mS}+g_{dsS})}
+{g_{mS}+g_{dsS}+g_{dsR}}v_t
+$$
 
-即：
+所以第一种 2T pixel 的低频输出阻抗为：
 
-$
-v_x=
-\frac{g_{dsR}+g_{mR}}
-{g_{mS}+g_{dsS}+g_{dsR}}v_t.
-$
+$$
+R_{\mathrm{out1}}=\frac{v_t}{i_t}=\frac{g_{mS}+g_{dsS}+g_{dsR}}{(g_{mS}+g_{dsS})(g_{dsR}+g_{mR})}
+$$
 
-测试电流是从输出端流向 $T_R$ 内部的电流：
+若考虑列电容和外部负载，输出节点的闭环极点必须由完整小信号网络求解，一阶估计可写为：
 
-$
-i_t=-i_R
-=(g_{dsR}+g_{mR})v_t-g_{dsR}v_x.
-$
-
-代入 $v_x$：
-
-$
-i_t=
-\frac{(g_{dsR}+g_{mR})(g_{mS}+g_{dsS})}
-{g_{mS}+g_{dsS}+g_{dsR}}v_t.
-$
-
-所以第一种 2T pixel 的完整低频输出阻抗为：
-
-$
-\boxed{
-R_{\mathrm{out1}}=
-\frac{v_t}{i_t}
-=
-\frac{g_{mS}+g_{dsS}+g_{dsR}}
-{(g_{mS}+g_{dsS})(g_{dsR}+g_{mR})}
-}.
-$
-
-若考虑列电容和外部负载，输出节点的闭环极点必须由完整小信号网络求解；一阶估计可写为：
-
-$
-\tau_{\mathrm{COL1}}\simeq
-\left(R_{\mathrm{out1}}\parallel Z_L(0)\right)C_{\mathrm{COL}},
-$
+$$
+\tau_{\mathrm{COL1}}\simeq\left(R_{\mathrm{out1}}\parallel Z_L(0)\right)C_{\mathrm{COL}},
+$$
 
 其中 $Z_L(0)=1/Y_L(0)$。
+
 ## 1.5 噪声与尺寸设计
 
 $T_S$ 的主要噪声包括沟道热噪声、接触噪声、载流子注入噪声、陷阱引起的 $1/f$ 噪声以及阈值漂移。输入参考白噪声的 MOS 类近似为：
@@ -245,11 +205,11 @@ g_{mS}\approx
 \sqrt{2\mu C_i\frac{W_S}{L_S}I_D}.
 $$
 
-为了降低 $1/g_{mS}$ 和白噪声，应提高 $W_S/L_S$；为了降低 $1/f$ 噪声，应增大面积 $W_SL_S$。因此 $T_S$ 宜采用 **大面积、宽沟道、较大 $W_S/L_S$，但非最短 $L_S$** 的尺寸。具体做法是优先增大 $W_S$，$L_S$ 取中等或偏长；若增加 $L_S$ 以提高 $r_{oS}$ 和面积，则应更大比例地增加 $W_S$，避免 $g_{mS}$ 下降。只把 $L_S$ 压到最小会减小面积、降低 $r_o$，可能恶化 $1/f$ 噪声和跟随精度。
+为了降低 $1/g_{mS}$ 和白噪声，应提高 $W_S/L_S$；为了降低 $1/f$ 噪声，应增大面积 $W_SL_S$。因此 $T_S$ 宜采用 **大面积、宽沟道、较大 $W_S/L_S$，但非最短 $L_S$** 的尺寸。具体做法是优先增大 $W_S$， $L_S$ 取中等或偏长；若增加 $L_S$ 以提高 $r_{oS}$ 和面积，则应更大比例地增加 $W_S$，避免 $g_{mS}$ 下降。只把 $L_S$ 压到最小会减小面积、降低 $r_o$，可能恶化 $1/f$ 噪声和跟随精度。
 
-$T_R$ 的尺寸应直接依据工作点处提取的 $g_{mR}$、$g_{dsR}$、接触电阻和寄生电容设计。由完整增益与输出阻抗公式可见，提高 $g_{dsR}$ 会增强 $v_x$ 到 $v_o$ 的传递并降低 $R_{\mathrm{out1}}$；而 $g_{mR}$ 反映输出节点改变 $v_{gsR}$ 后产生的受控电流效应，必须保留。工程上优先增大 $W_R$，并由实测或 compact model 验证 $g_{mR}$、$g_{dsR}$、开关注入和列电容之间的折衷。$W_R$ 过大会增大 ROW 负载、$C_{gsR}$、$C_{gdR}$ 与动态功耗。
+$T_R$ 的尺寸应直接依据工作点处提取的 $g_{mR}$、 $g_{dsR}$、接触电阻和寄生电容设计。由完整增益与输出阻抗公式可见，提高 $g_{dsR}$ 会增强 $v_x$ 到 $v_o$ 的传递并降低 $R_{\mathrm{out1}}$；而 $g_{mR}$ 反映输出节点改变 $v_{gsR}$ 后产生的受控电流效应，必须保留。工程上优先增大 $W_R$，并由实测或 compact model 验证 $g_{mR}$、 $g_{dsR}$、开关注入和列电容之间的折衷。 $W_R$ 过大会增大 ROW 负载、 $C_{gsR}$、 $C_{gdR}$ 与动态功耗。
 
-第一种还必须区分 pixel 输出阻抗和后端输入阻抗。$R_{\mathrm{out1}}$ 是从 COL 向 $T_S$/$T_R$ 内部看的性质；TLC2274 的输入阻抗 $Z_{\mathrm{in,buf}}$ 是外围负载。为了避免附加衰减，应满足：
+第一种还必须区分 pixel 输出阻抗和后端输入阻抗。 $R_{\mathrm{out1}}$ 是从 COL 向 $T_S$/$T_R$ 内部看的性质；TLC2274 的输入阻抗 $Z_{\mathrm{in,buf}}$ 是外围负载。为了避免附加衰减，应满足：
 
 $$
 |Z_{\mathrm{in,buf}}|\gg R_{\mathrm{out1}}.
