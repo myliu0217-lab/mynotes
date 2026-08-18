@@ -25,17 +25,17 @@ $$
 
 ROW 有效时，$T_R$ 导通，本行 $T_S$ 接入列线；ROW 无效时，$T_R$ 截止。任一列不应同时选通两行，否则多个 $T_S$ 源随器会共同驱动列线。
 
-## 1.2 直流工作与输出类型
+## 1.2 直流工作点与输出类型
 
 LM334 和 REF200 为选中列提供近似恒定的偏置电流 $I_B$。$T_S$ 的栅极几乎不吸取直流电流，源极电压随电极电压变化。直流输出近似为：
 
 $$
-V_{\mathrm{COL}}\approx V_E-V_{GSS}(I_B)-I_B R_{\mathrm{on},R}.
+V_{\mathrm{COL}}=V_E-V_{GS,S}(I_B)-V_{DS,R}(I_B,V_{\mathrm{ROW}}).
 $$
 
-所以该 pixel 的原始输出是 **电压**。其中 $V_{GSS}$ 是较大的直流电平移，并受阈值电压、迁移率、温度、陷阱态和偏置应力影响。该结构更适合测量电极电压的变化量；若测绝对电位，需要逐像素校准。
+所以该 pixel 的原始输出是 **电压**。其中 $V_E$ 为电极电压， $V_{GS}$ 是传感晶体管的栅源电压，受阈值电压、迁移率、温度、陷阱态和偏置应力影响。$V_{DS,R}(I_B,V_{\mathrm{ROW}})$ 是开关晶体管 $T_R$ 在偏置电流和 ROW 电压共同决定的工作点上的直流压降。该结构更适合测量电极电压的变化量；若测绝对电位，需要逐像素校准。
 
-TLC2274 在图中接成单位增益缓冲器，其作用是隔离列线和后级，不提供显著电压增益。$15\,\mu\mathrm{F}$ 与 $1\,\mathrm{M\Omega}$ 构成高通：
+TLC2274 在图中接成单位增益缓冲器，其作用是隔离列线和后级，不提供显著电压增益。$15\,\mu\mathrm{F}$ 与 $1\,\mathrm{M\Omega}$ 构成高通滤波器：
 
 $$
 f_c=\frac{1}{2\pi(1\,\mathrm{M\Omega})(15\,\mu\mathrm{F})}
@@ -50,108 +50,177 @@ $$
 
 ## 1.3 小信号模型、节点方程与电压增益
 
-低频下忽略寄生电容。令 $T_S$ 的漏极接理想电源，因此为交流地；$T_S$ 用跨导源 $g_{mS}v_{gsS}$ 和输出电阻 $r_{oS}=1/g_{dsS}$ 表示；导通的 $T_R$ 用 $R_{\mathrm{on},R}$ 表示。内部源极节点为 $v_x$，列输出为 $v_o$，列负载为 $R_L$。
+传感晶体管 $T_S$ 的漏极接理想电源，因此为交流地；其参数为 $g_{mS}$ 与 $g_{dsS}$。偏置电流源在交流情况下视为开路。开关晶体管 $T_R$ 的栅极由理想 ROW 电压源驱动，因此 $v_{gR}=0$，但其源极为输出节点 $v_o$，所以：
+
+$$
+v_{gsR}=-v_o,\qquad v_{dsR}=v_x-v_o.
+$$
+
+令 $T_R$ 的漏极接内部节点 $v_x$、源极接 $v_o$，其漏极小信号电流为：
+
+$$
+i_R=g_{mR}v_{gsR}+g_{dsR}v_{dsR}
+=g_{dsR}v_x-(g_{dsR}+g_{mR})v_o.
+$$
+
+列负载，即指从列线节点 $v_o$ 向外看，所有连接到 COL 线上的小信号负载，用导纳 $Y_L(s)$ 表示。
+
+$$
+Y_L(s)=Y_{\mathrm{REF200}}(s)+Y_{\mathrm{opamp}}(s)+sC_{\mathrm{COL}}+Y_{\mathrm{parasitic}}(s).
+$$
+
+其中，
 
 ```mermaid
 flowchart LR
-    VE["电极小信号 v_E"] -->|"栅极"| TS["T_S 小信号模型\ng_mS·v_gs 与 r_oS"]
+    VE["电极 v_E"] -->|"栅极"| TS["T_S：g_mS、g_dsS"]
     AG["+V：交流地"] --- TS
-    TS --> X["内部源极节点 v_x"]
-    X --> RR["T_R 导通电阻 R_on,R"]
-    RR --> VO["列输出 v_o"]
-    VO --> RL["负载 R_L"]
-    RL --> G["交流地"]
+    TS --> X["内部节点 v_x"]
+    X --> TR["T_R：g_mR、g_dsR\n栅极交流地"]
+    TR --> VO["列节点 v_o"]
+    VO --> YL["列负载 Y_L(s)"]
+    YL --> G["交流地"]
 ```
 
-从输出端看，$T_R$ 与 $R_L$ 串联，因此 $T_S$ 源极所见等效负载电导为：
+对输出节点 $v_o$ 列写 KCL：
 
 $
-G_X=\frac{1}{R_{\mathrm{on},R}+R_L}.
+Y_Lv_o-i_R=0.
 $
 
-由于 $v_{gsS}=v_E-v_x$，在节点 $x$ 写 KCL：
+代入 $i_R$：
 
 $
-g_{mS}(v_x-v_E)+g_{dsS}v_x+G_Xv_x=0.
+-g_{dsR}v_x+
+(Y_L+g_{dsR}+g_{mR})v_o=0,
 $
 
-整理得到：
+故：
 
 $
-\frac{v_x}{v_E}=\frac{g_{mS}}
-{g_{mS}+g_{dsS}+G_X}.
+\frac{v_o}{v_x}=
+\frac{g_{dsR}}
+{Y_L+g_{dsR}+g_{mR}}.
 $
 
-$T_R$ 与 $R_L$ 还形成分压：
+在内部节点 $v_x$ 写 KCL。$T_S$ 从源极节点吸收的小信号电流为 $(g_{mS}+g_{dsS})v_x-g_{mS}v_E$，因此：
 
 $
-\frac{v_o}{v_x}=\frac{R_L}{R_{\mathrm{on},R}+R_L}.
+(g_{mS}+g_{dsS})v_x-g_{mS}v_E+i_R=0.
 $
 
-因此完整电压增益为：
+由输出节点 KCL 有 $i_R=Y_Lv_o$，代入 $v_o/v_x$ 后：
 
 $
-A_{v1}=\frac{v_o}{v_E}
-=\frac{g_{mS}}
-{g_{mS}+g_{dsS}+1/(R_{\mathrm{on},R}+R_L)}
-\frac{R_L}{R_{\mathrm{on},R}+R_L}.
+\left[
+g_{mS}+g_{dsS}
+\frac{Y_Lg_{dsR}}
+{Y_L+g_{dsR}+g_{mR}}
+\right]v_x=g_{mS}v_E.
 $
 
-当 $R_L\gg R_{\mathrm{on},R}$ 且负载很轻时：
+于是：
 
 $
-A_{v1}\approx\frac{g_{mS}}{g_{mS}+g_{dsS}}
-=\frac{g_{mS}r_{oS}}{1+g_{mS}r_{oS}}<1.
+\frac{v_x}{v_E}=
+\frac{g_{mS}}
+{g_{mS}+g_{dsS}+
+\dfrac{Y_Lg_{dsR}}
+{Y_L+g_{dsR}+g_{mR}}}.
 $
 
-故第一种阵列是电压缓冲器，不是电压增益大于 1 的放大器。
+完整电压增益为：
 
-## 1.4 输出阻抗的具体推导与带宽
+$
+\boxed{
+A_{v1}(s)=\frac{v_o}{v_E}
+=
+\frac{g_{mS}}
+{g_{mS}+g_{dsS}+
+\dfrac{Y_Lg_{dsR}}
+{Y_L+g_{dsR}+g_{mR}}}
+\frac{g_{dsR}}
+{Y_L+g_{dsR}+g_{mR}}
+}.
+$
 
-求 pixel 输出阻抗时，将独立输入置零，即 $v_E=0$；移除 $R_L$，从 COL 端施加测试电流 $i_t$，测得测试电压 $v_t$。
+该式明确包含 $T_R$ 因 $v_o$ 变化产生的 $g_{mR}v_{gsR}$ 效应；即使其栅极交流接地，也不能删除 $g_{mR}$。
+
+## 1.4 完整输出阻抗推导
+
+求输出阻抗时令独立输入 $v_E=0$，移除外部列负载，在 COL 端施加测试电压 $v_t=v_o$，并求流入 pixel 的测试电流 $i_t$。
 
 ```mermaid
 flowchart LR
-    IT["测试源 i_t / v_t"] --> COL["COL 输出端"]
-    COL --> RR["R_on,R"]
-    RR --> X["T_S 源极"]
-    X --> GS["等效源端电导\ng_mS + g_dsS"]
-    GS --> G["交流地\n栅极与漏极均为交流地"]
+    IT["测试端 v_t、i_t"] --> VO["COL：v_o=v_t"]
+    VO --> TR["T_R：g_mR、g_dsR\n栅极交流地"]
+    TR --> X["内部节点 v_x"]
+    X --> TS["T_S：g_mS、g_dsS\n栅极与漏极交流地"]
+    TS --> G["交流地"]
 ```
 
-当栅极和漏极均为交流地时，观察 $T_S$ 源极，测试电压会产生跨导电流 $g_{mS}v_x$ 和输出电导电流 $g_{dsS}v_x$，故源极等效电导为：
+此时内部节点 KCL 为：
 
 $
-G_{S,\mathrm{eq}}=g_{mS}+g_{dsS},
+(g_{mS}+g_{dsS})v_x+i_R=0,
 $
 
-相应等效电阻为：
+其中：
 
 $
-R_{S,\mathrm{eq}}=\frac{1}{g_{mS}+g_{dsS}}.
+i_R=g_{dsR}v_x-(g_{dsR}+g_{mR})v_t.
 $
 
-$T_R$ 位于输出路径并与该电阻串联，因此：
+因此：
 
 $
-R_{\mathrm{out1}}=\frac{v_t}{i_t}
-=R_{\mathrm{on},R}+\frac{1}{g_{mS}+g_{dsS}}.
+(g_{mS}+g_{dsS}+g_{dsR})v_x
+=(g_{dsR}+g_{mR})v_t,
 $
 
-当 $g_{mS}\gg g_{dsS}$：
+即：
 
 $
-R_{\mathrm{out1}}\approx R_{\mathrm{on},R}+\frac{1}{g_{mS}}.
+v_x=
+\frac{g_{dsR}+g_{mR}}
+{g_{mS}+g_{dsS}+g_{dsR}}v_t.
 $
 
-列线建立时间可近似为：
+测试电流是从输出端流向 $T_R$ 内部的电流：
 
 $
-\tau_{\mathrm{COL1}}\approx
-(R_{\mathrm{out1}}\parallel R_L)C_{\mathrm{COL}}.
+i_t=-i_R
+=(g_{dsR}+g_{mR})v_t-g_{dsR}v_x.
 $
 
-该推导说明：增大 $T_S$ 的 $g_{mS}$ 和减小 $T_R$ 的 $R_{\mathrm{on},R}$ 都能降低输出阻抗；但 $T_R$ 过宽会增加寄生电容与开关注入。
+代入 $v_x$：
+
+$
+i_t=
+\frac{(g_{dsR}+g_{mR})(g_{mS}+g_{dsS})}
+{g_{mS}+g_{dsS}+g_{dsR}}v_t.
+$
+
+所以第一种 2T pixel 的完整低频输出阻抗为：
+
+$
+\boxed{
+R_{\mathrm{out1}}=
+\frac{v_t}{i_t}
+=
+\frac{g_{mS}+g_{dsS}+g_{dsR}}
+{(g_{mS}+g_{dsS})(g_{dsR}+g_{mR})}
+}.
+$
+
+若考虑列电容和外部负载，输出节点的闭环极点必须由完整小信号网络求解；一阶估计可写为：
+
+$
+\tau_{\mathrm{COL1}}\simeq
+\left(R_{\mathrm{out1}}\parallel Z_L(0)\right)C_{\mathrm{COL}},
+$
+
+其中 $Z_L(0)=1/Y_L(0)$。
 ## 1.5 噪声与尺寸设计
 
 $T_S$ 的主要噪声包括沟道热噪声、接触噪声、载流子注入噪声、陷阱引起的 $1/f$ 噪声以及阈值漂移。输入参考白噪声的 MOS 类近似为：
@@ -167,7 +236,7 @@ $$
 \frac{1}{C_{\mathrm{ox}}W_SL_S(V_{GSS}-V_{TS})f}.
 $$
 
-$T_R$ 还引入近似 $4kTR_{\mathrm{on},R}$ 的串联热噪声、开关注入和 ROW 馈通。
+$T_R$ 的沟道噪声应作为其小信号漏极噪声源并与 $g_{mR}$、$g_{dsR}$ 一同通过两节点网络传递到输出；此外还存在开关注入和 ROW 馈通。
 
 $T_S$ 与 $T_R$ 的尺寸目标不同。固定偏置电流并采用平方律近似时：
 
@@ -178,20 +247,7 @@ $$
 
 为了降低 $1/g_{mS}$ 和白噪声，应提高 $W_S/L_S$；为了降低 $1/f$ 噪声，应增大面积 $W_SL_S$。因此 $T_S$ 宜采用 **大面积、宽沟道、较大 $W_S/L_S$，但非最短 $L_S$** 的尺寸。具体做法是优先增大 $W_S$，$L_S$ 取中等或偏长；若增加 $L_S$ 以提高 $r_{oS}$ 和面积，则应更大比例地增加 $W_S$，避免 $g_{mS}$ 下降。只把 $L_S$ 压到最小会减小面积、降低 $r_o$，可能恶化 $1/f$ 噪声和跟随精度。
 
-$T_R$ 在线性区的导通电阻近似为：
-
-$$
-R_{\mathrm{on},R}\approx
-\frac{1}{\mu C_i(W_R/L_R)(V_{GS,R}-V_{T,R})}+R_{C,R}.
-$$
-
-所以 $T_R$ 宜采用较大的 $W_R/L_R$：优先增大 $W_R$，$L_R$ 取较短或略高于工艺最小值。可把下式作为初始目标：
-
-$$
-R_{\mathrm{on},R}\leq\frac{0.1}{g_{mS}}.
-$$
-
-但 $T_R$ 过宽会增大行列寄生电容、开关注入和扫描功耗。
+$T_R$ 的尺寸应直接依据工作点处提取的 $g_{mR}$、$g_{dsR}$、接触电阻和寄生电容设计。由完整增益与输出阻抗公式可见，提高 $g_{dsR}$ 会增强 $v_x$ 到 $v_o$ 的传递并降低 $R_{\mathrm{out1}}$；而 $g_{mR}$ 反映输出节点改变 $v_{gsR}$ 后产生的受控电流效应，必须保留。工程上优先增大 $W_R$，并由实测或 compact model 验证 $g_{mR}$、$g_{dsR}$、开关注入和列电容之间的折衷。$W_R$ 过大会增大 ROW 负载、$C_{gsR}$、$C_{gdR}$ 与动态功耗。
 
 第一种还必须区分 pixel 输出阻抗和后端输入阻抗。$R_{\mathrm{out1}}$ 是从 COL 向 $T_S$/$T_R$ 内部看的性质；TLC2274 的输入阻抗 $Z_{\mathrm{in,buf}}$ 是外围负载。为了避免附加衰减，应满足：
 
@@ -238,47 +294,76 @@ $$
 
 因此在图示工作条件下，pixel 的原始输出应理解为 **电流 $I_{\mathrm{sig}}$**；TIA 后才变为电压。开关晶体管 $T_R$ 不直接串在源极输出线上，但其压降会减少 $T_S$ 的 $V_{DS}$ 裕量。
 
-## 2.3 小信号模型与跨导输出的推导
+## 2.3 完整小信号模型与跨导输出推导
 
-令 $T_S$ 的栅极小信号为 $v_E$，源极列节点为 $v_s$，漏极为 $v_d$。$T_R$ 导通后，其等效电阻记为 $R_D\approx R_{\mathrm{on},R}$，电源轨为交流地。
+第二种阵列中，开关晶体管 $T_R$ 位于传感晶体管 $T_S$ 的漏极供电侧。令 $T_R$ 的电源轨端为漏极并接交流地，与 $T_S$ 相连的一端为源极节点 $v_d$。由于 $v_{gR}=0$，有：
+
+$
+v_{gsR}=-v_d,\qquad v_{dsR}=-v_d.
+$
+
+从节点 $v_d$ 流入 $T_R$ 的小信号电流为：
+
+$
+i_R=(g_{mR}+g_{dsR})v_d.
+$
+
+定义：
+
+$
+G_R=g_{mR}+g_{dsR}.
+$
 
 ```mermaid
 flowchart LR
-    AG["电源轨：交流地"] --> RD["T_R：R_D ≈ R_on,R"]
-    RD --> D["T_S 漏极 v_d"]
-    VE["电极 v_E"] -->|"栅极"| TS["T_S：g_mS·v_gs 与 r_oS"]
+    G["电源轨：交流地"] --> TR["T_R：g_mR、g_dsR\n栅极交流地"]
+    TR --> D["T_S 漏极 v_d"]
+    VE["电极 v_E"] -->|"栅极"| TS["T_S：g_mS、g_dsS"]
     D --- TS
-    TS --> S["源极 / I_sig 节点 v_s"]
-    S --> TIA["TIA 虚拟地负载"]
+    TS --> S["源极 / I_sig：v_s"]
+    S --> TIA["TIA 输入"]
 ```
 
-$T_S$ 的漏极小信号电流采用：
+$T_S$ 的漏极小信号电流为：
 
 $
-i_d=g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s).
+i_{dS}=g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s).
 $
 
-TIA 在闭环带宽内令 $v_s\approx0$。若 $T_R$ 很强，使 $v_d$ 的交流变化也很小，则：
+在漏极节点 $v_d$ 写 KCL：
 
 $
-i_{\mathrm{sig}}\approx g_{mS}v_E.
+G_Rv_d+g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s)=0.
 $
 
-因此 pixel 的短路跨导为：
+因此：
 
 $
-G_m=\left.\frac{i_{\mathrm{sig}}}{v_E}\right|_{v_s\approx0}
-\approx g_{mS}.
+v_d=
+\frac{(g_{mS}+g_{dsS})v_s-g_{mS}v_E}
+{G_R+g_{dsS}}.
 $
 
-若考虑 $R_D$ 和 $g_{dsS}$，漏极节点 KCL 为：
+定义流向 TIA 的源极输出电流方向，使其幅值为：
 
 $
-\frac{v_d}{R_D}+g_{dsS}(v_d-v_s)
-+g_{mS}(v_E-v_s)=0.
+i_{\mathrm{sig}}=
+ g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s).
 $
 
-该式表明有限 $R_D$ 会使漏极不再是理想交流地，并通过 $g_{dsS}$ 引入增益误差；所以 $T_R$ 必须足够强，并保证 $T_S$ 具有充足的直流饱和裕量。
+TIA 在闭环带宽内使 $v_s\approx0$。代入上式与 $v_d$ 得：
+
+$
+\boxed{
+G_{m,\mathrm{eff}}
+=\left.\frac{i_{\mathrm{sig}}}{v_E}\right|_{v_s=0}
+=\frac{g_{mS}G_R}{G_R+g_{dsS}}
+=\frac{g_{mS}(g_{mR}+g_{dsR})}
+{g_{mR}+g_{dsR}+g_{dsS}}
+}.
+$
+
+因此第二种 pixel 的有效跨导并非单独的 $g_{mS}$，而由两只晶体管的 $g_m$、$g_{ds}$ 共同决定。
 ## 2.4 TIA、PGA 与系统电压增益
 
 TIA 是 **Transimpedance Amplifier（跨阻放大器）**。它把输入电流转换成输出电压，跨阻的单位是欧姆。图中的 TIA 由运算放大器、反馈电阻 $R_F$ 和反馈电容 $C_F$ 构成：$I_{\mathrm{sig}}$ 接反相端，非反相端接虚拟地参考 $V_{\mathrm{GND}}$。
@@ -327,31 +412,30 @@ $$
 
 所以该系统的显著电压增益来自 pixel 跨导、TIA 与 PGA 的组合，而不是两只 pixel 晶体管独立构成高增益级。
 
-## 2.5 pixel 输出阻抗与 TIA 输入阻抗的具体推导
+## 2.5 pixel 输出阻抗与 TIA 输入阻抗的完整推导
 
-必须区分 pixel 自身输出阻抗 $R_{\mathrm{out2}}$ 和外围 TIA 输入阻抗 $Z_{\mathrm{in,TIA}}$。求 $R_{\mathrm{out2}}$ 时令 $v_E=0$，在源极端施加测试电压 $v_t=v_s$，求流入 pixel 的测试电流 $i_t$。
+求 pixel 输出阻抗时令电极输入 $v_E=0$，移除 TIA，在源极端施加测试电压 $v_t=v_s$，求流入 pixel 的测试电流 $i_t$。
 
 ```mermaid
 flowchart LR
-    G["交流地"] --> RD["T_R：R_D"]
-    RD --> D["漏极 v_d"]
-    D --> TS["T_S 小信号模型"]
-    GG["栅极 v_E=0"] --- TS
-    TS --> S["源极测试端 v_t"]
-    IT["测试电流 i_t"] --> S
+    G["电源轨：交流地"] --> TR["T_R：g_mR、g_dsR"]
+    TR --> D["T_S 漏极 v_d"]
+    D --> TS["T_S：g_mS、g_dsS\n栅极交流地"]
+    TS --> S["测试端 v_t、i_t"]
 ```
 
-漏极节点 KCL 为：
+此时漏极节点 KCL 为：
 
 $
-\frac{v_d}{R_D}+g_{dsS}(v_d-v_t)-g_{mS}v_t=0.
+G_Rv_d+g_{dsS}(v_d-v_t)-g_{mS}v_t=0.
 $
 
-因此：
+所以：
 
 $
-v_d=\frac{(g_{mS}+g_{dsS})R_D}
-{1+g_{dsS}R_D}v_t.
+v_d=
+\frac{g_{mS}+g_{dsS}}
+{G_R+g_{dsS}}v_t.
 $
 
 流入源极的测试电流为：
@@ -363,40 +447,51 @@ $
 代入 $v_d$：
 
 $
-i_t=\frac{g_{mS}+g_{dsS}}
-{1+g_{dsS}R_D}v_t.
+i_t=
+\frac{(g_{mS}+g_{dsS})G_R}
+{G_R+g_{dsS}}v_t.
 $
 
-故 pixel 自身输出阻抗为：
+因此第二种 2T pixel 的完整低频输出阻抗为：
 
 $
-R_{\mathrm{out2}}=\frac{v_t}{i_t}
-=\frac{1+g_{dsS}R_D}{g_{mS}+g_{dsS}}
-=\frac{r_{oS}+R_D}{1+g_{mS}r_{oS}}.
+\boxed{
+R_{\mathrm{out2}}
+=\frac{v_t}{i_t}
+=\frac{G_R+g_{dsS}}
+{(g_{mS}+g_{dsS})G_R}
+=\frac{g_{mR}+g_{dsR}+g_{dsS}}
+{(g_{mS}+g_{dsS})(g_{mR}+g_{dsR})}
+}.
 $
 
-若 $R_D\rightarrow0$：
+TIA 输入阻抗是独立的外围参数：
 
 $
-R_{\mathrm{out2}}\rightarrow\frac{1}{g_{mS}+g_{dsS}}
-\approx\frac{1}{g_{mS}}.
+Z_{\mathrm{in,TIA}}(s)
+=\frac{v_s(s)}{i_{\mathrm{sig}}(s)}.
 $
 
-所以该源端口自身仍是低输出阻抗的源极跟随型端口，并非理想高输出阻抗电流源。TIA 之所以能读取 $g_{mS}v_E$，是因为它把 $v_s$ 钳在近似恒定电位。
-
-TIA 向 pixel 呈现的闭环输入阻抗另为：
+若运放开环增益为 $A(s)$、反馈阻抗为 $Z_F(s)$，反相节点满足 $v_o=-A(s)v_s$，且输入电流流入反馈支路：
 
 $
-Z_{\mathrm{in,TIA}}\approx\frac{Z_F}{1+A_{\mathrm{OL}}\beta}.
+i_{\mathrm{sig}}=\frac{v_s-v_o}{Z_F}
+=\frac{[1+A(s)]v_s}{Z_F}.
 $
 
-理想电流读取要求：
+所以：
 
 $
-|Z_{\mathrm{in,TIA}}|\ll R_{\mathrm{out2}}.
+\boxed{
+Z_{\mathrm{in,TIA}}(s)=\frac{Z_F(s)}{1+A(s)}
+}.
 $
 
-前者是外围输入参数，后者是 pixel 输出参数，不能混为同一阻抗。
+电流读取条件为：
+
+$
+|Z_{\mathrm{in,TIA}}(s)|\ll R_{\mathrm{out2}}.
+$
 ## 2.6 噪声与 $W/L$ 设计
 
 噪声来源包括 $T_S$ 的热噪声与 $1/f$ 噪声、$T_R$ 的供电调制噪声、TIA 运放电压/电流噪声、反馈电阻噪声和 PGA 噪声。反馈电阻的输入参考电流噪声为：
@@ -434,33 +529,33 @@ $$
 
 也就是说，$T_S$ 宜采用 **大面积、宽沟道、较大 $W_S/L_S$、但非最短 $L_S$** 的设计。代价是电极输入电容、$C_{gsS}$、$C_{gdS}$、面积和 TIA 噪声增益上升。
 
-### 2.6.2 开关晶体管 $T_R$
+### 2.6.2 选通晶体管 $T_R$
 
-$T_R$ 在线性区的导通电阻近似为：
+$T_R$ 位于 $T_S$ 的漏极侧，不能在严格小信号分析中替换成与端电压无关的固定电阻。其尺寸应依据实际偏置点提取的 $g_{mR}$、$g_{dsR}$、接触电阻和寄生电容联合确定。
 
-$$
-R_{\mathrm{on},R}\approx
-\frac{1}{\mu C_i(W_R/L_R)(V_{GS,R}-V_{T,R})}
-+R_{C,R}.
-$$
+由本章严格模型，传感晶体管的等效跨导为
 
-因此 $T_R$ 应采用 **较大的 $W_R/L_R$**：优先增大 $W_R$，$L_R$ 取工艺允许的较短值或略高于最小值。这可以减小漏极压降，使 $T_S$ 保持在目标工作区，并使 $R_D$ 对 $R_{\mathrm{out,pixel2}}$ 的影响较小。
+$
+G_{m,\mathrm{eff}}=
+\frac{g_{mS}(g_{mR}+g_{dsR})}
+{g_{mR}+g_{dsR}+g_{dsS}},
+$
 
-可用以下条件作为初始尺寸目标：
+而 pixel 输出电阻为
 
-$$
-g_{dsS}R_{\mathrm{on},R}\ll1,
-$$
+$
+R_{\mathrm{out2}}=
+\frac{g_{mR}+g_{dsR}+g_{dsS}}
+{(g_{mS}+g_{dsS})(g_{mR}+g_{dsR})}.
+$
 
-并在最坏的 $V_{\mathrm{ON}}$、阈值漂移和最大 $I_D$ 下保证：
+因此，若目标是使 $T_R$ 对电流传输的衰减很小，应使
 
-$$
-I_D R_{\mathrm{on},R}\ll
-V_{DS,S}-V_{DS,\mathrm{sat},S}.
-$$
+$
+g_{mR}+g_{dsR}\gg g_{dsS}.
+$
 
-第一式使 pixel 输出阻抗接近 $1/(g_{mS}+g_{dsS})$；第二式保证开关晶体管压降不耗尽传感晶体管的饱和裕量。$W_R$ 不能无限增大，否则行线负载、$C_{gdR}$ 馈通、切换电荷和功耗都会增加。
-
+在给定工艺、偏置和沟道工作区内，增大 $W_R/L_R$ 通常同时增大 $g_{mR}$ 与 $g_{dsR}$，可提高 $G_{m,\mathrm{eff}}$；但它也会增大 $C_{gsR}$、$C_{gdR}$、时钟馈通、电荷注入及 $T_R$ 自身噪声耦合。设计时应优先增大 $W_R$，而不应仅把 $L_R$ 压到工艺最小值；随后用实测或紧凑模型在最差 $V_{\mathrm{ON}}$、阈值漂移和目标 $I_D$ 下验证上式，并检查 $T_S$ 始终处于要求的工作区。若需降低 $R_{\mathrm{out2}}$，仅增大 $T_R$ 并不总是有效，因为极限值同时受 $g_{mS}+g_{dsS}$ 约束；通常还需增大 $W_S/L_S$ 以提高 $g_{mS}$。
 ## 2.7 外围电路与 NI 接口
 
 普通 NI 模拟输入测量电压，因此 $I_{\mathrm{sig}}$ **不能直接接入**。所需链路为：
@@ -486,10 +581,10 @@ $$
 | 开关晶体管主要误差 | 直接串入输出，增加 $R_{\mathrm{out}}$ 和衰减 | 降低漏极裕量，调制工作点和 $g_{ds}$ |
 | 行切换耦合 | 直接注入源极列线 | 经漏极、$r_o$ 和 $C_{gd}$ 耦合 |
 
-第一种的 $R_{\mathrm{on},R}$ 直接出现在：
+第一种的输出阻抗由 $T_S$ 与 $T_R$ 的完整小信号参数共同决定：
 
 $$
-R_{\mathrm{out1}}\approx R_{\mathrm{on},R}+\frac{1}{g_{mS}}.
+R_{\mathrm{out1}}=\frac{g_{mS}+g_{dsS}+g_{dsR}}{(g_{mS}+g_{dsS})(g_{dsR}+g_{mR})}.
 $$
 
 第二种的 $T_R$ 不直接串入源极输出，但若其导通压降使 $T_S$ 离开饱和区，$g_{dsS}$ 上升，跨导传输的线性度、增益和像素一致性都会变差。
@@ -559,67 +654,120 @@ $$
 
 1T 不产生类似源随器 $V_{GS}$ 的直流位移，也没有传感晶体管静态功耗；但列线直接看到电极界面，电极的直流偏置、极化电位、阻抗变化和运动伪迹都会直接进入输出。
 
-## 4.3 小信号模型与电压传输推导
+## 4.3 完整小信号模型与电压传输推导
 
-1T pixel 只含开关晶体管 $T_R$。选通后把它等效为 $R_{\mathrm{on},R}$；电极采用 Thévenin 模型，即理想电压源 $v_E$ 串联电极阻抗 $Z_E(f)$；外部负载为 $Z_L$。
+1T pixel 只有开关晶体管 $T_R$。令电极侧端点为漏极电压 $v_d$，列输出端为源极电压 $v_o$，ROW 驱动使栅极小信号 $v_{gR}=0$。于是：
+
+$
+v_{gsR}=-v_o,\qquad v_{dsR}=v_d-v_o.
+$
+
+$T_R$ 从电极侧流向输出侧的小信号电流为：
+
+$
+i_R=g_{dsR}v_d-(g_{dsR}+g_{mR})v_o.
+$
+
+电极采用 Thévenin 模型 $v_E$ 串联 $Z_E(s)$，列负载用导纳 $Y_L(s)$ 表示。
 
 ```mermaid
 flowchart LR
-    VE["电极源 v_E"] --> ZE["电极阻抗 Z_E(f)"]
-    ZE --> TR["T_R 导通电阻 R_on,R"]
+    VE["电极源 v_E"] --> ZE["电极阻抗 Z_E(s)"]
+    ZE --> D["T_R 漏极 v_d"]
+    D --> TR["T_R：g_mR、g_dsR\n栅极交流地"]
     TR --> VO["列输出 v_o"]
-    VO --> ZL["外部负载 Z_L"]
-    ZL --> G["参考地"]
+    VO --> YL["负载 Y_L(s)"]
+    YL --> G["参考地"]
 ```
 
-整条通路是串联网络，其电流为：
+输出节点 KCL 为：
 
 $
-i=\frac{v_E}{Z_E+R_{\mathrm{on},R}+Z_L}.
+Y_Lv_o-i_R=0.
 $
 
-输出电压为 $v_o=iZ_L$，所以：
+电极侧节点 KCL 为：
 
 $
-A_{v,\mathrm{1T}}=\frac{v_o}{v_E}
-=\frac{Z_L}{Z_E+R_{\mathrm{on},R}+Z_L}.
+\frac{v_d-v_E}{Z_E}+i_R=0.
 $
 
-当 $|Z_L|\gg|Z_E+R_{\mathrm{on},R}|$ 时，$A_v\approx1$；但它只是无源传输，不是放大。
+由输出节点方程 $i_R=Y_Lv_o$，故：
 
-## 4.4 输出阻抗的具体推导与带宽
+$
+v_d=v_E-Z_EY_Lv_o.
+$
 
-求输出阻抗时，将独立电极电压源置零。理想电压源短路后，输出端到参考地的路径依次经过 $R_{\mathrm{on},R}$ 与 $Z_E$。
+将其代入 $i_R=g_{dsR}v_d-(g_{dsR}+g_{mR})v_o=Y_Lv_o$：
+
+$
+g_{dsR}v_E=
+\left[g_{dsR}+g_{mR}+Y_L(1+g_{dsR}Z_E)\right]v_o.
+$
+
+所以完整电压传输函数为：
+
+$
+\boxed{
+A_{v,\mathrm{1T}}(s)=\frac{v_o}{v_E}
+=\frac{g_{dsR}}
+{g_{dsR}+g_{mR}+Y_L(s)[1+g_{dsR}Z_E(s)]}
+}.
+$
+
+## 4.4 完整输出阻抗推导
+
+求输出阻抗时令独立电极电压源 $v_E=0$，保留 $Z_E(s)$，移除外部负载，并在输出端施加测试电压 $v_t=v_o$。
 
 ```mermaid
 flowchart LR
-    IT["输出端测试源 i_t / v_t"] --> VO["COL"]
-    VO --> TR["R_on,R"]
-    TR --> ZE["Z_E(f)"]
-    ZE --> G["v_E=0：电压源短路"]
+    G["v_E=0：交流地"] --> ZE["Z_E(s)"]
+    ZE --> D["T_R 漏极 v_d"]
+    D --> TR["T_R：g_mR、g_dsR"]
+    TR --> VO["测试端 v_t、i_t"]
 ```
 
-测试电压为：
+电极侧节点 KCL 为：
 
 $
-v_t=i_t\left[Z_E(f)+R_{\mathrm{on},R}\right].
+\frac{v_d}{Z_E}+g_{dsR}v_d
+-(g_{dsR}+g_{mR})v_t=0.
 $
 
 因此：
 
 $
-Z_{\mathrm{out,1T}}(f)=\frac{v_t}{i_t}
-=Z_E(f)+R_{\mathrm{on},R}.
+v_d=
+\frac{g_{dsR}+g_{mR}}
+{1/Z_E+g_{dsR}}v_t.
 $
 
-这表明 1T 输出阻抗通常由电极阻抗主导，并不像 2T 源极跟随结构那样出现 $1/g_m$ 的阻抗降低。若列线主要为电容 $C_{\mathrm{COL}}$，一阶近似时间常数为：
+流入输出端的测试电流为：
 
 $
-\tau_{\mathrm{1T}}\approx
-|Z_E+R_{\mathrm{on},R}|C_{\mathrm{COL}}.
+i_t=(g_{dsR}+g_{mR})v_t-g_{dsR}v_d.
 $
 
-不同电极的 $Z_E$ 差异会直接变成通道间带宽和建立时间差异。
+代入 $v_d$：
+
+$
+i_t=
+\frac{g_{dsR}+g_{mR}}
+{1+g_{dsR}Z_E}v_t.
+$
+
+所以完整输出阻抗为：
+
+$
+\boxed{
+Z_{\mathrm{out,1T}}(s)
+=\frac{v_t}{i_t}
+=\frac{1+g_{dsR}Z_E(s)}
+{g_{dsR}+g_{mR}}
+}.
+$
+
+输出极点应由 $Z_{\mathrm{out,1T}}(s)$、$Y_L(s)$ 与列线电容共同求解。
 ## 4.5 噪声与尺寸设计
 
 1T 少了一只持续偏置的传感晶体管，因此没有传感晶体管的沟道热噪声、散粒噪声和 $1/f$ 噪声。但系统噪声仍包括电极噪声：
@@ -638,7 +786,7 @@ $$
 
 $$
 S_{v,\mathrm{AFE}}\approx e_n^2+i_n^2
-\left|Z_E+R_{\mathrm{on}}\right|^2.
+\left|\dfrac{1+g_{dsR}Z_E(s)}{g_{dsR}+g_{mR}}\right|^2.
 $$
 
 因此 1T 的器件噪声源较少，但系统 SNR 未必最好。
@@ -703,14 +851,14 @@ NI 标称输入阻抗较高并不等于可以忽略其输入电容、保护网�
 
 $$
 |Z_{\mathrm{in,buf}}|\geq100
-|Z_E+R_{\mathrm{on}}|
+\left|\dfrac{1+g_{dsR}Z_E(s)}{g_{dsR}+g_{mR}}\right|
 $$
 
 作为保守初始目标，同时必须检查输入偏置电流产生的直流误差：
 
 $$
 V_{\mathrm{err,bias}}\approx
-I_{\mathrm{bias}}|Z_E+R_{\mathrm{on}}|.
+I_{\mathrm{bias}}\left|\frac{1+g_{dsR}Z_E}{g_{dsR}+g_{mR}}\right|.
 $$
 
 因此 1T 前端往往应优先选择极低输入偏置电流和电流噪声的 CMOS/JFET 输入放大器，并将其尽量靠近阵列；单纯追求很低的电压噪声并不一定得到最低总噪声。
@@ -736,17 +884,18 @@ $$
 三者的代表式分别为：
 
 $$
-R_{\mathrm{out1}}\approx R_{\mathrm{on},R}+\frac{1}{g_m+g_{ds}},
+R_{\mathrm{out1}}=\frac{g_{mS}+g_{dsS}+g_{dsR}}{(g_{mS}+g_{dsS})(g_{dsR}+g_{mR})},
 $$
 
 $$
-R_{\mathrm{out2}}\approx
-\frac{1+g_{dsS}R_D}{g_{mS}+g_{dsS}}
-=\frac{r_{oS}+R_D}{1+g_{mS}r_{oS}},
+R_{\mathrm{out2}}=
+\frac{g_{mR}+g_{dsR}+g_{dsS}}
+{(g_{mS}+g_{dsS})(g_{mR}+g_{dsR})}.
 $$
 
 $$
-Z_{\mathrm{out,1T}}\approx Z_E+R_{\mathrm{on}}.
+Z_{\mathrm{out,1T}}(s)=
+\frac{1+g_{dsR}Z_E(s)}{g_{dsR}+g_{mR}}.
 $$
 
 这里第二种 2T 的表达式是 **pixel 自身输出阻抗**。三种 pixel 的典型本征输出阻抗排序为：
@@ -757,7 +906,7 @@ R_{\mathrm{out1}}
 \sim R_{\mathrm{out2}}.
 $$
 
-1T 通常最高，因为电极阻抗直接串入输出。两种 2T 都通过传感晶体管源极反馈把输出阻抗降低到约 $1/g_m$ 的量级，但第一种把 $R_{\mathrm{on},R}$ 直接串在输出端，第二种的行选电阻则通过 $R_D$ 和 $g_{dsS}$ 间接影响输出阻抗；二者的确切高低取决于 $g_m$、$g_{ds}$ 和选通电阻，不能仅凭拓扑固定排序。
+1T 通常最高，因为电极阻抗直接串入输出。第一种 2T 的输出阻抗由 $g_{mS}$、$g_{dsS}$、$g_{mR}$ 与 $g_{dsR}$ 共同决定；第二种 2T 还取决于开关晶体管及电源轨在传感晶体管漏极形成的 $R_D$。两种 2T 的确切高低必须由各自完整公式和器件工作点确定。
 
 第二种接入 TIA 后，还要另外考虑 TIA 输入阻抗：
 
@@ -793,7 +942,7 @@ $$
 
 ## 5.4 扫描速度与串扰
 
-- 1T 的速度最容易受 $(Z_E+R_{\mathrm{on}})C_{\mathrm{COL}}$ 限制。
+- 1T 的速度最容易受 $Z_{\mathrm{out,1T}}(s)C_{\mathrm{COL}}$ 限制。
 - 第一种 2T 去除了 $Z_E$ 对列线建立的直接影响，速度较高。
 - 第二种 2T 的 TIA 减小列线摆幅，通常最适合高速大阵列，但须保证闭环稳定和足够带宽。
 - 三者都需要处理行选开关注入、时钟馈通、未选通漏电和列间耦合。
@@ -824,7 +973,7 @@ $$
 
 第二种 MoS₂ 2T 的开关晶体管 $T_R$ 是漏极供电侧开关，$T_S$ 是传感晶体管。在图示 TIA 工作条件下，pixel 把电极电压转换为 $I_{\mathrm{sig}}$，系统通过 TIA 和 PGA 获得电压增益。其列节点动态阻抗最低，适合高速大阵列。
 
-第三种 IGZO 1T 只有一只模拟开关，直接把电极接到列线。它输出电压、没有放大、没有缓冲，输出阻抗约为 $Z_E+R_{\mathrm{on}}$。它减少器件数目和静态功耗，却把高阻电极的加载、噪声和建立时间问题交给外围前端。
+第三种 IGZO 1T 只有一只模拟开关，直接把电极接到列线。它输出电压、没有放大、没有缓冲，输出阻抗为 $Z_{\mathrm{out,1T}}(s)=[1+g_{dsR}Z_E(s)]/(g_{dsR}+g_{mR})$。它减少器件数目和静态功耗，却把高阻电极的加载、噪声和建立时间问题交给外围前端。
 
 ## 6.2 设计时最应关注的指标
 
@@ -846,6 +995,7 @@ $$
 3. J. S. Lee et al., “Systematic investigation on the effect of contact resistance on the performance of a-IGZO thin-film transistors with various geometries of electrodes,” *physica status solidi (a)*, 2010. [DOI](https://doi.org/10.1002/pssa.200983753)
 4. W.-S. Kim et al., “An investigation of contact resistance between metal electrodes and amorphous gallium-indium-zinc oxide thin-film transistors,” *Thin Solid Films*, 2010. [DOI](https://doi.org/10.1016/j.tsf.2010.02.044)
 5. D. Xu et al., “Two-dimensional semiconductor-based active array for high-fidelity spatiotemporal monitoring of neural activities,” *Nature Materials*, accepted 2025.
+
 
 
 
