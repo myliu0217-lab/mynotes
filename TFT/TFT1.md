@@ -301,6 +301,7 @@ i_t=\frac{v_t-v_o}{Z_F(s)}
 $$
 
 可得
+
 $$
 Z_{in}=\frac{v_t}{i_t}=\frac{Z_F(s)}{1+A(s)}
 $$
@@ -346,6 +347,7 @@ I_{\mathrm{sig}}= g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s)=-G_R\frac{(g_{mS}+g_{dsS})v_s
 $$
 
 TIA 在闭环带宽内使 $v_s\approx0$，则跨导增益为：
+
 $$
 G_{m,eff}=\frac{I_{\mathrm{sig}}}{v_E}=G_R\frac{g_{mS}}{G_R+g_{dsS}}=\frac{g_{mS}}{1+\dfrac{g_{dsS}}{g_{mR}+g_{dsR}}}
 $$
@@ -353,7 +355,7 @@ $$
 因此第二种 pixel 的有效跨导并非单独的 $g_{mS}$，而由两只晶体管的 $g_m$、$g_{ds}$ 共同决定。
 ## 2.4 TIA、PGA 与系统电压增益
 
-TIA 是 **Transimpedance Amplifier（跨阻放大器）**。它把输入电流转换成输出电压，跨阻的单位是欧姆。图中的 TIA 由运算放大器、反馈电阻 $R_F$ 和反馈电容 $C_F$ 构成：$I_{\mathrm{sig}}$ 接反相端，非反相端接虚拟地参考 $V_{\mathrm{GND}}$。
+TIA 是 **Transimpedance Amplifier（跨阻放大器）**。它把输入电流转换成输出电压，跨阻的单位是欧姆。图中的 TIA 由运算放大器、反馈电阻 $R_F$ 和反馈电容 $C_F$ 构成： $I_{\mathrm{sig}}$ 接反相端，非反相端接虚拟地参考 $V_{\mathrm{GND}}$。
 
 负反馈会调节运放输出，使反相端节点虚地，pixel 输出的信号电流主要流过反馈网络，并在 $R_F$ 上形成输出电压。
 
@@ -405,74 +407,35 @@ flowchart LR
     TS --> S["测试端 v_t、i_t"]
 ```
 
-此时漏极节点 KCL 为：
+对漏极节点列 KCL：
 
-$
-G_Rv_d+g_{dsS}(v_d-v_t)-g_{mS}v_t=0.
-$
+$$
+G_Rv_x+g_{dsS}(v_x-v_t)-g_{mS}v_t=0
+$$
 
-所以：
+可得
 
-$
-v_d=
-\frac{g_{mS}+g_{dsS}}
-{G_R+g_{dsS}}v_t.
-$
+$$
+v_x=\frac{g_{mS}+g_{dsS}}{G_R+g_{dsS}}v_t
+$$
 
-流入源极的测试电流为：
+测试电流为：
 
-$
-i_t=(g_{mS}+g_{dsS})v_t-g_{dsS}v_d.
-$
-
-代入 $v_d$：
-
-$
-i_t=
-\frac{(g_{mS}+g_{dsS})G_R}
-{G_R+g_{dsS}}v_t.
-$
+$$
+i_t=G_Rv_x=G_R\frac{g_{mS}+g_{dsS}}{G_R+g_{dsS}}v_t
+$$
 
 因此第二种 2T pixel 的完整低频输出阻抗为：
 
-$
-\boxed{
-R_{\mathrm{out2}}
-=\frac{v_t}{i_t}
-=\frac{G_R+g_{dsS}}
-{(g_{mS}+g_{dsS})G_R}
-=\frac{g_{mR}+g_{dsR}+g_{dsS}}
-{(g_{mS}+g_{dsS})(g_{mR}+g_{dsR})}
-}.
-$
-
-TIA 输入阻抗是独立的外围参数：
-
-$
-Z_{\mathrm{in,TIA}}(s)
-=\frac{v_s(s)}{i_{\mathrm{sig}}(s)}.
-$
-
-若运放开环增益为 $A(s)$、反馈阻抗为 $Z_F(s)$，反相节点满足 $v_o=-A(s)v_s$，且输入电流流入反馈支路：
-
-$
-i_{\mathrm{sig}}=\frac{v_s-v_o}{Z_F}
-=\frac{[1+A(s)]v_s}{Z_F}.
-$
-
-所以：
-
-$
-\boxed{
-Z_{\mathrm{in,TIA}}(s)=\frac{Z_F(s)}{1+A(s)}
-}.
-$
+$$
+R_{\mathrm{out2}}=\frac{v_t}{i_t}=\frac{G_R+g_{dsS}}{(g_{mS}+g_{dsS})G_R}=\frac{g_{mR}+g_{dsR}+g_{dsS}}{(g_{mS}+g_{dsS})(g_{mR}+g_{dsR})}
+$$
 
 电流读取条件为：
 
-$
+$$
 |Z_{\mathrm{in,TIA}}(s)|\ll R_{\mathrm{out2}}.
-$
+$$
 ## 2.6 噪声与 $W/L$ 设计
 
 噪声来源包括 $T_S$ 的热噪声与 $1/f$ 噪声、$T_R$ 的供电调制噪声、TIA 运放电压/电流噪声、反馈电阻噪声和 PGA 噪声。反馈电阻的输入参考电流噪声为：
@@ -508,7 +471,7 @@ $$
 - 若增加 $L_S$，应更大比例地增加 $W_S$，避免 $W_S/L_S$ 和 $g_{mS}$ 降低；
 - 不宜只靠把 $L_S$ 压到工艺最小值来提高 $W/L$，因为这可能降低 $r_o$、减小面积并恶化 $1/f$ 噪声。
 
-也就是说，$T_S$ 宜采用 **大面积、宽沟道、较大 $W_S/L_S$、但非最短 $L_S$** 的设计。代价是电极输入电容、$C_{gsS}$、$C_{gdS}$、面积和 TIA 噪声增益上升。
+也就是说， $T_S$ 宜采用 **大面积、宽沟道、较大 $W_S/L_S$、但非最短 $L_S$** 的设计。代价是电极输入电容、 $C_{gsS}$、 $C_{gdS}$、面积和 TIA 噪声增益上升。
 
 ### 2.6.2 选通晶体管 $T_R$
 
@@ -516,25 +479,21 @@ $T_R$ 位于 $T_S$ 的漏极侧，不能在严格小信号分析中替换成与�
 
 由本章严格模型，传感晶体管的等效跨导为
 
-$
-G_{m,\mathrm{eff}}=
-\frac{g_{mS}(g_{mR}+g_{dsR})}
-{g_{mR}+g_{dsR}+g_{dsS}},
-$
+$$
+G_{m,\mathrm{eff}}=\frac{g_{mS}(g_{mR}+g_{dsR})}{g_{mR}+g_{dsR}+g_{dsS}}
+$$
 
 而 pixel 输出电阻为
 
-$
-R_{\mathrm{out2}}=
-\frac{g_{mR}+g_{dsR}+g_{dsS}}
-{(g_{mS}+g_{dsS})(g_{mR}+g_{dsR})}.
-$
+$$
+R_{\mathrm{out2}}=\frac{g_{mR}+g_{dsR}+g_{dsS}}{(g_{mS}+g_{dsS})(g_{mR}+g_{dsR})}
+$$
 
 因此，若目标是使 $T_R$ 对电流传输的衰减很小，应使
 
-$
-g_{mR}+g_{dsR}\gg g_{dsS}.
-$
+$$
+g_{mR}+g_{dsR}\gg g_{dsS}
+$$
 
 在给定工艺、偏置和沟道工作区内，增大 $W_R/L_R$ 通常同时增大 $g_{mR}$ 与 $g_{dsR}$，可提高 $G_{m,\mathrm{eff}}$；但它也会增大 $C_{gsR}$、$C_{gdR}$、时钟馈通、电荷注入及 $T_R$ 自身噪声耦合。设计时应优先增大 $W_R$，而不应仅把 $L_R$ 压到工艺最小值；随后用实测或紧凑模型在最差 $V_{\mathrm{ON}}$、阈值漂移和目标 $I_D$ 下验证上式，并检查 $T_S$ 始终处于要求的工作区。若需降低 $R_{\mathrm{out2}}$，仅增大 $T_R$ 并不总是有效，因为极限值同时受 $g_{mS}+g_{dsS}$ 约束；通常还需增大 $W_S/L_S$ 以提高 $g_{mS}$。
 ## 2.7 外围电路与 NI 接口
@@ -547,7 +506,7 @@ I_{\mathrm{sig}}\rightarrow\mathrm{TIA}\rightarrow
 \rightarrow\mathrm{ADC驱动}\rightarrow\mathrm{NI}.
 $$
 
-必须确定 $R_F$、$C_F$、运放偏置电流、输入电流噪声、稳定性、输出共模和量程，还要产生 $V_{\mathrm{ON}}$、$V_{\mathrm{OFF}}$、虚拟地和器件电源。若已经使用图中的完整 ROC（含 SAR ADC），更合理的是读取数字输出，而不是把内部模拟节点再次接入 NI 电压通道。
+必须确定 $R_F$、 $C_F$、运放偏置电流、输入电流噪声、稳定性、输出共模和量程，还要产生 $V_{\mathrm{ON}}$、 $V_{\mathrm{OFF}}$、虚拟地和器件电源。若已经使用图中的完整 ROC（含 SAR ADC），更合理的是读取数字输出，而不是把内部模拟节点再次接入 NI 电压通道。
 
 ---
 
