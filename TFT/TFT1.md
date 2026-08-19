@@ -232,6 +232,12 @@ $$
 
 # 第二章　第二种 2T：漏极侧选通的 MoS₂ 电流/TIA 阵列
 
+<div align="center">
+<img src="TFT1-images/image-1.png" width="90%">
+</div>
+<br>
+
+
 ## 2.1 pixel 内两只晶体管的功能与次序
 
 每个 pixel 同样有两只 n 型器件：
@@ -242,99 +248,114 @@ $$
 从电源到输出的次序为：
 
 $$
-V_{\mathrm{rail}}\rightarrow T_R\rightarrow T_S
-\rightarrow I_{\mathrm{sig}}.
+V_{\mathrm{d}}\rightarrow T_R\rightarrow T_S\rightarrow I_{\mathrm{sig}}.
 $$
 
 因此它属于 **开关晶体管在前、传感晶体管在后**，或称 **漏极侧/供电侧选通**。行关闭时，$T_S$ 失去漏极电流通路；行打开时，$T_R$ 为 $T_S$ 建立工作电压。
 
-## 2.2 直流工作与输出类型
+## 2.2 直流工作点与输出类型
 
-相关系统被称为双晶体管复用源极跟随阵列。如果源极接高阻电压负载，$T_S$ 的确可表现为源极跟随器。但图中的实际 ROC 首级是 I-to-V Conversion，运放反相输入通过反馈保持在虚拟地 $V_{\mathrm{GND}}$ 附近，列线电压摆幅很小。
+<div align="center">
+<img src="TFT1-images/image-2.png" width="70%">
+</div>
+<br>
 
-因此在图示工作条件下，pixel 的原始输出应理解为 **电流 $I_{\mathrm{sig}}$**；TIA 后才变为电压。开关晶体管 $T_R$ 不直接串在源极输出线上，但其压降会减少 $T_S$ 的 $V_{DS}$ 裕量。
+该系统中的传感晶体管的接入方式类似源极跟随器。如果源极接高阻电压负载，$T_S$ 可表现为源极跟随器。
 
-## 2.3 完整小信号模型与跨导输出推导
+这种接法要求输出端接高阻电压负载，且需要电流源偏置，输出信号类型为**电压**。
 
-第二种阵列中，开关晶体管 $T_R$ 位于传感晶体管 $T_S$ 的漏极供电侧。令 $T_R$ 的电源轨端为漏极并接交流地，与 $T_S$ 相连的一端为源极节点 $v_d$。由于 $v_{gR}=0$，有：
+图中的实际 ROC 首级是 I-to-V Conversion，运放反相输入通过反馈保持在虚拟地 $V_{\mathrm{GND}}$ 附近，列线电压摆幅很小。pixel 的原始输出应理解为 **电流 $I_{\mathrm{sig}}$**；经TIA跨阻放大后才变为电压。开关晶体管 $T_R$ 不直接串在源极输出线上，但其压降会减少 $T_S$ 的 $V_{DS}$ 裕量。
 
-$
-v_{gsR}=-v_d,\qquad v_{dsR}=-v_d.
-$
+**补充说明1**：为什么源极跟随器需要高阻负载？
 
-从节点 $v_d$ 流入 $T_R$ 的小信号电流为：
+对共漏极电路作交流小信号分析，在源极节点列KCL方程：
 
-$
-i_R=(g_{mR}+g_{dsR})v_d.
-$
+$$
+g_m(v_o-v_i)+g_{ds}v_o+\frac{v_o}{r_B}+\frac{v_o}{Z_L(s)}=0
+$$
 
-定义：
+其中，除晶体管小信号参数外， $r_B$ 为偏置电流源输出电阻。
 
-$
-G_R=g_{mR}+g_{dsR}.
-$
+得到电压增益为
+
+$$
+A_v(s)=\frac{v_o}{v_i}=\frac{g_m}{g_m+g_{ds}+\dfrac{1}{r_B}+\dfrac{1}{Z_L(s)}}
+$$
+
+只有在负载 $Z_L(s)\gg1$时， 
+
+$$
+A_v(s)=\frac{v_o}{v_i}=\frac{g_m}{g_m+g_{ds}+\dfrac{1}{r_B}}\approx1
+$$
+
+**补充说明2**：为什么TIA提供的是低阻虚地节点？
+
+对于跨阻放大器求输入阻抗，同样采用加压求流的方式，反相输入端电压 $v_t$，输入电流 $i_t$。设运放的开环放大倍数为 $A(s)$，负反馈网络阻抗为 $Z_F(s)$。
+
+$$
+v_o=A(s)(v_{+}-v_{-})=-A(s)v_t
+$$
+
+$$
+i_t=\frac{v_t-v_o}{Z_F(s)}
+$$
+
+可得
+$$
+Z_{in}=\frac{v_t}{i_t}=\frac{Z_F(s)}{1+A(s)}
+$$
+
+通常情况下，开环增益 $A(s)\gg1$，则有 $Z_{in}\rightarrow0$。
+
+注意到，在第一种情况下，运放的连接方式是电压跟随器，输入阻抗 $Z_{in}\rightarrow\infty$
+
+**补充说明3**：运放的输入阻抗、输出阻抗相关计算（待完成）
+
+## 2.3 小信号模型与跨导输出推导
+
+第二种阵列中，开关晶体管 $T_R$ 位于传感晶体管 $T_S$ 的漏极供电侧。令 $T_R$ 的电源轨端为漏极并接交流地，与 $T_S$ 相连的一端为节点 $v_x$。
+
+此时 $T_R$ 的栅极和漏极均接交流地，受控源可等效为电阻。定义： $G_R=g_{mR}+g_{dsR}$
 
 ```mermaid
 flowchart LR
     G["电源轨：交流地"] --> TR["T_R：g_mR、g_dsR\n栅极交流地"]
-    TR --> D["T_S 漏极 v_d"]
+    TR --> D["T_S 漏极 v_x"]
     VE["电极 v_E"] -->|"栅极"| TS["T_S：g_mS、g_dsS"]
     D --- TS
     TS --> S["源极 / I_sig：v_s"]
     S --> TIA["TIA 输入"]
 ```
 
-$T_S$ 的漏极小信号电流为：
+对漏极节点 $v_x$ 列写 KCL：
 
-$
-i_{dS}=g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s).
-$
-
-在漏极节点 $v_d$ 写 KCL：
-
-$
-G_Rv_d+g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s)=0.
-$
+$$
+G_Rv_x+g_{mS}(v_E-v_s)+g_{dsS}(v_x-v_s)=0.
+$$
 
 因此：
 
-$
-v_d=
-\frac{(g_{mS}+g_{dsS})v_s-g_{mS}v_E}
-{G_R+g_{dsS}}.
-$
+$$
+v_x=\frac{(g_{mS}+g_{dsS})v_s-g_{mS}v_E}{G_R+g_{dsS}}
+$$
 
-定义流向 TIA 的源极输出电流方向，使其幅值为：
+输出电流为：
 
-$
-i_{\mathrm{sig}}=
- g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s).
-$
+$$
+I_{\mathrm{sig}}= g_{mS}(v_E-v_s)+g_{dsS}(v_d-v_s)=-G_R\frac{(g_{mS}+g_{dsS})v_s-g_{mS}v_E}{G_R+g_{dsS}}
+$$
 
-TIA 在闭环带宽内使 $v_s\approx0$。代入上式与 $v_d$ 得：
-
-$
-\boxed{
-G_{m,\mathrm{eff}}
-=\left.\frac{i_{\mathrm{sig}}}{v_E}\right|_{v_s=0}
-=\frac{g_{mS}G_R}{G_R+g_{dsS}}
-=\frac{g_{mS}(g_{mR}+g_{dsR})}
-{g_{mR}+g_{dsR}+g_{dsS}}
-}.
-$
+TIA 在闭环带宽内使 $v_s\approx0$，则跨导增益为：
+$$
+G_{m,eff}=\frac{I_{\mathrm{sig}}}{v_E}=G_R\frac{g_{mS}}{G_R+g_{dsS}}=\frac{g_{mS}}{1+\dfrac{g_{dsS}}{g_{mR}+g_{dsR}}}
+$$
 
 因此第二种 pixel 的有效跨导并非单独的 $g_{mS}$，而由两只晶体管的 $g_m$、$g_{ds}$ 共同决定。
 ## 2.4 TIA、PGA 与系统电压增益
 
 TIA 是 **Transimpedance Amplifier（跨阻放大器）**。它把输入电流转换成输出电压，跨阻的单位是欧姆。图中的 TIA 由运算放大器、反馈电阻 $R_F$ 和反馈电容 $C_F$ 构成：$I_{\mathrm{sig}}$ 接反相端，非反相端接虚拟地参考 $V_{\mathrm{GND}}$。
 
-负反馈会调节运放输出，使反相端电压接近非反相端：
-
-$$
-v_-\approx v_+ = V_{\mathrm{GND}}.
-$$
-
-这不是说该节点真的短接到地，而是运放依靠闭环反馈把它维持在近似恒定电位，因此称为“虚拟地”。由于运放输入电流近似为零，pixel 输出的信号电流主要流过反馈网络，并在 $R_F$ 上形成输出电压。
+负反馈会调节运放输出，使反相端节点虚地，pixel 输出的信号电流主要流过反馈网络，并在 $R_F$ 上形成输出电压。
 
 反馈网络是 $R_F$ 与 $C_F$ 并联：
 
@@ -346,7 +367,7 @@ $$
 TIA 输出为：
 
 $$
-v_{\mathrm{TIA}}(s)=-Z_F(s)i_{\mathrm{sig}}(s).
+v_{\mathrm{TIA}}(s)=-Z_F(s)I_{\mathrm{sig}}(s).
 $$
 
 负号表示反相：流入求和节点的正向电流使 TIA 输出向负方向变化。$R_F$ 决定低频电流—电压转换比例，$C_F$ 限制高频增益、补偿列线输入电容并帮助维持闭环稳定。
@@ -372,9 +393,9 @@ $$
 
 所以该系统的显著电压增益来自 pixel 跨导、TIA 与 PGA 的组合，而不是两只 pixel 晶体管独立构成高增益级。
 
-## 2.5 pixel 输出阻抗与 TIA 输入阻抗的完整推导
+## 2.5 pixel 输出阻抗与 TIA 输入阻抗
 
-求 pixel 输出阻抗时令电极输入 $v_E=0$，移除 TIA，在源极端施加测试电压 $v_t=v_s$，求流入 pixel 的测试电流 $i_t$。
+求 pixel 输出阻抗时令电极输入 $v_E=0$，移除 TIA，在源极施加测试电压 $v_t$，求流入 pixel 的测试电流 $i_t$。
 
 ```mermaid
 flowchart LR
