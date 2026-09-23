@@ -1,12 +1,12 @@
 # TFT 电极阵列对比分析
 
-本文统一比较三种电极阵列：第一种为 **柔性单晶硅衬底 2T 源极侧选通电压型阵列**，第二种为 **MoS₂ 2T 漏极侧选通电流/TIA 型阵列**，第三种为 **IGZO 1T 被动电压复用阵列**。全文严格按六章组织，并令第一、二、四章使用相同分析框架和相近篇幅。
+本文统一比较三种电极阵列：第一种为 **柔性单晶硅衬底 2T 源极侧选通电压型阵列**，第二种为 **MoS₂ 2T 漏极侧选通电流/TIA 型阵列**，第三种为 **IGZO 1T 被动电压复用阵列**。
 
 统一符号如下： $v_E$ 为电极小信号电压， $Z_E(f)$ 为电极—组织界面阻抗， $g_m$ 、 $g_{ds}$ 、 $r_o=1/g_{ds}$ 分别为传感晶体管的跨导、输出电导和输出电阻， $R_{\mathrm{on}}$ 为开关晶体管的总导通电阻， $C_{\mathrm{COL}}$ 为列线总电容， $Z_L$ 为外部负载， $Z_F$ 为跨阻放大器反馈阻抗。
 
 ---
 
-# 第一章　第一种 2T：柔性单晶硅衬底的源极侧选通电压型阵列
+# 1 第一种 2T：柔性单晶硅衬底的源极侧选通电压型阵列
 
 <div align="center">
 <img src="TFT1-images/image.png" width="60%">
@@ -18,7 +18,7 @@
 
 每个 pixel 含两只制作在柔性单晶硅衬底上的 n 型晶体管，统一命名为传感晶体管 $T_S$ 和开关晶体管 $T_R$：
 
-- **$T_S$ 传感晶体管**：栅极连接 ELECTRODE，漏极接 $+V$，源极连接内部节点。它构成共漏极级，即源极跟随器。
+- **$T_S$ 传感晶体管**：栅极连接 ELECTRODE，漏极接 $+V$，源极连接内部节点。它构成共漏极连接，即源极跟随器。
 - **$T_R$ 开关晶体管**：栅极连接 ROW，沟道串在 $T_S$ 源极和 COL 列线之间。它在线性区充当模拟开关。
 
 从电源到输出的次序为：
@@ -39,7 +39,9 @@ $$
 V_{\mathrm{COL}}=V_E-V_{GS,S}(I_B)-V_{DS,R}(I_B,V_{\mathrm{ROW}}).
 $$
 
-所以该 pixel 的原始输出是 **电压**。其中 $V_E$ 为电极电压， $V_{GS}$ 是传感晶体管的栅源电压，受阈值电压、迁移率、温度、陷阱态和偏置应力影响。 $V_{DS,R}(I_B,V_{\mathrm{ROW}})$ 是开关晶体管 $T_R$ 在偏置电流和 ROW 电压共同决定的工作点上的直流压降。该结构更适合测量电极电压的变化量；若测绝对电位，需要逐像素校准。
+所以该 pixel 的原始输出是 **电压**。其中 $V_E$ 为电极电压， $V_{GS}$ 是传感晶体管的栅源电压，受阈值电压、迁移率、温度、陷阱态和偏置应力影响。 $V_{DS,R}(I_B,V_{\mathrm{ROW}})$ 是开关晶体管 $T_R$ 在偏置电流和 ROW 电压共同决定的工作点上的直流压降。
+
+该结构更适合测量电极电压的变化量；若测绝对电位，需要逐像素校准。
 
 TLC2274 在图中接成单位增益缓冲器，其作用是隔离列线和后级，不提供显著电压增益。 $15\mu\mathrm{F}$ 与 $1\mathrm{M\Omega}$ 构成高通滤波器：
 
@@ -935,6 +937,618 @@ $$
 3. J. S. Lee et al., “Systematic investigation on the effect of contact resistance on the performance of a-IGZO thin-film transistors with various geometries of electrodes,” *physica status solidi (a)*, 2010. [DOI](https://doi.org/10.1002/pssa.200983753)
 4. W.-S. Kim et al., “An investigation of contact resistance between metal electrodes and amorphous gallium-indium-zinc oxide thin-film transistors,” *Thin Solid Films*, 2010. [DOI](https://doi.org/10.1016/j.tsf.2010.02.044)
 5. D. Xu et al., “Two-dimensional semiconductor-based active array for high-fidelity spatiotemporal monitoring of neural activities,” *Nature Materials*, accepted 2025.
+
+---
+
+# 第七章　三种阵列的严格小信号噪声分析
+
+## 7.1 统一噪声定义
+
+以下均采用单边功率谱密度，单位分别为 $\mathrm{V^2/Hz}$ 或 $\mathrm{A^2/Hz}$。不同物理来源若无相关性，则输出噪声功率谱直接相加；若实测表明两噪声源相关，则还必须加入互谱项。
+
+对任一晶体管 $T_k$，将其沟道热噪声、低频陷阱噪声、接触噪声及偏置相关噪声统一折算成漏源之间的诺顿电流噪声 $i_{n,k}$：
+
+$$
+S_{i_k}(f)=S_{i_k,\mathrm{th}}(f)+S_{i_k,1/f}(f)+S_{i_k,\mathrm{c}}(f).
+$$
+
+长沟道场效应晶体管常用的热噪声起始模型为：
+
+$$
+S_{i_k,\mathrm{th}}(f)=4kT\gamma_k g_{m,k},
+$$
+
+低频噪声可写成经验形式：
+
+$$
+S_{i_k,1/f}(f)=\frac{K_{i,k}I_{D,k}^{\eta_k}}{W_kL_k f^{\alpha_k}}.
+$$
+
+其中 $\gamma_k$、$K_{i,k}$、$\eta_k$ 和 $\alpha_k$ 必须由对应材料、偏置和器件尺寸的测试或紧凑模型确定。对于 MoS₂ 与 IGZO TFT，陷阱、接触电阻和迁移率涨落可能占主导，不能直接照搬理想硅 MOSFET 的系数。
+
+列负载的等效诺顿电流噪声记为 $i_{nL}$，谱密度为 $S_{iL}$。它可包含偏置电流源、电流镜、列线漏电、未选通 pixel 及后端输入电流噪声。电压缓冲器的输入电压噪声记为 $e_{nB}$，TIA 的输入电压噪声和输入电流噪声分别记为 $e_{nA}$ 与 $i_{nA}$。
+
+最终带内均方根噪声由功率谱积分得到：
+
+$$
+v_{n,\mathrm{rms}}=
+\sqrt{\int_{f_L}^{f_H}S_v(f)\,df}.
+$$
+
+## 7.2 第一种柔性单晶硅 2T 电压型阵列
+
+### 7.2.1 噪声节点方程
+
+沿用第一章的节点：$v_x$ 为 $T_S$ 与 $T_R$ 之间的内部节点，$v_o$ 为列输出，且定义：
+
+$$
+a=g_{mS}+g_{dsS},\qquad
+b=g_{dsR},\qquad
+c=g_{mR}+g_{dsR},\qquad
+Y=Y_L(s).
+$$
+
+定义 $i_{nS}$ 为注入内部节点 $v_x$ 的 $T_S$ 等效噪声电流，$i_{nR}$ 为从 $v_x$ 流向 $v_o$ 的 $T_R$ 等效噪声电流，$i_{nL}$ 为列负载向 $v_o$ 注入的噪声电流。于是 $T_R$ 支路电流为：
+
+$$
+i_R=bv_x-cv_o+i_{nR}.
+$$
+
+在 $v_x$ 与 $v_o$ 两节点列 KCL：
+
+$$
+av_x+i_R=g_{mS}v_E+i_{nS},
+$$
+
+$$
+Yv_o=i_R+i_{nL}.
+$$
+
+整理成矩阵形式：
+
+$$
+\begin{bmatrix}
+a+b & -c\\
+-b & Y+c
+\end{bmatrix}
+\begin{bmatrix}
+v_x\\v_o
+\end{bmatrix}
+=
+\begin{bmatrix}
+g_{mS}v_E+i_{nS}-i_{nR}\\
+i_{nR}+i_{nL}
+\end{bmatrix}.
+$$
+
+矩阵行列式为：
+
+$$
+\Delta_1(s)
+=(a+b)(Y+c)-bc
+=a(Y+c)+bY.
+$$
+
+由克拉默法则得到输出：
+
+$$
+v_o=
+\frac{
+bg_{mS}v_E
++bi_{nS}
++ai_{nR}
++(a+b)i_{nL}
+}{\Delta_1(s)}.
+$$
+
+因此信号传输函数为：
+
+$$
+A_{v1}(s)=\frac{v_o}{v_E}
+=\frac{bg_{mS}}{\Delta_1(s)},
+$$
+
+它与第一章的嵌套表达式完全等价。
+
+### 7.2.2 输出噪声与输入参考噪声
+
+若三个诺顿噪声源互不相关，则 pixel 列输出噪声为：
+
+$$
+\boxed{
+S_{v_o,1}(f)=
+\frac{
+b^2S_{iS}
++a^2S_{iR}
++|a+b|^2S_{iL}
+}{|\Delta_1(j2\pi f)|^2}
+}.
+$$
+
+若列线后接单位增益电压缓冲器，其输入电压噪声直接叠加到缓冲器输出；若缓冲器闭环传递函数为 $H_B(s)$，则：
+
+$$
+S_{v,\mathrm{out1}}(f)
+=|H_B|^2S_{v_o,1}+S_{eB,\mathrm{out}}.
+$$
+
+将 pixel 噪声折算到电极输入端：
+
+$$
+S_{v,\mathrm{in1}}(f)
+=\frac{S_{v_o,1}}{|A_{v1}|^2},
+$$
+
+所以：
+
+$$
+\boxed{
+S_{v,\mathrm{in1}}(f)=
+\frac{S_{iS}}{g_{mS}^2}
++\frac{a^2}{b^2g_{mS}^2}S_{iR}
++\frac{|a+b|^2}{b^2g_{mS}^2}S_{iL}
+}.
+$$
+
+缓冲器的输入参考贡献还应加上：
+
+$$
+S_{v,\mathrm{in1,B}}(f)
+=\frac{S_{eB,\mathrm{out}}}{|H_BA_{v1}|^2}.
+$$
+
+该结果表明，增大 $g_{mS}$ 可同时降低 $T_S$、$T_R$ 和列负载的输入参考贡献；但是 $T_R$ 噪声还受到 $a/b=(g_{mS}+g_{dsS})/g_{dsR}$ 的加权，因此不能只根据 $T_R$ 的器件数目判断其噪声是否可忽略。实际 REF200 电流镜的输出电流噪声属于 $S_{iL}$，理想直流电流源的小信号增量虽然为零，其真实噪声并不为零。
+
+## 7.3 第二种 MoS₂ 2T 电流/TIA 型阵列
+
+### 7.3.1 pixel 输出电流噪声
+
+沿用第二章定义：
+
+$$
+G_R=g_{mR}+g_{dsR},\qquad
+p=G_R+g_{dsS}.
+$$
+
+在 TIA 环路有效的频带内，源极求和节点满足 $v_s\approx0$。定义 $i_{nS}$ 为 $T_S$ 从漏极节点 $v_x$ 流向源极求和节点的噪声电流，$i_{nR}$ 为 $T_R$ 从节点 $v_x$ 流向交流地的噪声电流。在节点 $v_x$ 写 KCL：
+
+$$
+G_Rv_x+g_{mS}v_E+g_{dsS}v_x+i_{nR}+i_{nS}=0.
+$$
+
+因此：
+
+$$
+v_x=-\frac{g_{mS}v_E+i_{nR}+i_{nS}}{p}.
+$$
+
+流入 TIA 求和节点的 pixel 电流为：
+
+$$
+I_{\mathrm{sig}}
+=g_{mS}v_E+g_{dsS}v_x+i_{nS}.
+$$
+
+代入 $v_x$：
+
+$$
+\boxed{
+I_{\mathrm{sig}}
+=\frac{g_{mS}G_R}{p}v_E
++\frac{G_R}{p}i_{nS}
+-\frac{g_{dsS}}{p}i_{nR}
+}.
+$$
+
+于是有效跨导仍为：
+
+$$
+G_{m,\mathrm{eff}}
+=\frac{g_{mS}G_R}{p},
+$$
+
+而 pixel 输出电流噪声为：
+
+$$
+\boxed{
+S_{i,\mathrm{pixel2}}(f)=
+\left|\frac{G_R}{p}\right|^2S_{iS}
++\left|\frac{g_{dsS}}{p}\right|^2S_{iR}
+}.
+$$
+
+这个结果说明：位于漏极供电侧的 $T_R$ 噪声必须先通过 $g_{dsS}$ 才能耦合到源端电流。在 $G_R\gg g_{dsS}$ 时，$T_S$ 的电流噪声基本完整地到达 TIA，而 $T_R$ 的电流噪声被约按 $g_{dsS}/G_R$ 衰减。
+
+### 7.3.2 TIA 输出噪声
+
+令 TIA 反馈导纳为：
+
+$$
+Y_F(s)=\frac{1}{Z_F(s)}
+=\frac{1}{R_F}+sC_F.
+$$
+
+反馈电阻的热噪声可折算为输入端并联电流噪声：
+
+$$
+S_{i,R_F}=\frac{4kT}{R_F}.
+$$
+
+令从 TIA 求和节点向 pixel 和列线看进去的总导纳为 $Y_P(s)$。运放输入电压噪声 $e_{nA}$ 通过噪声增益传到输出：
+
+$$
+H_{eA}(s)=1+\frac{Y_P(s)}{Y_F(s)}
+=1+Z_F(s)Y_P(s).
+$$
+
+运放输入电流噪声、反馈电阻噪声和 pixel 电流噪声均通过跨阻 $Z_F$ 转换。因此，忽略噪声源间相关性时：
+
+$$
+\boxed{
+S_{v,\mathrm{TIA}}(f)=
+|Z_F|^2
+\left[
+S_{i,\mathrm{pixel2}}
++S_{iA}
++\frac{4kT}{R_F}
++S_{i,\mathrm{other}}
+\right]
++|1+Z_FY_P|^2S_{eA}
+}.
+$$
+
+其中 $S_{i,\mathrm{other}}$ 包含列线漏电、未选通 pixel 和偏置网络注入的电流噪声。若后面还有 PGA，其输入参考电压噪声为 $S_{e,\mathrm{PGA}}$、增益为 $A_{\mathrm{PGA}}$，则 PGA 输出噪声为：
+
+$$
+S_{v,\mathrm{PGA,out}}
+=|A_{\mathrm{PGA}}|^2
+\left[S_{v,\mathrm{TIA}}+S_{e,\mathrm{PGA}}\right].
+$$
+
+### 7.3.3 折算到电极输入端
+
+TIA 输出的信号增益为：
+
+$$
+H_{v2}(s)
+=-Z_F(s)G_{m,\mathrm{eff}}.
+$$
+
+因此系统输入参考噪声为：
+
+$$
+S_{v,\mathrm{in2}}(f)
+=\frac{S_{v,\mathrm{TIA}}}{|Z_FG_{m,\mathrm{eff}}|^2}.
+$$
+
+展开为：
+
+$$
+\boxed{
+S_{v,\mathrm{in2}}(f)=
+\frac{
+S_{i,\mathrm{pixel2}}+S_{iA}+4kT/R_F+S_{i,\mathrm{other}}
+}{|G_{m,\mathrm{eff}}|^2}
++\frac{|Y_F+Y_P|^2}{|G_{m,\mathrm{eff}}|^2}S_{eA}
+}.
+$$
+
+其中利用了：
+
+$$
+\frac{|1+Z_FY_P|^2}{|Z_F|^2}
+=|Y_F+Y_P|^2.
+$$
+
+增大 $g_{mS}$ 通常降低输入参考噪声，但也会增大栅极和列节点寄生电容，使 $Y_P$ 增大，从而提高运放电压噪声的高频贡献。增大 $T_R$ 的 $G_R$ 可减小其自身噪声向输出的耦合系数并提高 $G_{m,\mathrm{eff}}$，但更大的 $W_R$ 同样会增加开关馈通和寄生电容。因此最低噪声尺寸必须在 $g_m$、器件面积、陷阱噪声和 TIA 噪声增益之间联合优化。
+
+## 7.4 第三种 IGZO 1T 被动电压复用阵列
+
+### 7.4.1 电极、开关与列负载噪声方程
+
+沿用第四章定义：电极 Thévenin 电压源为 $v_E$，串联电极阻抗为 $Z_E(s)$；$T_R$ 电极侧节点为 $v_d$，输出节点为 $v_o$。定义：
+
+$$
+b=g_{dsR},\qquad
+c=g_{mR}+g_{dsR},\qquad
+Y=Y_L(s),\qquad
+Z=Z_E(s).
+$$
+
+令 $e_{nE}$ 为电极阻抗的串联电压噪声，$i_{nR}$ 为 $T_R$ 从 $v_d$ 流向 $v_o$ 的沟道噪声，$i_{nL}$ 为列负载向输出节点注入的诺顿噪声。于是：
+
+$$
+i_R=bv_d-cv_o+i_{nR},
+$$
+
+$$
+Yv_o=i_R+i_{nL},
+$$
+
+$$
+v_d=v_E+e_{nE}-Zi_R.
+$$
+
+由输出节点方程：
+
+$$
+i_R=Yv_o-i_{nL}.
+$$
+
+所以：
+
+$$
+v_d=v_E+e_{nE}-ZYv_o+Zi_{nL}.
+$$
+
+代回 $T_R$ 方程并整理，得到：
+
+$$
+\Delta_3(s)v_o
+=b(v_E+e_{nE})+i_{nR}+(1+bZ)i_{nL},
+$$
+
+其中：
+
+$$
+\Delta_3(s)=c+Y(s)[1+bZ(s)].
+$$
+
+因此完整输出为：
+
+$$
+\boxed{
+v_o=
+\frac{
+bv_E+be_{nE}+i_{nR}+[1+bZ(s)]i_{nL}
+}{\Delta_3(s)}
+}.
+$$
+
+信号传输函数为：
+
+$$
+A_{v,\mathrm{1T}}(s)
+=\frac{b}{\Delta_3(s)},
+$$
+
+与第四章结果一致。
+
+### 7.4.2 输出噪声与输入参考噪声
+
+电极阻抗的平衡热噪声为：
+
+$$
+S_{eE,\mathrm{th}}(f)
+=4kT\operatorname{Re}\{Z_E(j2\pi f)\}.
+$$
+
+实际生物电极还可能存在极化漂移、电化学低频噪声和运动伪迹，这些附加项也应计入 $S_{eE}$。若各噪声源互不相关，则：
+
+$$
+\boxed{
+S_{v_o,\mathrm{1T}}(f)=
+\frac{
+b^2S_{eE}
++S_{iR}
++|1+bZ|^2S_{iL}
+}{|\Delta_3(j2\pi f)|^2}
+}.
+$$
+
+若后接高输入阻抗电压缓冲器，则其输入电压噪声还需直接叠加：
+
+$$
+S_{v,\mathrm{out1T}}
+=|H_B|^2S_{v_o,\mathrm{1T}}+S_{eB,\mathrm{out}}.
+$$
+
+折算到理想电极电压源 $v_E$：
+
+$$
+S_{v,\mathrm{in1T}}
+=\frac{S_{v_o,\mathrm{1T}}}{|A_{v,\mathrm{1T}}|^2}.
+$$
+
+所以 pixel 与列负载的输入参考噪声为：
+
+$$
+\boxed{
+S_{v,\mathrm{in1T}}(f)=
+S_{eE}
++\frac{S_{iR}}{g_{dsR}^2}
++\frac{|1+g_{dsR}Z_E|^2}{g_{dsR}^2}S_{iL}
+}.
+$$
+
+缓冲器的输入参考贡献为：
+
+$$
+S_{v,\mathrm{in1T,B}}(f)
+=\frac{S_{eB,\mathrm{out}}}{|H_BA_{v,\mathrm{1T}}|^2}.
+$$
+
+若后端具有输入电流噪声 $S_{iB}$，则它属于 $S_{iL}$，其输入参考电压噪声近似体现为后端电流噪声乘以 1T 源阻抗的平方。由第四章：
+
+$$
+Z_{\mathrm{out,1T}}(s)
+=\frac{1+g_{dsR}Z_E(s)}{g_{mR}+g_{dsR}},
+$$
+
+所以高 $Z_E$ 会同时提高电流噪声转换、列线建立时间和外界耦合敏感度。这正是 1T 虽然晶体管数量最少，系统输入参考噪声却不一定最低的原因。
+
+## 7.5 最终采集数据应查看哪一种噪声
+
+若目标是判断 NI、ADC 或其他采集电路最终得到的数据抖动、有效位数和 SNR，应查看 **采集端输出参考噪声**，也就是 ADC 输入端或数字码输出端实际存在的噪声。ADC 输入端的带内噪声电压为：
+
+$$
+v_{n,\mathrm{ADC,rms}}
+=\sqrt{
+\int_{f_L}^{f_H}
+S_{v,\mathrm{ADC}}(f)\,df
+}.
+$$
+
+若 ADC 的输入满量程为 $V_{\mathrm{FS}}$、位数为 $N$，理想量化步长为：
+
+$$
+V_{\mathrm{LSB}}=\frac{V_{\mathrm{FS}}}{2^N}.
+$$
+
+模拟噪声对应的码值标准差为：
+
+$$
+\sigma_{n,\mathrm{code}}
+=\frac{v_{n,\mathrm{ADC,rms}}}{V_{\mathrm{LSB}}}.
+$$
+
+判断最终数据是否满足要求时，应把 pixel、模拟前端、滤波器、ADC 驱动器、ADC 输入噪声、参考源噪声、时钟抖动和量化噪声全部传递到 ADC 输入端或数字输出端后相加。
+
+但如果目标是公平比较三种阵列本身的噪声性能，不能直接比较输出噪声，因为三种电路的增益不同。此时应把采集端输出噪声除以各自从电极到采集端的完整信号增益，换算成 **电极输入参考噪声**。因此：
+
+- 判断最终采集数据质量：看输出参考噪声；
+- 比较三种阵列及前端优劣：看输入参考噪声；
+- 完整设计中两者都要计算，它们是同一噪声经过信号增益换算后的两种表达。
+
+## 7.6 三种阵列用于最终比较的完全展开公式
+
+以下公式不再使用 $a$、$b$、$c$、$G_R$、$p$、$\Delta_1$、$\Delta_3$、$G_{m,\mathrm{eff}}$ 或 $H_B$ 等简写。$S_{eE}$ 表示电极输入电压噪声；第一种和第三种电压缓冲器均按单位增益工作，其输入电压噪声分别记为 $S_{eB1}$ 与 $S_{eB3}$。
+
+### 7.6.1 第一种柔性单晶硅 2T
+
+第一种阵列从电极到列输出的完整信号增益为：
+
+$$
+\frac{v_o}{v_E}
+=
+\frac{g_{mS}g_{dsR}}
+{
+(g_{mS}+g_{dsS})
+[Y_L(s)+g_{mR}+g_{dsR}]
++g_{dsR}Y_L(s)
+}.
+$$
+
+包含电极、两只晶体管、列负载和单位增益缓冲器后，最终用于比较的电极输入参考噪声为：
+
+$$
+\boxed{
+\begin{aligned}
+S_{v,\mathrm{in1}}(f)
+={}&S_{eE}(f)
++\frac{S_{iS}(f)}{g_{mS}^2}+\frac{(g_{mS}+g_{dsS})^2}
+{g_{dsR}^2g_{mS}^2}S_{iR}(f)+\frac{(g_{mS}+g_{dsS}+g_{dsR})^2}
+{g_{dsR}^2g_{mS}^2}S_{iL1}(f)+\frac{
+\left|
+(g_{mS}+g_{dsS})
+[Y_L(j2\pi f)+g_{mR}+g_{dsR}]
++g_{dsR}Y_L(j2\pi f)
+\right|^2
+}{g_{dsR}^2g_{mS}^2}S_{eB1}(f).
+\end{aligned}
+}
+$$
+
+其中 $S_{iL1}$ 包含 REF200、电流镜、列线漏电、未选通 pixel 和缓冲器输入电流噪声。若缓冲器之后还有电压增益与滤波，应将上述各项分别传递到 ADC 输入端，再加入后级自身噪声。
+
+### 7.6.2 第二种 MoS₂ 2T 与 TIA
+
+第二种 pixel 的电极电压到输出电流跨导完全展开为：
+
+$$
+\frac{I_{\mathrm{sig}}}{v_E}
+=
+\frac{
+g_{mS}(g_{mR}+g_{dsR})
+}{g_{mR}+g_{dsR}+g_{dsS}}.
+$$
+
+包含两只 TFT、TIA 输入电流噪声、反馈电阻热噪声、其他列电流噪声以及运放输入电压噪声后，最终用于比较的电极输入参考噪声为：
+
+$$
+\boxed{
+\begin{aligned}
+S_{v,\mathrm{in2}}(f)
+={}&S_{eE}(f)
++\frac{S_{iS}(f)}{g_{mS}^2}+\frac{g_{dsS}^2}
+{g_{mS}^2(g_{mR}+g_{dsR})^2}S_{iR}(f)+\frac{(g_{mR}+g_{dsR}+g_{dsS})^2}
+{g_{mS}^2(g_{mR}+g_{dsR})^2}
+\left[
+S_{iA}(f)+\frac{4kT}{R_F}+S_{i,\mathrm{other}}(f)
+\right]+\frac{(g_{mR}+g_{dsR}+g_{dsS})^2}
+{g_{mS}^2(g_{mR}+g_{dsR})^2}
+\left|
+\frac{1}{R_F}+j2\pi fC_F+Y_P(j2\pi f)
+\right|^2S_{eA}(f).
+\end{aligned}
+}
+$$
+
+这里 $Y_P(s)$ 是从 TIA 求和节点向 pixel、列线电容、未选通单元和寄生网络看进去的实际总导纳，并非人为定义的增益简写。该式已经消除了反馈阻抗 $Z_F$；因此可以直接看出，TIA 运放电压噪声由总输入导纳与反馈导纳之和转换为等效电流噪声。
+
+### 7.6.3 第三种 IGZO 1T
+
+第三种阵列从理想电极电压源到列输出的完整信号增益为：
+
+$$
+\frac{v_o}{v_E}
+=\frac{g_{dsR}}
+{g_{mR}+g_{dsR}
++Y_L(s)[1+g_{dsR}Z_E(s)]}.
+$$
+
+包含电极、IGZO 开关晶体管、列负载和单位增益缓冲器后，最终用于比较的电极输入参考噪声为：
+
+$$
+\boxed{
+\begin{aligned}
+S_{v,\mathrm{in1T}}(f)
+={}&S_{eE}(f)
++\frac{S_{iR}(f)}{g_{dsR}^2}
++\frac{
+|1+g_{dsR}Z_E(j2\pi f)|^2
+}{g_{dsR}^2}S_{iL3}(f)
++\frac{
+\left|
+g_{mR}+g_{dsR}
++Y_L(j2\pi f)
+[1+g_{dsR}Z_E(j2\pi f)]
+\right|^2
+}{g_{dsR}^2}S_{eB3}(f)
+\end{aligned}
+}
+$$
+
+其中 $S_{iL3}$ 包含列线漏电、未选通 pixel、缓冲器输入电流噪声及采集接口输入电流噪声。与两种 2T 阵列相比，$Z_E$ 直接出现在列电流噪声和缓冲器电压噪声的输入参考系数中。
+
+### 7.6.4 比较方法与结论
+
+| 项目 | 第一种柔性单晶硅 2T | 第二种 MoS₂ 2T + TIA | 第三种 IGZO 1T |
+|---|---|---|---|
+| 主要信号量 | 列电压 | 源端电流，经 TIA 转为电压 | 列电压 |
+| pixel 主要噪声 | $T_S$、$T_R$、偏置电流镜 | $T_S$ 为主；$T_R$ 的输入参考系数含 $g_{dsS}/(g_{mR}+g_{dsR})$ | $T_R$ 与电极 $Z_E$ |
+| 前端主要噪声 | 缓冲器电压噪声、偏置源电流噪声 | TIA 电流噪声、$R_F$ 热噪声及噪声增益放大的电压噪声 | 缓冲器电压噪声和电流噪声 |
+| $Z_E$ 的影响 | 栅极输入，低频主要贡献电极自身噪声 | 栅极输入，低频主要贡献电极自身噪声，高频影响输入导纳 | 直接进入信号传输、输出阻抗和列负载噪声系数 |
+| 降低输入参考噪声的首要方向 | 提高 $g_{mS}$，降低偏置源及缓冲器噪声 | 提高 $g_{mS}(g_{mR}+g_{dsR})/(g_{mR}+g_{dsR}+g_{dsS})$，优化 $R_F$、$C_F$ 与运放 | 降低 $Z_E$、列漏电及后端电流噪声，减小 $T_R$ 噪声 |
+
+对三种展开后的输入参考功率谱分别在相同目标频带积分：
+
+$$
+v_{n,\mathrm{in1,rms}}
+=\sqrt{\int_{f_L}^{f_H}S_{v,\mathrm{in1}}(f)\,df},
+$$
+
+$$
+v_{n,\mathrm{in2,rms}}
+=\sqrt{\int_{f_L}^{f_H}S_{v,\mathrm{in2}}(f)\,df},
+$$
+
+$$
+v_{n,\mathrm{in1T,rms}}
+=\sqrt{\int_{f_L}^{f_H}S_{v,\mathrm{in1T}}(f)\,df}.
+$$
+
+三者只有在采用相同电极、有效带宽、采样率、扫描时序和后端带宽时才可直接比较。若系统采用相关双采样、斩波或逐行基线扣除，还必须把相应离散时间噪声传递函数乘入功率谱，不能只用连续时间白噪声公式估计最终 SNR。
 
 
 
