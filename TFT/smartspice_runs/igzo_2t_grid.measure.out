@@ -1,0 +1,73 @@
+SmartSpice v. 4.32.4.R
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 1,Sat Oct 10 15:28:55 2026
+
+av10           =  2.5990e+000
+gmeff10        =  7.8757e-006
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 2,Sat Oct 10 15:28:55 2026
+
+av10           =  2.6321e+000
+gmeff10        =  7.9760e-006
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 3,Sat Oct 10 15:28:55 2026
+
+av10           =  2.6505e+000
+gmeff10        =  8.0318e-006
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 4,Sat Oct 10 15:28:55 2026
+
+av10           =  5.0842e+000
+gmeff10        =  1.5407e-005
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 5,Sat Oct 10 15:28:55 2026
+
+av10           =  5.1956e+000
+gmeff10        =  1.5744e-005
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 6,Sat Oct 10 15:28:55 2026
+
+av10           =  5.2617e+000
+gmeff10        =  1.5944e-005
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 7,Sat Oct 10 15:28:55 2026
+
+av10           =  7.4827e+000
+gmeff10        =  2.2675e-005
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 8,Sat Oct 10 15:28:55 2026
+
+av10           =  7.7022e+000
+gmeff10        =  2.3340e-005
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 9,Sat Oct 10 15:28:55 2026
+
+av10           =  7.8376e+000
+gmeff10        =  2.3750e-005
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 10,Sat Oct 10 15:28:56 2026
+
+av10           =  9.8092e+000
+gmeff10        =  2.9725e-005
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 11,Sat Oct 10 15:28:56 2026
+
+av10           =  1.0159e+001
+gmeff10        =  3.0786e-005
+f3db           =  4.8259e+002
+                         * 导入 TFT 工艺库
+     AC Analysis, 27 deg C, step geom = 12,Sat Oct 10 15:28:56 2026
+
+av10           =  1.0382e+001
+gmeff10        =  3.1459e-005
+f3db           =  4.8259e+002

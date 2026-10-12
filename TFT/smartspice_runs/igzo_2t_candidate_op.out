@@ -1,0 +1,194 @@
+--> 16 processor(s) on line
+Loaded spiceui library (D:\sedatools\lib\smartspice\4.32.4.R\x86_64-windows\spiceui)
+--> Running on 16 processor(s)
+
+SmartSpice MultiCore
+Version 4.32.4.R
+
+Analog Circuit Simulator
+
+
+Copyright (c) 1984 - 2026
+Silvaco Inc. All rights reserved
+
+(408) 567-1000; http://www.silvaco.com
+
+Running on host : desktop_my
+PID: 30440
+
+
+Loaded solver (D:\sedatools\lib\smartspice\4.32.4.R\x86_64-windows\libsolver_64.dll)
+Loaded RAD library (D:\sedatools\lib\smartspice\4.32.4.R\x86_64-windows\libsr.dll)
+Loaded configuration file D:\sedatools\lib\smartspice\4.32.4.R\x86_64-windows\smartspice_4.32.4_x86_64-windows.slc
+--> source 'D:\lmy-graduate\workspace\docs\mynotes\TFT\smartspice_runs\igzo_2t_candidate_op.in'
+Loading D:\lmy-graduate\workspace\docs\mynotes\TFT\smartspice_runs\igzo_2t_candidate_op.in
+Loading C:\Users\12508\Documents\xwechat_files\wxid_ncy6a4tna08y11_7cd8\msg\file\2026-06\NVO_TFT Modelcard.LIB NVOTFT
+Circuit: * Final-candidate operating-point check
+Date: Sat Oct 10 15:46:57 2026
+
+
+
+                * Final-candidate operating-point check
+                 DC Operating Point Analysis, 27 deg C
+                        Sat Oct 10 15:46:57 2026
+------------------------------------------------------------------------
+
+Index     v(nd)           v(ns)           v(sum)         
+------------------------------------------------------------------------
+0        1.1384e+001    -5.2000e+000    -5.2000e+000    
+
+                * Final-candidate operating-point check
+                 DC Operating Point Analysis, 27 deg C
+                        Sat Oct 10 15:46:57 2026
+------------------------------------------------------------------------
+
+Index     v(out)          i(vsense)      
+------------------------------------------------------------------------
+0       -8.7283e+000     1.0692e-005    
+***** Operating point information. Tnom = 27, Temp = 27.
+***** Operating point status is 'all'.
+     node = voltage         node = voltage         node = voltage    
+
++ 0:gate  =  0.0000e+000  0:vd    =  1.2000e+001  0:row   =  2.0000e+001
++ 0:ref   = -5.2000e+000  0:ns    = -5.2000e+000  0:sum   = -5.2000e+000
++ 0:nd    =  1.1384e+001  0:out   = -8.7283e+000
+
+
+****** model type: Vsource
+
+subckt                                                                     
+element    vsense          vref            vrow            vd              
+model      v               v               v               v               
+
+power       0.0000e+000    -0.0000e+000     0.0000e+000    -1.2830e-004    
+i           1.0692e-005     0.0000e+000     0.0000e+000    -1.0692e-005    
+v           0.0000e+000    -5.2000e+000     2.0000e+001     1.2000e+001    
+
+subckt                     
+element    vin             
+model      v               
+
+power       0.0000e+000    
+i           0.0000e+000    
+v           0.0000e+000    
+
+Total Vsource power dissipation = -1.2830e-004 Watts
+
+
+****** model type: RPIpSi
+
+subckt                                     
+element    mamp            msel            
+model      my_w600l10      my_w600l10      
+
+type       ntft            ntft            
+region     Saturation      Linear          
+power       1.7732e-004     6.5833e-006    
+csgd        0.0000e+000     0.0000e+000    
+csgs       -1.7796e-012    -1.8611e-013    
+cdgd       -4.1564e-014    -1.4656e-013    
+cdgs        0.0000e+000     0.0000e+000    
+cggd        4.1564e-014     1.4656e-013    
+cggs        1.7796e-012     1.8611e-013    
+capgd       4.1564e-014     1.4656e-013    
+capgs       1.7796e-012     1.8611e-013    
+delvth      0.0000e+000     0.0000e+000    
+vteff       4.3919e+000     4.8701e+000    
+vtx         1.0000e+001     1.0000e+001    
+vds         1.6584e+001     6.1572e-001    
+vgs         5.2000e+000     8.6157e+000    
+gds         9.3700e-007     1.6995e-005    
+gm          3.1082e-005     3.6619e-006    
+cds         1.0692e-005     1.0692e-005    
+cs         -1.0692e-005    -1.0692e-005    
+cg          0.0000e+000     0.0000e+000    
+cd          1.0692e-005     1.0692e-005    
+weff        8.0000e-004     1.0000e-004    
+leff        9.7750e-006     9.7750e-006    
+
+Total RPIpSi power dissipation =  1.8390e-004 Watts
+
+
+****** model type: Resistor
+
+subckt                     
+element    rf              
+model      __rdefault      
+
+power       3.7724e-005    
+i          -1.0692e-005    
+v          -3.5283e+000    
+reff        3.3000e+005    
+
+Total Resistor power dissipation =  3.7724e-005 Watts
+
+
+****** model type: VCVS
+
+subckt                     
+element    eamp            
+model      e               
+
+power       9.3322e-005    
+i           1.0692e-005    
+v          -8.7283e+000    
+
+Total VCVS power dissipation =  9.3322e-005 Watts
+
+------------------------------------------------------------------------
+
+Circuit: * Final-candidate operating-point check
+
+
+
+	 Circuit: * Final-candidate operating-point check
+	 File: D:\lmy-graduate\workspace\docs\mynotes\TFT\smartspice_runs\igzo_2t_candidate_op.in
+	 Date: Sat Oct 10 15:46:57 2026
+
+          ***** job concluded
+
+******  job statistics summary tnom=  27.000 temp=  27.000 *****
+
+******  SmartSpice Threads Information  ******
+
+Command Line Model Threads Count            :     Not specified
+Command Line Solver Threads Count           :     Not specified
+Available CPU Count                         :      16
+Actual Model Evaluation(Load) Threads Count :       1
+Actual Solver Threads Count                 :       1
+
+
+******  Circuit Statistics  ******
+
+# nodes       =        9 # elements   =       10
+# resistors   =        1 # capacitors =        1 # inductors  =        0
+# mutual_inds =        0 # vccs       =        0 # vcvs       =        1
+# cccs        =        0 # ccvs       =        0 # volt_srcs  =        5
+# curr_srcs   =        0 # diodes     =        0 # bjts       =        0
+# jfets       =        0 # mosfets    =        2 # U elements =        0
+# T elements  =        0 # W elements =        0 # B elements =        0
+# S elements  =        0 # P elements =        0 # va devices =        0
+
+
+******  Solver Statistics (seconds) for solver='XMS(default) 64-bit' ******
+
+matrix reordering              0.00
+lu decomposition               0.00
+matrix solve                   0.00
+other matrix operations        0.00
+
+******  Runtime Statistics (seconds)  ******
+
+analysis           time    # points   tot. iter  conv. iter
+op point           0.00           1           9            
+readin             0.00
+errchk             0.00
+setup              0.00
+output             0.24
+
+           maximum memory used 	 51188 kbytes
+           total cpu time           0.24 seconds
+           total elapsed time       0.24 seconds
+           job started at     15:46:57 10/10/2026
+           job ended   at     15:46:57 10/10/2026
+

@@ -1,0 +1,120 @@
+--> 16 processor(s) on line
+Loaded spiceui library (D:\sedatools\lib\smartspice\4.32.4.R\x86_64-windows\spiceui)
+--> Running on 16 processor(s)
+
+SmartSpice MultiCore
+Version 4.32.4.R
+
+Analog Circuit Simulator
+
+
+Copyright (c) 1984 - 2026
+Silvaco Inc. All rights reserved
+
+(408) 567-1000; http://www.silvaco.com
+
+Running on host : desktop_my
+PID: 18128
+
+
+Loaded solver (D:\sedatools\lib\smartspice\4.32.4.R\x86_64-windows\libsolver_64.dll)
+Loaded RAD library (D:\sedatools\lib\smartspice\4.32.4.R\x86_64-windows\libsr.dll)
+Loaded configuration file D:\sedatools\lib\smartspice\4.32.4.R\x86_64-windows\smartspice_4.32.4_x86_64-windows.slc
+--> source 'D:\sedatools\Shortcuts\TFT_2T_1_2'
+Loading D:\sedatools\Shortcuts\TFT_2T_1_2
+Loading C:\Users\12508\Documents\xwechat_files\wxid_ncy6a4tna08y11_7cd8\msg\file\2026-06\NVO_TFT Modelcard.LIB NVOTFT
+Circuit: * ============================================================ (without .alters)
+Date: Sat Oct 10 15:24:36 2026
+
+
+
+Circuit: * ============================================================ (without .alters)
+
+Error: Could not open rawfile: 
+
+
+
+   Computational Statistics of the DC Transfer Curve Calculation
+  AN.PHASE  |  time   | totiter | totstep | CONrej  DEVrej
+   DCTC         0.088         0         0       0       0
+
+Error: doAnalyses: Abort requested
+
+
+
+
+	 Circuit: * ============================================================ (without .alters)
+	 File: D:\sedatools\Shortcuts\TFT_2T_1_2
+	 Date: Sat Oct 10 15:24:36 2026
+
+Circuit: * ============================================================ (VD_12V)
+Date: Sat Oct 10 15:24:36 2026
+
+
+
+Circuit: * ============================================================ (VD_12V)
+
+Error: Could not open rawfile: 
+
+
+
+   Computational Statistics of the DC Transfer Curve Calculation
+  AN.PHASE  |  time   | totiter | totstep | CONrej  DEVrej
+   DCTC         0.099         0         0       0       0
+
+Error: doAnalyses: Abort requested
+
+
+
+
+	 Circuit: * ============================================================ (VD_12V)
+	 File: D:\sedatools\Shortcuts\TFT_2T_1_2
+	 Date: Sat Oct 10 15:24:36 2026
+
+          ***** job concluded
+
+******  job statistics summary tnom=  27.000 temp=  27.000 *****
+
+******  SmartSpice Threads Information  ******
+
+Command Line Model Threads Count            :     Not specified
+Command Line Solver Threads Count           :     Not specified
+Available CPU Count                         :      16
+Actual Model Evaluation(Load) Threads Count :       1
+Actual Solver Threads Count                 :       1
+
+
+******  Circuit Statistics  ******
+
+# nodes       =       11 # elements   =       12
+# resistors   =        2 # capacitors =        1 # inductors  =        0
+# mutual_inds =        0 # vccs       =        0 # vcvs       =        2
+# cccs        =        0 # ccvs       =        0 # volt_srcs  =        5
+# curr_srcs   =        0 # diodes     =        0 # bjts       =        0
+# jfets       =        0 # mosfets    =        2 # U elements =        0
+# T elements  =        0 # W elements =        0 # B elements =        0
+# S elements  =        0 # P elements =        0 # va devices =        0
+
+
+******  Solver Statistics (seconds) for solver='XMS(default) 64-bit' ******
+
+matrix reordering              0.00
+lu decomposition               0.00
+matrix solve                   0.00
+other matrix operations        0.00
+
+******  Runtime Statistics (seconds)  ******
+
+analysis           time    # points   tot. iter  conv. iter
+dc sweep           0.00                                    
+readin             0.00
+errchk             0.00
+setup              0.00
+output             0.17
+
+           maximum memory used 	 51436 kbytes
+           total cpu time           0.17 seconds
+           total elapsed time       0.17 seconds
+           job started at     15:24:36 10/10/2026
+           job ended   at     15:24:36 10/10/2026
+

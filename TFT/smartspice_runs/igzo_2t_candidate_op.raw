@@ -1,0 +1,44 @@
+Title: * Final-candidate operating-point check
+Input deck file name: D:\lmy-graduate\workspace\docs\mynotes\TFT\smartspice_runs\igzo_2t_candidate_op.in
+Date: Sat Oct 10 15:46:57 2026
+Plotname: DC Operating Point Analysis, 27 deg C
+Temperature: 27
+Sweepvar: i(eamp)
+Sweepmode: -1
+Flags: real padded
+No. Variables: 15
+No. Points: 1         
+Source: SmartSpice MultiCore,Platform:0
+Version: 4.32.4.R
+Variables:	0	i(eamp)	current
+	1	i(vd)	current
+	2	i(vin)	current
+	3	i(vref)	current
+	4	i(vrow)	current
+	5	i(vsense)	current
+	6	v(0)	voltage
+	7	v(gate)	voltage
+	8	v(nd)	voltage
+	9	v(ns)	voltage
+	10	v(out)	voltage
+	11	v(ref)	voltage
+	12	v(row)	voltage
+	13	v(sum)	voltage
+	14	v(vd)	voltage
+Values:
+ 0	1.069187866566991e-005
+	-1.069187866335712e-005
+	0.000000000000000e+000
+	0.000000000000000e+000
+	0.000000000000000e+000
+	1.069187866335712e-005
+	0.000000000000000e+000
+	0.000000000000000e+000
+	1.138427776155693e+001
+	-5.199991271688769e+000
+	-8.728311231359839e+000
+	-5.200000000000000e+000
+	2.000000000000000e+001
+	-5.199991271688769e+000
+	1.200000000000000e+001
+

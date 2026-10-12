@@ -1,0 +1,97 @@
+SmartSpice v. 4.32.4.R
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 1,Sat Oct 10 15:30:17 2026
+
+av10           =  9.9256e+001
+gmeff10        =  3.0078e-004
+f3db           =  4.8264e+002
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 2,Sat Oct 10 15:30:17 2026
+
+av10           =  4.0315e+001
+gmeff10        =  1.2217e-004
+f3db           =  4.8262e+002
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 3,Sat Oct 10 15:30:17 2026
+
+av10           =  1.7046e+001
+gmeff10        =  5.1656e-005
+f3db           =  4.8261e+002
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 4,Sat Oct 10 15:30:17 2026
+
+av10           =  9.3625e+000
+gmeff10        =  2.8371e-005
+f3db           =  4.8261e+002
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 5,Sat Oct 10 15:30:17 2026
+
+av10           =  1.0488e+001
+gmeff10        =  3.1783e-005
+f3db           =  4.8259e+002
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 6,Sat Oct 10 15:30:17 2026
+
+av10           =  9.8097e+000
+gmeff10        =  2.9726e-005
+f3db           =  4.8259e+002
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 7,Sat Oct 10 15:30:17 2026
+
+av10           =  8.9487e+000
+gmeff10        =  2.7117e-005
+f3db           =  4.8259e+002
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 8,Sat Oct 10 15:30:17 2026
+
+av10           =  8.4021e+000
+gmeff10        =  2.5461e-005
+f3db           =  4.8259e+002
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+     AC Analysis, 27 deg C, step lgeom = 9,Sat Oct 10 15:30:17 2026
+
+av10           =  8.6118e-007
+gmeff10        =  2.6096e-012
+f3db           =  7.0703e+000
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+    AC Analysis, 27 deg C, step lgeom = 10,Sat Oct 10 15:30:17 2026
+
+av10           =  8.6118e-007
+gmeff10        =  2.6096e-012
+f3db           =  7.0703e+000
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+    AC Analysis, 27 deg C, step lgeom = 11,Sat Oct 10 15:30:17 2026
+
+av10           =  8.6118e-007
+gmeff10        =  2.6096e-012
+f3db           =  7.0703e+000
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+    AC Analysis, 27 deg C, step lgeom = 12,Sat Oct 10 15:30:17 2026
+
+av10           =  8.6118e-007
+gmeff10        =  2.6096e-012
+f3db           =  7.0703e+000
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+    AC Analysis, 27 deg C, step lgeom = 13,Sat Oct 10 15:30:17 2026
+
+av10           =  8.6118e-007
+gmeff10        =  2.6096e-012
+f3db           =  7.0703e+000
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+    AC Analysis, 27 deg C, step lgeom = 14,Sat Oct 10 15:30:17 2026
+
+av10           =  8.6118e-007
+gmeff10        =  2.6096e-012
+f3db           =  7.0703e+000
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+    AC Analysis, 27 deg C, step lgeom = 15,Sat Oct 10 15:30:17 2026
+
+av10           =  8.6118e-007
+gmeff10        =  2.6096e-012
+f3db           =  7.0703e+000
+  * IGZO 2T length sweep; model is the user-specified MY_W600L10 card.
+    AC Analysis, 27 deg C, step lgeom = 16,Sat Oct 10 15:30:17 2026
+
+av10           =  8.6118e-007
+gmeff10        =  2.6096e-012
+f3db           =  7.0703e+000
