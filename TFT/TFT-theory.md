@@ -4,21 +4,19 @@
 
 ### 0.1 电压、电流、端口及谱密度约定
 
-本文以颅钉/采集参考端为小信号地。大写 $V,I$ 表示直流工作点，小写 $v,i$ 表示该工作点附近的交流增量；$v_E$ 是电极的**开路戴维南信号电压**，$Z_E(f)$ 是其串联等效阻抗。输出电压一律记为 $v_o$，电极到该输出的传递函数记为 $H_{Eo}(s)=v_o/v_E$。若后接增益为 $H_D(s)$ 的调理/采集链，最终输出为 $v_D=H_Dv_o$。$s=j2\pi f$，所有 $S_x(f)$ 为**单边功率谱密度**：电压噪声单位 $\mathrm{V^2/Hz}$，电流噪声单位 $\mathrm{A^2/Hz}$。$e_n,i_n$ 表示零均值噪声源，$S_{e_n},S_{i_n}$ 表示其谱密度。下文电流方向在每个电路的节点方程前说明。
+本文以颅钉/采集参考端为小信号地。大写 $V,I$ 表示直流工作点，小写 $v,i$ 表示该工作点附近的交流增量；考虑到电极本身的阻抗$v_E$ 是电极的**开路戴维南信号电压**，$Z_E(f)$ 是其串联等效阻抗。输出电压一律记为 $v_o$，电极到该输出的传递函数记为 $H_{Eo}(s)=v_o/v_E$。若后接增益为 $H_D(s)$ 的调理/采集链，最终输出为 $v_D=H_Dv_o$。$s=j2\pi f$，所有 $S_x(f)$ 为**单边功率谱密度**：电压噪声单位 $\mathrm{V^2/Hz}$，电流噪声单位 $\mathrm{A^2/Hz}$。$e_n,i_n$ 表示零均值噪声源，$S_{e_n},S_{i_n}$ 表示其谱密度。下文电流方向在每个电路的节点方程前说明。
 
 噪声分析先令确定性信号 $v_E=0$，保留电极内阻及全部噪声源。若独立噪声源 $n_k$ 到输出的传递函数为 $T_k(s)$，则同一输出端的噪声谱为
 
 $$
 S_{v_o}(f)=\sum_k|T_k(j2\pi f)|^2S_{n_k}(f).
-\tag{0-1}
 $$
 
-若噪声源相关，式 (0-1) 还须加入 $2\operatorname{Re}\{T_kT_l^*S_{n_kn_l}\}$ 的互谱项；本文的逐项相加以**互不相关**为前提。电极端输入参考噪声定义为
+若噪声源相关，上述输出噪声谱还须加入 $2\operatorname{Re}\{T_kT_l^*S_{n_kn_l}\}$ 的互谱项；本文的逐项相加以**互不相关**为前提。电极端输入参考噪声定义为
 
 $$
 S_{v,\mathrm{in}}(f)=\frac{S_{v_o}(f)}{|H_{Eo}(j2\pi f)|^2},\qquad
 v_{n,\mathrm{in,rms}}=\sqrt{\int_{f_L}^{f_H}S_{v,\mathrm{in}}(f)\,df}.
-\tag{0-2}
 $$
 
 谱密度 $S_v$ 是每赫兹的**均方**，幅度谱密度 $\sqrt{S_v}$ 的单位为 $\mathrm{V}/\sqrt{\mathrm{Hz}}$，带内 RMS 则需对 $S_v$ 积分后再开方；不能把不同频点的 $\sqrt{S_v}$ 直接相加。若已知电极信号在同一频带的 RMS 为 $v_{E,\mathrm{sig,rms}}$，输入参考口径的功率信噪比为 $\mathrm{SNR}=v_{E,\mathrm{sig,rms}}^2/v_{n,\mathrm{in,rms}}^2$，其前提是信号增益与噪声折算使用同一采集链和处理过程。
@@ -39,7 +37,6 @@ $$
 
 $$
 Z_{\mathrm{out,pix}}(s)=\frac{v_t}{i_t}.
-\tag{0-3}
 $$
 
 若要求的是**TIA 或后级放大器的输出阻抗**，测试端口应改为该放大器输出，闭环反馈仍保留；它与像素列端口阻抗不是同一个数。求驱动列电容的建立时间时，不能只看静态 $Z_{\mathrm{out,pix}}(0)$，还须将列电容、采样输入的动态导纳和 ROW 切换纳入时域模型。输出阻抗属于信号源的端口特性，输入阻抗属于读出前端；高直流输入电阻不保证高源阻抗信号在 SAR 采样瞬态中充分建立。[TFT3 中 PXIe-4309 的实际端接说明](TFT3.md#3-pxie-4309-会把-v_s-稳定在-0-v-吗)
@@ -52,7 +49,6 @@ $$
 
 $$
 Y_E=\frac1{Z_E},\qquad H_E(s)=\frac{v_g}{v_E}=\frac{Y_E}{Y_E+Y_g}=\frac1{1+Z_EY_g}.
-\tag{1-1}
 $$
 
 对纯绝缘栅、低频小信号，$Y_g$ 很小，$H_E\approx1$；栅电容、封装电容、漏电及偏置网络会使它随频率和偏置变化。若在栅节点定义向栅注入的电流噪声 $i_g$，由 $v_g=H_Ev_E+i_g/(Y_E+Y_g)$ 可知它折回电极端的噪声项为 $|Z_E|^2S_{i_g}$。以下各式先写主导漏源/后端噪声，栅漏电、偏置电阻噪声应按此法追加。电极自身串联电压噪声记为 $e_E$；热平衡阻抗只贡献 $4kT\operatorname{Re}Z_E(f)$，电化学噪声、运动伪迹和生理背景需另行实测，不可把 $4kT|Z_E|$ 当作通用公式。
@@ -61,7 +57,6 @@ $$
 
 $$
 i_{DS,S}=g_{mS}(v_{gS}-v_{sS})+g_{dsS}(v_{dS}-v_{sS})+i_S.
-\tag{1-2}
 $$
 
 $i_S$ 是两端之间的等效漏源诺顿噪声电流，包含热、陷阱低频及接触贡献，谱为 $S_{iS}(f)$；选通 TFT 的相应噪声记为 $i_R,S_{iR}$。具体 TFT 的 $S_i(f)$ 应由目标偏置下的实测或有效模型取得。若仅以理想电阻 $R$ 近似深线性区通道，才可用 $S_{e_R}=4kTR$ 或等效 $S_{i_R}=4kT/R$。两种表述只可选一种，不能重复加入。[TFT1 器件噪声模型](TFT1.md#71-统一噪声定义)
@@ -86,7 +81,6 @@ $i_S$ 是两端之间的等效漏源诺顿噪声电流，包含热、陷阱低�
 
 $$
 V_{GS}=V_G-V_S>V_{TH},\qquad 0\le V_{DS}=V_D-V_S<V_{GS}-V_{TH}.
-\tag{2-1}
 $$
 
 若 $V_D<V_S$，对近似对称器件应重新按较低电位端判定有效源极；有接触不对称时须实测两个方向。已有补充记录给出约 $4$–$5\,\mathrm V$ 的 $V_{TH}$、电极端几百微伏量级的交流信号，以及源极可接近 $\pm1\,\mathrm V$ 的 DC 偏移。这些数值提示电路可能处于线性区，但不能仅凭交流幅度认定每个像素均在**深**线性区，须用实测 $V_D,V_S,V_G,V_{TH}$ 逐点核查。对标准长沟道平方律，本文定义 $\beta=\mu C_iW/L$，则理想饱和区 $I_D=\tfrac12\beta V_{OV}^2$、$g_m=\beta V_{OV}$；若把 $\tfrac12$ 吸收进另一种 $\beta$ 定义，会得到 [TFT3](TFT3.md) 中 $I_D=\beta V_{OV}^2$ 的写法。这里明确系数约定，避免两种 $\beta$ 混用。在线性区，
@@ -95,7 +89,6 @@ $$
 I_D\simeq\beta\!\left[V_{OV}V_{DS}-\frac{V_{DS}^2}{2}\right],\quad
 g_m=\beta V_{DS},\quad
 g_{ds}=\beta(V_{OV}-V_{DS}),\quad r_o=\frac1{g_{ds}}.
-\tag{2-2}
 $$
 
 $r_o$ 此时是线性区**微分导通电阻**，不是饱和区由沟道长度调制给出的 $1/(\lambda I_D)$。实际 IGZO 器件还须把接触电阻与非理想沟道模型计入实测的小信号参数。
@@ -104,7 +97,6 @@ $r_o$ 此时是线性区**微分导通电阻**，不是饱和区由沟道长度�
 
 $$
 i_{DS,R}=g_{dsR}(v_d-v_o)-g_{mR}v_o+i_R.
-\tag{2-3}
 $$
 
 ### 2.2 传递函数的节点推导
@@ -114,7 +106,6 @@ $$
 $$
 Y_E(v_d-v_E)+bv_d-cv_o=0,\qquad
 -bv_d+(Y+c)v_o=0.
-\tag{2-4}
 $$
 
 写成矩阵并求行列式：
@@ -124,16 +115,14 @@ $$
 \begin{bmatrix}v_d\\v_o\end{bmatrix}
 =\begin{bmatrix}Y_Ev_E\\0\end{bmatrix},\qquad
 \Delta_{1T}=Y_E(Y+c)+bY.
-\tag{2-5}
 $$
 
 由克拉默法则，$v_o=bY_Ev_E/\Delta_{1T}$，所以
 
 $$
-\boxed{H_{1T}(s)=\frac{v_o}{v_E}
+H_{1T}(s)=\frac{v_o}{v_E}
 =\frac{b}{c+Y_L(s)[1+bZ_E(s)]}
-=\frac{Z_L(s)}{Z_E(s)+r_o+[1+g_{mR}r_o]Z_L(s)}}.
-\tag{2-6}
+=\frac{Z_L(s)}{Z_E(s)+r_o+[1+g_{mR}r_o]Z_L(s)}.
 $$
 
 最后一种写法就是 [TFT3 补充推导](TFT3.md#23-线性区小信号模型计算出的传递函数)的结果。若深线性区 $g_{mR}\ll g_{dsR}$ 且 $r_o\approx R_{\mathrm{on}}$，才化为 $H_{1T}\approx Z_L/(Z_E+R_{\mathrm{on}}+Z_L)$。这也表明：**高静态输入电阻并不意味着瞬态误差小**；列电容及采样前端的 $Y_L(s)$ 会决定建立和幅值保持。
@@ -145,29 +134,26 @@ $$
 $$
 (Y_E+b)v_d=cv_t\quad\Rightarrow\quad
 v_d=\frac{c}{Y_E+b}v_t.
-\tag{2-7}
 $$
 
 测试电流为 $i_t=cv_t-bv_d$，从而
 
 $$
-\boxed{Z_{\mathrm{out},1T}(s)=\frac{v_t}{i_t}
+Z_{\mathrm{out},1T}(s)=\frac{v_t}{i_t}
 =\frac{1+bZ_E(s)}{c}
-=\frac{Z_E(s)+r_o}{1+g_{mR}r_o}}.
-\tag{2-8}
+=\frac{Z_E(s)+r_o}{1+g_{mR}r_o}.
 $$
 
-深线性区退化为 $Z_E+R_{\mathrm{on}}$。这一定义从**列端向已选通像素看入**，未包含外接 NI 输入及并在列端的其他未选像素。关断态没有式 (2-8) 所代表的同一低阻通道，必须另用漏电与寄生电容模型求端口阻抗。[TFT1 输出阻抗推导](TFT1.md#44-完整输出阻抗推导)
+深线性区退化为 $Z_E+R_{\mathrm{on}}$。这一定义从**列端向已选通像素看入**，未包含外接 NI 输入及并在列端的其他未选像素。关断态没有上述低阻通道，必须另用漏电与寄生电容模型求端口阻抗。[TFT1 输出阻抗推导](TFT1.md#44-完整输出阻抗推导)
 
 ### 2.4 输出噪声与输入参考噪声
 
-令 $e_E$ 为电极串联噪声；$i_R$ 的正方向仍从漏极到源极；$i_L$ 从外部负载**注入列端**；$e_A$ 为列端电压读出后直接叠加的电压噪声。若 ROW 电压有小信号噪声 $v_{gR}$，式 (2-3) 增加 $g_{mR}v_{gR}$。带噪声的节点方程为
+令 $e_E$ 为电极串联噪声；$i_R$ 的正方向仍从漏极到源极；$i_L$ 从外部负载**注入列端**；$e_A$ 为列端电压读出后直接叠加的电压噪声。若 ROW 电压有小信号噪声 $v_{gR}$，选通管漏源电流增加 $g_{mR}v_{gR}$。带噪声的节点方程为
 
 $$
 \begin{bmatrix}Y_E+b&-c\\-b&Y+c\end{bmatrix}
 \begin{bmatrix}v_d\\v_o\end{bmatrix}
 =\begin{bmatrix}Y_E(v_E+e_E)-i_R-g_{mR}v_{gR}\\i_R+g_{mR}v_{gR}+i_L\end{bmatrix}.
-\tag{2-9}
 $$
 
 因此列端电压及后接读出噪声为
@@ -175,26 +161,23 @@ $$
 $$
 v_o=\frac{b(v_E+e_E)+i_R+g_{mR}v_{gR}+(1+bZ_E)i_L}{c+Y(1+bZ_E)},\qquad
 v_{\mathrm{read}}=v_o+e_A.
-\tag{2-10}
 $$
 
 假设各噪声不相关，$D_{1T}=c+Y(1+bZ_E)$，则
 
 $$
-\boxed{S_{v,\mathrm{read},1T}=
-\frac{b^2S_{e_E}+S_{i_R}+g_{mR}^2S_{v_{gR}}+|1+bZ_E|^2S_{i_L}}{|D_{1T}|^2}+S_{e_A}.}
-\tag{2-11}
+S_{v,\mathrm{read},1T}=
+\frac{b^2S_{e_E}+S_{i_R}+g_{mR}^2S_{v_{gR}}+|1+bZ_E|^2S_{i_L}}{|D_{1T}|^2}+S_{e_A}.
 $$
 
 除以 $|H_{1T}|^2=b^2/|D_{1T}|^2$ 后，得到逐项输入参考式：
 
 $$
-\boxed{S_{v,\mathrm{in},1T}=
+S_{v,\mathrm{in},1T}=
 S_{e_E}+\frac{S_{i_R}}{b^2}
 +\frac{g_{mR}^2}{b^2}S_{v_{gR}}
 +\left|Z_E+\frac1b\right|^2S_{i_L}
-+\left|\frac{D_{1T}}b\right|^2S_{e_A}.}
-\tag{2-12}
++\left|\frac{D_{1T}}b\right|^2S_{e_A}.
 $$
 
 输入电流噪声乘以 $|Z_E+1/b|^2$，说明高阻电极和开关使后端电流噪声更重要。若仅把深线性 TFT 视为理想 $R_{\mathrm{on}}=1/b$，其热噪声项为 $S_{i_R}/b^2=4kTR_{\mathrm{on}}$；但 IGZO 的低频陷阱噪声、ROW 馈通和关断残留不能由此代替。以 $R_{\mathrm{on}}=20\,\mathrm{k\Omega}$、$T=300\,\mathrm K$ 为例，白噪声幅度约 $18.2\,\mathrm{nV}/\sqrt{\mathrm{Hz}}$，在**理想** $200\,\mathrm{Hz}$ 等效噪声带宽内约 $0.26\,\mu\mathrm V_{\mathrm{RMS}}$；噪声带宽改为 $50\,\mathrm{kHz}$ 才约 $4.07\,\mu\mathrm V_{\mathrm{RMS}}$。这两个数字只是不同带宽的数量级检查，不可当作阵列实测噪声。[TFT3 数量级分析](TFT3.md#1-会议中的-1t-问题)
@@ -209,7 +192,6 @@ $T_S$ 漏极接交流地等效的电源，栅极电压为 $v_g=H_Ev_E$，源极�
 
 $$
 i_{x\to o}=bv_x-cv_o+g_{mR}v_{gR}+i_R.
-\tag{3-1}
 $$
 
 这里的 $g_{mR}$ 项源于源极电位扰动；若 $T_R$ 可近似为对称的理想电阻，则 $g_{mR}\approx0$、$b=c=G_R=1/R_R$。$i_L$ 定义为从列负载注入 $v_o$ 的噪声电流，$Y_L$ 包含列端电容、读出输入和偏置源的交流导纳。[TFT1 的完整选通管模型](TFT1.md#1-第一种-2t柔性单晶硅衬底的源极侧选通电压型阵列)、[TFT3 的电阻近似](TFT3.md#21-电压读出源极跟随器)
@@ -221,22 +203,19 @@ $$
 $$
 (a+b)v_x-cv_o=g_{mS}v_g,\qquad
 -bv_x+(Y_L+c)v_o=0.
-\tag{3-2}
 $$
 
 行列式为
 
 $$
 \Delta_{SF}=(a+b)(Y_L+c)-bc=a(Y_L+c)+bY_L.
-\tag{3-3}
 $$
 
 解得
 
 $$
-\boxed{H_{SF}(s)=\frac{v_o}{v_E}
-=H_E(s)\frac{b g_{mS}}{\Delta_{SF}(s)}.}
-\tag{3-4}
+H_{SF}(s)=\frac{v_o}{v_E}
+=H_E(s)\frac{b g_{mS}}{\Delta_{SF}(s)}.
 $$
 
 无列负载 $Y_L=0$ 时，$H_{SF}=H_E(g_{mS}/a)(b/c)$：前一因子是传感管源随器，后一因子是选通管的局部传输。若取理想电阻 $b=c=G_R$，则
@@ -244,7 +223,6 @@ $$
 $$
 H_{SF}=H_E\frac{g_{mS}G_R}{a(G_R+Y_L)+G_RY_L},\qquad
 H_{SF}\big|_{Y_L=0}=H_E\frac{g_{mS}}{g_{mS}+g_{dsS}}.
-\tag{3-5}
 $$
 
 在 $|H_E|\le1$ 且无有源升压的这些条件下，源随器没有大于 1 的局部电压增益。它可能改善的是电极与列线的阻抗隔离和行切换后的建立，而不是凭空放大输入信号。
@@ -254,9 +232,8 @@ $$
 令 $v_E=0$、$Y_L=0$，从 $v_o=v_t$ 注入测试电流。内部节点满足 $(a+b)v_x=cv_t$。流入电路的列端电流为 $i_t=cv_t-bv_x$，故
 
 $$
-\boxed{Z_{\mathrm{out},SF}=\frac{v_t}{i_t}
-=\frac{a+b}{ac}.}
-\tag{3-6}
+Z_{\mathrm{out},SF}=\frac{v_t}{i_t}
+=\frac{a+b}{ac}.
 $$
 
 在 $b=c=G_R=1/R_R$ 的电阻近似下，$Z_{\mathrm{out},SF}=R_R+1/(g_{mS}+g_{dsS})$。这个端口阻抗假设传感管栅极在求测试阻抗时交流固定、偏置汇理想高阻且电源交流接地；偏置汇有限导纳、体效应与寄生电容需重新并入节点方程。[TFT1 的源随输出阻抗](TFT1.md#14-输出阻抗推导)
@@ -269,37 +246,33 @@ $$
 \begin{bmatrix}a+b&-c\\-b&Y_L+c\end{bmatrix}
 \begin{bmatrix}v_x\\v_o\end{bmatrix}
 =\begin{bmatrix}g_{mS}H_E(v_E+e_E)+i_S+i_B-i_R-g_{mR}v_{gR}\\i_R+g_{mR}v_{gR}+i_L\end{bmatrix}.
-\tag{3-7}
 $$
 
 解得
 
 $$
 v_o=\frac{b g_{mS}H_E(v_E+e_E)+b(i_S+i_B)+a(i_R+g_{mR}v_{gR})+(a+b)i_L}{\Delta_{SF}}.
-\tag{3-8}
 $$
 
 若各源独立，则读出端输出噪声为
 
 $$
-\boxed{S_{v,\mathrm{read},SF}=
+S_{v,\mathrm{read},SF}=
 |H_{SF}|^2S_{e_E}
 +\frac{b^2(S_{i_S}+S_{i_B})+a^2(S_{i_R}+g_{mR}^2S_{v_{gR}})+|a+b|^2S_{i_L}}{|\Delta_{SF}|^2}
-+S_{e_A}.}
-\tag{3-9}
++S_{e_A}.
 $$
 
 再除以 $|H_{SF}|^2=|H_Eb g_{mS}/\Delta_{SF}|^2$：
 
 $$
-\boxed{\begin{aligned}
+\begin{aligned}
 S_{v,\mathrm{in},SF}={}&S_{e_E}
 +\frac{S_{i_S}+S_{i_B}}{|H_Eg_{mS}|^2}
 +\frac{|a|^2(S_{i_R}+g_{mR}^2S_{v_{gR}})}{|H_Eb g_{mS}|^2}\\
 &+\frac{|a+b|^2S_{i_L}}{|H_Eb g_{mS}|^2}
 +\frac{|\Delta_{SF}|^2S_{e_A}}{|H_Eb g_{mS}|^2}.
-\end{aligned}}
-\tag{3-10}
+\end{aligned}
 $$
 
 若用理想电阻 $b=c=G_R$，其支路诺顿噪声 $S_{i_R}=4kTG_R$；等效串联表示为 $S_{e_R}=4kT/G_R=4kTR_R$，选通项成为 $|a|^2S_{e_R}/|H_Eg_{mS}|^2$。这说明选通管仍在输出噪声预算中。传感管栅端输入电流噪声还应按第 1.1 节增加 $|Z_E|^2S_{i_g}$。实际偏置汇噪声和阈值漂移可能使 2T 的输入参考总噪声大于 1T，须在相同频带积分后判断。
@@ -312,10 +285,9 @@ $T_S$ 栅极由 $v_g=H_Ev_E$ 驱动，漏极为内部节点 $v_x$，源极为列
 
 $$
 G_R=g_{mR}+g_{dsR};
-\tag{4-1}
 $$
 
-若可等效成两端电阻，才写成 $G_R=1/R_R$。$T_S$ 的漏源电流按式 (1-2) 从 $v_x$ 流向 $v_s$；其噪声 $i_S$ 同向。$T_R$ 的诺顿噪声 $i_R$ 定义为从 $v_x$ 流向交流地。列电流 $i_{\mathrm{col}}$ 定义为由像素注入 TIA 求和节点的电流，因此它与 $T_S$ 漏源电流同号。直流上，必须保证 $T_S$ 的工作区、$T_R$ 的压降、求和节点参考电压和 $I_DR_F$ 所造成的 TIA 输出均在供电摆幅内；理想 TIA 的交流公式不能替代这一检查。[TFT2 的偏置扫描](TFT2.md#122-偏置扫描结果)
+若可等效成两端电阻，才写成 $G_R=1/R_R$。$T_S$ 的漏源电流按前述统一约定从 $v_x$ 流向 $v_s$；其噪声 $i_S$ 同向。$T_R$ 的诺顿噪声 $i_R$ 定义为从 $v_x$ 流向交流地。列电流 $i_{\mathrm{col}}$ 定义为由像素注入 TIA 求和节点的电流，因此它与 $T_S$ 漏源电流同号。直流上，必须保证 $T_S$ 的工作区、$T_R$ 的压降、求和节点参考电压和 $I_DR_F$ 所造成的 TIA 输出均在供电摆幅内；理想 TIA 的交流公式不能替代这一检查。[TFT2 的偏置扫描](TFT2.md#122-偏置扫描结果)
 
 ### 4.2 从内部节点 KCL 推导有效跨导与像素输出阻抗
 
@@ -323,153 +295,137 @@ $$
 
 $$
 G_Rv_x+i_R+g_{mS}(v_g-v_s)+g_{dsS}(v_x-v_s)+i_S=0,
-\tag{4-2}
 $$
 
 即
 
 $$
 D_Rv_x=a v_s-g_{mS}v_g-i_S-i_R.
-\tag{4-3}
 $$
 
 代入 $i_{\mathrm{col}}=g_{mS}(v_g-v_s)+g_{dsS}(v_x-v_s)+i_S$，定义
 
 $$
 \eta=\frac{G_R}{D_R},\qquad \rho=\frac{g_{dsS}}{D_R},\qquad \eta+\rho=1,
-\tag{4-4}
 $$
 
 得到
 
 $$
-\boxed{i_{\mathrm{col}}=\eta g_{mS}v_g-\eta a v_s+\eta i_S-\rho i_R.}
-\tag{4-5}
+i_{\mathrm{col}}=\eta g_{mS}v_g-\eta a v_s+\eta i_S-\rho i_R.
 $$
 
 因此理想虚地 $v_s\approx0$ 时，栅极至列电流的有效跨导为
 
 $$
-\boxed{g_{m,\mathrm{eff}}=\left.\frac{i_{\mathrm{col}}}{v_g}\right|_{v_s=0}
-=\eta g_{mS}=\frac{G_R}{G_R+g_{dsS}}g_{mS}.}
-\tag{4-6}
+g_{m,\mathrm{eff}}=\left.\frac{i_{\mathrm{col}}}{v_g}\right|_{v_s=0}
+=\eta g_{mS}=\frac{G_R}{G_R+g_{dsS}}g_{mS}.
 $$
 
 $T_R$ 导通不足使 $\eta<1$，但这只表明信号跨导损失，不能单独决定噪声优劣。若允许损失不超过 $\varepsilon$，需 $G_R\ge(1-\varepsilon)g_{dsS}/\varepsilon$。[TFT2 的尺寸约束](TFT2.md#21-有效跨导)
 
-求**像素源端/列端输出阻抗**时令 $v_g=0$、断开 TIA，并从 $v_s=v_t$ 向像素注入 $i_t$。式 (4-5) 在无噪声时给出 $i_{\mathrm{col}}=-\eta a v_t$，故流入像素的测试电流为 $i_t=-i_{\mathrm{col}}=\eta a v_t$：
+求**像素源端/列端输出阻抗**时令 $v_g=0$、断开 TIA，并从 $v_s=v_t$ 向像素注入 $i_t$。上述列电流关系在无噪声时给出 $i_{\mathrm{col}}=-\eta a v_t$，故流入像素的测试电流为 $i_t=-i_{\mathrm{col}}=\eta a v_t$：
 
 $$
-\boxed{Y_{\mathrm{out,pix},TIA}=\eta(g_{mS}+g_{dsS}),\qquad
-Z_{\mathrm{out,pix},TIA}=\frac{1}{\eta(g_{mS}+g_{dsS})}.}
-\tag{4-7}
+Y_{\mathrm{out,pix},TIA}=\eta(g_{mS}+g_{dsS}),\qquad
+Z_{\mathrm{out,pix},TIA}=\frac{1}{\eta(g_{mS}+g_{dsS})}.
 $$
 
 这是**像素源端**的端口阻抗，非 TIA 求和节点的闭环输入阻抗，更非 TIA 电压输出端的阻抗。若接入 TIA，有限开环增益 $A(s)$ 会把求和节点电压压小；其实际闭环输入阻抗还取决于反馈及列线总导纳，不能简单说“运放引脚高输入阻抗，所以列端高阻”。[10/16 会议的补充判断](meeting%201016.md#4-1t-与-2t-是否有优势)
 
 ### 4.3 TIA 闭环传递函数：理想与有限增益
 
-设反馈导纳 $Y_F(s)=1/R_F+sC_F$、反馈阻抗 $Z_F=1/Y_F$。令 $Y_P(s)$ 为除所选像素外，求和节点对交流地的列电容、未选通单元、输入寄生等导纳，并定义 $Y_\Sigma=Y_P+Y_{\mathrm{out,pix},TIA}$。从式 (4-5) 把像素写成诺顿形式：注入求和节点的源电流 $i_N=\eta g_{mS}v_g+\eta i_S-\rho i_R$，并联导纳 $Y_{\mathrm{out,pix},TIA}=\eta a$。
+设反馈导纳 $Y_F(s)=1/R_F+sC_F$、反馈阻抗 $Z_F=1/Y_F$。令 $Y_P(s)$ 为除所选像素外，求和节点对交流地的列电容、未选通单元、输入寄生等导纳，并定义 $Y_\Sigma=Y_P+Y_{\mathrm{out,pix},TIA}$。由上述列电流关系把像素写成诺顿形式：注入求和节点的源电流 $i_N=\eta g_{mS}v_g+\eta i_S-\rho i_R$，并联导纳 $Y_{\mathrm{out,pix},TIA}=\eta a$。
 
 取非反相端为交流地，暂以理想零输出电阻、有限开环电压增益 $A(s)$ 的运放模型 $v_o=-A(s)v_s$ 分析。求和节点 KCL 为
 
 $$
 Y_\Sigma v_s+Y_F(v_s-v_o)=i_N+i_A+i_F,
-\tag{4-8}
 $$
 
 其中 $i_A$ 为运放输入电流噪声、$i_F$ 为反馈电阻折算到输入的电流噪声。代入 $v_o=-Av_s$，得到电流到输出的跨阻
 
 $$
-\boxed{Z_T(s)=\frac{A(s)}{Y_\Sigma(s)+[1+A(s)]Y_F(s)},\qquad
-v_o=-Z_T(i_N+i_A+i_F).}
-\tag{4-9}
+Z_T(s)=\frac{A(s)}{Y_\Sigma(s)+[1+A(s)]Y_F(s)},\qquad
+v_o=-Z_T(i_N+i_A+i_F).
 $$
 
 若 $|A Y_F|\gg|Y_\Sigma+Y_F|$，$Z_T\approx Z_F$、$v_s\approx0$，因此电极至 TIA 电压输出的传递函数为
 
 $$
-\boxed{H_{TIA}(s)=\frac{v_o}{v_E}=-H_E(s)g_{m,\mathrm{eff}}Z_T(s)
-\ \xrightarrow[|A|\to\infty]{}\ -H_E(s)g_{m,\mathrm{eff}}Z_F(s).}
-\tag{4-10}
+H_{TIA}(s)=\frac{v_o}{v_E}=-H_E(s)g_{m,\mathrm{eff}}Z_T(s)
+\ \xrightarrow[|A|\to\infty]{}\ -H_E(s)g_{m,\mathrm{eff}}Z_F(s).
 $$
 
 $C_F$ 使 $|Z_F|$ 随频率升高而下降。$R_F=330\,\mathrm{k\Omega}$、$C_F=1\,\mathrm{nF}$ 的已有理想 TIA 扫描，其 $1/(2\pi R_FC_F)\approx482\,\mathrm{Hz}$；这组参数用于已有仿真初筛，若要满足几十微秒行周期，需要重新设计反馈与消隐窗口。[TFT2 仿真结果](TFT2.md#123-宽度网格结果)
 
 ### 4.4 TIA 输出阻抗与像素输出阻抗的区别
 
-式 (4-7) 已给出像素端口阻抗。若另需**TIA 电压输出端**阻抗，给运放内部电压源加开环输出电阻 $r_a(s)$，从外部输出端注入 $i_t$。令电极信号为零、求和节点总导纳仍为 $Y_\Sigma$。输出扰动使
+上文已给出像素端口阻抗。若另需**TIA 电压输出端**阻抗，给运放内部电压源加开环输出电阻 $r_a(s)$，从外部输出端注入 $i_t$。令电极信号为零、求和节点总导纳仍为 $Y_\Sigma$。输出扰动使
 
 $$
 v_s=\frac{Y_F}{Y_\Sigma+Y_F}v_t\equiv\beta_Fv_t,\qquad
 v_{\mathrm{int}}=-A v_s.
-\tag{4-11}
 $$
 
 测试电流一部分流经 $r_a$、一部分流经反馈支路：
 
 $$
 i_t=\frac{v_t-v_{\mathrm{int}}}{r_a}+Y_F(v_t-v_s).
-\tag{4-12}
 $$
 
 于是这一运放模型下
 
 $$
-\boxed{Z_{\mathrm{out,TIA}}=
+Z_{\mathrm{out,TIA}}=
 \left[\frac{1+A\beta_F}{r_a}+Y_F(1-\beta_F)\right]^{-1},
-\qquad \beta_F=\frac{Y_F}{Y_\Sigma+Y_F}.}
-\tag{4-13}
+\qquad \beta_F=\frac{Y_F}{Y_\Sigma+Y_F}.
 $$
 
-实际运放的 $A(s),r_a(s)$、输出级限流和负载会改变数值；式 (4-13) 只说明测试端口及负反馈如何降低输出阻抗。若关心的是 TIA **求和节点输入阻抗**，须在该节点另施测试源，它与式 (4-7)、(4-13) 都不同。
+实际运放的 $A(s),r_a(s)$、输出级限流和负载会改变数值；上述表达式只说明测试端口及负反馈如何降低输出阻抗。若关心的是 TIA **求和节点输入阻抗**，须在该节点另施测试源，它与像素端口阻抗、TIA 电压输出端阻抗都不同。
 
 例如，将所选像素移除、其余列寄生保留为 $Y_P$，从求和节点向电路注入 $i_t$ 且令非反相端交流接地，则 $v_o=-Av_s$，$i_t=[Y_P+(1+A)Y_F]v_s$，所以
 
 $$
 Z_{\mathrm{in,sum}}=\frac{v_s}{i_t}=\frac{1}{Y_P+(1+A)Y_F}.
-\tag{4-14}
 $$
 
-这表示闭环求和节点可呈低等效输入阻抗；式中是否包含列寄生取决于所定义的测试平面。若把所选像素也接回去，分母还要加上式 (4-7) 的 $Y_{\mathrm{out,pix},TIA}$。
+这表示闭环求和节点可呈低等效输入阻抗；式中是否包含列寄生取决于所定义的测试平面。若把所选像素也接回去，分母还要加上前文求得的 $Y_{\mathrm{out,pix},TIA}$。
 
 ### 4.5 各噪声源到输出及输入参考的推导
 
-式 (4-5) 显示传感管噪声以 $\eta i_S$ 到列端，选通管噪声以 $-\rho i_R$ 到列端。反馈电阻的等效并联电流噪声为 $S_{i_F}=4kT/R_F$。若运放有输入电压噪声 $e_A$，令其加在非反相端，则 $v_o=A(e_A-v_s)$。无其他输入时，由求和节点方程可得电压噪声到输出的传递函数
+前面的列电流推导显示，传感管噪声以 $\eta i_S$ 到列端，选通管噪声以 $-\rho i_R$ 到列端。反馈电阻的等效并联电流噪声为 $S_{i_F}=4kT/R_F$。若运放有输入电压噪声 $e_A$，令其加在非反相端，则 $v_o=A(e_A-v_s)$。无其他输入时，由求和节点方程可得电压噪声到输出的传递函数
 
 $$
 H_{e_A}(s)=\frac{A(Y_\Sigma+Y_F)}{Y_\Sigma+(1+A)Y_F}
 =Z_T(Y_\Sigma+Y_F).
-\tag{4-15}
 $$
 
-理想环路下，这就是通常的噪声增益 $1+Z_FY_\Sigma$。为避免重复计入，$Y_\Sigma$ **已经包含所选像素的** $Y_{\mathrm{out,pix},TIA}$；$Y_P$ 只表示其余支路。若 ROW 驱动电压有噪声 $v_{gR}$，在上述方向约定下，它在式 (4-5) 中产生额外列电流 $+\rho g_{mR}v_{gR}$；确定性 ROW 切换馈通仍需另外建模。于是相互独立时，TIA 输出噪声为
+理想环路下，这就是通常的噪声增益 $1+Z_FY_\Sigma$。为避免重复计入，$Y_\Sigma$ **已经包含所选像素的** $Y_{\mathrm{out,pix},TIA}$；$Y_P$ 只表示其余支路。若 ROW 驱动电压有噪声 $v_{gR}$，在上述方向约定下，它产生额外列电流 $+\rho g_{mR}v_{gR}$；确定性 ROW 切换馈通仍需另外建模。于是相互独立时，TIA 输出噪声为
 
 $$
-\boxed{\begin{aligned}
+\begin{aligned}
 S_{v_o,TIA}={}&|H_{TIA}|^2S_{e_E}\\
 &+|Z_T|^2\left[\eta^2S_{i_S}+\rho^2S_{i_R}
 +\rho^2g_{mR}^2S_{v_{gR}}+S_{i_A}+\frac{4kT}{R_F}+S_{i,\mathrm{other}}\right]\\
 &+|Z_T(Y_\Sigma+Y_F)|^2S_{e_A}.
-\end{aligned}}
-\tag{4-16}
+\end{aligned}
 $$
 
 这里 $S_{i,\mathrm{other}}$ 是未选通像素、偏置网络等额外注入求和节点的电流噪声。按 $|H_{TIA}|^2=|H_E\eta g_{mS}Z_T|^2$ 折回电极端，可逐项化简为
 
 $$
-\boxed{\begin{aligned}
+\begin{aligned}
 S_{v,\mathrm{in},TIA}={}&S_{e_E}
 +\frac{S_{i_S}}{|H_Eg_{mS}|^2}
 +\frac{g_{dsS}^2S_{i_R}}{|H_Eg_{mS}G_R|^2}
 +\frac{g_{dsS}^2g_{mR}^2S_{v_{gR}}}{|H_Eg_{mS}G_R|^2}\\
 &+\frac{S_{i_A}+4kT/R_F+S_{i,\mathrm{other}}}{|H_Eg_{m,\mathrm{eff}}|^2}
 +\frac{|Y_\Sigma+Y_F|^2S_{e_A}}{|H_Eg_{m,\mathrm{eff}}|^2}.
-\end{aligned}}
-\tag{4-17}
+\end{aligned}
 $$
 
-在本模型下，传感管噪声的 $\eta$ 与信号跨导的 $\eta$ 折回后相消；选通管项则含 $(g_{dsS}/G_R)^2$。这不意味着把 $T_R$ 做得越大越好，因为电容、ROW 馈通、关断漏电及像素面积也随之变化。式 (4-17) 只在模型适用、环路稳定且噪声源独立时成立；若 $H_E$、$Y_\Sigma$ 或器件参数随频率显著变化，应逐频点计算并积分。[TFT3 的电流/TIA 噪声推导](TFT3.md#22-电流读出漏极侧选通与-tia)、[TFT2 的模型适用范围](TFT2.md#125-噪声结果的适用范围)
+在本模型下，传感管噪声的 $\eta$ 与信号跨导的 $\eta$ 折回后相消；选通管项则含 $(g_{dsS}/G_R)^2$。这不意味着把 $T_R$ 做得越大越好，因为电容、ROW 馈通、关断漏电及像素面积也随之变化。上述噪声式只在模型适用、环路稳定且噪声源独立时成立；若 $H_E$、$Y_\Sigma$ 或器件参数随频率显著变化，应逐频点计算并积分。[TFT3 的电流/TIA 噪声推导](TFT3.md#22-电流读出漏极侧选通与-tia)、[TFT2 的模型适用范围](TFT2.md#125-噪声结果的适用范围)
 
 ## 5. 三种电路如何在同一条件下比较
 
@@ -482,7 +438,7 @@ $$
 | DC 工作点、最大输入幅度、供电/输出摆幅、功耗 | 防止以已饱和或不稳定的理论增益比较 |
 | 空行隔离、ROW 馈通和空间传递矩阵 | 这些确定性/相关伪信号不能靠随机噪声 PSD 表达 |
 
-计算顺序是：先测/定 DC 点；再求 $H_{Eo}(f)$ 与指定端口的 $Z_{\mathrm{out}}(f)$；再对每个独立噪声源求到**同一输出**的 $T_k(f)$，按式 (0-1) 相加；最后按式 (0-2) 折回电极并在同一频带积分。若系统存在相关双采样、斩波、逐行基线扣除或 ADC 内部复用，必须用这些操作的实际噪声与信号传递函数重新计算；ROW 边沿、浮空干态和液体横向耦合需用瞬态与空间模型，不应硬塞进单像素白噪声公式。[TFT4 研究路线](TFT4.md)、[NI1 空行问题](NI1.md)
+计算顺序是：先测/定 DC 点；再求 $H_{Eo}(f)$ 与指定端口的 $Z_{\mathrm{out}}(f)$；再对每个独立噪声源求到**同一输出**的 $T_k(f)$，按开头的噪声谱叠加方法相加；最后折回电极并在同一频带积分。若系统存在相关双采样、斩波、逐行基线扣除或 ADC 内部复用，必须用这些操作的实际噪声与信号传递函数重新计算；ROW 边沿、浮空干态和液体横向耦合需用瞬态与空间模型，不应硬塞进单像素白噪声公式。[TFT4 研究路线](TFT4.md)、[NI1 空行问题](NI1.md)
 
 理想电路模型给出的不是预设的排名。1T 器件少，但高电极/列端阻抗可能放大后端电流噪声和采样误差；源随器隔离电极，却增加传感管与偏置噪声；电流/TIA 有跨阻增益和低求和节点摆幅，却增加静态电流、反馈与运放噪声。最终结论须由相同实验条件下的 $S_{v,\mathrm{in}}(f)$、带内 RMS、有效信号幅度、隔离度、功耗和可用点位率共同决定。
 
