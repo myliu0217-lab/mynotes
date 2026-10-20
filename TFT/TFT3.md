@@ -188,38 +188,115 @@ $$H_{DCOC}(s)=\frac{s}{s+\omega_D},\qquad f_D=\frac{\omega_D}{2\pi}.$$
 2. 对第二种 2T 扫描理论参数 $g_{mS}$、$g_{dsS}$、$G_R$、$R_F$、$C_F$，由 $g_{m,\mathrm{eff}}$ 与 $S_{v,\mathrm{in},2T}$ 同时判断增益和噪声的变化。
 3. 用我们器件的实际感测面积与 SiO₂ 厚度计算 $C_{\mathrm{sense}}$；与 $C_g,C_p$ 一起求交流分压。若采用两只偏置 TFT，再由目标低频截止频率求 $R_B$ 并计入其噪声。
 
-## 补充说明：1T 开关的工作点、PXIe-4309 输入与 $V_S$
+## 补充说明：原1T 开关的工作区&小信号模型等效
 
 ### 1. 电路性质与工作区
 
-本电路中，电极接 TFT 漏极 $D$，PXIe-4309 的 AI+ 接源极 $S$，AI− 与颅钉参考接同一地，ROW 将栅极置于 $V_G=6\,\mathrm V$。它的主要功能是 **传输开关**。行选稳定时栅极为交流固定端，按公共端可说“接近共栅”，但这是漏极输入、源极输出，不是通常源极输入、漏极输出的共栅放大器，也不是源极跟随器。
+<p align="center"><img src="TFT3-images/image-1.png" alt="1T 电压复用电路示意" width="48%"></p>
 
-几百微伏的神经信号只说明能在直流工作点附近做小信号分析，**不决定晶体管是三极管区还是饱和区**。若 $V_D\ge V_S$，增强型 n 沟道的简化判据为
+在生物实验中，电极接 TFT 漏极 $D$，PXIe-4309 （差分输入）的 AI+ 接源极 $S$，AI− 与颅钉参考接同一地，行选通信号将栅极置于 $V_G=6\,\mathrm V$。它的主要功能是 **传输开关**。
 
-$$V_{GS}=6-V_S>V_{TH},\qquad
-0\le V_{DS}=V_D-V_S<V_{GS}-V_{TH}.$$
+行选稳定时栅极为交流地，按公共端可说“接近共栅”，但通常意义上的共栅放大器是源极输入、漏极输出的电流跟随器，与该电路并不相同。
 
-已知 $V_{TH}=4$–$5\,\mathrm V$，上式的三极管区条件可化成 $V_D<6-V_{TH}=1$–$2\,\mathrm V$，同时要满足 $V_S<1$–$2\,\mathrm V$。若 $V_D,V_S$ 的 **直流电位** 都在零附近，两端压差也很小，TFT 就在深三极管区。若 $V_D<V_S$，对近似对称的 TFT，应以实际较低电位端作为有效源极重新判断。
+若 $V_D\ge V_S$，增强型 n 沟道晶体管处于线性区的判据为
 
-### 2. 线性区的 $R_{on}$ 与信号传递
+$$V_{GS}=6-V_S>V_{TH}$$
 
-用长沟道模型说明定义，令 $\beta=\mu C_{ox}W/L$、$V_{OV}=V_{GS}-V_{TH}$：
+$$0\le V_{DS}<V_{GS}-V_{TH}$$
 
-$$I_D=\beta\left(V_{OV}V_{DS}-\frac{V_{DS}^2}{2}\right),\quad
-R_{on,DC}=\frac{V_{DS}}{I_D}
-=\frac{1}{\beta(V_{OV}-V_{DS}/2)},\quad
-r_o=\frac{1}{g_{ds}}=\frac{1}{\beta(V_{OV}-V_{DS})}.$$
+已知 $V_{TH}\approx4$–$5\,\mathrm V$，以上条件可简化为 $V_D<6-V_{TH}=1$–$2\,\mathrm V$，且 $V_S<1$–$2\,\mathrm V$。
 
-这里的 $r_o$ 是三极管区沟道的 **微分导通电阻**，不依赖饱和区的沟道长度调制（厄利效应类比）。仅在 $V_{DS}\ll V_{OV}$ 时，直流 $R_{on,DC}$、小信号 $1/g_{ds}$ 和两端电阻近似相等。由于栅极固定而源极会变化，精确小信号电流仍含 $g_m$：
+在实际情况下，$V_D$为神经信号，约为几百微伏的交流信号，由于存在颅钉作为电位参考，其直流电位近似为零, $V_S$ 存在 DC offset，有一定的直流偏移（约在 $\pm 1\,V$量程范围内），TFT 工作在 **深线性区**。（由于直流偏移，可能出现 $V_D<V_S$，对近似对称的 TFT，可以实际较低电位端作为有效源极重新判断。）
 
-$$i_d=g_{ds}(v_d-v_s)-g_mv_s.$$
+### 2. 饱和区与线性区的小信号模型对比
 
-令电极源阻抗为 $Z_E$、板卡等效交流负载导纳为 $Y_L$，漏极输入到源极输出的传递函数为
+用长沟道模型进行分析，令 $\beta=\mu C_{ox}W/L$、$V_{OV}=V_{GS}-V_{TH}$
 
-$$\frac{v_s}{v_E}
-=\frac{g_{ds}}{g_{ds}+g_m+Y_L+Z_EY_Lg_{ds}}.$$
+#### 2.1 饱和区小信号模型
 
-深三极管区 $g_m/g_{ds}\simeq V_{DS}/(V_{OV}-V_{DS})\ll1$ 时，才退化为第 1 节的电阻分压式 $v_s/v_E\simeq Z_L/(Z_E+R_{on}+Z_L)$。噪声计算同理：$4kTR_{on}$ 只对应理想两端电阻；若 TFT 用漏源噪声电流谱 $S_{i_n}$ 表示，折回电极端是 $S_{i_n}/g_{ds}^2$。
+当 $V_{GS}-V_{TH}>0$， $V_{DS}>V_{GS}-V_{TH}$ 时，晶体管工作在饱和区，电压电流关系为：
+
+$$
+I_D=\beta(V_{GS}-V_{TH})^2
+$$
+
+可以看出漏极电流 $I_D$ 由栅源电压 $V_{GS}$ 决定，可通过求偏导数得到跨导
+
+$$
+g_m=\frac{\partial I_D}{\partial V_{GS}}=2 \beta(V_{GS}-V_{TH})=\frac{2I_D}{V_{OV}}
+$$
+
+如考虑沟道长度调制效应，引入与 $V_{DS}$ 调控电流相关的系数 $\lambda$，即
+
+$$
+I_D=\beta(V_{GS}-V_{TH})^2(1+\lambda V_{DS})
+$$
+
+因此引入电导
+
+$$
+g_{ds}=\frac{\partial I_D}{\partial V_{DS}}= \beta(V_{GS}-V_{TH})^2 \lambda=\frac{\lambda I_D}{1+\lambda V_{DS}}\approx\lambda I_D
+$$
+
+通常在小信号模型中将该电导表示成输出电阻的形式，即
+
+$$
+r_o=\frac{1}{g_{ds}}=\frac{1}{\lambda I_D}
+$$
+
+饱和区最基本的小信号模型如下图所示（未考虑电容的影响）
+<div align="center">
+<img src="TFT3-images/63112919f78c223970af3aeec87fca2e.jpg" width="50%">
+</div>
+<br>
+
+#### 2.2 线性区小信号模型
+
+当 $V_{GS}-V_{TH}>0$， $V_{DS}<V_{GS}-V_{TH}$ 时，晶体管工作在线性区，电压电流关系为：
+
+$$
+I_D=\beta[(V_{GS}-V_{TH})V_{DS}-\frac{1}{2}V_{DS}^2]
+$$
+
+线性区跨导为
+
+$$
+g_m=\frac{\partial I_D}{\partial V_{GS}}=\beta V_{DS}
+$$
+
+晶体管工作在线性区时漏源电压 $V_{DS}$ 较小，相较于饱和区，线性区跨导更小
+
+输出电阻为
+
+$$
+r_o=\frac{1}{\partial I_D/\partial V_{DS}}=\frac{1}{\beta(V_{GS}-V_{TH}-V_{DS})}
+$$
+
+这里的 $r_o$ 是线性区的 **微分导通电阻**，不依赖饱和区的沟道长度调制（厄利效应）。线性区小信号模型如下图所示
+
+<div align="center">
+<img src="TFT3-images/fdbc651cdc9b2e86397c427c0d682973.jpg" width="50%">
+</div>
+<br>
+
+#### 2.3 线性区小信号模型计算出的传递函数
+
+对源极列KCL方程
+
+$$
+\frac{v_d-v_s}{r_o}-g_mv_s=\frac{v_s}{Z_L}
+$$
+
+对漏极列KCL方程
+
+$$
+\frac{v_E-v_d}{Z_E}=\frac{v_d-v_s}{r_o}-g_mv_s
+$$
+其中电极输入等效为戴维南源，电极电压为 $v_E$，电极阻抗为 $Z_E$、板卡等效交流负载阻抗为 $Z_L$，漏极输入到源极输出的传递函数为
+
+$$
+\frac{v_s}{v_E}=\frac{Z_L}{Z_E+(1+g_mr_o)Z_L+r_o}
+$$
 
 ### 3. PXIe-4309 会把 $V_S$ 稳定在 0 V 吗？
 
