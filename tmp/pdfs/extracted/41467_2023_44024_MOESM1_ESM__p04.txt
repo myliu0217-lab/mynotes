@@ -1,0 +1,6 @@
+Supplementary Figure 3. Over-charged p-n OED current-voltage characteristics. Current response of the p-n
+OED corresponding to a 4 nC (generated with a 𝑉𝐸𝐶 of 1 V) injected charge.
+
+
+
+

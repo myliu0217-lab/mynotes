@@ -1,0 +1,46 @@
+Supplementary Fig. 24. Mutual information between decoder prediction and BISC response
+for different orientation discretization. From left to right, top to bottom, number of bins used to
+discretize [0°, 180°) gradually increases.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                              51

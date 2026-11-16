@@ -1,0 +1,76 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+       a)                                                                                   c)                                                 1 ms  1.25 ms
+                                        Column 4
+
+
+                                                                                                  C1    C2    C3     C4
+                                Column 3
+
+
+
+                        Column 2
+
+
+
+            Column 1                                        Row 1                           d)
+
+                               VGS
+                 Data
+               readout                                      Row 2                                                                                                             1 ms
+
+
+                           Bio-signal
+                                                VCS
+                                                                                                                                                                               10 ms
+                           Front-end      Row Select        Row 3
+                          amplification                                                                    Signal
+       b)                                                                                                           S1
+
+                                                                                                            C1                 IC1
+                                                                       S1
+                                                                       S2
+                                                                       S3                                   C3                 IC2
+                                                                       S4
+                                                                       S5
+                                       30 μm         50 μm             S6
+                                                                       S7                                   C5                 IC3
+
+                                                                       S8
+          50 μm
+
+                                                                                                            C7                 IC4                                            25 ms
+
+
+Fig. 4 | Application of p–n OEDs for active multiplexing. a Operation of p–n                     pulses (0.3 V to −1.1 V) are applied relative to the source common with a 1 ms
+OEDs and transistors in series for multiplexing. A bias is sequentially applied                  duration and 25% duty cycle with a period of 5 ms. dOperationoffourinputsofthe
+between the source and drain (cathode) pads. Data readout is achieved by                         eight-to-one multiplexer in the electrolyte. A 50-Hz sinusoidal wave is generated
+recording the OECT current. b A micrograph of the 8 × 8 cross-point topology.                    with a sharp electrode located close to C1–S1.Sequentialpulses(1mswith25%
+Eight sources and eight cathodes interconnects are patterned with a thin-ﬁlm                     phase delay) are applied as in (c) and response is observed across all four channels.
+parylene-C spacer in-between. Polymers are patterned in a vertical form factor                   The top panel displays the unﬁltered output acquired at S1, while the right panel
+between gold layers (n = 10 devices). c An example of data readout acquired at S1                illustrates the separated IC response as a function of channel position. The sections
+contact during the pulsing of drains at C1, C3, C5, and C7 contacts (highlighted by              of the recordings that contain data are highlighted in gray for clarity.
+blue rectangles), which is achieved by enabling the underlying p–n OEDs. Cathode
+
+
+C1,  C3,  C5,  and  C7)  with  a  sampling  rate  of  200-Hz  (See  Online                       LFP recordings with organic implantable multiplexer topology
+Methods). We then record the response from Column S1 and sepa-                                   We next use our conformable organic ampliﬁer-multiplexer array to
+rate the four row-selected channels, as shown in Fig. 4c. Here, the                              record LFPs in anesthetized mice. To accomplish this, we pattern the
+front-end OECTs also act as anti-aliasing ﬁlters. We choose the p(g2T-                           OED–OECT devices on a thin-ﬁlm parylene substrate in a shank format.
+TT) channel thickness to be over 250 nm, which leads to a −3dBcut-                               Each pixel is designed to have a 26-μm diameter, separated by an inter-
+off frequency of approximately 100-Hz (Supplementary Fig. 7). An                                 transistor spacing of 20-μm. By vertically stacking four layers of metal
+external tungsten electrode (20-μm-diameter) placed near the C1–S1                               interconnects, as shown in Fig. 5a, we pattern 12 metal interconnects
+stack is used to apply a 1-mV, 50-Hz sinusoidal voltage relative to the                          on  a  50-μm-wide shank to generate a 4 × 8 cross-point topology in
+array source, comparable to the magnitude and frequency of LFPs as                               which eight electrodes are multiplexed onto the reach of four output
+shown in Fig. 4d. The output current measured at S1 illustrates that                             channels. The complete device thickness is only 8 μm and offers high
+the  data  exhibits  variabilities  depending  on  the  speciﬁc  switched                        mechanical ﬂexibility, as illustrated in Fig. 5a, facilitated by the low
+OED–OECT stack in use. Consequently, separate waveforms are able                                 Young’s modulus of the parylene-C and nanoﬁlm polymers constitut-
+to  capture  both  the  applied  potential  and  its  attenuation  as  a                         ing it (~0.1 to 2 GPa)15,38,39. We further show that p(g2T-TT) ﬁlms that are
+function of the distance from C1. The response acquired indepen-                                 exposed to the neural tissue in our multiplexers do not exhibit any
+dently from all individual OED–OECT stacks during the application of                             toxicity in cell cultures (Supplementary Fig. 9, see online Methods).
+external  stimuli  is  demonstrated  in  Supplementary  Fig.  8.  These                                To  test  the  device in vivo,  we  open  a  300-μm-diameter cranial
+results,   combined   with   the   effective   isolation   of   unselected                       window  over  the  visual cortex  (Fig. 5b). Exploiting the ultra-ﬂexible
+channels,   validate   the   utility   of   p–n   OEDs   in   a   switch-matrix                  nature of the parylene-based shank, we laminate it onto the opening
+conﬁguration.                                                                                    with a micro-hole etched at the tip of the shank. By using a rigid glass
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                              7

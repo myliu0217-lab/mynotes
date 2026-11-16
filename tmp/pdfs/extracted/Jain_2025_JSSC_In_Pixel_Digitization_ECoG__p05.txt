@@ -1,0 +1,67 @@
+                      This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+JAIN et al.: 2.5–20 kS/s IN-PIXEL DIRECT DIGITIZATION ECoG FRONT END                                                                                                                                                           5
+
+
+of  these  artifacts  varies  greatly  due  to  external  factors  like
+electrode design and human physiology, increasing the ADC’s
+DR beyond a certain point becomes inefficient.
+   Fig.4(b)shows  the  implementation  of  the  proposed  fast-
+recovery,  overrange  detecting  phase  quantizer.  We  introduce
+a  saturation  detector  and  expand  the  counter  depth  by  two
+additional  bits.  One  extra  bit  would  have  been  sufficient  to
+detect  saturation  and  reset  the  counters,  but  using  just  one
+extra  bit  would  have  reduced  the  no-overload  range  of  the
+ADC due to clipping. In practice, a few decibels of backoff are                        Fig. 5.    Datalink noise immunity.
+required to avoid this. A voltage quantizer does not have the
+two  complement  wrapping  exhibited  by  the  CCO  quantizer.
+To  address  this  issue,  we  add  two  additional  bits:  the  first
+bit  allows  the  second  integrator  to  exceed  the  clipping  point
+by 6 dB and extends the modulator’s no-overload range. The
+second  bit  provides  the  necessary  DR  for  modulator  reset
+without  allowing  a  phase  wrap  at  the  difference,  which  will
+destabilize  the  modulator.  The  circuit  for  the  added  bits  is
+clocked  at  a  fraction  of  the  CCO  frequency,  fCCO,  and  thus,
+requires  negligible  additional  power.  Overload  recovery  is
+nearly  instantaneous  after  an  artifact,  as  the  counter  resumes
+counting  once  the  input  returns  to  the  normal  range.  Since
+the  decimation  filter  has  the  slowest  time  constant  in  the                    Fig. 6.    On-chip timing signal generation (BW = 10 kHz).
+signal  chain,  the  decimation  filter  sets  the  artifact  recovery
+time. Fig.4(c)        illustrates the timing waveforms demonstrating                   scaling, ensuring power scales proportionally with  fs. For the
+the  described  problem  and  solution.  A  conventional  phase                        second  integrator,  CCO-based  scaling  is  used  to  scale   fCCO
+quantizer becomes unstable when overloaded, leading to oscil-                          and the quantizer power proportionally.
+lations until the power is reset. The proposed phase quantizer
+detects  saturation  when  the  artifact  is  present  and  recovers                   D.  System-Level Considerations
+quickly, minimizing data loss.                                                            Several system-level decisions were made to ensure scalabil-
+                                                                                       ity to the future target of 1024 channels/pixels on a single chip.
+C.  Bandwidth Scaling                                                                  First,  the  decimation  filter  is  implemented  within  each  pixel,
+   Neural signals are categorized by their frequency band and                          substantially reducing the datalink speed and power consump-
+require  a  power-scalable  AFE  based  on  the  operation  mode.                      tion, which is proportional to the OSR. Without the decimation
+The  different  modes  provide  flexibility  for  recording  broad-                    filter,  the  required  data  link  speed  would  reach  1.3  Gb/s  for
+band or selecting bands of cortical neuronal activity. One way                         1024  channels  running  at  a  10  kHz  BW,  making  wireless
+to scale down CT-16  Ms integration bandwidth is by keeping                            data  transfer  from  a  subcutaneous  circuit  impractical.  This
+the  ADC  clock  rate  constant  and  increasing  the  decimation                      design also offers stronger antialiasing rejection of out-of-band
+factor.  This  improves  signal-to-noise  ratio  (SNR)  by  3  dB                      signals  compared  to  the  PGA +  multiplexed  Nyquist  ADC
+for  every  2×    reduction  while  maintaining  the  same  power.                     architecture  since  they  typically  use  first-  or  second-order
+Considering  scenarios  where  hundreds  of  readout  channels                         antialiasing filters with −6 or   −12 dB/oct attenuation. Finally,
+operate simultaneously inside the skull, efficient power scaling                       for improved noise immunity, the serial data clock frequency,
+is important to enable operation with more channels at lower                           fDL, is an integer multiple of  fs (across all modes). For shield-
+sampling rates while adhering to human tissue thermal limits.                          ing the ADCs from datalink noise, the energy is positioned in
+   Fig. 3 shows four operation modes supported by this design                          a null of the modulator’s STF, as shown in Fig. 5.
+along  with  their  bandwidth  and  loop  coefficients:  modes  0,                        For  simplifying  routing  and  to  save  power,  each  pixel
+1,  and  2  provide  the  capability  of  recording  delta  (1–4  Hz),                 generates  its  own  intermediate  timing  signals  for  the  ADC,
+theta  (4–8  Hz),  alpha  (8–12  Hz),  beta  (12–40  Hz),  gamma                       as shown in Fig. 6. The chip receives an off-chip master clock,
+(40–100  Hz),  and  high-frequency  oscillations  (100–500  Hz),                       fM, at 20.48 MHz (the same as  fDL for BW = 10 kHz, which
+and   mode   3   allows   recording   single   unit   and   multiunit                  is  highest  clock  frequency  on  chip)  to  generate  all  on-chip
+neuronal activity (500–10 000 Hz). Mode 0 satisfies require-                           timing  signals.  Two  clock  signals,   fpx  and   fpx_d,  run  at  the
+ments   for   clinical   monitoring   of   activity   below   500   Hz,                16  modulator’s  clock  modulator  frequency,  with  the  latter
+and  modes  1  and  2  allow  oversampling  of  such  activity.                        delayed  by  6.25%  of  Ts.  These  signals  are  generated  at  the
+Mode  3  can  be  used  for  clinical  monitoring  and  research  to                   global  level  and  routed  to  the  pixel  array  for  further  signal
+identify fast neuronal events that can be otherwise missed [47].                       generation.  The  duty  cycle  of  these  signals  was  chosen  to
+The  CT-16  M  architecture  mandates  scaling  integrator  coef-                      simplify the generation of the timing edges needed within the
+ficients in line with  fs  to maintain consistent loop dynamics.                       modulator. Edge timing based on inverter delays was avoided
+For the first integrator, we implement transconductance-based                          to minimize variation.
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

@@ -1,0 +1,89 @@
+876                                                                                                           IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 15, NO. 5, OCTOBER 2021
+
+
+
+                                Christoph  Jeschke         received  the  Diploma  in  mi-                                            Anton  Guimerà-Brunet             received  the  Ph.D.  de-
+                                crosystems   engineering   from   the   University   of                                               gree in electronic engineering from the Universitat
+                                Freiburg, Germany, in 2008. In early 2010, he joined                                                  Autònoma de Barcelona, Spain, in 2013. Since 2000,
+                                Multi Channel Systems MCS GmbH, Germany, as an                                                        he has been a Staff Researcher with the Institut de
+                                Electrical Engineer. In 2019, he became the Head of                                                   Microelectrònica de Barcelona, Centro Nacional de
+                                hardware development and in late 2020, the Director                                                   Microelectrónica, IMB-CNM (CSIC), Spain. He has
+                                of engineering.                                                                                       specialized in the development of micro-nanosystems
+                                                                                                                                      for biomedical applications with a strong background
+                                                                                                                                      in the development of medical devices and system
+                                                                                                                                      integration of novel technologies. His research inter-
+                                                                                                                                      ests include the study of the electrical properties of
+                                                                                                     biological tissues and the design of advanced neural interfaces.
+
+                                Lluís Terés     received  the  M.Sc.  and  Ph.D.  degrees
+                                in computer sciences from the Universitat Autònoma
+                                de Barcelona (UAB), Spain, in 1982 and 1986, re-
+                                ceptively.  He  has  been  with  UAB  since  1982,  and
+                                with the Institut de Microelectrònica de Barcelona,
+                                Centro  Nacional  de  Microelectrónica,  IMB-CNM
+                                (CSIC),  Spain,  since  its  creation  in  1985.  He  is                                              Francisco Serra-Graells          (Member, IEEE) received
+                                currently  the  Head  of  Integrated  Circuits  and  Sys-                                             the  M.Sc.  and  Ph.D.  degrees  in  telecommunica-
+                                tems  Design  Group,  IMB-CNM,  with  research  ac-                                                   tion engineering from the Universitat Politècnica de
+                                tivities  in  the  ﬁelds  of  ASICs,  sensor  signal  inter-                                          Catalunya,  Spain,  in  1993  and  2001,  respectively.
+                                faces,  body-implantable  monitoring  systems,  inte-                                                 Since  1994,  he  has  been  with  the  Department  of
+grated  N/MEMS  interfaces,  ﬂexible  platform-based  systems  and  SoCs,  or-                                                        Microelectronics and Electronic Systems, Universitat
+ganic/printed microelectronics and RISC-V core development. He has partici-                                                           Autònoma de Barcelona, Spain, where he is currently
+pated in more than 70 industrial and research projects and also in two spin-offs.                                                     a full-time Associate Professor. Also since 1994, he
+He is the co-author of more than 80 papers and eight patents. He is also an                                                           has  been  with  the  Integrated  Circuits  and  Systems
+Associate Professor with UAB and Co-ordinator of the Spanish research network                                                         Group,  Institut  de  Microelectrònica  de  Barcelona,
+Red-RISCV.                                                                                                                            Centro  Nacional  de  Microelectrónica,  IMB-CNM
+                                                                                                     (CSIC), Spain. He is the co-author of more than 60 publications, co-inventor
+                                                                                                     of  seven  patents,  supervisor  of  ﬁve  Ph.D.  thesis,  and  participant  in  more
+                                                                                                     than  30  research  and  industrial  projects.  His  research  interests  include  very
+                                Jose A. Garrido        received the M.Sc. and Ph.D. de-              low-power, both low-voltage and low-current, design techniques for analog and
+                                grees  in  telecommunication  engineering  from  the                 mixed-signal CMOS circuits in programmable gain ampliﬁers, automatic gain
+                                Technical  University  of  Madrid,  Spain,  in  1996                 control, phase-locked loops, analog-to-digital and digital-to-analog data con-
+                                and  2000,  respectively.  He  is  currently  an  ICREA              verters, oscillators and power management units, among others. The results of
+                                Research  Professor  with  the  Catalan  Institute  of               his activities are application-speciﬁc integrated circuits targeting smart sensing
+                                Nanoscience and Nanotechnology (ICN2), Spain, and                    systems, like hearing aids, IR and X-ray imagers, NEMS interfaces, chemical
+                                the Head of Advanced Electronic Materials and De-                    sensors and biosensors, space instruments and neural recording systems. He
+                                vices Group. From 2001 to 2004, he was a Postdoc-                    was also the recipient of the 2008 Best Paper Award by the Sensory Systems
+                                toral Researcher with the Walter Schottky Institute,                 Technical Committee of the IEEE Circuits and Systems Society and the 2020
+                                Technische Universität München, Germany, where he                    Best Paper Award of the IEEE International Conference on Electronics Circuits
+                                obtained his habilitation in experimental physics in                 and Systems.
+2010. He held a Lecturer position with the Department of Physics, Technische
+Universität München from 2011 to 2015. He is the author of 144 articles and
+of six patents. His research interests include aspects of science and technology
+of novel electronic materials, with a strong emphasis on 2D materials, such as
+graphene and MoS2, and also in the application of these materials to bioelectron-
+ics and neural interfaces. He has participated in 27 competitive funded projects,
+coordinating main national and European efforts to explore the development of
+novel neural interfaces for biomedical applications. Jose Garrido is the Chief
+Scientiﬁc Ofﬁcer and Founder of INBRAIN Neuroelectronics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

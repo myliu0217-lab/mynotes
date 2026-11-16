@@ -1,0 +1,30 @@
+Supplementary Fig. 20. Motor feature decoder optimization and example channel recording.
+(a) Example representation of a band-pass filtered (0.3 – 300 Hz) channel recording (ii) and
+spectrogram (iii) aligned to the subject’s wrist velocity in y-direction (front-back) (i). (b) Example
+representation of a channel power spectral density (PSD) before and after removing
+hemodynamics (HD). Dashed lines indicate the band-pass filter range (3 – 12 Hz) that was applied
+to extract the HD time series components. (c) Linear parametric sweep of the number of partial
+least squares (PLS) components, and the resulting predictive error sum of squares (PRESS) (top)
+and Pearson’s correlation coefficient (bottom) between observed motor feature (normalized wrist
+velocity in y-direction) and PLS prediction. Data are presented as mean ± SE (n=5 cross-validation
+folds; 3,420 samples per fold). Plots in (a-ii), (a-iii) and (b) after HD removal represent the same
+data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         47

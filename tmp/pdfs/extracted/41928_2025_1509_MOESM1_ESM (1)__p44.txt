@@ -1,0 +1,43 @@
+Supplementary Fig. 16. Mechanical flexibility of thinned BISC chips. (a) Photograph of a
+thinned chip (left) next to an unthinned, rigid chip (right). The thinned sample spontaneously
+conforms to the surface of a glass beaker with a radius of curvature of ~30 mm using water as the
+wetting liquid. (b) Photograph of a chip bent to a curvature of ~10 mm in the more robust direction
+(front surface under tension) below the spontaneous elasto-capillary length cutoff. Kapton tape is
+used to supply the necessary bending force. No fracturing occurs in the silicon down to this
+curvature. (c) Bending down to 10 mm radius in the opposite direction results in brittle fracture,
+where the silicon experiences greater tensile stresses due to the position of the neutral plane.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          43

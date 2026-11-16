@@ -1,0 +1,81 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+       a    11       2        3       4         c                                                    increasing distance           e                               increasing distance
+
+
+
+
+            5        6        7       8
+
+
+
+            9       10       11      12
+
+
+
+        y  13       14      15       16
+
+                                0.75 mm
+             x        Recording electrode
+                      Activated barrel field (C2)
+       b                              1 mm                                                                                         f
+                                                 d
+
+
+
+
+
+                                x
+                         y
+
+
+
+
+
+Fig. 3 | Signal features according to electrode position. a Schematic depicting                  implanted device. Mean and standard deviation of spike waveform amplitudes are
+the position of the four-by-four array of platinum microelectrode disks, each with a             calculated for all detected spikes for each channel across the full recorded
+50 µm radius, relative to the underlying barrel cortex (wS1) of the rat. The barrel              response. d Spike cross-correlations computed using electrode 1 as reference.
+ﬁeld C2 is selectively activated following mechanical stimulation of the respective              Reference spikes were not counted when calculating cross-correlogram versus
+whisker. b Picture of the conformable polyimide-based implant, featuring the four-               itself. Electrodes 5, 9 and 13 have a higher cross-correlation than predicted by
+by-four electrode grid, wrapped around the rat’s brain curvature. c Somatosensory                spatial signal dispersion. e Signal correlations in the LFP band, computed using
+evoked potential (SEP) waveform (WF) amplitudes, spike waveform (WF) ampli-                      electrode 1 of each array as reference for each of the four implanted devices
+tudes and spike counts, plotted for increasing interelectrode distance, taking                   (implanted on four different animals). f Signal correlations in the MUA band. Also
+electrode 1 as reference. Mean and standard deviation of SEP waveform amplitudes                 here, electrodes 5, 9 and 13 are boosted in respect to the overall trend.
+are calculated for n = 60 with n as the total number of stimulus repetitions for one
+
+
+occurring  along  the  recording  chain,  from  brain  to  ampliﬁer.  ECoG                             Each  of the ﬁrst ﬁve  blocks  of  the  lumped-element  model  are
+recordings    are    here    collected    epidurally    with    a   conformable                  dimensioned according to specially devised impedance spectroscopy
+polyimide-based implant (Fig. 3a, b) using a commercial Tucker Davis                             measurements,  as  summarized  in  the  methodology  section.  The
+Technologies (TDT) multi-channel recording system. The polyimide                                 spread resistance RS is estimated as the access resistance extracted
+thin-ﬁlm is mounted on a male Omnetics-nano connector, which plugs                               from an EIS measurement performed between an intracortical needle
+into a female counterpart ﬁxed on an adapter board. This intermediate                            inserted 0.5 mm deep into the cortex and a surface epidural electrode
+board  makes  the  connection  to  a  ZIF-Clip®  headstage,  from  which                         (Z1).  RE,  RF  and  CH  are  ﬁtted  from  the  EIS  curve  of  an  implanted
+cables extend to the preampliﬁer, where signals are digitized. In Fig. 4,                        recording electrode (Z2) and the shunting parameters RSh and CSh are
+the  recording  system  is  simpliﬁed  as  two  recording  channels,  one                        estimated  from  the  EIS  curve  of  an  insulated,  i.e.  non-functional,
+active (ACT) and one passive (PAS), and further broken down into six                             electrode submersed in phosphate buffered saline (PBS) solution (Z3).
+blocks.                                                                                          The coupling parameters RImp and CImp are dimensioned according to
+      The extracellular potential of the neuron is modeled as a voltage                          the impedance measured between two neighboring channels of the
+source VE and the tissue between source and electrode, which includes                            implant (Z4) and, correspondingly, the same measurement performed
+cortex and meninges, is simpliﬁed as a spread resistance RS (Block 1). In                        across  the  interconnection  stage  is  used  to  estimate  the  coupling
+order to differentiate between the active and the passive line, the latter                       parameters RInt and CInt (Z5). The values for RAmp and CAmp,comprising
+is not directly connected to VE, but to ground, meaning it is silent. This                       the sixth block, are speciﬁed by the manufacturer (Z6). All parameter
+is depicted by the gray (silent) versus purple (non-silent) color in the                         values can be found in Table 1.
+schematic of Fig. 4. The tissue-electrode interface is represented by the                              Crosstalk between active and passive lines occurs via two coupling
+electrolyte resistance RE, which accounts for the access resistance of                           paths: through the insulation at the implant level (Z4); and through the
+the line,  and  the  well-known Randles charge  transfer element RFCH,                           insulation at the interconnects level (Z5), which accounts for the female
+consisting  of  a  faradaic  resistance  in  parallel  with  a  capacitance                      Omnetics  connector,  adapter  board,  ZIF-Clip®  headstage  and  cables.
+representing the Helmholz double-layer (Block 2). The following two                              The impedance curves (Fig. 5) show that the limiting coupling path (i.e.
+blocks refer to the implant itself (i.e. polyimide thin-ﬁlm mounted on                           lowest  impedance  path)  is  via  the  interconnection  stage,  with  the
+the male Omnetics connector), speciﬁcally the shunting path through                              insulation impedance being one order of magnitude lower than that of
+insulation to ground, modeled as the element RShCSh (Block 3), and the                           the implant (5 MΩ vs 31 MΩ at 1 kHz). Adapter boards, headstages and
+coupling path between lines, represented by RImpCImp (Block 4). After                            cables (here generalized as interconnects), are often an underestimated
+the implant comes the interconnects block combining all intermediate                             element of the recording chain, which can indeed have a critical impact
+stages between implant and ampliﬁer, i.e. female Omnetics connector,                             on the overall transfer function of the system.
+adapter board, ZIF-Clip® headstage and cables. The block is modeled
+as a coupling path RIntCInt between lines (Block 5). Lastly, the ampliﬁer’s                      Simulating crosstalk
+input impedance is represented as an element RAmpCAmp shorted to                                 Breaking  down  the  recording  chain  into  blocks  makes  it  easier  to
+ground (Block 6).                                                                                characterize the system and allows the impact of each block on the
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                            4

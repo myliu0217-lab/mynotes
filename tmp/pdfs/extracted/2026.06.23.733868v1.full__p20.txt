@@ -1,0 +1,52 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+              Electrochemical and electrophysiological considerations for clinical high channel count
+              neural interfaces. MRS Bull 48, 531-546 (2023).
+         7.   Lee, S. H., Thunemann, M., Lee, K., Cleary, D. R., Tonsfeldt, K. J., Oh, H., Azzazy, F.,
+              Tchoe, Y., Bourhis, A. M., Hossain, L., Ro, Y. G., Tanaka, A., Kılıç, K., Devor, A. &
+              Dayeh, S. A. Scalable Thousand Channel Penetrating Microneedle Arrays on Flex for
+              Multimodal and Large Area Coverage BrainMachine Interfaces. Adv Funct Mater 32,
+              2112045 (2022).
+         8.   Sahasrabuddhe, K., Khan, A. A., Singh, A. P., Stern, T. M., Ng, Y., Tadić, A., Orel, P.,
+              Lareau, C., Pouzzner, D., Nishimura, K., Boergens, K. M., Shivakumar, S., Hopper, M.
+              S., Kerr, B., Hanna, M. E. S., Edgington, R. J., McNamara, I., Fell, D., Gao, P., Babaie-
+              Fishani, A., Veijalainen, S., Klekachev, A. V., Stuckey, A. M., Luyssaert, B., Kozai, T.
+              D. Y., Xie, C., Gilja, V., Dierickx, B., Kong, Y., Straka, M., Sohal, H. S. & Angle, M. R.
+              The Argo: A high channel count recording system for neural recording in vivo. J Neural
+              Eng 18, 015002 (2021).
+         9.   Steinmetz, N. A., Aydin, C., Lebedeva, A., Okun, M., Pachitariu, M., Bauza, M., Beau,
+              M., Bhagat, J., Böhm, C., Broux, M., Chen, S., Colonell, J., Gardner, R. J., Karsh, B.,
+              Kloosterman, F., Kostadinov, D., Mora-Lopez, C., O’Callaghan, J., Park, J., Putzeys, J.,
+              Sauerbrei, B., van Daal, R. J. J., Vollan, A. Z., Wang, S., Welkenhuysen, M., Ye, Z.,
+              Dudman, J. T., Dutta, B., Hantman, A. W., Harris, K. D., Lee, A. K., Moser, E. I.,
+              O’Keefe, J., Renart, A., Svoboda, K., Häusser, M., Haesler, S., Carandini, M. & Harris,
+              T. D. Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain
+              recordings. Science (1979) 372, (2021).
+         10. Jun, J. J., Steinmetz, N. A., Siegle, J. H., Denman, D. J., Bauza, M., Barbarits, B., Lee, A.
+              K., Anastassiou, C. A., Andrei, A., Aydin, Ç., Barbic, M., Blanche, T. J., Bonin, V.,
+              Couto, J., Dutta, B., Gratiy, S. L., Gutnisky, D. A., Häusser, M., Karsh, B.,
+              Ledochowitsch, P., Lopez, C. M., Mitelut, C., Musa, S., Okun, M., Pachitariu, M.,
+              Putzeys, J., Rich, P. D., Rossant, C., Sun, W. L., Svoboda, K., Carandini, M., Harris, K.
+              D., Koch, C., O’Keefe, J. & Harris, T. D. Fully integrated silicon probes for high-density
+              recording of neural activity. Nature 551, 232-236 (2017).
+         11. Raducanu, B. C., Yazicioglu, R. F., Lopez, C. M., Ballini, M., Putzeys, J., Wang, S.,
+              Andrei, A., Rochus, V., Welkenhuysen, M., van Helleputte, N., Musa, S., Puers, R.,
+              Kloosterman, F., van Hoof, C., Fiáth, R., Ulbert, I. & Mitra, S. Time Multiplexed Active
+              Neural Probe with 1356 Parallel Recording Sites. Sensors 2017, Vol. 17, Page 2388 17,
+              2388 (2017).
+         12. Angotzi, G. N., Malerba, M., Boi, F., Miele, E., Maccione, A., Amin, H., Crepaldi, M. &
+              Berdondini, L. A Synchronous Neural Recording Platform for Multiple High                           -Resolution
+              CMOS Probes and Passive Electrode Arrays. IEEE Trans Biomed Circuits Syst 12, 532                                -
+              542 (2018).
+         13. Angotzi, G. N., Boi, F., Lecomte, A., Miele, E., Malerba, M., Zucca, S., Casile, A. &
+              Berdondini, L. SiNAPS: An implantable active pixel sensor CMOS                         -probe for
+              simultaneous large-scale neural recordings. Biosens Bioelectron 126, 355                      -364 (2019).
+         14. Fang, H., Yu, K. J., Gloschat, C., Yang, Z., Song, E., Chiang, C. H., Zhao, J., Won, S.
+              M., Xu, S., Trumpis, M., Zhong, Y., Han, S. W., Xue, Y., Xu, D., Choi, S. W.,
+              Cauwenberghs, G., Kay, M., Huang, Y., Viventi, J., Efimov, I. R. & Rogers, J. A.
+              Capacitively coupled arrays of multiplexed flexible silicon transistors for long                     -term
+              cardiac electrophysiology. Nat Biomed Eng 1, (2017).

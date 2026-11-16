@@ -1,0 +1,93 @@
+                       a       300 ms                       50 ms                   50 ms                   50 ms                         b    (0, 0)
+
+
+
+                                                                                                                               ...
+
+
+
+                                     Stimulus onset                40 random dots                                    Time                      (4, 0)
+                       c–30 ms         –20 ms         –10 ms            0 ms             10 ms           20 ms
+
+                                              –1°
+
+
+                           30 ms           40 ms           50 ms           60 ms           70 ms           80 ms                               (8, 0)
+
+
+
+
+
+                           90 ms          100 ms          110 ms          120 ms          130 ms         140 ms
+
+
+                                                                                                                                              (12, 0)
+
+
+                                                                                                                                   0
+                       d
+                               –1°
+
+
+
+
+                                                                                                                                                     –300              0                300                                  900600
+                                                                                                                                                                    Time since stimulus onset (ms)
+                                                                                                                                          e              Eccentricity (°)                         Angle (°)
+                                                                                                                                                      1.5                          2.5        0               10
+
+
+
+
+
+
+
+
+                                                                                                                                                                        1  2  3
+
+
+                                                                                                                                                                                                    –30   0    30
+
+
+
+                                                                                                                                                 x         y
+
+
+
+
+
+
+
+                                                                                                                                   0
+                       f                     Day 36                         Days 41–48                            Day 62
+
+                              2.5                                                                                                         g
+                              2.0
+                              1.5
+                                      –4        –2        0         2
+                               Cortical coordinate, x (mm)
+
+                               10
+                                0
+                             –10
+                                     0                2                4
+                               Cortical coordinate, y (mm)
+
+Fig. 5 | BISC recordings over visual cortex with dot stimuli.                                           a, Trial in the     Channels with a good Gaussian fit (fraction of unexplained variance smaller than
+dot-mapping session. Forty random dots of either black or white colour are                                                  0.8) are shown for recordings from day 36 and 62 after surgery. f   , RF locations
+shown within the visual field region [–1.5°, 4.5°] × [0°, 6°] (horizontal × vertical),                                      projected on the cortical axes on day 36, days 41–48 and day 62 after surgery. We
+each lasting 50 ms. b                  , Filtered response of all non-saturated channels from a                             denoted the direction along which the RF eccentricity changes the fastest on the
+full-chip recording session. We show their responses after removing the Fourier                                             chip as ‘x                        ’, and the orthogonal direction as ‘y                       ’. The RF centres are plotted against
+components below 20 Hz and above 90 Hz for 1 trial. c                                             , Spatiotemporal RF of    the channel projections on x                           and y               separately. Overall, the eccentricity changes
+one example channel. We filtered the response by a Morlet wavelet of which                                                  roughly at the rate 0.17 visual degree per millimetre. Across days, the RF changed
+the central frequency is 64 Hz, and computed the dot-triggered average of the                                               by less than 0.05° in eccentricity and less than 2.7° in angle on average for all the
+signal power. Times are relative to dot onset and the cross symbol represents                                               channels for both dense (days 41–48) and sparse (days 36 and 64) recordings,
+the fixation location. d                                             , Spatial RF of all non-saturated channels. The spatial demonstrating the stability of BISC chronic recordings. g      , Higher-resolution
+RF is computed by taking the temporal average of the dot-triggered average                                                  retinotopic map (recording electrode pitch, ~28 μm) from the upper-left quarter
+responses. e, Chronic stability of retinotopic maps (recording electrode pitch                                              of the chip. We performed 16 dense recording sessions over 8 days, with 1,024
+approximately 440 μm). A two-dimensional Gaussian fit is computed for the spatial                                           channels simultaneously recorded in each session.
+RF of each channel separately, and we take the fitted centre as the RF centre.
+
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                                                                     1280

@@ -1,0 +1,58 @@
+Paper                                                                                                                                   Journal of Materials Chemistry C
+
+of Guangdong Province-General Project (no. 2021ZT09L197), Shenz-                   20  G.  Buzsa´ki,  C.  A.  Anastassiou  and  C.  Koch,   Nat.   Rev.
+hen  Science  and  Technology  Innovation  Committee—Outstanding                       Neurosci., 2012, 13, 407–420.
+Youth Basic Research Project (RCYX20210609103710028) and Shenz-                    21  K.   H.   Pettersen,   A.   Devor,   I.   Ulbert,   A.   M.   Dale   and
+hen High-level Talent Team Project (KQTD20210811090112002).                            G. T. Einevoll, J. Neurosci. Methods, 2006,               154, 116–133.
+                                                                                   22  G. Buzsa´ki and A. Draguhn, Science, 2004, 304, 1926–1929.
+                                                                                   23  C. Cea, G. D. Spyropoulos, P. Jastrzebska-Perfect, J. J. Ferrero,
+Notes and references                                                                   J.  N.  Gelinas  and  D.  Khodagholy,   Nat.   Mater.,  2020,  19,
+                                                                                       679–686.
+ 1  F.  A.  C.  Azevedo,  L.  R.  B.  Carvalho,  L.  T.  Grinberg,  J.  M.         24  G.  D.  Spyropoulos,  J.  N.  Gelinas  and  D.  Khodagholy,  Sci.
+    Farfel, R. E. L. Ferretti, R. E. P. Leite, W. J. Filho, R. Lent and                Adv., 2019, 5, eaau7378.
+    S. Herculano-Houzel, J. Comput. Neurol., 2009, 513, 532–541.                   25  J. Kawahara, P. A. Ersman, K. Katoh and M. Berggren, IEEE
+ 2  K. Roy, A. Jaiswal and P. Panda, Nature, 2019, 575, 607–617.                       Trans. Electron Devices, 2013,             60, 2052–2056.
+ 3  W. M. Y. Mohamed, B. S. Alghamdi and A. Alexiou,  Front.                       26  M. J. Donahue, A. Williamson, X. Strakosas, J. T. Friedlein,
+    Neurosci., 2023, 17, 1–3.                                                          R. R. McLeod, H. Gleskova and G. G. Malliaras, Adv. Mater.,
+ 4  P. Konrad and T. Shanks, Neurobiol. Dis., 2010, 38, 369–375.                       2018, 30, 1705031.
+ 5  R. Hultman, K. Ulrich, B. D. Sachs, C. Blount, D. E. Carlson,                  27  R. B. Rashid, W. Du, S. Griggs, I. P. Maria, I. McCulloch and
+    N. Ndubuizu, R. C. Bagot, E. M. Parise, M.-A. T. Vu, N. M.                         J. Rivnay, Sci. Adv., 2021, 7, eabh1055.
+    Gallagher, J. Wang, A. J. Silva, K. Deisseroth, S. D. Mague,                   28  M. Abarkan, A. Pirog, D. Mafilaza, G. Pathak, G. N’Kaoua,
+    M.  G.  Caron,  E.  J.  Nestler,  L.  Carin  and  K.  Dzirasa,  Cell,              E.   Puginier,   R.   O’Connor,   M.   Raoux,   M.   J.   Donahue,
+    2018, 173, 166–180.e114.                                                           S. Renaud and J. Lang, Adv. Sci., 2022, 9, 2105211.
+ 6  H. S. Kaplan, O. Salazar Thula, N. Khoss and M. Zimmer,                        29  D.  A.  Koutsouras,  F.  Torricelli  and  P.  W.  M.  Blom,  Adv.
+    Neuron, 2020, 105, 562–576.e569.                                                   Electron. Mater., 2023, 9, 2200868.
+ 7  A. R. Wyler, G. A. Ojemann, E. Lettich and A. A. Ward, Jr.,                    30 W.Huang,J.Chen,Y.Yao,D.Zheng,X.Ji,L.-W.Feng,D.Moore,
+    J. Neurosurg., 1984, 60, 1195–1200.                                                N.R.Glavin,M.Xie,Y.Chen,R.M.Pankow,A.Surendran,
+ 8  K.  J.  Miller,  D.  Hermes  and  N.  P.  Staﬀ,  Neurosurg.  Focus,                Z.Wang,Y.Xia,L.Bai,J.Rivnay,J.Ping,X.Guo,Y.Cheng,
+    2020, 49, E2.                                                                      T. J. Marks and A. Facchetti, Nature, 2023, 613, 496–502.
+ 9  H. Moon, J. Kwon, J. Eun, C. K. Chung, J. S. Kim, N. Chou                      31  J. Kim, R. M. Pankow, Y. Cho, I. D. Duplessis, F. Qin, D. Meli,
+    and S. Kim, Adv. Mater. Technol., 2024, 9, 2301692.                                R.  Daso,  D.  Zheng,  W.  Huang,  J.  Rivnay,  T.  J.  Marks  and
+10  M.  Wu,  K.  Yao,  N.  Huang,  H.  Li,  J.  Zhou,  R.  Shi,  J.  Li,               A. Facchetti, Nat. Electron., 2024, 7, 234–243.
+    X. Huang, J. Li, H. Jia, Z. Gao, T. H. Wong, D. Li, S. Hou,                    32  S. Xu, Y. Zhang, J. Cho, J. Lee, X. Huang, L. Jia, J. A. Fan,
+    Y. Liu, S. Zhang, E. Song, J. Yu and X. Yu, Adv.  Sci., 2023,                      Y. Su, J. Su, H. Zhang, H. Cheng, B. Lu, C. Yu, C. Chuang, T.-
+    10, 2300504.                                                                       I. Kim, T. Song, K. Shigeta, S. Kang, C. Dagdeviren, I. Petrov,
+11  D.  Khodagholy,  T.  Doublet,  P.  Quilichini,  M.  Gurfinkel,                     P.  V.  Braun,  Y.  Huang,  U.  Paik  and  J.  A.  Rogers,  Nat.
+    P.  Leleux,  A.  Ghestem,  E.  Ismailova,  T.  Herve,  S.  Sanaur,                 Commun., 2013, 4, 1543.
+    C. Bernard and G. G. Malliaras, Nat. Commun., 2013, 4, 1575.                   33  Y. Jimbo, D. Sasaki, T. Ohya, S. Lee, W. Lee, F. Arab Hassani,
+12  S. Cheng, R. Zhu and X. Xu, Commun. Mater., 2024, 5, 99.                           T. Yokota, K. Matsuura, S. Umezu, T. Shimizu and T. Someya,
+13  T. Someya, Z. Bao and G. G. Malliaras,  Nature, 2016,  540,                        Proc.Natl.Acad.Sci.U.S.A., 2021, 118, e2022300118.
+    379–385.                                                                       34  R. Garcia-Cortadella, G. Schwesig, C. Jeschke, X. Illa, A. L.
+14  J.  Rivnay,  H.  Wang,  L.  Fenno,  K.  Deisseroth  and  G.  G.                    Gray,  S.  Savage,  E.  Stamatidou,  I.  Schiessl,  E.  Masvidal-
+    Malliaras, Sci. Adv., 2017, 3, e1601649.                                           Codina,  K.  Kostarelos,  A.  Guimera`-Brunet,  A.  Sirota  and
+15  J.  Viventi,  D.-H.  Kim,  L.  Vigeland,  E.  S.  Frechette,  J.  A.               J. A. Garrido, Nat. Commun., 2021, 12, 211.
+    Blanco, Y.-S. Kim, A. E. Avrin, V. R. Tiruvadi, S.-W. Hwang,                   35  R.  Garcia-Cortadella,  N.  Scha¨fer,  J.  Cisneros-Fernandez,  L.  Re´,
+    A. C. Vanleer, D. F. Wulsin, K. Davis, C. E. Gelber, L. Palmer,                    X.Illa,G.Schwesig,A.Moya,S.Santiago,G.Guirado,R.Villa,
+    J. Van der Spiegel, J. Wu, J. Xiao, Y. Huang, D. Contreras,                        A.Sirota,F.Serra-Graells,J.A.GarridoandA.Guimer`-Brunet,a
+    J. A. Rogers and B. Litt, Nat. Neurosci., 2011, 14, 1599–1605.                     Nano Lett., 2020, 20, 3528–3537.
+16  L. Muller, L. S. Hamilton, E. Edwards, K. E. Bouchard and                      36  W. Lee, S. Kobayashi, M. Nagase, Y. Jimbo, I. Saito, Y. Inoue,
+    E. F. Chang, J. Neural Eng., 2016, 13, 056013.                                     T. Yambe, M. Sekino, G. G. Malliaras, T. Yokota, M. Tanaka
+17  E.  Boran,  G.  Ramantani,  N.  Krayenbu¨hl,  M.  Schreiber,                       and T. Someya, Sci. Adv., 2018, 4, eaau2426.
+    K.  Ko¨nig,  T.  Fedele  and  J.  Sarnthein,  Clin.  Neurophysiol.,            37  W.  Lee,  D.  Kim,  N.  Matsuhisa,  M.  Nagase,  M.  Sekino,
+    2019, 130, 1882–1888.                                                              G. G. Malliaras, T. Yokota and T. Someya, Proc. Natl. Acad.
+18  T. Kaiju, K. Doi, M. Yokota, K. Watanabe, M. Inoue, H. Ando,                       Sci. U. S. A., 2017,     114, 10554–10559.
+    K.  Takahashi,  F.  Yoshida,  M.  Hirata  and  T.  Suzuki,  Front.             38  W.  Lee,  D.  Kim,  J.  Rivnay,  N.  Matsuhisa,  T.  Lonjaret,
+    Neural Circuits, 2017, 11, 1–13.                                                   T.   Yokota,   H.   Yawo,   M.   Sekino,   G.   G.   Malliaras   and
+19  G. Gholmieh, W. Soussou, M. Han, A. Ahuja, M. C. Hsiao,                            T. Someya, Adv. Mater., 2016, 28, 9722–9728.
+    D.  Song,  A.  R.  Tanguay,  Jr.  and  T.  W.  Berger,  J.  Neurosci.          39  X. Gu, C. Yao, Y. Liu and I.-M. Hsing, Adv. Healthcare Mater.,
+    Methods, 2006,               152, 116–129.                                         2016, 5, 2345–2351.

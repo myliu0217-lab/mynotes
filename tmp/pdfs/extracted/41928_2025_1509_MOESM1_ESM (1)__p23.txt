@@ -1,0 +1,46 @@
+orientations were presented consecutively (Fig. 4b) on a uniform gray background with a grating
+size of 6°. The fixation spot was at the center of the screen and the grating was centered 2° to the
+right and 2° below the fixation spot. Each grating had a normalized background luminance of 0.5
+and contrast of 0.95 and was presented for 50 ms. The monkey was rewarded with juice if it
+maintained fixation during the whole trial which lasted 1500 ms.
+Dot-mapping experiment
+In this experiment, the monkey also maintained binocular fixation on a red 0.16° fixation spot at
+the center of the screen for at least 300 ms to initiate a trial. In a trial, a single 0.51° dot was
+presented on a uniform gray background, changing location and color (black or white) randomly
+every 50 ms (Fig. 5a). The fixation spot was at the center of the screen and the dots were presented
+in a rectangular field (6°×6°) centered at 1.5° to the right and 3° below the fixation spot. The
+monkey was rewarded with juice if it maintained fixation during the whole trial which lasted 1500
+ms.
+Natural image experiment
+We sampled a set of 24,075 color images from 964 categories (∼ 25 images per category) from
+ImageNet 50 and cropped them to keep the central 420 × 420 pixels. Images were scaled up to 630
+× 630 pixels using bilinear interpolation. All images had eight-bit intensity resolution (values
+between 0 and 255) in each color channel. We then sampled 75 as the test set with the remaining
+24,000 images as the training set. The monkey maintained binocular fixation on a red 0.16°
+fixation spot at the center of the screen for at least 300 ms to initiate a trial, and images were shown
+at a size covering 10° (screen resolution of 63 pixels per visual angle) centered at 3° to the right
+and below the fixation spot. The rest of the screen was kept gray (128 intensity). During a recording
+session, we recorded ∼1000 successful trials, each consisting of uninterrupted fixation for 2.4
+seconds including 300 ms of gray screen (128 intensity) at the beginning and end of the trial, and
+15 images shown consecutively for 120 ms each with no blanks in between. Each trial contained
+either training or test set images. We randomly interleaved trials throughout the session so that our
+test set images were shown ~40 times. The training set images were sampled without replacement
+throughout the session, so each image was effectively shown once or not at all.
+Supplementary Discussion S10. NHP visual cortex recording data analysis
+Channel selection
+Prior to any analysis on recording data from grating and random dot experiments, we first
+identified the saturated channels. In this case, from the BISC 10-bit ADC range of [0, 1024), the
+range [8, 1016) was chosen to represent the non-saturated interval. For a given channel, the
+response in one trial was considered non-saturated when fewer than 0.1% of recorded signals was
+in saturated region, and a channel was considered as non-saturated when it is saturated in fewer
+than 1% of trials. An intersection of non-saturated trials of each non-saturated channel was defined
+as the non-saturated trials for the experiment session (about 300 trials in each grating session, 400
+trials in each random dot session). All analyses were performed on non-saturated channels and
+trials.
+We compared Fourier spectrum during fixation period and grating stimulus period for each non-
+saturated channel (Supplementary Fig. 21). For frequencies evenly sampled in the range from 0
+to 200 Hz, we computed the fraction of frequencies at which the channel responses in two periods
+differ by more than one standard deviation measured across trials. All channels with a fraction
+
+
+                                                          22

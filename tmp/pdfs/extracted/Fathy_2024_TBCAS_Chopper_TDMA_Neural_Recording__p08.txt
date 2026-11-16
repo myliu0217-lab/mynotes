@@ -1,0 +1,67 @@
+                      This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                              content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                          8
+
+diverges if DC-offset is injected to port d[n] [25]. Although the
+amplifier static-offset remover module works as expected, it is
+noted that in rare situations the sampled offset value can shift
+by ±1,  which  causes  a  small  DC  shift  in  the  digital  domain.
+Accordingly,  a  dedicated  high-pass  filter  (HPF)  is  used  to
+remove the  static  DC  offset  from           VW   and  exports VWH       to the
+LMS input node d[n].
+  Fig. 8 shows the system transient signals after the master reset
+is set to logic low. Initially, the ADC output is saturated due to
+the amplifier static offset. The calibration mode starts with 𝐺.-
+Path and the amplifier offset calculation VOS,D. The amplifier
+quickly   recovers   from   saturation,   and   the   injected   dither
+amplitude  passes  to  the  LMS  algorithm  for                𝐺.   estimation.
+Afterwards, 𝐺6-path calibration starts, and the amplifier offset
+needs to be recalculated so that the impedance booster operates
+with the amplifier out of saturation. All calibrations are finished
+in 60 ms, the system then switches to mission-mode for neural
+signal  recording  by  setting         SWCal     to  logic  low.  The  ADC
+oversamples  each  channel           a   =  8-times  before  switching  to
+another   channel.   The   proposed   EOV/LFP   filter   starts   to
+converge, Fig. 8 shows the ADC starts at saturation due to EOV,
+then the multiplexed signals are recovered shortly afterwards.
+The AP and LFP signals are recovered off-chip; a 10-bit VM,AP                          Fig. 9 (a)  Proposed  impedance  booster  block  diagram,  (b) Transient  signal
+signal is exported to an external computing unit. AP signals are                       example showing the operation of the proposed impedance booster.
+directly retrieved by digitally demultiplexing VM, AP, and VM, LFP
+signal  is  passed  through  a  replica  of  the  proposed  EOV-LFP
+filter   off-chip,   then   demultiplexed   to   retrieve   the   LFP                   From Fig. 6(a), one can note that left-hand term of eq. (6) is
+recordings. In this work, both VM, AP, and VM, LFP are exported                         exactly  what  is  required  to  boost  the  input  signal  of  the
+to avoid using off-chip logic.                                                          proposed  neural  recording  system.  Meanwhile,  all  the  right-
+C.   Impedance Booster Operation                                                        hand term of eq. (6) are known at every ADC sample. Since the
+                                                                                        system receives input chopped signals, this dictates that each
+  The impedance booster placeholder block shown in Fig. 7 is                            sample  is  roughly  equal  to  a  (-1)-multiplication  factor  of  the
+illustrated in more detail in Fig. 9(a). The module transforms                          previous sample within a channel frame.
+the  single-channel  impedance  booster  shown  in                 Fig.   6(a)  to        Fig.   9(b)  shows  an  example  of  the  impedance  booster  in
+TDMA  version.  The  module             is  fed  by  two  signals, V          and       operation with the proposed TDMA neural recording system. If
+                                                                          WH            the input signals are un-boosted, then the signal will experience
+VM,LFP.  VM,LFP is either delayed by N-1 clocks or passed to a                          a severe attenuation at the input of the AFE as shown in the
+multiplexer  that  is  controlled  by  a  flag  “First  Sample”  (FS),                  transient signal example. When the booster first engages, the FS
+VM,LFP is chopped and multiplied by 𝐺.. The summation of both                           flag is set to logic zero, and the booster stores the maximum
+paths is then attenuated by a factor -1/𝐺6.                                             signal  marked  by  the  orange  arrow  at             T1.  The  booster  then
+  As previously illustrated in Section 2D, the main goal of the                         multiplies the stored signal by -1 and feeds it back the booster
+impedance  booster  is  to  pre-charge  node VDAC,B to  a  voltage                      DAC  at T2,  then  stores  the  new  value,  and  so  on.  When  the
+close  to   VM,IN   in  an  ideal  case.     With  the  knowledge  of  the              channel frame ends, the booster restores the input signal and
+current  ADC       output signal VWH,  the  input  voltage  is  used  to                saves  the  last  sample  value  by  propagating  through  an                 N-1
+predict   VDAC,B.  However,  the  ADC  signal               VWH    is  modified         delay. Assuming that the ADC delays the input by 1-Clk cycle,
+compared  to  the  ideal  input  signal VM,IN since  EOV/LFP  are                       the overall signal sees N-delay channel-clock units. When the
+subtracted from it via the differential amplifier. Hence, the ideal                     same channel is recorded again, the FS flag is set to logic one,
+input multiplexed signal can be written as,                                             this passes the stored value as the last known good amplitude of
+                                                                                        the channel.
+                     𝑉/8   =   𝑉!,%&𝐴’𝐺#()       −	𝐺.𝑉,-																								(5)       Since each channel is effectively sampled at a Nyquist rate of
+                                                                                        20 kSps, neural signal components with high frequencies can
+With  the  knowledge  of  eq.  (3)  and  (4),          VM,IN can  be  written           cause VD to be as large as twice the ideal signal amplitude after
+using eq. (5) as                                                                        N-delay  channel-clock  units.           Fig.  9(b)  shows  the  worst-case
+                                                                                        scenario in CH1 where a neural signal plus EOV of a maximum
+                            𝑉!,%&   =   𝑉/8   +  𝐺.𝑉,-																												(6)   signal amplitude 60 mV is injected with the highest frequency
+                           𝐺123,7              𝐺6                                       of 10 kHz. After (N-1) unit delays, the booster injects a signal
+                                                                                        of  200%  error.  Assuming  an  electrode                  with  a  maximum
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                      © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

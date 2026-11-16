@@ -1,0 +1,63 @@
+CISNEROS-FERNÁNDEZ       et al.: 1024-CHANNEL 10-BIT 36-µW/CH CMOS ROIC FOR MULTIPLEXED GFET-ONLY SENSOR ARRAYS                                                       863
+
+
+In other words, no individual series switch is required anymore
+for each  μECoG recording site. Indeed, channel multiplexing is
+controlled from the ROIC by changing the effective               VDS   biasing
+of each GFET column wise. While all row lines are biased to
+ground by their respective amperometric read-out circuits, the
+selection of a particular sensor of each row involves changing its
+column voltage from ground (i.e.         VDS   ≡  0) to the activation level
+(i.e.VDS   ≡   Vrefd), with typical values of      Vrefd   <  100 mV.Asa
+result, only the GFET sensor biased to           VDS   ⁄=0can effectively
+contribute to   Irow, so the wanted TDM functionality is achieved.
+However, it is key to control the biasing voltage of all array
+columns even when their active sensors are not selected, since
+leaving them in high impedance would cause crosstalk currents
+ﬂowing between rows.
+   The proposed      μECoG channel multiplexing method presents
+two  main  advantages.  First,  in  the  classic  arrangement  of
+Fig. 3(a), the ambivalent conduction nature of the GFET active                      Fig. 4.     Experimental example of GFET noise folding effects in the proposed
+sensor means in practice that another transistor technology needs                   TDM scheme for different channel sampling rates.
+to provide the switching devices embedded in the array. On the
+contrary, all switches of Fig. 3(b) are outside the ﬂexible probe
+and  located  inside the CMOS ROIC,  with the corresponding
+reduction in both technology complexity and integration costs
+of the GFET-only sensing array. Second, the proposed TDM
+scheme avoids digital control signals crossing the array and it
+allows smooth voltage transitions at the selected GFET, since its
+current is not turned off by interposing a high-impedance series
+switch, like in the classic scheme of Fig. 3(a), but by decreasing
+its VDS   biasing using low-impedance voltage sources instead.
+In  consequence,  artifacts  and  spurious  signals  due  to  charge
+injection  and  clock  feedthrough  can  be  attenuated.  However,
+the  multiplexing  approach  of  Fig.  3(b)  introduces  a  couple
+of circuit design challenges as well. Technology mismatching
+between GFETs of the same row requires a programmable offset
+cancellation mechanism to subtract from            Irow  the individual DC
+current level of each channel. Also, the parallel connection of
+several GFET devices reduces the row impedance seen by the
+ROIC, which causes a degradation of the corresponding input
+preampliﬁer  noise  ﬁgure.  Indeed,  both  design  challenges  are
+fully addressed by the chip architecture of Section IV.
+   Nevertheless, two non-ideal effects can limit in practice the
+scalability of the GFET TDM solution proposed in Fig. 3(b). On
+the one hand, there is the intrinsic noise folding associated with
+the sampling process of the discrete-time multiplexing. Since no
+previous anti-aliasing ﬁlter can be performed at each recording
+site,  noise  folding  becomes  unavoidable,  but  it  can  certainly
+be mitigated by the use of oversampling. In this sense, Fig. 4
+shows the beneﬁts of this technique applied at the sensing array
+level. A safe margin of      fs  ≥  10 kS/s    is chosen here to preserve           Fig. 5.     Main crosstalk mechanisms at (a) row and (b) column levels of the
+the GFET noise levels at the frequencies of interest in               μECoG         proposed TDM scheme, and (c) simulated crosstalk attenuation at 1-mVp     inputs
+applications. As the number of columns scales up, the required                      with f1 =2.4kHz,     f2 =2.6kHzand the GFET bias point of Fig. 2(b).
+scanning rate at the column multiplexer of Fig. 3(b) can become
+unfeasible to maintain the channel oversampling ratio.                              concept is illustrated in Fig. 5(a) and (b), where           Rrow    and  Rcol
+   On the other hand, crosstalk issues may arise in large sens-                     stand  for  the  parasitic  resistances  at  row  and  column  levels,
+ing probes due to technology parasitics. Unlike in MEAs, the                        respectively. For simplicity, these lumped elements include the
+low-impedance  nature  of  all  the  array  rows  and  columns  in                  contributions from both the individual GFET drain/source con-
+the proposed TDM scheme means that the effects of parasitic                         tacts and the long routing of the array tracks. When               Rrow   ⁄=0,
+coupling capacitances can usually be neglected here in favour                       all  the  unselected  GFET  elements  of  the  given  row  do  not
+of  the  contributions  from  the  series  resistances.  This  general              remain biased at      VDS   ≡   0 anymore and they contribute to the
+
+         Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

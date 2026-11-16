@@ -1,0 +1,52 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    complexity, as each additional channel requires a dedicated electrical lead. Thin film
+    technologies have enabled continued scaling by reducing interconnect pitch footprint, but this
+    comes at the cost of increased fabrication complexity and mechanical considerations that must be
+    carefully managed for chronic implantation and clinical translation.
+              Active electrode arrays, which integrate local transistors in the same substrate as the
+    sensing electrodes,  provide a complementary strategy for scaling neural interfaces                       by
+    decreasing the number of external interconnects required to access large arrays. Silicon-based
+    implementations of such systems have demonstrated promising electrical                        performance, including
+    low noise, high power efficiency, and sophisticated on               -chip signal processing capabilities, and
+    have played a central role in advancing high            -channel-count neural recording technologies               8-13.
+    For chronic applications, however, the mechanical mismatch between rigid silicon substrates and
+    soft neural tissue introduces challenges related to long-term reliability and tissue response.
+    Approaches aimed at improving mechanical compliance such as aggressive substrate thinning,
+    narrow probe geometries, or transfer of silicon devices onto flexible carriers 3,14-16 have shown
+    promise but can also introduce additional considerations, including increased fracture
+    susceptibility, overreliance on brittle inorganic encapsulation layers, and added constraints on
+    long-term hermiticity in physiological environments. More fundamentally, the electronic
+    properties of silicon are intrinsically linked to its crystalline bulk structure, which limits the
+    extent to which mechanical compliance can be engineered independently of device performance.
+              Thin-film transistor (TFT) technologies, which are widely deployed in active-matrix
+    organic light-emitting diode (AMOLED) displays (including most modern smartphones and
+    smartwatches)17,18, offer an alternative electronic platform on which transistor device function is
+    largely decoupled from the mechanical properties of the underlying substrate. TFTs can be
+    fabricated directly on polymeric and other flexible materials using low-temperature processes,
+    enabling substrate-agnostic circuit integration. The downsides are that the amorphous or
+    polycrystalline nature of thin-film semiconductors  result in reduced carrier mobility, elevated
+    noise and off-state current leakage, and long-term electrical instability compared to crystalline
+    silicon19-22. In addition, the monolithic integration of complementary                  TFTs remains an active
+    area of research23, placing greater demands on the performance and stability of monopolar
+    semiconductor technologies in practical circuit implementations. As a result, many prior active
+    neural interfaces have relied on silicon-based transistors with post-fabrication mechanical
+    adaptations or heterogeneous integration schemes24,25, which can increase process complexity
+    and impose additional challenges for scalable, clinically robust systems.
+              In this work, we present a fully monolithic flexible             integrated circuit (FIC) platform for
+    active neural sensing, inspired by active          -matrix display architectures. The platform employs
+    dual-gate amorphous indium gallium zinc oxide (a                -IGZO) TFTs fabricated directly on polyimide
+    substrates and encapsulated using a multilayer atomic               -layer-deposited aluminum oxide thin-film
+    barrier. Through systematic co-optimization of contact engineering, device architecture, and
+    encapsulation strategy, we realize a 256           -channel electrocorticography array implementing row                 -
+    column addressing with in-pixel transconductance amplification. This architecture reduces
+    interconnect scaling from linear proportionality to square root proportionality while preserving
+    mechanical compliance and signal fidelity comparable to passive surface arrays.
+              The platform was validated through extensive benchtop characterization, including over
+    one year of accelerated aging tests projecting operational lifetimes exceeding 38 years, followed
+    by acute and chronic in vivo experiments in Sprague-Dawley rats. Acute sensory-evoked
+    recordings demonstrated negligible thermal burden                26-32 and robust signal quality relative to a

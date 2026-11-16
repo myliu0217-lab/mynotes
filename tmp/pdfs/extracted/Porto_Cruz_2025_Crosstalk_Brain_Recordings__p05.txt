@@ -1,0 +1,81 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+
+
+
+
+                                                                                                                                                                                             VPAS
+                                                                                                                                                                                             VACT
+
+
+
+                                                                    Z4                                                       Z5                                      Z6  Z6  (6)
+                                                                    (4)                                                                        (5)
+
+
+
+                                    (2)                                     (3)Z2Z2Z3Z3    RS         RE      CH           RSh         CSh
+                                                                                                                                                                                       VACT
+                                     (1) Z1      Z1                           VE
+                                                                                                               RF         RImp        CImp  RInt        CInt       RAmp           CAmp
+                                                                                                               CH
+                                                      VE                                                                                                                               VPAS
+                                                                                           RS                 RFRE         RSh         CSh                         RAmp           CAmp
+
+
+
+
+                                                                                     Tissue        Tissue-Electrode           Electrical          Electrical
+                                                                                                    Electrochemical         Coupling via        Coupling via            Amplifier's
+                                                                                                        Interface              Implant          Interconnects       Input Impedance
+                                                                                        (1)                 (2)                       (3+4)                     (5)                          (6)
+
+
+Fig. 4 | Model of the recording system, from brain to ampliﬁer. The recording                                 (Z5) and the ampliﬁer’sinputimpedance(Z6). Impedances are modeled as com-
+system is simpliﬁed as a transmission electrical model, featuring an active line                              position of resistors Ri and capacitors Cj with indices i,j specifying it in more detail.
+(ACT) and a passive line (PAS). Each line is composed of a spread resistance (Z1),                            The voltage source VE is considered as the extracellular potential of a neuron. Each
+tissue-electrode interface (Z2), shunting path to electrolyte (Z3), coupling path                             element of the lumped-element model is deﬁned in Table 1.
+through implant insulation (Z4), coupling path through interconnects insulation
+
+
+Table 1 | Parametrization of the lumped-element model
+
+ Block     Lumped-element                           Symbol     Value     Unit     Extraction method        Physical meaning
+ 1              Spread resistance                             RS               45.3        kΩ        Access                    Brain tissue and meninges
+                                                                                               resistance
+ 2             Electrolyte resistance                       RE               7.6           kΩ       Randles ﬁtting                Electrolyte ﬁlm wetting the cortex surface (accounts for the access
+                                                                                                                               resistance of the line)
+            Faradic resistance                             RF                12.0         MΩ                                              Electrode-electrolyte interface
+            Helmholtz capacitance                     CH              4.4          nF                                                Electrode-electrolyte interface
+ 3             Shunt resistance to the                     RSh              0.6          GΩ       RC ﬁtting                        Insulation between line and electrolyte through polyimide
+            electrolyte
+            Shunt capacitance to the                       CSh              23.0        pF
+            electrolyte
+ 4            Insulation resistance                        RImp            1.6           GΩ       RC ﬁtting                        Insulation between neighboring channels at the implant level
+            of the implant                                                                                                     (includes polyimide substrate mounted on male Omnetics
+            Insulation capacitance                         CImp            4.8          pF                                     nanoconnector)
+            of the implant
+ 5             Insulation resistance                       RInt              12.4         MΩ      RC ﬁtting                          Insulation between neighboring channels at the interconnects level
+            of the interconnects                                                                                               (includes female Omnetics nanoconnector, ZIF-Clip headstage and
+            Insulation capacitance                         CInt            43.9       pF                                       cables)
+            of the interconnects
+ 6             Input resistance                            RAmp           2.5           TΩ        Speciﬁed by supplier     Ampliﬁer’s input terminals
+            of the ampliﬁer
+            Input capacitance                              CAmp           8.8          pF
+            of the ampliﬁer
+
+Description of all parameters used in the model illustrated in Fig. 4, according to the impedance spectroscopy curves shown in Fig. 5.
+
+
+undesired coupled signal VPAS outputted by the passive line (Fig. 4)to                                        band (up to 300 Hz), signal attenuation is relatively constant around
+be assessed individually. In simple words: how purple (i.e. non-silent)                                       -40 dB, while, in the MUA band, signal coupling signiﬁcantly increases
+becomes VPAS after distortion through the coupling paths?                                                     with frequency. From  1 kHz to 10 kHz,  attenuation  increases  steeply
+       The transfer function between active and passive lines, simulated                                      from -34 dB (2% coupling in terms of signal amplitude) to -16 dB, which
+in  Simulink  using  the  lumped-element  model,  is  shown  as  a  black                                     corresponds to a coupling of 16%.
+dashed line in Fig. 6. Represented as an attenuation magnitude, -∞ dB                                                Furthermore, the simulation predicts how the transfer function
+corresponds to zero coupling (maximum signal attenuation) and 0 dB                                            would change if each parameter would vary independently by a 5-fold
+to a hundred percent coupling between lines (no signal attenuation).                                          and 10-fold increase and decrease (×5, ×10, ÷5, ÷10). Only the limiting
+Crosstalk is not constant throughout the recording band. In the LFP                                           parameter of each block is summarized in Fig. 6 (block 6 is excluded
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                             5

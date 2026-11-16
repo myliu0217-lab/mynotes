@@ -1,0 +1,68 @@
+40.    Okada, Y., Lähteenmäki, A. & Xu, C. Comparison of MEG and                                 63.    Ohki, K. et al. Highly ordered arrangement of single neurons in
+      EEG on the basis of somatic evoked responses elicited by                                         orientation pinwheels. Nature                    442, 925–928 (2006).
+      stimulation of the snout in the juvenile swine. Clin. Neurophysiol.                        64.    Kara, P. & Boyd, J. D. A micro-architecture for binocular disparity
+      110, 214–229 (1999).                                                                             and ocular dominance in visual cortex. Nature   458, 627–631
+41.     Sauleau, P., Lapouble, E., Val-Laillet, D. & Malbert, C. H. The pig                            (2009).
+      model in brain imaging and neurosurgery. Animal                 3, 1138–1151               65.     Willett, F. R. et al. A high-performance speech neuroprosthesis.
+      (2009).                                                                                          Nature   620, 1031–1036 (2023).
+42.     van der Maaten, L. aurens & Hinton, G. Visualizing data using                            66.    Metzger, S. L. et al. A high-performance neuroprosthesis for
+      t-SNE. J. Mach. Learn. Res.  9, 2579 (2008).                                                     speech decoding and avatar control. Nature         620, 1037–1046
+43.    Pollmann, E. H. et al. A subdural CMOS optical device for                                       (2023).
+      bidirectional neural interfacing. Nat. Electron.                     7, 829–841 (2024).    67.     Sokal, N. O. & Sokal, A. D. Class E—a new class of high-efficiency
+44.    Mitra, P. P. & Pesaran, B. Analysis of dynamic brain imaging data.                              tuned single-ended switching power amplifiers. IEEE J. Solid-State
+      Biophys. J.  76, 691–708 (1999).                                                                 Circuits          10, 168–176 (1975).
+45.     Stavisky, S. D., Kao, J. C., Nuyujukian, P., Ryu, S. I. & Shenoy,                        68.     Lim, Y., Tang, H., Lim, S. & Park, J. An adaptive
+      K. V. A high performing brain–machine interface driven by                                        impedance-matching network based on a novel capacitor
+      low-frequency local field potentials alone and together with                                     matrix for wireless power transfer. IEEE Trans. Power Electron.         29,
+      spikes. J. Neural Eng.                          12, 036009 (2015).                               4403–4413 (2014).
+46.    Thomson, D. J. Spectrum estimation and harmonic analysis.                                 69.     Ferro, M. D. & Melosh, N. A. Electronic and ionic materials for
+      Proc. IEEE            70, 1055–1096 (1982).                                                      neurointerfaces. Adv. Funct. Mater.  28, 1704335 (2018).
+47.     Wold, S., Sjöström, M. & Eriksson, L. PLS-regression: a basic tool                       70.     Jung, T. et al. klshepard/bisc: bioelectronic interface system to
+      of chemometrics. Chemom. Intell. Lab. Syst.                                           58, 109–130 (2001).the cortex (a wireless subdural-contained 65,536-electrode,
+48.    Das, A., Zabeh, E., Ermentrout, B. & Jacobs, J. Planar, spiral,                                 1,024-channel brain-computer interface). Zenodo               https://doi.
+      and concentric traveling waves distinguish cognitive                                             org/10.5281/zenodo.17074065 (2025).
+      states in human memory. Preprint at bioRxiv                            https://doi.        71.      Calabrese, E. et al. A diffusion tensor MRI atlas of the postmortem
+      org/10.1101/2024.01.26.577456 (2024).                                                            rhesus macaque brain. Neuroimage                        117, 408–416 (2015).
+49.     Zabeh, E., Foley, N. C., Jacobs, J. & Gottlieb, J. P. Beta traveling                     72.     Bakker, R., Tiesinga, P. & Kötter, R. The Scalable Brain Atlas: instant
+      waves in monkey frontal and parietal areas encode recent reward                                  web-based access to public brain atlases and related content.
+      history. Nat. Commun.       14, 5428 (2023).                                                     Neuroinformatics   13, 353–366 (2015).
+50.    Deng, J. et al. ImageNet: a large-scale hierarchical image
+      database. In Proc. IEEE Conference on Computer Vision and                                  Acknowledgements
+      Pattern Recognition 248–255 (IEEE, 2009).                                                  This work was partly supported by the Defense Advanced Research
+51.      Willeke, K. F. et al. Deep learning-driven characterization                             Project Agency (DARPA) under contract number N66001-17-C-4001,
+      of single cell tuning in primate visual area V4 unveils                                    the Department of the Defense Congressionally Directed Medical
+      topological organization. Preprint at bioRxiv                            https://doi.      Research Program under contract number HT9425-23-1-0758, the
+      org/10.1101/2023.05.12.540591 (2023).                                                      National Science Foundation under grant number 1546296 and the
+52.     Jia, X., Tanabe, S. & Kohn, A. Gamma and the coordination of                             National Institutes of Health under grant number R01DC019498.
+      spiking activity in early visual cortex. Neuron          77, 762–774 (2013).               We acknowledge the use of facilities and instrumentation at the
+53.     Woo, S. et al. ConvNeXt V2: co-designing and scaling ConvNets                            Columbia Nano Initiative, the CUNY ASRC and the UPenn Quattrone
+      with masked autoencoders. In Proc. IEEE/CVF Conference on                                  Nanofabrication Facility. We also thank Y. Borisenkov, A. Banees and
+      Computer Vision and Pattern Recognition 16133–16142 (IEEE, 2023).                          K. Kim at Columbia University for help with chip processing and many
+54.     Pierzchlewicz, P. et al. Energy guided diffusion for generating                          helpful discussions.
+      neurally exciting images. Adv. Neural Inf. Process. Syst.          36,
+      32574–32601 (2023).                                                                        Author contributions
+55.     Cadena, S. A. et al. Diverse task-driven modeling of macaque V4                          K.L.S., N.Z., T.J. and R.J.C. conceived the project. N.Z., T.J., G.E., M.S.,
+      reveals functional specialization towards semantic tasks. PLOS                             K.T., G.R., Y.H., K.L.S. and R.J.C. designed the implant circuitry. J.D.F.,
+      Comp. Biol.  20, e1012056 (2024).                                                          J.K. and H.Y. post-processed the implant. N.Z. and T.J. implemented
+56.     Walker, E. Y. et al. Inception loops discover what excites                               the relay station hardware. G.E., N.Z., P.M., R.J.C., S.P., T.J., A.M. and
+      neurons most using deep predictive models. Nat. Neurosci.        22,                       L.P.C. implemented the relay station software. T.J., N.Z., J.D.F. and S.P.
+      2060–2065 (2019).                                                                          performed the bench-top characterizations. B.Y., E.S., T.J., N.Z., K.L.S.,
+57.      Fu, J. et al. Pattern completion and disruption characterize                            R.H., I.G. and G.E. performed the in vivo experiments on the porcine
+      contextual modulation in mouse visual cortex. Preprint at bioRxiv                          subject. T.J., B.Y. and P.C. conducted the porcine data analysis and
+      https://doi.org/10.1101/2023.03.13.532473 (2023).                                          histology. B.P., A. Dubey, K.E.W., N.Z. and T.J. performed the in vivo
+58.     Franke, K. et al. State-dependent pupil dilation rapidly shifts visual                   experiments on the motor cortex of the NHP. T.J., B.P. and K.E.W.
+      feature selectivity. Nature     610, 128–134 (2022).                                       performed the motor cortex data analysis. A.T., S.P., K.L.S., R.J.C., T.J.,
+59.     Cowley, B. R., Stan, P. L., Pillow, J. W. & Smith, M. A. Compact deep                    N.Z., G.E., T.S., G.J.R. and C.N. performed the in vivo experiments on
+      neural network models of visual cortex. Preprint at bioRxiv                                the visual cortex of the NHP. Z.L., K.W., A.T., S.P., D.O., R.J.C., E.Z., A. Das
+      https://doi.org/10.1101/2023.11.22.568315 (2023).                                          and J.J. performed the visual cortex data analysis. K.L.S., A.T., B.P., M.R.,
+60.    Bashivan, P., Kar, K. & DiCarlo, J. J. Neural population control via                      J.J. and D.Y. acquired the funding. K.L.S., A.T., B.Y., B.P., R.J.C., L.P.C.
+      deep image synthesis. Science                        364, eaav9436 (2019).                 and J.J. provided supervision. T.J., N.Z., J.D.F., G.E., K.L.S., Z.L., K.W.,
+61.     Zhang, H., Watrous, A. J., Patel, A. & Jacobs, J. Theta and alpha                        A.T., A. Das, E.Z., J.J. and S.P. wrote the paper with review and editing
+      oscillations are traveling waves in the human neocortex. Neuron                            contributed by all authors.
+      98, 1269–1281.e1264 (2018).
+62.     Das, A. et al. Spontaneous neuronal oscillations in the human                            Competing interests
+      insula are hierarchically organized traveling waves. eLife       11,                       N.Z. is a principal with Kampto Neurotech, LLC, which is
+      e76702 (2022).                                                                             commercializing the BISC technology. The BISC technology is
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                            1287

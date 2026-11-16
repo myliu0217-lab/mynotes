@@ -1,0 +1,45 @@
+greater than 0.1 are labeled as responsive channels. Only responsive channels are used to compute
+the average spectrum in Fig. 4c. These channels are located at the V1 area of cortex.
+Wavelet transformation for band-pass filtering
+We applied Morlet wavelet transformation on the raw response from one channel to get time-
+varying band-passed signals. The complex wavelet is implemented by scipy.signal.morlet with
+scaling factor s=0.5. An example of a wavelet with central frequency of 64 Hz is shown in
+Supplementary Fig. 22. The absolute value after wavelet transformation is defined as the signal
+for the corresponding frequency band.
+Response scaling
+Since the gains of each channel are not necessarily identical, we shifted and scaled band-passed
+responses before performing any tuning analysis, i.e. grating-triggered-average or dot-triggered-
+average. For a given channel, we first computed the mean response during the [-300, 0] ms window
+relative to stimulus onset for every trial. We define the average and standard deviation over trials
+as the baseline response and scaling unit, respectively. Band-passed responses were converted by
+the corresponding affine transformation.
+Removing orientation-untuned component
+The raw grating-triggered-average result reveals an orientation-independent component that
+mostly encodes the grating switching every 50 ms. The same example channel as in Fig. 4i is
+shown in Supplementary Fig. 23. We computed the average over all orientations and all cycles
+and termed the residual as orientation tuned component (Fig. 4i).
+Orientation selectivity index
+Proper scaling of band-passed responses enables us to perform comparisons between channels. For
+each channel, we computed the temporal average during the interval from 88 to 112 ms after each
+grating onset conditioned on the grating orientation, denoting the result as 𝑓ሺ𝜃ሻ. The orientation
+selectivity index is defined as difference between maximum and minimum value:
+                                        𝑂𝑆𝐼 ൌ max𝑓ሺ𝜃ሻെ min𝑓ሺ𝜃ሻ
+Orientation decoding
+The orientation decoder was built on raw channel responses without any wavelet transformation.
+We first preprocessed the data by performing principal component analysis (PCA) to remove some
+correlations. The first 96 principal components (PCs), which capture 93.4% of the total variance,
+were kept and scaled according to the PC variance to serve as the input to the decoder. The decoder
+took the responses from these 96 PCs during the interval from 0 to 200 ms after a grating onset
+and binned them into 400 bins (0.5 ms each). The decoder backbone was a three-layer 1D
+convolution neural network with the last layer outputting a distribution between 0° and 180°
+represented by logits in a given number of bins. When training the decoder as a classifier, the cross
+entropy was used as the loss objective. We compared the mutual information between decoder
+prediction and input for different bin sizes used in discretization (Supplementary Fig. 24) and
+observed little change when bin size is no greater than 15°. When training the decoder as a
+regressor, the Euclidean distance between the circular mean and the target orientation in the
+complex space was used as the loss objective. A small regularization coefficient (0.02) for
+distribution entropy was used in training the regressor to avoid non-smooth prediction. Regressor
+decoder performance is shown in Supplementary Fig. 25, similar to Fig. 4l-m.
+
+
+                                                         23

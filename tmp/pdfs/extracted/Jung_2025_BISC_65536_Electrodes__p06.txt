@@ -1,0 +1,80 @@
+ a                                                       bZ                                                  c                                                  d
+                                                                                                                           PMd                                                   Multichannel
+                                                            X                                                                       M1      S1                                     recording
+                                                             Y                                                   ArcS                                IPS
+                                                                                                                                                                                   Discard saturated channels
+                                                                                                                                                                                   Filter and downsample
+                                                                                                                                    CS             STS                             Remove haemodynamics
+
+     Reach, grab, retract                                                                                 *Device face up
+                                                                                                                                                                         Boxcar sample              Multitaper
+ e                                                                                                                                 r = 0.53 ± 0.04                                  β          (10–30 Hz)
+
+                                                                                                                                                                    LMP             Low γ    (30–70 Hz)
+              0                                                                                                                         Observed                                    High γ    (70–190 Hz)
+
+                                                                                                                                        Predicted                        z-score                    Normalize
+
+                 0                    10                   20                  30                  40                  50                  60                  70                  80                  90                 100
+                                                                                 Time (s)                                                                                     Normalized matrix
+ g                                                                                                                 f                                                              X(t)       ch,lag,freq
+                                                                                                          1.5                 30
+                                                                                                          0
+                   LMP                                                                                    –1.5         20
+
+                                                                                                          3.0                                                                     PLS model
+                                                                                                          1.5          10
+                   High γ                                                                                 0
+                                                                                                          –1.5          0
+                0                    10                   20                  30                  40                  50                  60                                 Predict wrist velocity
+                                                      Time (s)                                                                                                                          y(t)
+
+ h                            13.5 s                 13.6 s                 13.7 s                 13.8 s                 13.9 s                 14.0 s                 14.1 s                  14.2 s                 14.3 s                 14.4 s
+
+        Wrist y-
+        velocity
+     (normalized)
+          LMP
+
+              1.5
+              0
+              –1.5
+
+        High γ
+               3.0
+               1.5
+               0
+              –1.5
+
+Fig. 3 | BISC recordings over motor cortex from a behaving NHP.   a, Behavioural                            standard error, and the dashed line denotes the chance level. Individual data
+task depiction. The subject was trained to asynchronously reach and grab a ‘wand’                           points (n                         = 5 cross-validation folds; 3,420 samples per fold) are overlaid as black
+held by the experimenter without an explicit cue. b                               , Device placement on the dots. g, Representative example of the spatiotemporal dynamics of LMP and
+artificial skull. c           , Registration of the device with respect to the brain surface                high-γ band, both z                               -scored. The time axes in e                and g               are shared. h           , Representative
+anatomy. d, Motor feature decoding pipeline. A linear PLS regression model uses a                           example of a frame-by-frame spatiotemporal progression of LMP and high-γ band,
+spatial–temporal–spectral input           X(t)  to predict the subject’s motor feature y(t)         .       both z-scored. The plotted time window is indicated by the vertical grey box over e
+e, Representative example of the continuous decoding of normalized wrist                                    and g. The dashed lines indicate the time instants of each frame, and the solid
+velocity in the y                                          direction (front–back). f     , Spectral contributions to the decoder curves over the frames represent the CS in c                                       . Recordings are taken from 256
+from each frequency band. Bars indicate the mean, the error bars indicate the                               channels at 33.9 kS s−1 from the full array. Panel a               created with BioRender.com.
+
+
+
+coordinates (Fig. 4d) to show their band-pass-filtered responses in one                                     to the grating switching (Supplementary Fig. 21). After its removal, the
+trial (Fig. 4e). It is evident that the activity in these channels is elicited                              residual components show that the channel responses during the time
+by the onset of the visual stimulus and returns to the baseline after the                                   window from 50 to 200 ms after grating onsets are tuned to the grating
+stimulus. We further applied Morlet wavelet transformation (Supple-                                         orientations. A typical channel is shown in Fig. 4i. We take the average
+mentary Discussion 10) to acquire the spectrogram of each channel. The                                      response between 88 and 112 ms after grating onset to measure each
+averaged spectrogram of one channel after aligning at the stimulus onset                                    channel’s tuning curve and define the orientation selectivity index as
+is shown (Fig. 4f                         ), along with six individual bands with central frequen-          the difference between its maximum and minimum values. Orientation
+cies evenly spaced on a logarithmic scale (Fig. 4g). We observed different                                  selectivity index maps across multiple frequency bands are shown in
+responses in each band, defined as the ratio of the mean response in the                                    Fig. 4j. Tuning curves for the 64-Hz band are shown in Fig. 4k. Chan            -
+time window from 500 to 1,500 ms relative to the stimulus onset over                                        nels exhibiting pronounced tuning and higher orientation selectivity
+the mean response in the time window from –300 to 0 ms. The resulting                                       indices correspond to those overlying V1. As expected, we observe
+response maps are shown for multiple bands (Fig. 4h).                                                       strong orientation tuning in the gamma (γ) band.
+      For each frequency band, we computed the grating-triggered                                                   We then built an orientation decoder from these responses, which
+average response by aligning the response segments according to the                                         takes raw responses (with no filtering) of all channels in the time win-
+grating onset and obtained the average band-pass-scaled response                                            dow from 0 to 200 ms after grating onset and returns a distribution of
+conditioned on each grating orientation (Supplementary Discussion                                           grating orientations. We trained the decoder as a classifier in which the
+10). The result contains a strong untuned component corresponding                                           orientation is discretized into 36 bins. The decoder is a multilayer
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                  1277

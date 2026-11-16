@@ -1,0 +1,66 @@
+CISNEROS-FERNÁNDEZ      et al.: 1024-CHANNEL 10-BIT 36-µW/CH CMOS ROIC FOR MULTIPLEXED GFET-ONLY SENSOR ARRAYS                                                       867
+
+
+                                                                                 in Fig. 12(a). The complete chip occupies an overall area of
+                                                                                 18.7 mm2, which is equivalent to 0.018 mm2                  per acquisition
+                                                                                 channel. As it can be noticed, most of the chip area is dedicated
+                                                                                 to the array of row modules. The ROIC total pad count is 120,
+                                                                                 but only 64 of them are used for the TDM of the 32              ×  32 GFET
+                                                                                 sensing array, while the rest of pads are devoted to the high-speed
+                                                                                 serial  read-out  lines,  the  SPI-like  interface  for  conﬁguration,
+                                                                                 analog references and redundant supply pads.
+                                                                                     Fig. 12(b) details the layout of the row module, which includes
+                                                                                 all the circuits explained in Sections IV to VI. The ﬂoorplan
+                                                                                 exhibits a mirroring symmetry respect to the             x-axis in order to
+                                                                                 improve matching between the positive and negative paths of
+                                                                                 the fully-differential circuits. The total power consumption per
+                                                                                 row is 1.15 mW from the 1.8-V supply, which is equivalent to
+                                                                                 36   μW per acquisition channel. From the breakdown analysis
+                                                                                 of Fig. 12(c), it is clear that most of the power consumption is
+                                                                                 due to the preampliﬁer, while the largest part of the row area is
+                                                                                 occupied by the SAR ADC.
+
+Fig. 11.     (a) Segmented SC SAR ADC as row data converter of Fig. 6 and (b)               VIII.  SYSTEM      CALIBRATION       METHODOLOGY
+proposed low-kickback comparator. All transistor dimensions in  µm.
+                                                                                     Due to the high modularity of the ROIC architecture proposed
+                                                                                 in  Fig.  6,  some  calibration  procedure  is  needed  to  account
+network of 60-fF unitary capacitors segmented in two banks for                   for  channel-to-channel  mismatching  caused  by  technological
+the purpose of compacting the area of the feedback DAC. With                     deviations  between  GFET  sensors  of  the  array  and  also  be-
+an equivalent single-ended total sampling capacitor of 3.84 pF,                  tween CMOS row modules. This section presents an automated
+these banks of 6-bit and 7-bit binary-weighted capacitance el-                   methodology focused on individual channel gain equalization
+ements are responsible for the most signiﬁcant bit (MSB) and                     and also on dynamic range optimization. For illustrative pur-
+LSB parts of the digital conversion, respectively. The row ADC                   poses, experimental results from a tiny 4         ×  4 GFET array and the
+features 2-Vpp     differential input full scale around the common               corresponding ROIC rows are presented. The same automated
+mode level of 0.9 V for       Vreﬂ   =0.4Vand         Vrefh  =1.4V.The           procedure is applied later in Section IX for the case of 1024
+ADC circuit has been designed for a theoretical 13-bit dynamic                   channels with 32       ×  32 GFET probes. The sequential steps of
+range in terms of signal-to-quantization-noise ratio (SQNR) and                  this system calibration methodology are as follows:
+kT/C    noise ﬂoor. However, a conservative 3-bit safe margin                        1)  At  ROIC  row  level,  the  low-power  CMOS  circuits
+was left for non-ideal circuit effects such as technological mis-                        presented   in   Sections   IV   to   VI   rely   on   a   total
+matching of the bridge capacitor between the MSB and LSB                                 of  16  parameters  dependent  on  either  absolute  val-
+banks of the SC feedback DAC or noise coupling through the                               ues   or   matching   ratios:   I-DAC   offset   conﬁguration
+supply rails of the full chip. The data converter runs at an internal                    Roﬀ[0   ...7] =    {1,  7, 7,  7 ,  7 , 7 ,  7 , 1}Ru,  preampli-
+                                                                                                                 8  9  10   11   12  13   2
+clock frequency of 13.5 MHz to provide a 422-kS/s conversion                             ﬁer transimpedance gain        Rgain, preampliﬁer offset        Voﬀ1,
+speed, which is equivalent to an effective Nyquist sampling rate                         single-to-differential buffer matching         R2/R1,PGAgain
+of 13.2 kS/s per channel, so it covers the 10-kS/s oversampling                          conﬁguration       Cs/Cf[0...3] =       {2,  4,8,  16}    and   com-
+speciﬁcation per recording site for a       32  ×  32  GFET probe array.                 bined PGA-ADC offset          Voﬀ2. In order to calibrate them
+   One  of  the  typical  bottlenecks  of  low-power  SAR  ADCs                          per row,   Vrefo  can be exploited as an external test input
+is  the  logic  kickback  from  the  comparator  output  reaching                        in  Fig.  6.  Without  connecting  any  GFET  probe  to  the
+the high-impedance nodes of the SC network of the feedback                               ROIC, this input allows the following controllability of
+DAC. In order to mitigate such an effect that tends to generate                          the equivalent analog read out at the ADC:
+distortion,  the  CMOS  comparator  of  Fig.  11(b)  is  proposed.                       V
+This topology is intentionally split in two stages for better kick-                        adc          [                  (               )       ]
+back isolation. Indeed, the circuit combines a continuous-time                            =2Cs     R2     Rgain  V      −    1+Rgain         V        +  V     .
+folded-cascode input stage together with a discrete-time latched                               C   R       R       refo             R          oﬀ1        oﬀ2
+output stage preset in metastability to limit the voltage swing                                  f    1      oﬀ                       oﬀ
+observed  by  the  input  differential  pair  at  every  quantization                                                                                       (5)
+phase.                                                                                   By  taking  16  measurements  per  row  with  different
+                                                                                         conﬁgurations,   (5)   becomes   a   16-variable   system
+VII.  1024-CHANNEL         ROIC    IN  0.18-μM    CMOS TECHNOLOGY                        of    linear    equations    from    which    to    extract    the
+                                                                                         individual  parameter  values.  The  test  pattern  chosen
+   The  1024-channel  ROIC  has  been  fabricated  in  a  1.8-V                          for   this   purpose   is:   Roﬀ[3],     Cs/Cf[0]      and   Vrefo  =
+0.18-μm 6-metal MiM-capacitor CMOS technology, as shown                                  {−15,−25,−35,         −45,   −65,   −75}mV;         Roﬀ[0,    2,5,7],
+
+
+
+         Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

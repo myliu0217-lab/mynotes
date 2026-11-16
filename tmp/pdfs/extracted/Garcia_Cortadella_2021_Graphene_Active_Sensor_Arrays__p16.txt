@@ -1,0 +1,85 @@
+ARTICLE                                                                                          NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w
+
+
+
+45.   Leopold, D. A. Very slow activity ﬂuctuations in monkey visual cortex:                               77.   Sirota, A. et al. Entrainment of neocortical neurons and gamma oscillations by
+      implications for functional brain imaging. Cereb. Cortex 13, 422–433 (2003).                               the hippocampal theta rhythm. Neuron 60, 683–697 (2008).
+46.   Mackin, C. et al. A current–voltage model for graphene electrolyte-gated ﬁeld-                       78.   Kandel, A. & Buzséki, G. Cellular-synaptic generation of sleep spindles, spike-
+      effect transistors. IEEE Trans. Electron Devices 61, 3971–3977 (2014).                                     and-wave discharges, and evoked thalamocortical responses in the neocortex
+47.   Schaefer, N. et al. Improved metal-graphene contacts for low-noise, high-                                  of the rat. J. Neurosci. 17, 6783–6797 (1997).
+      density microtransistor arrays for neural sensing. Carbon N. Y. 161, 647–655                         79.   Kandel, A. & Buzsáki, G. Cerebellar neuronal activity correlates with spike and
+      (2020).                                                                                                    wave EEG patterns in the rat. Epilepsy Res. 16,1–9 (1993).
+48.   Rivnay, J. et al. High-performance transistors for bioelectronics through                            80.   Voipio, J., Tallgren, P., Heinonen, E., Vanhatalo, S. & Kaila, K. Millivolt-scale
+      tuning of channel thickness. Sci. Adv. 1, e1400251 (2015).                                                 DC shifts in the human scalp EEG: evidence for a nonneuronal generator. J.
+49.   Masvidal-Codina, E. et al. High-resolution mapping of infraslow cortical brain                             Neurophysiol. 89, 2208–2214 (2003).
+      activity enabled by graphene microtransistors. Nat. Mater. 18, 280–288 (2019).                       81.   Pan, W. J., Thompson, G. J., Magnuson, M. E., Jaeger, D. & Keilholz, S.
+50.   Zurutuza, A. & Marinelli, C. Challenges and opportunities in graphene                                      Infraslow LFP correlates to resting-state fMRI BOLD signals. Neuroimage 74,
+      commercialization. Nat. Nanotechnol. 9, 730–734 (2014).                                                    288–297 (2013).
+51.   Deng, B., Liu, Z. & Peng, H. Toward mass production of CVD graphene ﬁlms.                            82.   Grooms, J. K. et al. Infraslow electroencephalographic and dynamic resting
+      Adv. Mater. 31, 1800996 (2019).                                                                            state network activity. Brain Connect. 7, 265–280 (2017).
+52.   Khodagholy, D. et al. High transconductance organic electrochemical                                  83.   Lazic, K., Ciric, J. & Saponjic, J. Sleep spindle dynamics during NREM and
+      transistors. Nat. Commun. 4,1–6 (2013).                                                                    REM sleep following distinct general anaesthesia in control rats and in a rat
+53.   Mavredakis, N., Garcia Cortadella, R., Bonaccini Calia, A., Garrido, J. A. &                               model of Parkinson’s disease cholinopathy. J. Sleep Res. 28, e12758 (2019).
+      Jiménez, D. Understanding the bias dependence of low frequency noise in                              84.   Kozák, G., Földi, T. & Berényi, A. Spike-and-wave discharges are not
+      single layer graphene FETs. Nanoscale 10, 14947–14956 (2018).                                              pathological sleep spindles, network-level aspects of age-dependent absence
+54.   West, B. J. & Shlesinger, M. The noise in natural phenomena. Am. Sci. 78,                                  seizure development in rats. eNeuro 7, ENEURO.0253-19.2019 (2020).
+      40–45 (1990).                                                                                        85.   Rubehn, B. & Stieglitz, T. In vitro evaluation of the long-term stability of
+55.   Neto, A. H. C., Guinea, F., Peres, N. M. R., Novoselov, K. S. & Geim, A. K. The                            polyimide as a material for neural implants. Biomaterials 31,3449–3458 (2010).
+      electronic properties of graphene. Rev. Mod. Phys. https://doi.org/10.1103/                          86.   Lu, H. et al. SU8-based micro neural probe for enhanced chronic in-vivo
+      RevModPhys.81.109 (2007)                                                                                   recording of spike signals from regenerated axons. In Sensors, 2006 IEEE,
+56.   Pinto, H. & Markevich, A. Electronic and electrochemical doping of graphene                                66–69 (IEEE, 2006).
+      by surface adsorbates. Beilstein J. Nanotechnol. 5, 1842–1848 (2014).                                87.   Márton, G. et al. A multimodal, SU-8-platinum-polyimide microelectrode
+57.   Fu, W. et al. Biosensing near the neutrality point of graphene. Sci. Adv. 3,                               array for chronic in vivo neurophysiology. PLoS ONE 10, e0145307 (2015).
+      e1701247 (2017).                                                                                     88.   Al-Ahmady, Z. S. et al. Selective liposomal transport through blood brain
+58.   Prodanov, D. & Delbeke, J. Mechanical and biological interactions of implants                              barrier disruption in ischemic stroke reveals two distinct therapeutic
+      with the brain and their impact on implant design. Front. Neurosci. 10,11                                  opportunities. ACS Nano 13, 12470–12486 (2019).
+      (2016).                                                                                              89.   Miyawaki, H., Billeh, Y. N. & Diba, K. Low activity microstates during sleep.
+59.   Prasad, A. & Sanchez, J. C. Quantifying long-term microelectrode array                                     Sleep 40, zsx066 (2017).
+      functionality using chronic in vivo impedance testing. J. Neural Eng. 9, 026028                      90.   Mitra, P. P. & Pesaran, B. Analysis of dynamic brain imaging data. Biophys. J.
+      (2012).                                                                                                    76, 691–708 (1999).
+60.   Degenhart, A. D. et al. Histological evaluation of a chronically-implanted
+      electrocorticographic electrode grid in a non-human primate. J. Neural Eng.
+      13, 046019 (2016).                                                                                   Acknowledgements
+61.   Sun, F. T., Arcot Desai, S., Tcheng, T. K. & Morrell, M. J. Changes in the                           This work has been funded by the European Union’s Horizon 2020 research and
+      electrocorticogram after implantation of intracranial electrodes in humans:                          innovation program under Grant Agreement No. 732032 (BrainCom) and Grant
+      The implant effect. Clin. Neurophysiol. 129, 676–686 (2018).                                         Agreement No. 696656 and 785219 (Graphene Flagship). The ICN2 is supported by the
+62.   Salatino, J. W., Ludwig, K. A., Kozai, T. D. Y. & Purcell, E. K. Glial responses                     Severo Ochoa Centres of Excellence program, funded by the Spanish Research Agency
+      to implanted electrodes in the brain. Nat. Biomed. Eng. 1, 862–877 (2017).                           (AEI, grant no. SEV-2017-0706), and by the CERCA Program/Generalitat de Catalunya.
+63.   Hassler, C., Boretius, T. & Stieglitz, T. Polymers for neural implants. J. Polym.                    R.G.C. is supported by the International Ph.D Program La Caixa-Severo Ochoa (Pro-
+      Sci. Part B Polym. Phys. 49,18–33 (2011).                                                            grama Internacional de Becas “la Caixa”-Severo Ochoa). This work has made use of the
+64.   Mendes, G. C. C., Brandão, T. R. S. & Silva, C. L. M. Ethylene oxide                                 Spanish ICTS Network MICRONANOFABS partially supported by MICINN and the
+      sterilization of medical devices: A review. Am. J. Infect. Control 35, 574–581                       ICTS “NANBIOSIS”, more speciﬁcally by the Micro-NanoTechnology Unit of the CIBER
+      (2007).                                                                                              in Bioengineering, Biomaterials, and Nanomedicine (CIBER-BBN) at the IMB-CNM.
+65.   Huang, C., Irwin, M. G., Wong, G. T. C. & Chang, R. C. C. Evidence of the                            This work is within the project FIS2017-85787-R funded by the “Ministerio de Ciencia,
+      impact of systemic inﬂammation on neuroinﬂammation from a non-bacterial                              Innovación y Universidades” of Spain, the “Agencia Estatal de Investigación (AEI)”, and
+      endotoxin animal model. J. Neuroinﬂammation 15, 147 (2018).                                          the “Fondo Europeo de Desarrollo Regional (FEDER/UE)”. A.S. and G.S. were also
+66.   Stephenson, R., Lim, J., Famina, S., Caron, A. M. & Dowse, H. B. Sleep-wake                          supported by Bundesministerium für Bildung und Forschung [grant number
+      behavior in the rat: Ultradian rhythms in a light-dark cycle and continuous                          01GQ0440]. R.G.C. acknowledges that this work has been done in the framework of the
+      bright light. J. Biol. Rhythms 27, 490–501 (2012).                                                   Ph.D in Electrical and Telecommunication Engineering at the Universitat Autònoma de
+67.   Vyazovskiy, V. V., Achermann, P. & Tobler, I. Sleep homeostasis in the rat in                        Barcelona. We thank Eduardo Blanco Hernández for assistance with the preprocessing of
+      the light and dark period. Brain Res. Bull. 74,37–44 (2007).                                         the motion tracking data.
+68.   Trachsel, L., Tobler, I. & Borbely, A. A. Sleep regulation in rats: effects of sleep
+      deprivation, light, and circadian phase. Am. J. Physiol. -Regul. Integr. Comp.                       Author contributions
+      Physiol. 251, R1037–R1044 (1986).                                                                    R.G.C. fabricated the graphene sensor arrays and performed their characterization
+69.   Lecci, S. et al. Coordinated infraslow neural and cardiac oscillations mark                          in vitro, he characterized the headstage and contributed to the recording and analysis of
+      fragility and ofﬂine periods in mammalian sleep. Sci. Adv. 3, e1602026 (2017).                       electrophysiological activity. G.S. developed the implantation methodology and did the
+70.   Thompson, G. J. et al. Phase-amplitude coupling and infraslow (<1 Hz)                                surgery. He also contributed to electrophysiological signals recording and analysis. C.J.
+      frequencies in the rat brain: relationship to resting state fMRI. Front. Integr.                     designed the wireless headstage and software for the operation of active sensor arrays. X.
+      Neurosci. 8, 41 (2014).                                                                              I. contributed to the design and fabrication of the neural probes. A.G., S.S., I.S., and E.S.
+71.   Sirota, A. et al. Entrainment of neocortical neurons and gamma oscillations by                       performed the experiments for the biocompatibility study. E.M. fabricated and tested the
+      the hippocampal theta rhythm. Neuron 60, 683–697 (2008).                                             devices for the biocompatibility study. K.K., S.S., and A.G., designed and interpreted the
+72.   Pesaran, B. et al. Investigating large-scale brain dynamics using ﬁeld potential                     biocompatibility data. K.K. and S.S. overall coordinated the team for the biocompatibility
+      recordings: analysis and interpretation. Nat. Neurosci. 21, 903–919 (2018).                          study. A.G.B. contributed to the design of the recording system. A.S. coordinated the
+73.   Sirota, A. & Buzsáki, G. Interaction between neocortical and hippocampal                             experiments for electrophysiological data-acquisition and contributed to the analysis of
+      networks via slow oscillations. Thalamus Relat. Syst. 3, 245–259 (2007).                             electrophysiological signals. J.A.G. coordinated the team in the ICN2 for the fabrication
+74.   Sturman, O., Germain, P. L. & Bohacek, J. Exploratory rearing: a context- and                        of the sensor arrays. R.G.C., G.S., S.S., A.S., and J.A.G. wrote the manuscript.
+      stress-sensitive behavior recorded in the open-ﬁeld test. Stress 21, 443–452
+      (2018).
+75.   Lever, C., Burton, S. & O’Keefe, J. Rearing on hind legs, environmental                              Competing interests
+      novelty, and the hippocampal formation. Rev. Neurosci. 17, 111–133 (2006).                           Patent application (no. P201831068) ﬁlled by CSIC, ICREA, CIBER, ICN2, and IDI-
+76.   Barth, A. M., Domonkos, A., Fernandez-Ruiz, A., Freund, T. F. & Varga, V.                            BAPS; concerning a graphene transistor system for measuring electrophysiological sig-
+      Hippocampal network dynamics during rearing episodes. Cell Rep. 23,                                  nals (pending); inventors who are co-authors in the present article are A.G.B., X.I., E.M.,
+      1706–1715 (2018).                                                                                    and J.A.G.
+
+
+16                              NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications

@@ -1,0 +1,14 @@
+Supplementary Fig. 14. GUI software for recording. (a) The main interface displaying 256
+channels in 16 by 16 arrangement (i) with magnified view of a selected channel (ii). Recorded data
+from a saved file can be played back using the same GUI. (b) 2D heatmap of DC offset (left) and
+signal variance (right) of the recording channels. (c) The interface window to configure address of
+recording channels (shown as pink dots over the array). Other recording parameters including gain
+and high-pass corner can also be controlled using sliders.
+
+
+
+
+
+
+
+                                                            41

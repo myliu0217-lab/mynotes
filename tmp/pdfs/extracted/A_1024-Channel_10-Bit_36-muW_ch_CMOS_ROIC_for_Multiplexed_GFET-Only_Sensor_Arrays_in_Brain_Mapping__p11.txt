@@ -1,0 +1,65 @@
+870                                                                                                           IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 15, NO. 5, OCTOBER 2021
+
+
+The headstage is composed of two hardware modules, the chip
+carrier and the ﬁeld-programmable gate array (FPGA) board,
+which is capable of managing several ROIC modules.
+   Due to the 3:1 aspect ratio of the die of Fig. 12, direct wire
+bonding  has  been  chosen  to  attach  the  120-pad  ROIC  to  its
+chip carrier, as shown in Fig. 17(a), combined with glob-top
+passivation. Apart from carrying the ROIC die itself, the PCB
+module  of  Fig.  17(b)  also  holds  the  decoupling  capacitors,
+analog buffers for references and 3-state logic buffers, packed
+here in 74244 chips, for the serial outputs running at 27 Mbps,
+so several 1024-channel ROIC modules can be stacked to share
+the same bus for connecting to a single FPGA module. Indeed,
+two  30-pin  board-to-board  connectors  from  Molex  LCC,  IL,
+provide all the connectivity between ROIC and FPGA PCBs.
+On the other hand, the compact 70-pin zero-insertion-force (ZIF)
+connector FH29B-70S from Hirose Electric Co. Ltd., Japan, is
+employed for the direct attachment of each32             ×   32GFET probe           Fig.  18.     Laboratory  setup  for  the  test  of  the  1024-channel  ROICµECoG
+to its corresponding ROIC module.                                                   headstage with 32  ×  32 solution-gated GFET probes.
+   The FPGA board stacked on top of Fig. 17(c) is built around
+the LFE5U-45F device from Lattice Semiconductor Corp., OR,
+packed  here  in  ceramic  256-pin  ball-grid  array.  This  FPGA
+already  contains  several  necessary  blocks  for  the  ROIC  ap-
+plication,  such  as  the  54-MHz  phase-locked  loop  (PLL),  the
+378-MHz serializer/deserializer (SerDes) and the low-voltage
+differential  signalling  (LVDS)  drivers  for  the  system  cable,
+which is operated at double data rate (DDR). The custom parts
+synthesized inside this FPGA are the read-out data packetizer
+and the SPI master for the selection/conﬁguration of each ROIC.
+The FPGA board also hosts the power management unit and
+the  10-bit  octal  DAC  108S085  from  Texas  Instruments  Inc.,
+TX, for the programmability of ROIC analog references                    Vrefg,
+Vrefd, Vrefo,  Vrefh  and  Vreﬂ   of Fig. 6. Finally, the 8-pin polarized
+connector PZN-08-AA from Omnetics Connector Corp., MN,
+is used to plug the system cable carrying the 4 differential wire
+pairs for master-slave input and output, clock and supply.                          Fig. 19.     Measured equivalent input noise of the ROIC channel for   C  /C   =
+   The  size  and  weight  ﬁgures  of  the  resulting  1024-channel                                                                                          s   f
+                                                  3                                 2 compared to the experimental output noise of the GFET sensor sampled at
+μECoG headstage are28           ×  28  ×  7mm       and 6.7 g, respectively.        12 kS/s, like in Fig. 4.
+Also, the average current consumption is around 150 mA from
+the  4.5-V  external  supply,  being  only  20  mA  drained  by  the
+ROIC.  Concerning  the  acquisition  system,  this  headstage  is
+combined  with  the  signal  collector  unit  MCS-SCU  and  the
+interface  board  MCS-IFB  both  from  Multi  Channel  Systems
+GmbH, Germany, for the connection to a PC through USB 3.0
+interface. The complete laboratory setup with instrumentation
+for in-vitro measurements is shown in Fig. 18.
+   The ﬁrst electrical tests have been carried out without attach-
+ing  any  GFET  sensing  array  and  they  have  been  focused  on
+the characterization of the row CMOS circuits of the ROIC. In
+this sense, Fig. 19 returns the equivalent input noise spectral
+density  of  the  ROIC  channel  when  compared  to  the  typical
+ﬂicker  proﬁles  experimentally  obtained  from  solution-gated
+GFET  sensors.  The  measured  results  are  consistent  with  the
+simulation proﬁles of Fig. 10(b) and they show that ROIC noise
+contributions do not constrain GFET sensitivity below 100 Hz.
+In terms of large-signal linearity, the half full-scale harmonic                    Fig. 20.     Measured output of the row SAR ADC for an harmonic input signal
+response measured at the row SAR ADC in Fig. 20 does not                            at −6dBFS    and 1.5 kHz.
+exhibit  relevant  harmonics  with  spurious-free  dynamic  range
+
+
+
+        Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

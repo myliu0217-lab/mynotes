@@ -1,0 +1,67 @@
+                      This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS                                                                                                                                                                                                                    1
+                A 2.5–20 kS/s In-Pixel Direct Digitization
+                      ECoG Front End With Submillisecond
+                                    Stimulation Artifact Recovery
+
+  Aditi Jain        , Student Member, IEEE, Eric Fogleman, Senior Member, IEEE, Paul Botros, Ritwik Vatsyayan                                                         ,
+              Asish Koruprolu            , Student Member, IEEE, Corentin Pochet, Member, IEEE, Andrew Bourhis,
+              Zhaoyi Liu         , Student Member, IEEE, Suhas Chethan, Hanh-Phuc Le                                   , Senior Member, IEEE,
+                 Ian Galton        , Fellow,          IEEE, Shadi A. Dayeh            , and Drew A. Hall             , Senior Member, IEEE
+
+
+
+
+   Abstract— Neural  stimulation  is  used  routinely  to  diagnose
+and  treat  neurological  disorders.  The  stimulation  artifacts  are,
+however,  problematic  for  closed-loop  neuromodulation  therapy,
+which dynamically adjusts the electrical stimulation parameters
+based  on  real-time  feedback  from  the  recorded  neural  activity
+because they can cause saturation or prolonged recovery times in
+traditional recording front ends. This article presents a per-pixel
+second-order  16  analog-to-digital  converter  (ADC)  for  direct
+digitization  of  neural  signals,  which  addresses  the  stimulation
+artifact  recovery  time  in  voltage-controlled  oscillator  (VCO)-
+based quantizers with a fast-recovery, overrange-detecting phase
+quantizer. The ADC uses a pseudo-virtual ground feedforwarding
+(PVG  FF)  technique  and  a  complementary  input  Gm-C    filter
+with  per-pixel  decimation.  It  supports  four  recording  modes
+covering   2.5–20   kS/s   through   a   power-efficient,   bandwidth-
+scalable continuous time 16  modulator. Fabricated in a 180-nm
+CMOS  process,  this  300  ×  300  µm    2   ADC  achieves  >250×
+faster  (0.05–0.4  ms)  stimulation  artifact  recovery  time,  enabling
+in-stimulation  recording.  Recording  with  artifact  tolerance  was
+demonstrated through an in vivo whisker barrel rat experiment.
+   Index   Terms— Artifact   tolerance,   closed-loop,   delta-sigma
+modulation,  neural  recording,  neuromodulation,  recovery  time,
+stimulation  artifacts,  voltage-controlled  oscillator  (VCO).
+
+                            I.  INTRODUCTION
+       LOSED-LOOP neuromodulation is an advanced therapy                              Fig. 1.   Closed-loop neuromodulation system illustrating stimulation artifacts.
+Cthat uses real-time feedback to adjust neural stimulation,
+effectively  treating  neurological  disorders  such  as  epilepsy                    controlled current pulses into specific brain regions to modu-
+and  Parkinson’s  disease  [1],      [2],      [3],      [4].  It  is  also  used  forlate brain activity. Open-loop stimulation can have detrimental
+feedback  in  brain-machine  interfaces  and  neuro-prosthetics                       side  effects,  whereas  closed-loop  systems  adapt  based  on
+for  paralyzed  people  [5],       [6]  and  in  localizing  functional               the  patient’s  recorded  neural  signals,  enhancing  treatment
+tissue  during  brain  surgeries  [7].  Neural  stimulation  sends                    precision and efficacy with fewer systemic side effects [8].
+
+  Received 9 July 2024; revised 17 September 2024 and 16 November 2024;                   Fig. 1 shows a typical closed-loop neuromodulation setup.
+accepted 16 November 2024. This article was approved by Associate Editor              There  are  several  techniques  to  record  neural  activity  that
+Taiyun  Chi.  This  work  was  supported  by  the  National  Institutes  of  Health   are  classified  by  the  recording  location  within  the  brain  or
+under Grant UG3NS123723. (Corresponding author: Drew A. Hall.)                        on the surface of the scalp. While the design and techniques
+  This  work  involved  human  subjects  or  animals  in  its  research.  Approval
+of all ethical and experimental procedures and protocols was granted by the           described in this article can be applied in all neural recording
+Institutional Animal Care and Use Committee (IACUC) of the University of              methods,  this  work  focuses  on  electrocorticography  (ECoG),
+California at San Diego under Application No. S16020.                                 where  the  electrodes  are  placed  on  the  pial  surface  of  the
+  The authors are with the Department of Electrical and Computer Engineer-
+ing, University of California at San Diego, La Jolla, CA 92093 USA (e-mail:           cerebral cortex to measure local broadband electrical activity,
+drewhall@ucsd.edu).                                                                   including local field potentials (LFPs) and extracellular action
+  Color  versions  of  one  or  more  figures  in  this  article  are  available  at  potentials  (APs).  These  neural  signals  have  spectral  content
+https://doi.org/10.1109/JSSC.2024.3508544.
+  Digital Object Identifier 10.1109/JSSC.2024.3508544                                 from 1 mHz to 10 kHz with peak amplitudes up to 10 mVpp
+                         0018-9200 © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+                                           See https://www.ieee.org/publications/rights/index.html for more information.
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

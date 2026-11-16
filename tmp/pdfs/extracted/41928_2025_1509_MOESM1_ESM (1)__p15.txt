@@ -1,0 +1,45 @@
+where E is Young’s modulus, t is the layer thickness, and 𝜗 is Poisson’s ratio 101,102.
+By encapsulating our device in polyimide and parylene, we reduce the material stiffness mismatch
+between the device surface and the surrounding tissue. The main implication of reduced device-
+scale stiffness which we achieve from die thinning lies in device tissue conformability (see
+discussion below). Reduction in tissue damage along the device edges (see histological results),
+may also be aided by reduced device stiffness.
+Device conformability to cortex
+Three regimes can be considered to understand what happens mechanically to BISC upon
+implantation. These regimes depend on the relative magnitudes of the curvature of the cortex
+(rcortex) and the elasto-capillary length (LEC) of the device. We model the BISC implant as a flexible
+device with hydrophilic surface and no built-in stress, wrapping around a cylinder with water as
+the wetting liquid (surface tension, 𝛾 = 72 mN/m). Through equating surface energy reduction
+with bending energy increase, we find that LEC is given by:
+
+                                                     𝐿ா஼ ൌ ඨ𝐵𝛾
+
+where B is the bending stiffness. The radius, rmin, below which spontaneous wrapping does not
+occur is given by:
+
+                                                    𝑟௠௜௡ ൌ 𝐿ா஼√2
+
+Regime 1 (LEC < rcortex). In this regime, the device spontaneously conforms to the cortical surface
+driven by capillary forces. Take for example a 5-µm-thick parylene device for which B equals
+~0.035 µN∙m, giving LEC = 0.7 mm and rmin = 0.5 mm. In this case, the device conforms to even
+the smallest features such as sulci in the cortex, with curvatures down to ~1 mm.
+Regime 2 (LEC > rcortex). In this regime, the device does not spontaneously bend to conform to the
+cortical surface. In the limit of zero flexibility, the device may be pushed into the compliant tissue
+by an outside force, e.g., skull reattachment, potentially leading to significant tissue damage
+especially as device volume increases.
+Regime 3 (LEC ൎ rcortex). This regime represents the BISC devices (LEC ൎ 40 mm, rmin ൎ 30 mm)
+in the brain regions studied in this paper (rcortex ൎ 30 mm). As a demonstration of BISC
+conformability, Supplementary Fig. 16a shows a BISC chip spontaneously wrapping around a
+glass beaker with a radius of curvature of 30 mm with water as the wetting liquid. Importantly,
+this natural conformability indicates that outside mechanical forces are not needed push down the
+BISC device to make it conform to the cortical surface.
+Bending induced fracture
+Due to the nature of its atomic bonding, silicon is inherently prone to brittle fracture. For ideal
+silicon samples with minimal defects, the maximum sustainable bending strain (ε௠௔௫) is ~1% 103.
+The strain in a material bent under uniaxial stress applied to a radius of curvature r is given by
+
+                                                       εൌ𝑑𝑟
+
+where d is the distance between the neutral plane and the plane of interest 104. Setting εൌε௠௔௫
+and taking d equal to the distance of maximum strain furthest away from the neutral plane in a slab
+                                                          14

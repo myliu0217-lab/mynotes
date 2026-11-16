@@ -1,0 +1,53 @@
+channels. Then, for each channel, a learned query vector is compared with each position’s key
+embedding using scaled dot-product attention. The result is a spatially normalized attention map
+that indicates the most important feature locations for a recording channel, given an input image.
+We then use this attention map to compute a weighted sum of the value embeddings, which results
+in a single feature vector for each neuron. Finally, a neuron-specific affine projection with
+exponential linear unit (ELU) non-linearity gives rise to the scalar predicted neuronal activity. We
+refer to this architecture as a cross-attention readout because the key and value embeddings are
+obtained from the image, whereas the query is learned for each recording channel separately.
+The model is trained by minimizing the Poisson loss between recorded and predicted neuronal
+activity, identical to the procedures described in 51. Here, we first freeze the weights of the core
+and train the readout for 30 epochs. Then, we reduce the initial learning from 0.001 to 0.0001 and
+optimize the weights of the core and readout using the AdamW optimizer for a total of 200 epochs.
+Explainable variance
+As a measure of response reliability, we estimated the fraction of the stimulus-driven variability
+compared to the overall response variability. More specifically, we computed the ratio of each
+channel’s total variance minus the variance of the observation noise, over the total variance. To
+estimate the variance of the observation noise, we averaged the variance of responses across image
+repeats for all of the 75 repeated natural image test stimuli.
+Generation of MEIs
+
+We used the trained model to synthesize maximally exciting input images (MEIs) for each channel
+using regularized gradient ascent. Starting out with a randomly initialized Gaussian white noise
+image, we showed the image to the model and computed the gradients of a single target channel
+with respect to the image. To avoid high frequency artifacts, after each iteration, we applied
+Gaussian blur with an SD of three pixels to smoothen the image. Additionally, we constrained the
+entire image to have a fixed-energy budget, which we implemented as a maximum L2 norm of the
+z-scored image, calculated across all pixel intensities. We chose a total L2 norm of the MEI of 20,
+such that the resulting MEIs had minimal and maximal values similar to those found in our training
+natural image distribution. Additionally, we made sure that the MEI could not contain values
+outside of the eight-bit pixel range by clipping the MEI outside of the bounds that correspond to 0
+or 255 pixel-intensity. We used stochastic gradient descent (SGD) optimized with learning rate of
+five and ran each optimization for 500 iterations, without early stopping.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                           27

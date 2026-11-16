@@ -1,0 +1,75 @@
+                          This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                                      content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                                                     14
+
+completely attenuate the EOV in feedback. The designed neural                                           [18]  X. Huang et al., "Actively Multiplexed μECoG Brain Implant System
+channel  consumes             5.11 µW         of  power,  with         1.8 NEF  for  AP                       With Incremental-ΔΣ ADCs Employing Bulk-DACs," IEEE Journal of
+band, and occupies an area 0.00179 mm2. The proposed system                                                   Solid-State Circuits, vol. 57, no. 11, pp. 3312-3323, Nov. 2022.
+is verified by comparing it with a commercial IC via in-vivo                                            [19]  W. Jiang, et. al., "A ±50-mV Linear-Input-Range VCO-Based Neural-
+recordings from a rat.                                                                                        Recording  Front-End  With  Digital  Nonlinearity  Correction,"                    IEEE
+                                                                                                              Journal of Solid-State Circuits, vol. 52, no. 1, pp. 173-184, 2017.
+                                                                                                        [20]  T.   Denison,   et.   al.,   "A   2μW   100   nV/rtHz   chopper-stabilized
+                                        REFERENCES                                                            instrumentation  amplifier  for  chronic  measurement  of  neural  field
+                                                                                                              potentials," IEEE  Journal  of  Solid-State  Circuits, vol.  42,  no.  12,  pp.
+[1]    R.   Vatsyayan,   et   al.,   "Electrochemical   and   Electrophysiological                            2934-2945, 2007.
+       Considerations for Clinical High Channel Count Neural Interfaces," MRS                           [21]  R.  R.  Harrison,  and  C.  Charles,  "A  Low-Power  Low-Noise  CMOS
+       Bulletin, vol. 48, p. 531–546, 2023.                                                                   Amplifier for Neural Recording Applications," IEEE Journal of Solid-
+[2]    Y. Tchoe, et al., "Human Brain Mapping with Multithousand-Channel                                      State Circuits, vol. 38, no. 6, pp. 958-965, 2003.
+       PtNR Grids Resolves Spatiotemporal Dynamics," Science Translational                              [22]  M.  Sharma,  A.  Gardner,  H.  Strathman,  D.  Warren,  J.  Silver,  and  R.
+       Medicine, vol. 14, no. 628, 2022.                                                                      Walker,   "Acquisition   of   Neural   Action   Potentials   Using   Rapid
+[3]    J.   Jun,   et   al.,   "Fully   Integrated   Silicon   Probes   for   High-Density                    Multiplexing Directly at the Electrodes," Micromachines, vol. 9, no. 10,
+       Recording of Neural Activity," Nature, vol. 551, p. 232–236, 2017.                                     p. 477, 2018.
+[4]    K. Sahasrabuddhe, et al., "The Argo: A High Channel Count Recording                              [23]  J.  Huang  et  al.,  "A  0.01-mm2  mostly  digital  capacitor-less  AFE  for
+       System for Neural Recording In Vivo," Journal of Neural Engineering,                                   distributed autonomous neural sensor nodes," IEEE Solid-State Circuits
+       vol. 18, 2021.                                                                                         Letters, vol. 1, no. 7, pp. 162-165, 2018.
+[5]    J.   Sibille,   C.   Gehr,   J.I.   Benichov,   et   al.,   "High-density   electrode            [24]  Q. Fan, F. Sebastiano, J. H. Huijsing, and K. A. A. Makinwa, "A 1.8 μW
+       recordings   reveal   strong   and   specific   connections   between   retinal                        60 nV/√Hz capacitively-coupled chopper instrumentation amplifier in 65
+       ganglion cells and midbrain neurons," Nature Communication, 2022.                                      nm  CMOS  for  wireless  sensor  nodes," IEEE  Journal  of  Solid-State
+                                                                                                              Circuits, vol. 46, no. 7, p. 1534–1543, 2011.
+[6]    C.  Horváth,  L.F.  Tóth,  I.  Ulbert,  et  al.,  "Dataset  of  cortical  activity               [25]  A. Shoval, D. A. Johns and W. M. Snelgrove, "Comparison of DC Offset
+       recorded with high spatial resolution from anesthetized rats," Sci Data                                Effects  in  Four  LMS  Adaptive  Algorithms,"               IEEE  Transactions  on
+       (8), 180, 2021.                                                                                        Circuits and Systems II: Analog and Digital Signal Processing, vol. 42,
+[7]    A. Obaid, et. al., "Massively parallel microwire arrays integrated with                                no. 3, pp. 176-185, 1995.
+       CMOS  chips  for  neural  recording," Science  Advances, vol.  6,  no.  12,                      [26]  Ritwik  V.,  and  S.  A.  Dayeh,  "A  universal  model  of  electrochemical
+       March 2020.                                                                                            safety limits in vivo for electrophysiological stimulation," Frontiers in
+[8]    C.  Collins,  et.  al.,  "Cortical  cell  and  neuron  density  estimates  in  one                     Neuroscience, vol. 16, 2022.
+       chimpanzee  hemisphere,"          Proceedings  of  the  National  Academy  of                    [27]  Y. Zhu, et. al., "A 10-bit 100-MS/s Reference-Free SAR ADC in 90 nm
+       Sciences , vol. 113, no. 3, pp. 740-745, January 2016.                                                 CMOS," IEEE Journal of Solid-State Circuits, vol. 45, no. 6, pp. 1111-
+[9]    C. H. Chang, H. Y. Lane, C. H. Lin, "Brain stimulation in Alzheimer’s                                  1121, 2010.
+       disease," Frontiers Psychiatry, vol. 9, pp. 1-13, 2018.                                          [28]  B. Razavi, "The Design of a Bootstrapped Sampling Circuit [The Analog
+[10]  A.  M.  Lozano,  J.  Dostrovsky,  R.  Chen,  P.  Ashby,  "Deep  Brain                                   Mind]," IEEE Solid-State Circuits Magazine, vol. 13, no. 1, pp. 7-12,
+       Stimulation for Parkinson’s Disease: Disrupting the Disruption," Lancet                                2021.
+       Neurology, vol. 1, p. 225–231., 2002.                                                            [29]  B. Razavi, "The StrongARM Latch [A Circuit for All Seasons]," IEEE
+[11]  P.  Maurice,  et  al.,  "Brain-Machine  Interfaces  to  Assist  the  Blind,"                            Solid-State Circuits Magazine, vol. 7, no. 2, pp. 12-17, 2015.
+       Frontiers in Human Neuroscience, vol. 15, 2021.                                                  [30]  F.  Zhang,  J.  Holleman,  and  B.  P.  Otis,  "Design  of  ultra-low  power
+[12]  V. L. Feigin, "Burden of Neurological Disorders Across the US From                                      biopotential  amplifiers  for  biosignal  acquisition  applications,"              IEEE
+       1990-2017: A Global Burden of Disease Study," JAMA Neurology, vol.                                     Transactions on Biomedical Circuits and Systems, vol. 6, no. 4, pp. 344-
+       78, no. 2, p. 165–176, 2021.                                                                           355, 2012.
+[13]  R. Muller, S. Gambini, and J. M. Rabaey, "A 0.013 mm2, 5 uW, DC-                                  [31]  G. Xing, S. H. Lewis and T. R. Viswanathan, "Self-Biased Unity-Gain
+       Coupled  Neural  Signal  Acquisition  IC  With  0.5  V  Supply,"                   IEEE                Buffers  With  Low  Gain  Error,"          IEEE  Transactions  on  Circuits  and
+       Journal of Solid-State Circuits, vol. 47, no. 1, pp. 232-243, 2012.                                    Systems II: Express Briefs, vol. 56, no. 1, pp. 36-40, 2009.
+[14]  H.  Chandrakumar,  D.  Markovic,  "A  High  Dynamic-Range  Neural                                 [32]  M. Ganji, A. Tanaka, V. Gilja, E. Halgren, and S. A. Dayeh, "Scaling
+       Recording Chopper Amplifier for Simultaneous Neural Recording and                                      effects on the electrochemical stimulation performance of Au, Pt, and
+       Stimulation," IEEE Journal of Solid-State Circuits, vol. 52, no. 3, pp.                                PEDOT:PSS    electrocorticography    arrays,"                Advanced    Functional
+       645-656, 2017.                                                                                         Materials, vol. 27, no. 42, 2017.
+[15]  N.  S.  K.  Fathy,  J.  Huang,  P.  P.  Mercier,  "A  Digitally  Assisted                         [33]  M. Ganji, et. al., "Selective formation of porous Pt nanorods for highly
+       Multiplexed Neural Recording System With Dynamic Electrode Offset                                      electrochemically  efficient  neural  electrode  interfaces,"           Nano  Letters,
+       Cancellation via an LMS Interference-Canceling Filter," IEEE Journal                                   vol. 19, no. 9, pp. 6244-6254, 2019.
+       of Solid-State Circuits, vol. 57, no. 3, pp. 953-964, March 2022.                                [34]  J. C. Yang, et. al., "Microscale dynamics of electrophysiological markers
+[16]  M. Sharma, H. J. Strathman and R. M. Walker, "Verification of a Rapidly                                 of epilepsy," Clinical neurophysiology, vol. 132, no. 11, pp. 2916-2931,
+       Multiplexed  Circuits  for  Scalable  Action  Potential  Recording," IEEE                              2021.
+       Transactions  on  Biomedical  Circuits  and  Systems,             vol.  13,  no.  6,  pp.        [35]  X. Yang et al., "An AC-Coupled 1st-Order Δ-ΔΣ Readout IC for Area-
+       1655-1663, 2019.                                                                                       Efficient  Neural  Signal  Acquisition,"            IEEE  Journal  of  Solid-State
+[17]  J. P. Uehlin, W. A. Smith, V. R. Pamula, S. I. Perlmutter, J. C. Rudell,                                Circuits, vol. 58, no. 4, pp. 949-960, 2023.
+       and  V.  S.  Sathe,  "A  0.0023mm2/ch  Delta-Encoded,  Time-Division                             [36]  D. Wendler et al., "A 0.0046-mm2 Two-Step Incremental Delta–Sigma
+       Multiplexed Mixed-Signal ECoG Recording Architecture With Stimulus                                     Analog-to-Digital Converter Neuronal Recording Front End With 120-
+       Artifact Suppression," IEEE Transactions on Biomedical Circuits and                                    mVpp Offset Compensation," IEEE Journal of Solid-State Circuits, vol.
+       Systems, vol. 14, no. 2, pp. 319-331, 2020.                                                            58, no. 2, pp. 439-450, Feb. 2023.
+
+
+
+
+
+          Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                          © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

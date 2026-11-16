@@ -1,0 +1,48 @@
+                                CorTec     Neuropace   WIMAGIN        WAND
+   Reference        Neuralink 27,119 120       121          E            23               BISC
+                                                           26,122
+
+ In Vivo Model       Swine, NHP*  Sheep Human Human NHP Swine, NHP
+   Integration
+     Type  S SL SL S T S
+Dimensions w/o Radius: 11.5                             Radius: 25
+   Electrodes    Height: 8*      60×38×7     60×27.5×7.5 Height:     36×33×15 12×12×0.05
+     (mm)                                                 12.54
+   Weight (g) n.r. n.r. 16 n.r. 17.95 < 0.1
+   Recording       Depth
+Electrode Type    Polymer*  ECoG ECoG ECoG Depth Probes     μECoG
+   Total # of
+   Electrodes  1024 32 4 64 128 65536
+ Simultaneous
+ Recording # of     1024               32                  4                  64                 96           256 / 1024
+   Channels
+                  6.8 / 8.98                                1
+ Noise (μVRMS)   (300 – 10k       n.r. n.r. (0.5– 300                   1.6         7.68 / 16.51
+                    Hz /                                   Hz)                  (10 – 4k Hz)
+                 5 – 1k Hz)
+   Amp Gain
+     (V/V)           411 – 2661     100 - 750           n.r.          up to 1370          n.r.          484 – 1620
+High-Pass Filter
+      (Hz)               5 – 300              2               4 – 12              0.5                500             4 – 55 /  1 – 22
+Low-Pass Filter
+      (Hz)                  10k               325           30 – 120           300                n.r.              15.1k
+ Sampling Rate                                                                        / 8.5k
+    (S/sec)  20k 1k 250 1k 1k 34k
+ADC resolution
+     (bits)  10 12 10 12 15 10
+  Power (mW) n.r. n.r. n.a. 75 172 64
+  Power Link                                   IL           IL
+     Type                 IL*                 IL 250 kHz 20 – 50 kHz 13.56 MHz         n.a.                 IL 13.56 MHz
+    Battery         yes* no                   yes no yes no
+                                 IrDA       IL, OOK        FSK         BLE        UWB-IR
+Data Link Type       BLE*     880 – 900   20 – 50 kHz   402 – 405     2.4 GHz    3.75 – 4.25
+                                  nm                      MHz                       GHz
+   Data Rate
+    (Mbps)  n.r. n.r. n.r. 0.45 1.96 108/54
+T: Transcutaneous (Headstage), S: Subcutaneous, SL: Subcutaneous with Lead Connection
+IL: Inductive Link, PAM: pulse amplitude modulation, UWB-IR: ultra-wideband impulse radio
+IrDA: Infrared Data Association, BLE: Bluetooth Low Energy, FSK: Frequency Shift Keying
+* From press conference 123
+Supplementary Table 2. Comparison with other wireless brain-computer interface devices.
+
+                                             55

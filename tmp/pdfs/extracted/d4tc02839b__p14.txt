@@ -1,0 +1,16 @@
+Journal of Materials Chemistry C                                                                                                                                   Paper
+
+40  K. Im, J.-M. Lee, O. Lyttelton, S. H. Kim, A. C. Evans and                     46  K. J. Yu, D. Kuzum, S.-W. Hwang, B. H. Kim, H. Juul, N. H.
+    S. I. Kim, Cereb. Cortex, 2008, 18, 2181–2191.                                     Kim, S. M. Won, K. Chiang, M. Trumpis, A. G. Richardson,
+41  D. A. Bernards and G. G. Malliaras, Adv. Funct. Mater., 2007,                      H. Cheng, H. Fang, M. Thompson, H. Bink, D. Talos, K. J.
+    17, 3538–3544.                                                                     Seo, H. N. Lee, S.-K. Kang, J.-H. Kim, J. Y. Lee, Y. Huang,
+42  M. Shokoueinejad, D.-W. Park, Y. H. Jung, S. K. Brodnick,                          F. E. Jensen, M. A. Dichter, T. H. Lucas, J. Viventi, B. Litt and
+    J.Novello,A.Dingle,K.I.Swanson,D.-H.Baek,A.J.Suminski,                             J. A. Rogers, Nat. Mater., 2016, 15, 782–791.
+    W.B.Lake,Z.MaandJ.Williams,Micromachines, 2019, 10,62.                         47  S. Arroyo and S. Uematsu, J. Clin. Neurophysiol., 1992, 9, 441–448.
+43  R.  Oostenveld,  D.  F.  Stegeman,  P.  Praamstra  and  A.  van                48  W.  Lee,  D.  Kim,  N.  Matsuhisa,  M.  Nagase,  M.  Sekino,
+    Oosterom, Clin. Neurophysiol., 2003, 114, 1194–1202.                               G. G. Malliaras, T. Yokota and T. Someya, Proc. Natl. Acad.
+44  S.  Chatterjee,  T.  Sakorikar,  A.  Bs,  R.  K.  Joshi,  A.  Sikaria,             Sci. U. S. A., 2017,     114, 10554–10559.
+    M. Jayachandra, V. V and H. J. Pandya, Biomed. Microdevices,                   49  S.  Crochet  and  C.  C.  H.  Petersen,  Nat.  Neurosci.,  2006,  9,
+    2022, 24, 31.                                                                      608–610.
+45 A.Zouhar,P.Mare,K.Lisˇkova´-Berna´sˇkova´ and M. Mudrochova´,                   50  V. Sreenivasan, V. Esmaeili, T. Kiritani, K. Galan, S. Crochet
+    Epilepsia, 1989, 30, 501–510.                                                      and C. C. H. Petersen, Neuron, 2016, 92, 1368–1382.

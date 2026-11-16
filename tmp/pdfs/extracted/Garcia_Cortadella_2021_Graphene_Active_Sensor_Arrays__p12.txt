@@ -1,0 +1,74 @@
+ARTICLE                                                                                          NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w
+
+
+to adsorption of charged molecules on the graphene channel or                            large statistical  sample of events.  The rate of occurrence during
+drifts in the electrode reference potential. These drifts were easily                    different  brain  states  could  be  determined  over  a  24 h  period,
+eliminated  with  a  high  pass  ﬁlter  at  1 mHz;  however,  future                     highlighting their occurrence also outside the awake resting state
+experiments could explore the functionalization of the graphene                          in which they are commonly reported to be selectively occurring.
+channel and use of alternative reference electrodes to maintain a                        Speciﬁcally, we found them prominently expressed during REM
+more stable doping level.                                                                sleep83.  Having  established  this  bimodal  state  speciﬁcity,  we
+   Moreover, we have demonstrated the stability of the graphene                          analyzed HVS events separately for awake immobility and REM
+sensors in vivo by characterizing their sensitivity over 4 weeks. In                     sleep. Topographic analysis of the HVS peak power demonstrated
+order to determine the stability of the signal quality we have also                      that sensory-motor  cortical preponderance  for  these oscillations
+evaluated the signals induced by bipolar stimulation in the LFP                          is comparable for these two states. In contrast, the large sample
+frequency band, demonstrating a rather stable frequency response                         size of events in both states allowed to identify a signiﬁcant dif-
+over time. These results suggest that the impedance of glial tissue                      ference in both frequency content and power of the HVS between
+surrounding  the  implant  does  not  signiﬁcantly  affect  the  sensi-                  these  two  brain  states.  Furthermore,  the  capabilities  to  simulta-
+tivity of the g-SGFETs in vivo. To conclude the characterization                         neously  map  ISA  patterns  allowed  to  determine  the  distinct
+of the device stability, we have evaluated the biocompatibility of                       topographic  structure  of  spatially  speciﬁc  infra-slow  frequency
+graphene  devices  over  12  weeks  via  behavioral  and  histological                   components associated with HVS, showing phase-reversal across
+markers.   These   results   demonstrate   an   acute   foreign   body                   anterio-posterior axis. Importantly, these ISA features were con-
+response comparable to platinum-based devices, which returns to                          served  between  REM-sleep  and  awake  immobility,  highlighting
+values  close  to  those  of  control  animals  12  weeks  after  implan-                that the underlying origin of the DC signal is related to the HVS
+tation. The demonstration of the graphene biocompatibility and                           event itself and is independent of the brain state.
+long-term   stability   in   a   chronic   implant   represents   another                   Future work is required to replicate the presented results in a
+important  turning  point  towards  the  large-scale  production  of                     large cohort of animals, follow them longitudinally and relate the
+graphene-based neural probes.                                                            surface  pattern  to  intra-laminar  and  subcortical  theta,  spindle,
+   The experimental validation of this technology opens up many                          gamma77 and HVS84 generators. Although we have focused the
+opportunities for electrophysiology studies in which having access                       attention on epicortical ISA patterns, analyzing their correlation
+to  unconstrained  behavior  and  multichannel  recordings  with                         with   ISA   dynamics   across   cortical   laminae   could   provide
+sensitivity in a wide frequency band is relevant. In this study, we                      important  insights  into  the  origin  and  implications  of  ISA.  A
+have shown quasi-continuous monitoring of brain activity in long                         promising strategy in this direction is to combine the epicortical
+recording sessions of up to 24 h, which allowed us to acquire large                      arrays   presented   here   with   graphene-based   depth   probes33.
+samples  of  neural  activity  across  unperturbed  behavioral  and                      Future  chronic  recordings  of  depth  and  large-scale  LFP  signals
+brain   states.   In   combination   with   3D-tracking,   the   wireless                across  behaviors  and  behavioral  states  in  freely  moving  uncon-
+technology  allowed  us  to  explore  the  relation  between  neural                     strained animals will lay the foundation for a new qualitative step
+activity patterns and behavior events, which occur sparsely over                         in the brain dynamics investigation from infra-slow to very fast
+time,  with  sufﬁcient  statistical  power.  In  particular,  analyzing                  frequencies72, contributing to our understanding of the origins of
+epicortical  LFP  signals  with  respect  to  rearing  behavior  we                      ISA dynamics  in the context  of resting  states and default  mode
+observed    differential    modulation    of    the    60–70 Hz gamma                    networks and its links to faster brain dynamics.
+and   90–200 Hz   high   gamma   range.   While   high-frequency                            In summary, the thorough in vitro and in vivo evaluation of the
+activity  between  90  and  200 Hz  was  consistently  suppressed  in                    sensing  and  long-term  recording  capabilities  of  graphene  active
+a topographic manner, no such suppression was observed for the                           sensors from a system perspective demonstrates the maturity of
+60–70 Hz  range,  pointing  towards  distinct  behavioral  selectivity                   this technology and supports its application for the study of ISA
+of    underlying    circuit    mechanisms.    The    determination    of                 without   sacriﬁcing   high-frequency   LFP   components.   In   this
+frequency-speciﬁc power modulation in the gamma range, even                              direction,  we  have  successfully  evaluated  ISA  patterns  during
+for single rearing events, demonstrates the high sensitivity of the                      distinct brain states and the correlation of high-frequency oscil-
+system in the high-frequency spectrum of the LFP.                                        lations  with  speciﬁc  sparsely  occurring  behaviors.  Our  results
+   In  the  low-frequency  range,  we  found  that  infra-slow  power                    represent an important step towards the broad implementation of
+<0.2 Hz increased signiﬁcantly across DC sites during REM sleep                          graphene active-sensor arrays for neuroscience research, offering
+episodes  compared  to  SWS  and  thus  showed  the  opposite  state                     a  stable  and  biocompatible  sensing  technology  for  long-term
+dependence  than  power  in  the  slow  oscillation  band  (1–4 Hz).                     mapping of wide frequency band epicortical brain activity during
+Interestingly, infra-slow dynamics modulated power of theta and                          spontaneous behavior.
+gamma rhythm during REM and with lower strength, power of
+sleep  spindles  during  SWS.  While  modulation  of  LFP  power  in                     Methods
+theta, beta and gamma bands by ISA phase derived from BOLD                               Fabrication of g-SGFET arrays. Arrays of g-SGFETs and devices for bio-
+signal and DC EEG has been shown in humans81,82 and recently                             compatibility were fabricated on a 10 μm thick polyimide (PI-2611, HD Micro-
+in anesthetized rats70, the present result is the ﬁrst demonstration                     Systems) ﬁlm spin coated on a Si/SiO2 4” wafer and baked at 350 °C. Polyimide was
+of   interaction   between   physiologically   established   oscillatory                 chosen as a substrate due to its thermoxidative stability, high mechanical strength,
+dynamics,  theta,  spindle  and  gamma  oscillations,  and  ECoG-                        insulating properties and chemical resistance63,85, as well as its expected bio-
+derived ISA in freely moving rodent.  Consistent with published                          compatibility and previously reported stability for chronic implants4,5.Aﬁrst metal
+                                                                                         layer (10 nm Ti/100 nm Au) was deposited by electron-beam vapor on a previously
+intracranial  work73, volume conducted  hippocampal  theta mea-                          photodeﬁned-negative AZ 5412E (Clariant, Germany) and then structured by a
+sured  at  the  cortical  surface  also  modulated  cortical  gamma                      lift-off process. Afterwards, the graphene grown by chemical-vapor deposition on
+power,  thus  demonstrating  that  the  developed  technology  is                        Cu was transferred (process done by Graphenea s.a.). In platinum devices for
+sufﬁciently sensitive to characterize known gamma dynamics.                              biocompatibility studies, another photolithography, metal evaporation and lift-off
+                                                                                         followed the ﬁrst one. Graphene was then patterned by oxygen plasma (50 sccm,
+   While  power  of  ISA  modulating  sleep  spindle  oscillations                       300 W for 1 min) in a reactive ion etching (RIE). The photodeﬁnable resist used to
+power  during  SWS  was  much  lower  than  that  during  REM,  a                        protect the graphene in the channel region was HIPR 6512, chosen to minimize the
+related  hypersynchronous  thalamo-cortical  rhythm,  HVS,  was                          level of contamination. After the graphene etching, a second metal layer was
+associated  with  much  larger  DC  transients.  Long-term  wireless                     patterned on the contacts following the same procedure as for the ﬁrst layer. The
+                                                                                         lift-off step was followed by an annealing in ultra-high vacuum to improve the
+recording allowed us to evaluate the characteristics of HVS in a                         contact resistance and to eliminate resist residues from the graphene channel.
+
+12                              NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications

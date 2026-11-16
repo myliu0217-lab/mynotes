@@ -1,0 +1,81 @@
+                       This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+8                                                                                                                                                                                                                    IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 13.   Measured ADC output spectrum before and after in-pixel decimation              Fig. 16.    Measured IMD.
+filter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 14.    Measured ADC IRN spectrum across modes.
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                          Fig. 17.    Measured ADC (a) CMRR and (b) PSRR.
+
+                                                                                          Typically,  compensation  FIR  filters  are  used  to  correct  for
+                                                                                          the  magnitude  droop  of  the  CIC  filters.  The  ADC  IRN  was
+                                                                                          measured  with  shorted  inputs,  and  the  corresponding  power
+                                                                                          spectral  density  (PSD)  is  shown  in  Fig.14.  Because  of  the
+                                                                                          scalable architecture, the integrated IRN is constant (6 µV    rms)
+                                                                                          across  the  different  modes.  The  DR  was  characterized  by
+                                                                                          sweeping   the   input   amplitude,   achieving   a   78.6   dB   DR,
+                                                                                          as  shown  in  Fig.  15,  where  the  SNR  and  SNDR  differ  by
+                                                                                          <0.1  dB  for  the  10  kHz  bandwidth  mode.  The  DR  across
+Fig.  15.      (a)  Measured  SNR  and  SNDR  for  mode  with  BW =  10  kHz.             modes [Fig. 15(b)] differs by        <1 dB as the FS range and IRN
+(b) Measured SNDR across modes.                                                           remains constant across modes.
+                                                                                              Linearity  is  not  a  stringent  requirement  in  this  applica-
+                                                                                          tion  due  to  the  inherent  nonlinearity  of  the  electrodes.  For
+full-scale  (FS)  sinusoidal  input  at  1.087  kHz.  Fig.  13  shows                     completeness, this ADC was, however, tested for linearity by
+a  measured  spectrum  with  and  without  decimation  filtering                          exciting  it  with  two  tones  at −6  dBFS.  Fig.     16  shows  the
+where the ADC achieves a 78.6 dB SNDR and DR in a 10 kHz                                  measured  intermodulation  distortion  (IMD)  is  93.6  dBc.  The
+bandwidth and an SFDR of 97.7 dBc with  fs = 1.28 MHz and                                 CMRR was measured by applying a 10-mVpp signal to shorted
+an  fs/2 chopping clock. The 60- and 180-Hz tones are caused                              inputs. The CMRR remains above 65 dB from dc to 10 kHz
+by  power  line  interference.  The  characteristic  40  dB/decade                        (n  =  5,  average  σ  =  7  dB),  as  shown  in  Fig.  17(a).  The
+noise  shaping  from  a  second-order  modulator  is  apparent  in                        same  process  was  repeated,  with  the  signal  applied  to  the
+the  spectrum.  The  magnitude  droop  in  the  decimated  output                         analog  supply  voltage,  VDDA,  to  measure  the  power  supply
+is typical of the sinc3  function, which can be corrected in the                          rejection  ratio  (PSRR).  Fig.  17(b)  demonstrates  robustness
+ECoG system software using a simple filter                                                against supply voltage variation, with better than 70 dB PSRR
+                      y[n] = 1.5   x[n]−0.5      y[n − 1].                      (2)       (n  =  5,  average σ =  6  dB).  For  completeness,  the  PSRR  of
+                                                                                          the  digital  supply,  VDDD,  was  also  measured  at >100  dB.
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

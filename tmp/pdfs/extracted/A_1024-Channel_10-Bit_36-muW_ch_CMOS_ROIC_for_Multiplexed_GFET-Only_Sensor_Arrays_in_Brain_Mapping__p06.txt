@@ -1,0 +1,71 @@
+CISNEROS-FERNÁNDEZ      et al.: 1024-CHANNEL 10-BIT 36-µW/CH CMOS ROIC FOR MULTIPLEXED GFET-ONLY SENSOR ARRAYS                                                       865
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 7.     Row 8-level current D/A converter (I-DAC) for the individual subtrac-
+tion of each GFET current offset.
+
+8 combinations of the parallel resistor network of Fig. 7 return
+the following equivalent resistance conﬁgurations:
+               R    [n]=       7    R     for    n =0...7,                 (1)
+                 oﬀ         7+n       u
+    which correspond to        {1,  7, 7,  7 ,  7 , 7  , 7 , 1 }Ru. Hence,
+                                    8  9  10   11   12  13   2
+the  resulting  I-DAC  offset  current  shows  a  linear  behaviour
+respect to its digital control according to:                                      Fig. 8.     (a) Fully-differential push-pull Class-AB VMA and (b) CMFB CMOS
+                         Vrefo  (       n)                                        circuits proposed for the second section of the row preamplifer. All transistor
+          Ioﬀ  [n]=−      R       1+7          for   n  =0...7,            (2)    dimensions in  µm and technology matching groups in dashed boxes.
+                             u
+    with  an  equivalent  least  signiﬁcant  bit  (LSB)  equal  to                without stability issues. This robustness is of special interest due
+Vrefo/7Roﬀ. For the nominal values           Ru   =14.3kΩand         Vrefo  =     to the changes in the row impedance when the GFET sensing
+−0.5V,  the  offset  cancellation  range  is         −15μA       to +20   μA      array is scaled up (e.g. 4     ×  4, 8 ×  8upto32×        32), as illustrated
+around the typical GFET DC bias of          50  μA   and its residue at   Isig    in Section V. Secondly, the Class-AB operation of the variable
+is limited to  ±5 %, which is low enough to not saturate the AFE                  mirror relies on transistor matching only [95], so OpAmp speed
+chain. In practice, the thermometric code is generated from a                     performance shows low sensitivity to process, supply voltage
+3-bit natural-binary signature stored in the ROIC for each of the                 and temperature.
+1024 GFETs of the sensing array. The resulting 3-kbit calibration
+map of the array probe is uploaded into the ROIC through its                                   V.     C M O S   FLICKER  NOISE   CANCELLATION
+digital SPI interface and, if necessary, it can be updated at any
+time between recordings.                                                              Due to the permanent and parallel connection of all GFET
+   Concerning the OpAmps needed in Fig. 6 for the continuous-                     devices to the corresponding rows of the sensing array in the
+time section of each row AFE, they must deal with resistive loads                 proposed TDM scheme of Fig. 3(b), the equivalent resistance of√
+and low-amplitude signals with high-speed transitions due to                      each row scales     ∝   1/   Nch, and it may be as low as        Rgfet/32    ∼
+the switched nature of the TDM waveforms                Irow  coming from         60Ω.  While  this  is  advantageous  against  capacitive  coupling
+the GFET array. Taking into account the above requirements,                       between routing lines, it imposes severe noise restrictions for
+the  CMOS  circuit  topology  of  Fig.  8  is  proposed  for  their               each row preampliﬁer of the ROIC. Such an unwanted effect can
+implementation.  The  presented  solution  is  based  on  a  Class-               be explained using the AFE equivalent noise model of Fig. 9(a).
+AB variable-mirror ampliﬁer (VMA) from these authors [95]                         The associated noise transfer function at low frequency is found
+but  modiﬁed  here  to  incorporate  a  ﬂoating  push-pull  output                to be:
+stage and a continuous-time common-mode feedback (CMFB)                                                   .  V                G                1
+control. As it can be noticed, the OpAmp circuit is composed                                      NTF    =     namp   =         amp        ∼      ,           (3)
+of  two  parallel  and  complementary  paths  for  the  control  of                                           Vneq        1+GampH             H
+the push-pull section. The core of the OpAmp topology is the                          where    Gamp    stands for the DC open-loop gain of the pream-
+variable-geometry current mirror attached to each input differen-                 pliﬁer OpAmp and         H   is the voltage feedback factor deﬁned by
+tial pair, which introduces partial positive feedback through the                 the row impedance:
+use of cross-coupled transistors in order to generate Class-AB                                             R     /32             1  R             1
+peak currents that exceed the bias levels of the tail sources. Apart                          H  =           gfet            ≃         gfet  ∼       .        (4)
+from this low-power capability, two other main advantages of the                                     Rgfet/32+      Rgain       32  Rgain       400
+VMA are exploited here. Firstly, since the ampliﬁer open-loop                         Hence, although the VMA OpAmps like Fig. 8 can exhibit
+gain is located in a single stage, the close-loop frequency com-                  Gamp     values exceeding 80 dB, their NTFs will always suffer
+pensation can tolerate a wide range of output loading conditions                  from the high feedback attenuation imposed by the upscaling of
+
+
+
+         Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

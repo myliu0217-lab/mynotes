@@ -1,0 +1,14 @@
+Supplementary Figure 1. Electrochemical impedance spectra of PEDOT:PSS and p(C6NDI-T) films. Impedance
+a) phase and b) magnitude of the PEDOT:PSS electrode (150-nm film patterned on an area with a diameter of 20-μm)
+recorded at 1 to 100 kHz frequency range. Impedance              c) phase and d) magnitude of the p(C6NDI-T) electrode (150-
+nm film patterned on an area with a diameter of 20-μm) recorded at 1 to 100 kHz frequency range. (n=5 for each
+measurement.) Associated RC circuits are drawn at the inset with the double-layer interface capacitance value. The
+spectra were recorded in buffer electrolyte at open circuit potential (0 V vs. Ag/AgCl) for PEDOT:PSS and –0.4 V vs
+Ag/AgCl for p(C6NDI-T).
+
+
+
+
+
+
+

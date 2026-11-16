@@ -1,0 +1,67 @@
+                         This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS                                                                                                                                                                                                                    1
+ A Digitally Assisted Multiplexed Neural Recording
+System With Dynamic Electrode Offset Cancellation
+                  via an LMS Interference-Canceling  Filter
+
+           Nader Sherif Kassem Fathy                    , Graduate Student Member, IEEE, Jiannan Huang                                 , Member, IEEE,
+                                                  and Patrick P. Mercier               , Senior Member, IEEE
+
+
+   Abstract— This article presents a low-power (LP) area-efﬁcient
+implantable neural  recording system  that  supports  high-density
+neural  implant  (HDNI)  applications.  The  system  uses  a  time-
+division  multiple  access  method  to  record  from  16-neural  elec-
+trodes  simultaneously.  A  least  mean  squares  (LMSs)  algorithm
+is  used  to  cancel  the  slowly  varying  electrode  offsets  from  all
+channels  simultaneously  by  using  a  single-tap  digital  adaptive
+ﬁlter (AF). The presented technique is fabricated in 65-nm CMOS
+technology  and  achieves  a  per-channel  area  of  0.00248  mm2;
+68%  of  which  is  digital  circuitry  (and  is  thus  scalable  with
+technology).  The  overall  system  consumes  3.38 µW per  channel
+while  achieving  2.6  µVrms   of   input  referred  noise  (IRN)  in
+10 kHz of bandwidth. The proposed system has a noise efﬁciency
+factor  (NEF) of 1.83  and is fully integrated on-chip.
+   Index Terms— Digitally assisted least mean square (LMS) ﬁlter,
+electrocorticography  (ECoG),  microelectronic  implants  brain–
+machine interface (BMI), neural recording, time-division multiple
+access  (TDMA).
+
+                             I.  INTRODUCTION
+      HE  development of  high-density microelectronic  neural
+Trecording  systems  is  becoming  vital  to  study  the  com-
+plicated dynamics of the human brain. For example, modern
+research  on  brain–machine  interfaces  (BMIs)  has  succeeded
+in  decoding  neural  signals  from  the  brain’s  cerebral  cortex
+and  has  translated  it  into  useful  data  for  use  in  prosthetic
+applications [1]. It is feasible to restore the movement of a limb
+by recording from 10 000 neurons simultaneously, meanwhile
+100 000  real-time  neural  recordings  are  predicted  to  be  able
+to  restore movement of  the  entire  body  [2].  It  is  immensely
+challenging to integrate this large number of channels on fully
+integrated implantable system-on-chips (SoCs).
+   The  main  challenge  in  designing  a  high-density  neural                         Fig.  1.       Implantable   multi-channel   neural   recording   system   block   dia-
+implant  (HDNI)  system  is  the  requirement  of  small  channel                       gram with feedback-based  offset removal. (a) Conventional  in-pixel  solution.
+  Manuscript  received  March 31, 2021; revised  July 3, 2021 and August 14,            (b) Shared-hardware  multiple  access  solution.
+2021;  accepted  September  16,  2021.  This  article  was  approved  by  Asso-
+ciate   Editor   Nick   van   Helleputte.   This  work   was   supported   in   part   by
+the  UC  San  Diego  Center  for  Wearable  Sensors.  (Corresponding  author:           area, since area tends to trade off with other important parame-
+Nader Sherif  Kassem Fathy.)                                                            ters such as noise, power, and offset blocking capabilities [3].
+  Nader Sherif Kassem Fathy and Patrick P. Mercier are with the Department
+of Electrical  and Computer Engineering,  University of California  San Diego,          For example, neural local ﬁeld potential (LFP) signal contents
+San Diego, CA 92093 USA (e-mail:  nfathy@ucsd.edu;  pmercier@ucsd.edu).                 of (1–300 Hz) lie in the ﬂicker noise band, while thermal noise
+  Jiannan   Huang   was   with   the   Department   of   Electrical   and   Computer    affects the  neural action potential (AP)  signal of frequencies
+Engineering,  University  of  California  at  San  Diego,  La  Jolla,  CA  92093
+USA.  He  is  now  with  Qualcomm  Inc.,  San  Diego,  CA  92121  USA  (e-mail:         (0.3–10  kHz)  [4].  The  ﬂicker  noise  issue  is  traditionally
+jih324@ucsd.edu).                                                                       resolved  by  employing  a  large-area  input  differential  pair
+  Color  versions  of  one  or  more  ﬁgures  in  this  article   are  available   at   ampliﬁer  [5]  or  by  using  chopper-stabilized  instrumentation
+https://doi.org/10.1109/JSSC.2021.3116021.
+  Digital  Object  Identiﬁer  10.1109/JSSC.2021.3116021                                 ampliﬁer (IA), the latter of which requires a wide-bandwidth
+                         0018-9200  © 2021 IEEE. Personal u se is permitted,  but republication/redistribution  requires  IEEE permission.
+                                           See  https://www.ieee.org/publications/rights/index.html  for more information.
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

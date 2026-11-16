@@ -1,0 +1,4 @@
+Supplementary Figure 9. Biocompatibility of the OED-OECT stack. a) Live-Dead Assay showing MCF10A cells
+growing after 48 hours in direct contact with p(g2T-TT). No dead cells are observed. b) Cytotoxicity assay of p(g2T-
+TT) films after 24 hours in conditioned media. Results do not show any cytotoxicity. Error bars represent the standard
+deviation (n=5).

@@ -1,0 +1,74 @@
+                      This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+6                                                                                                                                                                                                                    IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                      Fig. 8.    Schematic of the time-based integrator.
+
+                                                                                      calculated  by  allocating  80%  of  the  overall  noise  budget  to
+                                                                                      its  thermal  noise.  Medium  Vt  (MVT)  devices  were  used  to
+                                                                                      reduce the supply to 0.9 V and improve power efficiency. The
+                                                                                      differential  input  range  of  the  first  integrator  is  restricted  to
+                                                                                      15 mVpp  to minimize SQNR degradation due to quantization
+                                                                                      noise  folding.  The  downmodulation  chopper  switches  were
+Fig. 7.    Schematic of the Gm-C  integrator.                                         implemented  with  small  switches  to  reduce  the  gate  capac-
+                                                                                      itance,  minimizing  clock  feedthrough  and  charge  injection
+                   IV.  CIRCUIT IMPLEMENTATION                                        errors.  Chopping  lowers  the  flicker  noise  corner  frequency
+                                                                                      from  32  kHz  to <50  Hz,  reducing  its  contribution  from  the
+A.  Gm-C Integrator                                                                   dominant noise source to 5% of the 1st integrator’s total noise.
+   Fig.7shows  the  implementation  of  the          Gm-C  integrator                 Cascode  transistors  reduce  the  integrator  leakage  (60  dB  dc
+with  the  input  chopper  switches  and  ac-coupling  capacitors.                    gain) and enable downmodulation at a low-impedance node for
+The ADC input is chopped and capacitively coupled through                             faster settling. The cascode transistors and current mirrors are
+two 650-fF metal–insulator–metal (MIM) capacitors, CIN, onto                          biased in moderate inversion, meeting the target specifications
+the PVG, a high-impedance node such that the input capacitive                         (differential output swing of 100 mVp) with 3σ   yield. A triode-
+attenuation is 0.87. CIN  was selected to optimize the balance                        based common-mode feedback (CMFB) topology was used for
+between  the  ADC’s  input  impedance,  CDAC  area,  and  the                         its  high  input-linear  range  and  stability.  It  senses  the  output
+unit  CDAC   element  layout  and  mismatch  constraints.  The                        common-mode voltage and adjusts the NMOS bias current via
+input  chopper  switches  are  clock  boosted  to  2VDD  to  reduce                   MOS resistors.
+the  switches’   ON-resistance  and  improve  linearity  without                         In  area-constrained  designs,  the  size  of  the  output  capac-
+increasing their size. The input common-mode voltage,  VCM,                           itors  in  Gm-C  filters  is  often  a  concern.  To  minimize  area,
+is set through a pseudoresistor divider.                                              CI  is implemented with NMOS varactors. The high capacitor
+   The  Gm-C  integrator  incorporates  transconductance-based                        density  and  differential  topology  save  4×    area  over  MIM  or
+coefficient scaling, comprising four parallel Gm branches with                        metal–oxide–metal (MOM) capacitors. Connecting them in an
+drive strength ratios 1:1:2:4, which are turned on/off through                        antiparallel configuration also cancels their even-order nonlin-
+the cascode bias nodes. The  Gm  is scaled down by the same                           earity. MOS capacitors are unsuitable for this topology since
+factor as  fs, keeping the integrator gain, Gm/ fsCI, consistent.                     they  must  be  biased  in  inversion  or  accumulation,  restricting
+This topology ensures a nearly constant input capacitance from                        their use to single-ended use cases.
+the 1st integrator, which helps keep the SNR constant due to                          B.  Time-Based Second Integrator
+input capacitive network attenuation across modes. It also has
+2–8×       more power and is more area efficient than scaling the                        The   second   integrator   comprises   a   ring-oscillator-based
+integration capacitor CI, and scaling the bias current alone is                       CCO  that  combines  the  Gm-cells  of  the  direct  (Gm2)  and
+inaccurate.                                                                           feedforward paths (GmFF), as shown in Fig.  8. The CCO uses a
+   Each  branch  comprises  a  dual-tail,  complementary-input                        pseudo-differential NMOS cross-coupled inverter architecture
+transconductor  with  a  cascoded  load.  As  the  first  block  in                   for  noise  efficiency  [48].  First-order  noise  shaping  provided
+the  signal  chain,  optimizing  this  design  for  noise  efficiency                 by  the  loop  relaxes  the  noise  specifications  of  both  Gm-cells
+is  critical  for  overall  resolution.  We,  therefore,  use  comple-                and  the  CCO.  Gm2  and  GmFF  maintain  a  1:15  ratio,  using
+mentary  inputs  to  boost  the  noise  efficiency  by  2×,  with                     unit devices with similar  Gm/ID  as the  Gm-C  filter to ensure
+both  PMOS  and  NMOS  inputs  biased  in  sub-subthreshold                           tracking of PVT variation. The gain of the second integrator is
+for  an  effective  Gm/ID  of  40  S/A.  With  a  3.2  fF  unit  CDAC                 scaled across modes by changing the number of CCO stages
+element, the input devices are near minimum size to preserve                          with  the  same  CCO  bias  current.  This  keeps  the  same  rate
+SNR against input capacitive network attenuation. The Gm  is                          of  edges  in  the  ring  while  scaling  down  the  rate  sent  to  the
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

@@ -1,0 +1,49 @@
+REFERENCES
+1     Biasiucci, A., Franceschiello, B. & Murray, M. M. Electroencephalography. Current
+        Biology 29, R80–R85 (2019). https://doi.org/10.1016/j.cub.2018.11.052
+2       Nicolelis, M. A. L., Ghazanfar, A. A., Faggin, B. M., Votaw, S. & Oliveira, L. M. O.
+        Reconstructing the Engram: Simultaneous, Multisite, Many Single Neuron Recordings.
+        Neuron 18, 529–537 (1997). https://doi.org/10.1016/s0896-6273(00)80295-0
+3        Maynard, E. M., Nordhausen, C. T. & Normann, R. A. The Utah Intracortical Electrode
+        Array: A recording structure for potential brain-computer interfaces.
+        Electroencephalography and Clinical Neurophysiology    102, 228–239 (1997).
+        https://doi.org/10.1016/S0013-4694(96)95176-0
+4        Polikov, V. S., Tresco, P. A. & Reichert, W. M. Response of brain tissue to chronically
+        implanted neural electrodes. Journal of Neuroscience Methods   148, 1–18 (2005).
+        https://doi.org/10.1016/j.jneumeth.2005.08.015
+5      Salatino, J. W., Ludwig, K. A., Kozai, T. D. Y. & Purcell, E. K. Glial responses to
+        implanted electrodes in the brain. Nature Biomedical Engineering  1, 862–877 (2017).
+        https://doi.org/10.1038/s41551-017-0154-1
+6        Rousche, P. J. & Normann, R. A. Chronic recording capability of the Utah Intracortical
+        Electrode Array in cat sensory cortex. Journal of Neuroscience Methods 82, 1–15 (1998).
+        https://doi.org/10.1016/S0165-0270(98)00031-4
+7        Chestek, C. A. et al. Long-term stability of neural prosthetic control signals from silicon
+        cortical arrays in rhesus macaque motor cortex. Journal of Neural Engineering 8, 045005
+        (2011). https://doi.org/10.1088/1741-2560/8/4/045005
+8       Volkova, K., Lebedev, M. A., Kaplan, A. & Ossadtchi, A. Decoding Movement From
+        Electrocorticographic Activity: A Review. Frontiers in Neuroinformatics  13 (2019).
+        https://doi.org/10.3389/fninf.2019.00074
+9         Nurse, E. S. et al. Consistency of Long-Term Subdural Electrocorticography in Humans.
+        IEEE Transactions on Biomedical Engineering      65, 344–352 (2018).
+        https://doi.org/10.1109/tbme.2017.2768442
+10 Yan, T. et al. Chronic subdural electrocorticography in nonhuman primates by an
+        implantable wireless device for brain-machine interfaces. Front Neurosci  17, 1260675
+        (2023).
+11 Chiang, C.-H. et al. Development of a neural interface for high-definition, long-term
+        recording in rodents and nonhuman primates. Science translational medicine 12 (2020).
+        https://doi.org/10.1126/scitranslmed.aay4682
+12 Tchoe, Y. et al. Human brain mapping with multithousand-channel PtNRGrids resolves
+        spatiotemporal dynamics. Science Translational Medicine   14, eabj1441 (2022).
+        https://doi.org/doi:10.1126/scitranslmed.abj1441
+13 Kaiju, T. et al. High Spatiotemporal Resolution ECoG Recording of Somatosensory
+        Evoked Potentials with Flexible Micro-Electrode Arrays. Frontiers in neural circuits 11
+        (2017). https://doi.org/10.3389/fncir.2017.00020
+14    Wang, P. T. et al. Comparison of decoding resolution of standard and high-density
+        electrocorticogram electrodes. Journal of Neural Engineering   13, 026016 (2016).
+        https://doi.org/10.1088/1741-2560/13/2/026016
+15 Duraivel, S. et al. High-resolution neural recordings improve the accuracy of speech
+        decoding. Nature Communications 14 (2023). https://doi.org/10.1038/s41467-023-42555-
+        1
+16 Khodagholy, D. et al. NeuroGrid: recording action potentials from the surface of the brain.
+        Nature Neuroscience 18, 310–315 (2015). https://doi.org/10.1038/nn.3905
+                                                      65

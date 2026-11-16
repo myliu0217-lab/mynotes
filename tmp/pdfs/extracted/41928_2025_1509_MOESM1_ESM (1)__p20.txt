@@ -1,0 +1,46 @@
+kS/s. Across sessions, an average of 15.0 ± 4.58 standard-deviation (SD) channel recordings were
+recovered through spatial imputing. Unrecovered saturated channels (45.8 ± 13.1 SD) were
+visualized as carrying all-zero data (Fig. 3h) and excluded from further analysis.
+Unlike our other in vivo experiments, our motor cortex recordings contained significant
+hemodynamic artifacts, with a dominant frequency around 3 Hz and its harmonics. To remove this
+rhythm, the downsampled recordings were band-pass filtered in the frequency range of
+hemodynamic rhythm (3 – 12 Hz) with an 8th order zero-phase Butterworth filter. The filtered
+recordings were treated as a space-time matrix which was decomposed using singular value
+decomposition (SVD). The resulting principal component (PC) time series were ranked according
+to their 3-Hz spectral power strength. Finally, a heuristically chosen number of PCs (five ranked
+components) were subtracted from the original downsampled recordings.
+By means of this PC removal, we were able to preserve spectral content in the affected frequency
+range (Supplementary Fig. 20b) which would not have been possible with a more aggressive
+approach such as band-stop filtering. Supplementary Fig. 20a shows an example channel
+(address: (3, 8)) recording after hemodynamics removal. The spectrogram was computed by
+extracting spectral power through multitaper estimation (200 ms window, 10 Hz half-bandwidth)
+and then z-scoring for each frequency bin (0, 20, …, 200 Hz).
+Motor feature decoder
+To build a continuous motor feature decoder, as described in the main text, the recordings were
+further grouped into 4 frequency bands (LMP, β, low γ, high γ) and 19 time history bins (t-0.47, t-
+0.42, …, t+0.47 s). For model construction, only channels that were consistently non-saturated
+across sessions were used (n = 180), resulting in a 13,680-dimensional spatio-temporal-frequency
+vector 𝑋ሺ𝑡ሻ (180 channels, 19 time lags, four frequency bands) as model input for predicting motor
+feature 𝑦ሺ𝑡ሻ. Time resolution of feature decoding was kept at 100 ms.
+We used a linear partial least squares regression (PLS) model whose hyperparameter – number of
+PLS components – was determined by finding the minimum point of predictive sum of errors
+(PRESS) across five-fold cross validation (Supplementary Fig. 20c). We built our model to
+decode wrist velocity of all three dimensions and evaluated its performance using Pearson’s
+correlation coefficient. It performed best on decoding y-direction velocity (0.53 ± 0.04 SE) and
+next on z-direction velocity (0.50 ± 0.04 SE). Velocity in x-direction could not be decoded reliably;
+speed was decoded instead (0.50 ± 0.06 SE).
+The y-direction velocity decoder was further analyzed by computing the relative contribution of
+each frequency band. Denoting our model as the following linear combination where ε(t)
+represents the residual error,
+
+                      𝑦ሺ𝑡ሻൌ𝑎଴൅෍෍෍𝑎௖௛,௟௔௚,௙௥௘௤൉𝑋௖௛,௟௔௚,௙௥௘௤ሺ𝑡ሻ                        ൅𝜀ሺ𝑡ሻ
+                                      ௖௛  ௟௔௚ ௙௥௘௤
+the relative contribution of each band 𝑤௙ was calculated as follows (Fig. 3f):
+
+                                𝑤௙ሺ𝑏𝑎𝑛𝑑ሻ ൌ ∑∑ห𝑎௖௛,௟௔௚,௙௥௘௤ห௖௛௟௔௚
+                                                 ∑∑∑ ห𝑎௖௛,௟௔௚,௙௥௘௤ห௖௛௟௔௚௙௥௘௤
+
+
+All analyses in this section used Python v3.10.0, numpy v1.23.5, scipy v1.10.0, and scikit-learn
+v1.2.1.
+                                                        19

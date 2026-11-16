@@ -1,0 +1,84 @@
+                       This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                              content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                         10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                         Fig. 13 PSD of the SAR ADC with a sinusoid full-scale input test signal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 12 A microphotograph of the proposed neural recording system wire-
+bonded IC with modules annotations.
+
+comparator topology discussed in [29] is implemented as the                              Fig. 14 Measured INL and DNL of the SAR ADC.
+main SAR ADC comparator. The overall ADC active area is                                  implemented, then the multiplexer is expected to run at a clock
+86.76 µm ´ 70 µm.                                                                        sampling frequency of           fCH-Sel = 2   N fCH = 320 kHz to satisfy
+B.   Neural Amplifier Circuit Topology                                                   Nyquist criterion. Additionally, a chopper clock fChop                   = 1.28-
+  Fig. 11 shows the designed neural amplifier circuit topology.                          MHz  up-modulates  the  entire  multiplexed  band                   beyond  the
+It consists of a two-stage complimentary-input CMOS amplifier                            worst-case 1/f noise corner frequency. Accordingly, the neural
+discussed in [30], [15]. The input CMOS devices are biased by                            amplifier  is  expected  to  amplify  a  signal  of  BW              fBW =  2.56
+pseudo-resistors in the Tera-Ohms range. Hence, with coupling                            MHz, this dictates fS = 1.1 fBW = 2.81 MHz. If the impedance
+capacitors of 2 pF, the high-pass poles are in the milli-Hertz                           booster  module  is  engaged,  the  chopper  waveforms  have  a
+range across all corners.                                                                smaller pulse width of 341.796 ns as shown in Fig. 6(b), as the
+  To prevent latching during the startup process and minimize                            reset phase width is 48.82 ns. This means that the signal BW is
+stability concerns caused by high loop gain, the current sources                         now larger where fBW, With-Booster = 2.92 MHz. Consequently, the
+in the first and second stages are partitioned into current tails                        required amplifier BW increases to fS = 1.1 fBW, With-Booster = 3.22
+and bleeders. The second stage have variable Millar-capacitors                           MHz.
+and  resistors  to  adjust  the  gain-bandwidth  (GBW)  if  needed
+after fabrication [15].                                                                                        V.    MEASUREMENT RESULTS
+  With a SAR ADC of load 0.62 pF, a self-biased unity-gain
+buffer with low gain error is used in the output stage [31], this                          The neural recording module was fabricated in 65-nm 1p9m
+helps  the  amplifier  to  operate  with  the  desired  BW.                    The       low-power   (LP)   CMOS   technology.                    Fig.    12    shows   a
+required practical BW should be at least fBW ³ -fS ln(e)/2p » 1.1                        microphotograph of the fabricated 1 mm ´ 1 mm die. The active
+fS, where the dynamic settling error e £ 0.1%, and fS is the signal                      area of the digital module is 121 µm ´ 88 µm, and the analog
+BW     [16].  Since     fCH   =  10  kHz,  and  N  =  16  channels  are                  module is 204 µm ´ 88 µm. Accordingly, the per-channel area
+
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                       © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

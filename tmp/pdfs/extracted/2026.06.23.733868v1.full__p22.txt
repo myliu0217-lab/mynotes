@@ -1,0 +1,50 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+         27. Okazaki, Y., Davies, C. R., Matsuyoshi, T., Fukamachi, K., Wika, K. E. & Harasaki, H.
+              Heat from an implanted power source is mainly dissipated by blood perfusion. ASAIO
+              Journal 43, (1997).
+         28. Saidel, G. M., Davies, C. R., Liu, E. H. & Harasaki, H. Temperature and perfusion
+              responses of muscle and lung tissue during chronic heating in vivo. Med Biol Eng
+              Comput 39, 126-133 (2001).
+         29. Davies, C. R., Fukumura, F., Fukamachi, K., Muramoto, K., Himley, S. C., Massiello, A.,
+              Chen, J. F. & Harasaki, H. Adaptation of tissue to a chronic heat load. ASAIO Journal
+              40, (1994).
+         30. Carslaw, H. S. & Jaeger, J. C. Conduction of Heat in Solids (paperback, ). 353-387
+              (1959).
+         31. Perkowski, D. M., Kulchytsky-Zhyhailo, R. & Kołodziejczyk, W. On axisymmetric heat
+              conduction problem for multilayer graded coated half-space. Journal of Theoretical and
+              Applied Mechanics (Poland) 56, 147-156 (2018).
+         32. Muzychka, Y. S., Yovanovich, M. M. & Culham, J. R. Thermal spreading resistance in
+              compound and orthotropic systems. J Thermophys Heat Trans 18, 45-51 (2004).
+         33. Groner, M. D., Fabreguette, F. H., Elam, J. W. & George, S. M. Low-Temperature
+              Al2O3 Atomic Layer Deposition. Chemistry of Materials 16, 639-645 (2004).
+         34. Willis, S. A., Mcguinness, E. K., Li, Y. & Losego, M. D. A Re-examination of the
+              Aqueous Stability of Atomic Layer Deposited (ALD) Amorphous Alumina (Al2O3) Thin
+              Films and the Use of a Post-Deposition Air Plasma Anneal to Enhance Stability.
+         35. Finch, D. S., Oreskovic, T., Ramadurai, K., Herrmann, C. F., George, S. M. & Mahajan,
+              R. L. Biocompatibility of atomic layer-deposited alumina thin films. J Biomed Mater Res
+              A 87, 100-106 (2008).
+         36. Carcia, P. F., McLean, R. S., Reilly, M. H., Groner, M. D. & George, S. M. Ca test of Al
+              2O 3 gas diffusion barriers grown by atomic layer deposition on polymers. Appl Phys
+              Lett 89, (2006).
+         37. Maindron, T., Aventurier, B., Ghazouani, A., Jullien, T., Rochat, N., Simon, J. Y. &
+              Viasnoff, E. Investigation of Al2O3 barrier film properties made by atomic layer
+              deposition onto fluorescent tris-(8-hydroxyquinoline) aluminium molecular films. Thin
+              Solid Films 548, 517-525 (2013).
+         38. Rahman, M. M., Kim, J. G., Kim, D. H. & Kim, T. W. Characterization of Al
+              Incorporation into HfO2 Dielectric by Atomic Layer Deposition. Micromachines (Basel)
+              10, 361 (2019).
+         39. Martínez-Puente, M. A., Horley, P., Aguirre              -Tostado, F. S., López-Medina, J., Borbón-
+              Nuñez, H. A., Tiznado, H., Susarrey-Arce, A. & Martínez-Guerra, E. ALD and PEALD
+              deposition of HfO2 and its effects on the nature of oxygen vacancies. Materials Science
+              and Engineering: B 285, 115964 (2022).
+         40. Forssell, M., Ong, X. C. & Fedder, G. K. Multilayer ALD ceramic films for enhancement
+              of parylene barrier properties in compliant neural probes with bonded chips. in 2018
+              Solid-State Sensors, Actuators and Microsystems Workshop, Hilton Head 2018 272                            -275
+              (Transducer Research Foundation, 2018). doi:10.31438/trf.hh2018.78.
+         41. Kil, S. & Jeong, J. Rapid thermal annealing effect on performance variations of solution
+              processed indium-gallium-zinc-oxide thin-film transistors. AIP Adv 13, (2023).

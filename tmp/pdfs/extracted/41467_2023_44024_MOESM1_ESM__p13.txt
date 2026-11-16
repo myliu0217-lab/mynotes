@@ -1,0 +1,3 @@
+Supplementary Figure 12. Noise characteristics of the trans-impedance amplifier. a) Equivalent circuit model
+for  noise  analysis of  the  OED-OECT  stack. b)              The  upper  graph  illustrates  the       𝑉𝐷  pulses  applied  by  the  drive
+electronics, while the lower graph displays the corresponding response observed in the output of the TIA.

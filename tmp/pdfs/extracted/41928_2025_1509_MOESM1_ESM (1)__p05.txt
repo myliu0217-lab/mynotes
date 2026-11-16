@@ -1,0 +1,47 @@
+P-well (DPW), isolated from the rest of the circuits by an N–type buried layer (NBL). Each pixel
+is identical and occupies an area of 53 × 58 μm2 (Supplementary Fig. 6a,c). In every pixel there
+are four 14 × 14 μm2 electrode pads on the redistribution layer (RDL). These electrode pads
+connect to the underlying circuits by redistribution via (RV).
+
+For every pixel, the recording process utilizes a neural amplifier and multiple control switches.
+Given the high-density requirements of the APS architecture, the area available for the neural
+amplifier layout is significantly restricted. On the contrary, optimal noise and mismatch
+performance requires us to bias the metal-oxide-semiconductor field-effect transistors (MOSFET)
+in the weak inversion region, which demands a large area 77. To address this challenge, we made
+four design decisions aimed at maximizing the area efficiency for recording circuitry. Firstly, we
+implemented the stimulation current sources as a global current generator outside the pixel array,
+incorporating only MOSFET switches and combinational logics within the pixels to realize
+stimulation. Additionally, the control signals for the stimulation circuits undergo global level
+shifting outside the pixel array. Secondly, for the neural amplifier, we adopted a DC-coupled
+architecture which eliminates the need for a dedicated large DC blocking capacitor by utilizing the
+double-layer capacitance formed between the electrodes and the electrolyte. Thirdly, we
+implemented a multiplexing technique for recording from the four electrodes in each pixel to
+connect to the neural amplifier, significantly reducing the number of amplifiers 78. Lastly, we
+implemented a differential integrator as the neural amplifier (Supplementary Fig. 6b)   30
+leveraging the offset memorization principle 79 and boxcar averaging using integrating, sampling,
+and reset operations (Supplementary Fig. 6e) to provide anti-aliasing filtering without the need
+for bulky components. This approach utilizes chopping operation 79 that effectively cancels out the
+DC offset and 1/𝑓 noise inherent in the neural amplifier. The noise transfer function 𝐻ே of the
+neural amplifier is given by:
+                                      𝐻ேሺωሻൌ𝑖sinω𝑇ூே்4           sincω𝑇ூே்4
+where 𝑇ூே் is the integration time of the neural amplifier. The sine function in the noise transfer
+function attenuates low frequency noise (Supplementary Fig. 6f). Consequently, this approach
+achieves low noise and offset without relying on overly large input transistors. Common-mode
+feedback (CMFB) of the differential integrator can also be efficiently implemented using
+MOSFET switches and two metal-insulator-metal (MIM) capacitors by taking advantage of the
+reset phase 80. Moreover, the open-loop configuration of this design eliminates the need for large
+feedback components while still maintaining a well-defined gain and low-pass corner. The neural
+amplifier can be considered as a trans-capacitance amplifier and its voltage-to-charge gain 𝐴௖ can
+be calculated by:
+                                       𝐴௖ ൌ 𝐼்2  ൈ൬𝑔௠௣𝐼஽   ൅𝑔௠௡𝐼஽  ൰ൈ𝑇ூே்
+where 𝐼் is the tail current of the neural amplifier, 𝐼஽, 𝑔௠௣ and 𝑔௠௡ are the drain current and
+transconductances of the input PMOS and NMOS transistors. The 0-V biasing at the input of the
+neural amplifier is implemented using NMOS transistors configured as tunable pseudo-resistors.
+The gate voltage of these NMOS transistors is globally generated from a W-2W voltage digital-
+to-analog converter (DAC) 81. These pseudo-resistors in conjunction with the electrode
+capacitance allow the neural amplifier to reject up-to 25 mV DC-offsets in the electrodes and
+provide a tunable high-pass corner. The 3-dB low pass corner ω୪୮ of the neural amplifier is fixed
+and can be calculated as:
+
+
+                                                          4

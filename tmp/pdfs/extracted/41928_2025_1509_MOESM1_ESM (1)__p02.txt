@@ -1,0 +1,49 @@
+Contents
+Supplementary Discussion S1. BISC implant design ..................................................................... 3
+Supplementary Discussion S2. BISC wireless link protocol and software stack ......................... 11
+Supplementary Discussion S3. Bench-top in vitro characterization .............................................     13
+Supplementary Discussion S4. Mechanical flexibility of implanted devices ............................... 13
+Supplementary Discussion S5. Porcine somatosensory cortex recording experimental procedure
+....................................................................................................................................................... 15
+Supplementary Discussion S6. Porcine somatosensory cortex recording data analysis ............... 16
+Supplementary Discussion S7. NHP motor cortex recording experimental procedure ................ 17
+Supplementary Discussion S8. NHP motor cortex recording data analysis ................................. 18
+Supplementary Discussion S9. NHP visual cortex recording experimental procedure ................ 20
+Supplementary Discussion S10. NHP visual cortex recording data analysis ............................... 22
+
+Supplementary Fig. 1. Architecture of the implant. ...................................................................... 28
+Supplementary Fig. 2. Architecture of the relay station. .............................................................. 29
+Supplementary Fig. 3. Coupon processing. .................................................................................. 30
+Supplementary Fig. 4. Titanium nitride characterization. ............................................................ 31
+Supplementary Fig. 5. Wafer-scale processing. ............................................................................ 32
+Supplementary Fig. 6. Architecture of the pixel. .......................................................................... 33
+Supplementary Fig. 7. Design and characterization of the programmable gain amplifier (PGA).34
+Supplementary Fig. 8. Design and characterization of the stimulation current generator. ........... 35
+Supplementary Fig. 9. Design and characterization of the wireless transceiver. ......................... 36
+Supplementary Fig. 10. Design and characterization of the wireless power transfer circuit. ....... 37
+Supplementary Fig. 11. Power, thermal, and specific absorption rate (SAR) characterization. .. 38
+Supplementary Fig. 12. Communication packets in the BISC system. ........................................ 39
+Supplementary Fig. 13. The software stack and hardware interface in the BISC system. ........... 40
+Supplementary Fig. 14. GUI software for recording. ................................................................... 41
+Supplementary Fig. 15. Bench-top in vitro characterization. ....................................................... 42
+Supplementary Fig. 16. Mechanical flexibility of thinned BISC chips. ....................................... 43
+Supplementary Fig. 17. Surgical insertion of the implant. ........................................................... 44
+Supplementary Fig. 18. Somatosensory evoked potential (SSEP) recording from porcine model.
+....................................................................................................................................................... 45
+Supplementary Fig. 19. Post-mortem histological analysis of the porcine brain. ........................ 46
+Supplementary Fig. 20. Motor feature decoder optimization and example channel recording. ... 47
+Supplementary Fig. 21. Comparison of Fourier spectrum during fixation and grating stimuli for
+each channel. ................................................................................................................................. 48
+Supplementary Fig. 22. Complex Morlet wavelet example with central frequency as 64 Hz. .... 49
+Supplementary Fig. 23. Grating-triggered response. .................................................................... 50
+Supplementary Fig. 24. Mutual information between decoder prediction and BISC response for
+different orientation discretization. ............................................................................................... 51
+Supplementary Fig. 25. Orientation decoder trained as a regressor. ............................................ 52
+Supplementary Fig. 26. Receptive fields (RF) estimated from unfiltered response and the
+retinotopic maps of two components. ........................................................................................... 53
+
+Supplementary Table 1. Instruction set architecture of the BISC controller. ............................... 54
+Supplementary Table 2. Comparison with other wireless brain-computer interface devices. ...... 55
+
+
+                                                                     1

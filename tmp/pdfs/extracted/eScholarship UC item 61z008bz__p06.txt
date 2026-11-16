@@ -1,0 +1,86 @@
+                          This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+FATHY  et al.:  DIGITALLY ASSISTED MULTIPLEXED NEURAL RECORDING SYSTEM                                                                                                                                          5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                            Fig.  4.     (a)  Initial  block  diagram  to  remove  electrode  offset.  (b)  Proposed
+Fig.  3.     (a)  Neural  recording  system  block  diagram  with  digital  servo-loop      solutions to solve introduced problems of topology (a). (c) Simulation results
+for  EOV  cancellation.  (b)  Advanced  single-channel  recording  system  with             of  LMS-error  with  and  without  the  proposed  solutions  of  the  system  in  (b).
+LPF and binary-search  algorithm  for EOV cancellation.  (c) Proposed TDMA                  (d) Overall  IIR-LMS AF block  diagram.
+system  with  EOV cancellation.  (d) Transient  signal  demonstration  of several
+nodes for the proposed  TDMA system  with  N = 4.
+
+                                                                                            LMS  AFs  to  remove  stimulation  artifacts  from  the  recorded
+value that guarantees cancellation of the EOV. This technique                               neural  signal.  Fig.  4(a)  shows  the  equivalent  block  diagram
+ensures loop stability and high conversion speed.                                           of  the  ﬁrst  AMS  loop  of  the  system  presented  in  [24];  the
+   Fig. 3(d) shows an example of the transient signals of the                               neural  signal  with  dc  offset  is  ampliﬁed,  then  digitized,  and
+proposed  system  with  N  =  4.  Neural  signals,  VIN,  for  each                         ﬁnally applied to an LPF to extract dc offset. A standard LMS
+channel  are  multiplexed  in  the  time  domain  at  VMUX,where                            adaptive algorithm calculates an output y[n] based on the input
+the aggregated signal is then ampliﬁed and digitized, and then                              signal  u[n]  and  the  error  signal  e[n].  The  LMS  algorithm
+demultiplexed for  low-pass  ﬁltering  at  the  VLFP  node, which                           is  set  to  an  interference-canceling  mode  by  feeding  e[n]
+results  in  a  sum  of  LFP  and  EOV  signals.  Finally,  the  low-                       being the  difference between a  desired  signal  d[n],  resulting
+frequency signals are multiplexed one more time and converted                               from  the  ADC,  and  the  output signal  y[n].  Accordingly, the
+into  the  analog  domain  for  subtraction  of  EOV  at  the  node                         interference-canceling algorithm follows
+VMLFP. The transient signals at VMLFP conﬁrm that the sum of
+EOV and LFP signals is almost static after  N-delays.                                                      w[n + 1] = w[n] + μu[n](d[n] − y[n])              (1)
+
+B. Adaptive Filter Architecture                                                             where w[n] is the estimated AF weight. The undesired EOV
+                                                                                            signal  u[n]  is  generated  by  applying  an  LPF  to  the  neural
+   An  LMS  algorithm is  often  used  to  cancel  interference in                          ampliﬁer  output,  while μ  is  a  constant  set  by  the  designer
+various  systems.  For  example,  the  system  in  [24]  uses  two                          which controls speed and accuracy of the AF.
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

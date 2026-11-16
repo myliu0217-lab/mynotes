@@ -1,0 +1,72 @@
+Paper                                                                                                                                   Journal of Materials Chemistry C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 4    High-resolution mapping of epileptic signals using ultraflexible, high-density vOECT array. (a) Schematic illustrating the placement of the high-
+density OECT array on the mouse cortical surface, highlighting the selected 16 /C2 16 array region for signal acquisition. (b) Photograph of the OECT array
+positioned  on  the  mouse  cortex,  showing  the  specific  brain  region  covered  by  the  device,  with  anterior–posterior  (AP)  and  medial-lateral  (ML)
+coordinates labeled. Scale bar, 1 mm. (c) Mapping of signal energy across the 16 /C2 16 OECT array during an epileptic seizure. (d) Representative signals
+recorded from selected vOECT sites, displaying waveforms before and during the onset of the epileptic seizure.
+
+
+
+validation,   including   the   mapping   of   epileptic  and   whisker               115 1C for 60 s and exposed to 365 nm UV light with a dose of 70
+flicking signals in murine models, revealed a superior SNR and                        mJ cm/C02 using the URE-2000/35AL system. The photoresist was
+enhanced  spatial  resolution  compared  to  conventional  electro-                   developed in ZX-238 developer (Jianghua Micro) with manual
+des. This advancement yields a more nuanced understanding of                          agitation for 60 s, followed by rinsing with de-ionized (DI) water
+the spatial characteristics associated with epileptic and whisker-                    and drying with a nitrogen gun. Residual organic contaminants
+related  events.  The  ultraflexible  vOECT  array  oﬀers  excellent                  present on the substrate surface were removed using an oxygen
+conformability  and  biocompatibility,  as  evidenced  by  its  ability               plasma  treatment  (Atto-BL-PCCE,  Diener  electronic).  Subse-
+to maintain eﬃcient recording of cerebral electrical activity for 92                  quently, a 5 nm chromium layer followed by a 50 nm gold layer
+days post-implantation and beyond. The extended functionality                         were thermally evaporated onto the substrates using a vacuum
+and  stability  pave  the  way  for  precise  monitoring  of  neural                  thermal evaporator (Nexdep, Angstrom Engineering). To strip
+dynamics, laying the groundwork for ongoing advancements in                           the resist, the devices underwent a soaking process in remover
+neurophysiological research methodologies.                                            1165  media  (Jianghua  Micro)  for  20  minutes  at  60  1C,  with
+                                                                                      manual agitation by pipetting. The substrates were then rinsed
+                                                                                      twice  with  ethyl  alcohol  and  DI  water,  and  dried  using  a
+Experimental methods                                                                  nitrogen gun. Following the initial electrode deposition, a 1.2
+Device fabrication and characterization                                               mm-thick parylene film was deposited onto the slides, serving as
+                                                                                      an intermediate layer to isolate the upper and lower electrode
+The schematic of device fabrication process is shown in Fig. S1                       layers and define the channel length. Next, a second layer of
+(ESI†       ). A parylene-C film, 1.5 mm in thickness, was first depos-               metal  was patterned  on  this layer  of parylene to serve as the
+ited onto the cleaned glass slides using an SCS parylene coater                       drain  electrode,  cross  overlapping  with  the  bottom  layer  of
+(PDS2010 LACOATOR), with poly(p-xylylene) (Galentis) serving                          metal to create the vertically stacked source and drain contacts
+as the precursor. Following the ultrathin substrate fabrication,                      and following a process analogous to the fabrication of the first
+metal  pads  and  leads  as  source  and  drain  electrodes  were                     layer metal lines. Subsequently insulating and sacrificial layers
+patterned by an optimized bilayer lift-oﬀ process. The LOR 3A                         of  parylene  were  deposited,  both  to  a  thickness  of  1.8 mm.
+(Kayaku  Advanced  Materials)  was  spin-coated  onto  the  pre-                      Before   depositing   the   sacrificial   parylene   layer,   a   diluted
+pared substrate at 2500 rpm for 45 s, followed by soft-baking                         solution  of  the  industrial  cleaner  Micro-90  (1 : 20  by  weight)
+at  180  1C  for  5  min.  After  cooled  to  room  temperature,  the                 was spin-coated onto the insulating parylene layer as an anti-
+positive  photoresist  S1813  (Kayaku  Advanced  Materials)  was                      adhesion layer. This facilitated the later removal of the sacrifi-
+spin-coated  at  3500  rpm  for  45  s.  It  was  then  soft-baked  at                cial  layer  from  the  encapsulation  layer,  thereby  defining  and

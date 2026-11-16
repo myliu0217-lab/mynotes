@@ -1,0 +1,97 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+
+
+
+
+
+
+
+                                              Z1                     Z2                      Z3                     Z4                      Z5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 5 | Impedance spectroscopy for estimation of model parameters. Each of                               curve of an implanted recording electrode, according to the Randles model. The
+the blocks (Z1 to Z5) composing the transmission model is dimensioned according                           shunting parameters RSh and CSh are ﬁtted from the impedance curve of an insu-
+to impedance spectroscopy measurements (except block 6, which is speciﬁed by                              lated electrode. The coupling parameters RImp and CImp are ﬁtted from the impe-
+the supplier). RS is estimated as the access resistance extracted from a measure-                         dance measured between two neighboring channels of the implant. The coupling
+ment performed between an intracortical needle inserted 0.5 mm deep into the                              parameters RInt and CInt are ﬁtted from the impedance measured between two
+cortex and a surface epidural electrode. RE, RF and CH are ﬁtted from the impedance                       neighboring channels across the interconnection stage.
+
+
+
+
+                                                                RS        (1)                                                (2)                                                (3)                                                 (4)                                                  (5)CHCShCImpCInt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 6 | Transfer function of the transmission model. The baseline transfer                               blue, light blue, light yellow and dark yellow, respectively. A spike waveform is fed
+function, assuming the parameters speciﬁed in Table 1, is represented by a black                          into the active line and, for each parameter variation (×10, ×5, ÷5, ÷10), the resulting
+dashed line. The limiting parameter of each block (excluding block 6), i.e. RS, CH,                       shift in the coupled signal is colored using the same color code, alongside the
+CSh, CImp and CInt, is varied individually by a 5-fold and 10-fold increase and decrease                  baseline coupled signal (black dashed line). In the bottom-left corner, the spike
+(×10, ×5, ÷5, ÷10) and the resulting shift in the transfer function is colored in dark                    waveform registered by the active line is depicted.
+
+
+here), which, for all blocks composed of both a resistive and capacitive                                  corresponds to a staggering number of 10% signal coupling. Varying
+component, corresponds to the capacitive part. Particularly, the key                                      the capacitance CInt has a drastic impact in the whole frequency band,
+elements  determining  crosstalk  are  the  spread  resistance  RS,the                                    down to 1 Hz.
+double   layer   capacitance   CH   and   the   insulation   capacitance   of                                    To understand how these shifts in transfer function translate into
+the interconnects CInt. Increasing the resistance RS results in a shift of                                signal  amplitude  ﬂuctuations,  a  spike  waveform  recorded  extra-
+the  transfer  function  towards  lower  frequencies,  leading  to  critical                              cellularly  is  used  as  the  source  signal  injected  into  the  active  line
+crosstalk levels already in the LFP band. A decrease in capacitance CH is                                 (bottom-left  plot  of  Fig.  6).  Depending  on  which  of  the  three  key
+characterized by a boost in crosstalk in the range from 10 Hz to 10 kHz.                                  parameters is varied, i.e. RS, CH or CInt,  the  resulting  waveform  out-
+For  a  10-fold  decrease,  crosstalk  reaches  -20 dB  at  1 kHz,  which                                 putted by the passive line changes signiﬁcantly. An increase in spread
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                            6

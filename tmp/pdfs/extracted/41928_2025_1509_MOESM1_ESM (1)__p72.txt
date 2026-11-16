@@ -1,0 +1,53 @@
+108 Mathis, A. et al. DeepLabCut: markerless pose estimation of user-defined body parts with
+        deep learning. Nature Neuroscience         21, 1281–1289 (2018).
+        https://doi.org/10.1038/s41593-018-0209-y
+109 Franke, K. et al. An arbitrary-spectrum spatial visual stimulator for vision research. eLife
+        8, e48779 (2019). https://doi.org/10.7554/eLife.48779
+110       Das, A., Zabeh, E. & Jacobs, J. in Intracranial EEG: A Guide for Cognitive Neuroscientists
+        (ed Nikolai Axmacher)  487–505 (Springer International Publishing, 2023).
+111      Fisher, N. I. Statistical Analysis of Circular Data.  (Cambridge University Press, 1993).
+112  McInnes, L., Healy, J., Saul, N. & Großberger, L. UMAP: Uniform Manifold
+        Approximation and Projection. Journal of Open Source Software   3, 861 (2018).
+        https://doi.org/10.21105/joss.00861
+113 Pedregosa, F. et al. Scikit-learn: Machine learning in Python. the Journal of machine
+        Learning research 12, 2825–2830 (2011).
+114 Vaswani, A. et al. Attention is all you need. Advances in Neural Information Processing
+        Systems (2017).
+115   Redmon, J. in Proceedings of the IEEE conference on computer vision and pattern
+        recognition.
+116 Kong, E. et al. Recurrent Connectivity Shapes Spatial Coding in Hippocampal CA3
+        Subregions.                    bioRxiv, 2024.2011.2007.622379 (2024).
+        https://doi.org/10.1101/2024.11.07.622379
+117 Gulrajani, I. et al. Pixelvae: A latent variable model for natural images. arXiv preprint
+        arXiv:1611.05013 (2016). https://doi.org/10.48550/arXiv.1611.05013
+118  Assaad, R. S. & Silva-Martinez, J. The Recycling Folded Cascode: A General
+        Enhancement of the Folded Cascode Amplifier. IEEE Journal of Solid-State Circuits 44,
+        2535–2542 (2009). https://doi.org/10.1109/jssc.2009.2024819
+119 Yoon, D. Y. et al. in 2021 IEEE Symposium on VLSI Technology and Circuits    1–2 (2021).
+120 Kohler, F. et al. Closed-loop interaction with the cerebral cortex: a review of wireless
+        implant technology. Brain-Computer Interfaces       4, 146–154 (2017).
+        https://doi.org/10.1080/2326263x.2017.1338011
+121   Jobst, B. & Thomas, G. Critical review of the responsive neurostimulator system for
+        epilepsy.  Medical Devices: Evidence and Research, 405 (2015).
+        https://doi.org/10.2147/mder.s62853
+122 Mestais, C. S. et al. WIMAGINE: Wireless 64-Channel ECoG Recording Implant for Long
+        Term Clinical Applications. IEEE Transactions on Neural Systems and Rehabilitation
+        Engineering 23, 10–21 (2015). https://doi.org/10.1109/tnsre.2014.2333541
+123 Neuralink. in Neuralink Progress Update, Summer 2020    (2020).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    71

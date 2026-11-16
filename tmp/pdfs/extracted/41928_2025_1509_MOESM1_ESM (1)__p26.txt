@@ -1,0 +1,52 @@
+the phase observed at each channel in the cluster. We computed the goodness of fit as the mean
+vector length of the residuals between the predicted (𝜃෠௜) and actual (𝜃௜) phases111,
+
+                                       ௡                   ଶ         ௡                   ଶ
+                           𝑟̅ ൌ ඩ൥1𝑛  ෍ cos൫𝜃௜െ𝜃෠௜൯൩         ൅൥1𝑛   ෍ sin൫𝜃௜െ𝜃෠௜൯൩
+
+                                      ௜ୀଵ                           ௜ୀଵ
+where n is the number of channels in each cluster. The selected values of 𝛼 and ξ are chosen to
+maximize 𝑟̅. This procedure is repeated for each cluster. To measure the statistical reliability of
+each fitted traveling wave, we examined the phase variance that was explained by the best fitting
+model. To do this, we computed the circular correlation, 𝜌௖௖, between the predicted (𝜃෠௜) and actual
+(𝜃௜) phases at each channel:
+                                            ∑      sinሺ𝜃௜െ𝜃௡   ̅ሻ             ෠̅ቁ
+                                              ௜ୀଵ                       sinቀ𝜃௜െ𝜃
+                               𝜌௖௖ ൌ
+                                       ට∑      sinଶሺ𝜃௜െ𝜃௡    ̅ሻ  ௡                 ෠̅ቁ
+                                           ௜ୀଵ           ∑      sinଶቀ𝜃௜െ𝜃௜ୀଵ
+where bar denotes averaging across channels. We also refer to 𝜌௖௖ as the wave strength62.
+
+Dimensionality reduction analysis for wave patterns
+
+To visualize how the spatial patterns of traveling wave propagation differ between multiple viewed
+dot locations, we used UMAP112,113 to embed both data features and class labels into a low‐
+dimensional manifold. Specifically, we set n_neighbors = 15, min_dist = 0.1, and metric =
+euclidean in the UMAP toolbox113; the supervision was introduced via a cross‐entropy term that
+encourages separation among stimulus classes. These hyperparameters were selected after grid
+search on the validation dataset to balance local neighborhood preservation against global cluster
+separability. We applied this approach to downsampled datasets to test the contribution of high-
+density recordings; here wave features were recalculated for each subset to prevent information
+leakage from the full-resolution grid. After UMAP projection, each trial’s wave features were
+embedded in 2D, and stimulus class separation was quantified using the silhouette score:
+
+
+                                            𝑠ሺ𝑖ሻ ൌ  𝑏ሺ𝑖ሻെ𝑎ሺ𝑖ሻmaxሾ𝑎ሺ𝑖ሻ,𝑏ሺ𝑖ሻሿ
+
+
+where 𝑎ሺ𝑖ሻ is the average distance of the i-th sample to members of its own cluster, and 𝑏ሺ𝑖ሻ is the
+lowest average distance of the i-th sample to any other cluster. Higher mean silhouette scores
+indicate greater separability. Scores were averaged over 279 random subsampling seeds per
+resolution, with variability assessed via standard error.
+
+Dot location decoder: hybrid CNN-Transformer‐based neural network model
+
+To decode dot locations from BISC-recorded traveling‐waves, we developed a hybrid CNN‐
+Transformer architecture that predicts the viewed dot location for each traveling wave while
+accounting for spatial and temporal dependencies. To decode the spatial location of the stimulus
+from traveling‐waves, we first passed the pattern of traveling wave propagation for each dot into
+a CNN module. The CNN comprised three sequential convolutional layers with filters of size 3 ×
+3, each followed by ReLU activation and batch normalization (momentum = 0.1). We employed
+a max‐pool layer with a stride of 2 after the first and second convolutional layers, reducing the
+
+                                                         25

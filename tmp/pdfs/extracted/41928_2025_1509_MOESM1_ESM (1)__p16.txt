@@ -1,0 +1,47 @@
+of thickness t, i.e., d = t/2, we can calculate the smallest achievable radius of curvature r = 𝑟௙௥௔௖௧௨௥௘
+for an ideal silicon sample via
+
+                                             ε௠௔௫ ൌ     𝑡2∙𝑟           .
+                                                            ௙௥௔௖௧௨௥௘
+For a multimaterial stack, d should be taken as the distance from the neutral plane where strain is
+zero. For the BISC device, denoting h = 0 as the top of the polyimide on the front surface of the
+device, we can estimate the neutral plane position assuming zero slip and no debonding between
+adjacent layers to be at h = 20 μm, which is 5 μm into the silicon layer 105. This produces asymmetry
+in the mechanical stability of the device under opposing bending directions, since the silicon is
+more likely to fracture under tension than compression. When the parylene is under tension,
+𝑟௙௥௔௖௧௨௥௘ is calculated to be 1.5 mm, while when the polyimide is under tension, the value is 0.5
+mm.
+The maximal bending strain can be greatly reduced by defects in the sample and depends on the
+details of device processing. For our process, curvatures as small as 10 mm 𝑟௙௥௔௖௧௨௥௘  are
+theoretically achievable (Supplementary Fig. 16b). In practice, however, the effect of defects is
+statistical in nature and is typically characterized using Weibull distribution 106. From the
+application standpoint, such small radii of curvature are rarely encountered during or after
+implantation (see section above on conformability). Once securely implanted, the device is not
+subject to any macroscopic bending lengths that would result in fracture. This observation is
+consistent with our experimental results, which have not shown any fracture mode failure in vivo.
+Handling during implantation is the only point at which fracture could occur. However, the
+surgical procedures we developed enable consistent implantation without bending the device
+beyond its minimum radius of curvature.
+
+Supplementary Discussion S5. Porcine somatosensory cortex recording experimental
+procedure
+All porcine experiments were performed in compliance with the National Institutes of Health
+Guide for the Care and Use of Laboratory Animals and were approved by the Columbia University
+Institutional Animal Care and Use Committee (protocol AC-AABQ0559).
+Surgical Procedures
+The BISC implant chips and all surgical tools were sterilized with ethylene oxide (EtO) prior to
+implantation. The surgical incision and craniotomy were customized to the number of devices and
+implant target. For the porcine model sensorimotor cortex experiment, two BISC devices were
+implanted over sensorimotor cortex of each hemisphere of a female Yorkshire pig (18 weeks old,
+23.9 kg). The procedure was performed under general anesthesia. For placement of bilateral
+devices, a 5-cm curvilinear bicoronal incision was planned just rostral to the anatomic
+sensorimotor cortex. The incision was injected with 2% lidocaine, incised sharply and the scalp
+reflected posteriorly. Following hemostasis, a bifrontal craniotomy was performed. Burr holes
+were placed with slotting over relevant venous structures and connected with a cutting drill. Then,
+the bifrontal craniotomy bone flap was elevated, and epidural hemostasis was obtained. For each
+BISC chip, the dura was tented and a coronally oriented 15 mm linear incision was made to allow
+access to the subdural space. A commercial four-contact subdural strip electrode (PMT Cortac®
+2110-04-032, PMT® Corporation) was used in conjunction with commercial EEG acquisition
+equipment (XLTEK Protektor32, Natus Neuro) and peripheral subdermal needle electrodes to
+
+                                                         15

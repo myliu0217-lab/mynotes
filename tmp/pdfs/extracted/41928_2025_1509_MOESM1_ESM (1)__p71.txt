@@ -1,0 +1,50 @@
+90      Dokania, R., Wang, X., Tallur, S., Dorta-Quinones, C. & Apsel, A. An Ultralow-Power
+        Dual-Band UWB Impulse Radio. IEEE Transactions on Circuits and Systems II: Express
+        Briefs 57, 541–545 (2010). https://doi.org/10.1109/tcsii.2010.2048388
+91       Vigraham, B. & Kinget, P. R. A Self-Duty-Cycled and Synchronized UWB Pulse-Radio
+        Receiver SoC With Automatic Threshold-Recovery Based Demodulation. IEEE Journal
+        of Solid-State Circuits 49, 581–594 (2014). https://doi.org/10.1109/jssc.2014.2303804
+92      Tiuraniemi, S., Stoica, L., Rabbachin, A. & Oppermann, I. in 2005 IEEE International
+        Conference on Ultra-Wideband    339–343 (2005).
+93 Witrisal, K. et al. Noncoherent ultra-wideband systems. IEEE Signal Processing Magazine
+        26, 48–66 (2009). https://doi.org/10.1109/msp.2009.932617
+94      Humblet, P. A. & Azizoglu, M. On the bit error rate of lightwave systems with optical
+        amplifiers.  Journal of Lightwave Technology      9, 1576–1582 (1991).
+        https://doi.org/10.1109/50.97649
+95         Federal Communications Commission (FCC). 47 CFR Part 15 Subpart F Ultra-Wideband
+        Operation.  (2002).
+96      Lee, G., Park, J., Jang, J., Jung, T. & Kim, T. W. An IR-UWB CMOS Transceiver for
+        High-Data-Rate, Low-Power, and Short-Range Communication. IEEE Journal of Solid-
+        State Circuits 54, 2163–2174 (2019). https://doi.org/10.1109/jssc.2019.2914584
+97 Montanaro, J. et al. A 160-MHz, 32-b, 0.5-W CMOS RISC microprocessor. Solid-State
+        Circuits, IEEE Journal of            31, 1703–1714 (1996).
+        https://doi.org/10.1109/JSSC.1996.542315
+98    Maneatis, J. G. Low-jitter process-independent DLL and PLL based on self-biased
+        techniques.  IEEE Journal of Solid-State Circuits     31, 1723–1732 (1996).
+        https://doi.org/10.1109/jssc.1996.542317
+99         Gabriel, C. Compilation of the Dielectric Properties of Body Tissues at RF and Microwave
+        Frequencies. (Occupational and environmental health directorate, Radiofrequency
+        Radiation Division, Brooks Air Force Base, Texas (USA), 1996).
+100 PYNQ™. http://www.pynq.io/ (2024). <http://www.pynq.io/>.
+101 Vomero, M. et al. Conformable polyimide-based μECoGs: Bringing the electrodes closer
+        to the signal source. Biomaterials         255, 120178 (2020).
+        https://doi.org/10.1016/j.biomaterials.2020.120178
+102 Luan, L. et al. Ultraflexible nanoelectronic probes form reliable, glial scar–free neural
+        integration. Science advances 3, e1601966 (2017). https://doi.org/10.1126/sciadv.1601966
+103        Rogers, J. A., Someya, T. & Huang, Y. Materials and mechanics for stretchable electronics.
+        science 327, 1603–1607 (2010). https://doi.org/10.1126/science.1182383
+104    Van Den Ende, D. A. et al. Mechanical and electrical properties of ultra-thin chips and
+        flexible electronics assemblies during bending. Microelectronics Reliability  54, 2860–
+        2870 (2014). https://doi.org/10.1016/j.microrel.2014.07.125
+105 Kim, D.-H. et al. Stretchable and foldable silicon integrated circuits. Science 320, 507–511
+        (2008). https://doi.org/10.1126/science.1154367
+106    Burghartz, J. N. et al. Ultra-thin chip technology and applications, a new paradigm in
+        silicon technology. Solid-State Electronics        54, 818–829 (2010).
+        https://doi.org/10.1016/j.sse.2010.04.042
+107 Maier, S. et al. Somatosensory and transcranial motor evoked potential monitoring in a
+        porcine model for experimental procedures. PLOS ONE   13, e0205410 (2018).
+        https://doi.org/10.1371/journal.pone.0205410
+
+
+
+                                                      70

@@ -1,0 +1,61 @@
+Supplementary Video 1. Normalized somatosensory evoked potential (SSEP) recording from a
+porcine model, trial averaged (n = 100 per location). ................................................................... 56
+Supplementary Video 2. Motor cortex recording from a NHP model performing asynchronous
+reach-and-grab task ....................................................................................................................... 57
+Supplementary Video 3. Dot-triggered-average responses of all channels without filtering. ...... 58
+Supplementary Video 4. Dot-triggered-average responses of all channels after wavelet
+transformation (central frequency 8Hz). ....................................................................................... 59
+Supplementary Video 5. Dot-triggered-average responses of all channels after wavelet
+transformation (central frequency 16Hz). ..................................................................................... 60
+Supplementary Video 6. Dot-triggered-average responses of all channels after wavelet
+transformation (central frequency 32Hz). ..................................................................................... 61
+Supplementary Video 7. Dot-triggered-average responses of all channels after wavelet
+transformation (central frequency 64Hz). ..................................................................................... 62
+Supplementary Video 8. Dot-triggered-average responses of all channels after wavelet
+transformation (central frequency 128Hz). ................................................................................... 63
+Supplementary Video 9. Dot-triggered traveling waves used for decoding stimuli location. ...... 64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     2

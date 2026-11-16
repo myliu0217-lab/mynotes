@@ -1,0 +1,87 @@
+                        This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+JAIN et al.: 2.5–20 kS/s IN-PIXEL DIRECT DIGITIZATION ECoG FRONT END                                                                                                                                                           9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 18.    Measured  ZIN  with and without boosting.
+
+
+
+                                                                                               Fig. 21.    In vivo measurement setup.
+
+
+
+
+
+
+
+
+
+
+
+Fig. 19.    Measured pixel-to-pixel isolation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                               Fig. 22.    Measured neural recordings with this chip and a commercial Intan
+                                                                                               chip.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 20.    Artifact recovery time (a) setup, (b) measurement in mode 3, and
+(c) measurement in all modes.
+
+To  measure  the  input  impedance,  ZIN,  high  precision  1  M
+resistors were placed in series with the ADC inputs, and an IA
+amplified the voltage across them. Fig. 18 shows ZIN measured
+across the bandwidth with and without activating the auxiliary
+path, where  ZIN is boosted by 34×     when the auxiliary path is
+enabled. Pixel-to-pixel isolation was measured by injecting an
+FS input into pixel 3 while shorting the inputs of the others.                                 Fig.  23.      Measured  stimulation  artifact  recovery  time  for  this  chip  and
+Fig.  19  plots  the  output  spectrum  of  all  pixels.  The  design                          commercial Intan chip.
+has >60 dBc isolation for adjacent pixels with respect to the
+aggressor.                                                                                     input was given a 5 mVpp input, and the negative input was set
+   Finally,  the  artifact  recovery  time  was  measured  using  a                            at 450 mV with periodic overranging pulses of 4 × FS, varying
+function generator, as shown in Fig. 20(a), where the positive                                 between  450  and  950  mV.  This  drives  the  input  to  VDDA,
+
+
+         Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

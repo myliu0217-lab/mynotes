@@ -1,0 +1,68 @@
+BISC implant has an input-referred noise of less than 5 Vr.m.s. across the                  emitter-coupled logic over the differential twisted pairs on the HDMI
+frequency range of 10 Hz to 1 kHz and 10 μ Vr.m.s. for the range from 0.3 Hz                cable to the processor board. A microcontroller (Teensy 4.1, PJRC)
+to 10 kHz. When recording from 1,024 channels, the input-referred noise                     integrated on the headstage configures the wireless transceiver and
+is less than 8 μV                                        r.m.s. from 4 Hz to 1 kHz.         the power amplifier. Communication between the microcontroller
+     The implant also allows a stimulation current driven from any                          and the processor board is achieved using a two-wire UART protocol
+group of electrodes with a set of rules.                                                    through the HDMI cable.
+                                                                                                 The BISC headstage is assembled by stacking four separate PCBs.
+•          Stimulation can be driven from a minimum of a single two × two                   The arrangement of the boards, from the bottom (facing implant) to
+    electrode group (a pixel), up to the full array of 65,536 elec-                         the top, is as follows:
+    trodes, acting as a macroelectrode.
+•          For monopolar stimulation, any combination of macroelec-                         •          UWB circular dipole antenna board. A dipole antenna is printed
+    trodes can be used to drive current at a given time.                                        on a 0.2-mm-thick, single-layer FR-4 substrate. It is co-designed
+•          For bipolar stimulation, macroelectrodes can be used to drive                        with the powering coil to optimize the bandwidth and radiation
+    current either in phase or out of phase. Macroelectrodes                                    efficiency. The antenna board connects to the transceiver board
+    driving opposite phases must have equal widths and have the                                 with an in-series SMP adaptor (19K104-K00L5, Rosenberger
+    same column addresses, but their heights can be individually                                Group). A balun (BD3150N50100AHF, Anaren) is installed on this
+    programmed.                                                                                 board to convert the single-ended radio-frequency signal from
+                                                                                                the SMP adaptor to a differential signal for the dipole.
+     The temporal profile for stimulation has three phases. The first                       •          Power coil board. The power-transmitting coil is a square spiral,
+two phases are anodic or cathodic, generating currents from two                                 printed on a 1.6-mm-thick, two-layer FR-4 substrate. It is fabri-
+on-chip-regulated current sources. During these phases, switches                                cated with 13-oz (0.455-mm-thick) copper to implement a high-Q
+that connect the stimulation electrode to the corresponding current                             inductor for enhanced efficiency and minimal heat loss. The coil
+source are activated, allowing the current to flow from the source                              has an outer diameter of 3.6 cm and an inner diameter of 2.5 cm
+to the electrodes. Both anodic and cathodic currents have the same                              to allow clearance for the UWB dipole antenna. The coil has an
+amplitude, which is linearly programmable from 10 μA to 1.02 mA.                                effective impedance of 885 nH and 1.1 Ω with a self-resonance fre-
+The third phase is for charge balancing, in which the electrodes used                           quency well beyond (>70 MHz) the link frequency. The measured
+for stimulation are grounded to ensure no accumulated charge on the                             link efficiency is –10.5 dB at 1.5-cm distance, assuming an ideal
+electrodes. The duration of all the three phases can be independently                           conjugate-matched driving source and a 75-Ω load at the receiver
+programmed from 0 to 350 μs. The compliance voltages of the anodic                              side, which is equivalent to the overall circuit load. The coil is
+and cathodic current sources are ±1.4 V.                                                        terminated with an edge-launch SMA connector and is driven by
+     The BISC implant has a wireless transceiver with an on-chip slot                           the power amplifier board via a short (75-mm) SMA cable.
+monopole antenna, enabling wireless communication with the relay                            •          Transceiver board. The transceiver board is a 1.6-mm-thick
+station. It operates as a UWB impulse radio, encoding digital data in                           four-layer PCB. Rogers RO4003C is used as the top prepreg
+short ‘bursts’ of a 4-GHz sine wave. In this encoding scheme, ‘1’ is repre-                     to allow good impedance matching and reduce power loss,
+sented by a burst, whereas ‘0’ is the absence of a burst. The transceiver                       whereas FR-4 is used as the core and bottom prepreg to lower
+occupies up to 700 MHz of bandwidth in the unlicensed UWB frequency                             the cost. Components installed on the transceiver board are for
+band and can support uplink data rates of 108.48 Mbps and downlink                              transmitting and receiving UWB pulses. The SMP connector to
+data rates of 54.24 Mbps. To allow full duplex communication using                              the antenna board, receiving chain and transmitting chain are
+a single antenna, transmitting and receiving are time-division multi-                           connected through a single-pole-double-throw radio-frequency
+plexed for every bit. This allows us to precisely control the timing to                         switch (HMC8038, Analog Devices). In the receiving chain, the
+stop a recording and the implant still transmits data to the relay station.                     radio-frequency signal first passes through a digitally controlled
+     The implant features wireless power transfer that allows harvest-                          attenuator (HMC540SLP3E, Analog Devices) to prevent electro-
+ing more than 64 mW from the integrated power coil through an induc-                            magnetic interference saturating the amplifiers. Subsequently,
+tive resonance coupling. The a.c. power received on the powering coil                           the signal is amplified 60 dB using two low-noise amplifiers
+is first rectified by an active rectifier and then regulated by regulators                      (CMD308P4, Qorvo) in series and filtered by a band-pass filter
+to support the 1.5-V power domain as three separate rails and one –1.5-V                        (B040MB5S, Knowles). An envelope detector (ADL6012, Analog
+power domain.                                                                                   Devices) then extracts the envelope of the incoming signal,
+                                                                                                followed by a threshold detector comprising two operational
+Relay station design                                                                            amplifiers (THS4304, Texas Instruments) and a comparator
+The relay station (Supplementary Fig. 2) interfaces the BISC implant                            (TLV3604, Texas Instruments). The threshold detected signal
+to a host computer, providing wireless power to the implant, sending                            becomes a digital short pulse if the implant is transmitting a 1 or
+commands to control the implant’s operation, collecting recorded data                           stays constant if transmitting a 0. Multipath fading or reflection
+and relaying everything to the host computer over wired or wireless                             in the transmitting path can cause spurious pulses to be detected
+connection. The relay station has two parts: the headstage in which                             by the threshold detector. This issue is resolved by using a
+the wireless transceiver and power amplifier reside, and a processor                            self-resetting edge detector, which waits for 6 ns between detec-
+module in which a Xilinx Zynq processor and logic translators reside.                           tions to allow echoes to decay, and resets the outputs after each
+     The headstage is a wearable device (75 × 75 × 45 mm3, 151 g) pro-                          detection. The edge detector is built from a low-voltage positive
+totyped using off-the-shelf components and PCBs. It establishes wire-                           emitter-coupled logic buffer (SY89327L, Microchip Technol-
+less communication with the BISC implant and supplies power to                                  ogy), a D-flip flop (SY10EP51VMG, Microchip Technology) and a
+the implant through an integrated wireless transceiver and power                                comparator (TLV3601, Texas Instruments). The final output from
+amplifier. The headstage is connected to the processor module with a                            the edge detector is fed into a divide-by-2 divider (MC100EP32,
+standard HDMI cable, which can be up to 5 m in length. The HDMI cable                           Onsemi), converting the digital pulses into a non-return-to-zero
+sends 12-V d.c. power to the power regulators on the headstage, deliv-                          data stream. This stream is then sent over the HDMI cable
+ering up to 1.2 A. The wireless transceiver on the headstage transmits                          (receiver) and sampled by the field-programmable gate array,
+high-speed digital data up to 108.48 Mbps using low-voltage positive                            and the original data are reconstructed by XORing the current
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                                                                     1284

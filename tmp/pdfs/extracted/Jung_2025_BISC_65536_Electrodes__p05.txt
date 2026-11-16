@@ -1,0 +1,68 @@
+effective upgrade process offers a substantial advantage over other                          most electrodes over the primary motor cortex (M1) but a substantial
+invasive BCI systems, where device replacement is more complex                               portion over the primary somatosensory cortex (S1; Fig. 3c                        ).
+and time-consuming.                                                                               As the subject was performing the behavioural task, BISC record-
+                                                                                             ings were taken from 16 × 16 channels configured in the sparsest mode
+Somatosensory evoked potential in porcine                                                    covering the whole array. The fidelity of the measured local field poten-
+model                                                                                        tials (LFPs) was assessed by building a continuous velocity decoder
+In vivo studies reported in this paper have focused on the recording                         using a linear model (Fig. 3d–f and Supplementary Discussion 8) and
+capabilities of BISC. Our device was first subchronically validated by                       visualizing the spatiotemporal dynamics of selected frequency bands
+implantation over a porcine somatosensory cortex. Two weeks after                            (Fig. 3g,h).
+the implant, we recorded somatosensory evoked potentials (SSEP)                                   The decoder was built by first identifying channels (n                                                    = 180 out of
+from the anaesthetized animal in response to peripheral stimulation                          256) that consistently remained non-saturated throughout the experi-
+(Supplementary Discussion 5). Five weeks after implantation, the                             ment. Data from these channels were band-pass filtered (0.3 to 300 Hz)
+whole brain was extracted post-mortem for histological examination                           and downsampled to 2.11 kS s−1. Recordings contained a strong haemo-
+(Supplementary Fig. 19).                                                                     dynamic rhythm around 3 Hz, which we associated with the heart rate
+     For the SSEP recordings, percutaneous electrical stimulations                           (180 beats per minute). This rhythm was removed by subtracting the
+were delivered to the median nerve and four distinct locations of the                        corresponding time-series components computed through space–
+snout (Fig. 2a), which is known to have a large somatotopic representa                                  -time singular value decomposition44 (Supplementary Fig. 20). The
+tion in the pig brain39. The recording was taken from 16 × 16 channels,                      preprocessed recordings were further grouped into four frequency
+configured in the sparsest mode that covers the whole array. Data                            bands: local motor potential (LMP), β (10 to 30 Hz), low γ (30 to 70 Hz)
+from these channels were low-pass filtered (300 Hz, eight-order But-                         and high γ (70 to 190 Hz). Low-frequency LMP was extracted by apply-
+terworth, zero phase), subtracted by their baselines, and then down-                         ing boxcar averaging with a 50-ms window and then z                              -scoring45. The
+sampled to 2.11 kS s−1 (Supplementary Discussion 6). Trial-averaged                          other three bands were extracted by applying multitaper estimation
+channel responses (Fig. 2b,c and Supplementary Fig. 18) show wave                            with a 200-ms window and 10-Hz half-bandwidth and then normaliz-
+complexes whose peak polarization and depolarization timings are                             ing46. Finally, the time history of features from (t    – 0.47) s to (t       + 0.47) s
+similar to those found in previous studies40. The spatial arrangement                        in 52-ms time steps were used for decoding, resulting in a
+of the normalized peak response (Fig. 2d and Supplementary Video 1)                          13,680-dimensional vector X(t)           (180 channels, 19 time lags and 4 fre-
+is also consistent with the previously reported somatotopy39,41.                             quency bands) as the model input for decoding the motor feature y(t)                    .
+     The fidelity of SSEP recordings was assessed by visualizing in two                           We decoded the arm velocity using partial least squares (PLS)
+dimensions and building a classification model. In both analyses, we first                   regression because it is effective in handling data whose predictor
+used principal component analysis to reduce the z -scored spatiotempo-                       is highly correlated and has a large dimension compared with the
+ral waveforms into a lower-dimensional space, retaining components                           number of observations47. The optimal number of PLS components
+that explained 80% of the variance. These extracted components were                          was determined by calculating the minimum predictive error sum
+projected onto a two-dimensional space using t                    -distribution stochas-     of squares across fivefold cross-validation (Supplementary Fig. 20).
+tic neighbour embedding42. This projection (Fig. 2e) results in clearly                      When decoded against the normalized y           dimension (front–back) wrist
+separable clusters, indicating that the measured SSEP can be used to                         velocity, feature prediction resulted in Pearson’s correlation coefficient
+effectively distinguish between peripheral stimulation sites. The decod-                     of 0.53 ± 0.04 (mean ± standard error), illustrated by an example time
+ing performance was quantified using a linear discriminant model with                        segment shown in Fig. 3e. Spectral contributions to the decoder from
+tenfold cross-validation that resulted in an overall accuracy of 97.8 ± 1.7%                 each frequency band were found by computing the sum of the relative
+(mean ± standard deviation (s.d.), n                                           = 500; Fig. 2f                     ).weight of coefficients associated with each band (Fig. 3f                        ).
+     Coronal sections were collected from the post-mortem extracted                               The two bands with the highest contributions—LMP and high-γ
+brain for histological analysis using three markers: haematoxylin and                        band—are further visualized by plotting their multichannel power
+eosin, NeuN, and Iba1 (Supplementary Fig. 19). Sections taken directly                       over time (Fig. 3g), which shows fluctuations synchronized to the
+from under the BISC implant showed no noticeable pathology by hae-                           subject’s motion. Spatiotemporal progression of these bands in a
+matoxylin and eosin or NeuN. Iba1, however, revealed a mild microgliosis                     selected 1-s-long time window (Fig. 3h) shows spatially localized activity
+extending from the superficial cortex to the subcortical white matter.                       in both M1 and S1, with LMP displaying patterns that resemble phase
+Near the perimeter of our device, there was a small lesion on the surface                    reversal across the CS boundary. A more detailed version of this plot
+of the cortex, consistent with a mechanical injury incurred during inser-                    with a finer time resolution and an extended time range is provided in
+tion by the commercial-strip-electrode shuttle. No pathological changes                      Supplementary Video 2.
+were seen in sections taken as control samples from the occipital cortex.
+                                                                                             Visual cortex recording in NHP
+Motor cortex recording in NHP                                                                The stability of chronic neural signals from the BISC implant was vali-
+Before the chronic NHP study, the BISC device was validated through                          dated through long-term (up to 64 days) studies from the visual cortex
+acute recordings using a glass artificial skull mounted in a permanent                       of an adult macaque monkey. The chip was placed near the V1–V2 bor-
+craniotomy and durotomy (4 cm × 2 cm) over the motor cortex region of                        der, partially covering V4 as well (Fig. 4a). Over the span of the study, we
+a behaving NHP subject43. In this setup, the glass module is hermetically                    conducted multiple experiments that involved three different visual
+secured to a base ring affixed to the subject’s skull using mechanical                       stimulus paradigms: gratings, random dots and natural images.
+screws, eliminating the need for additional surgery for device implanta-                          In the grating sessions, the monkey fixated for at least 300 ms to
+tion. The subject was seated in a primate chair, facing the experimenter                     initiate a trial in which 30 static gratings of random orientations were
+who manually held a wand at the subject’s full-reach distance. The                           consecutively presented (Fig. 4b                     ). Each grating lasted 50 ms. The BISC
+subject was trained to asynchronously reach, grab the wand and then                          recordings were taken from 16 × 16 channels configured in the sparsest
+retract its arm without the use of an explicit cue to prompt its move-                       mode covering the whole array. Approximately one-third of them, pri-
+ment, with the arm location triangulated from multiple cameras (Fig. 3a                      marily those overlying V1, showed an increased response for the Fourier
+and Supplementary Discussion 7).                                                             components between 20 Hz and 90 Hz (Fig. 4c). The peaks at 20 Hz and
+     For this experiment, the BISC device was attached directly to the                       harmonics in the power spectrum response reflect the grating changing
+artificial skull (Fig. 3b                           ) and positioned over the central sulcus (CS), with every 50 ms. We selected four example channels labelled by their chip
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                                                                      1276

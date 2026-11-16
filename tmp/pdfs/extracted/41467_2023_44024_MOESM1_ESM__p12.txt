@@ -1,0 +1,14 @@
+Supplementary  Figure           11.   Concurrent  LFP  recordings  with  active  multiplexers  and  passive  electrodes.
+Recordings from a) an OECT-OEDT stack and b) tungsten electrode located on the surface of the implantation zone.
+(n=3  implantations)      The  data  are  shown  together  with  their  corresponding  time-frequency  analysis  plots.  Time-
+frequency plots are within 0-40 Hz range and expressed in arbitrary units.
+
+
+
+
+
+
+
+
+
+

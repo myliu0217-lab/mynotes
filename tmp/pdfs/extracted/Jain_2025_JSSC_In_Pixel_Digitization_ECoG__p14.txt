@@ -1,0 +1,94 @@
+                          This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+14                                                                                                                                                                                                                  IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+                               Hanh-Phuc  Le  (Senior  Member,  IEEE)  received                                                       Shadi   A.   Dayeh   has   been   a   Lebanese   Ameri-
+                               the   B.S.   degree   in   electrical   engineering   from                                             can  Neurotechnologist  who  pioneered  human  brain
+                               Hanoi University of Science and Technology, Hanoi,                                                     recordings with multithousand channels since 2019.
+                               Vietnam, in 2003, the M.S. degree in electrical engi-                                                  He  is  an  ECE  Professor  at  the  University  of  Cali-
+                               neering  from  Korea  Advanced  Institute  of  Science                                                 fornia at San Diego, La Jolla, CA, USA, leading the
+                               and  Technology,  Daejeon,  South  Korea,  in  2006,                                                   Integrated Electronics and Biointerfaces Laboratory.
+                               and the Ph.D. degree in electrical engineering from                                                      Dr.   Dayeh   is   an   awardee   of   the   NIH   Direc-
+                               University  of  California  Berkeley,  Berkeley,  CA,                                                  tor’s   New   Innovator   Award,   the   NSF   CAREER
+                               USA, in 2013.                                                                                          Award,  the  ISCS  Young  Scientist  Award,  and  the
+                                  He is with the Department of Electrical and Com-                                                    J. R. Oppenheimer Fellow at Los Alamos.
+                               puter  Engineering,  University  of  California  at  San
+Diego  (UCSD),  La  Jolla,  CA,  USA,  where  he  is  currently  an  Associate
+Professor. In 2012, he cofounded and served as the Chief Technology Officer
+(CTO) at Lion Semiconductor, San Francisco, CA, USA, until October 2015.
+He also held research and development positions at Oracle, Santa Clara, CA,
+USA; Intel, Hillsboro, OR, USA; Rambus, Sunnyvale, CA, USA; JDA Tech,
+Daejeon,  South  Korea;  and  Vietnam  Academy  of  Science  and  Technology
+(VAST), Hanoi, Vietnam. He is also the Codirector of the Power Management
+Integration  Center  and  NSF  IUCRC  Center.  He  has  authored  three  book
+chapters, over 60 journals, and conference papers with one Best Paper Award
+and is an Inventor with 22 US patents (21 granted and one pending).
+  Dr. Le is a member of the Steering Committee of the International Workshop
+on  Power  Supply  on  Chip  (PwrSoC).  He  was  a  recipient  of  the  NSF                                                           Drew A. Hall (Senior Member, IEEE) received the
+CAREER Award in 2021, the IEEE Solid-State Circuits Society Predoctoral                                                               B.S.  degree  (Hons.)  in  computer  engineering  from
+Achievement Award from 2012 to 2013, and the Sevin Rosen Funds Award for                                                              the  University  of  Nevada,  Las  Vegas,  NV,  USA,
+Innovation at University of California at Berkeley in 2013. From 2019 to 2023,                                                        in 2005, and the M.S. and Ph.D. degrees in electrical
+he  served  as  the  Chair  of  the  Technical  Committee  on  Power  Conversion                                                      engineering from Stanford University, Stanford, CA,
+Systems and Components at the IEEE Power Electronics Society (IEEE PELS                                                               USA, in 2008 and 2012, respectively.
+TC2).  He  serves  as  an  Associate  Editor  for  IEEE JOURNAL  OF EMERGING                                                            From  2011  to  2013,  he  was  a  Research  Scien-
+AND SELECTED TOPICS IN POWER ELECTRONICS.                                                                                             tist with the Integrated Biosensors Laboratory, Intel
+                                                                                                                                      Corporation,  Santa  Clara,  CA,  USA.  Since  2013,
+                                                                                                                                      he  has  been  with  the  Department  of  Electrical  and
+                                                                                                                                      Computer  Engineering,  University  of  California  at
+                                                                                                      San  Diego,  La  Jolla,  CA,  USA,  where  he  is  currently  a  Full  Professor.  His
+                               Ian Galton (Fellow, IEEE) received the B.Sc. degree                    research  interests  include  bioelectronics,  biosensors,  analog  circuit  design,
+                               in  electrical  engineering  from  Brown  University,                  medical electronics, and sensor interfaces.
+                               Providence,  RI,  USA,  in  1984,  and  the  M.S.  and                   Dr.  Hall  won  first  place  in  the  Inaugural  International  IEEE  Change  the
+                               Ph.D.  degrees  in  electrical  engineering  from  Cali-               World Competition and First Place in the BME-IDEA Invention Competition,
+                               fornia Institute of Technology, Pasadena, CA, USA,                     both in 2009. He received the Analog Devices Outstanding Designer Award
+                               in 1989 and 1992, respectively.                                        in 2011, the Undergraduate Teaching Award in 2014, the Hellman Fellowship
+                                  Since  1996,  he  has  been  a  Professor  of  electrical           Award in 2014, the NSF CAREER Award in 2015, and the NIH Trailblazer
+                               engineering  with  the  University  of  California  at                 Award in 2019. He is also a Tau Beta Pi Fellow. He has served as an Associate
+                               San  Diego,  La  Jolla,  CA,  USA,  where  he  teaches                 Editor for  IEEE TRANSACTIONS  ON BIOMEDICAL INTEGRATED CIRCUITS
+                               and  researches  mixed-signal  integrated  circuits  and               since 2015, a member for the CICC Technical Program Committee from 2017
+                               systems  for  communications.  His  research  involves                 to 2024, a member for the ISSCC Technical Program Committee since 2020,
+the  invention,  analysis,  and  integrated  circuit  implementation  of  critical                    and  an  Associate  Editor  for  the  IEEE  SOLID-STATE  CIRCUITS  LETTERS
+communication system blocks such as data converters and phase-locked loops.                           since 2021.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

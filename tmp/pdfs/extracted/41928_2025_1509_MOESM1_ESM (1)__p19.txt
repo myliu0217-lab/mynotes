@@ -1,0 +1,46 @@
+BISC device was attached to the artificial skull referred to as the BrainPort (Fig. 3b) using clear
+epoxy (Loctite® EA M-31 CL, Henkel) and was EtO sterilized after curing. Registration of the
+device (Fig. 3c) was determined by comparing the ground truth images of the BrainPort over the
+cranial window, before and after the device attachment.
+During behavioral tasks, our NHP subject, a male rhesus macaque (Macaca mulatta, 11 years old,
+13 kg) was seated in a primate chair with its head motion restricted but otherwise free to move. It
+was trained to reach and grab the target using its right arm which was contralateral to the device
+placement. The target in our experiment was a wooden stick referred to as the wand, manually
+held near the full reach distance of the subject. Post-experiment, we discovered that there may
+have been too little variation in the wand position. As a consequence, the subject’s normalized
+wrist velocities in y (front-back) and z-direction (up-down) were found to be highly correlated
+(Pearson r = 0.96). It may also be the reason that our feature decoder does not perform well in x-
+direction (left-right), as the wand was consistently presented in proximity of the median plane of
+the subject.
+The reaching tasks were asynchronous and did not require an explicit cue, and the subject received
+food rewards for correct behaviors. Experiment was broken down into multiple sessions with rests
+between them, with each recording session lasting up to two minutes. Because the subject was not
+water restricted, it did not engage in tasks most of the time, resulting in 44 clean reaches over
+aggregate duration of approximately six minutes.
+Three machine vision cameras filmed the experiment from three different angles. An open source
+deep learning framework, DeepLabCut 108, was used to label the wrist position of the subject at
+60 Hz frame rate.
+Supplementary Discussion S8. NHP motor cortex recording data analysis
+Data pre-processing
+Position tracking was lost at times when the subject’s wrist moved out of the camera field-of-view,
+particularly when the arm was retracted beneath the metal plate of the primate chair. Short time
+gaps (< 0.5 s) in the position data were linearly interpolated, and the resulting data was smoothed
+using a moving average filter with 200-ms window. Remaining gaps were categorized into
+medium (< 2 s) and long (> 2 s) gaps, where medium gaps were interpolated using cubic spline
+function and long gaps were linearly interpolated. To extract velocity, derivatives of this data were
+taken and then smoothed again using a moving average filter with 200-ms window. Finally, the
+resulting wrist velocity in each dimension was upsampled to 200 Hz and then normalized by
+dividing by its standard deviation.
+Throughout the experiment, BISC recordings were taken from 16×16 channels spatially
+programmed in the sparsest mode that covers the whole array, each channel sampled at 33.9 kS/s,
+with gain of 53.7 dB, and high-pass filter cutoff frequency of 13 Hz. For motor data analysis, we
+defined the non-saturated range as [3, 1020] out of the full ADC code range of [0, 1023]. For each
+session, a channel is considered non-saturated if less than 1% of data points are saturated.
+Time points with packet losses were filled in by time domain linear interpolation, up to 11
+consecutive samples (< 0.33 ms). Short segments up to three consecutive saturated samples (<
+0.09 ms) were also linearly interpolated. Then, saturated channels were spatially imputed by taking
+the average of non-saturated channels in their immediate vicinity (Euclidean distance = 1) only if
+more than one non-saturated neighboring channels existed. The resulting data was band-pass
+filtered (0.3 – 300 Hz) with an eighth order zero-phase Butterworth filter and downsampled to 2.12
+
+                                                          18

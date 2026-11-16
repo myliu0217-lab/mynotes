@@ -1,0 +1,83 @@
+ARTICLE                                                                                          NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 3 g-SGFET stability in-vivo. a CNP vs. time over 4 weeks. The inset shows the Ids–Vgs curves. Mean and standard deviation for n = 8 g-SGFETs
+(1 outlier excluded). b Signal from two DC-coupled channels. Indicated positions corresponding to map in panel h. The spectrogram of channel (5,7) is
+shown (bottom). c The phase-amplitude relation between the channels in panel b, for the noise measured in the beaker (left) and for the signals measured
+in vivo (right). d Boxplot of Vgs-rms vs. shifts in the effective gating (Vgs–VCNP) of the 64 g-SGFETs. The colored area indicates the measured drift in the CNP
+referred to a Ag/AgCl electrode during the ﬁrst 24 h of recording. The initial bias and the CNP are indicated by the red and green vertical lines respectively.
+e gm (top) and Vgs-rms (bottom) measured over 4 weeks post implantation; gm was obtained from the Ids–Vgs curves of the DC-coupled channels (n=8g-
+SGFETs, 1 outlier excluded). f Current noise over 4 weeks after implantation (n = 64 g-SGFETs). The numeric values indicate the yield of working devices
+(see supplementary information S4). The boxes in panels a and d–f extend from the lower to the upper quartiles, with a line at the median. The whiskers
+extend 1.5 times the inter-quartile range and the data points beyond the whiskers are indicated by a dot. g Average and standard deviation of the
+frequency-dependent transconductance (|gm|(f)) shown for different days after the implantation (n = 10 g-SGFETs). The inset shows the approximate
+position of the Pt-Ir electrode close to the array, the simulated equipotential contour lines in a conductive plane and the relative signal amplitude measured
+by each of the g-SGFETs in the array (see supplementary information S5). h Signals measured by all g-SGFETs on the array during a state of increased theta
+activity on day 1 and day 6 after implantation.
+
+approximately   constant   slope   (in   a   log-log   scale)   follows   a                   greater detail, by studying a large animal cohort, the stability of
+fractional  order  attenuation  (i.e.,  approximately  ∝1/f0.1),  which                       the biological signal over time, a critical aspect in electrophysiol-
+has been recently attributed to the non-ideal capacitive response                             ogy   research   and   for   the   long-term   performance   of   brain-
+of  the  graphene-electrolyte  interface34.  A  calibration  method  to                       computer  interfaces61,62.  Furthermore,  the  polymers  used  as  a
+correct   such   transconductance   variation   has   also   been   pro-                      substrate and passivation layers could be modiﬁed to reduce the
+posed34. The evolution of the frequency response does not show                                moisture  absorption14,63  and  displace  the  neutral  plane  of  the
+major changes in the slope of the gm attenuation, indicating that                             device  at  the  position  of  the  graphene  channel  (see  “Methods”
+there is not a signiﬁcant increase  in the electrical  impedance in                           section).   Yet,   the   results   presented   in   this   section   reveal   a
+series   with   the   graphene-electrolyte   interface   due   to   device                    promisingly  stable  performance  over  time,  which  sets  a  lower
+encapsulation60. To conclude, Fig. 3g shows the recorded neural                               bound   for   the   stability   of   g-SGFETs   in   a   chronic   implant
+activity in a state of increased theta power in day 1 and day 6 after                         environment. Besides, from a system perspective, we show that g-
+implantation,  illustrating  the  good  homogeneity  and  stability of                        SGFET arrays can measure very slow biological signals (high-pass
+the  g-SGFETs  performance.  Future  studies  could  address  in                              ﬁltered above 1 mHz).
+
+6                                 NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications

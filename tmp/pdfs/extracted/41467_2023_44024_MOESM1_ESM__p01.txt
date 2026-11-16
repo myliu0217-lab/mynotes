@@ -1,0 +1,28 @@
+Supplementary  Figures  for  ‘Flexible  switch  matrix  addressable  electrode  arrays  with
+
+organic electrochemical transistor and pn diode technology’
+
+Ilke  Uguz1,#,  David  Ohayon2,  Volkan  Arslan1,  Rajendar  Sheelamanthula3,              Sophie  Griggs4,
+Adel Hama2, John William Stanton1, Iain McCulloch3,4, Sahika Inal2, Kenneth L. Shepard1
+
+
+
+1 Electrical Engineering Department, Columbia University, New York 10027, NY, U.S.A.
+
+
+
+2 Organic Bioelectronics Laboratory, Biological and Environmental Science and Engineering
+
+Division, King Abdullah University of Science and Technology (KAUST), Thuwal 23955‐6900,
+Saudi Arabia.
+
+
+3 Physical Science and Engineering Division, KAUST, Thuwal 23955-6900, Saudi Arabia.
+
+
+
+4 Department of Chemistry, University of Oxford, Oxford OX1 3TA, United Kingdom.
+
+
+Correspondence should be addressed to I.U. (email: ilkeuguz@gmail.com).
+

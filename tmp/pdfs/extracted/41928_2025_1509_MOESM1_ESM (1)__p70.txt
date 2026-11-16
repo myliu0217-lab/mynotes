@@ -1,0 +1,50 @@
+73           Obien, M. E. J., Deligkaris, K., Bullmann, T., Bakkum, D. J. & Frey, U. Revealing neuronal
+        function through microelectrode array recordings. Front Neurosci    8 (2015).
+        https://doi.org/10.3389/fnins.2014.00423
+74         Sartori, A., Maloberti, F., Simoni, A. & Torelli, G. A 2D photosensor array with integrated
+        charge amplifier. Sensors and Actuators A: Physical    46, 247–250 (1995).
+        https://doi.org/10.1016/0924-4247(94)00899-s
+75 Kong, S. et al. An Investigation of Electromagnetic Radiated Emission and Interference
+        From Multi-Coil Wireless Power Transfer Systems Using Resonant Magnetic Field
+        Coupling. IEEE Transactions on Microwave Theory and Techniques 63, 833–846 (2015).
+        https://doi.org/10.1109/tmtt.2015.2392096
+76        Redoute, J. M. & Steyaert, M. S. J. EMI-Resistant CMOS Differential Input Stages. IEEE
+        Transactions on Circuits and Systems I: Regular Papers   57, 323–331 (2010).
+        https://doi.org/10.1109/tcsi.2009.2023836
+77     Binkley, D. M. in 2007 14th International Conference on Mixed Design of Integrated
+        Circuits and Systems    47–60 (2007).
+78 Sharma, M. et al. Acquisition of Neural Action Potentials Using Rapid Multiplexing
+        Directly at the Electrodes. Micromachines 9 (2018). https://doi.org/10.3390/mi9100477
+79       Poujois, R. & Borel, J. A low drift fully integrated MOSFET operational amplifier. IEEE
+        Journal of Solid-State Circuits           13, 499–503 (1978).
+        https://doi.org/10.1109/jssc.1978.1051084
+80          Choksi, O. & Carley, L. R. Analysis of switched-capacitor common-mode feedback circuit.
+        IEEE Transactions on Circuits and Systems II: Analog and Digital Signal Processing 50,
+        906–917 (2003). https://doi.org/10.1109/tcsii.2003.820253
+81    Gupta, S., Saxena, V., Campbell, K. A. & Baker, R. J. in 2009 IEEE Workshop on
+        Microelectronics and Electron Devices    1–4 (2009).
+82         Tavares, S. E. A Comparison of Integration and Low-Pass Filtering. IEEE Transactions on
+        Instrumentation and Measurement             15, 33–38 (1966).
+        https://doi.org/10.1109/tim.1966.4313498
+83         Yoshizawa, H., Huang, Y. & Temes, G. C. Improved SC amplifiers with low sensitivity to
+        op-amp imperfections. Electronics Letters 33 (1997). https://doi.org/10.1049/el:19970254
+84       Liu, C.-C., Chang, S.-J., Huang, G.-Y. & Lin, Y.-Z. A 10-bit 50-MS/s SAR ADC With a
+        Monotonic Capacitor Switching Procedure. IEEE Journal of Solid-State Circuits 45, 731–
+        740 (2010). https://doi.org/10.1109/jssc.2010.2042254
+85 Banba, H. et al. A CMOS bandgap reference circuit with sub-1-V operation. IEEE Journal
+        of Solid-State Circuits 34, 670–674 (1999). https://doi.org/10.1109/4.760378
+86        Wang, H., Zhang, Z., Li, Y. & Feng, Z. A Wideband Differential-Fed Slot Antenna Using
+        Integrated Compact Balun With Matching Capability. IEEE Transactions on Antennas and
+        Propagation 62, 5394–5399 (2014). https://doi.org/10.1109/tap.2014.2343238
+87    Kuster, N., Santomaa, V. & Drossos, A. The dependence of electromagnetic energy
+        absorption upon human head tissue composition in the frequency range of 300-3000 MHz.
+        IEEE Transactions on Microwave Theory and Techniques  48, 1988–1995 (2000).
+        https://doi.org/10.1109/22.884187
+88       Andreuccetti, D., Fossi, R. & Petrucci, C. An Internet resource for the calculation of the
+        dielectric properties of body tissues in the frequency range 10 Hz - 100 GHz.  (IFAC-CNR,
+        Florence (Italy), 1997).
+89      Mei-Chao, Y., Ren-Chieh, L., Zuo-Min, T. & Wang, H. in 2005 IEEE Radio Frequency
+        integrated Circuits (RFIC) Symposium - Digest of Papers    451–454 (2005).
+
+
+                                                       69

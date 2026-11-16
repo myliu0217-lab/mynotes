@@ -1,0 +1,82 @@
+CISNEROS-FERNÁNDEZ            et al.: 1024-CHANNEL 10-BIT 36-µW/CH CMOS ROIC FOR MULTIPLEXED GFET-ONLY SENSOR ARRAYS                                                       875
+
+
+
+[84]  J. Cisneros-Fernándezet al., “A 1024-Channel GFET 10-bit 5-kHz 36-µW                                                           Xavi Illa   received the B.Sc. degree in physics, the
+       read-out integrated circuit for brain        µECoG,” in      Proc.  IEEE  Int.  Conf.                                         M.Sc. degree in engineering physics, and the Ph.D.
+       Electron., Circuits Syst., 2020, pp. 1–4.                                                                                     degree in physics from the Universitat de Barcelona,
+[85]  C. Hébert    et al., “Flexible graphene solution-gated ﬁeld-effect transistors:                                                Spain, in 2004, 2008, and 2010, respectively. In 2011,
+       Efﬁcient transducers for micro-electrocorticography,”             Adv. Funct. Mater.,                                         he joined the Biomedical Applications Group, Institut
+       vol. 28, no. 12, Nov. 2018, Art. no. 1703976.                                                                                 de Microelectrònica de Barcelona, Centro Nacional
+[86]  N.  Schaefer     et  al.,  “Improved  metal-graphene  contacts  for  low-noise,                                                de Microelectrónica, IMB-CNM (CSIC), as a Post-
+       high-density microtransistor arrays for neural sensing,”           Carbon, vol. 161,                                          doctoral Researcher funded by the Centro de Investi-
+       pp. 647–655, 2020.                                                                                                            gación Biomédica en Red (CIBER) in the subject area
+[87]  R. Garcia-Cortadella       et al., “Switchless multiplexing of Graphene active                                                 of Bioengineering, Biomaterials and Nanomedicine
+       sensor arrays for brain mapping,”Nano Lett., vol. 20, no. 5, pp. 3528–3537,                                                   (CIBER-BBN).  In  2014,  he  became  a  permanent
+       2020.                                                                                         Researcher of CIBER-BBN, while being attached for research at IMB-CNM.
+[88]  C. Mackinet al., “A current-voltage model for Graphene electrolyte-gated                       His research interests include the development of advanced microfabrication
+       ﬁeld-effect transistors,”    IEEE Trans. Electron. Devices, vol. 61, no. 12,                  techniques for thin ﬁlm processing, including the use of graphene for novel im-
+       pp. 3971–3977, Dec. 2014.                                                                     plants and prosthesis. In parallel, he is also active in the ﬁeld of organ-on-a-chip
+[89]  N.  Mavredakis,  R.  G.  Cortadella,  A.  B.  Calia,  J.  A.  Garrido,  and  D.                by developing novel microphysiological systems for modeling and monitoring
+       Jiménez, “Understanding the bias dependence of low frequency noise in                         biological barriers.
+       single layer Graphene FETs,”        Nanoscale, vol. 10, pp. 14947–14956, 2018.
+[90]  C.-H. Chianget al., “Development of a neural interface for high-deﬁnition,
+       long-term recording in rodents and nonhuman primates,”Sci. Transl. Med.,
+       vol. 12, no. 538, pp. 1–18, 2020.                                                                                             Javier Martínez-Aguilar          received the B.Sc. degree
+[91]  R. Garcia-Cortadellaet al., “Distortion-free sensing of neural activity using                                                  in electronic engineering for telecommunication and
+       graphene transistors,”     Small, vol. 16, no. 16, 2020, Art. no. 1906640.                                                    the  M.Sc.  degree  in  telecommunications  engineer-
+[92]  A. Guimerà-Brunet        et al., “Neural interfaces based on ﬂexible Graphene                                                  ing  from  the  Universitat  Autònoma  de  Barcelona,
+       transistors: A new tool for electrophysiology,” in         Proc. IEEE Int. Electron.                                          Spain, in 2015 and 2017, respectively. Since 2016,
+       Devices Meeting, 2019, pp. 18.3.1–18.3.4.                                                                                     he has been with the Group of Biomedical Applica-
+[93]  A. Bonaccini, “Graphene ﬁeld-effect transistors as ﬂexible neural inter-                                                       tions, Institut de Microelectrònica de Barcelona, Cen-
+       faces for intracortical electrophysiology,” Ph.D. dissertation, Dept. Elec-                                                   tro Nacional de Microelectrónica, IMB-CNM(CSIC),
+       tron. Eng., Bellaterra, Spain, Universitat Autònoma de Barcelona, 2021.                                                       Spain, on the topic of developing software and hard-
+[94]  S. Rakheja, Y. Wu, H. Wang, T. Palacios, P. Avouris, and D. A. Antoniadis,                                                     ware for graphene transistors for bio-applications.
+       “An  ambipolar  virtual-source-based  charge-current  compact  model  for
+       nanoscale Graphene transistors,”IEEE Trans. Nanotechnol., vol. 13, no. 5,
+       pp. 1005–1013, Sep. 2014.
+[95]  S. Sutula, M. Dei, L. Terés, and F. Serra-Graells, “Variable-mirror ampli-
+       ﬁer: A new family of process-independent Class-AB single-stage OTAs                                                           Jens  Paetzold      received  the  University  degree  in
+       for low-power SC circuits,”        IEEE Trans. Circuits Syst. I, vol. 63, no. 8,                                              physics from the Physical Institute, University of Tue-
+       pp. 1101–1110, Aug. 2016.                                                                                                     bingen, Germany, in 1997, and the Ph.D. degree from
+                                                                                                                                     the University of Tuebingen, Germany, in 2002, for an
+                                                                                                                                     experimental work conducted at the accelerator of the
+                                                                                                                                     Svedberg Laboratory, Uppsala, Sweden, in medium
+                                                                                                                                     energy particle physics about two pion production in
+                                                                                                                                     proton-proton collisions. From 2002 to 2007, he was a
+                                Jose Cisneros-Fernández          received the B.Sc. degree                                           Postdoctoral Researcher with Visual Pathway Group,
+                                in industrial electronics and automatic control, and                                                 University Eye Hospital Tuebingen, Germany, on the
+                                the  M.Sc.  degree  in  electronics  engineering  from                                               topic of visual ﬁeld diagnostics. Since 2008, he has
+                                the  Universitat  Politècnica  de  Catalunya,  Spain,  in            been an employee at Multi Channel System MCS GmbH, Germany, developing
+                                2013 and 2016, respectively. He is currently working                 software and ﬁrmware for their devices. Since 2018, he has been the Head of
+                                toward the Ph.D. degree on hybrid ROIC interfaces                    ﬁrmware development.
+                                for high-density and large-area         µECoG brain map-
+                                ping with the Integrated Circuits and Systems Group,
+                                Institut  de  Microelectrònica  de  Barcelona,  Centro
+                                Nacional  de  Microelectrónica,  IMB-CNM  (CSIC),                                                    Rainer Mohrlok        studied physics, turkish, and arabic
+                                Spain.                                                                                               in Stuttgart and Tuebingen, Germany. From 1998 to
+                                                                                                                                     2007,  he  was  a  Freelancer  with  Würth  Elektronik
+                                                                                                                                     GmbH,  Germany.  In  2007,  he  joined  Multi  Chan-
+                                                                                                                                     nel  Systems  MCS  GmbH,  Germany,  as  a  Senior
+                                                                                                                                     Electronic Engineer with the Hardware Development
+                                                                                                                                     Team.
+                                Ramon  Garcia-Cortadella            received  the  B.Sc.  de-
+                                gree  in  nanoscience  and  nanotechnology  from  the
+                                Universitat Autònoma of Barcelona, Spain, in 2014,
+                                the  M.Sc.  degree  in  physics  from  the  Ludwig-
+                                Maximillians-Universität,   Munich,   Germany,   and
+                                the Ph.D. degree in electronic and telecommunica-                                                    Marius  Kurnoth         received  the  Diploma  in  elec-
+                                tions engineering from the Universitat Autònoma de                                                   trotechnics IC-design from the University of Applied
+                                Barcelona, in 2021. He currently holds an Alexan-                                                    Science of Cologne, Germany, in 2001. From 2001
+                                der  von  Humboldt  Postdoctoral  Scholarship  with                                                  to 2010, he was an ASIC Design Engineer with Agi-
+                                Cognition and Neural Plasticity Laboratory, Ludwig-                                                  lent Technologies. In 2010, he joined Multi Channel
+                                Maximillians-Universität. His research interests in-                                                 Systems MCS GmbH, Germany, as a FPGA Engineer
+clude the development of high-bandwidth neural interfaces, mapping the elec-                                                         with Firmware Development Team.
+trical activity in the brain across large areas with high spatio-temporal reso-
+lution, and investigating the role of infra-slow activity on the coordination of
+high-frequency patterns of neural activity.
+
+
+
+
+           Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

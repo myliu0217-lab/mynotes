@@ -1,0 +1,70 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+interface,  maximize  conductance  of  interconnects  and  maximize                        integration densities. Our study demonstrates that epicortical MUA
+insulation  impedance.  The  elements  deﬁning  the  interconnects  and                    recordings from anesthetized rat brains, obtained with passive thin-
+ampliﬁer’s input impedance remain typically unchanged throughout                           ﬁlm implants and a commercial readout system, are compromised by
+the recording period, while elements deﬁning the neural implant are                        crosstalk occurring along the brain-to-ampliﬁer chain. Indeed, under-
+dynamic and evolve along the course of the implantation, with chronic                      standing the direct impact of miniaturization on the quality of recor-
+settings being the most critical. This in turn means that the transfer                     ded  neural  data  is  fundamental.  One  thing  is  to  have  a  functional
+function of the recording system is constantly evolving and will be                        implant and one other entirely is to have an optimized technology that
+unique to each setting.                                                                    transfers signals from brain to computer with minimal information loss
+     Pinpointing  design  rules  for  such  complex  systems  is  difﬁcult,                in between.
+because they are in practice a compromise between many variables.                                This work emphasizes the importance of electrically characteriz-
+For  example,  electrode  miniaturization  has  the  goal  of  increasing                  ing a recording system before signal acquisition. Not only the neural
+spatial selectivity and extending the recorded frequency bandwidth,                        implant itself should be considered, but all blocks building the chain
+but it comes at the expense of higher tissue-electrode impedance. This                     up to the ampliﬁer, as limiting coupling paths may be found at higher
+justiﬁes  all  the  research  going  into  developing  superior  electrode                 levels in the recording chain. The lumped-element model  proposed
+materials and coatings that ultimately lower the electrode impedance                       here serves as a generalized and valuable toolbox that can be para-
+per unit area24. It is therefore impractical to put a threshold on what is                 metrized  for  any  readout  system.  Parameters can  be  tuned  to  test
+an acceptable tissue-electrode impedance, as it heavily depends on the                     particular scenarios, such as the biotic encapsulation of an electrode or
+application and type of data being acquired. Similarly, a trade-off can                    breakage of the insulation layer, making crosstalk assessment more
+be identiﬁed for the insulation impedance of both implant and inter-                       pragmatic. Here, for the ﬁrst time, modeling and signal analysis are
+connects. On one hand increasing the number of recording channels                          bridged together via a crosstalk back-correction algorithm developed
+and density, on the other hand using soft, ﬂexible and ultra-thin sub-                     to reconstruct real neural data in an effort to show how parametriza-
+strates to minimize the mechanical mismatch to the tissue, ultimately                      tion of the system can have a true effect on the outputted data.
+pushing the boundaries of an effective insulation between channels. It                           In  summary,  the  value  of  this  study  resides  on  the  following
+is also relevant to consider that all these building blocks have capaci-                   points: (1) model parametrization is done in a step-by-step and easily
+tive  components,  meaning  they  are  frequency  dependent.  While                        transferable  manner,  where  all  lumped  elements  are  backed-up  by
+crosstalk increases with frequency, electrode impedance on the other                       experimental impedance spectroscopy data; (2) signal correlation and,
+hand decreases with frequency due its dependency on capacitive dis-                        more speciﬁcally, spike cross-correlation are found to be indicators
+placement  currents,  which  in  turn  reduces  coupling.  Importantly,                    that differentiate crosstalk inﬂuence from volume conduction; (3) an
+impedance threshold values for single elements at speciﬁc frequencies                      unprecedented crosstalk back-correction algorithm is developed as a
+fail to take into consideration how all blocks play out together when                      method  to  validate  our  crosstalk  contamination  hypothesis.  These
+connected, and in dependency of the frequency being recorded. Plugs                        ﬁndings can contribute to changing the approach towards optimiza-
+and connectors which have to be connected for recording sessions, for                      tion  and  standardization  of  neural  acquisition  systems,  and  hence
+example,  are  quite  often  completely  neglected.  However, ﬂuid  and                    maximize the recording potential of modern neural implants. Indeed,
+particles  could  strongly  change  contact as well  as  pin-to-pin impe-                  mitigating crosstalk supports accurate signal transfer from brain to
+dance. Applied forces could lead to deterioration of the contact with                      computer, helping ensure acquisition of ground truth data to decipher
+increased  resistance  and  decreased  insulation  properties  due  to                     functions of the brain.
+adhesion  failure  of  the  encapsulant  (epoxy  or  dental  cement,  for
+example). These  long-term  effects  go  far  beyond  the  scope  of  this                 Methods
+study but should also be kept in the mind when conducting chronic                          Thin-ﬁlm device fabrication
+experiments with transcutaneous headstages.                                                The thin-ﬁlm devices were fabricated using standard microlithography
+     Following  a  different  approach,  this work  encourages  users to                   techniques in the clean-room facility (ISO 5, according to ISO 14644–1)
+consider  crosstalk  as  a  key  speciﬁcation  deﬁning  the  quality  of  a                at the Department of Microsystem Engineering (IMTEK) of the Uni-
+recording system, just as it is routinely done for active neural implants.                 versity of Freiburg. The fabrication process started with spin-coating
+For  the  purpose  of  this  study,  we  have  computed  crosstalk  from  a                of polyimide (U-Varnish-S, UBE Industries, Ltd, Japan) on a bare silicon
+lumped-element model, with all its building blocks being applicable to                     wafer  at  a speed of  4500 rpm,  providing  a ﬁlm thickness  of  4 μm.
+any other system. However, a more straightforward way to quantify                          Afterwards,  curing  was  done  at  450 °C.  The  high  precision  image-
+crosstalk of a transmission line is to use dedicated equipment, such as                    reversal photoresist AZ 5214 E (Micro-Chemicals GmbH, Germany) was
+a network analyzer. As a general rule, attenuations of <−40 dB become                      used as sacriﬁcial layer for the patterning of the metallization layer,
+signiﬁcant. On the data side, we emphasize the importance of vali-                         which included electrodes, tracks and pads. An oxygen plasma surface
+dating baseline recordings before diving into further analysis. Com-                       activation was performed to promote adhesion (80 W, Plasma System
+puting signal correlation and, more speciﬁcally, spike cross-correlation                   300-E, PVA TePla, Germany) prior to the evaporation of a 300 nm-thick
+and checking those against the routing layout is a good method to                          platinum   layer   (Univex   500   Electron-Beam   Evaporator,   Leybold
+exclude crosstalk contamination, as they are found to be indicators                        GmbH, Germany). The metal was structured in a lift-off step consisting
+discerning crosstalk inﬂuence from volume conduction. As a reminder,                       of  three  acetone  baths.  After  another  oxygen  plasma  activation,  a
+here  we  use  a  crosstalk-back  correction  algorithm  to  validate  our                 second polyimide layer of 4 μm was spun and cured. For patterning of
+hypothesis, but not to encourage its use as a strategy to restore low-                     the openings and outlines, the thick positive resist AZ 9260 (Micro-
+quality, crosstalk-contaminated data.                                                      Chemicals GmbH, Germany) was used as masking layer. The structur-
+                                                                                           ing  was  done  by  reactive-ion-etching  (STS  Multiplex  ICP,  SPTS
+Concluding summary                                                                         Technologies, United Kingdom) in a two-step process, ﬁrst at 200 W
+Considering  the  increasing  demand  for  miniaturization  and  higher                    andthenat100W.Theremainingresistwasthenstrippedinacetone.
+spatial selectivity in neural recordings, it is essential to ensure that                   Details on the design of the probe are provided in Fig. 9.
+recorded signals remain genuine to the local activity underlying each
+single  electrode.  Coupling  and  blending  of  signals  emerging  from                   Connector assembly
+different cortical spots must be avoided at all costs, as it results in                    The  thin-ﬁlm  device  was  mounted  and  assembled  on  a  connector
+reduced  spatial  discrimination,  thus  defying  the  purpose  of  higher                 stage, as sketched in Fig. 9. Five layers of HTCC (high temperature
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                           10

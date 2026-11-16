@@ -1,0 +1,77 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+        ab dFFT
+                               5 mm
+
+
+                                         Connector 2
+
+
+
+
+                                         Connector 1
+
+
+                                         Tracks
+
+
+                                                          A
+
+                                         Electrode        B
+                                         Array            C
+
+                  Rat                                     D
+                                       c                          A           VACT
+                                  VIN          HN
+
+                                                                  B           VNEAR
+
+                                                     HM
+                                                                  C           VMID
+
+                                                           HF
+                                                                  D           VFAR
+
+
+Fig. 7 | The crosstalk back-correction algorithm. a Picture of the recording setup,              VACT, VNEAR, VMID and VFAR stand for the output signals of the active line (ACT) and
+depicting the thin-ﬁlm implant, the Omnetics-nano connector stage, the inter-                    the three passive lines, named in accordance to their distance to ACT (NEAR, MID
+mediate adapter board and the ZIF-Clip® headstage. b The recording channels are                  and FAR). The coupling between the active line and each of the three passive lines is
+routed in sets of four throughout the whole recording chain. Taking a repre-                     simpliﬁed as three blocks with transfer function HN (between ACT and NEAR), HM
+sentative column of four electrodes, the top electrode A is deﬁned as active (purple             (between ACT and MID) and HF (between ACT and FAR). d Transfer functions HN,
+color), while the bottom three electrodes B, C and D are deﬁned as passive (gray                 HM and HF, computed as the ratio between the Fast Fourier Transform (FFT) of the
+color). c Extension of the two-line transmission model from Fig. 4 to a four-line                output signal of the respective passive line (VNEAR, VMID and VFAR) and the FFT of the
+model, representing each set of four electrodes. VIN stands for the input signal, a              outputsignaloftheactiveline(VACT).
+sinc wave with 4 kHz bandwidth and 100 ms duration injected into the active line.
+
+
+resistance RS  results  in high-amplitude  negative  and  positive  peaks                        convenient for further processing in the frequency domain, since its
+(peak-to-peak amplitude  reaches  16%  of  the  active  signal),  although                       Fourier transform is a rectangular pulse, thus having a constant mag-
+slow oscillations are lost. A drop in insulation capacitance CInt  also                          nitude in the whole frequency spectrum. The coupling between the
+yields  a  sharp  and  high-amplitude  negative  peak  but  distinctly  buf-                     active line and each of the passive lines can be described by individual
+fered positive peak. Very differently, a boost in double layer capaci-                           transfer functions: HN for the near line, HM for the mid line and HF for
+tance CH is not associated with particularly large peaks, but the slow                           the far line. Each transfer function is computed as the ratio between
+components are highly preserved.                                                                 the FFT (fast Fourier transform) of the output signal of the respective
+                                                                                                 passive line (VNEAR, VMID and VFAR) and the FFT of the output signal of
+Crosstalk back-correction algorithm                                                              theactiveline(VACT), as deﬁned by the Eq. 1.1–3.
+The recording system used in this work is particularly suitable to study
+the inﬂuence of crosstalk on the recorded data because the routing                                                                  HN =   FFTðV NEARÞ
+layout is symmetrical along the whole chain. In fact, the four electrodes                                                                   FFTðV ACT Þ                                               ð1:1Þ
+forming each column of the microelectrode grid (Fig. 3a) are neigh-
+bors throughout all stages of the recording system, from thin-ﬁlm to                                                                 HN =   FFTðV MIDÞ
+Omnetics connector to ZIF-Clip® headstage, as shown in Fig. 7a, b.                                                                          FFTðV ACT Þ                                              ð1:2Þ
+Therefore, crosstalk is boosted within these sets of four channels.
+      In principle, if the signal distortions discussed in Section 2.1 are                                                                  FFTðVFARÞ
+indeed a consequence of crosstalk, then it should be possible to use                                                                 HN =   FFTðV ACT Þ                                              ð1:3Þ
+the  transfer  function  generated  by  the  lumped-element  model  as  a
+correction tool. This would allow extracting the true signals from the
+crosstalk-corrupted  signals.  In  order  to  do  so,  the  two-line  model                            These three transfer functions describe the coupling between any
+(Fig. 4) is extended to a four-line model, as shown in Fig. 7c, repre-                           two  lines  within  any  of  the  sets  of  four  channels  composing  the
+senting each set of four electrodes composing a column of the elec-                              recording system. The spectrum ranges up to 4 kHz, determined by
+trodegrid.Thetoplineisdeﬁned as the active (ACT) and the other                                   the bandwidth of the input sinc wave (Fig. 7d).
+three as passive, each of them named according to their distance to the                                The  crosstalk-corrupted  signals  recorded  by the  four  channels
+active line: NEAR, MID and FAR.                                                                  composing each column of the grid are hereby denominated A, B, C
+      A sinc wave with 4 kHz bandwidth and 100 ms duration is injected                           and D (Fig. 7b, c). Each channel is given by its true signal plus the true
+into  the  active  line  as  input  signal  VIN  (Fig.  7d).  This  waveform  is                 signal   of   each   of   the   other   three   channels   multiplied   by   the
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                             7

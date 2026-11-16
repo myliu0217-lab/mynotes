@@ -1,0 +1,68 @@
+                      This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                             content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                       4
+
+compared to conventional systems [15]. Furthermore, it offers                         digital dynamic power dissipation C´V2´(32fCLK).
+the advantage of eliminating the need for EOV-modulators and                             Fig. 4(c) shows the proposed solution that eliminates the use
+demodulators.       The   total   area   and   power   savings   in   the             of   fine/coarse   DACs   or        DS-modulators,         which     ultimately
+EOV/LFP module is 3.68´ and 2.8´, respectively.                                       relaxes the DAC requirements from 18-bits to 10-bits. Since the
+  To  study  the  stability  of  the  system            with  the  proposed           DSP output signal, VFB, is 18-bits, the signal can be split into a
+EOV/LFP filter, assume a linear system with block gains of Av,                        coarse    10-bits   MSBs      and  fine   8-bits   LSBs.  If  the  gain  path
+GADC,   GFB,  and    GDAC     for  the  neural  amplifier,  the  ADC,  the            defined as 𝐺.      =	𝑉//𝑉0 is determined, then the LSBs can be
+feedback bandwidth controller, and the DAC, respectively. GFB                         subtracted in the digital domain instead of the analog domain,
+is added to provide an extra degree of freedom to easily control                      whereas the MSBs are set to be large enough to drive the neural
+the bandwidth while maintaining system stability. By applying                         amplifier   out   of   saturation        caused   by     EOV   signals.        To
+Mason’s   gain   formula,        the  overall  system  block  diagram                 determine      𝐺.	on  system  startup,  a  calibration  mode  initiates
+transfer function is derived as,                                                      with SWCal set to logic high. A digital ±1 dither signal is injected
+                                                                                      through the coarse DAC, and a delayed version of the dither is
+                 𝑉!,#$               𝐴’	𝐺#()	𝑧*+	(1       −  𝑧*&)                     injected  to    u[n]    port  of  a  Sign-Sign  LMS          AF.  The     AF    is
+     𝐻(𝑧)    =	  𝑉       =   1	 +	(𝐴     	𝐺     	𝐺    	𝐺      	−  	1)	𝑧*&             connected in  an  interference-cancelling  scheme.  The  injected
+                   !,%&                ’   #()     ,-   (#)
+                                                                                      dither is recorded by the ADC and fed into the d[n] port of the
+                             𝜎	𝑧*+	(1    −  𝑧*&)                                      AF. The AF then compares the original dither to the amplified
+                         =      1	  +  	𝜁	𝑧*&      																																				(1) dither  and  determines  the  gain  factor  by  the  interference-
+where s = Av GADC, and 𝜁 = Av GADC GFB GDAC - 1. Fig. 3 shows                         canceling algorithm following:
+the proposed system’s poles and zeroes, for N = 16 channels, Av
+= 200, GADC = 210, and GDAC = 2-18. Then, the system stability                             𝑤[𝑛   +   1] =   𝑤[𝑛]   +  		𝑆𝑔𝑛(𝑢[𝑛])	𝑆𝑔𝑛(𝑑[𝑛]           −  𝑦[𝑛])						(2)
+can be analyzed with various feedback gain values for GFB = {1,
+2-1, 2-2}. The system remains stable if the term |𝜁|                ≤  1, since       where the Sgn operator is defined as
+the  parameters      Av,  GADC,  and     GDAC have  their  values  set  to
+achieve  specific  system  performances. The  parameter 𝜁 also                                                                1; 												𝑥>0
+controls the high-pass cutoff frequency of the action potential                                              𝑆𝑔𝑛(𝑥)     =	  >0;  												𝑥=0
+(AP) band, as seen in Fig. 3. As the poles approaches the unit                                                               −1;   									𝑥<  0
+circle by decreasing GFB, the high-pass cutoff is pushed to lower                     The gain block µ is a constant set by the designer which controls
+frequencies. The parameter GFB is set such that the LFP band is                       speed and accuracy of the AF. Once the AF converges, SWCal
+set to ~300 Hz. It is imperative that the stability requirement of                    switches to logic low and the AF w’[n] port exports the path
+|𝜁| ≤  1   is   satisfied   across   corners   during   system   design.              gain defined as
+Otherwise, an adaptive filter (AF) will be required to guarantee
+stability with the highest loop gain [15].                                                                        𝐺   =	𝐺        	𝐴  	𝐺                                   (3)
+                                                                                                                    .       123     4   213
+B.   Feedback DAC Resolution
+  Neural  recording  systems  usually  operate  on  low  supply                       Afterwards,      𝐺.   is  sampled  and  stored,  then  the  calibration
+voltages of  less than 1.2 V and require an IRN less than 5 µVrms,                    module   is   powered   down   to   save   power.             VFB    LSBs     are
+[15],  [18],   [13],   [23].  The  feedback  DAC           injects  its  output       multiplied by 𝐺. and added to the ADC output. The Sign-Sign
+directly at the input of the AFE, hence sets strict requirements                      LMS is considered one of the simplest AF as it consists of two
+for the quantization noise produced during digital and analog                         sign-multipliers;      u[n] is ±1  dither  signal and  is  connected  to
+subtraction of EOV/LFP signals from the AFE input. To fulfill                         both multipliers. The factor µ is implemented as a right-shift
+the noise criterion mentioned earlier in Section I, the feedback                      operator by 9-bits.
+DAC should have a precision of at least 18 bits. Fig. 4(a) shows                         On comparing a digitally synthesized DS modulator operating
+a conventional solution to relax the DAC requirements by using                        at 32 ´ fClk with the proposed Sgn-Sgn LMS running at fClk, the
+a coarse and fine DAC in feedback. The fine DAC is relaxed as                         overall  digital  module  area           of  the  proposed  technique           is
+it benefits from the gain of the neural amplifier. However, two                       observed to be higher by a factor of 3´. Nonetheless, the power
+problems  arise  from  this  architecture:  1)          more  active  area  is        consumption is significantly reduced by a factor of 10.1´. The
+required to implement both DACs; 2) the fine DAC LSBs must                            proposed approach is regarded as superior due to its utilization
+be multiplied by a digital gain of -1 ´ GDAC-I ´ AV to get the                        of an fClk of 320 kHz, whereas the DS modulator necessitates an
+accuracy   required,   however,   the   coarse   DAC   and   neural                   on-chip    clock    generator    functioning    at    10.24    MHz.
+amplifier  gains  are  affected  by  process  mismatch  which  will                   Additionally, the parameter GFB is automatically set since the
+introduce non-linearity to the recorded neural signal [16], [13].                     loop gain 𝐺. is determined after calibration without the need for
+Fig. 4(b) shows prior-art solution where a truncation error DS                        full LMS AF as proposed in [15].
+modulator is used, the DS is operating with an oversampling                           C.   Neural Amplifier Flicker Noise
+ratio (OSR) of higher than 32 ´ fCLK [15]. The later reduces the                      In multiple-access neural recording AFEs, the neural amplifier
+active area, but it requires higher power consumption due to the
+
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                      © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

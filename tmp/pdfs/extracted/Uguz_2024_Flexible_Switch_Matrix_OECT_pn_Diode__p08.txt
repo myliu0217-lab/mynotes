@@ -1,0 +1,77 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+
+          a)                                                                        b)26 μm
+
+
+
+                                                   40 μm
+
+
+
+                                             50 μm                                                            500 μm
+                                                                                                               c)
+
+                                                                                                                          1
+
+
+                                                                                                                       0.1
+
+
+                                                                                                                      0.01
+
+
+
+                                                                                                  50 μm                    1                                    10                                       100
+                                                                                                                                                      Frequency (Hz)
+                                        d)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                             1                                            0LFP Power (arb. units)                                                                            1 sec
+
+                                         e)                                                                              f)
+
+
+                                               10
+
+
+
+
+
+
+                                                1                                                                                 100 μm
+                           50 μm                   0                Frequency (Hz)                   40
+
+
+Fig. 5 | Integration of 8 × 4 cross-point topography inside a 50 µm shank for                               spectra of the OED–OECT stack acquired in saline within 0.1–100 Hz frequency
+in vivo LFP recordings. a A micrograph of a 32-channel shank with 26 μm pixels                              range. d Local ﬁeld potential waveform from the top 13 channels. The color map is
+and 40 μm pitch. In the inset, the ﬂexibility of the shank is illustrated by wrapping                       expressed in arbitrary units as a function of LFP power within the 0.1–40 Hz fre-
+the structure around a 1 mm pipette (n = 8 devices). b Implantation process of the                          quency band and is added to illustrate the power decay of recorded LFPs as a
+multiplexer shank. The ﬂexible shank is laminated on the exposed surface of the                             function of distance (n = 3 implantations). e LFP power as a function of frequency
+brain. A carrier glass pipette is anchored to the shank extension with a through-                           within the 0.2–40 Hz frequency band. f H&E staining images were acquired 1 month
+hole. A pipette is subsequently used to insert the shank and retracted to leave the                         after the probe implantation. The implantation zone is noted by an orange circle.
+fully ﬂexible dual probe inserted inside the visual cortex of the brain. c Noise                            The dashed orange circle delineates the implantation zone.
+
+
+
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                              8

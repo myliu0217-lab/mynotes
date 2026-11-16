@@ -1,0 +1,47 @@
+                                               ω୪୮ ൌ           12.24ൈ𝑇
+                                                                   ூே்
+where coefficient 2.24 is the result of boxcar averaging 82 whose transfer function is a sinc function
+(Supplementary Fig. 6f). In this design, 𝐼் is globally programmable from 0.625 to 4.375 µA, 𝐼஽
+is half of 𝐼், ௚೘೛ூವ is 22 V−1, ௚೘೙ூವ   is 26 V−1, and 𝑇ூே் is 29.38 µs. Since the input transistors are
+biased in the weak inversion region, their ௚೘ூವ         values stay nearly constant with differential values
+of 𝐼஽. Custom designed 3-V logical cells (Supplementary Fig. 6d) are used to generate the control
+signals to the neural amplifier.
+
+The programmable gain amplifier (PGA) (Supplementary Fig. 7) consists of a charge amplifier
+stage (Supplementary Fig. 7a) followed by a programmable gain stage (Supplementary Fig. 7b).
+The operation of the charge amplifier involves an operational transconductance amplifier (OTA)
+switching between two sets of feedback capacitors. When one set of the metal-insulator-metal
+(MIM) capacitor is used in amplification, the other set is reset to ground and the common-mode
+voltage (VCM). This operation allows almost an entire clock cycle to be used for OTA settling,
+relaxing the bandwidth requirement of the OTA and reducing power consumption. The charge
+amplifier stage significantly reduces the nonlinearity of the PGA compared to a voltage amplifier
+because the metal-oxide-semiconductor (MOS) sampling capacitors in the pixels are highly
+nonlinear. Direct amplification of the voltage output from the pixels would limit the overall
+effective number of bits (ENOB) to seven bits. With the MIM capacitors for charge transferring,
+the system can have a linearity over 10 bits. The programmable gain stage utilizes a modified
+predictive switched-capacitor amplifier 83. The voltage gain of this stage is programmable from
+1.5 to 5.0. The total voltage gain of the system 𝐴௦௬௦ is given by:
+                                             𝐴௦௬௦ ൌ 𝐴௖𝐶ூே்   ൈ 1.5ீାଵ
+where 𝐶ூே் is 5.44 pF and 𝐺 is a two-bit programmable value from 0 to 3.
+
+Two 10-bit 8.67-MS/s SAR ADC 84 are used to digitize the outputs from the PGA in an interleaved
+operation. The two ADCs effectively work as a single ADC, but the interleaving relaxes the
+conversion time of the ADC and the settling time of the PGA. This reduces the power consumption
+of the ADC and PGA.
+
+The recording process in pixel at row ‘r’, column ‘c’ is controlled by four row lines (PWRR [r],
+CDSR [r], RECR [r], RSTR [r]) and five column lines (PWRC [c], RSTC[c], RECC[c], SEL0C[c],
+SEL1C[c]) as shown in Supplementary Fig. 6d. These control lines operate the recording circuit
+in six phases. The first phase is power-on, and in this phase PWRR and PWRC are activated, turning
+on the bias currents in the neural amplifier. The second and third phases are the amplification phase
+in which auto-zeroing happens. They are differentiated by the toggling of the MOSFET chopper
+switches. When the CDSR and RSTC are activated, a clock divide-by-2 circuit toggles its output,
+consequently, flips the polarity of the chopper. The fourth phase is readout, where RECR and RECC
+are activated, turning on the output MOSFET switches in the neural amplifier and column switches.
+The charges integrated by the neural amplifier are transferred to the programmable gain amplifier
+via the switches, and subsequently digitized by the ADC. The fifth phase is reset, where RSTR and
+RSTC are activated, resetting the charges on the integration capacitors through the reset MOSFET
+switches. The switched-capacitor common-mode feedback (CMFB) also refreshes its biasing point
+at this phase. Additionally, the electrode address for multiplexing will be updated from two column
+
+                                                          5

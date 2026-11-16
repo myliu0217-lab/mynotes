@@ -1,0 +1,47 @@
+the DBS guide to reposition a new chip. The data presented here from the visual cortex are from
+one such replacement chip
+Electrophysiological recordings
+Electrophysiological data from BISC were recorded by a custom LabVIEW (National Instrument)
+software system. Data were transferred over an Ethernet network connection from the relay station
+processor module to a Windows PC, while the chip was configured to record in either 16×16
+channels full chip coverage mode or 32 × 32 channels dense coverage mode. Full chip coverage
+mode was recorded at about 33.9 kS/s per channel whereas the dense coverage mode was recorded
+at about 8.475 kS/s per channel. The LabVIEW software system implemented a trial-based state
+machine responsible for initiating and terminating behavioral trials, tracking eye movements and
+behavior, dispensing reward, controlling visual stimulation, time stamping and database logging
+various events for post-acquisition synchronization and analyses. A real-time display of acquired
+signals is also available in LabVIEW. A pseudorandom digital signal is recorded together with the
+BISC data, and the same signal is separately recorded together with the synchronizing photodiode
+signal described below. The presence of the pseudorandom signal in both recordings allows for
+the precise synchronization of BISC data with visual stimulation.
+Visual stimuli were rendered on a dedicated graphics workstation and displayed on a 16:9 HD
+widescreen LCD monitor (23.8”) with a refresh rate of 100 Hz at a resolution of 1920 × 1080
+pixels and a viewing distance of 100 cm (resulting in ∼ 63 px/°). The center of the screen was
+aligned with the monkey’s root of the nose. A photodiode was attached in the top-left corner of
+the display monitor and utilized to detect a synchronizing signal presented together with the visual
+stimuli. In experiments conducted with gray scale stimuli, the monitor was gamma-corrected to
+have a linear luminance response profile.
+In experiments conducted with color stimuli, the monitor's color channels were calibrated by
+measuring their spectra at 16 contrast levels equally spaced in the range from 0 to 255, without
+equalizing the outputs 109. The spectra were corrected for the spectrometer's (USB2000+, Ocean
+Optics) sensitivity, allowing us to compare the relative intensities accurately. Intensity values for
+each color were derived by integrating the spectra over a 200 nm range. These data helped develop
+contrast-intensity curves and allow for the computation of an inverse gamma curve for
+linearization using a unified look-up table. After linearizing, the spectra were re-measured to
+confirm the uniformity of the color outputs. Mixed color outputs were also examined by testing
+all combinations of the three-color channels at four contrast levels, and the resultant spectra were
+documented. Finally, we compared the measured intensities from the mixed tests against predicted
+values based on single-color data. The strong correlation confirmed the linearity and minimal
+interaction between the channels, validating the calibration process. This streamlined approach
+ensures accurate color reproduction, essential for reliable experimental results.
+A camera-based, custom-built eye tracking system verified that the monkey maintained fixation
+within ∼ 0.95° around a ∼ 0.15°-sized red fixation target. Offline analysis showed that monkeys
+typically fixated much more accurately. After the monkey maintained binocular fixation for 300
+ms, a visual stimulus appeared. If the monkey fixated throughout the entire stimulus period, they
+received a drop of juice at the end of the trial.
+Grating experiment
+In this experiment, the monkey maintained binocular fixation on a red 0.16° fixation spot at the
+center of the screen for at least 300 ms to initiate a trial. In each trial, 40 static gratings of random
+
+
+                                                          21

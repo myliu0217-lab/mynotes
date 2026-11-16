@@ -1,0 +1,71 @@
+ARTICLE                                                                                          NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w
+
+
+entorhino-hippocampal circuits71,72, sleep spindles are generated                     on   more   frontal   channels   of   our   array   (see   supplementary
+by rhythmic currents of thalamo-cortical projections to granular                      information  S11).  In  strong  contrast  no  such  suppression  was
+cortical  layers73.  The  fact  that  power  of  hippocampal  theta  and              observed in the gamma band between 60 and 70 Hz (see Fig. 5i
+cortical  spindle band  is modulated  by the phase  of ISA  derived                   and supplementary information S11).
+from  cortical  surface  likely  reﬂects  global  infra-slow  dynamics                   Subsequently,  we  took  advantage  of  the  infra-slow  recording
+that  co-modulates  both  limbic  and  cortical  circuits.  While  the                capability  of  g-SGFET  arrays  to  characterize  topographic  infra-
+topographic  proﬁle  of theta power  (Fig. 5g)  modulation by ISA                     slow  and  spectral  AC  epicortical  signals  associated  with  rare
+phase  is  consistent  with  anatomical  localization  of  underlying                 highly synchronous high-voltage spindle (HVS) oscillations78,79,
+hippocampal theta current generators, stronger modulation of the                      as the most likely cortical dynamics associated with large infra-
+spindle power on posterior cortical areas might reﬂect anatomical                     slow currents, similar to those shown during epileptiform activity
+thalamo-cortical subcircuits that are more strongly co-modulated                      in  development80.  Consistent  with  previous  studies78,79,  HVS
+by ISA dynamics than derived from epicortical DC signal. Finally,                     occurrence was associated primarily with alert immobility states
+we   tested   whether   g-SGFETs   SNR   is   sufﬁcient   to   detect                 (IMM)  (566  events,  Fig.  6a),  where  IMM  is  deﬁned  as  the
+ﬂuctuations  in  the  high-frequency  LFP  dynamics  at  different                    intersection  between  inactive  and  awake  states.  Beneﬁting  from
+time scales and to this end quantiﬁed the strength of modulation                      the long-term unperturbed recording allowed by our system we
+of broad range gamma power (30–200 Hz) by both ISA phase and                          could also sample signiﬁcant number of HVS events during REM
+theta rhythm phase during REM sleep. Gamma power in in the                            sleep  (92  events),  where  they  coexisted  with  hippocampal  theta
+range  of  60-120 Hz  was  modulated  by  the  ISA  phase  reaching                   oscillations   visible   on   posterior   derivations   (Fig.   6b).   While
+maximum power at the peak of the ISA (~10°) (Fig. 5h-left) and,                       median  duration  of  HVS  events  was  comparable  in  immobility
+consistently  with  published  work  based  on  intracranial  record-                 and REM sleep (~5 s, Fig. 6c-top), the rate of detected HVS events
+ings73, high gamma (120–150 Hz) power was modulated by theta                          varied   across   the   recorded   24 h   period,   (Fig.   6c-bottom).
+phase (Fig. 5h-right).                                                                Interestingly, HVS during both brain states were associated with
+   Having   established   that   we   can   record   state-selective                  transient  infra-slow  ﬂuctuations  as  visible  in  single  examples
+epicortical  signals  with  g-SGFETs  across  a  range  of  brain/                    (Fig. 6a, b) and average proﬁles (Fig. 6d, e). Speciﬁcally, positive
+motor   states,   we   subsequently   went   on   to   demonstrate                    (putative  source)  and  negative  (putative  sink)  infra-slow  tran-
+applicability of the technique for linking behavior and cortical                      sients in, respectively, posterior and frontal positions on the array
+physiology. To this end we focused on a speciﬁc and sparsely                          coincided in duration (median 5 s) with oscillatory dynamics of
+occurring  spontaneous  behavior,  rearing  on  the  hindlimbs.                       HVS (Fig. 6c, d, e). Topographic proﬁles of spectral peak power of
+Rearing is a exploratory behavior in rodents, which is context-                       HVS  were  comparable  for  both  states  and  showed  maximal
+and  stress-sensitive74,75,  has  been  hypothesized  to  support                     increase  to  baseline  in  frontal  derivations  overlaying  sensory-
+sampling  of  distal  landmarks  for  construction  of  a  cognitive                  motor  cortex  (Fig.  6f).  REM-associated  HVSs  were,  on  average,
+model of the surrounding environment75,76 and is implicated                           slower  and  larger  in  power  than  immobility-associated  ones
+in modulation of cortico-hippocampal interactions in theta and                        (Wilcoxon  ranksum  test,  p < 1e-19  for  power  and  p < 1e-8  for
+gamma  frequencies76,77.  In  general,  due  to  the  sporadic  and                   frequency, Fig. 6g). In contrast, spatial structure and magnitude
+spontaneous occurrence of rearing events their neural physiol-                        of  infra-slow  ﬂuctuations  associated  with  HVS  as  expressed  by
+ogy   has   been   less   widely   investigated   with   conventional                 positive  ﬂuctuations  on  posterior  and  negative  ﬂuctuation  on
+recording  methods  compared  to  task-speciﬁctrainedmotor                            frontal DC channels, were comparable for both states (Wilcoxon
+actions.   Technologies   that   combine   long-term   recording                      ranksum test between IMM and REM, p = 0.5 for posterior peak
+stability,  high  spatial  resolution,  wireless  methodology  and                    magnitude and p = 0.9 for frontal trough magnitude, Fig. 6h).
+precise  3D-tracking  of  animal  behavior,  as  presented  here,                        Although  future  work  is  required  to  replicate  these  observa-
+open the door to investigating this class of phenomena with a                         tions  in  a  large  cohort  of  animals,  our  long-term  recordings
+great  level  of  detail.  Therefore,  we  took  advantage  of  the                   enabled   detailed   quantitative   analysis   of   rare   physiological
+presented  technology  to  collect  a  large  number  of  individual                  patterns  and  illustrate  the  power  of  this  technology.  Because  of
+spontaneous rearing events during a full 24 h period. Evaluat-                        their sparse, strongly state dependent occurrence and distribution
+ing the signature of rearing on the gamma epicortical activity                        over  a  wide  frequency  band  these  events  illustrate  the  class  of
+band is of additional interest for our study, since it can be used                    phenomena whose functional study necessitates the integration of
+to  illustrate  the  capabilities  of  the  g-SGFETs  in  the  high-                  neural-behavioiral measurements with both high spatio-temporal
+frequency  LFP  range.  In  order  to  robustly  detect  rearing                      resolution   and   large   spatio-temporal   span   in   freely   moving
+episodes  we  took  advantage  of  the  continuous  3D  tracking,                     animals, as enabled by our wireless electrophysiology system.
+detecting  rearing  events  (n = 163)  based  on  head  elevation
+above  ground  (see  “Methods”  and  supplementary  informa-
+tion   S6).   While   rearing   events   occurred   throughout   the                  Discussion
+recording  period,  expression  of  rearing  activity  was  highly                    Graphene active-sensor arrays represent an emerging technology
+variable across the day, as with overall motor activity, ranging                      in neural engineering, which has recently demonstrated a strong
+from  250 s  to  0 s  spent  rearing  per  hour  (mean  43.8 ± 12.1 s,                potential  for  the  production  of  high-count  sensor  arrays6,7,as
+supplementary information S10). Additionally, rearing events                          well as for wide frequency band neural sensing33. In this article,
+expressed variability in terms of height (mean 250,6 ± 2.7 mm,                        we have presented a detailed characterization of various technical
+see Fig.  5j and Fig. S10d) and duration (mean 5.7 ± 2.8 s, see                       aspects  required  for their  actual application,  such as  the homo-
+Fig. S10e).                                                                           geneity in the performance of the graphene sensors, the speciﬁ-
+   Having  detected  this  set  of  spontaneous  rearing  episodes  we                cations  required  for  a  dedicated  headstage,  the  limits  in  the
+proceeded to analyze the power spectra of epicortical LFP, which                      sensitivity   of   g-SGFETs   or   their   chronic   stability   and   bio-
+showed  distinct  rearing-associated  changes  in  brain  signals  for                compatibility  in  vivo  and  demonstrated  lines  of  investigation
+speciﬁc   frequency   ranges.   Rearing   was   associated   with   the               enabled by their technical characteristics.
+suppression  of  epicortical  high-frequency  (90–200 Hz)  activity                      In  the  ﬁrst  place,  we  have  demonstrated  the  high  yield  and
+(Fig. 5i), which was also observable on the single trial level across                 homogeneity of the g-SGFETs produced in a wafer-scale process
+the range of rear heights (Fig. 5j) and most prominently observed                     using commercially available CVD graphene. This demonstration
+
+10                              NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications

@@ -1,0 +1,84 @@
+                       This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                              content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                          9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 10 SAR ADC block diagram with common mode switching algorithm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 11 Two-stage neural amplifier circuit topology with a low-gain-error self-biased unity-gain output buffer.
+
+impedance of 100 kW [26], in addition to having an AFE input
+capacitance 2 pF, the AFE input impedance is ~195 kW, given                                                  IV.    CIRCUIT IMPLEMENTATION
+a chopping clock frequency of 1.28 MHz. Hence, in the first                                The AFE of the proposed neural recording system consists of
+cycle the signal approximately undergoes a potential division                           four  main  blocks:  1)  the  analog  multiplexer,  2)  the  neural
+between  the  electrode  and  the  AFE  impedances  which  is                           amplifier, 3) the ADC, 4) the feedback and impedance boosting
+>±66%.      Subsequently,  the  impedance  booster  module                  starts      DACs. The multiplexer and both DACs are implemented with
+pre-charging   of   the   signal   in   the   appropriate   direction,                  the topologies discussed in [15], where each DAC is composed
+following  an  RC-charging  equation  wherein  R  signifies  the                        of   a   charger-distribution   topology   of   10-bits.            The   analog
+electrode    resistance    and    C    represents    the    AFE    input                multiplexer IRN and cross-talk are negligiable as discussed in
+capacitance. Post α-samples, the impedance booster reinstates                           [15].
+the signal.
+  Since  there  are  a  few  samples  among  the              𝛼-samples  with           A.    SAR ADC Topology
+errors VD, the resettable MA will average all 𝛼-samples with                               Fig.    10     shows    an    asynchronous    10-bit    successive
+errors larger than 10-bit resolution (i.e: > 0.1%). To mitigate                         approximation     register     (SAR)     ADC     block     diagram
+this  problem,  a  digital  checker  module  that  is  implemented                      implemented  in  the  proposed  neural  recording  system.  The
+inside the resettable MA filter compares the last sample of the                         designed  SAR  ADC  uses             a  common  mode-based  switching
+channel frame to the rest of the 𝛼-samples. If the sample has                           algorithm [27]. However, top-plate sampling is chosen instead
+error Ve approximately larger than 5%, then it gets discarded                           of bottom to reduce the number of switches and optimize the
+and replaced instantly by the last channel frame sample. This                           ADC   overall   area.   The   input   sampling   switches   use   the
+creates a tradeoff between the input impedance and the noise                            bootstrapped   topology   discussed   in              [28]    to   reduce   non-
+attenuation  of  factor √𝛼         to  become      H𝛼   −  𝜌   where    𝜌   is  the     linearities. The digital controller algorithm is synthesized by a
+number   of   discarded   samples.   The   higher   the   electrode                     standard library cell to control 28-unit capacitors in the DAC
+impedance or AFE input capacitance become, the higher errors                            network,  each  is  implemented  by  a             2.39fF    MOM  capacitor,
+are observed between the 𝛼-samples.                                                     leading to a small 0.62 pF load capacitance. A StrongArm latch
+
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                       © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

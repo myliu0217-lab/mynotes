@@ -1,0 +1,73 @@
+872                                                                                                           IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 15, NO. 5, OCTOBER 2021
+
+
+
+                                                                             TA B L E  I I
+                                                  COMPARISON    WITH  RELEVANT    STAT E-OF-ART  NEURAL    ROICS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  Note: ∗ROIC with external ADC.
+
+                                                                                    not allow the proper voltage biasing of that speciﬁc array rows
+                                                                                    by their ROIC preamliﬁers causing an excess of crosstalk in that
+                                                                                    particular location of the GFET probe.
+                                                                                       Finally, the ROIC headstage with            16  ×  32   GFET probe has
+                                                                                    been  tested  with  synthesized  electrophysiological  waveforms
+                                                                                    in  saline  solution  to  validate  its  overall  functionality  in  real
+                                                                                    scenarios. For this purpose, the Multi Channel Systems MEA-
+                                                                                    SG signal generator is conﬁgured to apply a 1-mVp                   excitatory
+                                                                                    postsynaptic potential waveform at the reference electrode. The
+                                                                                    resulting measurements shown in Fig. 23 are consistent with the
+                                                                                    synthesized signal model.
+
+
+                                                                                                                 X.  CONCLUSION
+Fig. 23.     Median waveform and distribution measured by the calibrated ROIC
+headstage  with  a 16 ×  32 GFET  array  in  saline  solution  and  with  1-mVp        A 1024-channel neural read-out IC for solution-gated GFET
+synthesized  excitatory  postsynaptic  potential  signal  applied  to  the  referencesensing  probes  in  massive       μECoG  brain  mapping  has  been
+electrode. Results after 150-Hz low-pass ﬁltering.                                  presented. The proposed time-domain multiplexing scheme of
+                                                                                    these active sensors in GFET-only arrays enables a low-cost and
+full 32 rows of the ROIC. The measured results before and after                     scalable hybrid integration with custom CMOS circuits. In this
+applying the automated calibration maps are plotted in Fig. 21.                     sense, a modular ROIC architecture has been introduced for this
+In general, good equalization ﬁgures can be achieved, but there                     purpose oriented towards headstage power reduction and parallel
+is still some room for improvement (e.g. the selection of the                       channel upscaling. Speciﬁc low-power CMOS circuits have been
+optimum  GFET  bias  point).  Also,  the  overall  distribution  of                 also  proposed  to  integrate  all  the  required  signal  processing
+equivalent input noise proﬁles including the combined effects of                    at  ROIC row  level,  from  the  GFET  input  analog  frontend  to
+the GFET sensor and the ROIC channel are shown in Fig. 21(e),                       the output A/D conversion. Furthermore, a minimalist circuit
+which returns     32 μVrms     from 1 Hz to 100 Hz.                                 solution based on CDS has been designed to compensate the
+   The ROIC headstage has been also tested with              32  ×  32  GFET        increase of the row preampliﬁer noise ﬁgures due to the GFET
+probes in agar substrate and under bipolar current stimulation                      array  upscaling.  The  complete  1024-channel  ROIC  has  been
+following the speciﬁc laboratory setup of Fig. 18. The Multi                        fabricated in a standard 1.8-V 0.18-μm CMOS technology.
+Channel  Systems  STG  4002  generator  is  employed  here  to                         Beside the ROIC device, an automated calibration method-
+generate a    ±100-μAp       10-Hz bipolar current injection located                ology  has  been  proposed  to  account  for  channel-to-channel
+at the opposite corners of the GFET probe, as marked in Fig. 22.                    mismatching caused by technological deviations between GFET
+In contrast to the setup of Fig. 21, this type of characterization                  sensors  of  the  array  and  also  between  CMOS  row  modules.
+generates different input stimulus along the full array of record-                  Indeed, the ROIC itself can be used not only for the read-out
+ing sites thanks to the spatial voltage potential gradient between                  of neural signals but also as a micro-instrument for the in-situ
+the two electrodes, so ﬁner studies like crosstalk analysis can be                  characterization of each GFET active sensor of the array probe
+conducted. The experimental maps of Fig. 22 show the typical                        prior to the recording session.
+gradients of input amplitudes, being the zero-input transition                         A  custom  headstage  for        μECoG  experiments  with  rodents
+area located in the gap between the two physical hemispheres of                     has been also developed combining one or more 1024-channel
+the 1024-channel GFET probe. As it can be noticed in the same                       ROIC modules with a single FPGA module for its integration
+ﬁgure,  some  rows  exhibit  read-out  amplitudes  locally  higher                  in standard electrophysiology recording systems. Experimental
+than expected probably due to an excess of contact resistance at                    results have been also reported of the resulting ROIC headstage
+the corresponding ZIF connector pin of Fig. 17(b), which does                       with  16  ×  32   and  32  ×  32  GFET probes in saline solution and
+
+        Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

@@ -1,0 +1,70 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+
+ﬁber guide, we insert the shank inside the tissue, driven by a micro-                            The  performance  of  the  p–n  OED  topology  here  is  primarily
+manipulator to a 1.5-mm depth. Retraction of the carrier shank leaves                      deﬁned  by  the  p(C6NDI-T) ﬁlm, which possesses both  lower cation
+the ﬂexible probe inserted in the brain with minimal tissue damage.                        mobility and conductance compared to the p-type counterpart. Since
+     First,  we  measure  the  input-referred  noise  performance  at  one                 the transient response of the p–n OED is dominated by the cation drift
+electrode, which we operate with only four inputs of the OECT–OED                          within  the  polymers  and  not  by  electron  or hole  transport,  the  low
+eight-to-one multiplexing conﬁguration. By repeating patterns of 1.1 V-                    cation  mobility  of  the  n-type  polymer  limits  the  switching  perfor-
+amplitude, 1-ms-wide pulses with a 5-ms period and a 25% phase delay                       mance,  and  thus,  the  multiplexing  rate.  Advances  in  the  ﬁeld  are
+between  the  pulses  applied  to  adjacent cathodes, we  can  reach  an                   required  to  give  the  n-type  structures  higher  cation  and  electron
+effective sampling rate of 200-Hz per channel. The IC  output is con-                      mobilities.  For  instance,  single-element  internal  gated  OECTs  have
+verted to a voltage by a custom transimpedance ampliﬁer (TIA) board                        alreadybeenproventoworkinthemicrosecondregimewithp-type
+(Supplementary Fig. 10). Individual channel data is reconstructed from                     components41,42.  The  complementary  operation  of  n-type  polymers
+the raw multiplexed waveforms (see online Methods) and band-pass                           with similar performance will lead to faster switching characteristics
+ﬁltered to 100 Hz. Figure 5c shows the observed noise spectrum in the                      for the associated p–n OEDs. Here, we tuned the geometry of the OECT
+reconstructed channel recording; ﬂicker noise dominates the 1–100 Hz                       to possess similar conductance values to the p–n OED. Improving the
+range  commonly  associated  with  LFP  recordings.  In  this  case,  the                  p–n OED conductance would allow shorter-channel-length OECTs to
+measured output IC is input-referred with a transconductance for the                       be used. Submicron channel lengths have already demonstrated gm
+amplifying channel of approximately 1.5 mS. The noise spectra within                       values   an   order   of   magnitude   higher   than   those   in   this   study
+thebandfrom0.15to100Hzgivea~5.1μV root-mean-square (rms)                                   (~20 mS)32,43.
+input-referred noise.                                                                            Overall,  the  p–n  OED  topology  presented  here,  as  well  as  the
+     We then record LFPs along the shank; the top half of the shank (13                    front-end integration of n- and p-type polymers, are the ﬁrst of their
+electrodes)  covers  the  entire  extent  of  Layers  1  to  6  in  the  mouse             kind for neural interfacing. This work demonstrates that active organic
+cortex. We apply four V CS pulses (to sequentially enable the top four                     electronic materials can form the basis of a high-density active front-
+columns in the array) and record the IC response from four separate                        end  recording  array,  enabling  the  development  of  high-resolution
+sources simultaneously. Recorded channel activity after reconstruc-                        neural interfaces with improved mechanical compliance.
+tion is plotted in Fig. 5d. The spatial falloff of the recorded LFPs with
+cortical  depth  is  clearly  visible  in  the  plots  demonstrating  the  low             Methods
+crosstalk between channels. Pronounced spontaneous low-frequency                           Device fabrication
+oscillations  (1–10 Hz)  are characteristics  of  neural activity observed                 As the carrier substrate, a three-inch fused silica wafer was coated with
+under  anesthesia  in  mice  (Fig.  5e)40.  We  compare  the  quality  of                  a2-μm-thick layer of parylene-C using a chemical vapor deposition
+OED–OECT stack recordings to those acquired by placing a 50-μm-                            (CVD) chamber (Specialty Coating Systems, PDS 2010). To pattern the
+diameter  tungsten  electrode  next  to  the  implantation  site  (Supple-                 ﬁrst  metal  layer,  a  1-μm-thick  ﬁlm  of  a  lift-off  resist  (LOR3A)  was
+mentary Fig. 11). The higher SNR of the organic stack (22 dB for the                       ﬁrst spin-coated and cured at 130 °C for 5 min. Subsequently, a 500-
+OED–OECT  stack  compared  to  19 dB  for  the  Tungsten  electrode)                       nm-thick ﬁlm of an S1811 photoresist (Kayaku Advanced Materials) was
+validates the efﬁcient front-end ampliﬁcation of our multiplexer. We                       spin-coated and cured at 110 °C for 1 min. The cured S1811 photoresist
+further show that the TIA does not provide additional ampliﬁcation to                      was then  exposed  to  ultraviolet  light  (UV) using  a  Suss MA6  Mask
+the multiplexer output; instead, it results in a slight increase in noise                  Aligner  to  deﬁne  the  metal  pattern  and  developed  with  AZ300MIF
+(Supplementary Fig. 12 and see online Methods). Staining of ex vivo                        (MicroChemicals, Merck) developer for 25 seconds. An adhesion layer
+tissues suggests neither implantation damage nor scar tissue forma-                        of 10-nm-thick titanium and a conduction layer of 100-nm-thick gold
+tion has occurred one month after implantation, apart from the minor                       were sequentially deposited on the patterned photoresist by using an
+injury created by the probe insertion (Fig. 5f).                                           Angstrom EvoVac Multi-Process Evaporator. To complete the lift-off
+                                                                                           process, the metal coated wafers were soaked in Remover PG (Kayaku
+Discussion                                                                                 Advanced Materials, Inc., Westborough, MA) for 12 h. After completion
+Here,  we  realized  a  fully  organic  transistor-diode  cross-point  array               of   the  ﬁrst  metal  layer  patterning,  a  secondary  parylene-C  ﬁlm
+structure  with  a  26-μmpixelanddemonstrateditsapplicationfor                             (0.75 μm) was deposited by CVD. To ensure strong adhesion, 3-(tri-
+in vivo extracellular electrophysiology. The p–nOED,withitscom-                            methoxysilyl) propyl methacrylate (A-174 silane) was applied inside the
+plementary materials, achieves rectiﬁcation with encapsulated cations                      chamber as an adhesion promoter before the deposition process. A
+and  allows  individual  addressing  of  OECT  devices  used  for  neural                  second  bilayer  consisting  of  titanium  and  gold  was  deposited  and
+signal  ampliﬁcation.  The  diode  cross-point  conﬁguration  reduces                      patterned in a ring shape using parameters described before. Prior to
+reverse-biased  leakage  and  eliminates  the  need  for  multiplexing                     coating with the top-layer insulation, a 1-μm-thick ﬁlm of Shipley S1811
+through OECT gating, thus preventing crosstalk accros a shared CSF.                        photoresist was patterned around the top circular electrode to protect
+The p–n OED structure, combined with the existing OECT technology,                         it during the etching of top insulation. A third 2-μm-thick parylene-C
+paves the way for CP-based large-scale active neural interfaces.                           ﬁlm  was  deposited  by  CVD  with  an  adhesion  promoter.  As  an  etch
+     The device architecture presented here delivers 32-channel neural                     mask, an 8-μm-thick layer of AZ10XT (MicroChemicals, Merck) pho-
+implants with a total volume of only 0.065 mm2. Active multiplexing of                     toresist  was  spin-coated  and  cured  at  115 °C  for  2 min.  The  cured
+the  array  allows  this  channel  count  to  be  supported  with  only  12                photoresist was exposed to UV light using a Suss MA6 Mask Aligner
+interconnects. Combined with the high mechanical ﬂexibility of par-                        and developed with AZ400K (MicroChemicals, Merck) developer for
+ylene as a substrate, our design represents an ideal model for large-                      5 min.  A  dry-etch  process  was  performed  in  a  plasma-reactive  ion
+scale integration of active electrodes with minimal disruption of tissue                   etcher (Oxford Plasmalab 80; 180 W, 60 sccm O2 and 2 sccm SF6)until
+integrity. Moreover, the device structure demonstrated here is gen-                        the top gold layer was reached. The residual AZ10XT and S1811 pho-
+erated using basic cleanroom processing. Low-temperature and solu-                         toresists were rinsed off using Remover PG. As an anti-adhesion pro-
+tion processing of the active materials allow for customizing the device                   moter, a soap solution diluted to 1% concentration in de-ionized water,
+performance and dimensions based on the target application. Here, we                       was spin-coated over the wafer. A ﬁnal layer of parylene-C was coated
+tuned  the  geometry  of  our  devices  to  efﬁciently record  the  spatial                using  CVD,  which acts  as a  sacriﬁcial  layer  to  pattern  the  polymers
+distribution of LFP activity. In the future, these pixels can be realized                  inside the outer circle. An 8-μm-thick layer of AZ10XT was patterned
+on a much smaller scale to reach single neuronal resolution.                               using the parameters described above. A second dry etch process was
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                              9

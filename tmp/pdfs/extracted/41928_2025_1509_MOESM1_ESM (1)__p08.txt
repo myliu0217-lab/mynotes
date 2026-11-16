@@ -1,0 +1,49 @@
+were built that incorporate various tissue characteristics, including tissue thickness 87 and dielectric
+constants 88. We performed electromagnetic simulation (Momentum, Keysight Technologies and
+Ansys HFSS, Ansys) to determine the parameters of the UWB antenna with the custom brain
+model. Given that both the UWB antenna and the transceiver circuits are custom designs for the
+implant, they were co-designed for optimal performance. The input impedance at 4 GHz was
+designed to be 50 + j16 Ω. The path loss is simulated to be 50 dB (Ansys HFSS, Ansys) for a total
+tissue thickness of 2 cm between the designed antenna and an ideal dipole antenna
+(Supplementary Fig. 9a). A 700-MHz bandwidth is achieved from 3.6 to 4.3 GHz.
+
+The UWB antenna is shared by the transmitter and receiver circuits using two sets of NMOS
+switches. To minimize insertion loss at the working frequencies (3.6 to 4.3 GHz), we use a floating-
+body technique 89 that leverages the deep p-well (DPW) CMOS technology. Resistors are used in-
+series with their gates to reduce radiofrequency leakage to the DC control lines.
+
+Duty-cycling is a proven technique to reduce power consumption of impulse radio UWB (IR-
+UWB) transceivers 90,91. The transmitter employs this technique by generating short
+radiofrequency pulses using a duty cycled LC complementary oscillator. The LC oscillator is tuned
+to resonate with the UWB antenna at 4 GHz without a local frequency reference. A digital pulse
+generator generates two short baseband pulses with 1.3 and 0.3 ns pulse width from an enable
+signal (Supplementary Fig. 9b). When transmitting a data “1”, the LC oscillator’s tail current is
+turned on for 1.3 ns. To speed up the start-up of the LC oscillator, the KICK_N MOSFET switch
+is turned on for the first 0.3 ns. Conversely, for a faster shut-off, the shunt MOSFET switch is
+turned on while the radiofrequency switches are turned off. The LC oscillator delivers 1 V peak-
+to-peak differential signal into the UWB antenna when it is turned on. The designed transmitter
+transmits at maximum 108.48 × 106 pulses per second and consumes 39 pJ for each pulse
+transmitted.
+
+The receiver has a non-coherent energy detector architecture for its low implementation
+complexity 92,93. Consider a noise floor (N0) at body temperature of -173.6 dBm, a minimal signal-
+to-noise ratio (SNRREF) of 17 dB for a bit-error rate (BER) less than 1 × 10-10 94, path loss (PL) of
+50 dB, receiver noise figure (NF) of 5 dB and data rate (DR) of 54.24 Mbps, the minimal required
+transmit power (PTX) of the headstage is given by:
+                   𝑃்௑ൌ𝑆𝑁𝑅ோாி ൅ 10 logሺ𝐷𝑅ሻ൅𝑃𝐿൅𝑁𝐹൅𝑁଴ൌെ24.3 dBm.
+According to the FCC regulations on the UWB band 95, a maximum equivalent isotropic radiated
+power (EIRP) of -41.3 dBm/MHz can be transmitted in free air and measured over a 1ms time
+window. The maximum power (PTX_MAX) allowed to transmit for a 500-MHz bandwidth is given
+by:
+                                 𝑃்௑_ெ஺௑ൌ𝐸𝐼𝑅𝑃൅𝐵𝑊ൌ െ14.3 𝑑𝐵𝑚.
+We also comply with the average power limit as PTX is less than PTX_MAX. Also, the peak power
+limit of 0 dBm is satisfied as we operate in the high-data-rate regime 93. Since there is a െ14.3൅
+21.3 ൌ 10 𝑑𝐵 link margin, we find that the design is robust against manufacturing variations and
+variations in the distance between the implant and headstage.
+
+The UWB receiver features an radiofrequency architecture similar to that described in 96. The
+signal processing begins with amplifying the input signal from the UWB antenna by a low-noise
+amplifier (LNA), which comprises an input stage followed by two radiofrequency amplifier (RF
+AMP) stages (Supplementary Fig. 9c) that provide 57 dB of voltage gain with in-band noise
+
+                                                         7

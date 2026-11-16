@@ -1,0 +1,68 @@
+                        This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+8                                                                                                                                                                                                                          IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+                                                                                      CMFB which increases stability in the open-loop conﬁguration
+                                                                                      in  addition  to  saving  area  and  power.  The  second  stage
+                                                                                      has  an  optional  bank  of  Miller-capacitors  and  resistors  to
+                                                                                      linearly  adjust  the  GBW  of  the  ampliﬁer  using  3-bit  digital
+                                                                                      controllers  each  if  needed.  The  total  capacitance  is  280  fF
+                                                                                      on  each  differential  output,  resulting  in  BW  variation  from
+                                                                                      210 to 830 kHz when operating with the 40-dB gain setting.
+                                                                                      This  range  was  chosen  to  cover  any  process  variations  after
+                                                                                      fabrication  such  that  the  exact  desired  BW  would  be  set  to
+                                                                                      320 kHz. The resistive bank varies the ampliﬁer gain linearly
+                                                                                      from 35 to 52 dB with a 3-bit controller. However, for a 10-bit
+                                                                                      accuracy requirement, the dynamic settling error (ε)mustbe
+                                                                                      ≤0.1%; this requires the ampliﬁer BW to be set to a one-step
+                                                                                      higher BW setting (397 kHz) to ensure accuracy. The practical
+                                                                                      ampliﬁer BW is given by  fBW ≥−fs  ln(ε)/2π ≈ 1.1  fs  [28].
+                                                                                         To  save  more  power  and  energy,  the  segmented  charge-
+                                                                                      redistribution  circuit  topology  shown  in  Fig.  7(b)  is  used  in
+                                                                                      both  the  DAC  and  the  ADC  with  slight  differences between
+                                                                                      the  two.  It  is  built  out  of  metal  parasitic  capacitance  as
+                                                                                      demonstrated in [15]. The DAC unit capacitors Cα +Cβ  equal
+                                                                                      8.2  fF  in  all  combinations.  C1α  and  C1β  are  4  and  4.2  fF,
+                                                                                      while C2α  and C2β  are 3.9 and 4.3 fF,  respectively. The ﬁrst
+                                                                                      ﬁve LSB differential capacitor blocks (B0 → B4) are binary
+                                                                                      weighted. The  remaining 5-MSBs (B5–B9) are  thermometer
+                                                                                      weighted, with C5α and C5β  set to 0.9 and 7.3 fF, respectively.
+                                                                                      Each  capacitor  block  is  controlled  by  a  differential  binary
+                                                                                      input  BN  and  BB  on  its  bottom  plate;  hence,  the  effective
+                                                                                      unit capacitance is 0.2 fF.
+                                                                                         Fig.  7(c)  shows  a  conventional  10-bit  asynchronous  SAR
+                                                                                      ADC  algorithm  used  in  the  system  [29].  Unlike  the  DAC
+                                                                                      capacitor-bank topology, the SAR ADC uses nine capacitance
+                                                                                      blocks only instead of ten blocks.
+                                                                                         With  the DAC having 8.2 fF ×  36 total equivalent capac-
+                                                                                      itance   (CDAC),   CMOS   input   parasitic   capacitance   ( CINP)
+Fig.   7.        (a)   Designed   neural   ampliﬁer   circuit   topology.   (b)   Charge-of 0.25 pF, and 2-pF ac coupling capacitors (Cac), the neural
+redistribution  topology  used  in  the  DAC  and  ADC.  (c)  SAR  ADC  block         and DAC signals get attenuated by
+diagram.
+                                                                                                        /Gamma1Neural  Signal =               CacCac + CINP + CDAC                  (2)
+
+switches  of  size  6 ×  0.28 μm2  with  a  corresponding  typ-                                                  /Gamma1DAC =             CDAC
+ical   resistance   of   320  /Omega1   and   IRN   of   0.3  μVrms.   With                                                  Cac + CINP + CDAC                  (3)
+small  switch  size  and  thick-oxide,  the  charge  injection  and                   which  result  in  /Gamma1Neural  Signal  =   0.78  and  /Gamma1DAC   =   0.11.
+clock  feedthrough  are  not  signiﬁcant  given  the  2-pF  input                     Assuming  a  VDD  of  1.2  V,  the  maximum  DAC  cancellation
+ac-coupling  capacitance  and  typical  electrode  double-layer                       capability reaches ±69.5 mV. Monte Carlo simulation results
+capacitance of (∼1nF).                                                                show that the input-referred offset can be as high as 4.5 mV,
+   Fig. 7(a) shows the designed neural ampliﬁer; it consists of                       this  gives  an  EOV  cancellation  margin  of ±65  mV  which
+a two-stage complimentary-input ampliﬁer since it provides a                          is  sufﬁcient  to  prevent  the  neural  ampliﬁer  saturation  from
+low noise and high gain-BW (GBW) product compared with                                common electrode types.
+non-complimentary  and  telescopic-cascode  ampliﬁers  [27].
+The overall approximate mid-band gain is given by
+Avd ≈ (gmMn1 + gmMp1)(roMn1‖‖roMp1 )                                                                      VI.  MEASUREMENT RESULTS
+                            ×(gmMn2 + gmMp2)(roMn2‖‖roMp2‖‖Ri )                          The  proposed  neural  recording  system  IC  was  fabricated
+                                                                                      in  65-nm  1p9m  low-power  (LP)  CMOS  technology.  Fig.  8
+whereas the approximate BW is 1/2π RiCi.                                              shows a microphotograph of the fabricated IC; the total area of
+   The PMOS  current tails are divided into bleeders to  avoid                        the 16 channels is 0.0397 mm2, including all analog and digital
+latching  at  startup.  The  common  mode  feedback  (CMFB)                           blocks. The analog module consumes 13.8 μA/16 Ch from a
+current  sources  are  fed  by  pseudo-resistors  directly  without                   1.2-V supply,  while  the  digital  module uses  37.5 μA/16  Ch
+a CMFB ampliﬁer. This topology reduces the loop gain of the                           from  a  1-V  supply.  The  entire  IC  power  consumption  is
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

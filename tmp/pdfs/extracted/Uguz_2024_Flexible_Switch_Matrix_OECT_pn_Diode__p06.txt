@@ -1,0 +1,74 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+
+        a)                                                                  (-)                        b)b)        -0.5   -0.4 V
+                                                                       VGS                                                         VGS
+
+                                                                                                                            0 V
+                              -        -                                     -         -                                                                                            VGS
+                                                                                                                 -0.25
+                                                                                                                                                                                    -0.3 V
+                    Source                    Drain                          OECT
+                                                        Diode                channel
+                                                      Channel                               VGS
+
+                    Cathode
+                                                                                                                       0                        -0.2                    -0.4    -0.6
+                                                 VCS                                                                                                VDS (V)
+
+                                                                                                                                                                                    -0.5
+                                                                                                                   2.5
+                              ~kOhm                                        ~kOhm                                                                                                    -0.4
+                 V (+)              0 V                       V (+)             V (+)   X                            2
+
+                                                                                                                   1.5                                                              -0.3
+
+                                   V (-)                                        V (+)                                                                                               -0.2
+                             On state                                       Off state                                1
+
+                                                                                                                   0.5                                                              -0.1
+        c)                                                                                                           0                                                              -0
+                                      D          VDS                          25 ms
+                                                                                                                         -0.4     -0.3                -0.1-0.20        0.1       0.2
+       OECT (A)           S                                                                                                                        VGS (V)
+
+
+       OECT (V)           S                      ID                                                                     e)
+
+                                     D                                       OECT
+        d)
+
+                                     C           VCS                           25 ms                                               1 ms
+          OED -
+       OECT (A)          S
+                                                                                                                           OECT                                     9.5 nC0.2 nC
+          OED -                                  IC
+       OECT (V)          S
+                                     C                               OED-OECT stack                                        OED-OECT stack
+
+
+Fig. 3 | OECT integration and inter-channel crosstalk. a An illustration of the                       constant pulsing at 40 Hz, and victim OECT (on the bottom) is used for concurrent
+OED–OECT series conﬁguration. An equivalent circuit is drawn under the device.                        recordings. The top voltage proﬁle represents cathodic pulses applied at aggressor
+Operation of the p(g-2T-TT) ﬁlm in series with the p–n OED in the on and off states                   OECT (V DS). The bottom current trace represents the current response of the
+is illustrated in the bottom left and right insets, respectively. A pink color gradient is            adjacent victim OECT (ID). (n=5devices,n = 3 repetitions per device.) d Crosstalk
+used to illustrate the estimated doping level of the p(g-2T-TT) ﬁlm, where white                      between OED–OECT stacks. The left image illustrates two adjacent OED–OECT
+represents low levels of doping. b I–V characteristics of a stand-alone p(g2T-TT)                     stacks, which are patterned with a 40μm pitch. The aggressor OED–OECT (on the
+OECT. Output curves were measured for V GS values between −0.4 and 0 V with a                         top) is used for constant pulsing at 40 Hz, and the victim OED–OECT (on the
+step size of 0.05 V. The bottom plot shows the corresponding drain current (blue)                     bottom) is used for concurrent recordings. The top voltage proﬁle represents
+and transconductance (orange) of the OECT for a constant V DS of −0.3 V (n=5                          cathodic pulses applied at aggressor OED–OECT (V CS). At the bottom is the current
+devices.) The gray dotted line indicates the transconductance and the drain current                   response of the adjacent victim OED–OECT (IC). (n = 5 devices, n = 3 repetitions per
+values for V GS = −0.3 V corresponding to the conditions used for in vivo experi-                     device.) e Gate current transients of a single-element OECT (orange) and an
+ments. c Crosstalk between OECTs. The left image illustrates two adjacent OECTs,                      OED–OECT stack (blue) during active switching. Corresponding charge injection
+which are patterned with a 40μm pitch. Aggressor OECT (on the top) is used for                        levels, acquired from the integration of the gate current, are noted at the inset.
+
+
+
+(Fig. 4a) with a 50-μm pitch. This circuit has 64 inputs and eight out-                               Unselected columns present a resistance on the order of hundreds of
+puts  and  consists  of  eight  eight-to-one  multiplexers.  Each  column                             MΩ because their corresponding p–n OEDs are reverse-biased, mini-
+shares a common DC source, which is tied to the ground, and the                                       mizing leakage.
+current ﬂowing through it contains the transduced signal. A constant                                        We demonstrate the multiplexer by recording from four inputs
+V GS  is  applied  across  a  single  array.  Applying  a  V CS  on  a  speciﬁc                       of  the  eight-to-one  multiplexer.  We  record  from  a  single  OECT
+cathode contact selectively biases the corresponding row and switches                                 channel (Column S1 in Fig. 4b) while turning on the four cathode
+on  the  OECT–OED  devices  in  each  column  at  its  cross-section.                                 contacts by applying −1.1 V V CS pulses to the associated rows (namely
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                              6

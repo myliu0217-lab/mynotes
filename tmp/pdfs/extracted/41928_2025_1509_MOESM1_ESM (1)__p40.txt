@@ -1,0 +1,53 @@
+Supplementary Fig. 12. Communication packets in the BISC system. Downlink refers to the
+direction from the relay station to the implant. Uplink refers to the direction from the implant to
+the relay station.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                              39

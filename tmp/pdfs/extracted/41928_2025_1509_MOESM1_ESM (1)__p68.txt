@@ -1,0 +1,49 @@
+34           Raducanu, B. C. et al. Time Multiplexed Active Neural Probe with 1356 Parallel Recording
+        Sites. Sensors 17, 2388 (2017). https://doi.org/10.3390/s17102388
+35 IEEE. in IEEE Standard for Safety Levels with Respect to Human Exposure to Radio
+        Frequency Electromagnetic Fields, 3 kHz to 300 GHz    (IEEE, 2006).
+36       Thimot, J. & Shepard, K. L. Bioelectronic devices: Wirelessly powered implants. Nature
+        Biomedical Engineering 1, 0051 (2017). https://doi.org/10.1038/s41551-017-0051
+37        Kim, S., Tathireddy, P., Normann, R. A. & Solzbacher, F. Thermal Impact of an Active 3-
+        D Microelectrode Array Implanted in the Brain. IEEE Transactions on Neural Systems and
+        Rehabilitation Engineering                  15, 493–501 (2007).
+        https://doi.org/10.1109/TNSRE.2007.908429
+38      Marblestone, A. H. et al. Physical principles for scalable neural recording. Frontiers in
+        Computational Neuroscience 7, 137 (2013). https://doi.org/10.3389/fncom.2013.00137
+39     Craner, S. L. & Ray, R. H. Somatosensory cortex of the neonatal pig: I. Topographic
+        organization of the primary somatosensory cortex (SI). Journal of Comparative Neurology
+        306, 24–38 (1991). https://doi.org/10.1002/cne.903060103
+40     Okada, Y., Lähteenmäki, A. & Xu, C. Comparison of MEG and EEG on the basis of
+        somatic evoked responses elicited by stimulation of the snout in the juvenile swine.
+        Clinical Neurophysiology    110, 214–229 (1999). https://doi.org/10.1016/S0013-
+        4694(98)00111-4
+41         Sauleau, P., Lapouble, E., Val-Laillet, D. & Malbert, C. H. The pig model in brain imaging
+        and neurosurgery. Animal              3, 1138–1151 (2009).
+        https://doi.org/10.1017/s1751731109004649
+42       Laurens van der Maaten & Hinton, G. Visualizing data using t-SNE. Journal of Machine
+        Learning Research 9, 2579 (2008).
+43          Pollmann, E. H. et al. A subdural CMOS optical device for bidirectional neural interfacing.
+        Nature Electronics 7, 829–841 (2024). https://doi.org/10.1038/s41928-024-01209-w
+44        Mitra, P. P. & Pesaran, B. Analysis of Dynamic Brain Imaging Data. Biophysical Journal
+        76, 691–708 (1999). https://doi.org/10.1016/s0006-3495(99)77236-x
+45        Stavisky, S. D., Kao, J. C., Nuyujukian, P., Ryu, S. I. & Shenoy, K. V. A high performing
+        brain–machine interface driven by low-frequency local field potentials alone and together
+        with spikes. Journal of Neural Engineering      12, 036009 (2015).
+        https://doi.org/10.1088/1741-2560/12/3/036009
+46       Thomson, D. J. Spectrum estimation and harmonic analysis. Proceedings of the IEEE 70,
+        1055–1096 (1982). https://doi.org/10.1109/proc.1982.12433
+47     Wold, S., Sjöström, M. & Eriksson, L. PLS-regression: a basic tool of chemometrics.
+        Chemometrics and Intelligent Laboratory Systems     58, 109–130 (2001).
+        https://doi.org/10.1016/S0169-7439(01)00155-1
+48       Das, A., Zabeh, E., Ermentrout, B. & Jacobs, J. Planar, Spiral, and Concentric Traveling
+        Waves Distinguish Cognitive States in Human Memory. bioRxiv, 2024.2001.2026.577456
+        (2024). https://doi.org/10.1101/2024.01.26.577456
+49         Zabeh, E., Foley, N. C., Jacobs, J. & Gottlieb, J. P. Beta traveling waves in monkey frontal
+        and parietal areas encode recent reward history. Nature Communications 14, 5428 (2023).
+        https://doi.org/10.1038/s41467-023-41125-9
+50 Deng, J. et al. in 2009 IEEE conference on computer vision and pattern recognition.  248–
+        255 (Ieee).
+51        Willeke, K. F. et al. Deep learning-driven characterization of single cell tuning in primate
+        visual area V4 unveils topological organization. bioRxiv, 2023.2005. 2012.540591 (2023).
+        https://doi.org/10.1101/2023.05.12.540591
+                                                       67

@@ -1,0 +1,79 @@
+                      This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+4                                                                                                                                                                                                                    IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 4.    Details of (a) conventional phase quantizer, (b) proposed phase quantizer, and (c) timing waveforms.
+
+
+upmodulated  to  a  higher  frequency,  which  goes  through  the                       the   chopping   clock,   thus   reducing   the   charge   that   needs
+ADC  STF  and  is  filtered  out  by  the  decimation  filter.  The                     to  be  supplied  from  the  electrode  and  increasing  the  input
+second stage is an area-efficient time-based integrator realized                        impedance,  ZIN. The input impedance is increased to greater
+by  a  Gm-current-starved  current-controlled  oscillator  (CCO)                        than 30 M     using this technique. The input impedance booster
+with a counter. The outputs of the  Gm-C  filter, FF path, and                          was  implemented  similarly  to  [15]  using  buffer  duty  cycling
+capacitive DAC (CDAC) are chopped to ensure correct polarity                            for power savings. Chandrakumar and Markovic [15] use back-
+in the loop.                                                                            to-back  choppers  after  the  amplifiers  due  to  dual  chopping
+   The CCO’s phase is quantified with 6-bit counters, a differ-                         frequencies.  Since  we  chop  the  modulator  and  the  auxiliary
+encer, and logic that detects quantizer overrange and prevents                          amplifiers  ( faux)  at   fs/2,  we  can  combine  the  switches  (M2
+phase wrapping[41],                       [44],        [46]. This technique ensures ADC and φ  in  [15])  into  a  single  set  of  switches,  reducing  charge
+stability  amid  large  artifacts  that  may  cause  ADC  overrang-                     injection.
+ing.  The  4-bit  feedback  CDAC  is  mismatch-shaped  with  a                          B.  Artifact Rejection
+first-order  shaped  tree-structured  dynamic  element  matching
+(DEM) encoder and resampled with a delay of 6.25% of the                                    In theory, direct digitization offers uninterrupted monitoring
+modulator  sampling  period  (Ts)  to  account  for  the  quantizer                     by offering a higher DR to accommodate artifacts. As shown
+and  DEM  delay.  The  ADC  output  is  passed  through  the                            in Fig. 4(a), a conventional phase quantizer receives the phase
+decimation  filter,  which  reduces  the  ADC  data  rate  to  the                      output  from  a  level  shifter,  which  converts  the  CCO  phase
+Nyquist rate,  fdec, reducing datalink power.                                           output  of  the  integrated  Gm  current  into  a  rail-to-rail  signal.
+   Chopping  the  CDAC  induces  large  differential-mode  chop-                        It  then  quantizes  this  phase  using  Gray  counters  for  the
+ping  artifacts  at  the  high-impedance  PVG  node  due  to  the                       positive and negative sides and subtracts the results to obtain
+sudden  switching  and  settling  of  the  DAC  capacitors  upon                        the  ADC  output.  The  n-bit  counters  operate  with  modulo-2n
+a  polarity  swap,  causing  harmonics  and  quantization  noise                        arithmetic,  where  the  output  “wraps  around”  when  reaching
+folding.  Deadband  (DB)  switches  suppress  the  differential                         −2    n−1   <  DC  <  2n−1    −1,  where  DC  is  the  counter  output.
+chopping  artifacts  at  the  Gm  input  [42];  however,  they  must                    The  phase  difference  is  thus  limited  to  2n  arithmetic.  With
+be  large  for  low-input-referred  noise  (IRN)  applications  and                     large  inputs  like  stimulation  artifacts  that  can  momentarily
+would  load  the  input.  For  remedying  this  issue,  the  DB                         overrange the ADC, the phase difference at the n-bit counter
+switches are moved from the sensitive input node to the Gm-C                            output  wraps  modulo  2n,  introducing  a  large  error  back  into
+output and the feedforward input and opened for 6.25% of Ts                             the  loop.  This  results  in  modulator  oscillations  leading  to
+during chopping.                                                                        phase wrapping-induced instability. Previous work will oscil-
+   Chopping  before  the  input  capacitance  reduces  the  input                       late  indefinitely  and  require  all  integrators  in  the  modulator
+impedance  to  the  M      level,  which  is  too  low  to  interface                  to  be  reset  to  restore  normal  operating  conditions,  creating
+with  small  electrodes  (that  have  several  M      impedances).                     a  long  period  of  data  corruption  impractical  in  closed-loop
+An  auxiliary  amplifier  precharges  the  input  capacitance  after                    neuromodulation  [38],         [41],         [43].  Since  the  signal  strength
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

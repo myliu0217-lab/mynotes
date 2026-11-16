@@ -1,0 +1,47 @@
+Figure S9. The impact of                                        drain voltage           on device performance. (a) Transfer curves,
+along          with        the      gm of     the      vOECT with        a channel              length           (L )   of     0.6      μm, channel              width
+(W ) of    50     μm, and a PEDOT:PSS                      thickness of    143       nm, under          various drain         biases.            (b)
+Output            curve depicting                the      variation                of     drain current             with gate        voltage             ranging              from
+−0.1        V to    0.65        V.     The       dark        dashed line       marks           the gate        voltages              VG that correspond                   to
+gm,max.   (c)       The         linear           relationship                     between                Vgm,max  and  VD,   and        the       asymptotic
+exponential relationship between g                                                                                 m,max and V            D.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure            S10.        Assessment of    electrical                 performance                       homogeneity                       of    an     ultraflexible
+64-channel                    array. (a)     Transfer characteristics                        of    64     vOECTs, showing              drain current            as
+a   function               of     gate        voltage.              (b) Transconductance (g  m)   profiles              corresponding                        to    each
+device           in    the      64-channel                   array,          demonstrating                        performance homogeneity.                       (c) Transient
+performance                       profile             of      a    representative                         vOECT               among             the       ultraflexible                      array,
+exhibiting                 a   response               time (  )  of    334𝜏       µs.      (d-f)        Spatial distribution                   of    ID under          zero        gate
+bias (d), the peak g                                           m (e), and the               response  time            (f).𝜏
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                              8

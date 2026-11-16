@@ -1,0 +1,82 @@
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w                                           ARTICLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 1 Graphene active sensor arrays for chronic, wireless monitoring of wide frequency band epicortical neural activity. a Schematic of a g-SGFET and
+its equivalent circuit. The small-signal transduction from voltage to current is modeled by the current source GmVsig, where Gm ≡ dIds/dVgs. The DC current
+is modeled by the Rds element. b Average stationary transfer characteristics of 8 g-SGFETs (left axis) and the gm of 64 g-SGFETs (right axis). The ﬁlled area
+indicates the standard deviation. c Illustration of the rat with the untethered recording system implanted. The headstage and the 3D-printed frame to hold it
+are covered by a 3D-printed enclosure. On top, the position markers of the motion capture (Mocap) system are ﬁxed, which reﬂect light back to the Mocap
+cameras placed in the room. The neural signals transduced by the graphene sensors are digitized and transmitted wirelessly to the signal receiver, which is
+connected to a computer for signal recording. d g-SGFET array placed on the rat cortex; the position of the reference electrode in contact with the
+cerebellum and two Pt-Ir electrodes at either side of the g-SGFET array are marked with arrows. e Photograph of the wireless headstage designed for these
+experiments. f Photograph of the 64 g-SGFET array mounted on a customized connector (left) and zoomed image of the probe active area (right). The red
+squares indicate the g-SGFETs on the array, which are connected to the headstage inputs with DC capabilities.
+
+gm,  1.9 mS/V,  is  relatively  high  with  respect  to  ﬂexible  silicon                  a  mean  of  4.13 μVrms  and  a  standard  deviation  of  1.14 μVrms
+FETs8 and comparable with typical organic transistor values17,52                           (excluding the outliers shown in Fig. 2b). These results show that
+due  to  the  high  electrical  mobility  and  gate  capacitance  of                       graphene-based  neural  probes  prepared  using  a  4-inch  wafer-
+g-SGFETs. In Fig. 2b the equivalent noise at the gate (Vgs-rms)of                          scale  fabrication  process  can  be  obtained  with  a  high  homo-
+the  same  devices  is  shown  (see  supplementary  information  S2).                      geneity and sensitivity. Additionally, upscaling of the fabrication
+Vgs-rms is an important ﬁgure of merit to evaluate the sensitivity                         process to an industrial scale is expected to further improve the
+of  the  sensors47,  which  is  deﬁned  as  the  ratio  between  the                       homogeneity  of  g-SGFETs  characteristics,  especially  in  terms  of
+integrated   current   noise   (Ids-rms)   of   the   transistor   and   its               the contamination-dependent charge noise47,53.
+transconductance.  Although  this  parameter  presents  a  larger
+dispersion than gm, it is possible to identify 3 out of 9 probes with                      Wireless  headstage  design  and  characteristics.  Another  aspect
+96%   of   the   g-SGFETs   showing   a   Vgs-rms   below   10 µVrms,                      that contributes to the sensitivity of the recording system is the
+suggesting that the measured noise is not directly related to gm.                          noise introduced by the headstage in the ampliﬁcation and digi-
+In  fact,  low-frequency  noise  in  graphene  has  been  reported  to                     tization  process.  The  ampliﬁcation  of  the  wide  frequency  band
+originate from charge trapping-detrapping events53, which makes                            activity requires a DC-coupled system, which implies the digiti-
+noise  directly  proportional  to  the  density  of  traps  and  thus,                     zation of signals with large DC-offsets. In order to digitize signals
+sensitive to impurities in the environment of graphene. Figures 2c,                        with  such  a  large  dynamic  range  and  minimize  quantization
+d  show  the  distribution  of  gm  and  Vgs-rms,  respectively,  for  the                 noise,  a  two-stage  transimpedance  ampliﬁer  has  been  imple-
+probe #3 labeled with an asterisk in Fig. 2a. The dispersion in the                        mented (see schematic in Fig. 2e). The ﬁrst stage converts the Ids
+transconductance of the g-SGFETs can be taken into account in                              currents from the g-SGFETs into voltage, which contains a wide
+the calibration of the neural signals, correcting dispersion in the                        frequency  band  signal,  including  the  infra-slow  frequency  com-
+signal ampliﬁcation. Therefore, the truly limiting factor in terms                         ponents of Ids. In the second ampliﬁcation stage (see Fig. 2e), the
+of  homogeneity  of  the  g-SGFETs  performance  is  the  equivalent                       signal is high-pass ﬁltered to remove the DC offset and ﬁll the full
+noise at the gate. Vgs-rms presents a log-normal distribution54 with                       scale   of  the   analog-to-digital   converter   (ADC).   In   order   to
+
+
+NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications                                                3

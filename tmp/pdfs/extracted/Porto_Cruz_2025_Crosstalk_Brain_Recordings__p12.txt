@@ -1,0 +1,70 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+cortex after the peripheral stimulation, spike detection was performed                     (Pennsylvania, USA). Fitting was done using the software Gamry Echem
+in accordance with parameters from literature (analysis Detect Spikes in                   Analyst (v. 6,32, Gamry Instruments Inc, Pennsylvania, USA).
+NeuroExplorer)9.  A  -3 standard  deviation  threshold was set  and  no                          All setups used for impedance spectroscopy characterization are
+refractory period was assumed. The detected spike times were visua-                        summarized as supplemental information (Fig. S4). A ﬁtting analysis
+lized  by  computing  peri-event  time  histograms  (analysis  Perievent                   providing ﬁtting errors and goodness of ﬁt is summarized as supple-
+Histograms in NeuroExplorer). The histograms showed the counts/bin                         mental information (Table S1).
+at time t0 + t with t0 as the start of whisker stimulation (trigger) and t as
+the deﬁned bin length (1 ms). Cross-correlograms of spike activity were                    Lumped-element modeling and simulation
+also computed (analysis Crosscorrelograms in NeuroExplorer), giving                        The  transmission  line  was  modeled  in  Simulink  (v.  R2019b,  Math-
+the  conditional  probability  of  a  spike  at  time  t0 + t  with  t0  as  the           Works, Massachusetts, USA) with the powergui set to continuous. The
+detected spike events of one speciﬁc electrode (reference) and t as the                    transfer  function  was  computed  using  the  linear  analysis  tool  and
+deﬁned bin length (1 ms). To avoid saturation of the maximum global                        saved in the MATLAB workspace (v. R2019b, MathWorks, Massachu-
+value  at  t0  for  the  reference electrode  (probability  of  1),  reference             setts, USA). For external input signals (spike waveform or sinc wave-
+spikes were not counted when calculating cross-correlogram versus                          form), the signal was imported from the MATLAB workspace with the
+itself.  Signal  correlation,  deﬁned  as  a  normalized  measure  of  the                 sample time set to 0 (default). The output signals were saved to the
+similarity of two time-dependent signals, was calculated as the Pearson                    workspace with the sample time set to the 1/12207 s (same as recorded
+correlation coefﬁcient (function corrcoef in MATLAB). The coherence                        neural  data).  The  algorithm  for  crosstalk  back-correction  of  neural
+maps, understood as a measure of the degree of relationship between                        data was created in MATLAB.
+two time series as a function of frequency, were calculated from 3 Hz
+to  4 kHz  (function  mscohere  in  MATLAB),  considering  the  whole                      Reporting summary
+recording session (256 frequency values, Hamming windowing func-                           Further  information  on  research  design  is  available  in  the  Nature
+tion and window overlap of 50%).                                                           Portfolio Reporting Summary linked to this article.
+
+Impedance spectroscopy                                                                     Data availability
+The spread resistance between signal source (within brain cortex) and                      All data supporting the ﬁndings of this study are available within the
+epidural recording electrode (Z1) was estimated as the access resis-                       article and its supplementary ﬁles. Any additional requests for infor-
+tance extracted from an impedance measurement performed between                            mation can be directed to, and will be fulﬁlled by, the corresponding
+an intracortical needle inserted 0.5 mm deep into the cortex (working                      authors. Raw data of recordings and impedance spectroscopies do not
+electrode)  and  an  epidural  electrode  (counter  electrode).  The  elec-                contain information which could be used in a general context since the
+trode impedance (Z2) was measured in vivo on implantation day. A                           crosstalk  is  dependent  on  every  particular  device.  Source  data  are
+two-electrode setup was implemented, using a stainless-steel screw                         provided with this paper.
+ﬁxed on the animal’s skull as a counter electrode. The potentiostat/
+galvanostat Reference 600 from Gamry Instruments Inc (Pennsylvania,                        References
+USA) was used for both measurements. In potentiostatic mode, a sine                        1.      Tsai, D., John, E., Chari, T., Yuste, R. & Shepard, K. “High-channel-
+wave with root-mean-square amplitude of 100 mV was imposed to the                                count, high-density microelectrode array for closed-loop investi-
+open  circuit  potential  (OCP)  and  the  frequency  was  swept  from                           gation of neuronal networks,” Annual International Conference of
+1–100 kHz. Fitting was done using the software Gamry Echem Analyst                               the IEEE Engineering in Medicine and Biology Society. IEEE Engi-
+(v. 6,32, Gamry Instruments Inc, Pennsylvania, USA).                                             neering in Medicine and Biology Society. Annual International Con-
+     The shunt impedance to the electrolyte (Z3) was measured in vitro                           ference, 7510–7513 (IEEE, 2015).
+in  a  three-electrode  setup  using  the  potentiostat  Autolab  PGSTAT                   2.  Harris,K.D.,Quiroga,R.Q.,Freeman,J.&Smith,S.L.Improving
+(Metrohm Autolab BV, Netherlands). An insulated (i.e. non-functional)                            data quality in neuronal population recordings. Nat. Neurosci. 19,
+electrode submersed is phosphate-buffered saline (PBS) 0.01 M solu-                              1165–1174 (2016).
+tion (pH 7.4, Sigma-Aldrich, Missouri, USA) was used as working elec-                      3.     Scholvin, J. et al. Close-packed silicon microelectrodes for scalable
+trode, an Ag/AgCl (KCl 3 mol·l−1) electrode as reference and a platinum                          spatially oversampled neural recording. IEEE Trans. Biomed. Eng.
+wire  as  counter.  A  100 mV  sine  wave  was  applied  at  open  circuit                       63,120–130 (2016).
+potential (OCP) and the frequency swept from 1 Hz to 100 kHz. Fitting                      4.  Salatino,J.W.,Ludwig,K.A.,Kozai,T.D.Y.&Purcell,E.K.Glial
+was   done   using   the   software   Nova   (Metrohm   Autolab   BV,                            responses to implanted electrodes in the brain. Nat. Biomed. Eng. 1,
+Netherlands).                                                                                    862–877 (2017).
+     The insulation impedance between channels at the implant level                        5.     Chung, J. E. et al. High-density, long-lasting, and multi-region
+(Z4)  was  measured  using  a  precision  impedance  analyzer  (Agilent                          electrophysiological recordings using polymer electrode arrays.
+4294 A, Keysight Technologies, California, USA). The analyzer has four                           Neuron 101,21(2019).
+measuring ports (4-point measurements): two leads connect to the                           6.     Vomero, M. et al. Conformable polyimide-based μECoGs: bringing
+current  source (high  and  low force), while  two connect  to  the  volt-                       the electrodes closer to the signal source. Biomaterials 255,
+meter (high and low sense). By shorting the high force with the high                             120178 (2020).
+sense lead and the low force with the low sense lead, the setup effec-                     7.     McGlynn, E. et al. The future of neuroscience: ﬂexible and wireless
+tively functions as a 2-point measurement (two lead pairs). Each lead                            implantable neural electronics. Adv. Sci. 8, 2002693 (2021).
+pair was connected to one of two neighboring tracks on the connector                       8.  Vomero,M.etal.Onthelongevityofﬂexible neural interfaces:
+end. The frequency was swept from 40 Hz (minimum start frequency)                                establishing biostability of polyimide-based intracortical implants.
+to 1 MHz and the oscillation amplitude was set to 100 mV. A Faraday                              Biomaterials 281, 121372 (2022).
+cage was used to reduce electromagnetic interference. The insulation                       9.     Khodagholy, D. et al. NeuroGrid: recording action potentials from
+impedance was quantiﬁed in terms of magnitude and phase, as well as                              the surface of the brain. Nat. Neurosci. 18,310–315 (2015).
+an estimated capacitance and parallel resistance.                                          10.   Bockhorst, T. et al. Synchrony surfacing: epicortical recording of
+     The insulation impedance between channels at the interconnects                              correlated action potentials. Eur. J. Neurosci. 48,3583–3596 (2018).
+level  (Z5)  was  measured  in  a  two-electrode  conﬁguration  using  the                 11.    Koch, J., Schuettler, M., Pasluosta, C. & Stieglitz, T. Electrical con-
+potentiostat/galvanostat Reference 600 from Gamry Instruments Inc                                nectors for neural implants: design, state of the art and future
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                           12

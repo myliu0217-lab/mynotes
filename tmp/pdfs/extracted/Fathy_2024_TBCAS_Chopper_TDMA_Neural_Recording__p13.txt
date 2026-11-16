@@ -1,0 +1,68 @@
+                      This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                             content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                     13
+
+for the   LFP  band,  and  the  measured  PSD  noise  floor  is  2.4
+µVrms, 3.07 µVrms, 5.88 µVrms, in the same test order. With
+a ±50 mV EOV applied, the proposed system achieves a total
+noise  reduction  of  2.4´         and  4.3´     in  LFP  and  AP  bands,
+respectively. The AP band experiences a higher reduction since
+the  1/f noise  over  the  Sinc-modulated multiplexed  waveform
+integrated over the AP BW results in larger cumulative noise
+impact when chopping is disabled.
+  Table  I  shows  the  proposed  system  performance  summary
+compared to the state-of-the-art systems. The proposed neural
+recording system per-channel area is 0.00179 mm2, which is the
+lowest amongst systems that can record at 10 kHz bandwidth,                                      In-Vivo Measurements of Two Consecutive
+and the lowest with fully CMOS-integrated multiplexing. Since                                            Stimulation-Evoked Responses
+the system is composed of 38% digital, it is highly scalable with
+newer node technologies. The proposed system achieves 1.4´                                 400                                                      Stimulation
+channel active area reduction and 1.2´ noise reduction in AP                                                                                          Evoked
+band when compared with [15], while maintaining a state-of-                                300                                                      Response
+the-art NEF amongst high-density neural recording front-ends.                              200
+While the power consumption increased over with [15] due to                                100
+the  oversampling  of  the  multiplexed  signal  due  to  utilizing                           0
+choppers  to  lower  the  IRN  and  the  per-channel  area,  the
+corresponding reduction in noise, which is important in many                              -100     Baseline
+applications, ultimately maintained the NEF.                                                      Recording
+  Fig.   17    shows     a   schematic   illustration   of        the   in-vivo                                                         36 µVPP
+experimental setup for testing and benchmarking the recording                                                     30 µVPP                     AVG
+capability of the proposed AFE. A female Sprague-Dawley rat                                                                                       CH1
+is placed on a stereotaxic, and the proposed AFE is connected                                                            AVG                        ,2
+
+to a breakout board to interface with the neural electrodes. An                                                              CH1                          Intan IC
+Airpuff system and a function generator are connected to inject                                                                 ,2
+periodic air puffs towards the whiskers of the rat which evokes                                                                    Proposed IC
+responses in its primary somatosensory cortex. Fig. 18 shows                           Fig. 18 In-vivo measurement comparison of neural activity of a rat with the
+in-vivo   recordings  of  the  proposed  neural  recording  system                     proposed IC and a commercial chip (Intan RHS).
+compared to a commercial IC (Intan RHS). The electrodes used
+in this experiment were built on a thin-film parylene C substrate                     were performed under the guidelines stated in the University of
+[32], [33], [34]. The electrodes were fabricated on a 3-μm thick                      California   San   Diego   Institutional   Animal   Care   and   Use
+parylene C layer deposited on a 4-inch Si carrier wafer. A 10-                        Committee   (IACUC)   protocol   S16020.   The   animals   were
+nm  thick  layer  of  chromium  and  250           nm thick layer  of  gold           anesthetized  prior  to  surgery  using  Isoflurane,  and  constant
+were then deposited by electron beam evaporation to form the                          anesthesia   was   maintained   throughout   the   course   of   the
+photolithographically  defined  metal  trace  connections                to  the      experiment using Ketamine. At the end of the experiment, the
+contacts. The electrode contact is a circular 200 µm diameter                         animal  was  euthanized  with  a  lethal  injection  of  Sodium
+Platinum    Nanorod    (PtNR),    which    has              a    characteristic       Pentobarbital.
+impedance  of  approximately  2           kΩ   at  1  kHz   in-vivo.   Typical
+benchtop and in vivo impedance spectra can be found in [26].                                                       VI.    CONCLUSION
+A  conformal      2.5   µm  thick  parylene  C  top         passivation  was
+formed  using      chemical     vapor  deposition.       The  acute     in  vivo        This paper presents a TDMA-based neural recording system
+recordings  in  this  experiment  lasted  3  hours.  The  electrodes,                 with novel modules to lower the per-channel area and power
+with a 1-mm inter contact spacing, were placed on the barrel                          consumption. The AFE is based on a chopper-stabilized neural
+cortex of the rat which is responsive to mechanical deflection                        amplifier with a novel impedance booster module that achieves
+of the contralateral whiskers. The baseline and two-consecutive                       a   39×      boosting      factor.   The   proposed   neural   recorder
+stimulation evoked responses were measured sequentially from                          implements  a  moving-average  filter  to  lower  the  amplifier
+CH1 and CH2, revealing similar neural high-gamma activity in                          residual  flicker  noise  which  affects  the  system  input  referred
+the LFP band, measured first with the Intan RHS chip (Fig. 18,                        noise (IRN) by a factor of 4.3× for AP band, and 2.45× for LFP
+right), and consequetively with proposed recording system (Fig.                       band.  In  addition,  no  on-chip  demodulation  is  required  to
+18,   left)   without   displacing   the   electrode.           The   average         extract and remove the EOV artifacts that can easily saturate the
+waveform of four         trials filtered  in  the  high  gamma  band are              AFE.   A   small   size   Sign-Sign   LMS   module               replaces   the
+plotted from two channels in each IC and superimposed on the                          conventional        DS-modulators    and    fine    DACs    usage    to
+baseline  recordings  for  the  same  channels.             All  experiments
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                      © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

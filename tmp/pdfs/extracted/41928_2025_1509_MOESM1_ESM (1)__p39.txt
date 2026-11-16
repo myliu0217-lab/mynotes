@@ -1,0 +1,28 @@
+Supplementary Fig. 11. Power, thermal, and specific absorption rate (SAR) characterization.
+(a) Coil link characterization with two port S-parameter measurement. S21 (i) and S11 (ii) were
+measured with chicken breast as tissue phantom (iii), assuming an ideal conjugate matched
+impedance on the transmitting side (Port 1) and a 75 Ω load on the receiving side (Port 2) which
+is the linear load equivalence of the overall circuit load. S21 is converted to power transfer
+efficiency (PTE) for these loads (iv). (b) Temperature measurement of a fully passivated device in
+recording mode under different power delivery conditions. Error bars indicate SD (n=5). (c) Power
+consumption breakdown of the device when it is in recording mode. (d) SAR simulation result (i)
+assuming 1.5-cm implant depth and six-layer brain model (ii), (iii).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                           38

@@ -1,0 +1,32 @@
+Supplementary Fig. 8. Design and characterization of the stimulation current generator. (a)
+Design of the regulated cascode current driver. Operational amplifier (OPAMP) A1, A3, A5 are
+implemented as PMOS input recycling folded cascode operational transconductance amplifier
+(OTA) and A2, A4 are implemented as NMOS input recycling folded cascode OTA. R1, R2 and
+C1, C2 are used to protect the output of OPAMP A4 and A5 by filtering the voltage spikes through
+the parasitic drain-to-gate capacitance of Q10 and Q11, when the stimulation polarity changes
+during biphasic stimulation. (b) The simulated voltage compliance under highest (1.12 mA, worst-
+case) stimulation current. The current error is less than 1% for output voltages greater than 150
+mV headroom from the rails (-1.35 V to 1.35 V). (c) The PMOS input recycling folded cascode
+OTA, based on 118. Compared to simple a 5-Transistor OTA, this OTA offers higher DC gain and
+gain-bandwidth product for the same power consumption. (d) The NMOS input recycling folded
+cascode OTA.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                        35

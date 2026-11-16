@@ -1,0 +1,50 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    aliasing artifacts. Broadband gamma (20-100 Hz passband, 10 Hz and 110 Hz stopbands) and
+    high-gamma (90-165 Hz passband, 55 Hz and 200 Hz stopbands) filtering employed Butterworth
+    bandpass designs with 1 dB passband ripple and 10 dB stopband attenuation. All filters were
+    applied using zero-phase digital filtering (filtfilt) to prevent temporal distortions. Data were z-
+    scored on a per-pixel basis using session-wide mean and standard deviation to enable
+    comparison across varying gain settings.
+              Trial-averaged evoked responses were calculated by segmenting filtered data into
+    stimulus-aligned windows. Spatial heatmaps displayed maximum z-scores during 0-50 ms post-
+    stimulus intervals. Time-frequency analysis employed continuous wavelet transforms to generate
+    scalograms. Weighted centroids of evoked activity were calculated on thresholded binary masks
+    (threshold = maximum pixel value minus 2 standard deviations across pixels).
+              Electrochemical impedance spectroscopy measurements were acquired using a Gamry
+    Interface 1000E with potentiostatic mode, 10 mV RMS AC excitation, 0V DC relative to open-
+    circuit potential, and frequency sweep from 1 MHz to 1 Hz. Measurements were performed in
+    saline benchtop experiments, at each chronic recording session, and post-explant for passive
+    reference electrodes and encapsulated test patterns. Continuity measurements were also
+    monitored across the encapsulated test patterns to ensure bonding pad viability throughout the
+    chronic study.
+
+    Acknowledgements
+              This work was performed in part in the San Diego Nanotechnology Infrastructure (SDNI)
+    of UCSD, a member of the National Nanotechnology Coordinated Infrastructure, which is
+    supported by the NSF (grant ECCS1542148). The authors would like to acknowledge support
+    from the Nano3 staff, in particular Patrick Driscoll, who provided countless hours of technical
+    support and insight into the fabrication equipment required for this research. The authors would
+    also like to acknowledge support from Dr Hoi Sang U of UC San Diego for his guidance in the
+    animal studies and superb surgical training. Finally, the authors would like to acknowledge the
+    pivotal impact of Dr. Hongseok Oh, currently at Soongsil University, who not only provided
+    training and guidance, but also helped lay the groundwork for the fabrication of IGZO thin film
+    transistors implemented in this work. The research presented here built on nearly a decade of
+    know-how that all began with Dr. Oh and his published works on zinc oxide pressure sensors.
+
+    Author contributions
+    Conceptualization: A.M.B, S.A.D, I.G.
+
+    Method Development: A.M.B., R.V., K.J.T., S.A.D., I.G.
+    Fabrication: A.M.B., R.V.
+
+    Data Collection: A.M.B., R.V.
+
+    Data Processing: A.M.B
+
+    Funding Acquisition: A.M.B., S.A.D., I.G.
+    Project Administration: S.A.D., I.G.

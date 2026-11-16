@@ -1,0 +1,77 @@
+                 a                                                  b                                                                  cSM                                                                                    SM
+
+                                                                                                                     100 µ        V
+                                                 SS                                                                         50      ms
+
+
+                            MN
+                                        SL           SM
+                                                 SI
+
+
+                 e
+                                                               MN
+
+                                                               SL
+
+                                                               SI
+
+                                                               SS
+
+                                                               SM
+                                     tSNE-1                         d         MN                            SL             R
+                 f                                                                                                    L         M
+
+                           97        0    1      0       2                                                                 C
+
+
+                                                                                                                   –1                             1
+                            1     99      0      0       0                                                            Normalized
+                                                                                                                     min/max SSEP
+                            1      0      97     0       2                     SI                   SS                            SM
+
+                            2      0         0   98      0
+
+                            2      0        0         0 98
+                                                                                                                                                               200 µ        v
+                          MN      SL       SI       SS      SM
+                                      Predi    ct  ed                      6.8 mm                                                                       Stimulation        25 ms
+
+Fig. 2 | BISC recordings over somatosensory cortex from a porcine model.                            peak SSEP magnitude was greater than the trough magnitude. A negative value
+a, Location of stimulation (MN, median nerve; SS, snout superior; SL, snout                         indicates that the trough SSEP magnitude was greater than the peak magnitude.
+lateral; SI, snout inferior; SM, snout medial). b                                                                            , Example of a stimulation-The cross indicates orientation of the implant in b                                                and d               (R, rostral; C, caudal; L,
+induced SSEP from 256 channels at 33.9 kS s−1 from the full array, trial averaged                   lateral; M, medial). e                                            , State-space representation of the SSEPs using t                                            -distributed
+(n = 100). The blue curves indicate the mean; the shaded area indicates the s.d.                    stochastic neighbour embedding (tSNE; n             = 100 per location). f                                                    , Prediction of
+c, Representation of the mean responses in b                aligned on a shared time axis. d          , stimulation location using a linear discriminant classifier (n             = 100 per location).
+Spatial map of the normalized SSEP extrema. A positive value indicates that the                     Panel a created with BioRender.com.
+
+
+utilizing a transmit/receive switch (Supplementary Discussion 1 and                                 a microprocessor running the Linux operating system with pro-
+Supplementary Fig. 9).                                                                              grammable logic that manages neural data streaming and executes
+      Wireless power transfer utilizes a near-field inductive coupling at                           time-sensitive command sequences (Supplementary Fig. 13). A graphi-
+13.56 MHz (Supplementary Discussion 1 and Supplementary Figs. 10                                    cal user interface running on a computer base station communicates
+and 11). This choice of frequency keeps the specific absorption rate                                with the processor module through RESTful application programming
+below 2 W kg−1 (refs. 35 ,36; Supplementary Fig. 11). The system clock                              interface (API; Supplementary Fig. 14), allowing users to configure the
+of the implant is derived from the wireless power transfer carrier,                                 recording parameters and display real-time neural data.
+eliminating the need for an on-implant crystal oscillator. The BISC
+implant consumes less than 64 mW of total power, satisfying the                                     Surgical approaches for the implant
+thermal budget guideline of 0.5 mW mm−2 for neural implants37,38                                    The thin, mechanically flexible form factor of the BISC implant enables rel-
+(Supplementary Fig. 11).                                                                            atively simple surgical implantation compared with any device using pen-
+                                                                                                    etrating intracortical electrodes or percutaneous connections. In both pig
+Relay station design                                                                                and NHP models, a standard craniotomy on the scale of 25 mm × 23 mm
+The relay station wirelessly powers the implant and transfers data                                  was made adjacent to the implantation site (Supplementary Discussions
+between the BISC chip and a computer base station. It is a two-part                                 5 and 9). The dura was then carefully elevated using sutures or forceps and
+system that consists of a headstage and a processor module (Fig. 1b                                 linearly cut to provide a clear path for implantation. A commercial strip
+and Methods), designed from commercial off-the-shelf components.                                    electrode was used as the insertion shuttle (Supplementary Fig. 17), with
+      The headstage has a wearable form factor (75 × 75 × 45 mm3,                                   the sterilized BISC chip placed on top and inserted under the dura, resting
+151 g) with printed circuit boards (PCBs) that include a custom                                     the implant directly on the pial surface. Importantly, the dural incision was
+powering coil and an ultrawideband (UWB) antenna (Fig. 1g and                                       made adjacent to the implantation site to avoid cuts or sutures directly
+Supplementary Fig. 2). Data telemetry uses an impulse-radio UWB                                     over it. Once the chip is positioned, the dura was sutured, the skull was
+transceiver centred at 4 GHz with on–off-keying modulation, linking a                               repositioned and the incision was closed.
+dipole antenna on the headstage to a monopole antenna on the implant.                                      This procedure also supports easy upgrading or replacement
+      The processor module powers and configures components on                                      of the BISC chip. After several months of implantation in an NHP,
+the headstage, sends queries and commands to the implant, and                                       we reopened the skull, made a new dural incision over the previous
+receives responses and recorded data from the implant. It combines                                  one and replaced the chip in less than 10 min. This rapid, safe and
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                  1275

@@ -1,0 +1,14 @@
+Supplementary Fig. 1. Architecture of the implant. (a) Functional diagram of the modules on
+the implant. (b) Cross-section and electrode SEM image. (c) Die photo showing functional circuit
+components of the implant. (d) Stack-up of the implant.
+
+
+
+
+
+
+
+
+
+
+                                                             28

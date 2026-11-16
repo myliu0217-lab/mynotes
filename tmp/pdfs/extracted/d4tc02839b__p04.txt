@@ -1,0 +1,90 @@
+Journal of Materials Chemistry C                                                                                                                                   Paper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 1    Design and the performance of the ultraflexible, high-density vOECT array. (a) Left panel: Illustration of the vOECT array on a flexible parylene
+substrate.  Right  panel:  Zoom-in  schematics  of  two  adjacent  pixels,  showing  both  the  side  view  and  the  top  view.  (b)  A  photograph  showing  the
+ultraflexible, high-density vOECT array attached to a brain model. Scale bar, 1 mm. Inset is a scanning electron microscopic (SEM) image of a 4.2 mm-thick
+vOECT bent to a 5 mm radius. Scale bar, 10 mm. (c) Optical micrograph of an ultraflexible, 1024-channel vOECT array with a density of 10 000 transistors
+cm/C02. Scale bar, 200 mm. The upper inset displays a magnified image of the vOECT array (ii). Scale bar, 50mm. The lower inset presents a cross-sectional
+SEM image of a vOECT (iii). Scale bar,  0.5 mm. (d) A representative  transfer curve (blue)  and the  corresponding  gm (pink) of a vOECT.  (e) Statistical
+distribution histograms of gm measured for the 1024 vOECTs from an ultraflexible array. (f) A 2D map illustrating the peak gm of the 1024 vOECTs within
+the array. (g) Comparison of the vOECT array layout with other documented solution-gated multiplexed arrays used for electrophysiology across three
+dimensions: channel count, density, and sensing area.10,33–39 (h) Transient response measured from a typical vOECT, with VG switching between 0 V and
+0.6 V while VD remaining at /C00.6 V.

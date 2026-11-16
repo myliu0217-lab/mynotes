@@ -1,0 +1,61 @@
+  bioRxiv preprint    doi:  https://doi.org/10.64898/2026.06.23.733868            ; this version posted June 24, 2026.         The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                                   available under a     CC-BY-NC-ND 4.0 International license            .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Figure 2. Overview of FIC technology developments. A-B) photograph and optical microscope image inset for encapsulation test
+      samples used in accelerated aging benchtop study. C-D) rendering and corresponding photograph of a PDMS-based accelerated
+      aging soak chamber consisting of a heated saline well wherein the sample shown in panel B was immersed for over one year at
+      50°C. E-F) Corresponding cross-sectional rendering showing the expected insulation impedance of the imbedded metal leads,
+      together with dummy electrode contacts which were used to assess morphological impacts of thin film encapsulation failure. G-
+      H) Electrochemical impedance spectra and corresponding 1khz impedance magnitude plotted over the duration of the 388-day
+      study. This study was conducted with a 5V DC bias applied across the insulation shown in panels E-F to simulate worst-case
+      scenario of constant operation. I-J) TFT source/drain contact location and corresponding energy diagram as a function of gate
+      bias. K) Transfer curves measured for samples with Cr and Ti contacts before and after annealing. L) Corresponding device
+      characteristics as function of channel length after annealing steps. M-N) Details on gate bias dependent contact resistance and
+      barrier height highlighted for three plasma treatment conditions along with corresponding threshold voltages. O) Microscope
+      image of test coupons used for reported measurements. P-Q) Transfer curves and capacitance-voltage curves for a set of different
+      TFT architectures with details reported in Supplementary Fig. 14-16. Legend in panel P shows code corresponding to test

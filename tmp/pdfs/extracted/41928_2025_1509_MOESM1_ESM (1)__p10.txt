@@ -1,0 +1,48 @@
+Static instructions include configuration and programming. The configuration instruction can
+program up to 64 bits of configuration in a given instruction. These configuration registers, which
+number 122 bits in total, control the functioning of finite state machines (FSMs) in the controller
+or are distributed to other functional blocks on the BISC implant, such as the WPT, the AFE, and
+the UWB transceiver in order to set longer-term states that are infrequently updated. The
+programming instruction sets the address of electrodes used for stimulation and their initial polarity,
+along with additional configuration information that are stored in the controller’s registers. When
+stimulation is initiated, this information is used to gate specific control signals sent to the AFE.
+
+The query configuration instruction allows one to request access to the contents of the
+configuration registers.
+
+Design of the WPT circuit
+
+The WPT circuit receives power from the relay station by means of 13.56 MHz inductive coupling,
+converting the received power to regulated ±1.5V supplies (Supplementary Fig. 10).
+Radiofrequency inductive power received by the power coil (Supplementary Fig. 1c) is first
+converted to a DC voltage using an active rectifier. This DC voltage, which can be anywhere
+between 2 and 3.3V to support full functionality of the device, is further converted to both +1.5V
+and -1.5V supplies. To generate -1.5V, the rectifier output voltage goes through an additional
+conversion stage (Supplementary Fig. 10b) prior to the regulation stage.
+
+The output voltage level of the rectifier is a function of the amount of power received by the BISC
+implant and the amount of power consumed by it. In a practical setting, both factors are
+dynamically changing. For example, the former depends on the coil-to-coil alignment between the
+device and the relay station headstage, and the latter depends on the device’s mode of operation.
+For thermal and specific absorption rate (SAR) characterization, we assumed that our device is in
+a recording state, which is the most power-hungry mode of operation.
+
+Ideally, the power delivered to the device should be sufficient but no more than what is necessary
+to support full operation, since excess power received becomes converted to heat. This means that
+under optimum operation, the rectifier output voltage is stabilized to near 2V. To achieve this, we
+periodically read out the rectifier output voltage as a 3-bit digital code (0: 2V, 1: 2.1V, …, 7: 2.7V)
+via the implant’s query configuration instruction. The headstage adjusts the magnitude of
+transmitted power based on this reading.
+
+Coil-to-coil link efficiency is a key metric in inductive WPT design. A more efficient link not only
+allows a longer operating distance, but also helps to keep the power radiated by the headstage to
+stay below the SAR safety exposure limit (2 W/kg) set by the FCC 35. We characterized our link
+efficiency by measuring S-parameters of the two coils with chicken breast as a tissue phantom
+(Supplementary Fig. 11a). We assumed an ideal conjugate-matched impedance on the
+transmitting side (Port 1) and a 75 Ω load on the receiving side (Port 2) which is the periodic
+steady-state (PSS) simulated linear-load equivalent of the time-varying rectifier input impedance.
+
+Temperature of the chip was measured with a thermal imaging camera (FLIR E5-XT, Teledyne
+FLIR) under different power delivery conditions (Supplementary Fig. 11b). Measurements were
+taken in an ambient setup with no active air flow at 25 °C, after the device operating in recording
+                                                          9

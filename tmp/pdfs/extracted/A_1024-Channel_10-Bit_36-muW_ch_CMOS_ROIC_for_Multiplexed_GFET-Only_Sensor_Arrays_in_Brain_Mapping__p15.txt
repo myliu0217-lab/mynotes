@@ -1,0 +1,83 @@
+874                                                                                                           IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 15, NO. 5, OCTOBER 2021
+
+
+
+[40]  R. Ramezani      et al., “On-probe neural interface ASIC for combined electri-                 [62]  S. B. Lee, H. Lee, M. Kiani, U. Jow, and M. Ghovanloo, “An inductively
+       cal recording and optogenetic stimulation,”          IEEE Trans. Biomed. Circuits                    powered scalable 32-Channel wireless neural recording system-on-a-chip
+       Syst., vol. 12, no. 3, pp. 576–588, Jun. 2018.                                                       for neuroscience applications,”        IEEE Trans. Biomed. Circuits Syst.,vol.4,
+[41]  R. Ranjandish and A. Schmid, “A Sub-µW/Channel, 16-Channel seizure                                    no. 6, pp. 360–371, Dec. 2010.
+       detection and signal acquisition SoC based on multichannel compressive                        [63]  M. Lee      et al., “A CMOS MedRadio transceiver with supply-modulated
+       sensing,”   IEEE Trans. Circuits Syst. II, vol. 65, no. 10, pp. 1400–1404,                           power  saving  technique  for  an  implantable  brain-machine  interface
+       Oct. 2018.                                                                                           system,”    IEEE  J.  Solid-State  Circuits,  vol.  54,  no.  6,  pp. 1541–1552,
+[42]  R. Shulyzki      et  al., “320-Channel active probe for high-resolution neu-                          Jun. 2019.
+       romonitoring  and  responsive  neurostimulation,”             IEEE  Trans.  Biomed.           [64]  W. Liew, X. Zou, and Y. Lian, “A 0.5-V 1.13-µW/Channel neural recording
+       Circuits Syst., vol. 9, no. 1, pp. 34–49, Feb. 2015.                                                 interface  with  digital  multiplexing  scheme,”  in          Proc.  Eur.  Solid-State
+[43]  X. Zou    et al., “A 100-Channel 1-mW implantable neural recording IC,”                               Circuits Conf., 2011, pp. 219–222.
+       IEEE Trans. Circuits Syst. I, vol. 60, no. 10, pp. 2584–2596, Oct. 2013.                      [65]  Y.  Liu,  S.  Luan,  I.  Williams,  A.  Rapeaux,  and  T.  G.  Constandinou,
+[44]  D. De Dorigoet al., “Fully immersible subcortical neural probes with mod-                             “A  64-Channel  versatile  neural  recording  SoC  with  activity-dependent
+       ular architecture and a delta-sigma ADC integrated under each electrode                              data  throughput,”      IEEE  Trans.  Biomed.  Circuits  Syst.,  vol.  11,  no.  6,
+       for parallel readout of 144 recording sites,”         IEEE J. Solid-State Circuits,                  pp. 1344–1355, Dec. 2017.
+       vol. 53, no. 11, pp. 3111–3125, Nov. 2018.                                                    [66]  L. Lyu, D. Ye, and C. R. Shi, “A 340nW/Channel neural recording analog
+[45]  C. M. Lopez       et  al., “An implantable 455-Active-Electrode 52-Channel                            front-end using replica-biasing LNAs to tolerate 200 mVpp                interfere from
+       CMOS  neural  probe,”         IEEE  J.  Solid-State  Circuits,  vol.  49,  no.  1,                   350 mV power supply,” in           Proc.  IEEE  Int.  Symp.  Circuits  Syst., 2019,
+       pp. 248–261, Jan. 2014.                                                                              pp. 1–4.
+[46]  J. Cisneros-Fernández, M. Dei, L. Terés, and F. Serra-Graells, “Switch-less                    [67]  A.  Mahajan       et  al.,  “A  64-Channel  ultra-low  power  bioelectric  signal
+       frequency-domain multiplexing of GFET sensors and low-power CMOS                                     acquisition system for brain-computer interface,” in             Proc. IEEE Biomed.
+       frontend for 1024-Channel         µECoG,” in       Proc. IEEE Int. Symp. Circuits                    Circuits Syst. Conf., 2015, pp. 1–4.
+       Syst., 2019, pp. 1–5.                                                                         [68]  O.  Malekzadeh-Arasteh           et  al.,  “An  energy-efﬁcient  CMOS  dual-mode
+[47]  S. Ha, J. Park, Y. M. Chi, J. Viventi, J. Rogers, and G. Cauwenberghs, “85                            array architecture for high-density ECoG-based brain-machine interfaces,”
+       dB dynamic range 1.2 mW 156 kS/s biopotential recording IC for high-                                 IEEE Trans. Biomed. Circuits Syst., vol. 14, no. 2, pp. 332–342, Apr. 2020.
+       density ECoG ﬂexible active electrode array,” in              Proc. Eur. Solid-State          [69]  A. E. Mendrela       et al., “A bidirectional neural interface circuit with active
+       Circuits Conf., 2013, pp. 141–144.                                                                   stimulation artifact cancellation and cross-channel common-mode noise
+[48]  A. Ibrahim, M. Kiani, and A. Farajidavar, “A 64-Channel wireless im-                                  suppression,”     IEEE J. Solid-State Circuits, vol. 51, no. 4, pp. 955–965,
+       plantable system-on-chip for gastric electrical-wave recording,” in                Proc.             Apr. 2016.
+       IEEE Sensors, 2016, pp. 1–3.                                                                  [70]  M. Mollazadeh, K. Murari, G. Cauwenberghs, and N. Thakor, “Microp-
+[49]  E. Ashoori, S. Dávila-Montero, and A. J. Mason, “Compact and low power                                ower CMOS integrated low-noise ampliﬁcation, ﬁltering, and digitization
+       analog front end with in-situ data decimator for high-channel-count ECoG                             of multimodal neuropotentials,”IEEE Trans. Biomed. Circuits Syst.,vol.3,
+       recording,” in   Proc. IEEE Int. Symp. Circuits Syst., 2018, pp. 1–5.                                no. 1, pp. 1–10, Feb. 2009.
+[50]  W.  Biederman       et  al.,“A4.78mm2            fully-integrated  neuromodulation             [71]  R. Muller     et al., “A minimally invasive 64-Channel wireless              µECoG im-
+       SoC  combining  64  acquisition  channels  with  digital  compression  and                           plant,”IEEE J. Solid-State Circuits, vol. 50, no. 1, pp. 344–359, Jan. 2015.
+       simultaneous dual stimulation,”IEEE J. Solid-State Circuits, vol. 50, no. 4,                  [72]S.Na,S.Kim,T.Kim,H.Lee,H.Lee,andS.Kim,“A32-Channel
+       pp. 1038–1047, Apr. 2015.                                                                            neural recording system with a liquid-crystal polymer MEA,” in                      Proc.
+[51]  U. Bihr   et al., “A neural recorder IC with HV input multiplexer for voltage                         IEEE Biomed. Circuits Syst. Conf., 2013, pp. 13–16.
+       and current stimulation with 18 V compliance,” in              Proc. Eur. Solid-State         [73]  P. Schonle    et al., “A multi-sensor and parallel processing SoC for wearable
+       Circuits Conf., 2014, pp. 103–106.                                                                   and  implantable  telemetry  systems,”  in          Proc.  Eur.  Solid-State  Circuits
+[52]  A. Bonfantiet al., “A multi-channel low-power IC for neural spike record-                             Conf., 2017, pp. 215–218.
+       ing with data compression and narrowband 400-MHz MC-FSK wireless                              [74]  J.  Uehlin,  W.  A.  Smith,  V.  R.  Pamula,  S.  Perlmutter,  V.  Sathe,  and  J.
+       transmission,” inProc. Eur. Solid-State Circuits Conf., 2010, pp. 330–333.                           C.  Rudell,  “A  bidirectional  brain  computer  interface  with  64-Channel
+[53]  S.  Brenna,  F.  Padovan,  A.  Neviani,  A.  Bevilacqua,  A.  Bonfanti,  and                          recording, resonant stimulation and artifact suppression in standard 65
+       A. L. Lacaita, “A 64-Channel 965           µW neural recording SoC with UWB                          nm CMOS,” in        Proc. Eur. Solid-State Circuits Conf., 2019, pp. 77–80.
+       wireless transmission in 130-nm CMOS,”               IEEE Trans. Circuits Syst. II,           [75]  J. P. Uehlin, W. A. Smith, V. R. Pamula, S. I. Perlmutter, J. C. Rudell, and
+       vol. 63, no. 6, pp. 528–532, Jun. 2016.                                                              V. S. Sathe, “A 0.0023 mm2/ch. delta-encoded, time-division multiplexed
+[54]  M.  S.  Chae,  W.  Liu,  and  M.  Sivaprakasam,  “Design  optimization  for                           mixed-signal ECoG recording architecture with stimulus artifact suppres-
+       integrated neural recording systems,”IEEE J. Solid-State Circuits, vol. 43,                          sion,”   IEEE Trans.  Biomed.  Circuits  Syst., vol. 14, no. 2, pp. 319–331,
+       no. 9, pp. 1931–1939, Sep. 2008.                                                                     Apr. 2020.
+[55]  M. S. Chae, Z. Yang, M. R. Yuce, L. Hoang, and W. Liu, “A 128-Channel                          [76]  W. Wattanapanitch and R. Sarpeshkar, “A low-power 32-Channel digitally
+       6  mW  wireless  neural  recording  IC  with  spike  feature  extraction  and                        programmable neural recording integrated circuit,”              IEEE Trans. Biomed.
+       UWB transmitter,”      IEEE Trans. Neural Syst. Rehabil. Eng., vol. 17, no. 4,                       Circuits Syst., vol. 5, no. 6, pp. 592–602, Dec. 2011.
+       pp. 312–321, Aug. 2009.                                                                       [77]  C. Wu, C. Cheng, and Z. Chen, “A 16-Channel CMOS chopper-stabilized
+[56]  C. Cheng, Z. Chen, and C. Wu, “A 16-Channel CMOS chopper-stabilized                                   analog  front-end  ECoG  acquisition  circuit  for  a  closed-loop  epileptic
+       analog front-end acquisition circuits for ECoG detection,” in              Proc. IEEE                seizure control system,”      IEEE Trans. Biomed. Circuits Syst., vol. 12, no. 3,
+       Int. Symp. Circuits Syst., 2017, pp. 1–4.                                                            pp. 543–553, Jun. 2018.
+[57]  P. Chen, C. Huang, and C. Wu, “An 1.97            µW/Ch 65nm-CMOS 8-Channel                    [78]  J. Xu, A. T. Nguyen, T. Wu, W. Zhao, D. K. Luu, and Z. Yang, “A wide
+       analog  front-end  acquisition  circuit  with  fast-settling  hybrid  DC  servo                      dynamic range neural data acquisition system with high-precision delta-
+       loop for EEG monitoring,” in         Proc. IEEE Int. Symp. Circuits Syst., 2018,                     sigma ADC and on-chip EC-PC spike processor,”                   IEEE Trans. Biomed.
+       pp. 1–5.                                                                                             Circuits Syst., vol. 14, no. 3, pp. 425–440, Jun. 2020.
+[58]  E.  Greenwald      et  al.,“A5µW/Channel  9b-ENOB  BioADC  array  for                          [79]  P. Fattahi, G. Yang, G. Kim, and M. R. Abidian, “A review of organic and
+       electrocortical  recording,”  in     Proc.  IEEE  Biomed.  Circuits  Syst.  Conf.,                   inorganic biomaterials for neural interfaces,”          Adv. Mater., vol. 26, no. 12,
+       2015, pp. 1–4.                                                                                       pp. 1846–1885, 2014.
+[59]  D.  Han,  Y.  Zheng,  R.  Rajkumar,  G.  S.  Dawe,  and  M.  Je,  “A  0.45  v                  [80]  D.  Khodagholy        et  al.,  “NeuroGrid:  Recording  action  potentials  from
+       100-Channel neural-recording IC with Sub-µW/Channel consumption in                                   the surface of the brain,”       Nature Neurosci., vol. 18, no. 2, pp. 310–315,
+       0.18  µm  CMOS,”        IEEE   Trans.  Biomed.  Circuits  Syst.,  vol.  7,  no.  6,                  Feb. 2015.
+       pp. 735–746, Dec. 2013.                                                                       [81]  N. Schaefer      et al., “Multiplexed neural sensor array of graphene solution-
+[60]  Y.  Huang     et  al.,  “An  ultra-high-density  256-Channel/25  mm2               neural             gated  ﬁeld-effect  transistors,”       2D  Mater.,  vol.  7,  no.  2,  Mar.  2020,
+       sensing microsystem using TSV-Embedded neural probes,” in                   Proc. IEEE               Art. no. 025046.
+       Int. Symp. Circuits Syst., 2016, pp. 1302–1305.                                               [82]  R. Garcia-Cortadella        et al., “Graphene active sensor arrays for long-term
+[61]  C.  Kim,  S.  Joshi,  H.  Courellis,  J.  Wang,  C.  Miller,  and  G.  Cauwen-                        and wireless mapping of wide frequency band epicortical brain activity,”
+       berghs, “Sub-µVrms-Noise Sub-µW/Channel ADC-Direct neural record-                                    Nature Commun., vol. 12, no. 1, pp. 1–17, Jan. 2021.
+       ing  with  200-mV/ms  transient  recovery  through  predictive  digital  au-                  [83]  E. Masvidal-Codina         et al., “High-resolution mapping of infraslow corti-
+       toranging,”   IEEE J. Solid-State Circuits, vol. 53, no. 11, pp. 3101–3110,                          cal brain activity enabled by graphene microtransistors,”               Nature Mater.,
+       Nov. 2018.                                                                                           vol. 18, no. 3, pp. 280–288, Mar. 2019.
+
+
+          Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

@@ -1,0 +1,81 @@
+ARTICLE                                                                                          NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 2 Evaluation of system sensitivity. a Boxplot of gm for nine randomly selected probes from three different wafers produced in independent batches.
+The yield in terms of gm above 70% of the median is indicated. b Boxplot for Vgs-rms measured in the 1–10 Hz frequency range, plotted for the same neural
+probes evaluated in part a. All probes consisting of 64 g-SGFETs. The boxes extend from the lower to the upper quartiles, with a line at the median. The
+whiskers extend 1.5 times the inter-quartile range and the data points beyond the whiskers are indicated by a dot. c Histogram of gm for the 64 g-SGFETs of
+probe #3 (labeled in panel a) and Gaussian ﬁt of the histogram excluding the outliers shown in panel a. d Histogram of Vgs-rms for the 64 transistors in
+probe #3 (see panel b) and log-normal ﬁt of the histogram excluding the outliers shown in panel b. e Equivalent circuit of the wireless headstage. f Power
+spectral density (PSD) of the noise from DC channels (black) and AC channels (orange) in probe #3. The 1/f dependence is represented by the solid red
+line. The vertical orange line indicates the hardware high-pass ﬁlter applied to AC channels at 0.15 Hz. The quantization noise of the DC and AC channels is
+indicated by the horizontal dashed red lines. g Representation of the Vgs-rms for all g-SGFETs in probe #3 shown for different bandwidths; 0.05-0.5 Hz band
+for the DC-channels (left), 1–10 Hz band (middle), and 20–200 Hz (right). The position of the g-SGFETs on the array connected to DC-channels of the
+headstage is indicated by the red squares. h Time domain representation of the noise spectra shown in part f and g (DC-channels ﬁltered in the 0.05–0.5
+Hz band and AC channels in the 20–200 Hz band). Signal from eight channels are overlapped.
+
+dynamically  choose  between  a  DC  or  AC  coupling  for  each                             (SVgs(f)),  deﬁned  as  the  PSD  of  the  current  noise  over  the
+channel,  a  multiplexer  has  been  added  to  switch  between  the                         transconductance (see Fig. 2f). The central part of the spectrum,
+output of the ﬁrst and the second stages, see Fig. 2e. Multiplexers                          from roughly 0.05 Hz to 10 Hz, is dominated by the 1/f intrinsic
+have been implemented in only 8 of the 64 channels in order to                               noise  of  the  graphene  transistors53.  For  frequencies  below  0.05
+minimize power consumption and, therefore, battery weight and                                Hz, the DC-channels show a slight increase above the 1/f noise,
+volume of the dedicated wireless headstage.                                                  which is attributed to the contribution of additional noise sources
+   Having  a  relatively  high  transconductance  is  important  in                          in the ampliﬁcation chain, leading to slightly larger Vgs-rms values
+order  to  pre-amplify  the  signals  above  the  noise  ﬂoor  of  the                       in  the  0.005–0.05 Hz  band  (see  supplementary  information  S2).
+transimpedance   ampliﬁers.   However,   active   sensors   typically                        Above 10 Hz the noise spectra present a signiﬁcant increase above
+present  an  intrinsic  1/f  noise,  which  scales  with  the  drain-to-                     the 1/f noise, caused by the quantization noise of the headstage
+source  current47.  Therefore,  Vgs-rms  is  a  more  suitable ﬁgure  of                     ampliﬁers,  which  is  more  pronounced  in  DC-channels.  The
+merit  to  evaluate  the  sensitivity  of  active  sensors.  In  order  to                   SVgs(f) integrated in different frequency bands is shown in Fig. 2g
+validate that the sensitivity of the recording system is limited by                          for   all   channels   on   the   neural   probe   #3.   The   three   maps
+the  intrinsic  noise  of  the  active  sensors,  it  is  paramount  to                      demonstrate the similarity of the sensitivity of the system in the
+evaluate   the   impact   of   the   ampliﬁcation   electronics   on   the                   different ranges, with only a signiﬁcant increase in the 20–200 Hz
+sensitivity of the system in a wide frequency band. The noise level                          band.   In   this   band,   the   noise   of   the   DC-channels   exceeds
+for  DC  and  AC  channels  can  be  evaluated  from  the  power                             the   noise   of   the   AC   channels;   however   all   the   graphene
+spectral density (PSD) of the equivalent voltage noise at the gate                           sensors  (except  for  an outlier)  keep  Vgs-rms values  below 15 µV.
+
+4                                 NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications

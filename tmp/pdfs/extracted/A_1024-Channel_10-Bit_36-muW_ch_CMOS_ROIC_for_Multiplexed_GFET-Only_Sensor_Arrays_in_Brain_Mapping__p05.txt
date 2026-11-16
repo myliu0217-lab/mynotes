@@ -1,0 +1,74 @@
+864                                                                                                           IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 15, NO. 5, OCTOBER 2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 6.     1024-channel ROIC architecture proposal for the time-domain multiplexing of GFET-only sensor arrays in brain mapping.
+
+
+effective   Irow   readout  with  a  low  current  for  every  column.             conﬁgurable  sampling  capacitor           Cs   to  program  gain  factors
+Furthermore, each of these crosstalk currents is being modulated                   Cs/Cf    equal to   ×2,   ×4,   ×8or×16. This stage is in charge of
+by the large signal of the active sensor through the GFET                 VGS      adapting the envelope of       Vpga   to ﬁt the data converter full scale,
+and  VDS   ripple. In the case of       Rcol, crosstalk occurs between             and  it  also  implements  the  low-frequency  noise  cancellation
+all the sensors selected at the same time through a                VDS-only        mechanism described in Section V. Data conversion is executed
+mixing mechanism, so eachIrow            will contain signal components            in parallel for each row through the successive approximation
+from every row. For illustrative purposes, Fig. 5(c) reports the                   register (SAR) ADC detailed in Section VI. This ADC provides
+simulation results obtained from the crosstalk analysis. Here,                     a theoretical 13-bit dynamic range per TDM sample at 422 kS/s,
+the GFET MIT model [94] has been employed after ﬁtting the                         which is equivalent to 13.2 kS/s per channel. In this sense, a
+typical DC characteristics of Fig. 2(b). The obtained crosstalk                    3-bit safe guard is chosen to compensate for possible losses due
+ﬁgures  point  towards  an  upper  bound  of  parasitic  resistance                to extra circuit noise and distortion in order to ensure 10 b per
+around 1    Ω  to preserve the 10-bit channel dynamic range. As                    channel. Finally, row digital outputs are collected and packed
+the size of the   μECoG probe scales up, the parasitic resistance                  in groups of 4 rows resulting in a total of 8 output serial lines
+of the ﬂexible thin ﬁlm technology can become dominant.                            at 27 Mbps. The modular ROIC architecture of Fig. 6 allows
+                                                                                   the deﬁnition of regions of interest (ROIs) in the GFET array
+            IV.  1024-CHANNEL         ROIC ARCHITECTURE                            for the purpose of lowering circuit power consumption. In this
+                                                                                   sense, all the ROIC internal conﬁguration, like the individual
+   The architecture of the 1024-channel ROIC and its attachment                    offset current cancellation per GFET or the PGA gain factor per
+to a 32  ×  32 GFET probe for        μECoG are both shown in Fig. 6.               row, is digitally programmed through a custom serial peripherial
+Thanks to the use of TDM at array level, only 64 pads are needed                   interface (SPI).
+to implement all the sensor-to-circuit connections, which means                       The channel multiplexing mechanism of Section III, with acti-
+a  16-fold  reduction  in  the  wiring  requirements  of  the  hybrid              vation levels   Vrefd  ∼   100 mVtogether with GFET on-resistance
+packaging  respect  to  the  point-to-point  solutions  referred  in               values   Rgfet   ∼  2kΩ, returns a typical static current of 50             μA
+Section I.                                                                         for  each  selected  channel.  Since  the  read-out  system  is  DC
+   The  ROIC  internal  structure  follows  a  highly  modular  ap-                coupled, this component needs to be subtracted from                    Irow  to
+proach to ease its scalability in which most part of the circuitry                 prevent signal saturation at the output of the preampliﬁer. Due
+is  devoted  to  the  row  read-out  signal  processing.  The  ﬁrst                to GFET technology mismatching, such a current cancellation
+stage of the row AFE consists on an offset current subtractor                      can not be performed through a constant sink, so the digitally
+circuit,  explained  later  on,  and  the  current-to-voltage  pream-              controlled offset subtraction mechanism of Fig. 7 is proposed
+pliﬁer  with  a  ﬁxed  transresistance  gain         Rgain   =25kΩ.The             for this purpose. The row current-mode D/A converter (I-DAC)
+resulting voltage waveform is further processed by the buffer                      generates the offset level     Ioﬀ  for each individual column accord-
+stage, whose purpose is double: to implement the single-ended                      ing to the global reference        Vrefo  and a digitally programmable
+to fully-differential signaling conversion at         Vamp   and to provide        thermometric resistor network. A resistor-based implementation
+kickback isolation between the posterior discrete-time blocks                      of  I-DAC  has  been  chosen  instead  of  a  programmable  MOS
+and the continuous-time input preampliﬁer. The next stage of                       current mirror in favour of lower ﬂicker noise contributions at
+the row module is a switched-capacitor (SC) programmable-gain                      the input of the row preamplifer, but at the cost of introducing
+ampliﬁer (PGA) with ﬁxed feedback capacitor                 Cf  =1pFand            absolute resistance calibration, as described in Section VIII. The
+
+
+
+        Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

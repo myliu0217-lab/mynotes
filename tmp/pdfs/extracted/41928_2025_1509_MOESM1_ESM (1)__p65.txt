@@ -1,0 +1,47 @@
+Supplementary Video 9. Dot-triggered traveling waves used for decoding stimuli location.
+The traveling waves are computed from gamma band (30 – 90 Hz) signals recorded from 32×32
+spatially dense channels at 26.5 μm by 29 μm pitch. Spatiotemporal sequence of these traveling
+waves, measured within each dot presentation, is used to predict the current location of the dot
+stimuli presented to the subject.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                  64

@@ -1,0 +1,12 @@
+Supplementary Fig. 9. Design and characterization of the wireless transceiver. (a) Design of
+the on-chip ultra-wideband (UWB) antenna and simulated S-parameters. The feed ring is made of
+the redistribution layer (RDL) metal, and the bottom plate is a stack of METAL6 to METAL1;
+small metal slots are made in the bottom plate to satisfy density rules (not shown) (b) UWB
+transmitter based on LC complementary oscillator and a pulse generator (VEN, VKICK). (c) Three-
+stage inductor loaded low noise amplifier (LNA). (d) Self-mixing mixer. (e) Baseband low-pass
+amplifier. (f) Charge redistribution sampling stage for subtracting a threshold voltage from the
+output of (e), with one-bit programmability. (g) Timing diagram of the wireless transceiver.
+
+
+
+                                                     36

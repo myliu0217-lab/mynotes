@@ -1,0 +1,57 @@
+Article                                                                                                                                                                            https://doi.org/10.1038/s41467-023-44024-1
+Flexible switch matrix addressable electrode
+arrays with organic electrochemical
+transistor and pn diode technology
+
+
+
+
+Received: 24 May 2023                                Ilke Uguz      1   , David Ohayon         2,VolkanArslan1, Rajendar Sheelamanthula3,
+                                                     Sophie Griggs4,AdelHama                2, John William Stanton          1,IainMcCulloch          3,4,
+Accepted: 28 November 2023                           Sahika Inal      2 & Kenneth L. Shepard           1
+
+
+
+
+   Check for updates                                 Due to their effective ionic-to-electronic signal conversion and mechanical
+                                                     ﬂexibility, organic neural implants hold considerable promise for biocompa-
+                                                     tible neural interfaces. Current approaches are, however, primarily limited to
+                                                     passive electrodes due to a lack of circuit components to realize complex
+                                                     active circuits at the front-end. Here, we introduce a p-n organic electro-
+                                                     chemical diode using complementary p- and n-type conducting polymer ﬁlms
+                                                     embedded in a 15-μm -diameter vertical stack. Leveraging the efﬁcient motion
+                                                     of encapsulated cations inside this polymer stack and the opposite doping
+                                                     mechanisms of the constituent polymers, we demonstrate high current rec-
+                                                     tiﬁcation ratios (105) and fast switching speeds (230 μs). We integrate p-n
+                                                     organic electrochemical diodes with organic electrochemical transistors in the
+                                                     front-end pixel of a recording array. This conﬁguration facilitates the access of
+                                                     organic electrochemical transistor output currents within a large network
+                                                     operating in the same electrolyte, while minimizing crosstalk from neighbor-
+                                                     ing elements due to minimized reverse-biased leakage. Furthermore, we use
+                                                     these devices to fabricate time-division-multiplexed ampliﬁer arrays. Lastly,
+                                                     we show that, when fabricated in a shank format, this technology enables the
+                                                     multiplexing of ampliﬁed local ﬁeld potentials directly in the active recording
+                                                     pixel (26-μm diameter) in a minimally invasive form factor with shank cross-
+                                                     sectional dimensions of only 50×8 μm2.
+
+
+
+Implantable electrophysiological neural interfaces couple electronics           the  requirement  to  wire  each  electrode  site  to  external  electronics,
+to  neural  tissue,  representing  a  forefront  research  area  for  funda-    leading to bulky interfaces4,5. A promising approach for reducing the
+mental  neuroscience  and  translational  applications1,2.Mostofthe             area of the acquisition electronics is to support time-division multi-
+existing research in neural electrode technology has focused on pas-            plexing among multiple electrode sites after pre-ampliﬁcation in the
+sive electrode arrays that can provide a high-resolution interface for          front-end  electronics6,7.  Successful  implementations  of  this  archi-
+deciphering  sensory  input  and  enabling  high-performance  neuro-            tecture  rely  on  silicon-complementary  metal-oxide-semiconductor
+motor prostheses3. Large-scale integration of such passive devices to           (CMOS) technology with electrodes integrated directly on the CMOS
+match high-density neural populations is, however, challenging due to           substrates  that  are  fashioned  into  a  needle  or  shank  form  factor8,9.
+
+
+
+
+1Electrical Engineering Department, Columbia University, New York 10027 NY, USA. 2Organic Bioelectronics Laboratory, Biological and Environmental
+Science and Engineering Division, King Abdullah University of Science and Technology (KAUST), Thuwal 23955‐6900, Saudi Arabia. 3Physical Science and
+Engineering Division, KAUST, Thuwal 23955-6900, Saudi Arabia. 4Department of Chemistry, University of Oxford, Oxford OX1 3TA, UK.
+   e-mail: ilkeuguz@gmail.com
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                              1

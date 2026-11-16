@@ -1,0 +1,63 @@
+                     This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                           content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                 1
+          A 0.00179 mm2/Ch Chopper-Stabilized TDMA
+           Neural Recording System with Dynamic EOV
+                  Cancellation and Predictive Mixed-Signal
+                                                  Impedance Boosting
+           Nader Sherif Kassem Fathy, Ritwik Vatsyayan, Andrew M. Bourhis,                                 Graduate Student Members, IEEE,
+                                        Shadi A. Dayeh, and Patrick P. Mercier, Senior Member, IEEE
+
+
+Abstract— This article presents a digitally-assisted multi-channel
+neural recording system. The system uses a 16-channel chopper-
+stabilized  Time  Division  Multiple  Access  (TDMA)  scheme  to
+record multiplexed neural signals into a single shared analog front
+end (AFE). The choppers reduce the total integrated noise across
+the modulated spectrum by 2.4× and 4.3× in Local Field Potential
+(LFP) and Action Potential (AP) bands, respectively. In addition,
+a novel impedance booster based on Sign-Sign least mean squares
+(LMS)    adaptive  filter  (AF)    predicts   the  input  signal  and  pre-
+charges   the   AC-coupling   capacitors.   The   impedance   booster
+module increases the AFE input impedance by a factor of 39× with
+a 7.1% increase in area. The proposed system obviates the need
+for  on-chip    digital  demodulation,  filtering,  and  remodulation
+normally  required      to  extract  Electrode  Offset  Voltages  (EOV)
+from multiplexed neural signals, thereby achieving 3.6× and 2.8×
+savings in  both  area    and  power,    respectively, in the    EOV  filter
+module. The Sign-Sign LMS AF is reused to determine the system
+loop gain, which relaxes the feedback DAC accuracy requirements
+and saves 10.1× in power compared to conventional oversampled
+DAC   truncation-error        DS-modulator.       The   proposed      SoC   is
+designed  and     fabricated    in  65  nm  CMOS,       and   each  channel
+occupies 0.00179 mm2 of active area. Each channel consumes 5.11
+µW of power while achieving 2.19 µVrms and 2.4 µVrms of input
+referred noise (IRN) over AP and LFP bands. The resulting AP
+band noise efficiency factor (NEF) is 1.8. The proposed system is
+verified  with   acute in-vivo    recordings    in  a  Sprague-Dawley  rat
+using     parylene     C     based      thin-film     platinum     nanorod
+microelectrodes.
+
+   Index     Terms—Multi-Channel    neural    recording    system,                 Fig. 1 Conventional multiple access mechanism neural recording system
+impedance boosting, implantable Brain-Machine Interface (BMI),                     block diagram.
+electrocorticography    (ECoG),         time-division    multiple    access
+(TDMA),  digitally  assisted  Sign-Sign least  mean  square  (LMS)                   Researchers  studying  the         vertebrate  brain  are  required  to
+adaptive filter (AF).                                                              analyze data from massively high-density cortical cells such as
+                           I.   INTRODUCTION                                       those in the visual (V1) and motor (M1) cortex, and there exists
+                                                                                   a need to improve the spatial resolution of recording channels
+     HE    simultaneous      recording    of  many  neural  channels  in           [5], [6], [7], [8]. Enhancing  our  understanding  of  the  human
+T parallel has recently emerged as an active area of research                      nervous  system  can  pave  the  way  for  the  development  of
+in   neuroscience.     High-density   neural   interfaces   encounter              treatment paradigms for disorders such as blindness, epilepsy,
+spatial  constraints  due  to     the   active  area  of  each  recording          multiple  sclerosis,     Parkinson’s,      and  potentially  Alzheimer’s
+channel analog front-end (AFE). Recent advances in materials                       Disease [9], [10], [11]. According to a 2021 study, in the United
+and integration technologies have enabled the development of                       States alone, there are more than 53 million people living with
+high-density, high channel count neural interfaces [1]. Despite                    these  neurological  conditions,  which  cost  the  economy  more
+the progress in on-device electronics as well as the development                   than  $1.5  trillion  annually [12]. Technological  advancements
+of high-density flex to rigid bonding interfaces  [2], [3], [4], the               that can serve to prevent and treat this impacted population hold
+large active area of the AFE remains a critical bottleneck.                        the  potential  of  increasing  the  wellness  of  subjects  and  their
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                     © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

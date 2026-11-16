@@ -1,0 +1,80 @@
+CISNEROS-FERNÁNDEZ        et al.: 1024-CHANNEL 10-BIT 36-µW/CH CMOS ROIC FOR MULTIPLEXED GFET-ONLY SENSOR ARRAYS                                                       869
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 14.     Transconductance curve for each GFET sensor of the array obtained
+from the experimental results of Fig. 13.
+
+                                                                                       Fig. 16.     Demultiplexed transient waveforms measured by the ROIC atVrefg       =
+                                                                                       100 mV    and  Vrefd  =50mVwhen 1-mVp           10-Hz harmonic stimulus is added
+                                                                                       to Vrefg. Raw ADC data (red) and equalized readings from calibration (green)
+                                                                                       after applying 100-Hz digital low-pass ﬁltering.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                       Fig. 17.     (a) ROIC direct wire-bonding to (b) chip carrier and (c) stacked FPGA
+                                                                                       PCB for 1024-channel tethered headstages. Overall size is 28 mm        ×  28 mm.
+
+                                                                                               R¯oﬀ[3]    of all the 32 row I-DAC modules, so the global.
+                                                                                               offset reference level is set to          Vrefo  =   −I¯gfetR¯oﬀ[3].Fi-
+                                                                                               nally, each individual GFET I-DAC code can be found
+                                                                                               to minimize the DC residue at              Vpga   taking into account
+                                                                                               Table I. Experimental examples of the resulting                    Roﬀ[n]
+                                                                                               conﬁguration and DC residue maps are shown in Fig. 15(a)
+                                                                                               and (b), respectively.
+Fig. 15.     Experimental calibration map examples: (a) GFET transconductance              The effectiveness of the above system calibration methodol-
+forVrefg  = 100 mV     and  Vrefd =50mV, (b) 3-bit I-DAC        Roﬀ[n]   selection.    ogy can be noticed in the measurement example of Fig. 16, when
+and (c) differential DC residue referred to the ADC input full scale.                  a global harmonic waveform is applied to the reference electrode
+                                                                                       Vrefg   of the GFET array of Fig. 6.
+   4)  The last step involves the selection of the globalVrefo               level                            IX.  EXPERIMENTAL          RESULTS
+       and the individual 3-bit I-DAC codes in Fig. 6 to minimize
+       Isig  offsets caused by GFET mismatching, which prevent                             The custom ROIC headstage of Fig. 17 has been developed
+       reaching the maximum full-scale occupancy (so dynamic                           for  μECoG recording in small-size animals like rodents. As it
+       range) at the ADC stage. According to the GFET array¯                           can be noticed, the printed circuit board (PCB) design is oriented
+       screening, the overall average DC current level                   Igfet   of    towards a compact-size lightweight device with high modularity,
+       all working sites is computed together with the average                         so its scalability can be extended by combining multiple ROICs.
+
+
+
+          Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

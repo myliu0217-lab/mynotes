@@ -1,0 +1,89 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+
+
+
+
+                                                                                          (volume conduction)                         (crosstalk contamination)
+
+
+
+
+
+
+
+
+                                                                                                                                            assumption
+
+
+
+
+
+
+
+
+                                                                                          Increase
+                                                                                           channel
+                                                                                       count/density
+
+
+
+
+
+
+
+
+
+
+Fig. 1 | Challenges in recording brain signals with high channel count arrays.                   selectivity. Since interconnection lines run over “active” areas of the brain and are
+Low channel count arrays allow recording signals from the brain surface when the                 very close together, either the brain signal can directly couple over the insulation
+active electrode is over or in close vicinity of the bioelectrical signals (Vtrue). These        material into interconnection lines or one line couples into an adjacent one. The
+signals depend on the distance r from the source to the electrode, its strength I and            transfer function H from the true brain signals to the recorded ones that reach the
+the conductivity σ of the brain tissue. The other electrodes are not able to record              ampliﬁer is not known in many cases. Recorded signals might not represent the
+bioelectronic signals from the designated area and their interconnects most often                ground truth which is distorted and convoluted by material and device char-
+run over “silent” areas (upper sketch). The transfer function (H) from the electrodes            acteristics (lower sketch). This study investigates opportunities to deconvolute
+to the recording setup is nearly one and the recorded signals (Vrec) ideally reﬂect              recorded signals from material device properties by carefully characterizing each
+thetrueones(Vtrue) (upper sketch). In high density and channel count electrode                   and every module a priori or a posteriori to a recording session and using post
+arrays, electrode size (diameter) as well as interconnection line width, pitch and               processing of signals to get closer to ground truth signals.
+insulation thickness decrease. Brain activity can be recorded with higher spatial
+
+
+connectors  required  to  connect  microelectrodes  to  ampliﬁcation                             microelectrode arrays and proposed a measuring platform for stan-
+stages, on the quality of in vivo data acquired with thin-ﬁlm implants                           dardized and systematic characterization of crosstalk18.
+(Fig.  1).  Electrochemical  characterization  of  implantable  electrodes,                            Here, for the ﬁrst time, the bridge is made between crosstalk and
+most  often  done  by  means  of  electrochemical  impedance  spectro-                           its  implications  on  the  analysis  and  interpretation  of  continuous
+scopy (EIS), has become a standard method of quality control, with                               electrocorticography  (ECoG)  readings  in  rats,  under  all  boundary
+studies  typically  reporting  a  boost  in  recording  performance  with                        conditions  that  are  speciﬁc  to  a  state-of-the-art  neural  acquisition
+decreasing electrode impedance12. Nonetheless, little is known on the                            setup featuring a polyimide-based conformable microelectrode array.
+effects of reduced insulation impedance (due to smaller safety mar-                              Notably, the proposed  updated version comes as a comprehensive
+gins) on recording quality. Indeed, as the interconnection lines con-                            system of  the previously  available  equivalent  electrical  models  and
+veying the recorded signals are more closely spaced, crosstalk, here                             consists  of  six  distinct  blocks  derived  from  an  active  and  passive
+intended  as  the  undesired  electrical  coupling  between  a  so-called                        transmission  line  to  emphasize  the  potential  impact  of  individual
+active line and passive line, becomes more prominent13.                                          blocks, encompassing both biotic and abiotic factors, on the reliability
+      Crosstalk  in  multielectrode  intracortical  electrodes  has  been                        of the ﬁnal recorded signal. Importantly, the assessment is done not
+previously  proposed  and  evaluated  in  the  literature  using  various                        only in the traditional local ﬁeld potential (LFP) band, but also in the
+circuit models, taking into account numerous design possibilities for                            multi-unit-activity  (MUA)  band,  only  most  recently  explored  in  the
+recording  or  stimulation  arrays.  Starting  from  the  initial  idea  of                      ambit of microECoG readings9,10. This distinction is relevant, because
+varying parameters such as track width and interelectrode distance14,                            crosstalk is a phenomenon that scales with frequency. Electrical cou-
+the  ongoing  need  to  increase  electrode  density  for  more  precise                         pling between active and passive lines occurs through the insulation
+mapping  of  the  nervous  system  has  led  to  the  development  of                            between them and can be of resistive or capacitive nature. Resistive
+advanced electrical models. These models consider not only cross-                                coupling refers to the physical contact between the lines (even though
+talk  between  adjacent  lines  but  also  the  effects  of,  for  example,                      separated by an insulator) and is independent of frequency. Capacitive
+opposite  traces  in  double-layer  conﬁgurations15,16.  The  question  is                       coupling arises from displacement currents generated by time-varying
+raised whether unwanted coupled signals can interfere with the true                              potentials  along  the  lines  and  increases  with  frequency  since  the
+signals, as closely routed lines start outputting their own true signal                          reactance decreases (XC = 1/wC). In sum, the higher the frequency, the
+along with a blended version of their neighbors’ signal. What if, while                          higher the expected crosstalk.
+aiming for ﬁner spatial resolution, we are in fact losing discrimination                               Signal  coherence,  deﬁned  as  a  measure  of  the  degree  of  rela-
+between channels due to crosstalk? In a study from 2017, Nelson et                               tionship between two time series as a function of frequency, is com-
+al.  investigated  crosstalk  contamination  of  action  potential  wave-                        puted and analyzed with respect to the routing layout. This analysis
+forms in recordings using glass pipette electrodes17. They concluded                             allows to assess whether the relation between two channels depends
+that crosstalk is not likely to affect data collected from neurophy-                             purely on interelectrode distance at the cortex level, as it should, or if
+siology  experiments  when  both  active  and  passive  lines  record                            proximity at the routing level also plays a role. It is found that, for high
+similar magnitudes, although the study did not account for closely                               frequency activity (above 300 Hz), coherence is highest for channels
+bundled  interconnects  sitting  between  electrode  and  ampliﬁer,                              wired adjacently, even if the electrodes themselves are placed far apart
+which  are  often  the  limiting  factor.  Most  recently,  Qiang  et  al.                       on the cortex, thus strongly suggesting crosstalk contamination. To
+stressed  the  need  to  recognize  electrical  coupling  as  a  potential                       investigate  this  hypothesis,  the  recording  chain  from  electrode  to
+hindrance    to    maximal    signal    quality    in    thin-ﬁlm    polymer                     ampliﬁer is fully characterized and modeled on the basis of impedance
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                             2

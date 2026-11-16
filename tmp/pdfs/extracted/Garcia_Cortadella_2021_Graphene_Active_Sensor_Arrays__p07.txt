@@ -1,0 +1,81 @@
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w                                           ARTICLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 4 Biocompatibility testing of non-functional g-SGFET vs. control devices. a The timeline describes the procedures carried out on animals during the
+biocompatibility study. b Schematic of the high-surface area g-SGFET prototype developed for biocompatibility testing in-vivo. c Discrimination ratio from
+NOR test over different days after implantation (see “Methods” section). For all ﬁve groups tested, the discrimination ratio was above 0.5 at all timepoints.
+Evaluated for n = 7 animals per group at all timepoints, except 12 weeks which had n = 3 (sham), n = 4 (platinum and naive) and n = 7 (blank). The boxes
+from the lower to the upper quartile, while whiskers represent minimum and maximum values. d Inﬂammatory marker IL-17a in the brain tissue for all
+groups and timepoints. Evaluated for n= 4 animals after 2 and 12 weeks, and n = 3 animals at 12 weeks. e Microglial activation state, expressed as a
+percentage of total microglial presence in the site surrounding the electrodes. n = 3 animals at 2 and 12 weeks, n = 2 animals (or 3 for the contralateral
+hemisphere) at 6 weeks. Bars in panels d and e indicate the mean and range of data point. f Iba-1 immunoﬂourescent staining to assess activation status of
+microglia at the surgical site obtained from 40 sections per animal. Scale bar equals 500 µm (50 µm at the insets). g Haemotoxylin and Eosin staining at
+2 weeks post implantation shows there is no structural damage to the cortical layers directly at the device implantation site. Forty sections at 25 µm per
+animal were imaged. Scale bar equals 1 mm (top) and 200 µm (bottom). In panels d and e two-way ANOVA test with Dunnett’s multiple comparison to the
+naive control within each timepoint with n = 3 or larger: *, **, ***, and **** indicate p = 0.015, p = 0.007, p = 0.0016, and p < 0.0001, respectively.
+
+
+Biocompatibility  of  graphene  devices  following  subacute  and                          signiﬁcant differences  in the discrimination  ratio were found in
+chronic  implantation.  In  order  to  assess  the  applicability  of  g-                  animals  implanted  with  any  device  at  any  of  the  timepoints
+SGFET arrays for the long-term monitoring of brain activity under                          (Fig. 4c). The inﬂammatory response of the tissue was evaluated
+natural  behavior  we  have  also  investigated  the biocompatibility  of                  using two main techniques: ELISA of blood or brain tissue for a
+graphene-based epicortical devices. For this purpose, animals were                         panel   of   inﬂammatory   cytokines,   and   immunohistochemical
+implanted with one of three devices onto the parietal cortex of the                        analysis  of  brain  tissue  for  cells  associated  with  inﬂammation.
+brain, or had the full surgery without the implantation of any device                      ELISA  was  performed  for  four  cytokines:  interleukin-6  (IL-6),
+(sham control). A cohort of naive animals who had no intervention                          interleukin-17a  (IL-17a),  interferon  gamma  (IFN-γ),  and  tumor
+were  used  as  a  control.  Three  time  points  were  chosen  to  assess                 necrosis  factor  alpha  (TNF-a).  In  blood  serum,  there  were  no
+tissue response: 2 weeks, 6 weeks, and 12 weeks post implantation                          signiﬁcant   differences   between   any   of   the   materials   at   any
+(Fig.  4a).  Non-functional  devices  were  custom-designed  with  an                      timepoints (see Fig. S6). For cytokine expression in brain tissue,
+enlarged  surface  area  of  CVD  graphene,  in  order  to  maximize                       signiﬁcantly higher levels of all four cytokines in both graphene
+exposureofthematerialtothebraintissue(seeFig.4b for device                                 and platinum devices were found at the 2 weeks timepoint, when
+dimensions).  The  experiments  were  designed  following  the  gui-                       compared   with   the   contralateral   hemisphere   control.  Whilst
+dance  from  the  ISO  10993  standard,  which  details  the  biological                   release  of  these  factors  is  typically  intended  to  prevent  further
+evaluation   of  medical  devices.   Ethylene  oxide   sterilization   was                 damage   to   the   CNS   tissue,   prolonged   expression   can   be
+applied  prior  to  implantation64.  After  implantation,  the  immuno-                    detrimental.  By  6  weeks  post  implantation,  there  was  still  a
+histochemical  response  of  the  tissue  and  potential  effects  on  the                 signiﬁcant elevation of both IL17a and IFN-γ for graphene  and
+behavior were investigated.                                                                platinum  devices  vs.  control  expression,  and  by  week  12,  there
+   Behavior was assessed with the novel object recognition (NOR)                           was no signiﬁcant expression of any cytokine for any treatment
+test, used to assess impairment of cognition and memory65.No                               group (Fig. 4d and Fig. S7). These ﬁndings demonstrate that the
+
+NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications                                                7

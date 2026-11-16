@@ -1,0 +1,50 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    Manuscript writing: A.M.B., S.A.D.
+    Manuscript Reviewing & Editing: A.M.B., R.V., K.J.T., S.A.D., I.G.
+
+    Funding
+              National Institutes of Health BRAIN® Initiative R01NS123655-01 (S.A.D.). National
+    Institutes of Health BRAIN® Initiative UG3NS123723-01 (S.A.D.). National Institutes of Health
+    NBIB DP2-EB029757 (S.A.D.). National Science Foundation Graduate Research Fellowship
+    Program no. DGE-1650112 (A.M.B.). National Institutes of Health BRAIN® Initiative K99
+    NS119291 (K.J.T.).
+
+    Competing interests
+              The authors declare the following competing interests: A.M.B and S.A.D are named
+    inventors of a patent-pending application of the inorganic/organic thin film encapsulation
+    strategy developed in this work.
+    Data and Code Availability
+              All data can be found in the main text or supplementary materials. Other data that support
+    the findings of this study are available from the corresponding author upon reasonable request.
+    The code used for processing the data are also available from the corresponding author upon
+    reasonable request.
+
+    References
+         1.   Leski, S., Lindén, H., Tetzlaff, T., Pettersen, K. H. & Einevoll, G. T. Frequency
+              Dependence of Signal Power and Spatial Reach of the Local Field Potential. PLoS
+              Comput Biol 9, (2013).
+         2.   Wise, K. D., Angell, J. B. & Starr, A. An Integrated-Circuit Approach to Extracellular
+              Microelectrodes. IEEE Trans Biomed Eng BME-17, 238-247 (1970).
+         3.   Chiang, C. H., Won, S. M., Orsborn, A. L., Yu, K. J., Trumpis, M., Bent, B., Wang, C.,
+              Xue, Y., Min, S., Woods, V., Yu, C., Kim, B. H., Kim, S. B., Huq, R., Li, J., Seo, K. J.,
+              Vitale, F., Richardson, A., Fang, H., Huang, Y., Shepard, K., Pesaran, B., Rogers, J. A. &
+              Viventi, J. Development of a neural interface for high-definition, long-term recording in
+              rodents and nonhuman primates. Sci Transl Med 12, 4682 (2020).
+         4.   Tchoe, Y., Bourhis, A. M., Cleary, D. R., Stedelin, B., Lee, J., Tonsfeldt, K. J., Brown, E.
+              C., Siler, D. A., Paulk, A. C., Yang, J. C., Oh, H., Ro, Y. G., Lee, K., Russman, S. M.,
+              Ganji, M., Galton, I., Ben-Haim, S., Raslan, A. M. & Dayeh, S. A. Human brain mapping
+              with multithousand-channel PtNRGrids resolves spatiotemporal dynamics. Sci Transl
+              Med 14, eabj1441 (2022).
+         5.   Tan, H., Paulk, A. C., Stedelin, B., Cleary, D. R., Nerison, C., Tchoe, Y., Brown, E. C.,
+              Bourhis, A., Russman, S., Lee, J., Tonsfeldt, K. J., Yang, J. C., Oh, H., Ro, Y. G., Lee,
+              K., Ganji, M., Galton, I., Siler, D., Han, S. J., Collins, K. L., Ben-Haim, S., Halgren, E.,
+              Cash, S. S., Dayeh, S. & Raslan, A. M. Intraoperative application and early experience
+              with novel high-resolution, high-channel-count thin-film electrodes for human
+              microelectrocorticography. J Neurosurg 140, 665-676 (2024).
+         6.   Vatsyayan, R., Lee, J., Bourhis, A. M., Tchoe, Y., Cleary, D. R., Tonsfeldt, K. J., Lee, K.,
+              Montgomery-Walsh, R., Paulk, A. C., U, H. S., Cash, S. S. & Dayeh, S. A.

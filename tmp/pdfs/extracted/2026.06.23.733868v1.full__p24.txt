@@ -1,0 +1,52 @@
+ bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                     available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+         60. Khadka, N., Harmsen, I. E., Lozano, A. M. & Bikson, M. Bio-Heat Model of Kilohertz-
+             Frequency Deep Brain Stimulation Increases Brain Tissue Temperature.
+             Neuromodulation 23, 489-495 (2020).
+         61. Dennard, R. H., Gaensslen, F. H., Yu, H.-N., Rideout, V. L., Bassous, E. & LeBlanc, A.
+             Design of Ion-Implanted MOSFET’S with Very Small Physical Dimensions.
+             https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1050511&tag=1 (1974).
+         62. Kang, S. K., Yin, L. & Bettinger, C. The emergence of transient electronic devices. MRS
+             Bull 45, 87-95 (2020).
+         63. International Standard. Plastics - Film and Sheeting - Determination of Water Vapour
+             Transmission Rate. (2003).
+         64. ASTM International. Standard Test Method for Water Vapor Transmission Rate Through
+             Plastic Film and Sheeting Using a Modulated Infrared Sensor.
+             https://compass.astm.org/document/?contentCode=ASTM%7CF1249-20%7Cen-
+             US&proxycl=https%3A%2F%2Fsecure.astm.org&fromLogin=true.
+         65. AZO Materials. Properties: Titanium (Ti) - Properties, Applications.
+             https://www.azom.com/properties.aspx?ArticleID=712.
+         66. Aerospace Specification Metals. ASM Material Data Sheet.
+             https://asm.matweb.com/search/specificmaterial.asp?bassnum=mtu020.
+         67. EB Industries. Laser Hermetic Sealing Titanium - EB Industries.
+             https://ebindustries.com/laser-hermetic-sealing-titanium/.
+         68. MatWeb. 99.6% Alumina, thin-film substrate.
+             https://www.matweb.com/search/DataSheet.aspx?MatGUID=a70504db07a9497abac64a3
+             ec4cc7096&ckck=1.
+         69. Kyocera Corporation. Fine Ceramics for Electronics. (2024).
+         70. UQG Optics. Floated Borosilicate Glass - Datasheet. www.uqgoptics.com.
+         71. Specialty Coating Systems. SCS PARYLENE PROPERTIES High performance
+             conformal coatings. https://nrf.aux.eng.ufl.edu/_files/documents/176.pdf (2021).
+         72. Specialty Coating Systems. Moisture Protection of Parylene | Specialty Coating Systems.
+             https://scscoatings.com/newsroom/blog/moisture-protection-of-parylene/ (2022).
+         73. Ortigoza-Diaz, J., Scholten, K., Larson, C., Cobo, A., Hudson, T., Yoo, J., Baldwin, A.,
+             Hirschberg, A. W. & Meng, E. Techniques and considerations in the microfabrication of
+             parylene c microelectromechanical systems. Micromachines vol. 9 Preprint at
+             https://doi.org/10.3390/mi9090422 (2018).
+         74. Balakrishnan, G., Song, J., Mou, C. & Bettinger, C. J. Recent Progress in Materials
+             Chemistry to Advance Flexible Bioelectronics in Medicine. Adv Mater 34, e2106787
+             (2022).
+         75. HD MicroSystems. PI-2600 Series Process Guide.
+             http://www.dupont.com/content/dam/dupont/products-and-services/electronic-and-
+             electrical-materials/semiconductor-fabrication-and-packaging-materials/documents/PI-
+             2600_ProcessGuide.pdf.
+         76. Verplancke, R., Cauwe, M., Schaubroeck, D., Cuypers, D., Vandecasteele, B., Mader, L.,
+             Vanhaverbeke, C., Ballini, M., O’Callaghan, J., Goikoetxea, E., Braeken, D., Kundu, A.,
+             Patrick, E., Maghari, N., Otto, K., Bashirullah, R. & Op De Beeck, M. Development of
+             an active high-density transverse intrafascicular micro-electrode probe. Journal of
+             Micromechanics and Microengineering 30, (2020).
+         77. Dow Inc. SYLGARD 184 Silicone Elastomer - Technical Data Sheet. (2019).

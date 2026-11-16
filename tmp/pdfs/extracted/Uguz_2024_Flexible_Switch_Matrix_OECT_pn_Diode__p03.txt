@@ -1,0 +1,95 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+
+        a)                                                                     5 μm            c)
+                                                                                                                                                                                                SO3
+                                                                                                                      Anode pad                                      O    O       O   O
+
+                                                                                                              +                                                   S           S
+                                                                                                                    +   +          +  +    +                            S           S   n                    n
+                                                                                                                 +++     +    +++              +
+                                                                                                                                  +     +                      OO          OO
+                         15 μm                                                                                    +++                          +++
+                                                                                                              +++    +++              +    ++++
+                                                                                                                        +     ++++
+                                                      4 μm                                              IC
+                                                                                                                                                                      R
+                                                                                                                                                                 O    N   O
+
+                                                                                                                                                                               S   n
+
+                                                                                                         (+)         Cathode pad
+                                                                                                                                                                 O    N   O
+                                                                                                                                                                      R      R:            O   O
+                                   Anode                         Cathode                                          Reverse Bias                                                                   3
+
+
+
+
+                                                                                                                                                                      O    O       O    O
+        b)                                                                                                                                                        S            S
+
+                                                                                                                                                                        S            S    n
+                  Anode                                                                     Cathode                   Anode pad                                                  O
+                                                                                                                                                               O        O
+                                                                                                                                                                            -
+                                                                                                                                                                        SO3
+
+                                                                                                        IC            +++++
+                                                                                                               +++++                                                                                      ++++     +      ++++++++++++      +++++++++++++++n
+                                                                                                                  +++
+                               PEDOT:PSS                                                                        +++ ++++        +++++++++++++                          R
+                                                                                                                                     +++    +++++++
+                               p(C6NDI-T)                                                                            +++  +++                                     O    N   O
+                                                                                                                +++                                                +++++++++++
+                               Electrolyte                                  VEC     (+)                                                                                         S    n
+                               Parylene                                                                 (-)          Cathode pad
+                               Au                                                                                 Forward Bias                                    O    N   O
+
+                                                                                                                                                                       R     R:            O    O
+                                                                                                                                                                                                 3
+                                                   +            +
+                                            +                           +                      d)
+                       Parylene C                        +                                                    0.2
+                       (2 μm)           Au (100 nm)
+         Anode
+                       Parylene C                                                                                                          0.6 nC
+                       (0.75 μm)
+        Cathode                                       Au (100 nm)                                                                          1.0 nC
+                                                                                                                                           1.2 nC
+                       Parylene C (2 μm)                                                                                                   1.4 nC
+                                                                                                              0.1                          1.7 nC
+        e)                                                                                                                                 2.0 nC
+
+
+
+                                                                                                                              2 ms
+               VAC
+
+                                               230 μs                                                            0
+                IC                                                                                                -0.2                                                              0.8000.2.40.6
+                                                                                                                                                   VAC (V)
+
+Fig. 1 | Structure and performance of p–nOEDswithp–n junction. a Optical                                 function of internal cation concentration. Current transients representing the
+image of the p–n organic electrochemical diodes (OED) as viewed from the top                             charge injection inside the channel using an external Ag/AgCl electrode are illu-
+side. The area of the polymer coatings (highlighted in white) and the pinhole are                        strated in the inset of the ﬁgure. The injected charge in the ﬁlms is noted next to
+marked by arrows with a diameter of 15 μmand4μm, respectively (n = 20 devices).                          each transient with values of 0.6, 1, 1.2, 1.4, 1.7, and 2 nC, respectively. I–V curves of
+b An illustration of the p–n OED from the top and side sections. The cations are                         the p–n OED acquired as a function of injected charge. Every color corresponds to
+injected inside the polymer ﬁlms upon application of a bias between an external                          the I–V response at various injected charge values noted in the inset in the same
+electrode and the bottom cathode contact. c Operating principle of fully charged                         color. e Response time of the p–n OED corresponding to a 2 nC injected charge with
+p–n OEDs. Internal ion migration, based on the bias polarity between the top anode                       a0.8Vsquarepulse.(n = 5 repetitions) The Ic-time response is ﬁtted with an
+and bottom cathode electrodes, deﬁnes the on and off states of the device. Insets                        exponential decay function (red dashed line). The saturation current is reached
+illustrate the electrochemical doping mechanism for each polymer ﬁlm at reverse                          in 230 μs.
+and forward bias with their molecular structures. d p–n OED performance as a
+
+
+already    conductive    because    the    PEDOT    chains    are    charge-                             anodic  and  cathodic  pads  and  giving  the  p–n  OED  unidirectional
+compensated by the deprotonated sulfonic acid groups of PSS. As a                                        conductivity.
+result, at forward bias, the p–n stack is conducting. At negative V AC                                         To  investigate  p–n  OED  performance,  we  apply various  ampli-
+(reverse bias), on the other hand, the cations migrate to the bulk of the                                tudes of 10-ms V EC pulses (0.1, 0.2, 0.3, 0.4, 0.5, and 0.6 V) such that
+PEDOT:PSS ﬁlm and compensate for the pendant sulfonate anions on                                         the  polymer  stack  experiences  different  levels  of  cation  injection.
+the PSS. Holes are extracted at the anode pad, decreasing the hole                                       These levels  of  charge  injection  can be  estimated  from  the  double-
+density  in  the  PEDOT  ﬁlm.  Simultaneously,  p(C6NDI-T)  becomes                                      layer charging current at the electrolyte–cathode interface (See Online
+depleted  of  cations,  leading  to  high  electrical  resistance  between                               Methods) to be 0.6, 1, 1.2, 1.4, 1.7, and 2 nC, respectively, as shown at
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                              3

@@ -1,0 +1,49 @@
+figure less than 5 dB. A self-mixing mixer based on double-balanced Gilbert-cell detects the
+signal's envelope (Supplementary Fig. 9d), which is low-pass filtered by a baseband amplifier
+(BB AMP) (Supplementary Fig. 9e). Finally, a one-bit digitizer (1-b ADC) comprised of a
+sampling and subtraction stage (Supplementary Fig. 9f) followed by a StrongArm comparator97
+determines the received bit ("0" or "1") based on a predefined voltage threshold.
+
+A phase-locked loop (PLL) modified from 98 is used to generate a 208.96 MHz clock from the
+13.56 MHz powering frequency, which is divided down to generate all the clocks used in the
+implant. A 4-stage differential ring oscillator is used which allows timing control at the resolution
+of 0.567 ns. A digital controller inside the wireless transceiver controls the start-up of the PLL and
+timing generation.
+
+The timing diagram of the UWB transceiver is shown in Supplementary Fig. 9g; the LNA is
+powered on for 4.61 ns and the mixer and baseband low-pass amplifier are powered on for 6 ns
+every 18.44 ns. The entire transceiver consumes 12.2 mW when transmitting at 50% of “1”s.
+
+Design of the BISC implant controller
+
+The digital controller on the BISC implant is responsible for managing the wireless communication,
+device configuration, and dynamic data acquisition. It operates from the 1.5V power domain on
+the chip and consumes a peak power of 10 mW during recording. The controller consists of a main
+decoder that translates the instructions received by the wireless transceiver into actions on the
+device. The decoder is a finite state machine that processes one instruction at a time; while
+executing an instruction it cannot accept new instructions.
+
+The decoder interfaces to two specialized control blocks:
+    AFE control. AFE control sets the static configuration for recording and stimulation functions
+    and outputs dynamic control signals that trigger the switching activity in the AFE.
+    Communications control. This block receives data samples from the AFE and packetize them
+    for transmission via the wireless transceiver. During a recording, every new sample of data is
+    immediately added to the next packet. When a packet is full, it is passed to be streamed through
+    the wireless transceiver, while the preparation of the next packet begins. The communication
+    control can also be configured to packetize and transmit other types of data regarding general
+    information on the current state of the device. The packetizing follows the specialized
+    communication protocol described in more detail in Supplementary Discussion S2.
+
+The instruction set architecture (ISA) of the controller consists of seven instructions
+(Supplementary Table 1) that can be classified into three types: dynamic instructions, static
+instructions, and the query configuration instruction.
+
+Dynamic instructions include recording, stimulation, power-on, and halt. Each of these instructions
+initiates an event that starts or stops an ongoing process. The recording instruction starts a process
+that updates the control lines going to the AFE which allow time-multiplexed recording from a
+designated subset of channels from the microelectrode array. The stimulation instruction initiates
+multi-phasic stimulation through a pre-configured subset of electrodes for a pre-configured amount
+of time. The power-on instruction powers on the pixel-level recording amplifiers, which is required
+prior to recording. The halt instruction stops an ongoing recording.
+
+                                                          8

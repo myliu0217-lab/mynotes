@@ -1,0 +1,2 @@
+Supplementary Figure 5. CV curves of p(g2T-TT) coated electrode. The Au electrode was coated with 150-nm of
+film on a 20-μm diameter pattern. The scan rate was 100-mV/s.

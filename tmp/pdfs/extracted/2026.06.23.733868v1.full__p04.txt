@@ -1,0 +1,60 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                                 available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Figure 1. Summary of proposed active neural interface technology stack based on a-IGZO TFTs. A-B) image of 4-inch wafer
+      with exploded view showing layer stack-up containing organic and inorganic encapsulation layers surrounding interconnect
+      metals, TFTs, and top electrode arrays. C) Rendering of 16x16 array of electrodes with pertinent layers separated for easier
+      viewing. D-E) Photographs of 16x16 array bonded to breakout printed circuit board with zoomed-in optical microscope image of
+      the top-view of a few pixel circuits and their corresponding electrodes. F) Cross section rendering representing the key features of
+      the stack-up, including the interconnect layer, the dual-gate TFT, and the sensing electrode. G-I) schematic and block diagrams
+      shown together with simplified timing diagram to demonstrate the proposed transconductor pixel circuit and TDMA shared data
+      acquisition system (DAQ). J-K) power spectral density and corresponding scalograms shown for benchtop measurements in
+      saline taken with an input reference chirp signal. L-M) corresponding measured bias current and calculated gain histograms and
+      heatmaps for all 256 channels of data presented in panels J-K. Measurements demonstrate 100% yield arrays with high process
+      uniformity despite a lack of in-pixel compensation for device characteristics variation.
+                  The 256-channel arrays implement an active row-column addressing architecture
+      arranged as a 16x16 matrix of platinum electrodes with on-site “pixel” driving circuits beneath

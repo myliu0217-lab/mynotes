@@ -1,0 +1,52 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+              After establishing safe thermal loads under maximum gain and operating power
+    conditions, we captured sensory evoked potentials from another array and compared the results
+    to a comparable passive array with equivalent planar platinum electrode size and pitch. The trial
+    averaged evoked responses  are shown in Fig. 3D-G. A waterfall plot of band-pass filtered trials
+    and their resulting trial averages are shown in gray and black traces respectively for the middle
+    of the array in Fig. 3D. The corresponding trial averaged z-scored waveforms for a single
+    responsive channel from both the FIC-based array and the passive comparison array (which
+    connected to an Intan Technologies recording system) is plotted in Fig. 3E-F.  Both datasets
+    were captured from the same animal with identical electrode contact geometries and similar
+    cortical coverage. The TFT array waveforms (Fig. 3E) are inverted and have slightly different
+    shapes relative to the corresponding passive array waveforms (                   Fig. 3F). We attribute these
+    differences mostly to the inverting           nature of the transimpedance amplifier and              the system
+    transfer function for the active neural interface system. While th                 e differences could be
+    compensated via postprocessing that utilize estimations of each per-pixel system transfer
+    function, we decided that without more rigorous system calibration in place to determine                           the
+    precise deconvolution across frequencies             , a z-scoring methodology would provide a fairer
+    method of comparison. In the frequency domain, it becomes apparent that the captured evoked
+    cortical potentials for both electrode arrays share a similar bandwidth up to ~200Hz, with the
+    majority of the gamma and higher-frequency signal content beginning roughly 20ms after
+    stimulus and ending roughly 40ms after stimulus.                 Notably, the passive system appeared to have
+    worse z-scoring at lower frequency which we attribute to both the difference in signal
+    conditioning mechanisms and the difference in routing and loading (noting that the high input
+    impedance of the sensing TFT gate minimizes signal attenuation and provides on                           -site buffering).
+    The passive system also appeared to have improved signal to noise ratios                        (as evident by
+    increased z-scores in Fig. 3F) within the high-gamma band. This is likely a result of noise-
+    folding from aliasing due to the on-site multiplexing together with the lower sampling rates
+    employed in our custom acquisition system as compared to the passive recording system which
+    used the Intan Recording Controller            , sampling at 20ksps. Despite these limitations, we see robust
+    sensory responses for our active neural sensing arrays                 with z-score peak responses exceeding 8σ
+    in maximally responsive channels and occurring within the expected 20-30ms post-stimulus
+    delay time.
+              The spatiotemporal response propagation presented in the tile plot in Fig. 3G also
+    validates the functionality of our active sensing scheme. We see clear spatiotemporal
+    propagation of the whisker barrel field response to stimulation                  , with negligible observed spatial
+    artifacts. These results establish        that the TFT-based platform can capture high-fidelity neural
+    signals with spatiotemporal          resolution comparable to state-of-the-art passive arrays while
+    offering a viable pathway to dramatically increased channel counts through the reduced
+    interconnect requirements.
+
+    Chronic Recording in Sprague-Dawley Rats
+
+              To assess translational viability, we conducted a month-long chronic implant study in
+    Sprague-Dawley rats with the active array positioned epidurally over the S1 barrel cortex.                           The
+    chronic implant housing shown in Fig. 4A was designed to house the array. The implant
+    consisted of the same 256-channel design used in the acute study pre                     -assembled into the housing
+    and implanted using a combination of medical-grade Metabond bone cement, Kwik-Cast silicone

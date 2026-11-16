@@ -1,0 +1,61 @@
+Extended Data Fig. 1 | Bench-top in vitro characterization of the BISC implant.                              mean ± SD. n = 15,163 and 62,245). (d           ) Frequency response across different
+(a) Electrochemical impedance spectroscopy of titanium nitride electrode.                                    high-pass (HP) filter configurations from a representative 16×16 recording. Error
+(b) Frequency response across different gain configurations from a                                           bars indicate SE (3-dB corner: 4.19 ± 2.28 Hz, 13.30 ± 2.37 Hz, 54.42 ± 1.98 Hz,
+representative 16×16 recording. Note that gain is programmed through a single                                values: mean ± SD. n = 244, 254, 256). (e               ) Input-referred noise (IRN) spectrum
+back-end amplifier that is shared by all pixels. Error bars indicate standard error                          averaged over representative pixels (n = 10) for each recording mode.
+(SE), and dashed rectangle marks the effects of boxcar sampling (flat band gains:                            (f) Histogram of channel IRN for each recording mode, integrated from 10 Hz
+53.7 ± 0.20 dB, 57.2 ± 0.21 dB, 60.7 ± 0.20 dB, 64.2 ± 0.19 dB, values: mean ± SD.                           to 4 kHz (16×16 mode: 7.68 ± 3.11 μVRMS, 32×32 mode: 16.51 ± 6.85 μVRMS, values:
+n = 255, 255, 245, 235). (c           ) Histogram of normalized channel gain variation for                   mean ± SD. n = 15,163 and 62,245).
+each recording mode (16×16 mode: 100 ± 5.1%, 32×32 mode: 100 ± 4.8%, values:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nature Electronics

@@ -1,0 +1,58 @@
+ Instruction          OPCODE Action             Parameters
+ Name
+ Recording                001         Initiates a recording sequence                Number of data samples to
+                                      over the configured array                     take from the array
+                                      dimensions for an optionally
+                                      specified number of samples
+ Stimulation              111         Triggers a pulse stimulation              Width of the stimulation
+                                                                                    pulse divided to negative,
+                                                                                    positive and neutral phases
+ Power-on                 110         Powers-on the pixel amplifiers          N/A
+ Halt                          101         Stops an on-going recording N/A
+ Configuration 010 Sets the configuration of a target                               The target block and the
+                                      block in the controller                       unique configuration for the
+                                                                                    block
+ Programming           011         Configures the polarity of the                   The coordinates of the pixels
+                                      pixels for stimulation                        targeted for stimulation and
+                                                                                    their initial polarities
+ Query                    000         Query for the current state of                Block address
+ Configuration                        configuration of a specific block
+                                      in the controller
+Supplementary Table 1. Instruction set architecture of the BISC controller.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                           54

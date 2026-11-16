@@ -1,0 +1,52 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    each electrode. This on-site active sensing scheme reduces the interconnect bottleneck from O(n)
+    for passive arrays to O(√𝑛) - a critical enabler used in the display field to scale modern mobile
+    displays to millions of pixels        . Each pixel consists of a sensing TFT (M1) operated in saturation
+    as a transconductor, a switching TFT (M2) for column selection                      (Fig. 1G), and in later iterations
+    of the technology, a pseudo-resistor and coupling capacitor for bias stability and                       DC isolation
+    (Supplementary Fig. 8, 9). Column address lines sequentially enabled pixels while                          parallel row
+    readout lines simultaneously measure              current outputs from all 16 rows through high             -gain, low-
+    noise transimpedance amplifiers, thereby enabling sequential time division multiple access
+    (TDMA) measurements. A critical innovation that provides an additional avenue for future
+    optimization is the integration of digital feedback: a low-pass digital filter continuously measures
+    and subtracts the DC bias current component at each TIA input from each individual pixel,
+    dramatically increasing dynamic range and enabling per-pixel calibration of operating points.
+    Optimized custom firmware and software handled data acquisition, packaging, transmitting, and
+    logging of the output and drift data shown in Fig. 1H for all 16 parallel channels.  This mixed-
+    signal approach significantly reduces power consumption while maintaining high
+    transconductance (Fig. 1H-I). Combined with burst sampling at elevated sampling rates during
+    each column period to reduce aliasing noise, it achieves ~1ksps per channel with measured per-
+    pixel end-to-end gains exceeding 800 V/V for nominal pixel operating currents of ~90uA (Fig.
+    1L-M). It provides a stable mechanism for tracking DC and low                      -frequency signals associated
+    with TFT operation and drift together with the inherent open                  -circuit potentials of     each electrode
+    (see VDrift in Fig. 1H). This general approach has been pursued in recent works and                        , when
+    combined with       the present    mixed-signal architecture        , has proven to be a  promising avenue for
+    resolving the     noise-aliasing     problem as well as lowering power scaling with higher channel
+    counts25.
+
+              Benchtop characterization in phosphate-buffered saline using broadband chirp excitation
+    confirmed a uniform frequency response from DC to 250Hz with minimal channel-to-channel
+    variation (Fig. 1J-K). Spatial mapping of time-averaged pixel currents revealed a relatively large
+    stochastic spread of bias currents (the range varied based on bias voltages), pointing to the need
+    for future pixel architectures to address           compensation of device process variation (i.e. threshold
+    voltage variation) rather than relying on downstream digital                  normalization techniques such as Z-
+    scoring. The system demonstrated             accurate signal reconstruction through time             -division
+    multiplexing. For example, the power spectral density calculations shown in Fig. 1J-K indicate a
+    measured total input-referred RMS noise of ~60µVrms. These benchtop validations established
+    the electrical functionality and uniformity of the platform prior to                 in vivo recordings.
+    Thin Film Encapsulation and TFT Optimizations for Long-term Active Implants
+
+              Hermetic encapsulation represents one of the most significant challenges for flexible
+    active implants, as conventional thin-film polymers exhibit water vapor transmission rates
+    (WVTR) orders of magnitude higher than their bulk-material counterparts. We developed a thin
+    film encapsulation strategy employing polymer substrates and                     encapsulation layers together with
+    conformal atomic layer deposited high-quality ceramic inter-layers which encapsulate sensitive
+    electronic devices within the FIC. To validate long-term reliability of our hybrid ALD
+    Al2O3/polyimide encapsulation strategy, we conducted accelerated aging studies at 50°C in
+    phosphate-buffered saline solution with continuous +5V DC bias stress applied between the
+    metal patterns and the surrounding saline over a 388-day period (Fig. 2 A-H). Three

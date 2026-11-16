@@ -1,0 +1,84 @@
+                         This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+JAIN et al.: 2.5–20 kS/s IN-PIXEL DIRECT DIGITIZATION ECoG FRONT END                                                                                                                                                         11
+
+
+Intan  uses  a  PGA +  shared  ADC  architecture  for  recording,                                  [5]   L. R. Hochberg et al., “Neuronal ensemble control of prosthetic devices
+it  has  a  much  lower  input  range  (5  mVp)  than  this  chip.                                       by a human with tetraplegia,” Nature, vol. 442, no. 7099, pp. 164–171,
+Additionally, the input high-pass network on the Intan results                                           Jul. 2006, doi: 10.1038/nature04970.
+                                                                                                   [6]   A.  B.  Schwartz,  X.  T.  Cui,  D.  J.  Weber,  and  D.  W.  Moran,  “Brain-
+in  a  longer  recovery  time  after  saturation.  In  contrast,  this                                   controlled  interfaces:  Movement  restoration  with  neural  prosthetics,”
+chip outperformed by recovering with immediate observation                                               Neuron, vol. 52, no. 1, pp. 205–220, Oct. 2006.
+of neural activity.                                                                                [7]   H.  Duffau,  “Contribution  of  intraoperative  electrical  stimulations  in
+                                                                                                         surgery of low grade gliomas: A comparative study between two series
+                                                                                                         without  (1985–96)  and  with  (1996–2003)  functional  mapping  in  the
+C.  Comparison to the State-of-the-Art                                                                   same  institution,”  J.  Neurol.,  Neurosurgery  Psychiatry,  vol.  76,  no.  6,
+                                                                                                         pp. 845–851, Jun. 2005, doi: 10.1136/jnnp.2004.048520.
+   TableIcompares the performance of this work with recently                                       [8]   N.  C.  Swann  et  al.,  “Adaptive  deep  brain  stimulation  for  Parkinson’s
+published  state-of-the-art  neural  recording  front  ends.  The                                        disease  using  motor  cortex  sensing,”  J.  Neural  Eng.,  vol.  15,  no.  4,
+table  is  categorized  by  readout  topology:  PGA  +  shared                                           Aug. 2018, Art. no. 046006, doi: 10.1088/1741-2552/aabc9b.
+ADC[19], [23], [26], [30],  which  uses  capacitive  input,  and                                   [9]   M. Zhang, Z. Tang, X. Liu, and J. Van der Spiegel, “Electronic neural
+                                                                                                         interfaces,” Nat. Electron, vol. 3, no. 4, pp. 191–200, Apr. 2020.
+CT16     M,  which  uses  capacitive  with  [33]  or  without  chop-                              [10]   J.-J.   Sit   and   R.   Sarpeshkar,   “A   low-power   blocking-capacitor-free
+ping [32], or        Gm-input [34],        [36],        [38]. This work achieves the                     charge-balanced    electrode-stimulator    chip    with    less    than    6    nA
+fastest (sub-ms) stimulation artifact recovery time. The recov-                                          DC   error   for   1-mA   full-scale   stimulation,”   IEEE   Trans.   Biomed.
+                                                                                                         Circuits    Syst.,    vol.    1,    no.    3,    pp. 172–183,    Sep.    2007,    doi:
+ery time of this work is >250×          faster than existing solutions.                                  10.1109/TBCAS.2007.911631.
+This is the first work to address the artifact-induced instability                                [11]   R.  Vatsyayan  et  al.,  “Electrochemical  and  electrophysiological  con-
+problem  associated  with  CT-16  Ms  using  time-based  quan-                                           siderations  for  clinical  high  channel  count  neural  interfaces,”  MRS
+tizers [31],        [34],        [41],        [43], making them suitable for clinical                    Bull., vol. 48, no. 5, pp. 531–546, May 2023, doi:         10.1557/s43577-023-
+                                                                                                         00537-0.
+use. The chip is competitive in other metrics, including power                                    [12]   J.  Yoo,  L.  Yan,  D.  El-Damak,  M.  A.  B.  Altaf,  A.  H.  Shoeb,  and
+consumption, noise performance, and robustness to variations.                                            A. P. Chandrakasan, “An 8-channel scalable EEG acquisition SoC with
+It  supports  multiple  bandwidths  with  consistent  performance                                        patient-specific  seizure  classification  and  recording  processor,”  IEEE
+                                                                                                         J. Solid-State Circuits, vol. 48, no. 1, pp. 214–228, Jan. 2013.
+and  power  scaling,  allowing  customization  of  the  AFE  for                                  [13]   A.  Chua,  M.  I.  Jordan,  and  R.  Müller,  “SOUL:  An  energy-efficient
+specific neural recording frequency bands.                                                               unsupervised online learning seizure detection classifier,” IEEE J. Solid-
+                                                                                                         State   Circuits,   vol.   57,   no.   8,   pp. 2532–2544,   Aug.   2022,   doi:
+                                                                                                         10.1109/JSSC.2022.3172231.
+                                VI.  CONCLUSION                                                   [14]   N.  Butz,  A.  Taschwer,  S.  Nessler,  Y.  Manoli,  and  M.  Kuhl,  “A  22  v
+   This  article  presents  a  4 ×  2  array  of  per-pixel  2nd-order                                   compliant  56  µW  twin-track  active  charge  balancing  enabling  100%
+                                                                                                         charge compensation even in monophasic and 36% amplitude correction
+CT-16  Ms  with  a  time-based  ring-oscillator  quantizer  for                                          in  biphasic  neural  stimulators,”  IEEE  J.  Solid-State  Circuits,  vol.  53,
+direct digitization of neural recording signals in a closed-loop                                         no. 8, pp. 2298–2310, Aug. 2018, doi: 10.1109/JSSC.2018.2828823.
+neuromodulation  system.  Each  design  decision  was  made  to                                   [15]   H.  Chandrakumar  and  D.  Markovic,  “An  80-mVpp  linear-input  range,
+ensure  the  system  is  energy-efficient,  robust,  and  scalable  to                                   1.6-G           input impedance, low-power chopper amplifier for closed-loop
+                                                                                                         neural  recording  that  is  tolerant  to  650-mVpp  common-mode  interfer-
+the  future  target  of  1024  pixels  on  a  single  chip.  It  achieves                                ence,”  IEEE  J.  Solid-State  Circuits,  vol.  52,  no.  11,  pp. 2811–2828,
+sub-ms artifact recovery time, enabling in-stimulation record-                                           Nov. 2017, doi: 10.1109/JSSC.2017.2753824.
+ing by preventing modulator instability, which is accomplished                                    [16]   S.  Culaclii,  B.  Kim,  Y.-K.  Lo,  L.  Li,  and  W.  Liu,  “Online  artifact
+                                                                                                         cancelation  in  same-electrode  neural  stimulation  and  recording  using
+through fast recovery and overrange detecting phase quantizer.                                           a combined hardware and software architecture,” IEEE Trans. Biomed.
+The  ADC  features  a  pseudo-virtual  ground  feedforwarding                                            Circuits Syst., vol. 12, no. 3, pp. 601–613, Jun. 2018.
+technique and a complementary input Gm-C  filter with a per-                                      [17]   A.  Zhou,  B.  C.  Johnson,  and  R.  Müller,  “Toward  true  closed-loop
+                                                                                                         neuromodulation:  Artifact-free  recording  during  stimulation,”  Current
+pixel  decimator,  ensuring  an  efficient  and  optimized  design.                                      Opinion Neurobiol., vol. 50, pp. 119–127, Jun. 2018.
+It supports four modes of recording 2.5–20 kS/s via a power-                                      [18]   D. A. Wagenaar and S. M. Potter, “Real-time multi-channel stimulus arti-
+efficient,  bandwidth-scalable  CT-16  M.  The  chip’s  perfor-                                          fact suppression by local curve fitting,” J. Neurosci. Methods, vol. 120,
+mance was successfully validated through an in vivo whisker                                              no. 2, pp. 113–120, Oct. 2002, doi: 10.1016/s0165-0270(02)00149-8.
+                                                                                                  [19]   Digital  Electrophysiology  Interface  Chip.  Accessed:  Jun.  26,  2024.
+barrel rat experiment and compared against a commercial Intan                                            [Online].  Available:  https://intantech.com/files/Intan_RHD2164_datash
+chip, showing better artifact recovery time. This work demon-                                            eet.pdf
+strates that time-based modulators can effectively record clin-                                   [20]   A.  Jain  et  al.,  “A  2.5–20kSps  in-pixel  direct  digitization  front-end  for
+ical ECoG signals in closed-loop neuromodulation systems.                                                ECoG  with  in-stimulation  recording,”  in  Proc.  IEEE  Custom  Integr.
+                                                                                                         Circuits  Conf.  (CICC).  CO,  USA:  IEEE,  Apr.  2024,  pp. 1–2,  doi:
+                                                                                                         10.1109/cicc60959.2024.10529096.
+                                    REFERENCES                                                    [21]   Y.  Tchoe  et  al.,  “Human  brain  mapping  with  multithousand-channel
+                                                                                                         PtNRGrids resolves spatiotemporal dynamics,” Sci. Translational Med.,
+ [1]   N. G. Pozzi and I. U. Isaias, “Adaptive deep brain stimulation: Retuning                          vol.   14,   no.   628,   Jan.   2022,   Art.   no.   eabj1441,   doi:   10.1126/sci-
+      Parkinson’s  disease,”  Handbook  Clin.  Neurol.,  vol.  184,  pp. 273–284,                        translmed.abj1441.
+      May 2022, doi: 10.1016/B978-0-12-819410-2.00015-1.                                          [22]   R.  R.  Harrison  and  C.  Charles,  “A  low-power  low-noise  CMOS  for
+ [2]   Y.  Ezzyat  et  al.,  “Closed-loop  stimulation  of  temporal  cortex  rescues                    amplifier  neural  recording  applications,”  IEEE  J.  Solid-State  Circuits,
+      functional  networks  and  improves  memory,”  Nature  Commun.,  vol.  9,                          vol.   38,   no.   6,   pp. 958–965,   Jun.   2003,   doi:   10.1109/JSSC.2003.
+      no. 1, p. 365, Feb. 2018, doi: 10.1038/s41467-017-02753-0.                                         811979.
+ [3]   A. S. Widge et al., “Treating refractory mental illness with closed-loop                   [23]   D. Yoon, S. Pinto, S. Chung, P. Merolla, T. Koh, and D. Seo, “A 1024-
+      brain  stimulation:  Progress  towards  a  patient-specific  transdiagnostic                       channel  simultaneous  recording  neural  SoC  with  stimulation  and  real-
+      approach,”  Experim.  Neurol.,  vol.  287,  pp. 461–472,  Jan.  2017,  doi:                        time spike detection,” in Proc. Symp. VLSI Circuits, Jun. 2021, pp. 1–2.
+      10.1016/j.expneurol.2016.07.021.                                                            [24]   C.  M.  Lopez  et  al.,  “22.7  A  966-electrode  neural  probe  with  384
+ [4]   A. L. Benabid, S. Chabardes, J. Mitrofanis, and P. Pollak, “Deep brain                            configurable  channels  in  0.13µm  SOI  CMOS,”  in            Proc.  IEEE  Int.
+      stimulation of the subthalamic nucleus for the treatment of Parkinson’s                            Solid-State   Circuits   Conf.   (ISSCC),   Jan.   2016,   pp. 392–393,   doi:
+      disease,” Lancet Neurol., vol. 8, no. 1, pp. 67–81, Jan. 2009.                                     10.1109/ISSCC.2016.7418072.
+
+
+         Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

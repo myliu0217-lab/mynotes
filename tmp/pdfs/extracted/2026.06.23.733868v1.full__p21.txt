@@ -1,0 +1,50 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+         15. Fang, H., Zhao, J., Yu, K. J., Song, E., Farimani, A. B., Chiang, C. H., Jin, X., Xue, Y.,
+              Xu, D., Du, W., Seo, K. J., Zhong, Y., Yang, Z., Won, S. M., Fang, G., Choi, S. W.,
+              Chaudhuri, S., Huang, Y., Alam, M. A., Viventi, J., Aluru, N. R. & Rogers, J. A.
+              Ultrathin, transferred layers of thermally grown silicon dioxide as biofluid barriers for
+              biointegrated flexible electronic systems. Proc Natl Acad Sci U S A 113, 11682-11687
+              (2016).
+         16. Viventi, J., Kim, D. H., Vigeland, L., Frechette, E. S., Blanco, J. A., Kim, Y. S., Avrin,
+              A. E., Tiruvadi, V. R., Hwang, S. W., Vanleer, A. C., Wulsin, D. F., Davis, K., Gelber, C.
+              E., Palmer, L., Van Der Spiegel, J., Wu, J., Xiao, J., Huang, Y., Contreras, D., Rogers, J.
+              A. & Litt, B. Flexible, foldable, actively multiplexed, high-density electrode array for
+              mapping brain activity in vivo. Nat Neurosci 14, 1599-1605 (2011).
+         17. Shin, W. S., Ahn, H. A., Na, J. S., Hong, S. K., Kwon, O. K., Lee, J. H., Um, J. G., Jang,
+              J., Kim, S. H. & Lee, J. S. A driving method of pixel circuit using a-IGZOTFT for
+              suppression of threshold voltage shift in AMLED displays. IEEE Electron Device Letters
+              38, 760-762 (2017).
+         18. Sodhani, A., Goswami, R. & Kandpal, K. Design of Pixel Circuit Using a-IGZO TFTs to
+              Enhance Uniformity of AMOLED Displays by Threshold Voltage Compensation. Arab J
+              Sci Eng 46, 9663-9672 (2021).
+         19. Nenashev, A. V., Oelerich, J. O., Greiner, S. H. M., Dvurechenskii, A. V., Gebhard, F. &
+              Baranovskii, S. D. Percolation description of charge transport in amorphous oxide
+              semiconductors. Phys Rev B 100, (2019).
+         20. Song, H., Kang, G., Kang, Y. & Han, S. The Nature of the Oxygen Vacancy in
+              Amorphous Oxide Semiconductors: Shallow Versus Deep. Phys Status Solidi B Basic
+              Res 256, (2019).
+         21. Srivastava, J., Nahas, S., Bhowmick, S. & Gaur, A. Electronic structure and transport in
+              amorphous metal oxide and amorphous metal oxy-nitride semiconductors. J Appl Phys
+              126, (2018).
+         22. Luo, Y. & Flewitt, A. J. Revisiting multiple trapping and release charge transport in
+              amorphous semiconductors exemplified by hydrogenated amorphous silicon. J Non Cryst
+              Solids 654, 123436 (2025).
+         23. Vatsyayan, R. & Dayeh, S. A. A Comprehensive Large Signal, Small Signal, and Noise
+              Model for IGZO Thin Film Transistor Circuits. IEEE Trans Electron Devices 70, 4647-
+              4654 (2023).
+         24. Londoño-Ramírez, H., Huang, X., Cools, J., Chrzanowska, A., Brunner, C., Ballini, M.,
+              Hoffman, L., Steudel, S., Rolin, C., Mora Lopez, C., Genoe, J. & Haesler, S. Multiplexed
+              Surface Electrode Arrays Based on Metal Oxide Thin-Film Electronics for High-
+              Resolution Cortical Mapping. Advanced Science 11, 2308507 (2024).
+         25. Fathy, N. S. K., Vatsyayan, R., Bourhis, A. M., Dayeh, S. A. & Mercier, P. P. A 0.00179
+              mm2/Ch Chopper-Stabilized TDMA Neural Recording System With Dynamic EOV
+              Cancellation and Predictive Mixed-Signal Impedance Boosting. IEEE Trans Biomed
+              Circuits Syst 18, 908-922 (2024).
+         26. Kambic, H. & Saidel, G. M. Characterization of tissue morphology, angiogenesis, and
+              temperature in the adaptive response of muscle tissue to chronic heating.
+              https://www.researchgate.net/publication/13406967.

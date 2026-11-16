@@ -1,0 +1,69 @@
+                      This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                            content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                  15
+
+
+                                                                                     Scientist  Award      and  was  a  J.R.  Oppenheimer  Fellow  at  Los
+                         Nader  Sherif  Kassem  Fathy              (Graduate         Alamos.
+                         Student Member, IEEE) received the B.Sc.
+                         and   M.Sc.   degrees   in   electronics   and                                        Patrick P. Mercier (S’04–M’12–SM’17)
+                         telecommunication  engineering  from  Ain                                             received the B.Sc. degree in electrical and
+                         Shams  University,  Cairo,  Egypt,  in  2013                                          computer engineering from the University
+                         and 2018, respectively, and his PhD degree                                            of Alberta,   Edmonton, AB,   Canada,   in
+                         in   electrical    and   computer       engineering                                   2006,  and  the  S.M.  and  Ph.D.  degrees  in
+                         from   the     University   of     California   San                                   electrical     engineering     and     computer
+Diego (UCSD) in 2024.  From 2014 to 2016, he worked as a                                                       science from the Massachusetts Institute of
+Teaching  Assistant  with  the  Department  of  Electronics  and                                               Technology      (MIT), Cambridge,      MA,
+Communications,  Ain  Shams  University.  He  was  a  former                         USA, in 2008 and 2012, respectively.
+Senior   Software   Development   Engineer   with   the   Calibre                    He   is   currently   a   Professor   in   Electrical   and   Computer
+Research  and  Development  Department,  Mentor  Graphics—
+Siemens, Cairo, from 2013 to 2018. He has held two internships                       Engineering at the University of California San Diego (UCSD),
+with Apple Inc., Cupertino, CA, USA, during the summer of                            where  he  is  also  the  co-Director  of  the  Center  for  Wearable
+2020  and  2021  with  the  Analog  Silicon  Engineering  Group                      Sensors  and  the  Site  Director  of  the  Power  Management
+focusing  on  phase-locked  loop  (PLL)  designs.               In  2024,  he        Integration Center. His research interests include the design of
+joined  Marvell  Semiconductor  Inc  at  Irvine,  CA  as  a  staff                   energy-efficient  microsystems,  focusing  on  the  design  of  RF
+engineer in analog and mixed signal (AMS) circuit design.                            circuits,    power    converters,    and    sensor    interfaces    for
+                           Ritwik   Vatsyayan          (Graduate       Student       miniaturized systems and biomedical applications.
+                           Member,  IEEE)        is  a  PhD  student     in  the     Prof. Mercier has  published  over           200    peer-reviewed  papers,
+                           Integrated  Electronics  and  Biointerfaces               including 26 ISSCC papers, 34 JSSC papers, and several papers
+                           Laboratory        at     the     University     of        in high-impact journals such as Science, Nature Biotechnology,
+                           California,   San   Diego.       He    earned     his     Nature  Biomedical  Engineering,  Nature  Electronics,  Nature
+                           B.Tech       degree      in    Electronics    and         Communications,   Advanced   Science,                and   more.   He   has
+                           Communications  Engineering  from  the                    received  numerous  awards,  including  a  Natural  Sciences  and
+                           Indian Institute of Technology, Guwahati,                 Engineering   Council   of   Canada   (NSERC)   Julie   Payette
+and his MS  degree        in the medical devices and systems track                   fellowship in 2006, NSERC Postgraduate Scholarships in 2007
+within Electrical Engineering from the University of California,                     and 2009, an Intel Ph.D. Fellowship in 2009, the 2009 IEEE
+San  Diego. His  research  interests  primarily  lie  in  developing                 International  Solid-State  Circuits  Conference  (ISSCC)  Jack
+safe  stimulation  paradigms  for  probing  neural  networks.  His                   Kilby Award for Outstanding Student Paper at ISSCC 2010, a
+work    involves    utilizing    high    channel    count,    clinically             Graduate   Teaching   Award   in   Electrical   and   Computer
+translatable electrodes capable of simultaneous recording and                        Engineering at UCSD in 2013, the Hellman Fellowship Award
+stimulation at ultra-high resolutions.                                               in 2014, the Beckman Young Investigator Award in 2015, the
+                           Andrew      M.   Bourhis (Graduate Student                DARPA  Young  Faculty  Award  in  2015,  the                 UC  San  Diego
+                           Member,   IEEE)         is   a   PhD   student   at       Academic Senate Distinguished Teaching Award in 2016, the
+                           University   of   California,   San   Diego               Biocom Catalyst Award in 2017, the NSF CAREER Award in
+                           working out of the Integrated Electronics                 2018,   a   National   Academy   of   Engineering   Frontiers   of
+                           and Biointerfaces Lab. He earned his BS                   Engineering    Lecture    in    2019,    the    San    Diego    County
+                           in   Electrical   Engineering   from   Tufts              Engineering Council Outstanding Engineer Award in 2020, the
+                           University   and   his       MS     in   Electrical       ISSCC  Author  Recognition  Award  in  2023,  and  the  ECE
+                           Engineering  with  a         focus  on  Medical           Teacher  of  the  Year  award  in  2023.  He  has  served  as  an
+                           Devices  and  Systems  at  University  of                 Associate Editor of the IEEE Transactions on Very Large-Scale
+                           California,   San   Diego.         His   research         Integration  (TVLSI),  the  IEEE  Transactions  on  Biomedical
+focuses  on  designing       active   circuits  and  systems      on  flexible       Circuits  and  Systems  (TBioCAS),  and  the  IEEE  Solid-State
+substrates for high channel count neural interfaces, focusing on                     Circuits  Letters.  He is  currently  a  member  of  the  Executive
+addressing the interconnect bottleneck that has held back neural                     Committee of ISSCC, and has served on the technical program
+interface channel counts for decades.                                                committees for ISSCC, CICC, and the VLSI Symposium. Prof.
+                           Shadi A. Dayeh is a Lebanese American                     Mercier  was  the  co-editor  of  Ultra-Low-Power  Short  Range
+                           Neurotechnologist who pioneered human                     Radios   (Springer,   2015)   Power   Management   Integrated
+                           brain   recordings   with   multi-thousand                Circuits (CRC Press, 2016), and High-Density Electrocortical
+                           channels since 2019 and is an ECE Prof.                   Neural Interfaces (Academic Press, 2019).
+                           at UC San Diego. He is an awardee of the
+                           NIH  Director’s  New  Innovator  Award,
+                           NSF   CAREER   Award,   ISCS   Young
+
+
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                      © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

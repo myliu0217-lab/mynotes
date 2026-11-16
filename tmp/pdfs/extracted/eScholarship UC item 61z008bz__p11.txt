@@ -1,0 +1,81 @@
+                         This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+10                                                                                                                                                                                                                        IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig.  13.     PSD  measurements  of  all  16  channels  with  different  sinusoid  input  signals  (blue  curve:  LFP  band,  black  curve:  AP  “spike”  band).  Test  signals
+are  injected  in  all  channels  of  amplitude  AS  and  frequency   fS,  in  addition  to  EOV  signal  of  amplitude  AE  and  frequency   fE  (Aα = 1mV,AE = 10  mV,
+fα = 200 Hz,  fE = 0.1Hz).
+
+This  could  be  improved in  a  future version  of  the  chip.  The
+overall system of measured SNR with ±50 mV injected EOV
+is  46.96  dB,  and  SNDR  is  46.29  dB,  resulting  in  ENOB  of
+7.4 bits.
+   The measured closed-loop transfer function of AP and LFP
+for all 16 channels is shown in Fig. 12. Measurements of ﬁve
+different  dies  show  that  the  neural  ampliﬁer  mid-band  gain
+mean  value  is  40  dB  with  a  standard  deviation  of  4.12  dB
+and BW mean of 397 kHz with 194.1 Hz standard deviation,
+respectively.  The  neural  ampliﬁer  statistical  analysis  is  mea-
+sured  from  a  debugging  buffer,  shown  in  Fig.  8,  connected
+to the output of the neural ampliﬁer to avoid additional pads
+loading effect.
+   Fig.  13 shows the PSD of all 16-channels simultaneously;
+channels  1 →  8  are  injected  with  an  ACCES  USB-DA12-
+8A-PR arbitrary waveform generator. Each channel is injected
+with a different amplitude, frequency, and slowly varying EOV.
+Channels 1 → 7 are wired off-chip to channels 9 → 15 due
+to  limitation  of  laboratory devices.  Channel  16  is  connected                      Fig. 14.    Proposed system  test  bench  setup.
+to the SRS-DS360 function generator. Channels 6 and 14 are
+injected with slowly varying EOV and zero neural-band signals                            proposed technique has the advantage of scalability with node
+to  measure  IRN;  both  channels  had  a  maximum  IRN  of                              advancement  compared  with  other  techniques  which  could
+2.1 μVrms.  In  another  trial  with  all  channels  injected  with                      easily bring the channel area to below 0.001 mm2  in  a more
+EOV  only,  the  maximum  measured  IRN  is  2.6 μVrms.The                               scaled CMOS process.
+worst case measured EOV rejection is 53 dB. Fig. 14 shows
+the   system   test   bench   setup   and   a   simpliﬁed   schematic                                                  VII.  CONCLUSION
+view. The  neural signals pass  through an  emulated electrode
+impedance  of  100  k/Omega1  .  With  28-M/Omega1  AFE  input  impedance,                   A  multi-channel  TDMA  neural  recording  system  with  an
+the signals are not affected much.                                                       LMS  ﬁlter  that  continuously  detects  and  removes  EOV  is
+   Table  II  summarizes  the  achieved  results  and  compares                          proposed  in  this  article.  The  proposed  LMS-topology,  with
+them  with  the  state-of-the-art  neural  recording  systems.  The                      modiﬁed feedback, enables the use of an LMS algorithm with
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

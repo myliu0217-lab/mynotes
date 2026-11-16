@@ -1,0 +1,74 @@
+CISNEROS-FERNÁNDEZ       et al.: 1024-CHANNEL 10-BIT 36-µW/CH CMOS ROIC FOR MULTIPLEXED GFET-ONLY SENSOR ARRAYS                                                       861
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                     Fig. 2.     (a) Solution-gated GFET sensor cross section, (b) device electrical
+                                                                                     transfer curve, (c) array layout and (d) noise spectral proﬁle (d). Statistical data
+                                                                                     obtained from 20 samples.
+
+
+                                                                                     Unfortunately, monolithic solutions usually involve expensive
+                                                                                     CMOS post-processing steps, like ROIC micromechanization in
+                                                                                     penetrating shanks, and they are deﬁnitely not suitable for those
+                                                                                     brain mapping applications requiring either large sensing areas
+                                                                                     or conformable ﬂexible arrays, as in             μECoG. Hybrid devices
+                                                                                     can mix optimum technologies for the sensing array and ROIC
+                                                                                     parts, but they still have to face the packaging limitations in case
+                                                                                     of non-multiplexed sensor-to-circuit connectivity.
+                                                                                        This work presents a large-scale neural ROIC architecture for
+                                                                                     solution-gated GFET sensing arrays in massive                  μECoG brain
+                                                                                     mapping.  The  proposed  array  multiplexing  enables  low-cost
+                                                                                     scalable hybrid integration and its CMOS circuit design com-
+                                                                                     pensates the effects of array scaling on noise performance while
+Fig.  1.     (a)  Neural  ROIC  device  types  and  (b)  state-of-art  survey  [4]–[78]maintaining low-power operation. Following this architecture,
+according to ROIC application, sensor-to-circuit architecture (point-to-point vs.    1024 simultaneous channels are ﬁt in a single chip to achieve
+multiplexed) and CMOS integration (monolithic vs. hybrid). Dashed line shows         the largest scalability in hybrid neural ROICs, as highlighted
+overall trend on scalability of single-ROIC channel count.
+                                                                                     in Fig. 1(b). Furthermore, the resulting system is also capable
+                                                                                     of  recording  infra-slow  neural  signals.  The  rest  of  the  paper
+post-processing  techniques,  while  hybrid  devices  [19]–[23],                     is organized as follows: Section II presents the solution-gated
+[32]–[43], [46], [47], [49]–[78] combine separated technologies                      GFET arrays for brain mapping, while their time-domain mul-
+for each part through advanced packaging.                                            tiplexing is proposed in Section III; the modular 1024-channel
+   Scalability of such brain mapping systems is driven by two                        ROIC architecture is introduced in Section IV; the low-power
+main vectors: large array sensing area and high spatial density                      CMOS row circuits for noise cancellation and A/D conversion
+of recording sites. From the ROIC viewpoint, both vectors tend                       are  presented  in  Sections  V  and  VI,  respectively;  the  1024-
+to converge into the same ﬁgure of merit that is the total number                    channel ROIC fabricated in 1.8-V 0.18-μm CMOS technology
+of  parallel  read-out  channels  per  chip  (N            ).  In  this  sense,      is described in Section VII; Section VIII explains the automated
+                                                        ch                           system calibration methodology with experimental examples,
+the  state-of-art  survey  of  Fig.  1(b)  returns  a  sustained  trend-             while Section IX compiles the electrical characterization results;
+ing of two-fold increase in         Nch   every three years. Classically,            ﬁnally, conclusions are summarized in Section X. Pre-Silicon
+monolithic CMOS solutions have been employed to approach                             design information of this ROIC has been presented by these
+scalability, as it can be noticed by the red markers dominating                      authors in [84].
+the upper bounds of Fig. 1(b). Indeed, if the sensing array is
+integrated in the ROIC itself, then the number of one-to-one                         II.  NEURAL      SENSING     WITH    SOLUTION-GATED          GFET ARRAYS
+connections between each recording site and the corresponding
+AFE circuit can be easily scaled up while preserving analog                             Solution-gated  GFETs  as  shown  in  Fig.  2(a)  are  effective
+signal  integrity.  Furthermore,  this  integration  scheme  allows                  transducers  of  neural  signals  [85]  and  a  promising  building
+to  shift  channel  multiplexing  higher  in  the  circuit  hierarchy                block for large-scale neural probes due to their sensitivity [82],
+(e.g. dedicated AFEs sharing a common A/D data converter).                           [86], stability in aqueous environments [82] and performance
+
+
+
+         Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

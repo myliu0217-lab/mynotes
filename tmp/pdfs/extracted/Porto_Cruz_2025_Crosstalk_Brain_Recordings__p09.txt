@@ -1,0 +1,70 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+interconnects  level.  Nonetheless,  the  magnitude  of  this  coupling                     subjected   to   further   sources   of   interference,   e.g.   power   line
+depends on the complete transmission line, including the termination                        interference22,23.
+impedances, i.e.  the  tissue-electrode  interface and  ampliﬁer’sinput
+impedance.  In  other  words,  the  quality  of  the  interface  between                    Reconstructing crosstalk-corrupted neural data
+recording  electrode  and  signal  source  has  a  direct  impact  on  the                  The  generalized  two-line  model  used  to  characterize  any  recording
+magnitude  of  coupling:  high-impedance  nodes  experience  more                           system is extended to a four-line model simulating our particular setup,
+crosstalk than low-impedance nodes. This point stresses the fact that                       where sets of four adjacently routed channels suffer from increased
+the transfer function is deﬁned by the superposition of the different                       crosstalk  contamination.  According  to  the  clearance  between  the
+blocks, and its analysis must take into consideration the equivalent                        active  line  and  the  three  passive  lines  (increasingly  distant  from
+circuit in its entirety as a comprehensive and closed system, rather                        the active line), three transfer functions are computed, describing the
+than taking each block as an independent, open subsystem. Here we                           coupling between two near-distant lines, two mid-distant lines and two
+study the effect of each block by looking at how its variation affects the                  far-distant lines (Fig. 7d). From this simpliﬁed model, an algorithm for
+baseline  transfer  function  computed   for  a  given  set   of  starting                  crosstalk  back-correction is  developed.  The signal recorded by  each
+parameters.                                                                                 line is assumed as a superposition of its true signal and the true signal
+     Indeed, the termination impedance on the tissue side is a crucial                      of each of the other three lines multiplied by the respective transfer
+determinant of crosstalk, including both the spread resistance and                          function. By solving the system of four equations, the true signals can
+the electrochemical interface between electrolyte and electrode. In                         be  extracted  and  compared  to  the  original  signals  contaminated  by
+the context of epicortical and, in particular, of epidural electrodes, it                   crosstalk.  The  present  algorithm  serves  as  a  method  to  verify  the
+is useful to evaluate the spread resistance (RS) separately from the                        hypothesis that electrical coupling is strong enough to modulate the
+resistance of the electrolyte in direct vicinity to the electrode (RE).                     signal spectrum within levels relevant to the ﬁeld. However, it is not
+The dura mater is a thick insulating layer with a resistivity 25 times                      intended as a method to surpass crosstalk contamination a posteriori.
+superior  to  that  of  cerebrospinal ﬂuid20,  hence  increasing  the  ter-                 On the contrary, it should raise awareness to mitigate it at its source.
+mination impedance. According to Newman et al., the resistance to                                 Coherence levels between signals recorded by adjacently wired
+ﬂow of current to a disk electrode can be estimated as R = ρ/(4r) (in                       channels are falsely boosted in respect to all other channels. Yet, after
+Ω), where ρ stands for the medium resistivity (in Ω⋅m) and r for the                        performing the crosstalk back-correction algorithm on these signals,
+radius of the disk (in m)21. Given that the resistivity of the dura mater                   coherence  effectively  drops  in  the  MUA  band,  while  remaining
+has  a  value  of  1–5kΩ⋅cm20,  the  spread  resistance  for  an  epidural                  unchanged in the LFP band. Furthermore, comparing recorded and
+electrode disk with a radius of 50 μm is calculated to have a minimum                       reconstructed raw data shows that coupled signals are strong enough
+value of 50 kΩ, which matches the experimental value of 45 kΩ, one                          to modulate waveform amplitudes by as much as 4.3%. This could have
+order of magnitude larger than RE (Table 1). It is thus concluded that,                     serious  consequences  on  signal  analysis  and,  ultimately,  on  the
+in epidural applications, the meninges play a major role on the ter-                        extraction of electrophysiologically relevant information, as the shift
+mination impedance of the transmission line and, consequently, on                           in amplitudes is high enough to sway spike waveforms beyond the
+crosstalk inﬂuence.                                                                         detection  threshold.  Any  further  conclusions  on  the  impact  of  the
+     The LFP band is found to be almost immune to crosstalk con-                            crosstalk contamination on validity of spike detection and information
+tamination, which is consistent with the fact that, under the boundary                      extraction  would  require  dedicated  studies  with  deﬁned  criteria
+conditions  dictated  by  our  recording  system,  coupling  levels  are                    beyond the scope of this work.
+negligible in this frequency band, becoming signiﬁcant, i.e. less than                            Strong  coupled  signals  not  only  distort  the  original  waveforms
+-40 dB attenuation, only above 1 kHz (Fig. 6, dashed baseline curve).                       due to superposition of time series, but they also create an erroneous
+Nonetheless, this holds true because the EIS data used to model the                         linkbetweenthepassivelineandthetruebrainactivitypickedupby
+tissue-electrode interface is acquired on implantation day, before the                      the active line, leading to misinterpretation of data and loss of spatial
+foreign body response steps in. As edema and glial encapsulation, from                      discrimination between recording channels. For example, let us take
+the biotic side, and delamination and degradation of thin-ﬁlms, from                        an  implant  on  implantation  day.  The  tissue-electrode  interface  is
+the abiotic side, come into play, the parameters of the model start                         pristine and all electrodes are recording at a high signal-to-noise ratio.
+deviating from the baseline values (increase in spread resistance RS                        The number of spuriously detected spikes due to crosstalk are likely to
+and decrease in double layer capacitance CH). Such parameter devia-                         be insigniﬁcant in proportion to the true activity being picked up. Now,
+tions lead to shifts in the transfer function, ultimately resulting in a                    let us move to advanced chronic stages, where a percentage of elec-
+drastic increase in crosstalk, inclusive in the LFP band. Also the insu-                    trodes is failing due to glial encapsulation and thin-ﬁlm delamination.
+lation  impedance  at  the  implant  level,  in  our  case  deﬁned  by  the                 Because of the extremely high terminal impedance on the tissue side,
+resistive and dielectric properties of polyimide, is highly susceptible to                  these lines behave as strong passive lines. If an adjacent line happens to
+the  development  of  the  implant  over  time.  As  water  from the  sur-                  interface a still well-transducing electrode, then the passive line, which
+rounding tissue is absorbed into the polymer, its dielectric properties                     should be outputting zero, is now recording a mufﬂed version of the
+change,  leading  to  an  increase  in  admittance  as  shunt  path  from                   active  neighbor.  Being  that,  in  chronic  stages,  the  tendency  is  for
+insulation to tissue and as coupling path between tracks. The rate of                       signal-to-noise  ratio  to  drop  and  variability  between  electrodes  to
+absorption varies substantially depending on the material, even within                      increase, coupled signals might be easily mistaken for valid residual
+the same family of polymers. In our particular case, however, variations                    information.  Therefore,  cross-checking  the  recordings  against  the
+in  the capacitance  at the  implant  insulation level are  not  the most                   routing layout becomes imperative, as it can help discern and discard
+determinant to the transfer function.                                                       crosstalk contamination.
+     Besides spread resistance and Helmholtz capacitance, insulation
+impedance  at  the  interconnection  level  is,  in  this  particular  case                 Guidelines to ensure high quality, crosstalk-free recordings
+study, the third main determinant of crosstalk. The ﬁrst two depend                         This study highlights the fact that the spectrum of the data outputted
+on complex brain-implant interaction, and, admittedly, their optimi-                        by a recording system, which should ideally reﬂect the signal source
+zation  remains  rather  challenging.  Shortening  the  interconnection                     alone, is in fact conditioned by all building blocks making up the sys-
+stage  by  implementing  on-site  ampliﬁcation  and  digitization  is  an                   tem, from tissue-electrode interface to ampliﬁer.  When  designing  a
+effective  and  straightforward  approach  to  bring  crosstalk  levels                     recording system, there is a broad consensus about what one should
+down. Besides, it has the add-on effect of minimizing the path length                       strive for: in simple terms, minimize impedance at the tissue-electrode
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                            9

@@ -1,0 +1,84 @@
+868                                                                                                           IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 15, NO. 5, OCTOBER 2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 12.     (a) Chip photo, (b) row layout, and (c) breakdown of the 1024-channel ROIC in 1.8-V 0.18-µm CMOS technology. Chip size is 2.2 mm            × 8.5 mm.
+
+
+
+                                    TA B L E  I
+         EXAMPLE OF    ROIC CALIBRATION      RESULTS FOR   FOURROWS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                     Fig. 13.     DC transfer curve for each GFET sensor of the array measured by
+                                                                                     the ROIC at  Vrefd  =16mV,      Vrefo =  −100 mV,     Roﬀ[3]  and  Cs/Cf   =2.
+       Cs/Cf[0]      and   Vrefo  =   −50   mV;     Roﬀ[1,4,    6],  Cs/Cf[0]
+       and      Vrefo  =50mV;            Roﬀ[0],      Cs/Cf    [1, 2, 3]     and
+       Vrefo  =   {−50,    −25,   −15}mV. The resulting           Vadc   values              so each row module can handle              Irow  ∈   [0, 20  μA]. With
+       are  read  out  through  the  corresponding  SAR  ADC  in                             a preliminary low-value          Vrefd   to avoid saturation,       Vrefg
+       parallel for all the 32 rows of the ROIC unit. An example                             sweeping is concurrently executed for all GFET devices.
+       of  experimental  extraction  results  for  4  rows  is  listed                       Fig. 13 shows an example of the GFET curves measured
+       in  Table  I.  In  general,  this  ﬁrst  calibration  step  can  be                   through the ROIC. The derivedGm               plots of Fig. 14 should
+       understood as a CMOS fabrication signature of each row                                allow the proper selection of the common bias point (e.g.
+       circuit  and  therefore  it  may  only  need  to  be  measured                        Vrefg  = 100 mV       and   Vrefd  =50mV).
+       once during the lifetime of the ROIC device.                                     3)  Based on the measured curves, the equivalent                   Gm    map
+   2)  The next step is to choose the global            VGS   (i.e. Vrefg) and               of the array is recomputed for the new global              Vrefg,d   bias
+       VDS   (i.e. Vrefd) biasing levels of the GFET array in Fig. 6                         point using GFET electrical models [94], like in Fig. 15(a).
+       that optimize overall sensitivity. This selection requires                            Together  with  Table  I,  this  map  is  fundamental  for  the
+       the measurement of the DC             I-V   transfer curve of every                   later individual channel gain equalization, and its simple
+       graphene transistor of the array. Given the             ±10-μAAFE                     inspection already allows the screening of the sensor array
+       input full scale for the minimum PGA gain conﬁguration,                               to locate non-working or poor-sensitivity recording sites
+       I-DAC is programmed at            Roﬀ[3]    and  Vrefo   =  −100 mV,                  (e.g. Row0     and Col1).
+
+
+
+        Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

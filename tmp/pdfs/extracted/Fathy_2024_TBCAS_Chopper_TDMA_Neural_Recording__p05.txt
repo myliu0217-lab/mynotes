@@ -1,0 +1,74 @@
+                        This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                                content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                                   5
+
+
+
+
+
+
+
+(a)
+
+
+
+
+
+
+
+
+(b)
+
+
+
+
+
+
+
+
+
+(c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Fig. 5 Proposed chopping solution for TDMA neural recording system showing (a) the signal frequency domain representation across various points in the
+ system, (b) the signal time domain representation, and (c) the system block diagram.
+
+open-loop 3-dB BW must pass the up-modulated analog signal
+without   introducing   distortion   or   noise   exceeding                   a   few
+microvolts [13]. These requirements create a tradeoff between
+the required input diff-pair size; the smaller the device sizes the
+higher achieved BW, but also the higher the 1/f noise corner
+frequency. In TDMA systems, time multiplexing spreads signal
+content of all channels from DC to ~860 kHz, which is 90% of
+the energy bandwidth of the signal spectrum for N=16 channels.
+This    makes       the    worst-corner        amplifier      1/f    noise   corner
+frequency increase: for example, up to 290 kHz in this work,
+which is ~33% of the modulated signal bandwidth of ~860 kHz.
+To break this tradeoff, the 1/f noise can be attenuated by using
+chopper-stabilization,           which    up-modulates    the               already-
+multiplexed       neural  signals  to  a  band  higher  than  the  flicker
+corner frequency.
+  In this work, the proposed system utilizes a chopper placed
+after the analog multiplexer. Fig. 5 demonstrates the chopper-
+stabilized neural recording system block diagram, showing how
+the  (already  multiplexed)           input  signal     that  is   multiplexed       at
+frequency fS = 320 kHz is up modulated by an analog chopper
+with  non-overlapping  clock  generated  by  the  on-chip  DSP                               Fig. 6 (a) Proposed impedance booster module, with (b) timing diagram.
+module  of      frequency       fChop  =  1.28  MHz.         This  translates  the
+
+
+
+         Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                        © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

@@ -1,0 +1,48 @@
+dimensionality of the spatial representation. The final feature map was flattened, yielding a 128‐
+dimensional vector that served as input to the subsequent Transformer.
+Across dot locations, the flattened CNN outputs were reorganized into a sequence of feature
+vectors corresponding to consecutive time windows (each ~50 ms), which were then passed into a
+Transformer with two encoder layers. Each layer used multi‐head self‐attention (4 heads;
+embedding dimension = 128), followed by a position-wise feedforward layer (hidden dimension
+= 256). A dropout rate of 0.1 was applied to both attention weights and feedforward activations to
+prevent overfitting. The Transformer thus captured potential long‐range temporal dependencies in
+wave propagation. We employed sinusoidal positional encodings114 to preserve the ordering of
+time windows.
+We allocated 80% of the trials to training, 10% to validation (for hyperparameter tuning and early
+stopping), and 10% to hold‐out testing. Network weights were optimized via the Adam optimizer
+(α = 0.001, β1 = 0.9, β2 = 0.999) with a batch size of 32. We trained for a maximum of 1000 epochs,
+applying early stopping if validation loss did not improve over 10 consecutive epochs.
+Loss function and multi‐task decoding.
+
+To facilitate training of the network on the dynamic stimulus detection task we used a common
+hybrid approach for multi-task learning115. The final output layer branches into two heads: (1) a
+classification head, predicting discrete stimulus locations (e.g., four classes for four possible
+stimulus sites), and (2) a regression head, estimating continuous coordinates in the stimulation
+array. The overall loss was:
+                                                𝐿ൌ𝐿஼ா൅𝜆𝐿ெௌா
+ where 𝐿஼ா is cross‐entropy loss for classification, 𝐿ெௌா is mean‐squared error between predicted
+and actual coordinates, and 𝜆 was set to 0.5 to balance the two objectives (tuned using grid search).
+During the initial training phase, noise regularization was implemented by adding 5% additional
+data augmentation to the input, a method used for enhancing model generalization in the context
+of time series prediction116 and image processing117.
+Temporal shuffling control: To test the impact of temporal structure on decoding, we randomly
+permuted the order of presented dot time windows within trials while preserving spatial features.
+The effect of this shuffling was to specifically disrupt temporal correlations in neural signals
+between consecutive dot presentations. We repeated this procedure across all test trials 10 times
+to assess variability and ensure reliable performance estimates. A two-sided paired t-test (p = 4.6e-
+2) was used to evaluate differences between the original and shuffled conditions. The number of
+iterations was chosen based on empirical stability in decoding performance across runs.
+Deep neural network models trained on natural images
+
+The deep learning based neural predictive model consisted of two main parts: A pretrained core
+that computes image embeddings (i.e. a shared feature map given an input image) and a readout
+that maps these features to the neuronal responses of a single recording channel. As a core, we
+selected ConvNext-v2-tiny 53, a recently published convolutional neural network model trained on
+ImageNet 50. We used the original neural network weights with fine-tuning in a two-step training
+process. As a readout, we fit an attention readout, described in detail elsewhere 54, to transform the
+core feature map into a scalar neural response for each recording channel.
+In brief, the readout first adds a fixed positional embedding to the image embeddings with
+subsequent normalization through LayerNorm. Then, key and value embeddings are extracted by
+position-wise linear projections, both of which have parameters shared across all recording
+
+                                                          26

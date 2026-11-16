@@ -1,0 +1,88 @@
+                          This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+FATHY  et al.:  DIGITALLY ASSISTED MULTIPLEXED NEURAL RECORDING SYSTEM                                                                                                                                          9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                           Fig. 10.    ADC PSD with a sinusoid full-scale  input signal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 8.    Proposed system  IC chip microphotograph.
+
+
+
+                                                                                           Fig. 11.    ADC DNL and INL measurements.
+
+
+
+
+
+
+
+
+
+Fig. 9.    IC power and area  breakdown  for 16 channels.
+
+54.06 μW for all  16 channels; Fig. 9 summarizes the power
+and area breakdown for each module.
+   The  measured input impedance  ZIN  at  100 Hz  is  28  M/Omega1,
+which   is   very   close   to   the   expected   worst   case   input
+impedance.  The  lowest  measured  common  mode  rejection
+ratio  (CMRR)  and  power  supply  rejection  ratio  (PSRR)  are
+66 and 79 dB, respectively. This is measured while  injecting                              Fig. 12.    Normalized magnitude plot of the closed-loop system AP and LFP
+±50 mV slowly varying offsets to all channels and observing                                paths  for 16 channels.
+CH6  and  CH14  for  the  ripple  amplitude.  Fig.  10  shows  the
+power spectral density (PSD) of the ADC sampled at 320 kHz                                 resulting in ENOB of 8.04 bits. The ADC third harmonic dis-
+with a direct injected signal of 400 mVPP  at 47.969 kHz by a                              tortion (THD) is 0.146%. Fig. 11 shows the measured integral
+Stanford  Research  System  (SRS)  DS360  function  generator.                             non-linearity (INL) and differential non-linearity (DNL); some
+For  the  standalone  ADC,  the  measured  SNR  is  50.79  dB                              codes  cross ±0.5  LSB  due  to  mismatches  of  the  small-area
+and  signal-to-noise  and  distortion  ratio  (SNDR)  is  50.16  dB                        nature  of  the  overall  parasitic  capacitors  DAC  of  the  ADC.
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

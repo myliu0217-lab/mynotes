@@ -1,0 +1,54 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+
+    coupons like that shown in panel O, where the letter corresponds to the column code and the number corresponds to the channel
+    length.
+              Scanning electron microscopy of the age-accelerated samples revealed surface
+    contamination from the phosphate buffer and degraded thermocouple (Supplementary Fig. 4),
+    but no visible delamination, cracking, pinhole defect propagation, or metal corrosion of the
+    encapsulated traces was observed. The ALD alumina layers remained intact with no
+    morphological changes evident, and the platinum dummy contacts from Pattern B (shown in Fig.
+    2A) appeared in good condition, with only occasional slight peeling at the edges of the contacts
+    which was likely a result of surface scratching caused by intermittent handling during the study                       .
+    The demonstrated longevity establishes that thin             -film encapsulation, when properly engineered
+    with high-quality conformal multi-layer ceramic/polymer stacks, can provide hermeticity at a
+    level of robustness appropriate for implantable electronics applications while maintaining the
+    mechanical compliance essential for highly scalable neural interfaces.
+
+              Notably, achieving this robust encapsulation necessitated process temperatures                     up to
+    ~200°C during the final alumina passivation and polyimide curing steps                     (included thin film
+    encapsulation material and processing            characteristics are summarized in Supplementary Table
+    1). This thermal budget initially caused significant instabilities in              the TFT characteristics,
+    motivating comprehensive device-level optimizations. We discovered that titanium source/drain
+    contacts, while often used in industry because it provides a suitable work function alignment to
+    IGZO, acted as oxygen and hydrogen getters during thermal processing, notably extracting
+    oxygen from the IGZO channel and creating threshold voltage shifts by increasing oxygen
+    vacancy density (Supplementary Fig. 10, 11). The estimated Gibbs free energy of formation
+    (Supplementary Table 2) for TiO2 (-445 kJ/mol O) compared to that of IGZO (-306 kJ/mol O)
+    thermodynamically favored this oxygen redistribution, resulting in unacceptable threshold
+    voltage shifts during thermal processing. Substituting chromium contacts, which are expected to
+    exhibit lower oxygen diffusivity and a smaller energetic driving force for oxidation (-351 kJ/mol
+    O) dramatically improved transfer curve stability when compared against on the same wafer
+    undergoing identical processing (Fig. 2 K). The chromium contacts also exhibited substantially
+    reduced channel-length dependence on threshold voltage shift compared to titanium (Fig. 2L),
+    which we attribute to a lower lateral diffusion of oxygen vacancies into the channel from the
+    contacts during thermal annealing steps           .
+
+              We also tested various plasma treatments to the IGZO contacts prior to source and drain
+    metal deposition (Fig. 2M-N & Supplementary Fig. 12-14) and found that the fluorine plasma
+    treatment chemistry resulted in the best stability, lowest gate-bias dependent contact resistance
+    and estimated contact barrier height, and threshold voltages closest to zero. We attribute these
+    desirable traits to the fluorine atoms substituting for oxygen vacancies and forming more stable
+    bonds compared to mobile ions such as hydrogen while still providing a free electron donor to
+    the IGZO film.
+
+              Beyond fundamental device fabrication optimizations, we also explored several layouts
+    and device architectures to balance current drive, parasitic capacitance, and routing density,
+    some of which are shown in Fig. 2O (additional details in Supplementary Fig. 15-18). The multi-
+    tap contacts used in Columns A and B of the test coupons shown in Fig. 2O aimed to reduce
+    overlap area by 50% while maintaining mostly uniform fields due to contact current crowding
+    and resulting in >70% of the effective channel width, demonstrating a pseudo-self-aligned TFT

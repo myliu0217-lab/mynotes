@@ -1,0 +1,53 @@
+Figure             S1.       Optical  lithography-based  microfabrication                               process  of     the       vOECT
+array.            (1)      Deposition of the      first        layer         gold        as    source            electrodes                 via      photolithography
+and       lift-off            process.              (2)      Deposition                   of    the      intermediate                     insulating                 parylene-C                   layer         and
+patterning                  of      the  second             metal           layer          as      drain          electrodes.                   (3)       Deposition                    of  the
+capsulation                    and        sacrificial                  parylene-C                    layers.  (4)       Reactive  ion       etching              step         with
+photoresist                   etch        mask  to  define  channel.               (5)      Deposition                   of     PEDOT:PSS                      using          spin
+coating. (6) Peel-off of the sacrificial parylene-C layer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                           2

@@ -1,0 +1,84 @@
+                          This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+JAIN et al.: 2.5–20 kS/s IN-PIXEL DIRECT DIGITIZATION ECoG FRONT END                                                                                                                                                         13
+
+
+                                Eric  Fogleman  (Senior  Member,  IEEE)  received                                                      Corentin Pochet (Member, IEEE) received the B.S.
+                                the  B.S.  degree  in  electrical  engineering  from  the                                              degree  in  electrical  engineering  from  the  Univer-
+                                University  of  Maryland,  College  Park,  MD,  USA,                                                   sité  Libre  de  Brussels  (ULB),  Brussels,  Belgium,
+                                in 1990, and the M.S. and Ph.D. degrees in electrical                                                  in  2014,  the  M.E.  degree  in  electrical  engineering
+                                and  computer  engineering  from  the  University  of                                                  from the Vrije Universiteit Brussel (VUB), Brussels,
+                                California  at  San  Diego  (UCSD),  La  Jolla,  CA,                                                   in 2016, and the Ph.D. degree in electrical and com-
+                                USA, in 1998 and 2000, respectively.                                                                   puter engineering from the University of California
+                                  From 2006 to 2020, he was with the RF IC Design                                                      at San Diego (UCSD), La Jolla, CA, USA, in 2022.
+                                Team,  MaxLinear,  Carlsbad,  CA,  USA,  and  led                                                         He  joined  Apple  Inc.,  Munich,  Germany,  as  an
+                                teams developing communication ICs for television                                                      Analog   Designer.   His   research   interests   include
+                                receivers,  cable  modems,  MoCA,  and  high-speed                                                     designing  low-power  analog  front-end  circuits  and
+serial interfaces. From 2021 to 2024, he was a Visiting Scholar with Integrated                        time-based  analog-to-digital  converters  for  the  Internet  of  Things,  wearable,
+Electronics  and  Biointerfaces  Laboratory,  UCSD.  He  is  currently  a  Senior                      and biomedical applications.
+Engineering Director of Analog, RF, Mixed Signal Design with Efabless, San                               Dr.  Pochet  was  a  recipient  of  Belgian  American  Education  Foundation
+Jose, CA, USA.                                                                                         (B.A.E.F)  Henri  Benedictus  Fellowship  in  2016  and  the  SSCS  Predoctoral
+                                                                                                       Achievement Award in 2022. He has served as a reviewer for IEEE TRANS-
+                                                                                                       ACTIONS  ON  CIRCUITS  AND  SYSTEMS—I:  REGULAR  PAPERS  and  IEEE
+                                                                                                       TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS.
+
+
+
+
+                                Paul   Botros   received   the   B.S.   degree   (summa
+                                cum  laude)  in  computer  science  and  neuroscience
+                                from  the  University  of  California  at  Los  Angeles,                                               Andrew  Bourhis  received  the  B.S.  degree  in  elec-
+                                Los  Angeles,  CA,  USA,  in  2013,  and  the  Ph.D.                                                   trical  engineering  from  Tufts  University,  Medford,
+                                degree in electrical and computer engineering from                                                     MA,  USA,  and  the  M.S.  degree  in  electrical  engi-
+                                the  University  of  California  at  Berkeley,  Berkeley,                                              neering  from  the  University  of  California  at  San
+                                CA, USA, in 2022.                                                                                      Diego, La Jolla, CA, USA, with a focus on medical
+                                  He  was  a  Post-Doctoral  Researcher  at  University                                                devices  and  systems.  He  is  currently  pursuing  the
+                                of  California  at  San  Diego,  La  Jolla,  CA,  USA,                                                 Ph.D.  degree  with  the  Integrated  Electronics  and
+                                in 2023. He is currently working with Chronosphere,                                                    Biointerfaces Laboratory, University of California at
+                                New York, NY, USA.                                                                                     San Diego.
+                                                                                                                                          His  research  focuses  on  designing  circuits  and
+                                                                                                                                       systems  for  high  channel  count  neural  interfaces.
+                                                                                                       In  particular,  he  is  interested  in  addressing  the  interconnect  bottleneck  that
+                                                                                                       has held back neural interface channel counts for decades. He has worked on
+                                                                                                       translational  systems  used  in  the  clinic.  He  is  now  focused  on  fabricating
+                                                                                                       next-generation  systems  that  employ  active  thin  film  circuits  on  flexible
+                                Ritwik  Vatsyayan  received  the  B.Tech.  degree  in                  substrates for use in animal models.
+                                electronics  and  communications  engineering  from
+                                Indian Institute of Technology Guwahati, Guwahati,
+                                India,  and  the  M.S.  degree  in  medical  devices  and
+                                systems  track  with  the  Department  of  Electrical
+                                Engineering, University of California at San Diego,
+                                La Jolla, CA, USA, where he is currently pursuing                                                      Zhaoyi   (Louis)   Liu   (Student   Member,   IEEE)
+                                the Ph.D. degree with the Integrated Electronics and                                                   received the B.S. degree (summa cum laude) in elec-
+                                Biointerfaces Laboratory.                                                                              trical engineering from the University of California
+                                  His current research is focused on developing safe                                                   at  Los  Angeles,  Los  Angeles,  CA,  USA,  in  2021.
+                                stimulation  paradigms  to  investigate  neural  tissue                                                He is currently pursuing the Ph.D. degree in electri-
+using high channel count, clinically translatable electrodes capable of simul-                                                         cal engineering with the University of California at
+taneous recording, and stimulation at ultrahigh resolutions.                                                                           San Diego, La Jolla, CA, USA.
+                                                                                                                                          His  research  interests  include  low-power,  mix-
+                                                                                                                                       signal   circuits   for   biomedical,   and   RF   sensing
+                                                                                                                                       applications.
+
+
+
+                                Asish Koruprolu (Student Member, IEEE) received
+                                the   B.Tech.   degree   in   electronics   and   electrical
+                                communication engineering from Indian Institute of
+                                Technology at Kharagpur, Kharagpur, India, in 2018,
+                                and  the  M.S.  degree  in  electrical  engineering  from                                              Suhas Chethan received the B.E. degree in electron-
+                                Stanford  University,  Stanford,  CA,  USA,  in  2020.                                                 ics and communication engineering from Bangalore
+                                He is currently pursuing the Ph.D. degree in electri-                                                  University, Bengaluru, India, in 2018, and the M.S.
+                                cal  and  computer  engineering  with  the  University                                                 in  electrical  and  computer  engineering  from  the
+                                of   California   at   San   Diego   (UCSD),   La   Jolla,                                             University   of   California   at   San   Diego   (UCSD),
+                                CA, USA.                                                                                               La Jolla, CA, USA, in 2024.
+                                  He  was  a  Lead  Systems  Engineer  at  iota  Bio-                                                     He    was    an    Analog    Layout    Engineer    with
+sciences, Inc., Alameda, CA, USA, from 2020 to 2021, designing miniaturized                                                            Texas  Instruments,  Bengaluru,  from  2018  to  2022,
+ultrasound-powered  implantables.  He  was  a  health  Technology  Research                                                            an  RF/mmWave  IC  Design  Intern  with  MediaTek,
+Intern  at  Apple  Inc.,  Sunnyvale,  CA,  USA,  in  2024.  His  research  interests                                                   Austin,  TX,  USA,  in  2023,  and  an  Analog  Design
+include designing low-power systems for wearable and implantable biomed-                                                               Intern  with  Intel,  Santa  Clara,  CA,  USA,  in  2024.
+ical  applications,  front-end  circuits  for  sensor  interfaces,  and  point-of-care                 He is currently a senior mixed-signal design engineer in the high-speed data
+diagnostic devices.                                                                                    converters team at Analog Devices, Wilmington, MA, USA.
+
+
+         Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

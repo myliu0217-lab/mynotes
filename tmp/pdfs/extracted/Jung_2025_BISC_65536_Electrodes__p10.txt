@@ -1,0 +1,70 @@
+network to assess the statistical robustness of dot-specific travelling                           Each image was repeated 40 times and was never shown to the model
+waves over time and compared the decoding accuracy across different                               during training.
+recording resolutions.                                                                                  As a measure of predictive performance (Extended Data Fig. 2c),
+      Using the sequence of γ-band travelling waves observed in each                              we computed the correlation between the model prediction and the
+trial, our model could reliably decode the coordinates of individual                              averaged neuronal response to repeated presentations of the same
+dots, with the highest accuracy for dots near the centre of the visual                            test image, which resulted in 0.69 ± 0.14 (mean ± s.d.) across all the
+field (Fig. 6d). The decoding accuracy is significantly higher with                               selected channels. This is comparable or better than the performance
+full-resolution BISC recordings compared with lower-resolution                                    of similar predictive models of isolated single neurons in macaque V1
+recordings (Fig. 6e, full resolution versus quarter resolution: two-sided                         (ref. 51). Additionally, we computed the explainable variance for each
+t-test,   t(285) = 2.7,   P = 7.7 × 10     −3).                                                   channel, which measures the response reliability to natural images.
+      To assess the temporal dynamics of travelling waves, we next                                This metric is defined as the ratio of response variance across repeated
+tested whether dot decoding depends not only on the current travelling                            presentations of the same image over the response variance across
+wave pattern but also on the recent history of waves and stimuli. This                            all images (Extended Data Fig. 2c). We only selected channels with an
+hypothesis was tested by shuffling the sequence of past dot presenta-                             explainable variance larger than 0.1. Across all channels, we obtained
+tions and the corresponding wave patterns, and then using the model                               an average explainable variance of 0.24 ± 0.09 (mean ± s.d.), slightly
+to decode the dot location from waves immediately following this                                  below the values of 0.31 and 0.32 that were reported for isolated
+shuffled sequence. The shuffling led to a significant drop in decoding                            single neurons in macaque V1 and V4, respectively51,55. The spatial
+accuracy (Fig. 6e, two sided t-test,                                               t(220) = 2.0,   P = 4.6 × 10     −2), indicat-distribution of the model performance (Extended Data Fig. 2d) and
+ing that the recorded travelling waves reflect both current stimuli and                           response reliability (Extended Data Fig. 2e) indicate that channels
+recent histories of stimuli and cortical activity49, which is extracted by                        closer to V1 exhibit higher model performance and response relia-
+the CNN and transformer network.                                                                  bility compared with those in higher visual areas. We then visualize
+      Last, we examined the nonlinear response characteristics of                                 the feature selectivity of each channel by using our predictive model
+BISC recording channels when exposed to coloured natural images                                   (digital twin; Extended Data Fig. 2f). Traditionally, parametric stimuli
+(Extended Data Fig. 2a). In this paradigm, the fixating monkey was                                or hand-designed images are used to investigate the visual feature
+shown a large number of coloured natural images from the ImageNet                                 selectivity of single neurons or populations, with the strongest-evoking
+database50. In each of the five recording sessions with sparse record-                            stimuli used to determine their tuning functions.
+ing over the entire array of 16 × 16 channels, 10,000–12,000 unique                                     More recently, digital twin models have been used to synthesize
+natural images were presented in blocks of 15 images, with each image                             optimal stimuli by iteratively optimizing images to maximize the
+displayed for 120 ms (ref. 51   ). The images (10° × 10°) were centred at a                       response of a neuron or channel. These optimized stimuli, referred to as
+location 3° to the right and below the fixation spot. We then applied                             maximally exciting images (MEIs), can be thought of as nonlinear RFs56
+zero-phase component analysis whitening across all the channels                                   that reveal underlying neural functions such as tuning characteristics
+and band-pass filtered the signal between 30 and 90 Hz (tenth-order                               in mouse V1 (refs. 56–              58), as well as monkey V1 (ref. 57  ) and V4 (refs.
+Butterworth, zero phase), followed by squaring and averaging                                      51,59,60). Here we show the MEIs for individual channels to demonstrate
+the signal from 40 to 160 ms after image onset. Through these                                     their visual feature tuning. Remarkably, the MEIs (Extended Data Fig. 2g)
+processing steps, we derived a scalar magnitude from the γ band of                                reveal a hierarchy of complexity from area V1 (top left) to V2 (centre)
+each channel, known to reflect the spiking activity of the adjacent                               and V4 (bottom right). As expected from MEIs of single V1 neurons57,
+neuronal population52, in response to each natural image. We then                                 V1 is characterized with oriented Gabor filters. V2 and V4 exhibit more
+fit a deep neural network model (Extended Data Fig. 2b) to pairs of                               complex features with dominant colour opponency (also observed
+natural images and γ-band responses to learn the stimulus-response                                in ref. 59  ). These results demonstrate that the digital twin model can
+mapping, that is, a digital twin of each recorded channel, enabling the                           capture detailed, nonlinear visual response characteristics of the local
+model to predict the activity of any channel for an arbitrary stimulus.                           neuronal population for each recorded channel.
+Then, we selected and fine-tuned an ImageNet-pretrained CNN model53
+as a shared feature space, with learned channel-specific weights, to                              Conclusions
+predict the individual channel responses54. Next, we tested the accu-                             We have developed a BCI system that can be implanted entirely subdur-
+racy of our digital twin model on a held-out set of 75 natural images.                            ally. Like traditional μECoG arrays, it relies on recording and stimulation
+
+
+Fig. 6 | Spatially dense BISC recordings over visual cortex capture complex                       space for 100% sampling. Separation decreases for spatial sampling at lower
+travelling waves that encode the locations of viewed dot stimuli.                                          a, (i) Mean resolutions. The separability of dot locations is quantified using the silhouette
+strength of travelling waves at each of the 16 dense recordings taken from subsets                score, with higher scores reflecting greater separability at a higher spatial
+of the BISC array during the dot-mapping experiment. These 16 recordings are                      resolution (two-sided t                 -test, t(515) = 4.8, ***P          = 2.1 × 10−6). Each bar indicates
+also presented in Fig. 5g; the red line indicates the V1–V2 boundary identified                   the mean (n                                 = 279), and the error bars indicate the standard error of the mean.
+from the retinotopic map. Recordings over V1 show higher wave strength                            c, Decoding the dot locations from the travelling waves at the locations shown
+compared with those over V2, consistent with the enhanced functional role of                      in a using a hybrid CNN-transformer model. The predicted x          and y               coordinates
+V1 compared with V2 in processing simple visual features such as dot locations.                   closely match the true dot locations, as shown in the accuracy trace plots.
+(ii) Each dot stimulus location evokes a distinct pattern of travelling waves.                    d, A heat map displays the prediction accuracy for individual dot locations,
+Travelling wave topographies captured by 1,024-channel, dense recordings                          illustrating the decoding variability across the visual field. Dots presented closer
+taken from the top-left subset of the array shown in a                 (i) (red box) for each of  to the centre of the visual field (dark red) exhibit a higher decoding accuracy,
+the 5 example dot locations. Travelling waves are estimated from the gradient                     matching the RF maps. e                                                          , Decoding accuracy as a function of the spatial sampling
+of the phase of oscillations in the γ band (30–90 Hz) in the 40–90-ms interval                    of the BISC channels, showing the importance of the BISC chip’s high-density
+relative to the dot onset; this interval was chosen as it evokes the maximum                      recordings for capturing spatially precise features of travelling waves (full
+neural response (Fig. 5c                   ). Note the spatial complexity of the travelling waves, resolution versus quarter resolution: two-sided t                 -test, t(285) = 2.7, **P        = 7.7 × 10−3).
+with even adjacent dots evoking spatially distinct patterns. b                , Separation of     Temporally shuffled controls confirm the temporal dependencies of these
+the travelling wave patterns between different dot locations visualized using                     high-resolution travelling waves, as shuffling of the order between consecutive
+UMAP. Low-dimensional UMAP embeddings are shown for four different channel                        stimuli reduces the prediction accuracy for individual dots (two-sided t                 -test,
+resolutions as defined by the average electrode pitch. Colours indicate the dot                   t(219) = 2.0, *P     = 4.6 × 10−2). Each bar indicates the mean (n                                        = 144), and the error
+stimulus locations. Note that the dot locations are clearly separated in UMAP                     bars indicate the standard error of the mean across cross-validation folds.
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                              1281

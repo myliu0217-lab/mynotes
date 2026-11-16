@@ -1,0 +1,44 @@
+Supplementary Fig. 15. Bench-top in vitro characterization. (a) Description of the in vitro
+characterization setup. All measurements were taken wirelessly, with 1× phosphate buffered saline
+(PBS) electrolyte and Ag/AgCl electrodes. Ag/AgCl electrodes were either driven by an arbitrary
+waveform generator (for recording) or connected to a transimpedance amplifier (for stimulation).
+(b) Frequency response across different gain configurations from a representative 16×16
+recording. This plot is same as Extended Data Fig. 1b but reproduced here for comparison with
+(c) (flat band gains: 53.7 ± 0.20, 57.2 ± 0.21, 60.7 ± 0.20, 64.2 ± 0.19 dB, values: mean ± SD. n =
+255, 255, 245, 235). (c) Frequency response across different gain configurations from a
+representative 32×32 recording (flat band gains: 53.7 ± 0.28, 57.2 ± 0.21, 60.7 ± 0.39, 64.2 ± 0.29
+dB, values: mean ± SD. n = 1012, 954, 919, 718). (d) Frequency response across different high-
+pass (HP) filter configurations from a representative 16×16 recording. This plot is similar to
+Extended Data Fig. 1d but measured with highest PGA gain configuration (3-dB corner: 6.20 ±
+2.25, 14.24 ± 2.35, 54.42 ± 1.99 Hz, values: mean ± SD. n = 150, 227, 250). (e) Frequency response
+across different high-pass (HP) filter configurations from a representative 32×32 recording (3-dB
+corner: 1.41 ± 2.63, 5.16 ± 1.88, 22.10 ± 1.42 Hz, values: mean ± SD. n = 299, 727, 969). (f)
+Representative example of amplitude controlled cathodic-first stimulation (amplitudes: 160, 320,
+480, 640, 800, 960, 1120 μA). (g) Representative example of pulse width controlled anodic-first
+stimulation (pulse widths: T, 2T,…,15T where T = 23.04 μs). Error bars in (b) – (e) indicate SE.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         42

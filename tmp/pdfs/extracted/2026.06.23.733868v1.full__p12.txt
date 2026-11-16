@@ -1,0 +1,25 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    sealant, and Gelfoam (Supplementary Fig. 29-30). A critical design feature enabling chronic
+    implant success was the implementation of pseudo-resistor-based bias stabilization and ESD
+    protection. Between recording sessions, all array terminals were electrically shorted via a
+    removable connector shunt, preventing static charge accumulation across the gate dielectrics - a
+    failure mode we identified during            earlier pilot studies when low-humidity vivarium conditions
+    generated substantial electrostatic fields within the insulating cages                 .
+              Electrochemical impedance spectroscopy of                 a passive reference electrode         (SEM image
+    seen in Fig. 4G) on the array are reported in Fig. 4K and Supplementary Fig. 31 to show a
+    gradual impedance increase over the month                -long study (from ~30 kΩ to ~60 kΩ at 1kHz),
+    consistent with expected fibrotic encapsulation of the epidural implant.                     Critically, the insulation
+    impedance of a dedicated encapsulated test pattern                 (a similar pattern to those shown in Fig. 2A-
+    B) remained capacitive, as  predicted by our accelerated aging studies. Furthermore, the pixel
+    performance was assessed through calculated kernel densities of transconductance efficiency
+    across all recordings of the chronic study (Supplementary Fig. 32, 33), indicating similar sensing
+    TFT operating regimes were achievable throughout the experiment. We attribute this in part to
+    the stability of our TFTs owing to the optimizations in fabrication processing conditions
+    discussed above, along with our thin film encapsulation strategy which incorporated high-density
+    ALD-deposited alumina that appeared to effectively protect the oxide TFTs from environmental
+    aggressors.

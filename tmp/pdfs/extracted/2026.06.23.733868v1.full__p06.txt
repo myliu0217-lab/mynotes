@@ -1,0 +1,18 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    encapsulated metal test patterns (Fig. 2A) were monitored via electrochemical impedance
+    spectroscopy throughout the accelerated aging study (Fig. 2G). As shown in Fig. 2H, the
+    impedance magnitude of the insulation at 1kHz declined gradually over the year-long study.
+    Based on fitting a linear degradation model to this data and extrapolating to a failure threshold of
+    one order of magnitude below the initial 1kHz impedance magnitude, we project a lifetime of
+    ~15.4 years at the 50°C and +5V stress conditions. Applying an Arrhenius acceleration factor of
+    ~2.5x yields an estimated operational lifetime exceeding ~38.5 years - far surpassing the
+    requirements for clinical semi-chronic neural interfaces and demonstrating a clear translational
+    pathway for the proposed thin film encapsulation methodology.
+
+
+

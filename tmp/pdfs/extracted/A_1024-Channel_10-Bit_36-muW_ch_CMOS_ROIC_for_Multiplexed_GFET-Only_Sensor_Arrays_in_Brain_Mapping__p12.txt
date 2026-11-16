@@ -1,0 +1,89 @@
+CISNEROS-FERNÁNDEZ         et al.: 1024-CHANNEL 10-BIT 36-µW/CH CMOS ROIC FOR MULTIPLEXED GFET-ONLY SENSOR ARRAYS                                                       871
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 21.     (a) Waveforms and (b) distribution measured by the ROIC headstage with a             16  × 32  GFET array in saline solution under 1-mVp          10-Hz uniform
+stimulation; (c) GFET transconductance distribution from extracted maps; (d) equivalent input amplitude distribution and (e) channel noise after              calibration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 22.     Input peak values measured by the ROIC headstage with a        32 ×  32 GFET array on agar substrate under 100-µAp         10-Hz bipolar stimulation.
+
+(SFDR) values around 90 dB, while the practical ENOB ﬁgure                                this purpose, the battery-operated generator g.SIGgen from g.tec
+is 10-bit due to the transfer curve dead zones caused by non-exact                        medical  engineering  GmbH,  Austria,  has  been  employed  to
+bridge capacitors.                                                                        apply an harmonic signal of 1 mVp                and 10 Hz at the reference
+   The  second  ROIC  tests  incorporate  a                  16  ×  32    array  of       electrode, so all recording sites of the GFET probe are stimulated
+solution-gated GFET sensors in saline solution for the validation                         simultaneously and homogeneously. Although this GFET array
+of the calibration methodology proposed in Section VIII. For                              is half the scale of a 1024-channel probe, it already uses the
+
+
+
+          Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

@@ -1,0 +1,46 @@
+Supplementary Discussion S9. NHP visual cortex recording experimental procedure
+Surgical procedures
+All experimental procedures were approved by the Baylor College of Medicine Institutional
+Animal Care and Use Committee (protocol AN-4367). Here, all behavioral and
+electrophysiological data were obtained from a healthy, male rhesus macaque (Macaca mulatta)
+monkey aged 19 years and weighing 13.85 kg during the study period. The animal was housed
+individually in a large room adjacent to the training facility, along with around ten other monkeys,
+permitting rich visual, olfactory, and auditory interactions, on a 12-hour light/dark cycle. Regular
+veterinary care and monitoring were provided.
+All surgical procedures on monkeys were conducted under general anesthesia, adhering to standard
+aseptic protocols. Prior to surgery, the monkey had been fitted with a custom titanium headpost,
+which secured the head in a fixed position to facilitate accurate eye movement tracking. Pre-
+medication involved administering atropine (0.05 mg/kg) followed by sedation using a
+combination of ketamine (10 mg/kg) and dexmedetomidine (0.015 mg/kg). Anesthesia during
+surgery was maintained with isoflurane, adjusted between 0.5% and 2% as necessary.
+The surgical site was prepared in a stereotaxic frame, and the implantation area was meticulously
+cleaned with alternating applications of betadine and alcohol prior to the initial incision. Based on
+precise stereotaxic coordinates targeting the primary visual cortex and higher visual areas V2 and
+V4, an incision was made through the epidermis to expose the underlying muscle. Large, curved
+hemostats were applied to clamp the muscle tissue above the intended removal site to enable the
+relay station headstage to be positioned on top of the skin close to the BISC implant (1.5 to 2 cm
+distance between top of the skin and the implant). Following 15 seconds of clamping, the targeted
+muscle was excised using a #10 blade scalpel.
+A craniotomy measuring 2.5 cm by 2.3 cm was performed to access the underlying brain area for
+the BISC device implantation. The removed bone was preserved in sterile saline. Prior to dura
+mater incision, the animal was hyperventilated to maintain CO2 levels between 25-30 mm Hg. A
+1.8 mm straight incision was made in the dura mater close to the posterior ridge of the craniotomy
+to create a pocket for the BISC device, which was then carefully slid under the dura with the
+electrode side facing the brain surface. A commercially available deep brain stimulation guide was
+used to accurately slide and position the BISC chip under the dura. The implanted device's
+functionality was confirmed through successful communications with the headstage.
+After testing the communication between the headstage and the chip, the dura was closed using 3-
+0 polyglycolic acid suture, and the previously removed bone flap was repositioned. Burr holes
+were drilled into both the bone flap and adjacent skull, and suture was used to secure the bone in
+place, promoting a flat, well-aligned healing surface. The overlying skin was then repositioned,
+and the device functionality was confirmed once more before suturing the skin closed with 3-0
+braided vicryl sutures.
+Post-operatively, the animal was weaned off isoflurane and closely monitored during recovery by
+both lab and veterinary staff at Baylor College of Medicine. Analgesics were administered for up
+to seven days post-surgery to manage pain.
+The relatively straightforward surgical procedure and minimal invasiveness of the BISC chip
+enable us to replace the BISC chip after months by following the same procedure as above:
+recutting the dura over the old incision, removing the chip with graphite forceps, and then using
+
+
+                                                         20

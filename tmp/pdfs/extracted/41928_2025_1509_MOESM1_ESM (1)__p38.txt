@@ -1,0 +1,43 @@
+Supplementary Fig. 10. Design and characterization of the wireless power transfer circuit.
+(a) Key on-chip circuit blocks: active rectifier (i), switch capacitor DC-DC converter (ii), +1.5V
+regulator (iii). (b) Measured DC-DC line regulation of the key blocks: -1.5V regulator (i), switch
+capacitor DC-DC converter (ii), +1.5V regulator (iii). HVDD denotes the rectifier DC output, and
+HVSS denotes DC-DC converter output.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                   37

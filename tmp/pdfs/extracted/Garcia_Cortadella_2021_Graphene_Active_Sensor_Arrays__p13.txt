@@ -1,0 +1,86 @@
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w                                           ARTICLE
+
+
+
+Subsequently, the transistors were insulated with a 3-µm-thick photodeﬁnable SU-                        skin removed to expose the skull but not the temporal muscle. The periosteum was
+8 epoxy photoresist (SU-8 2005 Microchem), keeping uncovered the active area of                         removed using a bone scraper. The skin around the perimeter of the removed tissue
+the transistors channel. The SU-8 photoresist was chosen as insulating material                         was glued to the bone using Vetbond tissue adhesive (3 M, UK). A craniotomy (~4
+because it is photodeﬁnable and because its use in chronic implants has been                            mm x 6 mm) was performed using a high speed surgical micro drill. Lambda was
+previously reported86,87. The use of a photodeﬁnable passivation polymer is                             used as a posterior reference for the craniotomy, which was positioned at least 1
+required in the current graphene technology because etching of the passivation                          mm lateral to the midline, to avoid the sagittal sinus. The drilling region was rinsed
+layer would also etch the underlying graphene channel. The polyimide substrate                          regularly with saline to prevent heat damage. Once the bone around the border of
+was structured in a reactive ion etching process using a thick AZ9260-positive                          the craniotomy was sufﬁciently thin, all bone shavings and other debris were
+photoresist (Clariant) layer as an etching mask. The neural probes were then peeled                     removed using compressed air and the bone ﬂap was gently removed. The cortical
+off from the wafer and placed in a zero insertion force connector to be interfaced                      surface was kept moist using Ringer’s solution. A ﬁne needle with the tip bent at a
+with our custom electronic instrumentation. Finally, the devices were rinsed in                         90° angle was used to gently lift the dura away from the cortical surface and
+ethanol to eliminate remaining resist residues on the graphene channel.                                 another needle was used to create a slit in the dura, carefully positioned to avoid
+                                                                                                        blood vessels. A pocket was created by lifting the dura next to the opening using
+Phase-amplitude coupling evaluation. The signal inversion observed between                              ﬁne forceps and the device was carefully placed on the cortical surface. The dura
+channels in the infra-slow frequency band (0.005–0.05 Hz) was quantitatively                            was then repositioned to hold the device in place. A glass window (UQG Optics,
+evaluated by calculating the probability density of a signal amplitude as a function                    UK) of the appropriate size was positioned to ﬁll the craniotomy and was ﬁxed in
+of its phase with respect to a second signal. In order to estimate the phase between                    place using dental cement (Superbond C&B, Prestige Dental). The animals received
+the two signals the Hilbert transform of each of them was computed using the                            a subcutaneous injection of 0.9% saline (1 ml) and were placed in a recovery cage
+python library scipy and the difference between their phase calculated. A two-                          until the anesthetic had worn off.
+dimensional histogram was then used to express the probability density of the
+signal amplitude in the amplitude-phase space (Fig. 3c).                                                Behavioral testing for biocompatibility evaluation. All animals had pre-surgical
+                                                                                                        behavioral baselines taken at the age of 5 weeks. One week later, all animals were
+Ethical approval and animal handling. The experiments in-vivo were in accor-                            assigned to one of ﬁve groups; graphene electrode, platinum electrode, blank
+dance with the European Union guidelines on protection of vertebrates used for                          electrode, sham surgery (no electrode implanted), or naive (no surgery). Animals
+experimentation (Directive 2010/63/EU of the European Parliament and of the                             were then tested at one or two timepoints—2 weeks, 2 and 6 weeks, or 6 and
+Council of 22 September 2010). Electrophysiological experiments with Long Evans                         12 weeks post-surgery. Timepoints were chosen in line with ISO 10993 deﬁnitions;
+rats were carried out under the German Law for Protection of Animals (TierSchG)                         where prolonged exposure is classiﬁed >24 h but <30 days, and permanent expo-
+and were approved by the local authorities (ROB-55.2-2532.Vet_02-16-170).                               sure is deﬁned as >30 days (ISO 10993-6:2007).
+Experimental procedures using Sprague Dawley rats for biocompatibility assess-                              Prior to the ﬁrst exposure to NOR rats were placed into the empty arenas the
+ment were carried out according to the United Kingdom Animals (Scientiﬁc                                day before testing for 20 min with their cage mates for acclimatization purposes.
+Procedures) Act, 1986 and approved by the Home Ofﬁce and the local Animal                               The square Plexiglas boxes (measuring 52 cm by 52 cm at the base with a height of
+Ethical Review Group, University of Manchester. Rats were kept under standard                           30 cm) had a white ﬂoor and black walls. Animals were acclimatized to the NOR
+conditions (room temperature 22 ± 2 °C, 12:12 h light–dark cycle, lights on at                          arena before experiments began by placing them into the arena for 3 min while
+10:00), with food and water available ad libitum.                                                       there were no objects within the arena. The NOR test comprises a training and
+                                                                                                        testing trial, separated by an inter-trial period. In the training session, two identical
+                                                                                                        objects were placed within the arena, such as two bottles of the same shape and
+Implantation of the graphene-sensor arrays for electrophysiological mea-                                size. In the testing session, two new objects were placed in the arena, one object
+surements. As described previously in Garcia-Cortadella et. al.34, an adult Long                        identical to that during the training session, and one completely new object, such as
+Evans rat, weighing 580 g, was anaesthetized with MMF (Midazolam 2 mg/kg,                               a can. For training sessions, animals were placed in the arena and allowed to
+Medetomidin 0.15 mg/kg, Fentanyl 0.005 mg/kg). 1 h after, MMF induction Iso-                            explore for 3 min, before returning to the home cage. Animals were left in the
+ﬂurane was supplemented at 1% to maintain the rat anaesthetized and Metamizol                           home cage for 30 min, before being placed into the arena for the testing session,
+was given at 110 mg/kg. The posterior-dorsal area of the head was shaved, the skin                      again remaining in the arena to freely explore for 3 min. The time the animal spent
+locally disinfected with Povidone-iodine and subcutaneously inﬁltrated with local                       interacting with the objects was measured in both the training and testing trials. In
+anesthetic Bupivacaine. The skin was then incised and the dorsal skull cleaned                          a healthy animal, the animal should spend more time interacting with the novel
+carefully by blunt dissection. The dried skull was covered with UV-curing adhesive                      object during the testing session. Ideally these tests should not be used >3 times for
+Optibond (Kerr) and a 3D-printed base ring was anchored to skull with screws and                        any animal, and therefore animals in the 12 week implantation group were tested
+Metabond cement (Parkell).                                                                              for NOR at baseline and then at 6 and 12 weeks post implantation. All other
+    Symmetric craniotomies with a maximum width of 5 mm were performed                                  animals were tested at every selected timepoint available before sacriﬁce.
+bilaterally, extending between +2 mm and −8 mm with respect to Bregma in the                                Videos of NOR test trials were manually scored by blinded researchers using an
+anterior-posterior axis. The dura mater was incised and removed within these                            online stopwatch (http://jackrrivers.com/program/). Animals were classed as
+craniotomies. A further craniotomy of 1 × 1 mm was performed over the                                   interacting with an object if their nose or paws touched the object. The amount of
+cerebellum. All craniotomies were covered with prepolymerized                                           time spent interacting with the two objects was analyzed, and a discrimination ratio
+polydimethylsiloxane (PDMS) (Sylgard 184, Dow Corning, USA) with mixing ratio                           was determined by dividing time spent interacting with the novel object with time
+1:10 and sealed with Vetbond (Animal Care Products, USA). The skin margins                              spent interacting with the known object. A discrimination ratio >0.5 indicated an
+around the implant were sutured and the implant closed with a protective cap.                           animal had a preference for the novel object, a sign of normal cognition.
+    After 1 week of recovery the g-SGFET array was implanted under Isoﬂuran
+Anesthesia (5% induction 1% maintenance). After partial opening and sidewards                           Tissue collection and processing. At 2 weeks, 6 weeks or 12 weeks post
+ﬂapping of the polymer covering the right hemisphere the array was placed onto                          implantation of devices, animals were culled using an appropriate method for the
+the pial surface positioned such as to cover the posterior aspect of the right                          type of subsequent analysis. For histology, animals underwent perfusion ﬁxation
+hemisphere (ca −7to−2 mm from bregma). In addition, two Pt-Ir wires were                                using heparinised saline, followed by 4% paraformaldehyde (PFA; Sigma-Aldrich,
+implanted at either side of the g-SGFET array. One proximal to the array, the other                     UK; 441244) in phosphate-buffered saline (Sigma-Aldrich, UK; D8537). Tissue was
+distally on the opposing hemisphere. The polymer cover was ﬂapped back into                             stored a minimum of 24 h in PFA, transferred to a sucrose solution for 48 h, and
+position with the ﬂexible cable of the g-SGFET array leaving through the remaining                      frozen before cryosectioning 40 sections at 25 µm per animal. Cryosections were
+slit. A second PDMS cover was used to cover both the incised polymer and array,                         stained for one of three markers: (i) ionized calcium binding adaptor molecule 1
+anchored to the skull with Vetbond and Evoﬂow (Ivoclar Vivadent, Liechtenstein)                         (Iba1) to quantify microglial population, (ii) terminal deoxynucleotidyl transferase
+and sealed with silicon gel 3-4680 (Dow Corning, USA). Finally, an Ag/AgCl                              dUTP nick-end labeling (TUNEL) staining to assess apoptosis, or (iii) haemotixylin
+electrode was placed in contact with the cerebellum as a reference for the recording                    and eosin (H&E) to assess gross morphology of the brain tissue. Tissue sections
+of neural activity.                                                                                     were blocked in 5% goat serum in PBS with 0.1% triton-X, before incubation with
+                                                                                                        Iba1 primary antibody (1:200, 019-19741, Wako) overnight. A goat anti-rabbit
+Implantation of the graphene, platinum, and PI devices for biocompatibility                             Alexa 594 secondary antibody (1:1000, A11012, Invitrogen) was used for visuali-
+evaluation. Sprague Dawley rats (200–280 g) were anesthetized using isoﬂurane                           zation. For immunoﬂuorescently stained tissue, a DAPI counterstain was per-
+inhalation (typically at 3.5% for induction and between 1.5 and 2.5% for main-                          formed before slides were mounted using ProLong Gold mountant (P10144,
+tenance) in 100% oxygen. The top of the animal’s head was shaved and the animal                         ThermoFisher).
+was positioned within a stereotactic frame with tooth and ear bar ﬁxation. Animals                          For TUNEL staining, the manufacturer’s instructions were followed using a
+were placed on a heated blanket, with a pulse oximeter attached to the foot and a                       DeadEnd™ Colorimetric TUNEL System (G7360, Promega). Following
+rectal probe inserted to monitor body temperature. Viscotears liquid gel (Bausch &                      diaminobenzidine (DAB) visualization of the TUNEL staining, slides were
+Lomb, UK) was applied to the eyes for protection during the procedure. Depth of                         counterstained using methyl green (0.1% w/v aqueous solution, Alfa Aesar). H&E
+anesthesia was conﬁrmed and maintained throughout the surgery via absence of a                          staining was performed as standard, using a 1-min haemotoxylin staining time,
+pedal reﬂex. All experimental animals received a subcutaneous injection of                              followed by an acetic acid rinse, and a 30-s eosin staining time. Slides for both TUNEL
+buprenorphine (0.03 mg/kg). The head was swabbed with iodine and a large ﬂap of                         and H&E staining were mounted using DPX mountant (06522, Sigma-Aldrich).
+
+NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications                                              13

@@ -1,0 +1,68 @@
+precise spatiotemporal patterns at a scale of tens of micrometres. These                        The implementation of the implant followed a custom
+patterns convey information about both current and past stimuli, as                       mixed-signal design flow. The digital circuits, which include the logic
+demonstrated by the decoder performance trained on γ-band travel-                         of the on-chip controller, were designed as finite-state machines in
+ling waves in the primary visual cortex.                                                  SystemVerilog hardware description language. This language was
+     Prior work has measured travelling waves with more widely spaced                     subsequently synthesized into a gate-level description using a logic syn-
+electrodes in scales of centimetres61 or millimetres62, but the BISC is                   thesizer (Genus, Cadence Design Systems), and place and routed using
+able to record them in the primate brain at a much finer spatial reso-                    a physical implementation tool (Innovus, Cadence Design Systems)
+lution. These travelling waves (Fig. 6a) exhibit patterns that roughly                    using TSMC’s 0.13-μm bipolar–CMOS–double-diffused metal–oxide–
+match the spatial scale of orientation pinwheels63 and individual                         semiconductor standard-cell libraries. For the analogue circuit design
+cortical columns64.                                                                       and implementation, schematic capture and layout tools (Virtuoso,
+     By measuring the travelling waves at a much finer spatial scale, the                 Cadence Design Systems) were used. Radio-frequency and micro-
+BISC provides an opportunity to study how they interact with detailed                     wave tools (Ansys Electronics Desktop, Ansys; PathWave Advanced
+cortical gradients. Our demonstration of information decoding at a                        Design System, Keysight Technologies) were used for power coil and
+scale of tens of micrometres in V1 raises the question of whether similar                 antenna designs.
+high-resolution decoding can be achieved in other brain areas relevant                          The BISC implant features 65,536 surface TiN electrodes in its
+for human BCI applications, such as speech or motor. The feasibility                      16,384-pixel array. We provide a basic overview of the design here, with
+of such applications depends on the topological organization of the                       more details provided in Supplementary Discussion 1. BISC allows a
+local circuits and the underlying task demands.                                           programmable selection of 1,024 or 256 simultaneously recording
+     The BISC chip also supports amplitude-controlled, biphasic current                   channels from any of its electrodes with a set of rules.
+stimulation that can be configured to be either cathodic first or anodic first,           •          Every group of two × two electrodes (a pixel) is connected to
+followed by a passive balancing phase (Methods and Supplementary Figs. 8                       an underlying pixel amplifier. Electrodes numbered from 1 to
+and 15). The stimulation circuits in each of the 16,384 pixels can be inde-                    65,536 are connected to in-pixel amplifiers numbered from 1 to
+pendently programmed (Supplementary Discussion 1), limited only by the                         16,384 (sequentially from left to right and from top to bottom).
+aggregate current that can be sourced or sinked at any given time. Future                      Electrodes 1, 2, 257 and 258 are connected to pixel amplifier 1,
+experiments with BISC will test these stimulation capabilities.                                and electrodes 65,279, 65,280, 65,535 and 65,536 are connected
+     Although the current version of BISC relies on on-chip electrodes,                        to pixel amplifier 16,384.
+the BISC electronics can be easily connected to polyimide extenders,                      •          A group of 16 × 16 in-pixel amplifiers can be used for each record-
+which would allow BISC to be adapted for intracortical depth elec-                             ing configuration. Both vertical and horizontal spacing (stride)
+trodes, large-area surface electrodes or both. These extenders can                             of the amplifiers in that group can be programmed individually
+be attached to BISC through solder-bump attachment, thermosonic                                from 0 to 7 pixels. For example, selecting a group with zero
+bonding or anisotropic conductive films. Multiple BISC devices can                             horizontal and vertical spacing (the densest spatial configura-
+also be tiled over the brain surface to achieve larger area coverage                           tion) at the array’s top-left corner records from amplifiers 1–16,
+without using extenders. These alternatives build on the technol-                              129–144…1,921–1,936. By contrast, selecting a group with the
+ogy validated in this work: a fully encapsulated, integrated, wireless,                        maximum spacing (seven horizontal and vertical) results in a
+bidirectional neural interface that can be placed subdurally and con-                          configuration with the highest spatial coverage.
+trolled from an antenna outside the scalp. Scalability and modularity                     •          Each electrode in a pixel can be either statically or dynamically
+of the BISC system allows it to be adapted effectively to meet these                           multiplexed to the in-pixel neural amplifier. In static multiplex-
+diverse applications.                                                                          ing, 256 channels (1 per pixel) are simultaneously read-out at a
+     The current headstage design is bulky, limiting its suitability for                       sampling rate of 33.9 kS s−1. In dynamic multiplexing, 1,024 chan-
+freely moving animal studies and future human use. Its volume can                              nels (four per pixel) are read-out simultaneously at 8.475 kS s−1.
+be reduced by integrating the electronics in the current bill of materi-
+als into a single-stack PCB connected to a wearable antenna via dual                            Each electrode is a 14 μm × 14 μm square. In the densest configura                -
+radio-frequency cables. Further form-factor reductions will come                          tion, with the centre-to-centre electrode pitches at 26.5 μm × 29 μm,
+from developing an ASIC that replaces most discrete PCB components.                       32 × 32 electrodes cover an area of 0.85 mm × 0.93 mm. By contrast, the
+     By delivering volumetric efficiency, BISC overcomes some of the                      least-dense configuration spaces, the electrodes, are 424 μm × 464 μm
+barriers to widespread clinical translation faced by alternative tech-                    apart and 16 × 16 electrodes cover an area of 6.4 mm × 7.0 mm.
+nologies that rely on percutaneous wires or implanted canisters. It is                          The reference input for the in-pixel neural amplifiers can be con-
+also timely, given recent advances in the performance of BCI systems                      nected either to column-wise reference electrodes or to a global counter
+for speech and motor control65,66. Combining BISC’s high-density wire-                    electrode; the latter acts as the ground reference potential for the chip.
+less recording and stimulation capabilities with deep learning methods                    No substantial differences were observed between these two schemes
+provides a promising direction for future high-bandwidth bidirectional                    in our comparative evaluations. Consequently, the counterelectrode
+BCIs for the treatment of brain diseases, ranging from depression and                     reference configuration was used for all experiments conducted.
+aphasia to motor disorders, stroke and blindness.                                               The in-pixel amplifiers are designed as chopped integrators, with
+                                                                                          their inputs biased by transistors in the weak-inversion region at the
+Methods                                                                                   input. To avoid space-consuming d.c.-blocking capacitors, the electrical
+BISC implant design                                                                       double layer formed at the non-Faradaic TiN electrodes is used as an
+The BISC implant (Supplementary Fig. 1), a custom-designed ASIC                           implicit d.c. block. The pixel amplifier inputs are biased to 0 V (ground)
+measuring 12 mm × 12 mm, was manufactured by the Taiwan Semi-                             during operation. Chopping in the in-pixel amplifiers is used to reject
+conductor Manufacturing Company (TSMC) in a 0.13-μm bipo-                                 intrinsic voltage offset and 1/f       noise. The pixel amplifier outputs are
+lar–CMOS–double-diffused metal–oxide–semiconductor process                                multiplexed into a single, two-stage PGA. The total voltage gain of the
+(Supplementary Fig. 1). Post-processing steps, including thinning to                      system can be programmed from 484 to 1,620 V V−1 and a high-pass
+25 μm, electrode processing and passivation, were conducted in-house                      corner can be programmed from 4 to 55 Hz. The low-pass corner of the
+in the semiconductor processing facilities at Columbia University on                      system is 15 kHz. The outputs of the PGA are subsequently digitized by
+coupons and at the 200-mm wafer scale at MIT Lincoln Laboratories,                        an 8.68 MS s−1, interleaved 10-bit successive-approximation-register
+as described below.                                                                       analogue-to-digital converter. When recording from 256 channels, the
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                               1283

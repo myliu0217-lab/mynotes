@@ -1,0 +1,49 @@
+lines SEL0C[c], SEL1C[c]) and saved in two D-latches. If recording continues, after the reset phase
+the neural amplifier will go into the amplification phase. Otherwise, it goes into the last phase
+which is power-off. In the power-off phase all column and row lines are deactivated, and electrodes
+are electrically disconnected from the neural amplifier. The recording control lines are locally level
+shifted to ±1.5V logic level in each pixel, and the logic circuits are custom designed to work under
+±1.5V.
+
+For stimulation, there are 16,384 stimulation electrodes (four electrodes for each pixel act as a
+single effective electrode) and a bi-phasic current pulse can be distributed across a programmable
+set of pixels (all pixels generate the same temporal current profile) acting as a “macroelectrode”
+in either monopolar or bipolar configuration (Supplementary Fig. 8). The temporal profile of the
+bi-phasic simulation can be configured to be either cathodic-first or anodic-first, followed by a
+passive charge balancing phase. Stimulating pixel address can be quickly reprogrammed within
+100 μs, which offers opportunities to inject high density spatiotemporal information into the brain.
+
+The stimulation currents are generated globally from a stimulation current generator
+(Supplementary Fig. 8), consisting of two regulated-cascode current sources. A stimulation-
+current digital-to-analog converter (DAC) provides programmable biasing of the current sources.
+The reference current is generated from a low-voltage bandgap reference circuit 85 via a master
+current DAC. The amplitude of the current output 𝐼௢௨௧ of the stimulation current generator in µA
+is:
+                      |𝐼௢௨௧| ൌ 10ൈ𝐷௠௔௦௧௘௥ൈ𝑀஽ೞ೟೔೘,𝑀௜∈ሾ0, 1, 2, 4, 6, 8, 12, 16ሿ
+where 𝐷௠௔௦௧௘௥ and 𝐷௦௧௜௠ are three-bit values from 0 to 7.
+
+The stimulation process in each pixel is controlled by a column line (PROG[c]) and three row lines
+(SRCS[r], SINK[r], CBAL[r]) routed to the pixels from the controller. These digital control lines
+are level-shifted to ±1.5V logic levels before they enter the pixel array. Two current column lines
+(ANOD[c], CATD[c]) are routed into the pixels from a stimulation current generator through the
+column switches. Activation of the PROG line and one of the row lines by the controller initiates
+the stimulation sequence: the MOSFET switches connect the four electrode pads in the respective
+pixel to the ANOD for anodic current, the CATD for cathodic current, and ground for charge
+balancing.
+
+To optimize power efficiency in the implant, both the recording and stimulation circuits are
+designed with the capability to be individually shut down by deactivating their respective bias
+currents. The implant is operated in a manner that ensures either the recording or the stimulation
+circuits are powered on at any given time, but not both simultaneously. Switching between
+recording and stimulation introduces a latency of approximately 1 ms to start up the circuits.
+
+Design of the wireless transceiver
+
+The wireless transceiver consists of ultra-wide-band (UWB) antenna and transceiver circuits. On-
+off keying (OOK) is used for data modulation. The wireless transceiver is designed for low power,
+single user, and short-range communication.
+
+The UWB antenna, having a differential-fed slot design 86, was modified to work under brain
+environment (Supplementary Fig. 9a). To achieve this, custom multi-layer human head models
+
+                                                           6

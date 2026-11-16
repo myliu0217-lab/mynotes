@@ -1,0 +1,86 @@
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w                                           ARTICLE
+
+
+
+distributions of the integrated power in the ISA (0.01–0.1 Hz) band in SWS and                            15.   Hébert, C. et al. Flexible graphene solution-gated ﬁeld-effect transistors:
+REM states using Wilcoxon rank sum test (see Fig. 5e, test results for each channel                             efﬁcient transducers for micro-electrocorticography. Adv. Funct. Mater.
+in Supplementary Information S12D).                                                                             1703976. https://doi.org/10.1002/adfm.201703976 (2017).
+    Modulation of the LFP power by the DC signal-derived ISA and LFP phase was                            16.   Jastrzebska-Perfect, P. et al. Translational neuroelectronics. Adv. Funct. Mater.
+quantiﬁed using instantaneous fast frequency power-weighted resultant length of                                 https://doi.org/10.1002/adfm.201909165 (2020)
+the instantaneous slow frequency phase vectors normalized by mean LFP power in                            17.   Cea, C. et al. Enhancement-mode ion-based transistor as a comprehensive
+the respective band72 for which magnitude reﬂects the strength of LFP power                                     interface and real-time processing unit for in vivo electrophysiology. Nat.
+modulation to a preferred phase of the ISA or LFP. ISA and LFP phase and LFP                                    Mater. 19, 679–686 (2020).
+power were computed as angle and absolute value of the analytical signal of the                           18.   Khodagholy, D. et al. In vivo recordings of brain activity using organic
+respective AC and DC channel signals that were band-pass ﬁltered, with 0.04 and                                 transistors. Nat. Commun. 4, 1575 (2013).
+0.4 Hz bandwidth, respectively. Signiﬁcance of the modulation was tested based on                         19.   Rivnay, J. et al. Organic electrochemical transistors. Nat. Rev. Mater. 3,1–14
+1000 surrogate phase-power pairs randomly shifted with respect to each other by                                 (2018).
+up to 100 s. Resulting empirical p-value was corrected following false-discovery-                         20.   Dankerl, M. et al. Diamond transistor array for extracellular recording from
+rate control procedure at the error rate of 0.001. For constructing topographic                                 electrogenic cells. Adv. Funct. Mater. 19, 2915–2923 (2009).
+maps of theta and spindle power band modulation we used mean modulation                                   21.   Fromherz, P., Offenhäusser, A., Vetter, T. & Weis, J. A neuron-silicon
+strength for the LFP power band 8–9 Hz (theta) and 10–14 Hz (spindle band), and                                 junction: a Retzius cell of the leech on an insulated-gate ﬁeld-effect transistor.
+the ISA phase frequency of 0.05-0.1 Hz computed for every AC channel (LFP                                       Science (80-.). 252, 1290–1293 (1991).
+power) and one fronto-medial DC channel (ISA phase).                                                      22.   Spyropoulos, G. D., Gelinas, J. N. & Khodagholy, D. Internal ion-gated
+                                                                                                                organic electrochemical transistor: a building block for integrated
+Reporting summary. Further information on research design is available in the Nature                            bioelectronics. Sci. Adv. 5, eaau7378 (2020).
+Research Reporting Summary linked to this article.                                                        23.   Lee, C., Wei, X., Kysar, J. W. & Hone, J. Measurement of the elastic properties
+                                                                                                                and intrinsic strength of monolayer graphene. Science (80-.). 321, 385–388
+Data availability                                                                                               (2008).
+Device characterization and raw electrophysiological data examples are available in GIN                   24.   Zandiatashbar, A. et al. Effect of defects on the intrinsic strength and stiffness
+repository with the identiﬁer (https://doi.org/10.12751/g-node.4zw2lt). The complete                            of graphene. Nat. Commun. 5,1–9 (2014).
+electrophysiological dataset is available from the corresponding author upon reasonable                   25.   Banhart, F., Kotakoski, J. & Krasheninnikov, A. V. Structural defects in
+request. Source data are provided with this paper.                                                              graphene. ACS Nano 5,26–41 (2011).
+                                                                                                          26.   Bendali, A. et al. Puriﬁed neurons can survive on peptide-free graphene layers.
+                                                                                                                Adv. Healthc. Mater. 2, 929–933 (2013).
+Code availability                                                                                         27.   Kostarelos, K., Vincent, M., Hebert, C. & Garrido, J.A. Graphene in the Design
+Custom code for the analysis of devices characterization is provided in GIN repository                          and Engineering of Next-Generation Neural Interfaces. Adv. Mater. 29, 42
+with the identiﬁer (https://doi.org/10.12751/g-node.4zw2lt). The complete code for                              (2017).
+analysis of electrophysiological data is available from the corresponding author upon                     28.   Balasubramanian, K. et al. Reversible defect engineering in graphene grain
+request.                                                                                                        boundaries. Nat. Commun. 10, 1090 (2019).
+                                                                                                          29.   Banszerus, L. et al. Ultrahigh-mobility graphene devices from chemical vapor
+Received: 22 April 2020; Accepted: 8 December 2020;                                                             deposition on reusable copper. Sci. Adv. 1, e1500222 (2015).
+                                                                                                          30.   Mitra, A. et al. Spontaneous infra-slow brain activity has unique
+                                                                                                                spatiotemporal dynamics and laminar structure. Neuron 98, 297–305.e6
+                                                                                                                (2018).
+                                                                                                          31.   Pan, W.-J., Thompson, G. J., Magnuson, M. E., Jaeger, D. & Keilholz, S.
+                                                                                                                Infraslow LFP correlates to resting-state fMRI BOLD signals. Neuroimage 74,
+                                                                                                                288 (2013).
+References                                                                                                32.   Krishnan, G. P., González, O. C. & Bazhenov, M. Origin of slow spontaneous
+1.     Khodagholy, D. et al. NeuroGrid: Recording action potentials from the surface                            resting-state neuronal ﬂuctuations in brain networks. Proc. Natl Acad. Sci.
+     of the brain. Nat. Neurosci. 18, 310–315 (2015).                                                           USA. https://doi.org/10.1073/pnas.1715841115 (2018)
+2.     Lee, W. et al. Integration of organic electrochemical and ﬁeld-effect transistors                  33.   Masvidal-Codina, E. et al. High-resolution mapping of infraslow cortical brain
+     for ultraﬂexible, high temporal resolution electrophysiology arrays. Adv.                                  activity enabled by graphene microtransistors. Nat. Mater. 18, 280–288 (2019).
+     Mater. 28, 9722–9728 (2016).                                                                         34.   Garcia-Cortadella, R. et al. Distortion-free sensing of neural activity using
+3.     Khodagholy, D. et al. Organic Electronics for High-resolution                                            graphene transistors. Small 1906640. https://doi.org/10.1002/smll.201906640
+     Electrocorticography of the Human Brain. Sci. Adv. 2, 11 (2016).                                           (2020)
+4.     Chiang, C.-H. et al. Development of a neural interface for high-deﬁnition,                         35.   Hiltunen, T. et al. Infra-Slow EEG ﬂuctuations are correlated with resting-
+     long-term recording in rodents and nonhuman primates. Sci. Transl. Med. 12,                                state network dynamics in fMRI. J. Neurosci. 34, 356–362 (2014).
+     eaay4682 (2020).                                                                                     36.   Mitra, A., Snyder, A. Z., Tagliazucchi, E., Laufs, H. & Raichle, M. E.
+5.     Chung, J. E. et al. High-Density, long-lasting, and multi-region                                         Propagated infra-slow intrinsic brain activity reorganizes across wake and
+     electrophysiological recordings using polymer electrode arrays. Neuron 101                                 slow wave sleep. Elife 4, e10781 (2015).
+     (21-31), e5 (2019).                                                                                  37.   Grooms, J. K. et al. Infraslow electroencephalographic and dynamic resting
+6.     Garcia-Cortadella, R. et al. Switchless multiplexing of graphene active sensor                           state network activity. Brain Connect. 7, 265–280 (2017).
+     arrays for brain mapping. Nano Lett. acs.nanolett.0c00467. https://doi.org/                          38.   Kelly, A. M. C., Uddin, L. Q., Biswal, B. B., Castellanos, F. X. & Milham, M. P.
+     10.1021/acs.nanolett.0c00467 (2020)                                                                        Competition between functional brain networks mediates behavioral
+7.     Schaefer, N. et al. Multiplexed neural sensor array of graphene solution-gated                           variability. Neuroimage 39, 527–537 (2008).
+     ﬁeld-effect transistors. 2D Mater. 7, 025046 (2020).                                                 39.   Vanhatalo, S. et al. Infraslow oscillations modulate excitability and interictal
+8.     Viventi, J. et al. Flexible, foldable, actively multiplexed, high-density electrode                      epileptic activity in the human cortex during sleep. Proc. Natl Acad. Sci. 101,
+     array for mapping brain activity in vivo. Nat. Neurosci. 14, 1599–1605 (2011).                             5053–5057 (2004).
+9.     Fang, H. et al. Capacitively coupled arrays of multiplexed ﬂexible silicon                         40.   Watson, B. O., Hengen, K. B., Gonzalez Andino, S. L. & Thompson, G. J.
+     transistors for long-term cardiac electrophysiology. Nat. Biomed. Eng. 1, 0038                             Cognitive and physiologic impacts of the infraslow oscillation. Front. Syst.
+     (2017).                                                                                                    Neurosci. 12, 44 (2018).
+10.   Chang, E. F. Towards large-scale, human-based, mesoscopic                                           41.   Vanhatalo, S., Voipio, J. & Kaila, K. Full-band EEG (FbEEG): an emerging
+     neurotechnologies. Neuron 86,68–78 (2015).                                                                 standard in electroencephalography. Clin. Neurophysiol. 116,1–8 (2005).
+11.   Lacour, S. P., Courtine, G. & Guck, J. Materials and technologies for soft                          42.   Kovac, S., Speckmann, E.-J. & Gorji, A. Uncensored EEG: the role of DC
+     implantable neuroprostheses. Nat. Rev. Mater. 1,1–14 (2016).                                               potentials in neurobiology of the brain. Prog. Neurobiol. 165–167,51–65
+12.   Nguyen, J. K. et al. Mechanically-compliant intracortical implants reduce the                             (2018).
+     neuroinﬂammatory response. J. Neural Eng. 11, 056014 (2014).                                         43.   Nelson, M. J., Pouget, P., Nilsen, E. A., Patten, C. D. & Schall, J. D. Review of
+13.   Moshayedi, P. et al. The relationship between glial cell mechanosensitivity and                           signal distortion through metal microelectrode recording circuits and ﬁlters. J.
+     foreign body reactions in the central nervous system. Biomaterials 35,                                     Neurosci. Methods 169, 141–157 (2008).
+     3919–3925 (2014).                                                                                    44.   Chan, A. W., Mohajerani, M. H., LeDue, J. M., Wang, Y. T. & Murphy, T. H.
+14.   Song, E., Li, J., Won, S. M., Bai, W. & Rogers, J. A. Materials for ﬂexible                               Mesoscale infraslow spontaneous membrane potential ﬂuctuations
+     bioelectronic systems as chronic neural interfaces. Nat. Mater. 19, 590–603                                recapitulate high-frequency activity cortical motifs. Nat. Commun. 6, 7738
+     (2020).                                                                                                    (2015).
+
+
+
+NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications                                              15

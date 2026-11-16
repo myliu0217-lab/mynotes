@@ -1,0 +1,68 @@
+                        This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+2                                                                                                                                                                                                                          IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+(BW) ampliﬁer and, importantly, additional feedback loops to                         the  AFE  bottleneck  described  in  [8].  For  example,  a  time-
+cancel up-converted electrode offsets and chopper ripples; both                      division  multiple  access  (TDMA)  method  has  been  recently
+approaches require  non-zero  additional  area  [6],  [7].  On  the                  used in [18] and [19], resulting in per-channel areas of (0.004,
+other hand, the thermal noise issue is solved by increasing the                      0.0023 mm2), respectively. However, multiple coarse and ﬁne-
+transconductance  of  the  input  differential  pair  of  the  neural                tuning DACs, memory modules, off-chip digital ﬁlters, binary-
+ampliﬁer, which requires high power consumption and/or large                         search  algorithms,  and  processors  are  used  in  the  system  to
+area  utilization  [5].  According  to  [8],  the  analog  front-end                 restore the distorted signal recorded by delta-encoded method,
+(AFE)  module is  still  far  behind in  terms of development in                     which  would  ultimately  occupy  signiﬁcant  area  in  a  ﬁnal
+the pursuit of creating a true HDNI system.                                          implemented  solution.  Unfortunately,  in  a  TDMA  system,
+   Fig. 1 illustrates the overall concept of a batteryless neural                    the  EOV  removal becomes challenging  since,  assuming  ran-
+recording system,  powered wirelessly  from  outside  the  skull                     dom  EOV  for  every  channel,  the  input  multiplexed  signal
+by using coils as demonstrated in [3]. The multiplexed digital                       to  the  AFE  translates  the  slowly  varying  EOV  into  a  higher
+signals  are  transmitted  outside  the  brain  by  an  integrated                   frequency component that is equal to the multiplexer sampling
+antenna  and  then  demultiplexed  on  the  receiver  side  outside                  speed.  This   forces  all   channel  multiplexed  EOV   to   pass
+the brain as implemented in [8].                                                     through  the  AFE  input  with  full  amplitude  even  if  an  ac-
+   Fig.  1(a)  shows  a  typical  neural  recording  system,  where                  capacitor  or  a  regular  dc-servo  loop  is  used.  Accordingly,
+each  electrode  has  its  own  dedicated  analog  interface.  Each                  the multiplexed EOVs saturate the AFE.
+pixel  consists  of  a  neural  ampliﬁer  and  a  digital  to  analog                   Importantly,  it  should  be  noted  that  EOV  behavior  is  not
+converter  (DAC)  in  feedback  to  remove:  1)  electrode  offset                   constant: EOVs tend to have some low-frequency content from
+voltage (EOV); 2) ampliﬁer input-referred offset; and 3) other                       dc to 0.2 Hz [20]. As a result, static dc-cancellation approaches
+undesired  signals  such  as  motion  or  stimulation  artifacts  if                 as  in  [4]  and  [18]  are  not  robust  in  real-world  conditions
+present.  Dynamic  electrochemical  reactions  at  the  interface                    unless  the  digital  cancellation  calibration  routine  is  rerun  in
+of  the  neural  electrodes  and  tissue  cause  an  EOV  between                    the  foreground  periodically.  In  addition,  in  case  of  using  a
+electrodes and the analog interface that can reach magnitudes                        binary-search  algorithm  to  remove  the  slowly  varying  EOV,
+of approximately ±50 mV [4], [6], [9], [10]. In addition, if an                      the cutoff frequency between LFP and AP becomes unknown,
+ampliﬁer  is  used  in  an  open-loop  conﬁguration  to  save  area                  and the offset is removed abruptly, which can lead to distortion
+by eliminating passive feedback components, an input-referred                        in the acquired neural signal.
+offset caused by process mismatch can reach a few millivolts.                           This  article  presents  a  TDMA-based  least  mean  square
+Such  high  offsets  can  easily  saturate  high-gain  differential                  (LMS)-optimized neural recording AFE  which  offers contin-
+neural ampliﬁers. While ac coupling capacitors can potentially                       uous  EOV  tracking  and  cancellation,  all  without  requiring
+block EOVs, they do not help when choppers are placed before                         large transistors or capacitive feedback. The developed system
+the coupling capacitors. On the other hand, chopping after the                       is  mostly  digital  and  highly  scalable  with  CMOS  process
+coupling capacitors forms a switched-capacitor (SC) parasitic                        technology, which paves a pathway toward implementing high-
+resistor with the input devices parasitic capacitors. When input                     density channel systems. This article is organized as follows:
+referred,  the  SC  parasitic  resistance  noise  is  seen  to  have                 in Section II, a study on which multiplexing technique is the
+a1/f 2  shape,  which  requires  physically  large  capacitors  to                   best for neural recording systems is presented. In Section III,
+attenuate it [11].                                                                   the  EOV  cancellation  technique  with  adaptive  ﬁlter  (AF)
+   To  tackle  the  issue  of  EOV  in  IAs,  a  dc-servo  loop  with                is   explained.  In   Section   IV,   the   overall  proposed  neural
+a low corner frequency (< 1 Hz) is usually used [6], [7], [9],                       recording system is illustrated. The system circuit topologies
+[12].  Other  approaches  such  as  [13]  use  a  track  and  zoom                   are  introduced  in  Section IV.  Finally,  Sections  VI  and  VII
+analog  to  digital  converter  (ADC)  to  remove  the  dc-offsets,                  present the measurement results and conclusions of this article,
+or  in  [14]  and  [15],  a  voltage-controlled  oscillator  (VCO)-                  respectively.
+based  and  successive  approximation  register  (SAR)  ADC                          II.  STUDY OF DIFFERENT MULTIPLE ACCESS TECHNIQUES
+with  digital  feedback  loop  are  used  for  dc-offset  removal,
+respectively.  Unfortunately,  the  addition  of  analog  or  digital                   There are various channel access schemes in telecommuni-
+servo loops requires a non-trivial overhead to the system. The                       cation and computer network that allows transmission medium
+delta  modulation presented  in  [16]  and  [17]  offer  a  solution                 sharing or, in this case, IA and ADC sharing. The applicable
+to  remove  the  EOV,  though  as  will  be  discussed  shortly,                     ones in neural recording systems are frequency division mul-
+hardware  sharing  to  reduce  per-channel  area  is  not  easily                    tiple access (FDMA), code division multiple access (CDMA),
+possible with this technique. As a result, the traditional in-pixel                  and TDMA.
+solution with EOV cancellation mechanism typically occupies                          A. Frequency Division Multiple Access
+large  channel  area  (∼ 0.01  mm2)  and  consumes  high  power
+(∼3–5 μW) due to the use of a dedicated ampliﬁer and DAC                                Fig. 2(a) shows a typical  N-channels FDMA system block
+for every channel [4], [14].                                                         diagram.  Each  signal  is  up  modulated  to  a  different  carrier
+   On  the  other  hand,  Fig.  1(b)  shows  a  solution  which                      frequency and then combined at a summing node to share the
+shares  the  analog  interface  among  multiple  electrodes.  Done                   AFE. To retrieve the signals back, a dedicated tuned bandpass
+correctly,  this  hardware  sharing  approach  can  reduce  the                      ﬁlter  (BPF)  selects  each  channel band individually, and  then
+per-channel  area,  making  it  a  promising  candidate  to  solve                   a demodulator recovers the signal.
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

@@ -1,0 +1,7 @@
+Supplementary Figure 10. Current-Voltage conversion for data acquisition in vivo. Sequential drain pulses are
+applied via  a  data  acquisition  board  (Green).  The  current  is  run  through  the  OECT,  which  is  in  contact  with  the
+electrolyte (Orange). A trans-impedance amplifier is used to convert the current to voltage. A high pass (0.15 Hz) and
+a  parasitic  low  pass     filters  are  used  to  minimize  the  noise  (purple).  Output  of  the  amplifier  is  connected  to  an
+Oscilloscope or Intan head stage (following a high pass filter) for data acquisition (Red).
+
+

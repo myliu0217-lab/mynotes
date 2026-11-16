@@ -1,0 +1,87 @@
+                         This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                                  content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                                       12
+
+
+
+                                                                                        TABLE I
+                                                PERFORMANCE SUMMARY OF DIFFERENT NEURAL RECORDING ARCHITECTURES
+
+
+    Reference                              [13]               [23]                 [17]               [36]             [15]             [18]              [35]              THIS
+    Author                              MULLER              HUANG                UEHLIN            WENDLER           FATHY          X. HUANG           X. YANG            WORK
+    Conf./Journal - Year                JSSC 12’           SSCL 18’           TBCAS 20’            JSSC 22’         JSSC 22’         JSSC 22’          JSSC 23’
+    Architecture Type                 DC-Coupled         VCO-Based               TDMA                2-Step          TDMA             TDMA               D-DS             TDMA
+                                         In-Pixel            ADC                                   ΔS-ADC                            ΔS-ADC
+    Technology (nm)                         65                 65                   65                 180              65               22                22                65
+    Channel Area (mm2)                    0.013               0.01          0.0023 + Filt (a)       0.00462         0.00248           0.001(b)          0.0045            0.00179
+    Digital Area % Ratio                < 20% (c)             42%                 <9%                 58%             68%               11%               29%               38%
+    Number of Ch.                            2                  1                   64                  8               16              256               128                16
+    IR Noise AP (µVRMS)                    4.9(d)               -                    -                11.83           2.6 (e)             -            7.71±0.36           2.19 (d)
+    IR Noise LFP (µVRMS)                   4.3(d)             2.2                  1.66               9.21            2.4 (e)           1.55           11.9±1.13           2.4 (d)
+    Gain (dB)                               32                  -                   60                  -               48                -                                  45
+    BW (Hz)                              1-10000             1-500               1-1000             0-10000         1-10000            1-500          0.1-10000           1-10000
+    Channel Power (µW)                     5.04               3.2                  2.98               14.62            3.38             1.61              6.02               5.1
+    PSRR (dB)                               64                 65                   82                77.2              79               84                 -                68
+    CMRR (dB)                               75                 77                   76                  -               66               98                 -               67.2
+    NEF                                    5.99               8.7                  2.21               13.4             1.83             3.85              8.29               1.8
+    Power Supply (V)                        0.5               0.6                0.5/2.5               1.8            1/1.2              0.8               0.8            0.9/1.2
+    Input Impedance (MW)                     -               >500                   92                  -               28              43(f)              ∞                 7.6
+
+      (a) Off-Chip decimation filter (Area not accounted for).                               (d) LFP noise bandwidth: DC-0.3 kHz, AP noise bandwidth: 0.3-10 kHz.
+      (b) Requires an actively multiplexed electrode array.                                  (e) LFP noise bandwidth: 1.25-0.39 kHz, AP noise bandwidth: 0.39-10 kHz.
+      (c) Estimated Area Ratio.                                                              (f) Estimated at electrodes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 17 Schematic illustration of the in-vivo experimental setup showing a Sprague-Dawley rat with the proposed neural recording AFE connected to PtNR
+electrodes placed on its S1 barrel cortex.
+
+on   thin-film       materials   such   as        parylene   C,   the   electrode               Fig. 16 shows the measured results of AP and LFP in CH1 with
+impedances can be as high as 100 kW [26]. Accordingly, with                                     different chopping and MA-filter modes. When both chopping
+the  proposed  AFE  impedance  booster,  the                     worst     attenuation          and moving-average modules are ON, the PSD noise floor for
+factor on the AFE interface is 0.986. The lowest SNR, SNDR                                      AP is 2.19 µVrms. When the chopper is turned OFF and MA-
+and ENOB are measured for CH9 to be 52.14 dB, 51.82 dB, and                                     filter is ON, the noise floor rises to 4.27 µVrms. Finally, if the
+8.31-bits,   respectively.   The   active   area   overhead   of   the                          MA-filter is switched off regardless the state of the chopper, the
+proposed impedance booster is only 7.1% of the entire system.                                   noise floor increases to 9.55 µVrms. The same test is repeated
+
+
+
+         Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                         © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

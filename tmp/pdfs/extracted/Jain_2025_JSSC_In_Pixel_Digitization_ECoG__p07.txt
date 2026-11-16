@@ -1,0 +1,71 @@
+                      This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+JAIN et al.: 2.5–20 kS/s IN-PIXEL DIRECT DIGITIZATION ECoG FRONT END                                                                                                                                                           7
+
+
+
+
+
+
+
+
+
+
+
+                                                                                       Fig. 10.    Schematic of the decimation filter.
+
+
+
+
+Fig. 9.    Circuit implementation of the level shifter.
+
+Gray counter. This method consumes 2–8×       lower power than
+frequency  divider-based  scaling,  where  a  divider  would  be
+after  the  level  shifter.  CCO-based  scaling  scales  down   fCCO
+and the CCO gain,  KICCO, by the same factor as  fs, keeping
+the  integrator  gain,  KICCO/ fs,  constant.  Part  of  the  current                  Fig. 11.    Chip microphoto.
+is  bled  off  to  reduce   fCCO  to  10  MHz  (typical),  reducing
+the  counter’s  power  by  2×,  which  is  important  as        fCCO
+is 10 ×  fs.
+   The  level  shifters  following  the  CCO,  which  are  required
+to  drive  the  CMOS  counters  and  phase  quantizer,  are  imple-
+mented,  as  shown  in  Fig.  9.  It  uses  a  bootstrapped  gate
+drive  by  decoupling  the  PMOS  and  NMOS  driver  with  ac
+coupling  [49].  Delay  from  level  shifters  is  signal-dependent
+due to the variation in CCO output swing with the input signal,
+making delay reduction important. This topology reduces the
+large  delay  from  contention  between  pull-down  and  pull-up
+transistors in a conventional latch in a power-efficient manner.
+
+C.  Quantizer and DAC                                                                  Fig. 12.    Power and area breakdown.
+   The CCO’s phase is quantified using a counter-based quan-                           with 16-bit output resolution, as shown in Fig. 10. This filter
+tizer. Since the CCO edges are asynchronous to the sampling                            provides  third-order  antialias  filtering  for  signals  above  fs/2,
+instant, a Gray code counter avoids sampling errors by ensur-                          exceeding  typical  filters  in  PGA-shared  ADC  architectures.
+ing  only  one  internal  bit  transitions  at  a  time.  The  power                   The transfer function of the filter is
+of  Gray  counters  is  reduced  by  40%  compared  to  a  binary                                                           [(1 − z−64 )]3
+counter with Gray-to-binary and binary-to-Gray encoders [43]                                                     H(z) =        (1 − z−1 )       .                          (1)
+by implementing a DFF-only counter, which directly counts in
+Gray code. This halves the power overhead of every additional
+bit, making the added power consumption of the circuitry that                          The  register  bit-widths  of  each  stage  were  optimized  using
+accommodates the two bits for overrange correction negligible.                         Hogenauer’s register bit-pruning algorithm[50].
+The ADC is passed through a first-order shaped tree-structured                                              V.  MEASUREMENT RESULTS
+DEM  encoder.  The  DAC  unit  elements  are  custom  MOM
+capacitors  for  more  flexibility  during  layout,  with  a  3.2-fF                      This 8-pixel chip is fabricated in 180-nm CMOS, with each
+unit  capacitance  for  a  4-bit  thermometer-coded  DAC.  The                         pixel  occupying  0.09  mm2.  An  annotated  chip  micrograph
+∼0.8%  capacitor  variation  degrades  the  ADC’s  performance                         is  shown  in  Fig.11.  An  octagonal  electrode  pad,  measuring
+by  less  than  1  dB  in  simulation.  Instead  of  re-clocking  the                  66  µm  on  metal  layer  6,  is  added  to  facilitate  the  chip’s
+DAC using DFFs, latches were used because they reduce errors                           interfacing with electrode grids through bumping, supporting a
+caused  in  the  event  of  quantizer  metastability  by  allowing  a                  future expansion to 1024 pixels on a single chip with minimal
+“late”  edge  to  propagate  to  the  DAC  immediately  during  the                    design   modifications.   Each   pixel   consumes   14  µW   from
+latch’s  transparent  phase.  All  digital  circuits  used  a  custom                  0.9  and  0.7  V  supplies  for  analog  (53%)  and  digital  (47%),
+design flow with a mix of standard cells and custom-designed                           respectively,  as  shown  in  Fig.  12.  Section      V-A  describes  the
+circuits to optimize each block for power and area compared                            electrical measurements followed in vivo biological measure-
+to standard logic synthesis and place-and-route flow.                                  ments in Section V-B.
+
+D.  Decimation Filter                                                                  A.  Electrical Characterization
+   The  on-chip  decimation  filters  decimate  each  ADC  output                         The  chip  was  tested  using  an  Audio  Precision  APx555B
+by  64×      to  the  Nyquist  rate,  using  a  third-order  CIC  filter               ultralow   distortion   signal   source   applying   a   125-mVpp
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

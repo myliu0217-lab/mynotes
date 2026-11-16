@@ -1,0 +1,82 @@
+CISNEROS-FERNÁNDEZ            et al.: 1024-CHANNEL 10-BIT 36-µW/CH CMOS ROIC FOR MULTIPLEXED GFET-ONLY SENSOR ARRAYS                                                       873
+
+
+agar substrate. In particular, harmonic stimulation experiments                                     [17]  K.  A.  White,  G.  Mulberry,  M.  Crocker,  B.  N.  Kim,  J.  Smith,  and
+both at the reference electrode and using bipolar currents show                                            K. Sugaya, “Monolithic CMOS-based neurotransmitter detector for l024-
+the expected results along the full GFET array.                                                            ch simultaneous recordings,” in        Proc. IEEE Biomed. Circuits Syst. Conf.,
+                                                                                                           2018, pp. 1–4.
+   A comparison of the presented chip and the relevant state-of-                                    [18]  X. Yuan, V. Emmenegger, M. E. J. Obien, A. Hierlemann, and U. Frey,
+art neural ROICs is listed in Table II. As it can be noticed, this                                         “Dual-mode microelectrode array featuring 20 k electrodes and high SNR
+work shows competitive ﬁgures compared to existent monolithic                                              for extracellular recording of neural networks,” in            Proc. IEEE Biomed.
+                                                                                                           Circuits Syst. Conf., 2018, pp. 1–4.
+solutions and achieves the largest scalability in hybrid neural                                     [19]  J. Guo, J. Yuan, J. Huang, J. K. Law, C. Yeung, and M. Chan, “32.9 nV/rt
+ROICs, as marked in Fig. 1(b). Finally, it is worth to highlight                                           Hz – 6 dB THD dual-band micro-electrode array signal acquisition IC,”
+that unlike the rest of ROICs for passive micro-electrodes, this                                           IEEE J. Solid-State Circuits, vol. 47, no. 5, pp. 1209–1220, May 2012.
+                                                                                                    [20]  J. N. Y. Aziz    et al., “256-Channel neural recording and delta compression
+integrated      μECoG platform with GFET active sensors is DC                                              microsystem with 3D electrodes,”           IEEE J. Solid-State Circuits, vol. 44,
+coupled so it is capable of recording infra-slow neural signals.                                           no. 3, pp. 995–1005, Mar. 2009.
+                                                                                                    [21]  V. Majidzadeh,  A.  Schmid,  and  Y.  Leblebici,  “A  16-Channel 220                 µW
+                                                                                                           neural recording IC with embedded delta compression,” in                  Proc.  IEEE
+                                         REFERENCES                                                        Biomed. Circuits Syst. Conf., 2011, pp. 9–12.
+                                                                                                    [22]  W. R. Patterson      et al., “A microelectrode/microelectronic hybrid device
+ [1]  A. B. Ajiboye      et al., “Restoration of reaching and grasping movements                           for brain implantable neuroprosthesis applications,”IEEE Trans. Biomed.
+      through  brain-controlled  muscle  stimulation  in  a  person  with  tetraple-                       Eng., vol. 51, no. 10, pp. 1845–1853, Oct. 2004.
+      gia:  A  proof-of-concept  demonstration,”           Lancet,  vol.  389,  no.  10081,         [23]  T. Torfs   et al., “Two-dimensional multi-channel neural probes with elec-
+      pp. 1821–1830, 2017.                                                                                 tronic depth control,”     IEEE Trans. Biomed. Circuits Syst., vol. 5, no. 5,
+ [2]H.S.Mayberget  al.,  “Deep  brain  stimulation  for  treatment-resistant                               pp. 403–412, Oct. 2011.
+      depression,”    Neuron, vol. 45, no. 5, pp. 651–660, 2005.                                    [24]  K.  Abdelhalim  and  R.  Genov,  “915-MHz  wireless  64-Channel  neural
+ [3]  R.  Pahwa,  S.  Wilkinson,  D.  Smith,  K.  Lyons,  E.  Miyawaki,  and                               recording SoC with programmable mixed-signal FIR ﬁlters,” in                Proc. Eur.
+      W. C. Koller, “High-frequency stimulation of the globus pallidus for the                             Solid-State Circuits Conf., 2011, pp. 223–226.
+      treatment of Parkinson’s disease,”        Neurology, vol. 49, no. 1, pp. 249–253,             [25]  K. Abdelhalim, H. M. Jafari, L. Kokarovtseva, J. L. P. Velazquez, and
+      1997.                                                                                                R. Genov, “64-Channel UWB wireless neural vector analyzer and phase
+ [4]  J. N. Y. Aziz, R. Genov, B. L. Bardakjian, M. Derchansky, and P. L. Carlen,                          synchrony-triggered stimulator SoC,” in            Proc.  Eur.  Solid-State  Circuits
+      “Brain-silicon  interface  for  high-resolution  in  vitro  neural  recording,”                      Conf., 2012, pp. 281–284.
+      IEEE Trans. Biomed. Circuits Syst., vol. 1, no. 1, pp. 56–62, Mar. 2007.                      [26]  G. N. Angotziet al., “SiNAPS: An implantable active pixel sensor CMOS-
+ [5]  M.  Ballini    et  al.,  “A  1024-Channel  CMOS  microelectrode  array  with                         Probe for simultaneous large-scale neural recordings,”Elsevier Biosensors
+      26,400  electrodes  for  recording  and  stimulation  of  electrogenic  cells                        Bioelectron., vol. 126, pp. 355–364, 2019.
+      in vitro,”   IEEE  J.  Solid-State  Circuits, vol. 49, no. 11, pp. 2705–2719,                 [27]  C. M. Lopez      et al., “A neural probe with up to 966 electrodes and up to
+      Nov. 2014.                                                                                           384 conﬁgurable channels in 0.13µm SOI CMOS,”IEEE Trans. Biomed.
+ [6]  J. Dragas   et al., “In vitro multi-functional microelectrode array featuring 59                     Circuits Syst., vol. 11, no. 3, pp. 510–522, Jun. 2017.
+      760 electrodes, 2048 electrophysiology channels, stimulation, impedance                       [28]  Y. Niu, Y. Zhu, W. Lu, Z. Huang, Y. Zhang, and Z. Chen, “1024-Electrode
+      measurement, and neurotransmitter detection channels,”                 IEEE  J.  Solid-              deep brain probe readout circuit with 1024 conﬁgurable channels in 55 nm
+      State Circuits, vol. 52, no. 6, pp. 1576–1590, Jun. 2017.                                            CMOS,” in     Proc. IEEE Int. Conf. Electron. Devices Solid-State Circuits,
+ [7]  B. Eversmann, A. Lambacher, T. Gerling, A. Kunze, P. Fromherz, and                                   2019, pp. 1–3.
+      R. Thewes, “A neural tissue interfacing chip for in-vitro applications with                   [29]  R. Olsson and K. Wise, “A three-dimensional neural recording microsys-
+      32 k recording / stimulation channels on an active area of 2.6 mm2,”  in                             tem  with  implantable  data  compression  circuitry,”  in          Proc.  IEEE  Int.
+      Proc. Eur. Solid-State Circuits Conf., 2011, pp. 211–214.                                            Solid-State Circuits Conf., vol. 1, 2005, pp. 558–559.
+ [8]  U. Frey    et  al., “Switch-matrix-based high-density microelectrode array                    [30]  B. C. Raducanu       et al., “Time multiplexed active neural probe with 1356
+      in  CMOS  technology,”         IEEE  J.  Solid-State  Circuits,  vol.  45,  no.  2,                  parallel  recording  sites,”    MDPI  Sensors,  vol.  17,  no.  10,  Oct.  2017,
+      pp. 467–482, Feb. 2010.                                                                              Art. no. 2388.
+ [9]  F. Heer, W. Franks, I. McKay, S. Taschini, A. Hierlemann, and H. Baltes,                      [31]  S. Wanget al., “A compact quad-shank CMOS neural probe with 5,120 ad-
+      “CMOS microelectrode array for extracellular stimulation and recording                               dressable recording sites and 384 fully differential parallel channels,”IEEE
+      of electrogenic cells,” inProc. IEEE Int. Symp. Circuits Syst., vol. 4, 2004,                        Trans. Biomed. Circuits Syst., vol. 13, no. 6, pp. 1625–1634, Dec. 2019.
+      pp. IV53–IV56.                                                                                [32]  G.  Gagnon-Turcotte,  M.  N.  Khiarak,  C.  Ethier,  Y.  De  Koninck,  and
+[10]  F. Heer, S. Haﬁzovic, W. Franks, A. Blau, C. Ziegler, and A. Hierlemann,                             B.  Gosselin,  “A  0.13-µm  CMOS  SoC  for  simultaneous  multichannel
+      “CMOS microelectrode array for bidirectional interaction with neuronal                               optogenetics and neural recording,”         IEEE J. Solid-State Circuits, vol. 53,
+      networks,”     IEEE J. Solid-State Circuits, vol. 41, no. 7, pp. 1620–1629,                          no. 11, pp. 3087–3100, Nov. 2018.
+      Jul. 2006.                                                                                    [33]  H.  Gao     et  al.,  “HermesE:  A  96-Channel  full  data  rate  direct  neural
+[11]  B. Johnson, S. T. Peace, T. A. Cleland, and A. Molnar, “A 50                 µm pitch,               interface in 0.13   µm CMOS,”       IEEE J. Solid-State Circuits, vol. 47, no. 4,
+      1120-Channel, 20 kHz frame rate microelectrode array for slice recording,”                           pp. 1043–1055, Apr. 2012.
+      in  Proc. IEEE Biomed. Circuits Syst. Conf., 2013, pp. 109–112.                               [34]  B. Gosselin     et al., “A mixed-signal multichip neural recording interface
+[12]  B.  Johnson,  S.  T.  Peace,  A.  Wang,  T.  A.  Cleland,  and  A.  Molnar,  “A                      with bandwidth reduction,”         IEEE  Trans.  Biomed.  Circuits  Syst.,vol.3,
+      768-Channel CMOS microelectrode array with angle sensitive pixels for                                no. 3, pp. 129–141, Jun. 2009.
+      neuronal  recording,”      IEEE  Sensors  J.,  vol.  13,  no.  9,  pp. 3211–3218,             [35]  Y. Gui   et al., “An 8-Channel fully differential analog front-end for neural
+      Sep. 2013.                                                                                           recording,” inProc. IEEE Biomed. Circuits Syst. Conf., 2012, pp. 132–135.
+[13]  C. M. Lopez     et al., “A 16384-Electrode 1024-Channel multimodal CMOS                       [36]  Y. Lin    et al., “A battery-less, implantable neuro-electronic interface for
+      MEA for high-throughput intracellular action potential measurements and                              studying the mechanisms of deep brain stimulation in Rat models,”                 IEEE
+      impedance spectroscopy in drug-screening applications,” in                 Proc. IEEE                Trans. Biomed. Circuits Syst., vol. 10, no. 1, pp. 98–112, Feb. 2016.
+      Int. Solid-State Circuits Conf., 2018, pp. 464–466.                                           [37]  L. Lyu    et al., “A fully-integrated 64-Channel wireless neural interfacing
+[14]  C.  M.  Lopez     et  al.,  “A  multimodal  CMOS  MEA  for  high-throughput                          SoC achieving 110 dB AFE PSRR and supporting 54 mb/s symbol rate,
+      intracellular action potential measurements and impedance spectroscopy                               meter-range  wireless  data  transmission,”        IEEE  Trans.  Circuits  Syst.  II,
+      in  drug-screening  applications,”        IEEE  J.  Solid-State  Circuits,  vol.  53,                vol. 67, no. 5, pp. 831–835, May 2020.
+      no. 11, pp. 3076–3086, Nov. 2018.                                                             [38]  C.  M.  Lopez      et  al.,  “A  multichannel  integrated  circuit  for  electrical
+[15]  J. Sedivy, U. Frey, F. Heer, S. Haﬁzovic, and A. Hierlemann, “Multi-chip                             recording of neural activity, with independent channel programmability,”
+      high-density microelectrode system  for electrogenic-cell  recording and                             IEEE Trans. Biomed. Circuits Syst., vol. 6, no. 2, pp. 101–110, Apr. 2012.
+      stimulation,” in    Proc. IEEE Sensors, 2007, pp. 716–719.                                    [39]  S.  Park,  J.  Cho,  K.  Na,  and  E.  Yoon,  “Modular  128-Channel              Δ-ΔΣ
+[16]  V.  Viswam       et   al.,  “2048  action  potential  recording  channels  with                      analog  front-end  architecture  using  spectrum  equalization  scheme  for
+      2.4   µVrms  noise  and  stimulation  artifact  suppression,”  in          Proc.  IEEE               1024-Channel 3-D neural recording microsystems,”                IEEE J. Solid-State
+      Biomed. Circuits Syst. Conf., 2016, pp. 136–139.                                                     Circuits, vol. 53, no. 2, pp. 501–514, Feb. 2018.
+
+
+
+           Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

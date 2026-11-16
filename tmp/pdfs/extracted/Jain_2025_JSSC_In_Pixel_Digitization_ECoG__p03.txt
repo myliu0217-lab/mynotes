@@ -1,0 +1,78 @@
+                      This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+JAIN et al.: 2.5–20 kS/s IN-PIXEL DIRECT DIGITIZATION ECoG FRONT END                                                                                                                                                           3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 3.    Block diagram of the proposed architecture and key coefficients.
+
+
+need for power-intensive filters at the front of the signal chain.                                                 III.  ARCHITECTURE
+Different architectures have been explored for stimulation arti-                       A.  ADC Architecture
+fact tolerance. 1-16      modulators are suitable for high-density
+arrays for their area efficiency and EDO tolerance [32],        [39];                      The  proposed 16  ADC  architecture  is  shown  in  Fig.  3.
+however,  these  systems  either  have  a  low  ac  input  range,                      The  16   modulator  is  comprised  of  a  second-order  loop
+making  them  intolerant  to  artifacts,  or,  as  in  [33],  attempt                  filter with a 17-level quantizer and has an oversampling ratio
+to  increase  the  ac  input  range  but  suffer  from  degraded                       (OSR)  of  64.  It  uses  the  pseudo-virtual  ground  feedforward
+settling  speed  due  to  the  feedback  integrator  and  increased                    (PVG  FF)  architecture,  which  allows  the  modulator  to  have
+distortion  at  high  input  levels.  A  CT-Zoom  ADC  improves                        high  linearity  and  a  compact  area  [43].  The  technique  feeds
+the  DR  by  adapting  AFE  gain  to  input  signal  amplitude  but                    forward  the  error  voltage  at  the  PVG  node  instead  of  the
+experiences higher noise at low PGA gain settings due to the                           input  with  appropriate  scaling,  linearizing  the  first  integrator
+ADC quantization noise [40]. Incremental ADCs are another                              by having it only process the quantization noise. This enables
+area-efficient  solution  for  high-channel-count  neural  arrays                      the  loop  to  operate  with  the  same  dynamics  as  the  standard
+with simpler decimation filters and ease of multiplexing [36];                         feedforward-based  architecture  while  eliminating  the  internal
+however,  they  suffer  from  poor  antialiasing.  A  dc-coupled                       feedback  DAC(s)  and  having  the  feedforward  path  process
+architecture  ensures  a  high  input  impedance,  but  it  comes  at                  only  a  small  swing,  helping  with  its  linearization.  The  FF
+the cost of sensitivity to the input common-mode voltage [31],                         path causes signal transfer function (STF) peaking and reduced
+[34].  Lee  et  al.        [31],  Jeon  et  al.        [34],  and  Pochet  et  al.        [41]antialiasing.  A  maximally  flat  noise  transfer  function  (NTF)
+employ  time-based  quantizers,  which  are  susceptible  to  slow                     with an out-of-band gain (OBG) of 2.5 was chosen to reduce
+recovery/instability during artifacts beyond the input range and                       quantization noise folding through first integrator nonlinearity
+are unsuitable for clinical systems unless measures are taken                          and reduce sensitivity to coefficient variation.
+to handle this case.                                                                       While    time-domain-only    ADC    architectures,    such    as
+   Fig.  2(b)  demonstrates  how  ac-coupled  CT-16  Ms  break                         voltage-controlled oscillator (VCO)-based ADCs, are popular
+the  trade-off  between  the  high-pass  cutoff  frequency  and                        for  their  ability  to  run  off  a  low-supply  voltage  and  pro-
+artifact  recovery  time  by  upmodulating  the  input  before  the                    cess  scalability  [41],         [44],  they  contend  with  issues,  such
+ac-coupling  capacitors  [41],        [42].  EDO  and  stimulation  arti-              as  VCO  flicker  (1/ f )  noise  since  they  cannot  be  chopped
+facts  are  upmodulated  along  with  the  input  signal,  which                       and  compromised  noise  efficiency  when  used  as  the  first
+is  subsequently  downmodulated  within  the  ADC,  while  the                         integrator [44]. This system instead uses a        Gm-C  filter as the
+ADC’s input impedance defines the high-pass cutoff frequency.                          first integrator, using chopping to reduce the 1/ f  noise. At low
+Directly  using  an  ac-coupled  CT-16  M  for  this  application,                     frequencies,  chopping  also  improves  the  ADC’s  common-
+however,   has   several   challenges:   slow   recovery/instability                   mode  rejection  ratio  (CMRR).  The  chopping  frequency,   fch,
+during artifacts beyond the input range of the time-based quan-                        is set to half of the sampling frequency,  fs/2, to avoid quantiza-
+tizer, power and area limitations, and low-input impedance.                            tion noise folding [45]. The low-frequency noise and offset are
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

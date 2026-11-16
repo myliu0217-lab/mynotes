@@ -1,0 +1,32 @@
+Supplementary Fig. 4. Titanium nitride characterization. (a) The characteristic roughened
+morphology of the deposited TiN films was observed by SEM (FEI Helios dual-beam FIB-SEM).
+(b) Surface roughness of the TiN was quantified using AFM (Bruker Dimension Icon, tapping
+mode) yielding a root mean square roughness of 3.9 nm. The TiN cyclic voltammetry (CV) was
+measured using a 1 cm2 TiN working electrode, Ag/AgCl pellet reference electrode, and Pt coil
+counter electrode in 1× PBS between -1.3 and 1.3 V at a scan rate of 100 mV/s. TiN was also
+characterized using Raman spectroscopy (Renishaw inVia) and XPS elemental analysis (PHI
+VersaProbe II) with peak fitting (PHI MultiPak). (c) Electrochemical impedance spectroscopy (CH
+Instruments 760D) was performed to verify the reduction in electrode impedance of roughened
+TiN compared to smooth surface electrodes. A 20 mV sinusoidal voltage ranging from 106 to 10-1
+Hz was applied to characterize a 20 µm × 20 µm working TiN test electrode (red) in 10× PBS with
+a large area Pt coil counter electrode and Ag/AgCl reference electrode. A 25 µm × 25 µm Au
+electrode (blue) measured in 1x PBS is shown for comparison. Equivalent circuit model fitting,
+consisting of a double layer capacitor (constant phase element CPE with leakage resistance Rct) at
+the electrode surface, solution resistance (Rs), and parasitic capacitance (Cp) was performed in
+ZView software (Scribner Associates).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         31

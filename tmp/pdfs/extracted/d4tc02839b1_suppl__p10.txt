@@ -1,0 +1,41 @@
+Figure            S12.        Crosstalk evaluation.                    (a)     Illustration of    the      sources             of    crosstalk               when          the
+leads          are       floating.               (b)       Principle                of  crosstalk                reduction                 achieved                by      grounding                  the
+floating             sites        (Va,b=0).                (c)     Comparison                     of    transfer             curves           under floating             and       grounded
+conditions.                   (d,      e) Crosstalk evaluation by     measuring                  uncovered sites with (d) floating
+leads         and       (e)     grounded                leads.          (f) Change             in    Id of    the      (1,1)         site following                the      application
+of gate     voltage (              Vg) to the droplet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure S13. Schematic of the PXI setup.
+
+
+
+
+
+
+
+                                                                                                                                              10

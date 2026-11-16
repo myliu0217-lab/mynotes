@@ -1,0 +1,27 @@
+Supplementary Fig. 3. Coupon processing. A cross-section through the microelectrode array
+(MEA) region shows the pristine wafer with bulk Si substrate (i) post-processed to expose the
+electrodes (ii and iii) followed by lift-off patterning of a protective TiN layer (iv), spin-on
+polyimide encapsulation (v), surface impedance optimization with a second lift-off patterned TiN
+layer (vi), coupon dicing, thinning to remove the bulk of the substrate silicon (Si) down to ~25 µm
+RST (remaining silicon thickness) (vii), parylene encapsulation (viii), and solvent release (ix).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          30

@@ -1,0 +1,70 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+
+the inset of Fig. 1d. Depending on the number of cations encapsulated                     half-wave rectiﬁers by applying a sinusoidal biphasic V AC with a peak-
+inside the bulk of the polymer, we observe signiﬁcant changes in the                      to-peak amplitude of 1 V at 20 Hz (Fig. 2b). For the unsealed p–nOED,
+resultant  current–voltage  (I–V)curvesofthep–nOED,whichwe                                direct exposure of the device to the electrolyte limits device operation
+measure  immediately  after  each  charging  pulse.  The  forward-bias                    to  only  a  few  cycles  due  to  cation  out-diffusion.  Such  “uncapped”
+electronic current level increases as a function of loaded cation con-                    architecture  leads  to  an  approximately  three-fold  decrease  in  the
+centration, resulting from the increased doping levels of the polymers                    saturation peak current. In contrast, sealed devices do not show any
+(via an ion–electron charge compensation mechanism). At a V AC  of                        immediate leakage. We further test the sealed p–n OEDs for over four
+0.8 V, which we chose to remain within the water window, the stored                       hours under continuous operation. We do not observe any signiﬁcant
+charge in each polymer for a ﬁlm capacitance of 2.5 nF is 2 nC. At this                   decay after the continuous application of 20,000 pulses (Fig. 2d). A
+deﬁned maximum injected charge level, the device has a rectiﬁcation                       peak current loss in the range of 10% is apparent after 30,000 pulses
+ratio of >105 as illustrated in Fig. 1d (see online Methods). Cyclic vol-                 due  to  leakage  through  the  polymer  seal.  This  performance  drop,
+tammetry (CV) curves for 15-μm-thick  p(C6NDI-T) ﬁlmsonAuelec-                            however, can be compensated by re-injecting cations through rever-
+trodes show that above 0.2 V vs. Ag/AgCl, the p(C6NDI-T) ﬁlm turns                        sible redox activity/charging of the CPs, ultimately enabling the OEDs
+fully conductive (Supplementary Fig. 2), which is consistent with this                    to remain operational over hours (Fig. 2d).
+measured p–n OED turn-on voltage. This observation veriﬁes that the
+device operation relies on cation migration in and out of the n-type                      Active sensor integration with p–n OED in series
+ﬁlm. In addition, since both the carrier concentration (upon doping)                      To use the p–n OED topology for electrophysiology applications, we
+and electric ﬁeld in the polymer stack increase linearly with V AC,the                    integrateitwithanOECTfortheampliﬁcation  of  bio-potentials.
+forward-biased current characteristics show a quadratic dependence                        Instead of using an external OECT, we utilize the p(g2T-TT) ﬁlm that
+on V AC.Overchargingthep–n OEDs to 4 nC results in a high off-state                       seals the p–n OED  as  an  integrated OECT. This  is achieved by  posi-
+current in the range of ~10 μA since the excess cations are trapped in                    tioning a source contact on the same layer as the anode contact of the
+the n-type polymer in reverse bias, leading to high leakage (Supple-                      p–n OED, which also functions as the drain contact for the OECT. We
+mentary Fig. 3). Additionally, in this overcharged state in forward bias,                 extend the p(g2T-TT) capping layer to the source pad as the exposed
+the p–n OED current exhibits a linear dependence on V AC.                                 OECT channel (Fig. 3a). In this way, the distance between the source
+     The large-signal transient performance of the p–nOEDisdeter-                         pad and SU-8 insulation overlaying the p–nOEDdeﬁnes the channel
+mined by the mobility of cations within the polymer stack. To measure                     length  of  the  OECT.  This  integration  process  offers  a  signiﬁcant
+this, we apply square wave V AC  pulses switching between −0.8 V and                      advantage  over  existing  OEDs,  as our  p–n  OEDs  can  be  seamlessly
+0.8 V. The corresponding chronoamperometry results show that the                          integrated  with  OECTs  using  the  same  fabrication  steps  and  tem-
+forward-bias DC level is reached in as fast as 230-μs with a symmetrical                  perature requirements. By employing this multi-layer fabrication pro-
+turn-off transient (Fig. 1e).                                                             tocol, the entire circuit can be integrated into a single pixel, which is
+                                                                                          comparable in size to a single neuron.
+Long-term stability of p–nOEDs                                                                  The p-type polymer we chose as the OECT channel (and capping
+Despite  the  internal  ionic  conduction,  cation  diffusion  out  of  the               layer),  can be  electrochemically doped  with  electrolyte  anions  (see
+device through the top-contact anode pinholes represents a challenge                      Supplementary Fig. 5 for CV curves). Therefore, in the OECT conﬁg-
+for  stable operation  in  aqueous  environments. To  restrict this  out-                 uration, a negative voltage between an external gate electrode and
+diffusion, we seal the anode pinhole with a CP layer of undoped, p-type                   source contact (V GS) injects electrolyte anions into the channel, dop-
+bithiophene–thienothiophene   unit   bearing   ethylene   glycol   side                   ing p(g2T-TT). The doping levels are expected to be signiﬁcantly lower
+chains,  referred  to  as  p(g2T-TT)29.  To  ensure  better  sealing  and                 under the SU-8 coating as the encapsulation over the drain contact
+increase the length of the diffusion path out of the OED, primarily                       limits the ionic drift underneath. Additionally, in the OECT channel, the
+deﬁned by the thickness of the p(g2T-TT) ﬁlm, we further coat the top                     electrochemical doping occurs in parts of the ﬁlm that are closer to the
+of the p(g2T-TT) seal with a thin ﬁlm of SU-8 photoresist to deﬁne a                      source contact, where the voltage drop is the highest37.
+planar length of 5 μm between the OED and the external electrolyte.                             In the OED–OECT combination, the I–V characteristics of the series
+The fabrication ﬂow of this device architecture is illustrated in Sup-                    connection  of  both  devices  are  deﬁned  by  V GS  and  cathode-source
+plementary Fig. 4.                                                                        potential (V CS). During p–n OED switching, we keep V GS  constant at a
+     Here, we leverage the low cation mobility inside p(g2T-TT) com-                      negative potential, maintaining the p(g2T-TT) ﬁlm in a conductive state
+bined with the SU-8 capping layer to generate an ion barrier over the                     and  simultaneously  deﬁning  the  anode  potential.  We  switch  on  the
+active p–n OED structure and encapsulate the cations inside the p–n                       OED–OECT  by  applying  a  negative V CS.Inthiscase,thep–nOEDis
+OED.  In  CP  ﬁlms,  the  ionic  charge  drift  is  facilitated  by  water                conducting (on state), and the drain current of the OECT passes through
+absorption30.  For  instance,  PEDOT:PSS  ﬁlms  absorb  considerable                      the p–n OED and becomes the “cathode current” (IC). Any modulation in
+water, swelling by over 100% of their dry thickness due to the polar PSS                  the  OECT  current  due  to  changes  in  the  gate  potential  will  thus  be
+content. As a result, the cations in this ﬁlm have high mobility, close to                reﬂected in IC.  In  this on-state,  biopotentials in the  electrolyte  can  be
+that  of  free  ions  in  the  electrolyte  (1.4 × 10−3 cm2 V−1 s−1  for  K+)31.In        effectively ampliﬁedandrecordedbytheOED–OECT. At positive V CS,
+contrast,  despite  the  hydrophilicity  induced  by  glycol  side  chains,               the p–n OED is off, and there is no current ﬂow in the OED–OECT device
+p(g2T-TT)  shows  signiﬁcantly  less  water  absorption,  swelling  only                  due to the rectifying action of the diode (off state).
+∼10%. Therefore, ionic mobility in these ﬁlms is signiﬁcantly lower than                        For  simultaneous  operation  of  the  bottom  p–nOEDandtop
+in  PEDOT:PSS32.  Cations  are  also  caged  inside  the  glycolated  side                OECT, there are some considerations on the geometry of the OECT
+chains, further impeding their transport33.Theprimaryreasontouti-                         channel. We ﬁrst fabricate a single-element p(g2T-TT) OECT and per-
+lize this partial sealing here is to use the electro-active properties of the             form electrical characterization by applying V DS  and V GS  biases. The
+p(g2T-TT)  ﬁlms  for  sensing  applications29,32.Notethatpermanent                        p–n OED is characterized by a V ON  of 0.18-V with an on-state con-
+sealing  with  ion-selective  membranes  with  high  polycation  content                  ductance in the range of 250μS(Fig.1d). The on-state conductance of
+(e.g.,    polydiallyldimethylammonium    chloride)    could    also    be                 the OECT should be kept within this range to ensure high enough V DS
+employed34, and such strategies are commonly used in organic ion                          during  operation.  To  accomplish  this,  we  scale  the  OECT  channel
+pump structures to achieve ion-selective transmission35,36.                               length between the drain contact and SU-8 coating to be around 4 μm
+     To characterize device stability, we compare the sealed p–nOED                       (Fig.  3a).  Corresponding  I–V  characteristics  of  a  single  p(g-2T-TT)
+with an unsealed one (Fig. 2a). We operate both of these p–nOEDsas                        OECT with this channel length are shown in Fig. 3b. Biasing the V DS and
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                             4

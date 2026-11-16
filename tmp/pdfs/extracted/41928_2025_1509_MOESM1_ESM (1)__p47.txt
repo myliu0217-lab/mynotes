@@ -1,0 +1,36 @@
+Supplementary Fig. 19. Post-mortem histological analysis of the porcine brain. (a)
+Photograph of the extracted brain with markers on estimates of the location of histological sections
+(control (i), beneath electrode array (ii), near device perimeter (iii)). The device fractured but
+remained intact during the extraction. Images of histological stainings for (b) hematoxylin and
+eosin (H&E), (c) NeuN, (d) Iba1. Histological sections (5-µm thick) of the left occipital cortex (i),
+taken as a control sample, show no discernable pathological changes. Sections from the left frontal
+cortex taken directly beneath the electrodes (ii) show no significant pathology by H&E stain or an
+immunoperoxidase stain for NeuN. However, a mild reactive microgliosis is highlighted with an
+immunoperoxidase stain for Iba1. Sections from the left frontal cortex taken at the site of a
+placement injury (iii) show a small focus of cortical tissue loss by H&E stain, consistent with
+mechanical injury. An immunoperoxidase stain for NeuN highlights the focal loss of neurons, and
+an immunoperoxidase stain for Iba1 highlights macrophages and reactive microglia associated
+with the cortical lesion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                           46

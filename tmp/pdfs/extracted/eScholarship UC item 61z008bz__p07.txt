@@ -1,0 +1,68 @@
+                        This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+6                                                                                                                                                                                                                          IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+   The  system  in  [24]  added  an  extra  digital  LMS  loop  to                   A. HDNP Analog Module
+the  conﬁguration  of  Fig.  4(a)  for  complete  artifact  signal
+cancellation. The addition of the extra loop is necessary due to                        The neural ampliﬁer is ac-coupled after the multiplexer for
+a  fundamental issue  with  this  conﬁguration that  arises  when                    two  main  reasons:  1)  to  properly  bias  the  neural  ampliﬁer
+a  differential  ampliﬁer  is  used  in  feedback  with  an  artifact                without recourse to EOVs and 2) to convert the input voltage
+canceling  LMS  loop.  In  other  words,  the  LMS  interference-                    into the current domain for EOV subtraction. If the ampliﬁer
+canceling algorithm in Fig. 4(a) is changed due to the added                         were dc-coupled, then Rp must be much less than the electrode
+feedback from node  y[n] to  node d[n]  and, hence, the  algo-                       resistive  impedance to  correctly  bias  the  ampliﬁer.  However,
+rithm  can  no  longer  perform  its  intended  role.  This  change                  the  lower  Rp  gets,  the  higher  the  signal  losses  become  due
+introduces two  problems: the  ﬁrst problem is  that node d[n]                       to   the   potential   division   between   the   electrodes  and   the
+gets converted into an error node e[n] when the algorithm runs                       ampliﬁer  input  impedance.  On  the  other  hand,  if  the  capac-
+for some time. This occurs because the error node is deﬁned                          itors  are  increased,  the  input  signal  will  be  less  attenuated,
+as  e[n] =  d[n] −y[n]  which  is  natively  forced  in  topology                    but  this  trades  off  with  the  analog  module  area  which  will
+of Fig. 4(a) as the ampliﬁer performs continuous subtraction.                        increase. In addition, it attenuates the CDAC canceling signal
+The  second  problem  is  that  the  offset  at  the  output  of  the                which  sees  a  potential  divider  between  the  DAC  capacitors,
+ampliﬁer will disappear over time since it is  subtracted from                       the  ampliﬁer  input  device  parasitic  capacitance,  and  the  ac-
+the input of the neural ampliﬁer, so the LPF will produce zero                       coupling capacitance. This limits the magnitude of the offset
+output at some point in time; this will force node u[n]tobe                          cancellation  signal  to ±65  mV  if  the  CDAC  is  supplied  by
+zero,  which  disturbs  the  stability  of  the  ﬁlter  and  causes  an              1.2 V.
+incorrect interference cancellation mechanism.                                          Since  the  DAC  needs  to  cover  the  full  dynamic  range
+   Fig. 4(b) shows the proposed solutions for the problems of                        of  both  the  EOV  and  the  small  neural  signal,  the  effective
+topology of Fig. 4(a). Since the output signal of the AF, y[n],                      number  of  bits  (ENOB)  requirement  is  relatively  high  at
+carries the EOV value, it can be added to both nodes u[n]and                         15-bit. Therefore, the CDAC is implemented as a second-order
+d[n]  to  cancel  the  subtraction  effect  of  the  neural  ampliﬁer.               /Delta1/Sigma1-Modulator, designed  as  an  error-feedback noise-shaping
+Fig.  4(c)  compares  the  LMS  error  across  multiple  algorithm                   loop  [25],  to  reduce  the  DAC’s  actual  bit-width  from  15  to
+iterations for the method in Fig. 4(a) and the proposed method                       10 bit. Although the /Delta1/Sigma1-Modulator requires additional power,
+in Fig. 4(b). Here, it can be seen that the LMS  algorithm as                        the  reduced  bit-width  offers  more  savings  in  terms  of  DAC
+applied in Fig. 4(b) can reach its full accuracy and conversion                      area  and  eases  the  matching  requirement  of  unit  DAC  ele-
+speed  capability  when  deployed  with  a  differential  ampliﬁer                   ments. The second-order /Delta1/Sigma1-Modulator has an oversampling
+by using the proposed feedback.                                                      ratio  of  32;  this  makes  the  highest  digital  clock  required  to
+   The  overall  proposed  LMS  AF  block  diagram  is  shown                        operate the system to be 10.24 MHz.
+in  Fig.  4(d).  An  additional  unit-delay  block  is  inserted  after                 Finally,  the  open-loop  ampliﬁer  saves  area  by  eliminating
+the node  y[n] for signal timing ﬂow consistency of the LMS                          the need for passive component feedback and instead running
+loop in a TDMA system. Finally, saturation blocks are inserted                       open  loop;  however,  the  offset  caused  by  the  mismatch  of
+at  the  input  of  the  nodes  u[n]andd[n]  to  avoid  algorithm                    the  ampliﬁer  input  differential  pairs  can  easily  cause  satura-
+overﬂow at system startup which helps with LMS conversion                            tion. Fortunately, the proposed digital algorithm can  natively
+and locking to the correct w[n]value.                                                recover from the ampliﬁer input-referred offset.
+                                                                                        The drawback of this open-loop conﬁguration is the inability
+         IV.  PROPOSED NEURAL RECORDING SYSTEM                                       of using choppers to further decrease noise. If choppers were
+                                                                                     used, the ampliﬁer offset would be up modulated, causing the
+   Fig. 5 shows a block-level diagram of the proposed neural                         ampliﬁer  to  saturate,  and  the  digital  algorithm  would  not  be
+recording system. The system is composed of a high-density                           able to recover the neural signal in that case. Instead, the only
+neural  pixel  (HDNP),  a  highspeed  digital  MUX,  and  an  RF                     ways  to  reduce  ﬂicker  noise  in  the  proposed  approach  are:
+module  with  integrated  antenna.  This  work  focuses  on  the                     1) use a separate feedback LMS loop that deals with chopped
+design of the HDNP only, and the rest will be considered as                          offset signals and 2) increase the devices sizes, but this solution
+future work. Each HDNP block consists of 16 fully differential                       increases the input parasitic capacitance, hence, lowering DAC
+input recording channels: a 16:1 analog multiplexer combines                         cancellation  capabilities.  The  latter  solution  is  used  in  the
+the neural signals onto an ac-coupled fully differential neural                      proposed  system  as  it  requires  less  on-chip  area  and  is  still
+ampliﬁer  which  is  biased  by  pseudo  resistors,  Rp.  A  10-bit                  amortized across all of the channels.
+SAR  ADC  digitizes  each  code  and  passes  it  to  the  on-chip                      The input impedance of the HDNI AFE system  should be
+DSP  module  for  EOV  estimation.  Then,  the  DSP  passes                          designed  to  be  much  higher  than  the  electrode  impedance
+the  continuously  updated  estimates  to  a  10-bit  capacitive                     to  avoid  signal  attenuation,  due  to  potential  division,  at  the
+DAC  (CDAC)  which  performs  electrode  EOV  cancellation                           system  input  interface.  Since  the  implantable electrode  sizes
+in  the  current  domain.  The  neural  ampliﬁer  is  left  in  an                   are  expected  to  be  very  small  as  the  number  of  record-
+open-loop  conﬁguration  to  eliminate  any  feedback  passive                       ing  channels  increase,  the  electrode  impedance  is  expected
+devices that may increase the area. The gain and BW, however,                        to  increase  as  well.  This  poses  a  design  challenge  on  the
+are adjustable and can be optionally controlled by the digital                       overall  AFE.  Fig.  6  compares  input  impedance  simulation
+module to overcome process variations if needed.                                     results  of  a  chopper-based  AFE  versus  a  different  number
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

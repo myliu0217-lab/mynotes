@@ -1,0 +1,71 @@
+860                                                                                                           IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 15, NO. 5, OCTOBER 2021
+  A 1024-Channel 10-Bit 36-µW/ch CMOS ROIC for
+                  Multiplexed GFET-Only Sensor Arrays in
+                                                            Brain Mapping
+
+     Jose Cisneros-Fernández                , Ramon Garcia-Cortadella                 , Xavi Illa       , Javier Martínez-Aguilar, Jens Paetzold,
+       Rainer Mohrlok, Marius Kurnoth, Christoph Jeschke, Lluís Terés, Jose A. Garrido, Anton Guimerà-Brunet,
+                                                  and Francisco Serra-Graells                 , Member, IEEE
+
+
+
+   Abstract—This paper presents a 1024-channel neural read-out                                                     I.  INTRODUCTION
+integrated circuit (ROIC) for solution-gated GFET sensing probes                             EUROSCIENTISTS are demanding large-scale recording
+in  massive   µECoG  brain  mapping.  The  proposed  time-domain
+multiplexing of GFET-only arrays enables low-cost and scalable                       N       systems for deciphering the fundamental mechanisms and
+hybrid headstages. Low-power CMOS circuits are presented for                         processes that take place in human brain and whose knowledge
+the GFET analog frontend, including a CDS mechanism to im-                           is critical to develop more effective therapies for neurological
+prove preampliﬁer noise ﬁgures and 10-bit 10-kS/s A/D conversion.                    injuries [1], treatment-resistant disorders [2] and neurodegener-
+The 1024-channel ROIC has been fabricated in a standard 1.8-V
+0.18-µm  CMOS  technology  with  0.012  mm               2  and  36   µ  Wper        ative diseases [3]. One of the key enabling technologies that can
+channel. An automated methodology for the in-situ calibration of                     improve the spatiotemporal resolution of these brain interfaces
+each GFET sensor is also proposed. Experimental ROIC tests are                       are the CMOS read-out integrated circuits (ROICs) speciﬁcally
+reported using a custom FPGA-based            µECoG headstage with         16  ×     conceived for neural mapping. Their research interest is evident
+32and32      ×  32GFET probes in saline solution and agar substrate.                 given the number of neural ROICs published in literature during
+Compared to state-of-art neural ROICs, this work achieves the                        the last ﬁfteen years [4]–[78].
+largest scalability in hybrid platforms and it allows the recording
+of infra-slow neural signals.                                                            In general, the morphology of neural ROICs can be classiﬁed
+   Index  Terms—Integrated  circuits,  ROIC,  neural  recording,                     according to the three major applications illustrated in Fig. 1(a):
+µECoG, GFET, CMOS, TDM, CDS, ADC, headstage.                                         high-density arrays for cell culture [4]–[19], penetrating shanks
+                                                                                     for intracortical recording [20]–[45] and conformal probes for
+  Manuscript received May 30, 2021; revised July 30, 2021 and September 2,           micro-electrocorticography (μECoG) [46]–[78]. Electrophysio-
+2021; accepted September 7, 2021. Date of publication September 20, 2021;            logical signals to be read out in each recording site may contain
+date of current version December 9, 2021. This work was supported in part by
+European Commission under Project BrainCom Grant H2020-FETPROACT-                    low-frequency (i.e. 1 Hz to 1 kHz) local ﬁeld potentials (LFPs) as
+2016-732032. This paper was recommended by Associate Editor Dr. Y. Liu.              well as high-frequency (i.e. 1 kHz to 10 kHz) single-unit active
+(Corresponding author: Francisco Serra-Graells.)                                     potential spikes, depending on the particular array density, with
+  Jose  Cisneros-Fernández  and  Javier  Martínez-Aguilar  are  with  the  In-
+stituto  de  Microelectrónica  de  Barcelona,  IMB-CNM(CSIC),  08193  Cer-           practical dynamic range values around 10 b and full-scale am-
+danyola  del  Vallès,  Spain  (e-mail:  jose.cisneros@imb-cnm.csic.es;  javier.      plitudes in the mV-range [79]. In most cases, recording sites are
+martinez@imb-cnm.csic.es).                                                           built from passive microelectrode arrays (MEAs) for either cell
+  Ramon Garcia-Cortadella is with the Catalan Institute of Nanoscience and
+Nanotechnology (ICN2), CSIC and BIST, 08193 Cerdanyola del Vallès, Spain             culture [6], intracortical recording [27] or             μECoG [80]. How-
+(e-mail: ramon.garcia@icn2.cat).                                                     ever, active sensors based on solution-gated graphene ﬁeld-effect
+  Xavi Illa and Anton Guimerà-Brunet are with the Instituto de Microelec-            transistors  (GFETs)  are  opening  new  possibilities,  like  early
+trónica de Barcelona, IMB-CNM(CSIC), 08193 Cerdanyola del Vallès, Spain,
+and  also  with  Centro  de  Investigación  Biomédica  en  Red  en  Bioingeniería,   ampliﬁcation  and  multiplexing  at  array  level  [81],  improved
+Biomateriales y Nanomedicina (CIBER-BBN), 28029 Madrid, Spain (e-mail:               electrochemical stability in chronic implants with very low-rate
+xavier.illa@imb-cnm.csic.es; anton.guimera@imb-cnm.csic.es).                         drifts  [82],  low-impedance  sensor-to-circuit  interconnectivity
+  Jens Paetzold, Rainer Mohrlok, Marius Kurnoth, and Christoph Jeschke are
+with the Multi Channel Systems GmbH, 72770 Reutlingen, Germany (e-mail:              that  tends  to  mitigate  signal  loss,  and  DC  coupling  that  can
+paetzold@multichannelsystems.com;      mohrlok@multichannelsystems.com;              unlock the infra-slow (i.e. below 0.1 Hz) neural signals [83].
+kurnoth@multichannelsystems.com; jeschke@multichannelsystems.com).                   All these advantages are at the cost of extra power consumption
+  Jose A. Garrido is with the Catalan Institute of Nanoscience and Nanotechnol-
+ogy (ICN2), CSIC and BIST, 08193 Cerdanyola del Vallès, Spain, and also with         in the sensing array and a challenging sensor downscaling.
+the Catalan Institution for Research and Advanced Studies, 08010 Barcelona,              The  required  connectivity  from  the  recording  sites  of  the
+Spain (e-mail: joseantonio.garrido@icn2.cat).                                        sensing array to the analog frontend (AFE) circuits of the ROIC
+  Lluís Terés and Francisco Serra-Graells are with the Instituto de Microelec-
+trónica de Barcelona, IMB-CNM(CSIC), Spain, and also with the Department of          can follow dedicated point-to-point [19], [32]–[45], [49]–[78]
+Microelectronics and Electronic Systems, Universitat Autònoma de Barcelona,          or  time-domain  multiplexing  [4]–[18],  [20]–[31],  [46]–[48]
+08193  Cerdanyola  del  Vallès,  Spain  (e-mail:  lluis.teres@imb-cnm.csic.es;       schemes. In terms of integration, monolithic solutions [4]–[18],
+paco.serra@imb-cnm.csic.es).
+  Color  versions  of  one  or  more  ﬁgures  in  this  article  are  available  at  [24]–[31], [44], [45], [48] build the sensing array in the same
+https://doi.org/10.1109/TBCAS.2021.3113556.                                          chip  substrate  as  the  read-out  circuits,  typically  by  CMOS
+  Digital Object Identiﬁer 10.1109/TBCAS.2021.3113556
+
+                          1932-4545 © 2021 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+                                           See https://www.ieee.org/publications/rights/index.html for more information.
+
+
+
+        Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

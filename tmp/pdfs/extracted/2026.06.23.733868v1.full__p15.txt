@@ -1,0 +1,52 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    Conclusion
+              We have demonstrated a monolithic FIC platform for active neural sensing that addresses
+    the fundamental interconnect bottleneck              that has limited passive electrode arrays. By adapting
+    high-definition AMOLED display technology to neural interfaces, our a-IGZO TFT-based
+    system achieved O(√𝑛) interconnect scaling (with next-generation scaling methodologies
+    presented in Supplementary Fig. 35 - 39) through in-pixel power amplification and row-column
+    multiplexing while maintaining mechanical compliance with neural tissue.                         Critical innovations
+    in thin film device fabrication and architecture            s helped to enable this technology, including
+    contact engineering, surface treatment, and careful attention to layer stack                    -up design. Year-long
+    accelerated aging studies projected >38-year operational lifetimes for our hybrid ALD
+    Al2O3/polyimide encapsulation stack, bringing into question the need for bulky metallic or
+    ceramic enclosures used in conventional implantable electronics. Acute and chronic in vivo
+    validation in the rat model confirmed safe operation with negligible thermal burden, signal
+    quality exceeding comparable passive arrays, and maintained functionality over 30 days of
+    implantation. These results, to our knowledge, represent the first demonstration of a fully
+    integrated flexible TFT-based active neural interface maintaining chronic functionality.
+
+              Compared to silicon-based active neural interfaces, our approach offers distinct
+    advantages in mechanical compliance and substrate-agnostic fabrication, offering the potential to
+    reduce implant invasiveness over thicker, more rigid alternatives. The monolithic fabrication
+    approach presented here provides an easier path to high-yield commercial fabrication at volume
+    while maintaining full design flexibility for future design optimizations as compared to more
+    heterogeneous fabrication approaches which may require more advanced integration strategies
+    that may compromise hermeticity of encapsulation and set limits on implant size                         . These
+    advantages make our approach amenable to more traditional panel manufacturing flows which
+    further elevates the likelihood of future clinical translation.
+              Looking forward, several exciting pathways exist to advance this platform toward clinical
+    viability. First, incorporating in-pixel compensation circuits - such as threshold voltage and bias
+    stress compensation - would dramatically improve gain uniformity and device stability across
+    larger arrays. Second, integrating dynamic shift registers for gate driver addressing, as employed
+    in modern AMOLED displays, could reduce interconnect scaling even further, unlocking the
+    potential for broader cortical coverage with higher channel counts. A third future direction is to
+    directly integrate an ASIC similar to the one our group developed at UCSD37 into the flexible
+    substrate through flip-chip bonding to consolidate all analog front-end, digitization, and clock
+    generation into a single ultra-low-profile implantable package. This approach would reduce the
+    entire system size to a highly scalable and easily implantable form factor, though it should be
+    noted that the integration of rigid ASICs directly into the flexible substrate would require
+    significant technological development and introduces many challenges that were discussed in the
+    above introduction section. Finally, if thin film transistor technology ever advances to a point
+    where the mixed-signal front-end circuitry can be reasonably implemented on-flex, this would
+    unlock the potential for fully monolithic implants. Unfortunately, for this ultimate dream to be
+    realized, several technology blocks are still needed, including a thin-film battery or super
+    capacitor and a more advanced complementary thin film transistor technology
+
+    Methods
+    Fabrication of FIC

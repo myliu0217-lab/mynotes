@@ -1,0 +1,59 @@
+ARTICLE
+
+https://doi.org/10.1038/s41467-020-20546-w                   OPEN
+Graphene active sensor arrays for long-term and
+wireless mapping of wide frequency band
+epicortical brain activity
+
+R. Garcia-Cortadella1,9, G. Schwesig2,9, C. Jeschke3, X. Illa                            4,5, Anna L. Gray6, S. Savage6, E. Stamatidou6,
+I. Schiessl       7, E. Masvidal-Codina4,5, K. Kostarelos                      1,6, A. Guimerà-Brunet4,5, A. Sirota2✉ &
+J. A. Garrido         1,8✉
+
+
+
+
+Graphene  active  sensors  have  demonstrated  promising  capabilities  for  the  detection  of
+electrophysiological  signals  in  the  brain.  Their  functional  properties,  together  with  their
+ﬂexibility  as  well  as  their  expected  stability  and  biocompatibility  have  raised  them  as  a
+promising  building  block  for  large-scale  sensing  neural  interfaces.  However,  in  order  to
+provide reliable tools for neuroscience and biomedical engineering applications, the maturity
+of this  technology  must  be  thoroughly  studied.  Here,  we evaluate  the  performance  of 64-
+channel  graphene  sensor  arrays  in  terms  of  homogeneity,  sensitivity  and  stability  using  a
+wireless,  quasi-commercial  headstage  and  demonstrate  the  biocompatibility  of  epicortical
+graphene chronic implants. Furthermore, to illustrate the potential of the technology to detect
+cortical  signals  from  infra-slow  to  high-gamma  frequency  bands,  we  perform  proof-of-
+concept long-term wireless recording in a freely behaving rodent. Our work demonstrates the
+maturity  of  the  graphene-based  technology,  which  represents  a  promising  candidate  for
+chronic, wide frequency band neural sensing interfaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 Catalan Institute of Nanoscience and Nanotechnology (ICN2), CSIC and BIST, Campus UAB, Bellaterra, 08193 Barcelona, Spain.  2 Bernstein Center for
+Computational Neuroscience Munich, Faculty of Medicine, Ludwig-Maximilians Universität München, Planegg-Martinsried, Germany.  3 Multi Channel
+Systems (MCS) GmbH, Reutlingen, Germany.  4 Instituto de Microelectrónica de Barcelona, IMB-CNM (CSIC), Esfera UAB, Bellaterra, Spain.  5 Centro de
+Investigación Biomédica en Red en Bioingeniería, Biomateriales y Nanomedicina (CIBER-BBN), Madrid, Spain.  6 Nanomedicine Lab, National Graphene
+Institute and Faculty of Biology, Medicine & Health, University of Manchester, Manchester, UK.  7 Division of Neuroscience and Experimental Psychology,
+School of Biological Sciences, Faculty of Biology, Medicine and Health, University of Manchester, Manchester M13 9PT, UK. 8 ICREA, Pg. Lluís Companys 23,
+08010 Barcelona, Spain.  9These authors contributed equally: R. Garcia-Cortadella, G. Schwesig. ✉email: sirota@biologie.uni-muenchen.de; joseantonio.
+garrido@icn2.cat
+
+NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications                                                1

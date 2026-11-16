@@ -1,0 +1,2 @@
+Supplementary Figure 7. Transconductance as a function of frequency. The OECT has a 250-nm thick channel
+and gm (normalized to maximum gm) is measured with a 𝑉𝐺𝑆 of -0.3 V and a 𝑉𝐷𝑆 of 0.3 V. (n=5 measurements.)

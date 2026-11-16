@@ -1,0 +1,5 @@
+Supplementary Figure 6. Response characteristics of the single-element OECT and OED-OECT stack. a) OECT
+and OED-OECT stacks in diode-configured operation. A common voltage is applied to 𝑉𝐷𝑆 and 𝑉𝐺𝑆 (on top) for
+OECTs and a common voltage is applied to 𝑉𝐶𝑆 and 𝑉𝐺𝑆 (on bottom) for OED-OECT stacks. b) I-V characteristics of
+diode configured devices. The blue curve is the resulting 𝐼𝐷 response of the OECT and the green curve is the resulting
+𝐼𝐶 response of the OED-OECT stack. (n=5 for each measurement.)

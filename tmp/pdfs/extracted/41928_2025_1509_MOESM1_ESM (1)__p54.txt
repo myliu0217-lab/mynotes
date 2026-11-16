@@ -1,0 +1,44 @@
+Supplementary Fig. 26. Receptive fields (RF) estimated from unfiltered response and the
+retinotopic maps of two components. (a) Dot-triggered-average of one example channel
+response without band-passed filtering. (b) Two component decomposition of the receptive field
+in (a). Each component is time-space separated and the spatial profile is approximated by 2D
+Gaussian function. (c) RF location of the first component, i.e. the one with smaller spatial extent.
+Dense recordings on one corner of the chip are analyzed in the same fashion, shown in inset figures
+on both sides. (d) RF location of the second component, i.e. the one with larger spatial extent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         53

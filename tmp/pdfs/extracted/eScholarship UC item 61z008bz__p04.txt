@@ -1,0 +1,68 @@
+                        This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+FATHY  et al.:  DIGITALLY ASSISTED MULTIPLEXED NEURAL RECORDING SYSTEM                                                                                                                                          3
+
+
+                                                                                     digitization by the ADC. Accordingly, demodulation needs to
+                                                                                     be  on  the  analog  side  instead  of  the  digital  side  which  adds
+                                                                                     undesired area per channel.
+                                                                                        The  second  problem  with  CDMA  is  using  a  digital-like
+                                                                                     coding scheme in an AMS system. CDMA expects a constant
+                                                                                     input during the entire code length period to cancel crosstalk
+                                                                                     completely.  However,  when  CDMA-chips  code  an  analog
+                                                                                     waveform that is slightly changing over time during the code
+                                                                                     period,  it  results  in  slight  delta  errors  each  time  the  coded
+                                                                                     signal is sampled. Table I illustrates the issue mathematically
+                                                                                     with  an  (N  =  4)  channels  example.  H4  Hadamard  codes
+                                                                                     are  used  to  code  the  analog  input  amplitudes {a,  b  ,  c,and
+                                                                                     d}  at  instance  T0;  then,  at  T1→3,all/Delta1V in, j,where j  is  the
+                                                                                     time  index,.  errors  start  accumulating  on  the  summing  node
+                                                                                     of the CDMA-TX. An ideal CDMA system is achieved if all
+                                                                                     /Delta1V in, j  are  set  to  zero. On  the  CDMA-RX  side,  the  received
+                                                                                     summation  already  includes  the  /Delta1V in, j   errors;  hence,  the
+                                                                                     integrate and dump from T0→3 result N-times the signal power
+                                                                                     plus  a  total  error  sum  of δi,wherei  is  the  channel  index.
+                                                                                     Simulation results of a 16-channels system with neural signals
+                                                                                     of a few 100 mV at 10-kHz BW show that the input referred
+                                                                                     noise (IRN) can be as high as 30 μVrms. To avoid this issue,
+                                                                                     a  sample-and-hold  at  the  input  of  the  AFE  is  required  as
+                                                                                     proposed in  [23],  which  due  to  kT/C  noise  reasons,  requires
+                                                                                     an increased per-channel area.
+                                                                                        For  these  reasons,  CDMA  encoding  suffers  from  difﬁcult
+                                                                                     issues and thus remains an active area of research as well.
+Fig.  2.      (a)  FDMA,  (b)  CDMA,  and  (c)  TDMA  system  block  diagrams
+adapted  to neural  recording  applications.                                         C. Time-Division Multiple Access
+
+                                                                                        It  should  be  clear  now  that  FDMA  and  CDMA  require
+   Such  an  approach  has  been  used  in  distributed  electroen-                  signiﬁcant  overhead  in  either  the  analog  or  digital  domains
+cephalogram  (EEG)  systems  [21]  to  share  the  ADC  among                        to  be  used  in  HDNI  systems.  On  the  other  hand,  Fig.  2(c)
+all  recording  channels,  and  in  implanted  neural  recording                     shows  a  TDMA  system  block  diagram  which  requires  very
+systems  [22]  to  share  the  RF  module.  Since  on-chip  EOV                      minimal  overhead:  1)  AFE  multiplexer  can  have  a  simple
+cancellation  is  required  to  avoid  the  saturation  of  the  IA,                 equivalent  digital  demultiplexer  in  the  back  end  to  recover
+sharing  the  IA  and  ADC  by  using  FDMA  requires  on-chip                       the input neural signals [18]; 2) single neural ampliﬁer of BW
+demodulation  to  ﬁlter  out  the  EOV  from  each  channel  and                     (2 ×  fs × N), where  fs  is the neural signal BW, is sufﬁcient
+cancel it from the IA input. An FDMA on-chip demodulation                            to  amplify  the  multiplexed  neural  signals;  and  3)  Nyquist
+typically requires analog/mixed-signal (AMS) circuitry like a                        ADC  with  a  sampling  rate  similar  to  the  neural  ampliﬁer
+frequency-locked loop (FLL), modulators, and demodulators.                           BW.  For  these  reasons,  TDMA  enables  a  potentially  very
+This  overhead in  terms  of  power  and  area is  usually  high  in                 compact overall implementation which is  an  excellent ﬁt  for
+this approach which defeats the purpose toward HDNI appli-                           HDNI applications. However, since each electrode can have a
+cations. Cutting down the area and power of peripheral circuits                      different (time-varying) offset voltage, careful design attention
+to make FDMA competitive is an active area of research.                              is required to keep a TDMA system from saturating the front
+                                                                                     end  in  a  small  area,  even  when  ac  coupling  capacitors  are
+B. Code Division Multiple Access                                                     employed.
+   Fig. 2(b) shows an  N-channel CDMA-based neural record-                                                 III.  EOV CANCELLATION
+ing  system  block  diagram,  where  neural  signals  are  coded
+with a set of perfect orthogonal codes like Walsh–Hadamard                              The  removal of  EOV  for  a  multiple  access  system  can  be
+(C j). Conveniently, the code is digital-like and can be fed to                      tricky. Since each channel has its own isolated random time-
+a chopper.                                                                           varying EOV, depending on the multiple access scheme used,
+   Unfortunately, utilizing CDMA for analog interfaces suffers                       the  EOV  at  the  ampliﬁer  input  can  change.  For  example,
+from  two  main  problems.  The  ﬁrst  problem  is  the  inability                   in  FDMA  and  CDMA,  the  systems  depend  on  adding  the
+to  use  the  coding  choppers  to  reduce  the  ampliﬁer  ﬂicker                    modulated  channels  on  a  single  summing  node,  as  shown
+noise.  This  is  because  an  analog  low-pass  ﬁlter  (LPF)  after                 in  Fig.  2(a)  and  (b);  hence,  the  total  EOV  get  multiplied
+each  decoded  channel  is  normally  essential  to  attenuate  the                  by  sqrt(N)  at  the  input  of  the  neural  ampliﬁer.  In  con-
+up-modulated ﬂicker noise and offset of the ampliﬁer prior to                        trast,  in  TDMA  systems,  each  channel  has  its  own  isolated
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

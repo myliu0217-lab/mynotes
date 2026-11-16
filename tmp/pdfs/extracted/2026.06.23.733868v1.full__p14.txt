@@ -1,0 +1,50 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    relevant characteristics were assessed prior to each recording through a bias sweeping procedure
+    discussed in Supplementary Fig. 25. Sensory evoked recordings performed on days 2, 7, 10, 13,
+    16, and 23 consistently captured whisker deflection responses with clear spatiotemporal structure
+    (Fig. 4 D-E), though the final recording on day 31 was unsuccessful due to a partially damaged
+    headstage. Trial-averaged high-gamma signals revealed peak z-scores around 5σ in the first
+    recording on Day 2 with some variation and gradual decline across the study duration attributed
+    to the variable nature of evoked sensory responses under anesthesia together with the observed
+    development of fibrotic encapsulating tissue. Nevertheless, the spatiotemporal wave dynamics of
+    evoked responses remained consistent across recording days, with weighted centroids clustering
+    within a ~400 μm region of the array (Supplementary Fig. 34), with subtle differences in
+    propagation direction and spatial spreading which is believed to be related to variation in whisker
+    stimulation, anesthesia, and encapsulation tissue development between the implant and the
+    cortex. These results demonstrate that the addressing architecture maintained channel
+    independence and spatial fidelity throughout the implant duration, regardless of a weakening
+    signal source due to the natural angiogenesis associated with wound healing.
+
+              Post-explant analysis revealed 1-2 mm thick fibrous encapsulation surrounding the
+    cranial window and underlying the array - an expected foreign body response for epidural
+    implants. Despite this tissue growth, the flexible array remained mechanically intact with no
+    visible delamination, cracking, or material degradation. Scanning electron microscopy of the
+    explanted array after thorough cleaning showed surface morphology and cross-sectional layer
+    thicknesses identical to a pre-implant reference sample, with no evidence of Al2O3 dissolution,
+    polyimide swelling or degradation, or platinum electrode corrosion or delamination (Fig. 4 F-G).
+    This structural preservation after 30 days of in vivo exposure, combined with the maintained
+    electrical functionality, strongly suggests that the encapsulation strategy is viable for long-term
+    implantation.
+
+              The chronic study represents the first published demonstration of a fully integrated
+    flexible TFT-based active neural interface maintaining functionality over multiple weeks in vivo.
+    While the one-month duration is modest compared to multi-year clinical requirements, the
+    combination of projected encapsulation lifetime (>38 years), stable device characteristics, and
+    successful signal capture establishes a foundation for translational development. Key challenges
+    for future work include reducing foreign body response through subdural placement, improving
+    per-pixel gain uniformity through compensation circuitry, and extending the channel count
+    through the combined use of custom driver integrated circuitry and TFT-based shift-register gate
+    addressing.
+
+              Towards these goals, we also developed and validated TFT-based dynamic shift-register
+    architectures shown in Supplementary Fig. 35 - 39 which paves the way for future flexibility
+    scalability improvements. In modern-day AMOLED displays, gate-on-array (GOA) approaches
+    have unlocked unprecedented scalability in pixel densities and                  narrow display panel boarders.
+    The NMOS-only dynamic shift-register architecture provides a feasible pathway for
+    implementing next-generation flexible active neural interface circuits which can                      scale towards
+    pixel densities comparable to modern            -day mobile displays (e.g. millions of pixels).

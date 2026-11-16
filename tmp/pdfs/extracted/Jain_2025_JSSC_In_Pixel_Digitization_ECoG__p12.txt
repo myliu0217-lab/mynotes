@@ -1,0 +1,85 @@
+                          This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+12                                                                                                                                                                                                                  IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+[25]   D.  Han,  Y.  Zheng,  R.  Rajkumar,  G.  Dawe,  and  M.  Je,  “A  0.45V                           [44]   W.    Jiang,    V.    Hokhikyan,    H.    Chandrakumar,    V.    Karkare,    and
+       100-channel neural-recording IC with sub-µW/channel consumption in                                       D. Markovic,   “A  ±50-mV   linear-input-range   VCO-based   neural-
+       0.18µm CMOS,” in           Proc. IEEE Int. Solid-State Circuits Conf. Dig. Tech.                         recording    front-end    with    digital    nonlinearity    correction,”    IEEE
+       Papers, Feb. 2013, pp. 290–291, doi:   10.1109/ISSCC.2013.6487739.                                       J.  Solid-State  Circuits,  vol.  52,  no.  1,  pp. 173–184,  Jan.  2017,  doi:
+[26]   J.   Xu   et   al.,   “Fascicle-selective   ultrasound-powered   bidirectional                           10.1109/JSSC.2016.2624989.
+       wireless  peripheral  nerve  interface  IC,”  IEEE  Trans.  Biomed.  Cir-                         [45]   R. Theertham and S. Pavan, “Unified analysis, modeling, and simulation
+       cuits    Syst.,    vol.    17,    no.    6,    pp. 1237–1256,    Dec.    2023,    doi:                   of chopping artifacts in continuous-time delta-sigma modulators,” IEEE
+       10.1109/TBCAS.2023.3332258.                                                                              Trans.  Circuits  Syst.  I,  Reg.  Papers,  vol.  66,  no.  8,  pp. 2831–2842,
+[27]   R.  Müller,  S.  Gambini,  and  J.  M.  Rabaey,  “A  0.013  mm2  5µW  DC-                                Aug. 2019, doi: 10.1109/TCSI.2019.2907167.
+       coupled  neural  signal  acquisition  IC  with  0.5  V  supply,”  in  Proc.                       [46]   G.   Taylor   and   I.   Galton,   “A   reconfigurable   mostly-digital   delta-
+       IEEE  Int.  Solid-State  Circuits  Conf.,  Feb.  2011,  pp. 302–304,  doi:                               sigma    ADC    with    a    worst-case    FOM    of    160    dB,”    IEEE    J.
+       10.1109/ISSCC.2011.5746328.                                                                              Solid-State   Circuits,   vol.   48,   no.   4,   pp. 983–995,   Apr.   2013,   doi:
+[28]   E.  A.  Brown,  J.  D.  Ross,  R.  A.  Blum,  Y.  Nam,  B.  C.  Wheeler,                                 10.1109/JSSC.2013.2239113.
+       and S. P. DeWeerth, “Stimulus-artifact elimination in a multi-electrode                           [47]   A.  C.  Paulk  et  al.,  “Microscale  physiological  events  on  the  human
+       system,”  IEEE  Trans.  Biomed.  Circuits  Syst.,  vol.  2,  no.  1,  pp. 10–21,                         cortical   surface,”   Cerebral   Cortex,   vol.   31,   no.   8,   pp. 3678–3700,
+       Mar. 2008, doi: 10.1109/TBCAS.2008.918285.                                                               Jul. 2021, doi: 10.1093/cercor/bhab040.
+[29]   N.  S.  K.  Fathy,  J.  Huang,  and  P.  P.  Mercier,  “A  digitally  assisted                    [48]   W.  Zhao  et  al.,  “A  0.025-mm2   0.8-V  78.5-dB  SNDR  VCO-based
+       multiplexed  neural  recording  system  with  dynamic  electrode  offset                                 sensor   readout   circuit   in   a   hybrid   PLL-16            m   structure,”   IEEE
+       cancellation  via  an  LMS  interference-canceling  filter,”  IEEE  J.  Solid-                           J.  Solid-State  Circuits,  vol.  55,  no.  3,  pp. 666–679,  Mar.  2020,  doi:
+       State Circuits, vol. 57, no. 3, pp. 953–964, Mar. 2022.                                                  10.1109/JSSC.2019.2959479.
+[30]   C. Mora Lopez et al., “A neural probe with up to 966 electrodes and up                            [49]   S.  C.  Tan  and  X.  W.  Sun,  “Low  power  CMOS  level  shifters  by
+       to  384  configurable  channels  in  0.13  µm  SOI  CMOS,”     IEEE  Trans.                              bootstrapping technique,” Electron. Lett., vol. 38, no. 16, pp. 876–878,
+       Biomed.  Circuits  Syst.,  vol.  11,  no.  3,  pp. 510–522,  Jun.  2017,  doi:                           Aug. 2002, doi: 10.1049/el:20020627.
+       10.1109/TBCAS.2016.2646901.                                                                       [50]   E. Hogenauer, “An economical class of digital filters for decimation and
+[31]   C. Lee et al., “A 6.5-µW 10-kHz BW 80.4-dB SNDR G            m-C-Based CT                                interpolation,” IEEE Trans. Acoust., Speech, Signal Process., vol. ASSP-
+       16  modulator  with  a  feedback-assisted  gm  linearization  for  artifact-                             29, no. 2, pp. 155–162, Apr. 1981, doi: 10.1109/TASSP.1981.1163535.
+       tolerant neural recording,” IEEE J. Solid-State Circuits, vol. 55, no. 11,                        [51]   M.    Ganji    et    al.,    “Selective    formation    of    porous    pt    nanorods
+       pp. 2889–2901, Nov. 2020, doi: 10.1109/JSSC.2020.3018478.                                                for   highly   electrochemically   efficient   neural   electrode   interfaces,”
+[32]   X. Yang et al., “An AC-coupled 1st-order 1-16     S readout IC for area-                                 Nano    Lett.,    vol.    19,    no.    9,    pp. 6244–6254,    Sep.    2019,    doi:
+       efficient neural signal acquisition,” IEEE J. Solid-State Circuits, vol. 58,                             10.1021/acs.nanolett.9b02296.
+       no. 4, pp. 949–960, Apr. 2023, doi: 10.1109/JSSC.2023.3234612.                                    [52]   Y.  Tchoe  et  al.,  “An  electroencephalogram  microdisplay  to  visual-
+[33]   S.  Wang  et  al.,  “A  compact  chopper  stabilized 1-16     S  neural  readout                         ize  neuronal  activity  on  the  brain  surface,”  Sci.  Translational  Med.,
+       IC  with  input  impedance  boosting,”  IEEE  Open  J.  Solid-State  Circuits                            vol.  16,  no.  744,  Apr.  2024,  Art.  no.  eadj7257,  doi:  10.1126/sci-
+       Soc., vol. 1, pp. 67–78, 2021, doi:        10.1109/OJSSCS.2021.3113887.                                  translmed.adj7257.
+[34]   H.  Jeon,  J.-S.  Bang,  Y.  Jung,  I.  Choi,  and  M.  Je,  “A  high  DR,  DC-                   [53]   Y.  Tchoe  et  al.,  “Considerations  and  recent  advances  in  nanoscale
+       coupled, time-based neural-recording IC with degeneration R-DAC for                                      interfaces with neuronal and cardiac networks,” Appl. Phys. Rev., vol. 8,
+       bidirectional  neural  interface,”  IEEE  J.  Solid-State  Circuits,  vol.  54,                          no. 4, Dec. 2021, Art. no. 041317, doi: 10.1063/5.0052666.
+       no. 10, pp. 2658–2670, Oct. 2019.                                                                 [54]   Digital     Electrophysiology     Stimulator/Amplifier     Chip.     Accessed:
+                                                                                                                May  29,  2024.  [Online].  Available:  https://intantech.com/files/Intan_
+[35]   M.   R.   Pazhouhandeh,   M.   Chang,   T.   A.   Valiante,   and   R.   Genov,                          RHS2116_datasheet.pdf
+       “Track-and-zoom  neural  analog-to-digital  converter  with  blind  stimu-                        [55]   R. Vatsyayan and S. A. Dayeh, “A universal model of electrochemical
+       lation  artifact  rejection,”  IEEE  J.  Solid-State  Circuits,  vol.  55,  no.  7,                      safety  limits  in  vivo  for  electrophysiological  stimulation,”  Frontiers
+       pp. 1984–1997, Jul. 2020.                                                                                Neurosci., vol. 16, Oct. 2022, Art. no. 972252.
+[36]   D.  Wendler  et  al.,  “A  0.0046-mm2  two-step  incremental  delta-sigma
+       analog-to-digital converter neuronal recording front end with 120-mvpp
+       offset  compensation,”  IEEE  J.  Solid-State  Circuits,  vol.  58,  no.  2,
+       pp. 439–450, Feb. 2023, doi: 10.1109/JSSC.2022.3190446.
+[37]   C. Kim, S. Joshi, H. Courellis, J. Wang, C. Miller, and G. Cauwenberghs,
+       “Sub-µV                rms-noise  sub-µW/channel  ADC-direct  neural  recording  with
+       200-mV/ms  transient  recovery  through  predictive  digital  autoranging,”
+       IEEE J. Solid-State Circuits, vol. 53, no. 11, pp. 3101–3110, Nov. 2018,
+       doi: 10.1109/JSSC.2018.2870555.
+[38]   C. Lee et al., “A miniaturized wireless neural implant with body-coupled
+       power  delivery  and  data  transmission,”  IEEE  J.  Solid-State  Circuits,
+       vol. 57, no. 11, pp. 3212–3227, Nov. 2022.
+[39]   H.   Kassiri   et   al.,   “Rail-to-rail-input   dual-radio   64-channel   closed-
+       loop  neurostimulator,”  IEEE  J.  Solid-State  Circuits,  vol.  52,  no.  11,
+       pp. 2793–2810, Nov. 2017, doi: 10.1109/JSSC.2017.2749426.
+[40]   Y.   Jung   et   al.,   “A   wide-dynamic-range   neural-recording   IC   with
+       automatic-gain-controlled   AFE   and   CT   dynamic-zoom  16S   ADC
+       for   saturation-free   closed-loop   neural   interfaces,”   IEEE   J.   Solid-                                                   Aditi  Jain  (Student  Member,  IEEE)  received  the
+       State   Circuits,   vol.   57,   no.   10,   pp. 3071–3082,   Oct.   2022,   doi:                                                  B.E.  degree  (Hons.)  in  electrical  engineering  from
+       10.1109/JSSC.2022.3188626.                                                                                                         BITS,  Pilani,  India,  in  2016,  and  the  M.S.  degree
+[41]   C.   Pochet,   J.   Huang,   P.   Mercier,   and   D.   A.   Hall,   “A   174.7-dB                                                 in  electrical  and  computer  engineering  from  the
+       FoM,  2nd-order  VCO-based  ExG-to-Digital  front-end  using  a  multi-                                                            University  of  California  at  San  Diego  (UCSD),  La
+       phase  Gated-Inverted-Ring  oscillator  quantizer,”  IEEE  Trans.  Biomed.                                                         Jolla,  CA,  USA,  in  2020,  where  she  is  currently
+       Circuits   Syst.,   vol.   15,   no.   6,   pp. 1283–1294,   Dec.   2021,   doi:                                                   pursuing the Ph.D. degree.
+       10.1109/TBCAS.2021.3133531.                                                                                                           She  was  an  Analog  Engineer  at  Texas  Instru-
+[42]   H. Chandrakumar and D. Markovic, “A 15.2-ENOB 5-kHz BW 4.5-µ       W                                                               ments,  Bengaluru,  India,  from  2016  to  2018,  and
+       chopped CT 16 -ADC for artifact-tolerant neural recording front ends,”                                                             a  Mixed-Signal  Design  Intern  at  Qualcomm  Inc.,
+       IEEE J. Solid-State Circuits, vol. 53, no. 12, pp. 3470–3483, Dec. 2018,                                                           San  Diego,  in  2020.  Her  research  interests  include
+       doi: 10.1109/JSSC.2018.2876468.                                                                   designing low-power, time-based analog-to-digital front ends for the IoT, and
+[43]   C.  Pochet  and  D.  A.  Hall,  “A  pseudo-virtual  ground  feedforwarding                        biosensor applications.
+       technique enabling linearization and higher order noise shaping in VCO-                              Miss. Jain won the Outstanding Student Paper Award at the IEEE Custom
+       based 16  modulators,”  IEEE  J.  Solid-State  Circuits,  vol.  57,  no.  12,                     Integrated Circuits Conference 2024. She has served as a reviewer for IEEE
+       pp. 3746–3756, Dec. 2022, doi: 10.1109/JSSC.2022.3202040.                                         JOURNAL OF SOLID STATE CIRCUITS.
+
+
+          Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

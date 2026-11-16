@@ -1,0 +1,60 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                                 available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Figure 4. Overview of chronic implant study showcasing long-term viability of our active neural interface. A) 3D rendering of
+      the chronic implant. B) image of the rat post-implantation showing the headstage and headcap . C) Exemplary leakage current
+      measurement taken prior to each recording, plotted spatially for all pixels . D) maximum evoked z-score within response window
+      for trial-averaged high-gamma activity on day 2 of study. E) Days 2 and 10 tile plots for evoked responses showing clear evoked
+      responses corresponding to whisker barrel activity. F-G) Scanning electron microscopy of post-mortem explanted array
+      compared against a non-implanted array (fabricated on same sample wafer but not implanted) with corresponding cross-sectional
+      FIB imaging demonstrating identical layer stack-up of electrode via sidewall profile and underlying TFT stack. H) Violin plots
+      across implant days showing max evoked z-scores across all sensory-evoked recordings. K) Electrochemical impedance spectra
+      of passive electrode (shown in panel G) throughout duration of implant showing increasing 1khz impedance magnitude resulting
+      from the development of encapsulation tissue between the cortical surface and the electrode array.
+                  Array calibration measurements conducted during each recording session demonstrated
+      stable TFT operation, as can be seen in Fig. 4C, where per-pixel leakage current and other

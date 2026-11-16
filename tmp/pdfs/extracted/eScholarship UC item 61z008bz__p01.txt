@@ -1,0 +1,49 @@
+UC San Diego
+UC San Diego Previously Published Works
+
+Title
+A Digitally Assisted Multiplexed Neural Recording System With Dynamic Electrode Offset
+Cancellation via an LMS Interference-Canceling Filter
+
+Permalink
+https://escholarship.org/uc/item/61z008bz
+
+Journal
+IEEE Journal of Solid-State Circuits, 57(3)
+
+ISSN
+0018-9200
+
+Authors
+Fathy, Nader Sherif Kassem
+Huang, Jiannan
+Mercier, Patrick P
+
+Publication Date
+2022-03-01
+
+DOI
+10.1109/jssc.2021.3116021
+
+Copyright Information
+This work is made available under the terms of a Creative Commons Attribution-
+NonCommercial-NoDerivatives License, available at
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+Peer reviewed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ eScholarship.org                                        Powered by the California Digital Library
+                                                                             University of California

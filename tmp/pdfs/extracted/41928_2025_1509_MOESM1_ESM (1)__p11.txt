@@ -1,0 +1,65 @@
+mode reached thermal equilibrium. For this measurement, we used a sample that is fully passivated
+on both sides. In recording mode, our device consumes 63.5 mW (Supplementary Fig. 11c),
+including the coil loss. SAR simulation (Ansys® Electronics Desktop, Ansys) assuming 1.5-cm
+implant depth using a six-layer brain model 99 demonstrates that our system can operate below the
+2 W/kg limit set by the FCC for wireless devices used against the body operating below 6 GHz
+(Supplementary Fig. 11d).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                   10

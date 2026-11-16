@@ -1,0 +1,59 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                                   available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Figure 3. Acute recording of sensory-evoked responses from whisker stimulation. A) Diagram of array placement on rat sensory
+      barrel field. B) infrared surface thermography showing measurement area corresponding to panel A location. C) Corresponding
+      histogram of maximum surface temperature for baseline versus recording during a measurement with maximum bias current
+      settings to determine worst-case thermal burden on cortical tissue. D) Waterfall plot from the middle column in the array showing
+      the z-scored band-pass filtered trials in gray with trial-averages shown in black. E-F) Comparison of an electrode recording with
+      raw and filtered data for the TFT-based active sensing array and an identical passive array. Similar digital filter designs were
+      used to process both datasets to provide a fair comparison, and z-scores were calculated after filtering so as to provide
+      bandwidth-dependent z-scoring details. Corresponding scalograms of the “raw” data are shown below the time-domain traces. G)
+      tile plot heatmaps of the TFT array’s band-pass filtered trial average evoked responses.

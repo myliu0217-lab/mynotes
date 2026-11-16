@@ -1,0 +1,87 @@
+ARTICLE                                                                                          NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w
+
+
+
+Slides were imaged using the 3D Histec Pannoramic250 slide scanner, and images                           was calculated and subsequently z-scored. Periods with z-score values exceeding 0.7
+analyzed using CaseViewer (Version 2.2, 3DHistech Ltd). TUNEL-positive cells were                        were labeled HVS. Candidate HVS periods shorter than 1 s were skipped to
+counted and averaged across the cortical surface in forty 25 µm sections per                             minimize false positives from occasional sharp single wave transients of
+hemisphere. Microglial cells were individually classiﬁed into one of four                                undetermined physiological nature. Spectral proﬁles of the individual HVS events
+morphologies; Grade 0 (resting/ramiﬁed), Grade 1 (de-ramifying/re-ramifying),                            were post-hoc classiﬁed to remove artifact contamination. Onset and offset of peak
+Grade 2 (activated/ameboid) or Grade 3 (clustered & activated) as previously                             power, instantaneous frequency and power of the ﬁrst spectral peak were extracted
+described88. Activation was determined as a percentage of total microglial cells, which                  from each event.
+were either Grade 3 or 4.                                                                                    Theta states were deﬁned based on the ratio between power in the theta (5–9.5
+    For ELISA, animals were culled by rising concentration of CO2, before cardiac                        Hz) and delta (2–4 Hz) ranges on the theta reference channel. Gaps shorter than
+puncture was performed to extract blood. Brain tissue was extracted, snap frozen in                      10 s were concatenated with neighboring Theta periods. Theta coinciding with an
+liquid nitrogen, and stored at −80 °C until further use. The extracted blood was                         Inactive motor state was labeled Inactive Theta. All Inactive Theta periods that
+collected in a blood collection tube (Vacutainer, Becton Dickson, UK) and allowed                        were preceded by a SW state within 1 s and which were longer than 5 seconds were
+to clot at room temperature for 15–30 min. The tube was centrifuged at 5000RPM                           considered REM sleep. All remaining Theta periods were considered Awake Theta.
+for 10 min at 4 °C, and the resulting serum supernatant was collected and stored at                      Finally, all periods that were neither SWS nor REM nor Awake Theta were deﬁned
+−80 °C until further use. There were insufﬁcient serum samples to be run from the                        as Awake Nontheta. It should be noted that the existence of low amplitude
+naive control group, so this group was excluded from analysis. Brain tissue was                          microstates during NREM sleep has been described previously89. It remains to be
+lysed by addition of liquid nitrogen and grinding the tissue to create a powder, to                      determined to which degree a subset of periods with low amplitude in the SW
+which NP-40 lysis buffer (150 mM NaCl, 50 mM Tric-Cl, 1% Nonidet                                         range assigned to Awake-Nontheta in this study maps onto states deﬁned as low
+P40 substitute, Fluka, pH adjusted to 7.4) containing protease and phosphatase                           activity sleep microstates by Miyawaki and colleagues89.
+inhibitor (Halt™ Protease and Phosphatase Inhibitor Cocktail, ThermoFisher                                   All states were considered to be mutually exclusive with the exception of HVS,
+Scientiﬁc) was added to the tissue. Samples were centrifuged at 5000RPM for                              which was considered an event occurring during but not interrupting ongoing
+10 min, and the supernatant stored at −80 °C until further use. ELISA kits for four                      background states. Therefore, for each HVS episode the brain states immediately
+cytokines were used, IL-17a (437904, Biolegend), IFN-γ (439007, Biolegend), TNF-                         preceding and following were merged if they belonged to the same state. All spectral
+α (438204, Biolegend), and IL-6 (437107, Biolegend). Manufacturer instructions                           analysis was performed using custom-developed Matlab implementation of
+were followed for all four kits.                                                                         multitaper estimate90. Analysis of the g-SGFET performance was done in Python. ISA
+                                                                                                         brain dynamics analysis was limited to immobility and REM sleep, for which potential
+Motion capture and behavioral states classiﬁcation. The rat was recorded for up                          inﬂuence of motion artifacts on the infra-slow ﬂuctuations could be discarded.
+
+to 24 h during spontaneous behavior in a recording arena of 100 × 100 cm to which it
+was prehabituated. During the recording session it had ad libitum access to food and                     Statistical analysis. For the evaluation of the yield and homogeneity of the g-
+water. The battery of the wireless system was exchanged once every 6 h. A motion                         SGFETs performance, 9 neural probes with 64 g-SGFETs each were characterized
+capture (Mocap) system (Optitrack) using passive reﬂective markers and 8 cameras                         in vitro. This data is plotted in the boxplots in Fig. 2, the boxes extend from the
+was used to track the motion of the animal head in three-dimensional space. Four                         lower to the upper quartiles, with a line at the median. The whiskers extend 1.5
+reﬂective markers were anchored to the protective cap and their position averaged to                     times the inter-quartile range and the data points beyond the whiskers are indi-
+infer the position in 3D and orientation of the head. Instantaneous headspeed in 3D                      cated by a dot. The longitudinal evaluation of g-SGFETs stability in-vivo was
+was computed as time derivative of the modulus of the spatial coordinates. Motive                        performed with one 64-channel array implanted on the cortex of a rat. The box-
+2.2 software was used for the analysis of Mocap data.                                                    plots shown in Fig. 3 are deﬁned as those in Fig. 2. In panels a and e of Fig. 3, the
+    For the classiﬁcation of the behavior as active or inactive, periods where                           statistical sample are all 8 g-SGFET connected to the DC-coupled channels of the
+headspeed exceeded 100 mm/s were labeled as active. In a second step active                              headstage. Panels d and f of Fig. 3 correspond to all 64 g-SGFETs on the array.
+periods shorter than 5 seconds were skipped while gaps in active periods shorter                         Finally, panel g shows the normalized response of the 10 g-SGFETs on the posi-
+than 5 s were concatenated with the neighboring active state. Timepoints, that did                       tions under the highest induced electric ﬁeld during bipolar stimulation.
+not fall under this deﬁnition of active, were labeled as inactive. The ratio of active                       For biocompatibility assessment, three device types; platinum, graphene, and
+and inactive periods varied substantially across total recording period (between                         polyimide (blank) were fabricated. The rats in each of these groups were implanted
+6.6% and 88.0% active per hour, mean 40.2% ± 4.7% active per hour).                                      with one of the three device types on the parietal cortex of the brain. A fourth
+    Rear events were deﬁned as short elevations of the head to heights that                              group of animals had the full surgery without the implantation of any device (sham
+necessitate the animal to stand on its hindlimbs. After visual inspection of z                           control) and a ﬁfth group (naive) had no surgery. For NOR testing, the number of
+elevations throughout the recordings a threshold of 200 mm elevation from ground                         rats used was n = 7 for all groups at all timepoints, except 12 weeks, which had n =
+was determined to effectively separate punctuate rearing onsets/offsets from                             3–7 depending on the group. For cytokine detection in the brain tissue, the number
+ongoing height variations at lower z positions (see supplementary                                        of rats was n = 4 at 2 and 6 weeks, and n = 3 at 12 weeks post implantation. For
+information S10). While active and inactive states were deﬁned as mutually                               microglial activation, the number of rats was n = 3 at 2 and 12 weeks and n =2at
+exclusive, rear events were considered to be a substrate of the active motor state.                      6 weeks (or 3 for the contralateral hemisphere). In all cases, the contralateral
+                                                                                                         hemisphere was also evaluated as a control. Data where n = 3 or higher were
+Neural signals processing and analysis. The wireless headstage was controlled                            analyzed using a two-way ANOVA to compare all timepoints and interventions.
+using Multi Channel Experimenter 2.12.1 software and the recorded data was                               Dunnett’s multiple comparisons were then performed at each timepoint comparing
+converted to HDF5 format using Multi Channel Data Manager 1.13.1. Neural data                            each surgical intervention to the control. *p < 0.05, **p < 0.005, ***p < 0.001,
+was calibrated according to the transconductance of g-SGFETs using Python                                ****p < 0.0001 are indicated for each surgical intervention in Fig. 4.
+2.7 scripts and exported to Neuroscope software for data exploration (see data and                           The measurement of gamma activity modulation during rearing was evaluated
+code availability statement). Analysis of neural signals was carried out using Matlab                    for 163 rearing events measured in the course of a 24 h recording in one rat. HVS
+2016b scripts (see code availability statement).                                                         were also measured during the same 24 h recording. Five-hundred sixty-six events
+                                                                                                         were detected during immobility and 92 events during REM sleep. Differences in
+                                                                                                         spectral content of HVS during distinct states (IMM and REM) was evaluated by a
+Brain states classiﬁcation. Two channels of the epicortical array were chosen for                        Wilcoxon ranksum test (the p-values are indicated in the main text). The
+the separation of brain states. One channel was selected from the posterior area of                      electrophysiological data shown corresponds to one rat. The large statistical sample
+the array, putatively overlying the hippocampal formation and exhibiting promi-                          of events allows illustrating the capabilities of the graphene-based technology,
+nent theta oscillations. A second channel was selected from the frontal area,                            however, the interpretation of these results should be subject to variability across
+recording from the region and neighborhood of somatosensory cortex, where high-                          measurements and animals.
+voltage spindles are expressed most prominently. Power spectra were computed on                              The modulation of ISA power by REM state vs. SWS was evaluated in two ways:
+whitened LFP signals in the range from 1 to 200 Hz using multitaper methods                              ﬁrst, for the period directly around the state transition (−30 to 30 s around the
+using 4-s windows in sliding 0.5 s steps. First, slow wave (SW) states were identiﬁed                    REM onset). Second, we evaluated the ISA power in both states over their entire
+as periods were the z-score of the summed power of delta (1–4 Hz), alpha-beta                            duration, not only in the SWS-REM transition. ISA power comparison between
+ranges (10–25 Hz) exceeded −0.1. Gaps shorter than 5 s were concatenated with                            REM vs. SWS states was restricted to the 44 REM episodes lasting more than 40 s
+neighboring periods.                                                                                     (see Supplementary Information S12B). To test for frequency-speciﬁc changes
+    SW states coinciding with inactive motor state and >10 s temporal distance                           across the state transition we compared the distributions of median spectral power
+from the last preceding high-voltage spindle (HVS) event were deﬁned as slow                             across trials for the 30 s pre vs. post SWS-REM transition for each frequency bin.
+wave sleep (SWS). Following previous literature we assumed incompatibility                               Signiﬁcance was assessed by permutation test for each frequency bin (n = 1000
+between HVS and deep slow wave sleep in unanaesthetized Long Evans rats84. HVS                           permutations, see Fig. 5d example channel and Supplementary Information S12C
+are close in frequency to theta oscillations, but differ markedly in their expression                    for all working DC channels). Increase of ISA and concurrent decrease of 1–4Hz
+of multiple higher harmonics due to their strongly non-sinusoidal waveshape.                             power during SWS-REM transition is signiﬁcant after permutation test (n = 1000
+Owing to this fact spectral power in the frequency band from 20 to 50 Hz on the                          permutations) on all DC channels except one excluded channel, same as for
+HVS reference channel was used to selectively detect HVS episodes and distinguish                        longitudinal evaluation in Fig. 3a, e, due to poor signal to noise (Supplementary
+them from theta activity. The mean of multitaper power spectra from 20 to 50 Hz                          Information S12C). Second, we tested for statistical differences between
+
+14                              NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications

@@ -1,0 +1,46 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    architecture without prohibitively high source and drain resistances. The benefit of this approach
+    can be seen in Fig. 2Q, where devices A5 and B5 show substantially lower capacitance,
+    attributed to the lower overlap capacitance. Honeycomb and multi-finger layouts (denoted HCA3
+    and MFC5 respectively in Fig. 2P,Q) achieved the highest packing density with subthreshold
+    slopes as low as ~110 mV/dec. Supplementary Fig. 18 shows device architecture breakdown
+    characteristics well-exceeding the targeted maximum bias voltages of ±5V employed in our
+    circuits. These device-level safety margins, together with current-limiting resistors and a ground
+    current detection and auto-shut-off mechanism provide robust operation against the electrical
+    hazards present in chronic implant scenarios. The successful co                   -optimization of insulation
+    longevity and device stability represents a critical milestone for translating flexible TFT
+    technology to implantable neural interfaces, where                 the slightest system failure is intolerable.
+              Finally, building off previous modeling efforts in our lab               25, we developed a simulation
+    platform which assisted us in determining key biasing and circuit design parameters.
+    Supplementary Fig. 19-23 (along with Supplementary Table 3) showcase this platform along
+    with key calculations that help us to assess the impact of thin film stack-ups, device sizing and
+    biasing, the duty cycling introduced from our TDMA approach                       , and expected electrode and
+    device noise. These simulations, together with benchtop characterization (additional details
+    shared in Supplementary Fig. 24-27) helped us assess the viability of the approach outlined in
+    Fig. 1 and 2 prior to translating our efforts to acute experiments.
+
+    Acute In Vivo Recording
+
+              We validated the active arrays through acute cortical recordings in anesthetized Sprague                          -
+    Dawley rats during sensory-evoked whisker stimulation experiments                         (Supplementary Fig. 28). In
+    each case, the array was positioned epidurally over the S1 whisker barrel cortex                        (Fig. 3A), and
+    contralateral whisker deflections were delivered via air puff                s while the array recorded broadband
+    neural activity at ~1ksps. A critical safety consideration for active implants is thermal burden                          to
+    tissue. We employed infrared thermography to measure cortical surface temperatures                             before,
+    during, and after the arrays were set to their maximum pixel current and gain settings (~140 µS
+    TFT transconductance, or ~750 V/V system gain).  The resulting maximum temperature
+    measurement over the cortical surface was captured for several minutes and subsequently
+    segmented into “Baseline” and “Recording” windows (Fig. 3B-C). The data show negligible
+    thermal rise correlated with the operation of the array, clearly below the 2°C limit for chronic
+    implants. The electrode pixel area (300µm x 300µm) in our array design was 180 times larger
+    than the sensing TFT channel area (100µm x 5µm). The sparsity of heat-generating elements
+    together with  the 1:16 time division multiplexing of pixel columns (6.25% duty cycle), limited
+    the resulting average power density at each pixel site, allowing for heat to dissipate over a larger
+    area, thus lowering the tissue thermal rise. Our electrothermal simulation results also indicate
+    that the lateral heat spreading through the alumina encapsulation layers                     likely helped maintain
+    thermal loads well within safety margins.

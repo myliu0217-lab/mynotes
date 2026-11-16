@@ -1,0 +1,86 @@
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w                                           ARTICLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 6 Topography of AC and DC dynamics associated with high-voltage spindles. a, b examples of HVS events during immobility (a) and REM sleep (b).
+Spectrograms at posterior (top) and anterior (middle) positions on the array visualize dynamics of HVS (vertical lines at onsets) and ongoing oscillatory
+dynamics (low-frequency synchrony in IMM, theta oscillation in REM). Bottom two panels show DC LFP signals from posterior (green) and anterior
+(brown) positions on the array and head speed. c Distribution of duration of single HVS events for immobility and REM (top) and total hourly duration of
+HVS across recorded period (bottom). d Average DC LFP traces triggered on HVS onset during immobility and REM sleep (channels arranged as in Fig. 2g-
+left, inset showing anatomical localization of DC ECoG recording sites). e Average AC LFP spectrograms triggered on HVS onset during immobility (left)
+and REM sleep (right). The spectrograms at posterior (top) and anterior (bottom) positions on the array contrasting spectral content associated,
+respectively, with theta (posterior) and HVS (anterior) oscillations. Pseudo-color, spectral power (a.u.). f Topographic maps of change, relative to baseline,
+in HVS power at peak oscillation frequency during immobility (left) and REM sleep (right). g Distributions of power and peak frequency of individual HVS
+during immobility (blue) and REM sleep (red). h Distribution of DC ﬂuctuation magnitude at posterior lateral and frontal medial derivations for single HVS
+during immobility and REM (color code as in g).
+
+represents  an  important  milestone  towards  the  production  of                          process on the sensitivity of the recording system. In this way, we
+graphene-based neural probes at an industrial scale. On another                             have identiﬁed the challenges in the design of full-band ampliﬁers
+front, the  application  of graphene  transistors  for  neural  sensing                     given speciﬁc energy and weight constrains for wireless applica-
+also requires the development of speciﬁc electronic equipment for                           tions.   Furthermore,   using   a   dedicated   headstage   we   have
+biasing the sensors and converting the measured drain-to-source                             demonstrated that the sensitivity of graphene active sensors in the
+currents into equivalent voltage signals at the gate. In this study,                        ISA  band  is  not  signiﬁcantly  affected  by  the  rest  of  the  data-
+we have presented a dedicated wireless headstage, which allowed                             acquisition  system  components.  Yet,  we  observed  slow  drifts  in
+describing the impact of the signal ampliﬁcation and digitization                           the measured signals in vivo, which were presumably attributed
+
+
+NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications                                              11

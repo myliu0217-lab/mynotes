@@ -1,0 +1,77 @@
+                         This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+FATHY  et al.:  DIGITALLY ASSISTED MULTIPLEXED NEURAL RECORDING SYSTEM                                                                                                                                          7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 5.    Overall  block  diagram  of the proposed  system  where a 16-channel  TDMA signal  acquisition  and a DSP block for EOV removal  are implemented.
+
+
+                                                                                       system in a single period of the clock ( fS) is half the value of
+                                                                                       the  chopper-based  AFE.  Accordingly,  the  lowest  differential
+                                                                                       input impedance for a TDMA-based system at relatively low
+                                                                                       frequencies  can  be  expressed  as  ZIN  =  1/fsCIN.  Since  the
+                                                                                       change  in  voltage  between  any  two  consecutive  channels
+                                                                                       in  TDMA-based  AFE  is  random,  the  input  impedance  can
+                                                                                       be  higher  than  the  given  expression.  Recent  development
+                                                                                       of  implantable  micro-electrocorticography  (μECoG)  in  [26]
+                                                                                       shows that the impedance of a 100-μm-diameter coated carbon
+                                                                                       nanotube  (CNT)  is  100  k/Omega1  .  This  gives  the  TDMA-based
+                                                                                       systems  input impedance  a  promising  compatibility  of  high-
+                                                                                       density implantable electrodes.
+
+                                                                                       B. HDNP DSP Module
+                                                                                          The  DSP  module  consists  of  a  digital  controller  which
+                                                                                       regulates the channel selection of the analog MUX and digital
+                                                                                       MUX–DEMUX. In addition, it samples the LMS ﬁlter weight
+                                                                                       and switches off the digital multiplier M1, shown in Fig. 4(d),
+                                                                                       to  save  power  in  case  the  ﬁlter  weight  remains  within  a
+                                                                                       programable range of ±2 digits for 10 s.
+                                                                                          For   EOV   cancellation,   the   digitized   neural   signal   gets
+Fig.   6.       (a)   Chopped-based   input   AFE.  (b)  TDMA-based   input   AFE.     demultiplexed ﬁrst and passes through a digital LPF for each
+(c)  Lowest  average  input  impedance  magnitude  for  a  chopper-based  AFE          channel  separately.  The  LPF  architecture  used  in  this  work
+versus  TDMA-based  AFE  with  CIN = 2pFand fS =  20  kHz  at  different               is a  delay-free digital integrator. Both  the EOV  and LFP get
+number of multiplexed  channels.                                                       extracted and  then  the  signals  get  multiplexed again  to  form
+                                                                                       a  reference  signal  for  the  LMS  algorithm.  The  interference-
+of TDMA-based AFEs. For a fair comparison, assuming that                               canceling  LMS-AF  senses  the  raw  neural  signals  from  the
+the  differential  voltage  applied  on  CIN   capacitors  changes                     ADC and EOV/LFP reference signal and computes the exact
+from  rail-to-rail  at  each  cycle  in  chopper-based  AFE  shown                     EOV/LFP voltage level to be removed from the neural ampli-
+in  Fig.  6(a),  and  at  each  channel  selection  change  in  the                    ﬁer input summing node.
+TDMA-based AFE shown in Fig. 6(b), this ensures the lowest                                The LMS algorithm in  the digital module has μ  value  set
+input impedance possible for both systems. In a chopper-based                          to  2−34;  this  value  is  considered a  good  balance  in  terms  of
+AFE,  the  charge  supplied  within  a  one  clock  period  (1/ fS)                    speed and offset removal accuracy for the overall system.
+is  (Q =  2CINVIN),  which  gives  an  average  input  current  of                                         V.    C IRCUIT IMPLEMENTATION
+IIN,Avg  =  Q/TS.  Accordingly,  the  average  differential  input
+impedance at  relatively low  frequencies can  be  expressed  as                          To   achieve  the   lowest   noise   and  area   from  the   AFE,
+(ZIN  =   VIN/IIN,Avg  =  1/2   fSCIN).  On  the  other  hand,  the                    the  employed  circuit  topology  should  be  carefully  consid-
+charge supplied to any selected channel in  the TDMA-based                             ered.  The  analog  multiplexer  consists  of  thick-oxide  NMOS
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

@@ -1,0 +1,58 @@
+Paper                                                                                                                                   Journal of Materials Chemistry C
+
+Recording system setup                                                             stereotaxic  apparatus.  Subsequently,  the  fur  covering the  cra-
+For  multiplexed  data  acquisition,  a  custom  electronic  circuit               nial region was eliminated using depilatory cream. Following
+was meticulously engineered. This customized circuit encom-                        the  administration  of  anaesthesia  for  a  duration  of  10  to
+passes  five  primary  elements,  as  illustrated  in  Fig.  S4  (ESI†).           15 minutes, the mice reached a state of profound anaesthesia.
+The component displayed within the light blue box represents                       At this juncture, the scalp of the mice were meticulously excised
+the switch  matrix,  constructed  with  ADG733BRUZ-REEL7,  facil-                  using  sterilized  surgical  scissors  to  reveal  the  cranial  bones.
+itating column cycling to accomplish multiplexing. The switching                   Surgical  implantation  of  two  miniature  stainless-steel  screws
+frequency of the switches is 2 kHz, corresponding to a sampling                    was performed on the cranial bones directly above the cerebel-
+rate of 250 Hz for each line. All the 8 OECTs in each row were                     lum,  designated  to  serve  as  ground  and  reference  electrodes
+sampled  simultaneously,  yielding  an  eﬀective  sampling  rate  of               correspondingly. Two bilateral craniotomies were meticulously
+250 Hz per OECT. The content displayed within the light green                      conducted  with  a  hand-held  electric  drill,  with  each  cranial
+box  pertains  to  the  I/V  convertor  to  convert  the  drain  source            aperture  measuring 3  /C2 5mm2. These  surgical  interventions
+current  signal  into  voltage  by  a  transimpedance  amplifier  (1k              were executed on the right and left hemispheres of the cerebral
+gain) and then followed by a voltage follower. These components                    cortex,  respectively,  situated  superior  to  the  somatosensory
+are implemented using TLC2201CD operational amplifiers. Sub-                       cortex. Specifically, the central coordinates of the craniotomy
+sequently, the signal is transmitted to the ADS1299 chip (red box)                 in the right hemisphere were designated at /C04 mm along the
+for analog-to-digital conversion. The content enclosed within the                  antero-posterior axis and /C02 mm along the medio-lateral axis,
+cyan box represents the Microcontroller Unit (MCU) STM32F103,                      with reference to Bregma point. Symmetrically, the centre of the
+responsible for controlling the switches of the switch matrix as                   craniotomy  in  the  left  hemisphere  mirrored  the  coordinates
+well as managing data acquisition and transmission. The orange                     relative to the right hemisphere. The dura mater was excised,
+box  represents  the  power  supplies  component,  which  provides                 and   the   cortical   surface   underwent   irrigation   with   saline
+the  drain–source  power  supply  to  drive  the  operation  of  the               solution (0.9%). Subsequently, 0.1 mL of a 100 mM bicuculline
+transistor,aswellasthepowersupplyrequiredforothercircuit                           solution was administered onto a cotton ball, which was then
+modules. The drain power supply was set to /C01 V to ensure that                   positioned on the cortical surface for a duration of 5 minutes,
+the  transistor  achieves  a  transconductance  of  up  to  3  mS  even            facilitating  the  diffusion  of  bicuculline  effects  through  the
+when  the  gate  voltage  is  0  V  (Fig.  S8,  ESI†).  Circuit  board             cortical  layers  to  induce  epilepsy.11,46  The  bicuculline  (98%,
+programming  was  performed  using  visual  studio  code.  The                     Aladdin)  was  first  dissolved  in  dimethyl  sulfoxide  (99.5%,
+configuration of the PXI system is shown in Fig. S13 (ESI†). Its                   Xilong Scientific) to a concentration of 1 mM, and then diluted
+data acquisition principle is similar to that of a circuit board. The              with physiological saline to obtain a 0.1 mM solution. Follow-
+sampling rate was tuned through the LabVIEW program. Here,                         ing the 5-minute interval, the cotton ball was extracted, and the
+data acquisition, demultiplexing, storage, and real-time display                   vOECT  array,  alongside  the  commercial  passive  Pt  electrode
+were  conducted  utilizing  custom  LabVIEW  (National  Instru-                    array  (NeuroNexus;  E32-300-20-50),  was  gradually  descended
+ments).  All  acquired  data  were  stored  for  subsequent  offline               onto  the  left  and  right  hemispheres  of  the  cerebral  cortex,
+filtering and analysis utilizing custom MATLAB software provided                   respectively  as  shown  in  Fig.  3a.  In  contrast  to  the  custom-
+by MathWorks.                                                                      designed  vOECT  array  utilized  in  this  study,  the  NeuroNexus
+                                                                                   represents a passive ECoG array featuring 32 electrodes orga-
+In vivo evaluation                                                                 nized  into  4  columns  and  8  rows,  with  a  contact  spacing  of
+                                                                                   300 mm and a contact diameter measuring 50 mm. Given the
+All experimental protocols have received ethical approval from                     high  flexibility,  the  OECT  array  could  softly  and  intimately
+the Committee on Animal Care at Tsinghua University and the                        laminate  onto  the  brain  without  trauma.  The  commercial  Pt
+Institutional  Animal  Care  and  Use  Committee  (IACUC)  at                      electrodes array was connected to the Intan recording system
+Shenzhen Institute of Advanced Technology, Chinese Academy                         through  the  H32  ECoG  Connector  with  the  sampling  rate  of
+of Sciences, adhering to the principles outlined in the Guide for                  30 kHz. The OECT array was accessed via a zero-insertion force
+Care and  Use of Laboratory  Animals. The  study protocol  was                     (ZIF)  connector  with  flat  flexible  cable  to  our  custom-built
+also thoroughly reviewed and approved by the ethical commit-                       circuit  board,  which  operated  at  a  sampling  rate  of  250  Hz.
+tee of Tsinghua Shenzhen International Graduate School, Tsin-                      Utilizing a PXI setup, a 16 /C2 16 section of the high-density array
+ghua University (approval number 2023-F121).                                       was  selected  for  signal  mapping.  The  sampling  frequencies
+   The C57BL/6 mice were procured from Guangdong Provin-                           were set at 250 Hz for capturing epileptic signals and 625 Hz for
+cial  Center  for  Laboratory  Animals  and  housed  under  con-                   whisker-related  signals,  ensuring  adequate  resolution  for  the
+trolled environmental conditions, specifically maintained at a                     respective signal characteristics.
+temperature  of  23   1C  and  subjected  to  a  12-hour  light/dark                   For chronic signal recording, a male C57BL/6 mouse with a
+cycle. Food and water were available  ad  libitum. Several male                    weight of 20 g was used. We fixed a homemade cap made from
+mice with a weight range of 18–22 g were used in this study.                       a  centrifuge  tube  to  the  skull  using  dental  cement  after  cra-
+Mice   were   anesthetized   and   maintained   with   isoflurane                  niotomy removal of dura mater as shown in Fig. S11a (ESI†).
+through a trachea inserted into the mouth of the mice. During                      This cap is used to store the array and the ground wire. Then,
+the surgical procedure, the mice were securely immobilized in a                    the  vOECT  array  is  attached  to  the  scalp  and  sealed  with

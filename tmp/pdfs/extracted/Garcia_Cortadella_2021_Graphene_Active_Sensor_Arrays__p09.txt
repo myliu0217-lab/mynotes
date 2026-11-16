@@ -1,0 +1,85 @@
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w                                           ARTICLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 5 Infra-slow to high-gamma correlates of sleep and behavioral states. a 3D trajectories of the head position of the rat. The inset shows a scheme of the
+position of the Mocap. b The spectrogram and raw LFP signal of an illustrative channel is displayed for distinct brain states (top); slow-wave (SW), high-voltage
+spindles (HVS) and Theta. Movement speed is displayed along with classiﬁcation of motor state (middle) and brain states (bottom). c Top: percentage of time
+in the active vs. inactive state (interruptions to replace the battery not included). Bottom: percentage of time the rat was in each main brain state. d Average
+0.015–4 Hz spectrogram for one DC channel triggered on REM episode onsets (n= 44). e Median PSD across SWS-REM transition episodes (n= 44) for 30 s
+periods pre and post REM onset. Shaded area marks frequency bins with signiﬁcant difference (p < 0.05, permutation test). f Color-codedstrengthof
+modulation of LFP power across slow frequency range (y-axis) for one channel by the phase of ISA across 0.05–0.2 Hz range derived from one DC channel (see
+panel g) during REM sleep (left) and SWS (right) states. Gray color indicates nonsigniﬁcant modulation. Insets show circular plot of LFP power in theta/spindle
+band as a function of ISA phase. g Color-coded topographic maps of ISA phase modulation of LFP power in theta band during REM (left) and spindle band
+during SWS (right). ISA phase derived from DC channel marked with a red square. h Color-coded strength of modulation of LFP power across gamma frequency
+range (y-axis) for one channel by the phase of ISA across 0.05–0.2 Hz range derived from one DC channel (left) and by the phase of LFP in the slow frequency
+range rhythm (right) during REM. Inset, circular plot of LFP gamma power with respect to respective (ISA or theta) phase. i Average spectrogram for high-
+frequency range of LFP on posterior channel triggered on rear onset (n= 162). j Head elevation (bottom) and high gamma power (top, same channel as in i)
+color-coded and centered on rearing onset shown for all events sorted by duration of rear event.
+
+to  SWS,  and  the  ISA  phase  of  maximal  LFP  power  differed                              of LFP power across cortex, with both theta power during REM
+between  states  being  close  to  the  peak  (~340°)  in  REM  and                            and spindle power during SWS showing strongest modulation in
+ascending   phase   (~300°)   in   SWS.   Taking   advantage   of   the                        posterior  part  of  the  array  (Fig.  5g).  While  theta  oscillations
+coverage of a signiﬁcant section of dorsal cortical mantle by our                              measured   on   the   cortical   surface   are   generated   by   volume
+array, we assessed the spatial extent of the ISA phase modulation                              conduction  of  multiple  theta-rhythmic  current  generators  of
+
+NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications                                                9

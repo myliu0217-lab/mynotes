@@ -1,0 +1,71 @@
+NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w                                           ARTICLE
+
+
+The  digitization  noise  for  AC  channels  might  be  decreased  by                  information S3). However, from these results it is not possible
+further  optimizing  the  gain  of  the  second  ampliﬁcation  stage.                  to distinguish among all different contributions. The accumu-
+However,  the  intrinsic  noise  of  the  ampliﬁer  is  expected  to                   lated  drift  in  the  CNP  measured  during  the  ﬁrst  24 h  of
+dominate for large ampliﬁcation gains. In order to better illustrate                   recording  reaches  approximately  50 mV,  with  a  maximum
+the  constant  sensitivity  over  frequency,  Fig.  2h  shows  the  time               change rate of ∼20 mV/h in the ﬁrst hour (see supplementary
+domain representation of the noise signal ﬁltered in the ISA band                      information S3). Figure  3b shows the measured signal in two
+(0.05–0.5 Hz)  and  the  high-frequency  band  (20–200 Hz).  The                       DC-coupled channels (high-pass ﬁltered at 1 mHz) during the
+histogram plotted next to the time-domain representation of both                       ﬁrst  2 h  of  recording.  Figure  3c  shows  the  amplitude-phase
+signals   shows   their   probability   density   distribution,   which                relationship  between  these  two  DC-coupled  channels  in  the
+demonstrates  the  similarity  of  their  variance,  as  expected  from                0.005–0.05 Hz  band  (see  “Methods”  section).  The  left  panel
+the integration of a 1/f spectrum in these frequency bands. Note                       shows  the  amplitude-phase  coupling  measured  in  PBS,  while
+that   the   apparently   lower   amplitude   in   the   time-domain                   the right panel shows the equivalent results in vivo. The in vivo
+representation  of  the  infra-slow  noise  is  due  to  the  different                signals exhibit ﬂuctuations with a much larger amplitude than
+timescales of 1/f noise in both frequency bands, but not due to a                      the signals recorded in PBS, ruling out the transistor 1/f noise
+different signal variance.                                                             and  the  headstage  noise  as  the  origin  of  these  infra-slow
+   These results show the high sensitivity of the system in a wide                     oscillations.   Further,   the   in   vivo   signals   recorded   in   the
+frequency   band,   with   Vgs-rms   below   5 μV   in   the   infra-slow              0.005–0.05 Hz  band  present  ﬂuctuations  in  anti-phase,  which
+frequency   band.   In   the   design   of   the   headstage,   we   have              conﬁrm that neither instabilities in the reference electrode nor
+considered  the  compromise  between  reaching  maximum  sensi-                        adsorption/desorption  of  chemical  species  on  graphene  are
+tivity  in  the  high-frequency  range  and  minimizing  the  power                    responsible for these ﬂuctuations. To conclude this discussion,
+consumption   of   the   DC-coupled   recording   system   with   a                    Fig. 3d shows the effect of drifts in the graphene doping on the
+relatively  high  channel  count.  Smaller  g-SGFETs  are  expected                    Vgs-rms  of  graphene  sensors.  These  results  demonstrate  that
+to  present  a  higher  intrinsic  noise  (see  supplementary  informa-                their  sensitivity  does  not  change   signiﬁcantly   due   to  the
+tion S2), as expected for any active or passive sensor. Therefore,                     accumulated  drifts  during  up  to  24 h  if  the  initial  bias  is
+our results indicate that the sensitivity of g-SGFETs in the infra-                    selected  properly.  Therefore,  daily  tracking  of  the  CNP  and
+slow frequency is not affected by the ampliﬁcation electronics for                     readjustment of the Vgs overpotential back to optimum values is
+sensor areas below 100 × 100 μm. This is in strong contrast with                       enough to keep a constant sensitivity over long-term monitor-
+ISA detection using passive electrodes, for which the gain loss and                    ing of the brain dynamics.
+signal   distortion   is   expected   to   increase   for   smaller   sensor              In   addition   to   changes   in   the   doping   of   graphene,   the
+dimensions.   These   results   demonstrate   the   limits   and   the                 transconductance  and  noise  of  the  g-SGFETs  might  vary  over
+scalability  of  the  g-SGFET  technology  towards  higher  density                    time due, for instance, to the creation of defects in the graphene
+arrays with ISA detection capabilities.                                                lattice.  Pristine  graphene  has  shown  excellent  chemical  stability
+                                                                                       due to its sp2 hybridization25. However, dangling bonds at edges,
+                                                                                       grain  boundaries,  atomic  vacancies  or  reconstructions  in  the
+Signal stability and sensitivity over time. Once the performance                       atomic  lattice  increase  the  reactivity  of  graphene,  which  might
+of the graphene transistors and the headstage is properly assessed,                    lead  to  the  creation  of  defects  over  time25.  In  addition,  there
+the stability of the g-SGFETs in an in vivo chronic setting needs                      might be mechanical causes of performance degradation such as
+to be evaluated in order to ensure the reliability of the recording                    detachment of graphene from the substrate  or bending-induced
+system.                                                                                strain  on  the  graphene  lattice  and  metal-graphene  contacts.
+   The  Ids–Vgs curves of the g-SGFETs  describe the relationship                      Another  possible  cause  of  sensitivity  degradation  could  be  the
+between  the  measured  drain-to-source  current  and  the  electro-                   encapsulation  of  the  device  by  glial  scar  tissue58.  This  layer  of
+chemical   potential   at   the   graphene-electrolyte   interface.   The              tissue can be modeled as an electrical impedance in series with the
+minimum in Ids occurs at a particular gate voltage, referred to as                     graphene-electrolyte  interface59,  which  can  eventually  lead  to  a
+the  charge  neutrality  point  (CNP),  which  is  also  related  to  a                degraded frequency response of the g-SGFETs.
+minimum in the sensitivity of the device (see Fig. 1a). The CNP                           In  order  to  track  changes  in  the  sensitivity  over  time  in  a
+corresponds to the bias conditions for which the Fermi energy in                       chronic implant, the gm extracted from the Ids–Vgs curves and the
+the graphene channel is, on average, closest to the energy with a                      Vgs-rms   were   periodically   measured   for   the   8   DC-coupled
+minimum  density  of  states  (i.e.,  the  Dirac  point)55.  The  Vgs                  channels   over   4   weeks.   Figure   3e   shows   that   gm   remained
+overpotential  required  to  reach  this  energy  depends  on  the                     approximately   constant,   suggesting   that   there   are   no   major
+doping56  of  the  graphene  channel,  as  well  as  on  the  electro-                 creation  of  defects  in  the  graphene  channel  in  the  in  vivo
+chemical potential of the reference electrode. Therefore, instabil-                    environment. Similarly, the Vgs-rms shows only a slight increase in
+ities  in  any  of  these  two  parameters  will  produce  a  shift  of  the           the last days. Figure 3f shows the current noise (Ids-rms) for all the
+transfer characteristics in the Vgs axis. In turn, this shift implies                  64 channels measured at 200 Hz over 4 weeks. At this frequency,
+that  Ids  will  present  a  drift  and  that  the  sensitivity  of  the  g-           it is possible to estimate changes in the sensitivity of the recording
+SGFETs  might  vary  over  time  for  a  constant  Vgs  overpotential.                 system  due  to  the  low  average  power  of  high-frequency  neural
+Having a controllable doping of the g-SGFET and a homogeneous                          signals (see supplementary information S4). The numeric values
+CNP  among  sensors  is,  therefore,  of  paramount  importance  to                    displayed in Fig. 3f indicate the percentage of g-SGFETs working
+maintain a good sensitivity of the sensor array.                                       (see  supplementary  information  S4).  The  frequency  response  of
+   Figure 3a shows the evolution of the transfer characteristics                       the transconductance (gm(f)) has also been measured in vivo over
+over  4  weeks  after  implantation  of  the  neural  probe  (see                      4 weeks after implantation. For this purpose, two Pt-Ir electrodes
+“Methods” for implantation details). The observed shift in the                         were implanted on both sides of the g-SGFET array (see inset in
+CNP is presumably due to a combination of factors, including                           Fig.  3g)  and  1 µA  amplitude  pure  tone  signals  of  different
+desorption  of  contaminants  by  electrochemical  cleaning  of                        frequencies were applied using a current source. Figure 3g shows
+the   graphene-electrolyte   interface57,   adsorption   of   charged                  the  magnitude  of  gm(f)  for  different  days  after  implantation  of
+chemical  species  present  in  the  environment  or  changes  in                      the neural probe normalized by the mean magnitude at 1 Hz; the
+the     reference     electrode     potential     (see     supplementary               phase of gm(f) is shown in the supplementary information S5. The
+
+NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications                                                5

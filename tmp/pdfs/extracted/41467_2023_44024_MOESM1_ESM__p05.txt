@@ -1,0 +1,12 @@
+Supplementary Figure 4. Fabrication flow of the p-n OED. a) As cathode contact, 100 nm of Au is patterned on 2
+μm layer of parylene-C carrier. b) A 0.8 μm layer of parylene-C is coated to provide insulation between vertical metal
+layers. c) Another 100 nm gold is patterned on top to define the source contact for subsequent OECT integration. d)
+A 2 μm layer is used as the top insulation layer.           e) Top insulation is etched to access the top source contact. f) A 2 μm
+sacrificial layer of parylene-C is coated with soap underneath. g) Center parylene-C layer is etched through the hole
+inside the circular cathodic pad until the anode pad. h) The active materials are spin-coated sequentially to realize the
+vertical stack. i) Sacrificial layer of parylene-C is peeled off to complete polymer patterning. j) Top layer of Au is
+coated and patterned as the cathode contact. k) Top layer polymer (p(g2T-TT)) is coated and patterned. l) SU-8 seal
+is coated and patterned.
+
+
+

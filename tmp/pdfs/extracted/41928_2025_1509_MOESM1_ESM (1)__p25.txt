@@ -1,0 +1,47 @@
+Two-component analysis of raw receptive field
+In addition to dot-triggered-average of responses filtered by wavelet, we also computed dot-
+triggered-average of unfiltered responses (Supplementary Videos 3 to 8). We observed structured
+spatial-temporal receptive field 𝑅𝐹ሺ𝑥,𝑦,𝜏ሻ on more channels; many of them locate on V4 and are
+not picked up by RF analysis using filtered response. We found that these RFs can be roughly
+approximated by two components (Supplementary Fig. 26). Each component has a Gaussian-like
+spatial profile and the temporal profiles differ from each other:
+                         𝑅𝐹ሺ𝑥,𝑦,𝜏ሻൎ𝑅𝐹௦ଵሺ𝑥,𝑦ሻ𝑅𝐹௧ଵሺ𝜏ሻ൅𝑅𝐹௦ଶሺ𝑥,𝑦ሻ𝑅𝐹௧ଶሺ𝜏ሻ
+While spatial profiles 𝑅𝐹௦ଵሺ𝑥,𝑦ሻ  and 𝑅𝐹௦ଶሺ𝑥,𝑦ሻ can be different for different channels, we
+assume 𝑅𝐹௧ଵሺ𝜏ሻ and 𝑅𝐹௧ଶሺ𝜏ሻ are shared by all channels. We computed the retinotopic map for
+both components separately. Component 1 was smaller in size, closer to the fixation point and
+shows up earlier than Component 2.
+Identification of traveling waves
+
+The very densely spatially sampled BISC recording channels make it an ideal candidate for
+detecting rich spatiotemporal neural activity such as traveling waves. We analyzed recordings from
+the visual cortex of the adult macaque monkey during the dot mapping experiment as described
+before. Traveling waves are brain oscillations that show individual cycles progressively
+propagating across the cortex in specific directions. We used a localized circular-linear regression
+approach to identify traveling waves in BISC recordings. In this approach, we assume that the
+relative phases of the BISC channels exhibit a linear relationship with channel locations
+locally48,62,110. This local circular-linear fitting of can reveal traveling waves that move at different
+directions across different areas of the electrode array, thus identifying complex patterns of
+traveling waves in addition to planar traveling waves48.
+To identify these patterns, we first filtered the BISC signals in the gamma frequency band (30-90
+Hz) by applying a 4th-order Butterworth filter, similar to analysis described in previous sections.
+We applied the Hilbert transform on each channel’s filtered signal to extract the instantaneous
+phase. To identify traveling waves, we used a series of two-dimensional (2-D) localized circular–
+linear regression to model the direction of wave propagation in a local cluster of channels in the
+80-μm neighborhood of each BISC channel. The local regression determines the direction of local
+wave propagation in the cluster surrounding each channel, measuring whether the local phase
+pattern varies linearly with the channel’s coordinates in 2-D. Here, let 𝑥௜ and 𝑦௜ represent the 2-D
+coordinates and θ௜ the instantaneous phase of the i-th channel in a cluster. We used a 2-D circular-
+linear model
+                                       𝜃෠௜ ൌ ሺ𝑎𝑥௜൅𝑏𝑦௜൅ϑሻ mod 360∘
+where 𝜃෠௜ is the predicted phase, 𝑎 and 𝑏 are the phase slopes corresponding to the rate of phase
+change (or spatial frequencies) in each dimension, and ϑ is the phase offset. We converted this
+model to polar coordinates to simplify fitting. Let αൌtanିଵቀ௕௔ቁ denote the angle of wave
+propagation and 𝜉ൌ√𝑎ଶ൅𝑏ଶ denote the spatial frequency. We fitted 𝛼 and 𝜉 to the distribution
+of phases at each time point by conducting a grid search over 𝛼∈ሾ0∘, 360∘ሿ and ξ∈ሾ0,6.2ሿ. Note
+that 𝜉 = 6.2 corresponds to the spatial Nyquist frequency of 6.2°/μm, corresponding to the 29 μm
+spacing between neighboring channels.
+We carried out a grid search in increments of 5° and 0.5°/μm for α and 𝜉, respectively. The model
+parameters (𝑎ൌξcosሺαሻ and 𝑏 ൌ ξ𝑠𝑖𝑛ሺαሻ) for each time point are fitted to most closely match
+
+
+                                                         24

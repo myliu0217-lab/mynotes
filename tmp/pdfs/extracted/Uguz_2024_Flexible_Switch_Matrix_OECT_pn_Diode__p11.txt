@@ -1,0 +1,70 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+
+Technologies) were added to the media. MCF10A cells were placed and                        Reporting summary
+passaged in a humidiﬁed incubator at 37 °C, 5% CO2.                                        Further  information  on  research  design  is  available  in  the  Nature
+     5 μL of polymer p(g2T-TT) solution was spin-coated on a 12 mm                         Portfolio Reporting Summary linked to this article.
+diameter   glass   substrate.   Glass-polymer-coated   substrates   were
+autoclaved at 121 °C for 15 min45. MCF10A cells were seeded on top of                      Data availability
+the  polymer  and  incubated  at  37 °C  for  48 h.  Media  was  then                      All data supporting the ﬁndings of this study are available within the
+removed,  and  a  mixture  of  Calcein-AM  (Sigma),  Propidium Iodide                      article and its supplementary ﬁles. Any additional requests for infor-
+(Sigma), and Hoescht 33342 was applied to cells for 8 min at 37 °C.                        mation can be directed to, and will be fulﬁlled by, the corresponding
+Subsequently,  cells  were  washed  twice  with  DPBS,  calcium,  and                      author.  The  source  data  are  available  as  a  Source  Data  ﬁle  for  the
+magnesium (Life Technologies) and imaged using an inverted ﬂuor-                           respective ﬁgures. Source data are provided in this paper.
+escent microscope.
+     An extraction method was used to assess the potential toxicity of                     Code availability
+the polymer. Polymer solutions were prepared as previously described                       Custom Matlab code used in this study to analyze electrophysiology
+and  drop-casted  onto  glass  substrates  to  maximize  the  amount  of                   data  is  uploaded  on  github.com/klshepard/Electrophysiology-analy-
+polymer  in  contact  with  the  media.  Coated  substrates  were  then                    sis-tools.
+immersed in 700 μL of media (conditioned media) for 24 h at 37 °C, 5%
+CO2. In the meantime, MCF10A cells were seeded in a 96-well plate to                       References
+obtain quintuplicate per test. Then, an MTT assay (G4000, Promega)                         1.      Choi, J. R., Kim, S. M., Ryu, R. H., Kim, S. P. & Sohn, J. W. Implantable
+was performed according to the manufacturer’s protocol. When cells                               neural probes for brain-machine interfaces—current developments
+reached adequate conﬂuence (40 %), media was removed and replaced                                and future prospects. Exp. Neurobiol. https://doi.org/10.5607/en.
+by  fresh  media  (positive  control),  media  with  0.01%  Triton  X-100                        2018.27.6.453 (2018).
+(negative  control),  and  media  conditioned  (assay).  Cells  were  then                 2.     Rapeaux, A. B. & Constandinou, T. G. Implantable brain machine
+incubated in a humidiﬁed incubator at 37 °C, 5% CO2 for 24 h. MTT dye                            interfaces: ﬁrst-in-human studies, technology challenges and
+was added to each well, and cells were incubated for 2 h at 37 °C, 5%                            trends. Curr. Opin. Biotechnol. https://doi.org/10.1016/j.copbio.
+CO2. Then, after adding the dye dissolution solution, the absorbance                             2021.10.001 (2021).
+was read at 570 nm against a reference absorbance at 650 nm using a                        3.     Normann, R. A. & Fernandez, E. Clinical applications of penetrating
+microplate reader Inﬁnite M1000 (Tecan).                                                         neural interfaces and Utah Electrode Array technologies. J. Neural
+                                                                                                 Eng. https://doi.org/10.1088/1741-2560/13/6/061003 (2016).
+Device characterization                                                                    4.     Berényi, A. et al. Large-scale, high-density (up to 512 channels)
+All I–V characterization measurements are done using an electrolyte                              recording of local circuits in behaving animals. J. Neurophysiol. 111,
+(PBS, phosphate buffered saline, 1× solution, Fisher BioReagents). I–V                           1132–1149 (2014).
+curves are measured using a semiconductor device analyzer (B1500A,                         5.     Marblestone, A. H. et al. Physical principles for scalable neural
+Agilent Technologies). An Ag/AgCl electrode (World Precision Instru-                             recording. Front. Comput. Neurosci. https://doi.org/10.3389/
+ments) is used as the external gating electrode. Response times and                              fncom.2013.00137 (2013).
+multiplexer measurements are performed using an oscilloscope (DSO-                         6.     Guo, J., Ng, W., Yuan, J., Li, S. & Chan, M. A 200-channel area-
+X  4034 A,  Agilent  Technologies).  A  100-ohm  resistor  is  connected                         power-efﬁcient chemical and electrical dual-mode acquisition IC
+between the drain output and the transistor or the p–n OED to achieve                            for the study of neurodegenerative diseases. IEEE Trans. Biomed.
+current-to-voltage conversion for time-response and noise measure-                               Circuits Syst. 10,567–578 (2016).
+ments of the OED–OECT stack, independently of the TIA.                                     7.     Viventi, J. et al. Flexible, foldable, actively multiplexed, high-density
+     For p–n OEDs, we chose a minimum ﬁlm thickness of 200 nm for                                electrode array for mapping brain activity in vivo. Nat. Neurosci. 14,
+p(C6NDI-T) since thinner ﬁlms exhibited agglomerates and limited the                             1599–1605 (2011).
+p–n OED operation due to high reverse bias leakage currents. Chron-                        8.     Steinmetz, N. A. et al. Neuropixels 2.0: a miniaturized high-density
+oamperometry measurements using a semiconductor device analyzer                                  probe for stable, long-term brain recordings. Science 372,
+were performed at various potentials to estimate the injected charge in                          eabf4588 (2021).
+the device stack. The injected charge at a given potential is obtained                     9.     Jun, J. J. et al. Fully integrated silicon probes for high-density
+through the integration of the current value vs. time curve since the                            recording of neural activity. Nature 551,232–236 (2017).
+current ﬂow between the electrolyte and polymer interface is primarily                     10. Kozai,T.D.Y.,Jaquins-Gerstl,A.S.,Vazquez,A.L.,Michael,A.C.&
+ionic. The forward-bias current at 0.8 V was recorded over 10,000 data                           Cui, X. T. Brain tissue responses to neural implants impact signal
+points and averaged to calculate the current. The reverse-bias current                           sensitivity and intervention strategies. ACS Chem. Neurosci. 6,
+at −0.8 V was recorded over 10,000 data points and averaged to cal-                              48–67 (2015).
+culate the off current. The ratio between the on and off currents was                      11.    Polikov, V. S., Tresco, P. A. & Reichert, W. M. Response of brain
+calculated as the rectiﬁcation ratio.                                                            tissue to chronically implanted neural electrodes. J. Neurosci.
+     Impedance  spectra  of  the  electrodes  were  recorded  using  an                          Methods https://doi.org/10.1016/j.jneumeth.2005.08.015
+Autolab  Potentiostat  (Metrohm  Autolab,  Utrecht,  Netherlands).  A                            (2005).
+reference Ag/AgCl electrode and a counter platinum mesh electrode                          12.    Ohayon, D. & Inal, S. Organic bioelectronics: from functional
+measuring  30 mm × 30 mm  were  placed  inside  the  electrolyte.  For                           materials to next-generation devices and power sources. Adv.
+impedance  measurements,  an  AC  voltage  of  0.01-V  amplitude  was                            Mater. https://doi.org/10.1002/adma.202001439 (2020).
+applied and the corresponding DC open-circuit potential against the                        13. Dimov,I.B.,Moser,M.,Malliaras,G.G.&McCulloch,I.Semi-
+reference electrode was acquired. For CV curve acquisition, the vol-                             conducting polymers for neural applications. Chem. Rev. https://
+tage ranged from −1 to 1 V, and the scan rate was 100 V/s with a step of                         doi.org/10.1021/acs.chemrev.1c00685 (2022).
+0.002 V. Multiple scan cycles were repeated for an accurate assess-                        14. Lee,S.,Kim,J.H.,Ohba,T.,Kim,Y.S.&Kim,T.S.Astudyon
+ment  of  the  shape  of  the  voltammogram.  For  the  undoped  n-type                          mechanical properties of thinned single crystal silicon wafer: Effect
+polymer,  impedance  measurements  were  acquired  at  −0.4 V   vs.                              of size and direction. in 2018 International Conference on Electro-
+reference electrode potential to ensure electrochemical doping of the                            nics Packaging and iMAPS All Asia Conference, ICEP-IAAC 2018.
+measured ﬁlm.                                                                                    https://doi.org/10.23919/ICEP.2018.8374318 (2018).
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                                      11

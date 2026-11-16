@@ -1,0 +1,71 @@
+ARTICLE                                                                                          NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w
+
+
+adverse   tissue   response   to   graphene   is   transient   in   nature,             the LFP dynamics related to spontaneous behavior. The analysis
+comparable  to  the  current  clinical  standard  and  speciﬁc  to  the                 of the relationships between epicortical brain activity and freely
+implantation site, with no observed systemic complications.                             moving behavior was performed over timescales enabled by the
+   To conﬁrm the ELISA data, manual counting of the activation                          wireless recording system. This capability is critical for the study
+state   of   microglial   cells   was   also   performed   to   assess   the            of sparsely occurring behavior events, as well as ISA patterns over
+inﬂammatory  state  within  the  brain.  Microglial  cells  are  always                 distinct brain states.
+present  within  the  brain,  but  their  morphology  serves  as  an                       Brain states were classiﬁed through a combination of spectral
+indicator of the inﬂammatory state within the brain62. Expression                       features in the epicortical LFP signal and motor data. In this way
+of  activated  microglia  was  increased  at  both  the  2  weeks  and                  we  distinguished  the  following  classes:  slow  wave  sleep  (SWS),
+6  weeks  post  implantation  timepoints,  and  this  activation  was                   REM sleep (REM), Awake Theta (AwT), and Awake Non-Theta
+present to a signiﬁcant level at 2 weeks post implantation in all                       (AwNT).  Figure  5b  illustrates  the  criteria  for  the  brain  states
+four  treatment  groups  when  compared  with  the  contralateral                       classiﬁcation, described in detail in the “Methods” section. First,
+hemisphere.  However,  similar  to  the  ELISA,  the  activation  of                    slow wave (SW) states, showing increased power in the 1–25 Hz
+microglia had returned to baseline levels by 12 weeks, indicating                       band, and Theta states were identiﬁed (see Fig. 5b). The behavior
+no prolonged inﬂammatory reaction to the devices (Fig. 4e, f and                        of  the  animal  was  then  classiﬁed  in  either  active  or  inactive
+Fig. S8). TUNEL cell counting was also performed, to assess any                         periods from the motion tracking data (see Fig. 5b and “Methods”
+cell  death  within  the  tissue  as  a  result  of  the  implantation  of              section).   During   inactive   motor   behavior,   SW   states   were
+devices.  At  2  weeks  post  implantation,  there  was  a  signiﬁcant                  classiﬁed  as  SWS  except  in  direct  proximity  to  HVS  events,
+increase   in   the   number   of   TUNEL-positive   cells   for   both                 while Theta states were categorized as REM if directly preceded
+graphene and sham surgery groups. However, by 6 weeks there                             by SWS. On the other hand, Theta states occurring during active
+was  no  evidence  of  cell  death,  which  was  also  true  at  12  weeks              behavior were classiﬁed as AwT and SW states as AwNT. Finally,
+(Fig.  S9).  Finally,  there  was  no  obvious  morphological  changes                  periods  not  assigned  to  Theta  or  SW  states  were  classiﬁed  as
+seen   with   haemotoxylin   and   eosin   staining.   There   was   an                 AwNT  regardless  of  the  behavior  of  the  animal.  During  the
+appearance  of  sunken  cortex  in  some  brains,  however,  this  was                  majority  of  recording  hours  all  four  sleep/wake  states  were
+due  to  perfusion  ﬁxation  with  the  glass  window  in  place,  and                  expressed at least once in line with the polyphasic nature of rat
+there was no effect on the thickness of the cortical layers below                       sleep66–68.  Their  relative  prominence  however  varied  substan-
+the implantation site, as shown in Fig. 4g.                                             tially over the course of the recording day paralleling the changes
+   Overall,  both  cytokine  expression  and  histological  analysis  of                observed   in   motor   states   (Fig.   5c),   in   line   with   circadian
+the brain area at the implantation site showed an acute reaction to                     rhythmicity.
+the implantation of devices. However, this was not speciﬁc to the                          Classiﬁcation  of  brain  states  is  typically  based  on  the  delta,
+graphene   devices,   even   though   an   enlarged   surface   area   of               alpha-beta  and  theta  frequency  bands  (see  “Methods”  section),
+graphene  was  used  in  order  to  maximize  the  material  speciﬁc                    reﬂecting  fast-time  scale  state-speciﬁc  network  dynamics.  How-
+response.   By   6   weeks,   the   reaction   showed   clear   signs   of              ever,  some  recent  research  highlighted  the  role  of  infra-slow
+amelioration, and by 12 weeks, there was no detectable reaction                         dynamics in the regulation of brain sub-states40, via modulation
+to  the  devices  using  any  technique.  Graphene  and  Pt  devices                    of higher LFP frequency bands during sleep39,45,69 and dynamic
+showed  a  similar  level  of  microglia  activation  compared  to                      coordination  and  segregation  of  the  resting  state35,70.  These
+“blank” devices, while the latter shows much smaller presence of                        results  show  the  potential  importance  of  ISA  for  a  complete
+inﬂammatory  markers  than  for  Graphene  or  Pt.  These  results                      classiﬁcation   and   study   of   brain-states.   The   graphene-based
+suggest that microglia activation is more strongly associated with                      recording system presented here represents an ideal tool for the
+surgical  procedure  and  probe  insertion,  while  inﬂammation  is                     study  of  cortical  ISA  signals  with  a  high  accuracy  and  spatial
+primarily affected by the device material. In this way, functional                      resolution in freely behaving animals. The spectrogram in Fig. 5b
+sensor  arrays,  which  present  a  much  lower  graphene  area,  are                   illustrates changes of the spectral power for frequencies between
+expected  to  cause  an  inﬂammation  closer  to  that  caused  by                      0.015 and 4 Hz over the transition between SWS and REM. It is
+“blank”  devices.  In  addition,  according  to  NOR  test,  graphene                   possible   to   observe   clear   increase   in   the   ISA-band   power
+devices did not affect signiﬁcantly the animal behavior neither in                      following  the  transition  from  SWS  to  REM,  even  at  the  single
+acute nor chronic timepoints. Based on these results, graphene-                         trial  level  (see  Fig.  5b).  Taking  advantage  of  the  long-term
+based  devices  presented  adequate  biocompatibility  for  chronic                     recording capabilities of our system, we could sample 44 of such
+implantation,   comparable   to   the   equivalent   platinum-based                     sparsely  occurring  SWS-REM  (REM  duration  longer  than  40 s)
+devices.                                                                                state transitions within a 24 h period. Besides, the spatial mapping
+                                                                                        of ISA enabled by the g-SGFET technology allows to resolve the
+                                                                                        topographic region-speciﬁc modulation of ISA at the SWS-REM
+Long-term  monitoring  of  wide  frequency  band  epicortical                           state  transition  (see  supporting  information  S12).  Interestingly,
+brain activity during natural behavior. During the longitudinal                         delta-band  power,  associated  with  slow  oscillations,  and  infra-
+in vivo assessment of the g-SGFET sensitivity, we recorded epi-                         slow power showed changes in opposite directions between SWS
+cortical  brain  activity  in  a  freely  behaving  rat  for  up  to  24 h.             and  REM  sleep.  While  delta  band  power  expectedly  decreases
+Throughout the recording period, the 3D-motion of the animal                            from SWS to REM, associated with desynchronized cortical state,
+was tracked with a motion capture (Mocap) system (see “Meth-                            infra-slow power increases in REM (see Figs. 5d, e and Fig. S12
+ods”  section  and  Fig.  5a).  The  conjunctive  recording  of  animal                 and statistical analysis in “Methods”).
+motion and wide frequency band epicortical signals was used to                             In   order   to   further   illustrate   the   wide   frequency   band
+classify  brain  states  and  behavioral  states  over  the  recording                  sensitivity  of  the  recording  system,  we  quantiﬁed  the  strength
+period. In turn, this classiﬁcation was used to support two main                        of modulation of LFP power in the slow frequency range (1–15
+purposes.  First,  to  validate  the  ability  of  the  graphene-based                  Hz)   by   the   phase   of   the   ISA   activity   during   REM   and
+wireless recording system to perform long-term stable recordings                        SWS.   Interestingly,   ISA   phase   signiﬁcantly   modulated   theta
+in  freely  moving  rat  across  multiple  brain  states,  and  test  its               power (8–9 Hz) during REM sleep (Fig. 5f-left) and spindle band
+suitability to study infra-slow epicortical LFP dynamics. Second,                       power  (9–13 Hz)  during  SWS  (Fig.  5f-right).  The  strength  of
+to assess the g-SGFET sensitivity in the high-frequency range of                        ISA phase modulation was tenfold higher during REM compared
+
+8                                 NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications

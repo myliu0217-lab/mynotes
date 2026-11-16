@@ -1,0 +1,80 @@
+Journal of Materials Chemistry C                                                                                                                                   Paper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 5    High-resolution mapping of whisker flicking signals using an ultraflexible, high-density vOECT array. (a) Schematic of the vOECT array positioned
+on the mouse cortex, highlighting the selected working devices. (b) Photograph of the implanted OECT array on the mouse cortex, with AP and ML
+coordinates labeled. Scale bar, 1 mm. (c) Energy mapping of the array prior to whisker deflection. (d) Energy mappings of the array immediately following
+the whisker deflection. (e) Signal waveform graphs collected from various locations.
+
+
+
+isolating the OECT channels. The spin-coating speed was set to                       and then spin-coated at 3000 rpm for 60 s. Subsequently, the
+2500 rpm, with a duration of 45 seconds. Subsequently, reactive                      film was baked at 100  1C on a hot plate for 1 minute and then
+ion  etching  (RIE)  was  conducted  using  O2/SF6  plasma  at  a                    the  sacrificial  layer  was  peeled  oﬀ.  Following  this,  the  films
+power of 210 W, with gas flows of 90 sccm for O2 and 3.5 sccm                        underwent  further  baking  at  140   1C  for  1  hour  and  were
+for SF6, achieving an etch rate of 105 s mm/C01. This process was                    immersed in DI water to eliminate any residual low-molecular
+executed to expose the contact pads and the cross-section of the                     weight compounds.
+source and drain electrodes, using the RIE150-1/EXW (Exwell)                             All the device performance measurements, including output
+system.  Before  etching,  AZ10XT  (Kayaku  Advanced  Materials)                     and  transfer  curves,  and  pulse  measurement  for  calculating
+was spin-coated with 300 rpm for 4 s followed by 2000 rpm for                        response time, were carried out under ambient conditions in
+60 s, soft  baked at 110  1C for 3 min, exposed with a dose of                       0.01  M  PBS  (Sigma-Aldrich)  of  pH  7.4.  An  Ag/AgCl  pellet
+90 mJ cm/C02, and developed for 7 min as the photoresist etching                     (Warner Instruments) was used as the gate electrode. Keithley
+mask. The PEDOT:PSS films were prepared by blending 5 mL of                          4200 Semiconductor parameter analyzer was used to bias the
+an aqueous dispersion of PEDOT:PSS (PH1000, with a PEDOT:                            transistor and record the drain and gate currents. All voltages
+PSS weight ratio of 1 : 2.5) with 250 mL of ethylene glycol (98%,                    were referenced to the source electrode kept at ground. In the
+Macklin), 0.1 vol% of DMSO to enhance the conductivity, and                          long-term  stability  test,  the  fabricated  devices  were  stored
+1 wt% of GOPS utilized as a crosslinker. The resulting disper-                       either  in  air  or  in  PBS.  Each  test  involved  evaluating  eight
+sion was filtered using a 0.22 mm polytetrafluoroethylene filter                     channels from the same device substrate.

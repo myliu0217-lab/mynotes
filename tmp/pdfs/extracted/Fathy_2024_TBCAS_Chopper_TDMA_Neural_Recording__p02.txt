@@ -1,0 +1,69 @@
+                      This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                             content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                        2
+
+caregivers in addition to reducing the economic burden. High
+performance recording systems with high spatial resolution are
+at the heart of these needed advances. To achieve higher spatial
+resolution  in  neural  recording,  a  high-channel-count  neural
+acquisition AFE module is imperative within a confined spatial
+area,   while   also   necessitating   support   for   high   temporal
+resolution   for      µECoG   neural   acquisition.   This   includes
+coverage of both local field potential (LFP) (1 – 300 Hz) and
+action potential (AP) (300 Hz – 10 kHz) bands with amplitudes
+in the range of 10 µV- 1 mV [13], [14].
+  One potential solution to design area-efficient and low-power
+neural    recording    systems    is    through    a    multiple-access
+modulation scheme, where the entire AFE is shared between N-
+channels    [15], [16],     [17],   [18].  However,       several  challenges           Fig. 2 Proposed neural recording system block diagram with direct EOV/LFP
+persist.   1)   The    dynamic   electrochemical   reactions   at   the                 filter.
+interface  of  the  neural  electrodes  and  tissue  lead  to  a  slowly                                                                               G   = 1
+varying electrode offset voltage (EOV) between electrodes that                                                                                          FB
+                                                                                                                                                       GFB = 2-1
+can reach magnitudes as high as ±50 mV [13], [14], [19], [20].                                                                                         GFB = 2-2
+When these voltages are directly coupled onto the multiplexer,
+they   can  easily  saturate  the  AFE  and  cause  loss  of  neural
+recording functionality. As a result, area-consuming low-pass                                                                                     GFB ¯
+filters   (LPFs),   digital      multiplexer   (MUX),           demultiplexer
+(DEMUX), and least mean square (LMS) adaptive filter (AFs)
+that extract, process, and feed back EOV data to the AFE are
+needed. It should be noted that traditional AC-coupled AFEs,
+DC-servo  loops,  and  filtering          techniques,  which  have  been
+previously  established  in  the        literature    to  extract  the  neural
+signal  from  the  undesired  EOV  artifact            [13],   [20],   [21]   are
+mostly effective in in-pixel architectures, where each channel is                       Fig. 3 Proposed system Z-Plane poles and zeros for stability analysis with
+recorded by an individual AFE, and thus are not applicable here.                        various values of GFB = {1, 2-1, 2-2}.
+2) Multiplexing N electrodes requires an amplifier bandwidth                           [18]. However, per-channel subtraction requires up-modulation
+(BW) at least N times larger, which forces the amplifier’s input                       of each of the EOV cancellation signals in order to match the
+differential-pair  to  be  small  to  achieve  the  larger  BW  at  low                effective   sampling   frequency   of   the   input   signals   at   the
+currents, and therefore increases the worst-case 1/f noise corner                      amplifier input (i.e., after the input multiplexer). Accordingly,
+frequency, especially in scaled CMOS technologies (e.g., 290                           an N-1 delay block is added to the feedback path. The extraction
+kHz in the proposed design in 65 nm CMOS). 3) Multiplexing                             of EOV      poses  challenges  due  to  the  requirement  of  on-chip
+spreads 90% of the signal energy of all channels from ~DC to                           demodulators,  digital  LPFs,  and  modulators,  leading  to  high
+~860    kHz     for   N=16,   and      thus   makes   1/f     noise   a   larger       digital power consumption and increased area for each channel.
+component of the total noise, especially for AP recording up to                          With high neural amplifier mid-band gain factors that usually
+10 kHz [22]. 4) Chopping after a MUX to reduce the impact of                           exceeds 40 dB on typical small voltage supplies of 1.2 V, the
+1/f noise degrades input impedance more than just multiplexing.                        amplifier can saturate on signals of >5 mV                . Additionally, the
+As  a  result  of  these  challenges,  most        time-division  multiple-                                                                     p
+access (TDMA) neural recording systems either limit their BW                           AFE input referred noise (IRN) is usually required to be less
+to 500 Hz [18], occupy a larger than necessary area, or present                        than 5 µVrms. Together, these two specifications require a high
+more noise efficiency factor (NEF) than desired.                                       DAC     resolution  of  at  least  18      bits  in  feedback      to  suppress
+  Fig. 1 shows a conventional digital signal processing (DSP)                          quantization noise, caused by EOV removal, below the thermal
+in a multiple-access scheme biosensor system, where the input                          noise floor. Prior-art systems [13] use coarse and fine DACs in
+channels are up-modulated in the analog domain such that they                          feedback in addition to DS-modulators to increase the effective
+can all be amplified and digitized by a single shared amplifier                        number  of  bits  (ENOB)            of  a  small-area  DAC          [15],   [23].
+and analog to digital converter (ADC). ADC samples are then                            Unfortunately,  these  approaches  result  in a             high  per-channel
+sent to a DSP module to down-convert each channel’s samples                            power and area consumption [18].
+to baseband. At this point, the DSP can perform some signal                              To address these challenges, this paper introduces a TDMA-
+processing to isolate the slowly-varying EOV from the neural                           based neural recording mixed-signal front-end that: 1) utilizes
+signals,  typically  via  a     N-multiple  of      LPFs     implemented  as           a  direct    EOV/LFP   filter   that        extracts    and   eliminates      the
+integrators. This information can then be fed back to the neural                       EOV/LFP from modulated neural signals while operating at the
+amplifier front-end to subtract the EOV on a per-channel basis                         same   clock   rate   as   the   ADC          without   requiring   on-chip
+via a high-resolution digital to analog converter (DAC) [15],                          modulation, demodulation, and individual LPFs, reducing the
+
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                      © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

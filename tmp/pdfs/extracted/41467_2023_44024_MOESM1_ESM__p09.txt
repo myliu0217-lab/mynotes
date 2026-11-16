@@ -1,0 +1,5 @@
+Supplementary Figure 8. 8x8 cross-point array recordings. The current output acquired from all individual OED-
+OECT  stacks  of  an  eight-by-eight  cross-point  array  during  applied  stimulation  pulses  from  an  external electrode
+located at the top left channel. The OED-OECT stacks are operated separately with 1-ms pulses at 50% phase delay.
+The external pulses with 4-mV amplitude are applied at 10 Hz. The red highlights at the bottom of each graph represent
+the resulting waveforms.

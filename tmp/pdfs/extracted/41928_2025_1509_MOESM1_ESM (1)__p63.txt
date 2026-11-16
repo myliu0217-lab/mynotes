@@ -1,0 +1,25 @@
+Supplementary Video 7. Dot-triggered-average responses of all channels after wavelet
+transformation (central frequency 64Hz). Color maps are shared across all channels, same as in
+Fig. 5d. A snapshot at 75 ms is shown.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                       62

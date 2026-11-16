@@ -1,0 +1,10 @@
+Supplementary Fig. 2. Architecture of the relay station. (a) Functional diagram of the modules
+in the relay station. (b) Photos of the relay station with cabling. (c) HDMI connector pinout
+diagram. (d) Power-amplifier board. (e) Transceiver board, which includes a Teensy 4.1. (f) UWB
+antenna board. (g) Coil board.
+
+
+
+
+
+                                                         29

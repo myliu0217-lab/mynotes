@@ -1,0 +1,97 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+
+       a)                                                                              b)p(g2T-TT)                  VAC            IC
+                                    SU-8
+                                                Diffusion
+                                                barrier
+                                  Anode
+                                                                              Diode
+                                                                              channel
+                                  Cathode
+
+                                                                                                              20 ms                                                          20 ms
+       c)
+             0.25                                                                                     0.25
+
+
+
+
+
+
+                 0                                                                                        0
+                                                                                          50 ms                                                                                50 ms
+       d)                       15 min                                                                                                                          Re-charge
+
+            0.2
+
+
+
+
+
+
+              0
+
+Fig. 2 | Long-term stability of the p–nOED.aAn illustration of the p–nOED                       application of 200-Hz cathodic pulses. The peak values of IC response is ﬁtted with
+sealing with a top layer of p(g2T-TT) and SU-8. The blue arrow shows the diffusion              an exponential decay function (blue line). The corresponding device schematic is
+barrier for cations between the OED and the overlying electrolyte. The white arrow              placed at the inset of each graph to illustrate the p–n OED architecture used.
+indicates the p–n OED channel. b p–nOEDoperationasahalf-waverectiﬁer. The                       d Long-term performance of the sealed p–n OEDs during the application for 0.8-V
+green curve represents the sinusoidal input applied between the anode and cath-                 biphasic pulses. Pulses shown in green (10 pulses at 10 Hz) are acquired after
+ode electrodes, and the orange curve is the output current of the p–nOED.(n=20                  continuous application of 1000 pulses. Pulses shown in orange are acquired after
+repetitions per device. n = 5 devices.) c p–n OED operational stability performance             p–n OED is recharged through a new cation injection.
+without top sealing (in green) and with top sealing (in orange) during the
+
+
+V GS  of  the  transistor  at  −0.3 V  keeps  the  drain  current  (ID)below                    effects  of  this  ion  current  are  also  observed,  leading  to  steady-state
+200 μA, which matches the OED current at a V AC of 0.8 V as shown in                            crosstalk appearing as a shift in the baseline current with an amplitude
+Fig.  1d.  At  the  resulting  V CS   of  −1.1 V,  in-series  operation  of  the                of ~100 nA. Owing to the high resistance of the reverse-biased p–nOEDs,
+OED–OECT structure has an on-state small-signal transconductance of                             the crosstalk between an aggressor OED–OECTs (upon application of a
+over 1.5 mS. We also test the resulting rectiﬁcation from the external                          constant V GS  of −0.3 V and a square V CS  pulse switching from −1.1 V to
+gate electrode in the OED–OECT conﬁguration. To do this, we operate                             0.3 V) and a victim OED–OECTsthatareintheoff-state(withaV CS  of
+both  a  single-element  p(g2T-TT)  OECT  and  an  OED–OECT  stack in                           +0.3 V) is negligible. No crosstalk is observed at steady-state.
+diode  conﬁguration  mode,  where  either V DS  or V CS  is directly con-                             For  an  OED–OECT,  the  crosstalk  in  the  victim  channel  from  a
+nected  to  V GS.  In  both  cases,  the  output  curves  exhibit  diode-like                   single aggressor is more than 66 dB lower than the nominal on the
+behavior with high conduction during forward bias. The leakage cur-                             current of 200 μA. Therefore, the total number of aggressors can be
+rent, however, is three orders of magnitude lower for the OED–OECT                              easily scaled into the thousands, enabling large-scale integration and
+stack due to the added resistance introduced by the OED when the                                addressability  with  minimal  crosstalk.  For  single-element  OECTs,
+stack is in reverse bias (Supplementary Fig. 6).                                                because the crosstalk is 20 dB higher than the OED–OECT, the number
+                                                                                                of aggressors can only scale to the few tens before the crosstalk affects
+Inter-channel crosstalk during OED switching                                                    thebaselinecurrent.
+To  compare  the  level  of  crosstalk  between  OECTs  in  a  large  matrix                          Large  ionic  ﬂuxes  near  active  OECTs  can  also  induce  undesired
+experimentally, we pattern two neighboring OECTs and two neighbor-                              neural  activity.  To  test  the  level  of  this  effect,  we  measure  the  gate
+ing OED–OECT stacks with a pitch of 40 μm,asshowninFig.3c, d. To                                current transients for both OECTs and OED–OECTs,asshowninFig.3e.
+consider  crosstalk,  we  identify  the  channels  being  enabled  as  the                      We determine that the OECT gate transients lead to high charge injec-
+aggressors  and  the  adjacent  unselected  channels  as  the  victims.  We                     tion per pulse (~10 nC), signiﬁcantly higher than the neural stimulation
+apply a constant V GS (0.3 V), generate square V DS pulses (switching from                      threshold25.IntheOED–OECT stack, however, the channel is in a doped
++0.3 V  to  −0.3 V)  on  the  aggressor  OECTs,  and  record  the  current                      stateatalltimes,andgatecurrenttransientsaremorethananorderof
+waveforms in the adjacent victim OECTs. When the victim OECTs are in                            magnitude lower, which does not correspond to an injected charge level
+theoff-state(withV DS  at +0.3 V), we record a transient crosstalk in the                       that can alter the spontaneous activity of nearby neurons.
+range of ~µA. This results from the gate current of the aggressor OECTs,
+which partially ﬂows to the drain of the victim OECTs due to the ﬁnite                          Active switch-matrix for time-division multiplexing
+access resistance to the external gate electrode. Changes in the channel                        We pattern our sealed stacked organic circuit between a grid of source
+conductance  of  the  victim  OECTs  due  to  the  doping  and  de-doping                       and  cathode  electrodes,  generating  an  8×8  cross-point  topology
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                              5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   ...           ...           ...            ...            ...            ...           ...           ...

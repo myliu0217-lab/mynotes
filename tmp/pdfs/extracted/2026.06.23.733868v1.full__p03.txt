@@ -1,0 +1,44 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    matched passive array. A 30-day chronic implantation confirmed stable electrical operation,
+    maintained encapsulation integrity33-40, and captured consistent spatiotemporal cortical signal                        s
+    despite the expected development of fibrotic tissue observed upon explant.                      This work represents
+    the first demonstration of a fully monolithic flexible TFT               -based active neural interface
+    maintaining functionality over multiple weeks               in vivo, and establishes design principles for
+    translating display-inspired thin-film electronics to scalable implantable neural interfaces.
+    Results and Discussion
+    Flexible Thin Film Integrated Circuit Platform for Neural Sensing
+
+              Inspired by active-matrix organic light emitting diode (AMOLED) display                         technology,
+    we developed a monolithic thin film transistor fabrication process enabling fully integrated
+    flexible neural interfaces on biocompatible polyimide substrates (                  Fig. 1). Our platform employs
+    dual-gate amorphous indium gallium zinc oxide (a-IGZO) TFTs, selected for their exceptional
+    electron mobility (~10-20 cm2/Vs), low-temperature processing compatibility (deposited at
+    <=200°C), and substrate-agnostic fabrication. Unlike typical silicon-based approaches, which
+    require post-fabrication transfer or aggressive thinning, the fabrication process (Supplementary
+    Fig. 1) produces inherently flexible circuits without compromising hermetic encapsulation
+    (Supplementary Fig. 2-5) or introducing mechanical failure modes associated with brittle
+    semiconductors. Furthermore, the monolithic fabrication process allows for greater design
+    flexibility compared to heterogeneous integration strategies which may, for example, rely on
+    thick inorganic layers to mitigate seam or void formation around transferred layers. A monolithic
+    fabrication strategy on the other hand can achieve much finer feature size and superior
+    morphological feature control.
+
+    The fabrication methodology seamlessly integrates TFTs, capacitors, and metal routing with
+    atomic layer deposited (ALD) aluminum oxide thin-film encapsulation layers (Supplementary
+    Fig. 6). Multiple ALD Al2O3 barriers (≥ 30nm each) conformally coat the active electronics, and
+    polyimide layers serve as the primary structural substrate and biotic interface material. This
+    hybrid approach exploits complementary material properties: polyimide provides mechanical
+    compliance, planarization, and bulk insulation, while the ceramic barriers suppress moisture
+    permeation due to their dense structure and low water vapor transmission rate. Inorganic trenches
+    patterned between polyimide layers enhance inter-layer adhesion and create barriers between
+    active regions and array boarders, mitigating delamination risks and improving mechanical
+    robustness. Arrays were fabricated on 4-inch carrier wafers containing multiple  test coupons
+    (Supplementary Fig. 7), then mechanically released in an electrostatically controlled
+    environment and bonded to a breakout board with a minimal-footprint top-side mezzanine
+    connectors (Fig. 1A-E). A representative cross section of a TFT with all encapsulated metal
+    traces and the top-side electrode is shown in Fig. 1F.

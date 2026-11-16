@@ -1,0 +1,50 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                        available under a CC-BY-NC-ND 4.0 International license.
+
+
+       A Thin Film Transistor Backplane for Scalable Chronic Neural
+                                                          Interfaces
+    Andrew M. Bourhis1, Ritwik Vatsyayan1, Karen J. Tonsfeldt1,2, Ian Galton1, Shadi A. Dayeh1,3
+
+
+    1Department of Electrical and Computer Engineering, University of California San Diego, La Jolla, CA, 92093 USA
+    2Department of Obstetrics, Gynecology, and Reproductive Sciences, Center for Reproductive Science and Medicine,
+    University of California San Diego, La Jolla, California 92093, United States
+    3Department of Bioengineering, Department of Nanoengineering, Department of Neurological Surgery, and
+    Materials Science and Engineering Program, University of California San Diego, La Jolla, California 92093, United
+    States
+
+    Corresponding author: S.A.D, sdayeh@ucsd.edu
+
+    Abstract: Scaling neural interfaces to ever-higher channel counts has accelerated rapidly with
+    advances in thin-film fabrication, lithography, and connectorization, enabling passive arrays to
+    reach thousands of channels and chart credible pathways to much larger formats. Integrating
+    active electronics directly at the sensing sites offers a complementary route to higher channel
+    density by reducing the number of interconnects required to access large arrays. Here we
+    introduce a monolithic flexible thin-film integrated circuit platform for active neural sensing,
+    inspired by active-matrix display technology. The system integrates dual-gate amorphous indium
+    gallium zinc oxide transistors on polyimide substrates to implement in-pixel transconductance
+    amplification and row-column time-division multiplexing, improving scability for high-channel-
+    count applications.  Co-optimization of device architecture, contact engineering, and a hybrid
+    ceramic-polymer thin-film encapsulation yields stable operation with projected lifetimes
+    exceeding 38 years under accelerated aging. In acute and chronic in vivo rat studies, the platform
+    exhibits negligible thermal burden, robust sensory-evoked recordings, and stable functionality
+    over 30 days despite tissue encapsulation. These results establish display-inspired flexible thin-
+    film electronics as a scalable building block for next-generation neural interfaces.
+    Introduction
+              Over the past century, advances in neurotechnology have produced tools capable of
+    recording neural activity across a wide range of spatial and temporal scales. Yet despite this
+    progress, building systems capable of sampling the full tapestry of neural activity remains a
+    major challenge. Electrocorticography (ECoG) and related surface                       -based interfaces capture the
+    integrated activity of large neuronal populations across the cortex, offering a unique balance
+    between signal stability, coverage, and invasiveness                1. Progress in this space has consistently
+    required navigating trade-offs among spatial resolution, cortical coverage,                       and surgical burden
+    from early low-density surface electrodes to modern microfabricated arrays capable of dense
+    sampling over increasingly large cortical areas              2-6.
+
+              Recent advances in thin-film fabrication, lithography, and connectorization have enabled
+    passive high-density electrode arrays with an order-of-magnitude higher channel count than the
+    best prior designs, and credible pathways now exist to scale passive systems                         further than
+    previously thought possible4-7. Such scaling, however, introduces engineering challenges,
+    including increased connector width,              interconnect routing density, and multi-layer metallization

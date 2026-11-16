@@ -1,0 +1,54 @@
+Supplementary Fig. 25. Orientation decoder trained as a regressor. The training objective is
+the Euclidean distance between the circular mean of decoder output and the ground truth
+orientation in the complex space. Decoder output (a), point estimation (b) and error histogram (c)
+are shown as in Fig. 4l-m.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                52

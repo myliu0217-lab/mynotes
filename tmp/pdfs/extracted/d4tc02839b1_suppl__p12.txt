@@ -1,0 +1,56 @@
+References
+1.         W.      Lee,         D.     Kim,          N.     Matsuhisa,                   M.      Nagase,              M.      Sekino,  G.     G.     Malliaras,  T.
+            Yokota and              T. Someya, Proc. Natl. Acad. Sci. U.S.A., 2017, 114, 10554-10559.
+2.         W.      Lee,        S. Kobayashi, M.      Nagase,              Y.     Jimbo,            I.   Saito,          Y. Inoue,           T.     Yambe,              M.
+            Sekino,             G.     G.     Malliaras,                 T. Yokota,              M.     Tanaka             and       T.    Someya,               Sci.       Adv.,         2018,
+            4, eaau2426.
+3.         Y.     Jimbo,            D.     Sasaki,             T.     Ohya,           S.    Lee,        W. Lee,        F. Arab         Hassani,               T.     Yokota,              K.
+            Matsuura, S. Umezu, T.                                    Shimizu and T. Someya,                            Proc. Natl. Acad. Sci.                               U.S.A.,
+            2021, 118, e2022300118.
+4.         X.     Gu, C. Yao,         Y.     Liu and       I.-M.         Hsing,           Adv. Healthcare                   Mater.,             2016,          5,    2345-
+            2351.
+5.         W. Lee, D. Kim, J. Rivnay, N. Matsuhisa, T. Lonjaret, T. Yokota, H.                                                                                                           Yawo, M.
+            Sekino, G. G. Malliaras and T. Someya, Adv.                                                                  Mater., 2016, 28, 9722-9728.
+6.         M. Wu, K. Yao,                   N. Huang,       H. Li, J. Zhou, R. Shi, J. Li, X. Huang, J. Li, H. Jia,
+            Z.    Gao,         T.    H.     Wong,            D. Li,     S.    Hou, Y.     Liu,       S.    Zhang,            E.    Song,          J.   Yu and X. Yu,
+            Adv. Sci.        , 2023, 10, 2300504.
+7.         R.  Garcia-Cortadella,                               N.      Schäfer,               J.    Cisneros-Fernandez,                                   L.  Ré,       X.      Illa,        G.
+            Schwesig,                  A.  Moya,            S.     Santiago,                 G.      Guirado,                R.  Villa,  A.      Sirota,            F.     Serra-
+            Graells,             J. A.     Garrido             and A.     Guimerà-Brunet,                            Nano         Lett.,         2020,          20,      3528-3537.
+8.         R. Garcia-Cortadella,                              G.     Schwesig,                 C.    Jeschke,              X. Illa, A.     L.    Gray,          S.    Savage,             E.
+            Stamatidou,                     I.    Schiessl,                E.  Masvidal-Codina,                               K.      Kostarelos,  A.  Guimerà-
+            Brunet, A. Sirota                   and  J.  A.  Garrido, Nat. Commun., 2021,                                         12, 211.
+9.         J.   Viventi,              D.-H.          Kim, L.    Vigeland, E.    S. Frechette, J. A. Blanco,             Y.-S.         Kim, A.
+            E. Avrin, V. R. Tiruvadi, S.-W.                                          Hwang, A. C. Vanleer,                         D. F.       Wulsin, K.                Davis,
+            C.     E.     Gelber,  L.     Palmer,              J.    Van  der  Spiegel,               J.    Wu,        J.    Xiao,  Y.  Huang,  D.
+            Contreras, J. A. Rogers                           and  B. Litt, Nat. Neurosci., 2011, 14, 1599-1605.
+10.       C.-H.          Chiang,              S.     M.      Won,          A.     L.     Orsborn,               K.     J.    Yu,       M.      Trumpis,                B.     Bent,          C.
+            Wang,            Y.     Xue,         S. Min,         V. Woods,             C.     Yu,       B.     H.     Kim, S.    B.     Kim,         R.     Huq,         J. Li,
+            K.     J. Seo,        F.    Vitale,            A.     Richardson, H.     Fang,          Y.     Huang, K.     Shepard,               B.     Pesaran,
+            J. A. Rogers and                      J.  Viventi, Sci.                Transl.  Med. , 2020, 12            , eaay4682.
+11.       T. Kaiju,     M.  Inoue,  M. Hirata        and T.         Suzuki, J.               Neural Eng.             , 2021, 18, 036025.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                  12

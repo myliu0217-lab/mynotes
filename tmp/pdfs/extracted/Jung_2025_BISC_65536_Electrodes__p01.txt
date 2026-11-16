@@ -1,0 +1,55 @@
+                                                                                                             https://doi.org/10.1038/s41928-025-01509-9
+A wireless subdural-contained
+brain–computer interface with 65,536
+electrodes and 1,024 channels
+
+
+
+
+
+Received: 21 March 2025                                A list of authors and their affiliations appears at the end of the paper
+
+Accepted: 22 October 2025
+Published online: 8 December 2025                      E le ct ro co rt ic                    ography  uses  non-penetrating  electrodes  embedded  in
+                                                       flexible substrates to record electrical activity from the surface of the brain.
+    Check for updates                                  To use the technology to develop minimally invasive, high-bandwidth
+                                                       brain–computer interfaces, it will be necessary to improve the number of
+                                                       recording channels and the scalability of devices, which could be achieved
+                                                       by merging electrodes and electronics onto a single substrate. Here we
+                                                       report a 50-μm-thick, mechanically flexible micro-electrocorticography
+                                                       brain–computer interface that integrates a 256 × 256 array of electrodes,
+                                                       signal processing, data telemetry and wireless powering on a single
+                                                       complementary metal–oxide–semiconductor substrate. The device
+                                                       contains 65,536 recording electrodes, from which we can simultaneously
+                                                       record a selectable subset of up to 1,024 channels at a given time. Our
+                                                       chip is wirelessly powered, and when implanted below the dura, it can
+                                                       communicate bidirectionally with an external relay station outside the body.
+                                                       We show that the device can provide chronic, reliable recordings for up to
+                                                       two weeks in pigs and up to two months in behaving non-human primates
+                                                       from the somatosensory, motor and visual cortices, decoding brain signals
+                                                       at high spatiotemporal resolution.
+
+
+In electrophysiology, a fundamental trade-off exists between the inva-            that ECoG recordings taken from subdural arrays can remain stable
+siveness of the recording device and the spatiotemporal resolution                for more than a year9,10 , illustrating the potential of the technology in
+and signal-to-noise ratio characteristics of the acquired neural signals.         chronic applications.
+Non-invasive techniques, such as electroencephalography, do not                         Advances in microfabrication techniques also continue to improve
+require surgery but can only capture limited spatiotemporal dynamics              the spatial resolution of the ECoG electrode array. Current leading-edge
+of brain activity1. Recording from penetrating electrodes, in contrast,           micro-ECoG (μECoG) arrays provide more than a thousand recording
+can resolve extracellular action potentials from individual neurons2,3   ,        sites with a submillimetre electrode pitch on a single substrate11,     12. Such
+but invasive microwires can cause tissue damage4,5 and compromise                 progress is encouraging since higher-spatial-resolution μECoG has
+long-term recording stability6,7.                                                 been shown to improve the accuracy of sensory13, motor14 and speech
+     Electrocorticography (ECoG) is an intracranial approach that                 decoding15. It has also enabled a more precise mapping of epileptiform
+uses non-penetrating electrodes embedded in thin, flexible sub-                   waveforms12 and the recording of neural spiking activity16.
+strates that conform to the curvilinear surface of the brain. ECoG                      Yet, current leading-edge high-resolution, multichannel implant-
+records population-level signals, averaged across local neurons.                  able electrodes remain separate from the electronics required for signal
+Importantly, because the electrodes sit on the cortical surface,                  conditioning and data transmission. Traditionally, long percutaneous
+ECoG minimizes brain tissue damage and can acquire higher                         cables have been used to connect the implant to external rack-mount
+signal-to-noise ratio, higher bandwidth and more spatially localized              electronics17–19, but the use of cables restricts the movement of subjects
+signals than electroencephalography8. In vivo studies have shown                  and increases the risk of infection and tissue damage20,21 .
+
+
+   e-mail: tolias@stanford.edu;       shepard@ee.columbia.edu
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                                                                      1272

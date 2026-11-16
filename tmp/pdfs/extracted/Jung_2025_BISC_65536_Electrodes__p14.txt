@@ -1,0 +1,68 @@
+    and previous received bits. In the transmitting chain, a frequency                         TiN was chosen as the electrode material due to its biocompat-
+    synthesizer (ADF4351, Analog Devices) is used to generate the                        ibility, rough surface morphology providing a reduction in impedance
+    4-GHz sine-wave bursts. To transmit a 1, the processor board                         (Z = 205 kΩ at 1 kHz for a 14 μm × 14 μm electrode) compared with
+    sends a logic high through the HDMI cable (transmitter), and                         a smooth electrode material such as gold (Z    = 3.1 MΩ at 1 kHz for a
+    the radio-frequency output from the synthesizer is activated,                        14 μm × 14 μm electrode), strong adhesion for chronic implantation
+    driving the dipole antenna via the radio-frequency switch. The                       and stimulation, compatibility with CMOS processing and capacitive
+    reference clock of the synthesizer and control signal for the                        non-Faradaic current properties69. Supplementary Fig. 4 shows the
+    radio-frequency switch are also sent over the HDMI cable (CLK                        characterizations of BISC TiN electrodes.
+    and TR) by the processor board. Additionally, this board houses                            After electrode fabrication, a 2.5-μm-thick polyimide encapsula-
+    the microcontroller that controls the attenuator and the refer-                      tion layer (PI2610, HD Microsystems) was spin coated onto the front
+    ence voltage of the threshold detector. The d.c. power, reference                    surface after functionalizing the surface with an adhesion promoter
+    clock and other control signals are passed to the power amplifier                    (VM652, HD Microsystems) and cured at 350 °C for 30 min, followed
+    board via a board-to-board connector.                                                by spin coating a layer of photoresist (AZ P4620, MicroChemicals). The
+•          Power amplifier board. The power amplifier board implements                   TiN electrodes were exposed using oxygen-plasma etching (Oxford
+    a class-E amplifier to drive the power coil at 13.56 MHz. The                        Instruments). After a brief Ar-ion clean, a second 360-nm TiN layer
+    amplifier uses a single-ended gallium nitride transistor (EPC2051,                   was sputtered on top of the first TiN layer using the same deposition
+    Efficient Power Conversion) as the active switch, loaded with a                      parameters, and the AZ P4620 mask was lifted off in Remover PG.
+    standard matching network67 that shapes the impedance of the                         Each die was then separated with a dicing saw (DISCO Corporation)
+    coil. In an inductively coupled system, the link efficiency and                      and bonded frontside down on a glass carrier using an instant adhe-
+    tuning of its resonant frequency depend on a number of dynamic                       sive (LOCTITE 460, Henkel) for thinning on a grinding and polishing
+    variables such as the coil-to-coil alignment, electromagnetic                        tool (X-Prep, Allied High Tech) to a final silicon substrate thickness
+    properties of the environment, operating mode of the implant                         of ~25 μm. Chips were then loaded into a parylene-coating chamber
+    and so on. To compensate for these variables in real time, the                       (Specialty Coating Systems) to encapsulate the backside with 10 μm of
+    board uses two feedback mechanisms to keep the link operat-                          parylene C. The parylene was trimmed along the edge to leave about a
+    ing at its optimum. First, it controls the radiation magnitude                       1-mm overhang for handling and the chip was released from the glass
+    by periodically reading out the level of power received by the                       carrier by dissolving the adhesive in acetone.
+    implant and adjusting the supply voltage of the class-E ampli-
+    fier through an inter-integrated circuit configurable regulator                      Wafer-scale processing. Whole eight-inch wafers can be processed
+    (TPS65400, Texas Instruments). Second, it prevents detuning of                       in a similar way starting with the TiN electrode fabrication and
+    the resonance by adjusting the series capacitance of the load net-                   polyimide front-surface encapsulation. Assuming the entire wafer
+    work using a reconfigurable capacitor bank68. By monitoring the                      is dedicated to BISC chips, a single wafer yields up to 200 fully
+    current consumed by the class-E amplifier under different load                       contained devices ready for sterilization and implantation
+    conditions, the 4-bit (1-pF least significant bit) bank is configured                (Supplementary Fig. 5).
+    to keep the link resonance stable at 13.56 MHz.                                            During mechanical thinning, grinding-induced defects are
+                                                                                         introduced into the silicon, which can serve as nucleation sites for
+     The processor module is based on a platform (Snickerdoodle                          bending-induced fracture growth and device failure. Extensive pol-
+Black, Krtkl) that runs both firmware and the Linux operating system                     ishing is needed to remove these defects. With this in mind, for the
+on the field-programmable gate array and ARM processor of a Zynq-                        wafer-scale thinning process, we developed a wet-etch thinning tech-
+7020 system on a chip. We designed APIs using Python language and                        nique using an isotropic silicon etch consisting of hydrofluoric, nitric
+Xilinx PYNQ libraries. Our Python software running on Linux (Ubuntu                      and acetic acids. The device wafer was bonded to a silicon carrier wafer
+18.04) provides methods to fully control the BISC implant, stream the                    using an organic adhesive (WaferBond HT-10.11, Brewer Science). The
+recording data over the ethernet or store it on a secure digital card, as                wafer edges were clamped using an O-ring seal, and the wafer surface
+well as control the microcontroller on the BISC headstage.                               was covered in an etchant, which was stirred and maintained at room
+     The BISC relay station presently only works with one implant at                     temperature to give a uniform etch rate of 4.28 μm min                     −1 across the
+a time. However, multiple devices can be implanted if a spacing of at                    wafer. The remaining silicon thickness was monitored during etching,
+least 5 mm is maintained between devices. In this scheme, an implant                     and the wafer was removed and rinsed in deionized water once this
+would be selectively powered up by positioning the headstage over it.                    value reached 25 μm.
+                                                                                               The chips were carefully aligned using features visible through the
+BISC implant post-processing                                                             thinned backside of the wafer and singulated by laser dicing (DISCO
+Coupon processing. A coupon consisting of four reticles (total dies,                     Corporation) through the thinned wafer with 100-μm-wide dicing
+16) was scribed out from the original 300-mm BISC wafer from TSMC                        lanes, stopping within the WaferBond adhesive layer. A 10-μm-thick
+using a diamond scribe. Supplementary Fig. 3 shows a schematic of                        film of parylene C was deposited onto the backside of the wafer in a
+the process flow through a cross-section of the microelectrode array                     room-temperature chamber (Specialty Coating Systems) using an
+region. A layer of photoresist (AZ P4620, MicroChemicals) was spin                       adhesion promoter (Silane A174, Sigma-Aldrich). The wafer was then
+coated onto the coupon at 3,000 rpm, exposed on a contact mask                           loaded into an excimer laser dicing tool (IPG Photonics) and was aligned
+aligner (MA-6, Karl Suss) and then developed (AZ 400K, MicroChemi-                       as before. Parylene within the dicing lanes was laser cut with a dic-
+cals). Etching the silicon oxide and nitride layers with a plasma etcher                 ing width of 60 μm to leave a 20-μm overhang of parylene along the
+(Oxford Instruments) exposed the Al redistribution layer at the elec-                    chip edges. The wafer was then submerged in a WaferBond remover
+trode sites. The redistribution layer was wet etched in an Al etchant                    (1-dodecene, Brewer Science) to dissolve the underlying adhesive. The
+(Type A, Transene) to expose the underlying Ta diffusion barrier layer                   individual chips were collected and rinsed in acetone and isopropanol
+over the redistribution via layer. A brief Ar-ion sputter to remove the                  and dried with nitrogen.
+Ta oxide layer was followed by sputtering 240 nm of TiN (120 min,
+0.33 Å s−1, 20 s.c.c.m. Ar, 3 mtorr, 175 W) on Ta in the same vacuum cham-               Reporting summary
+ber (Orion 8 Dielectric Sputter Chamber, AJA International), and the                     Further information on research design is available in the Nature
+resist was lifted off using a photoresist remover (Remover PG, Kayaku).                  Portfolio Reporting Summary linked to this article.
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                             1285

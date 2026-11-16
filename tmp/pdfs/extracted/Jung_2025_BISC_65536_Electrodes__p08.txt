@@ -1,0 +1,100 @@
+           a                                                                       b            300 ms                               50 ms                          50 ms                          50 ms
+
+                                            6.8 mm7.4 mm
+                                                           A      M
+                                                           L      P                                                                                                                                                        ...
+
+
+
+
+
+                                                                                                            Stimulus onset                              30 static gratings                                                 Time
+            c                                                       e                                                                                    f                            Channel (2, 4)
+                                            Fixation                         20                                                                                                                                                     1
+
+                                            Stimulus                          0                                                                               256
+
+
+                                                                            –20                                                                                64
+                                                                             20
+                                                                                                                                                               32
+                                                                              0                                                                                 16
+                0                                                           –20                                                                                  8
+                            40          80          120         160
+                             Frequency (Hz)                                  20                                                                                  4                                                                 0
+            d                                                                                                                                                                       0                                     1,500
+
+                                           (0, 0)           (0, 15)           0                                                                          g        1
+                                                                                                                                                                                                                               4 Hz
+                   P                                                        –20                                                                                                                                                8 Hz
+                                                                                                                                                                                                                               16 Hz
+             M         L                                                                                                                                                                                                       32 Hz
+                   A                                                         10                                                                                                                                                64 Hz
+                                           (15, 0)        (15, 15)                                                                                                                                                             128 Hz
+                                                                              0
+
+                                                                            –10
+
+                                                                                             0              500           1,000         1,500                    0
+                                                                                            Time since stimulus onset (ms)                                                          0                                     1,500
+                                                                                                                                                                         Time since stimulus onset (ms)
+            h6.96 Hz      9.19 Hz      12.13 Hz       16 Hz                                 k
+
+                                                                                 6
+                                                                                 5                 5σ
+
+                                                                                 4
+                21.11 Hz     27.86 Hz    36.76 Hz    48.5 Hz
+                                                                                 3
+
+
+
+                                                                                 2
+
+                 64 Hz      84.45 Hz   111.43 Hz  147.03 Hz
+
+
+
+                                                                                 1
+
+            i
+
+                                                                                 2
+
+                                                                                 1
+
+                                                                                 0
+
+                                                                                 –1
+
+                                                                                 –2
+
+
+                               0                    100                 200
+                           Time since grating onset (ms)
+            j   6.96 Hz      9.19 Hz      12.13 Hz       16 Hz                   5
+
+                                                                                              03
+
+                                                                                 4           –3
+                                                                                                          Orientation
+                21.11 Hz     27.86 Hz    36.76 Hz    48.5 Hz                                   l                                                    m                                         n
+                                                                                 3                               2.27 bits
+                                                                                                                                        0.3
+                                                                                                    135                                                 135
+                                                                                 2                                                      0.2                                                                                  ⟨∆θ      2⟩ = 12.5°
+                 64 Hz      84.45 Hz   111.43 Hz  147.03 Hz                                          90                                                  90
+
+                                                                                                     45                                 0.1              45
+                                                                                 1
+                                                                                                       0                                                   0
+                                                                                                          0     45    90    135                               0     45    90   135                   –60     –30       0        30       60
+                                                                                 0                          Ground truth (°)                                    Ground truth (°)                           Prediction error (°)
+
+
+
+
+
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                       1279

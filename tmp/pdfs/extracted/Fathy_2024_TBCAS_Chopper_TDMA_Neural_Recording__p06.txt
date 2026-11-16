@@ -1,0 +1,68 @@
+                      This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                            content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                     6
+
+multiplexed signal band beyond the amplifier 1/f noise corner                        charging on each chopping-phase, and this withdraws transient
+frequency.  Then the signal is amplified, and the ADC samples                        currents  from  the  input  source  signal          VIN  that  leads  to  input
+the signals at an oversampled rate a ´ fClk = 2 fChop.                               impedance degradation.
+  Normally,  a  down-modulating  chopper  is  inserted  after  the                       To increase the input impedance, the capacitance CT needs to
+neural amplifier, then followed by an analog LPF to attenuate                        be  recharged  to      VIN   prior  to  re-connecting  the  AFE  to  the
+the upmodulated flicker noise. Unfortunately, this technique is                      electrodes. However, this requires the prediction of the input
+not valid in the case of a TDMA scheme because the analog                            signal prior to its application.
+LPF will distort the amplified multiplexed signal.                                       Assuming it is possible to do this prediction, VIN, predicted can
+  Instead, the     down-chopper        is  moved    to the  digital  domain          then  be  applied  to  a  capacitor         CB,  which  in  practice  is  a
+after   the   ADC,   resulting   in   a   down-chopped   (but   not                  capacitive  DAC.  The  DAC  can  then  pre-charge                   CT   to  the
+demultiplexed) signal at node VD in Fig. 5. Since no low-pass                        predicted     VIN   value  required.  This  dictates  that  the  voltage
+filtering has occurred yet, flicker noise is still present in this                   applied to the DAC capacitance CB to be VIN (CB + CT) / CB.
+signal.  To  attenuate  this  flicker  noise,  a         resettable  moving          Additionally, the voltage required to the DAC is VIN / GDAC, B,
+average (RMA) filter acting as a LPF averages a-input samples                        where GDAC, B is the impedance booster DAC gain.
+to node VM,AP, afterwards, the filter is reset for the next channel                      With  a  high  electrode  impedance          ZE,  the  resistivity  of  the
+frame.                                                                               impedance-booster to the AFE input capacitors will be orders
+  Unfortunately,   with   an   open   loop   configuration   neural                  of magnitude less that the impedance from the electrodes to CIN.
+amplifier, its input referred offset, VOS, is expected to saturate                   Accordingly, the current will be supplied from the impedance-
+the output of the amplifier. Without a chopper, the static input                     booster   module   which   will   cause   the   overall   AFE   input
+referred offset is automatically removed by the DSP module via                       impedance to increase.
+the proposed EOV/LFP filter in Fig. 2. However, a chopper will                           The  timing      diagram     waveforms       shown     in   Fig.   6(b)   are
+up-modulate  the  offset  and  the          feedback      loop  will  fail  to       synthesized by on-chip by the DSP module that operates with a
+attenuate it. To solve this issue, a digital integrator, shown in                    master clock of 10.24 MHz. A reset phase (RST) with active
+green in Fig. 5, is added to the loop to remove the amplifier                        high duration of 48.82 ns is added to avoid unnecessary charge
+input  referred  offset. The  additional  loop  is  composed  of  an                 sharing between the DAC and AFE capacitances. The applied
+integrator that is used as an LPF, and an attenuation digital shift-                 boost voltage digital code of the DAC (VB) is set to zero during
+right parameter k that controls the cutoff frequency of the filter.                  reset phase. The BOOST phase allows charges to flow from the
+  The proposed chopping technique reduces overall IRN with                           DAC to CIN prior to connecting the electrodes to the AFE by
+an  additional  cost  of  power  consumption  required  in  the                      𝜑+,5. The reset and boost signals slightly overlap the ending of
+amplifier BW extension, the higher ADC sampling speed, and                           𝜑+,5 to ensure that the voltage on each terminal is defined and
+the higher digital clock with factor a. With the proposed power                      not floating, whereas the DAC and CT differential charges are
+savings  in  the  EOV/LFP  and  feedback  modules,  chopping                         set to zero. The neural amplifier is expected to have a BW much
+becomes more attractive to further attenuate the system IRN.                         lower than the reset phase duration, hence, the RST switches
+D.   Impedance Booster Module                                                        help in the input and output stages of the amplifier to reach VCM
+   It  is  well  known  that  chopper-stabilized  neural  recording                  which is exactly half the supply.
+systems  suffer  from  reduced  input  impedance  as  a  cost  for                       The following section explains how VIN, predicted is calculated
+reducing flicker noise. In a nominal implementation, the input                       in the digital domain, allowing for this scheme to be employed.
+
+impedance is estimated to be ZIN = 1 / 2 fChop CIN, where CIN is                                           III.   DESIGN ARCHITECTURE
+the input AC-coupling capacitors of the AFE.                                            The overall proposed neural recording system block diagram
+   Many solutions were proposed over the last decade to boost                        is shown in Fig. 7. The system is composed of an analog module
+the AFE input impedance with the presence of a chopper for a                         containing an analog multiplexer, a chopper, a 2-pF input AC-
+single   channel   system         [14],   [24].   However,   it   is   very          coupling  capacitor        CIN,  a  fully  differential  neural  amplifier
+challenging to boost the AFE input impedance when a multiple                         biased by pseudo-resistors, a 10-bit ADC, and two 10-bit DACs
+access  scheme  is  used,  since  each  channel  needs  its  own                     for EOV/LFP and an impedance booster. The proposed digital
+impedance booster module to detect the amount of input current                       module, introduced in section II, assembles the EOV/LFP filter,
+withdrawn from the electrodes and supply it from the booster                         the DAC size reduction, and the amplifier static offset remover
+module.    A  brute-force  solution,  such  as  the  one  mentioned,                 all together.
+would  result  in  increased  overhead  circuitry,  which  would
+translate into a significant rise in per-channel power and area.                     A.   Noise Considerations
+Thus, a different approach is required.                                                 In TDMA systems, the amplifier BW should accommodate
+   Fig.  6(a)   shows  the  proposed  impedance  booster  module.                    for the multiplexed signal BW. Assume that the amplifier is a
+Here, the electrodes are modeled to have an impedance of ZE,                         one-pole system, this gives an amplifier transfer function H(s)
+and   the  timing  diagram       in  Fig.  6(b)   shows    non-overlapping           = Av / (1 + (s / wBW)), where Av is the amplifier gain, and wBW
+chopper clocks 𝜑+,5. The total equivalent input capacitance of                       is the dominant pole setting the GBW. The input step u(t) gives
+the analog front end (AFE) is denoted by CT. Since the polarity                      an output step response signal Vout(t) = Av (1 - exp(-t / tBW)) u(t),
+of the input signal VIN keeps changing with choppers, CT keeps
+
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                      © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

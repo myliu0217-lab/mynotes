@@ -1,0 +1,86 @@
+Paper                                                                                                                                   Journal of Materials Chemistry C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 3    In vivo device performance and long-term implantation stability. (a) Intraoperative photograph of the 64-channel vOECT array and a 32-channel
+Pt electrode array positioned on the cortical surface of the left and right hemispheres of a mouse. Scale bar, 3 mm. (b) Schematic depicting the functional
+areas of the brain and the locations of the vOECT biosensors, as shown in the brain atlas. The somatosensory cortex is highlighted in green, while the
+primary  and  secondary  motor  cortices  are  indicated  in  yellow  and  light-yellow,  respectively.  (c)  Signal  trajectories  captured  by  64  vOECTs  (above)
+together with the corresponding time-frequency analysis plot (below). (d) Signal trajectories recorded by the 32 Pt electrodes (above) together with the
+corresponding  time-frequency  analysis  plot  (below).  (e)  Violin  plot  combined  with  a  boxplot  illustrating  the  superior  SNR  exhibited  by  the  vOECTs
+compared to the passive Pt electrodes. The light red and blue shading represent the standard deviation bars for the vOECTs (n = 64) and Pt electrodes
+(n  = 32), respectively. (f) Representative seizure signals recorded by the vOECT array on days 1, 12, 26, 57 and 92 post-implantation. (g) Raw LFP trace (top)
+and corresponding spectrogram (bottom) from the vOECT array, implanted for long-term monitoring on day 92, highlighting both normal and seizure
+states.
+
+
+less discernible with Pt electrodes. The enhanced sensitivity of                                interfaces of the Pt electrodes collect and amplify not only the
+OECTs can be attributed to the inherent amplification properties,                               biological   signals   but  also   any  associated  noise,   negatively
+which  contrasts  with  the  passive  Pt  electrodes  that  require                             impacting  the  SNR.  The  statistical  results,  presented  in  Fig.  3e,
+external  amplification.  As  a  result,  the  connecting  leads  and                           indicate that the average SNR for the 64 OECTs is 32.13 /C6 2.51 dB,

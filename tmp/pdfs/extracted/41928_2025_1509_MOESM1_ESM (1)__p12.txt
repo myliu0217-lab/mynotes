@@ -1,0 +1,50 @@
+Supplementary Discussion S2. BISC wireless link protocol and software stack
+
+The BISC wireless link protocol consists of both uplink and downlink protocols. The downlink
+protocol packetizes the information transmitted from the relay station to the implant, while the
+uplink protocol packetizes the information sent from the implant to the relay station. Both types
+of packets hold a total of 125 bits, which is specifically designed to accommodate the sampling
+rate and ADC resolution of BISC (Supplementary Fig. 12, Supplementary Table 1). This
+custom protocol enables more energy-efficient data telemetry compared to standard wireless
+protocols such as Bluetooth or 802.11. Moreover, because the transmission range only needs to be
+a few centimeters, the implant’s transceiver operates as a high-bit-rate radio while consuming less
+than 13 mW of power. Packets from the relay station are received by the BISC implant bit-by-bit
+and stored in a shift buffer that matches the size of one packet.
+
+Encoder modules in the BISC implant and in the relay station prepare the packets before
+transmission. The packets contain the information to be transmitted, along with several fixed-size
+segments of bits that are used for communication synchronization which we denote as “sync bits”
+occupying unique positions inside each packet. In addition, the encoder adds eight bits of error
+correction code (ECC) to implement single error correction, double error detection (SEC-DED),
+computed from the information in the packet and the sync bits. Decoder modules in the implant
+and the relay station are in charge of probing the shift buffer at each clock cycle, searching for the
+sync bits, and identifying when a full packet is present on the device. When a packet is identified,
+it is copied from the shift register and forwarded for further processing.
+
+Supplementary Fig. 12 shows the packet structure for both the downlink and the uplink. In both
+packets, the parity bits hold the ECC code, and the preamble bits are unused. In the downlink
+packet, the OPCODE is a unique code that identifies the instruction (Supplementary Table 1).
+The OPERAND bits include an address to a block in the controller and any other parameters that
+are needed to execute the command. In the uplink packet, the preamble bits are used to synchronize
+the order of recorded values during recording; otherwise they are unused. The DATA bits hold the
+information from the implant to be processed by the relay station.
+
+Supplementary Fig. 13 presents the software stack in the BISC system and the hardware interface.
+The software stack is executed on the processing system (PS) of the relay station. The top layer of
+the stack is the RESTful API that implements an interface between an external client to the lower
+software layers in the stack. The commands sent to the relay station from an external client trigger
+Python applications that allocate memory through direct memory access (DMA) and make the
+preparations to intercept data from the implant. When the preparations are done, the applications
+use system calls to drivers, which access memory-mapped registers to configure the hardware in
+the programmable logic (PL) and retrieve the addresses for the allocated memories. The Python
+applications and drivers are implemented on top of a PYNQ 100 overlay embedded in the Linux
+operating system. PYNQ provides libraries that abstract the interaction with the hardware interface
+between the PS and the PL. Once the memory-mapped registers are configured with the
+information to execute high-level commands from the embedded API in the PL, the hardware in
+the PL executes the commands, prepares sequences of instructions to be sent to the implant, and
+then forwards them to be processed by the BISC controller. The PL communicates instructions to
+the implant through a designated module that interfaces with the transceiver on the headstage. The
+PL incorporates a data management module to intercept incoming data from the implant and store
+
+
+                                                          11

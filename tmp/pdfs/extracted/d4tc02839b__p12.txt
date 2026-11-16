@@ -1,0 +1,60 @@
+Journal of Materials Chemistry C                                                                                                                                   Paper
+
+biological glue and dental cement. Finally, the cap is closed and                  The  mice  received  300  mL  of  this  fixative  per  100  g  of  body
+sealed with parafilm (Fig. S11b, ESI†) to ensure that the mouse                    weight. After perfusion, the brains were removed from the skull,
+can move freely without damaging the device. After surgery, the                    kept in PFA for 24 hours at 4 1C, then post-fixed in a solution of
+mouse  was  housed  individually  in  cage  with  food  and  water                 30% sucrose solution in (0.01 M PBS) for 48 hours at 4  1C. The
+provided ad libitum.Duringtesting,thecapisopenedagain,and                          dehydrated brains were frozen in Optimal Cutting Temperature
+the device is connected to an adapter board via a ZIF connector                    compound (OCT, Sakura), and brain slices (40 mm) containing
+and to the backend acquisition circuit board through a flexible                    the  somatosensory  cortex  were  sectioned  coronally  using  a
+flat cable (Fig. S11c, ESI†). Subsequently, seizures were induced                  cryostat (Leica, CM1950). After washing three times with PBS,
+by  intraperitoneal  injection  of  0.5  mL  of  100  mM  bicuculline              the brain slices were blocked with 5% BSA and 0.3% Triton X-
+solution, the same solution used in acute in vivo recordings.                      100 for 2 hours at room temperature. Subsequently, the slices
+Cytotoxicity                                                                       were incubated overnight at 4 1C with primary antibodies (anti-
+                                                                                   IBA1, 1 : 1000, rabbit, Invitrogen; anti-GFAP, 1 : 300, IgG1, Cell
+For  cytotoxicity  test,  the  extract  dilution  methods  were  used              Signalling) diluted in PBST (0.3% Triton X-100) to label micro-
+with  murine  hippocampal  neuronal  HT22  cells.  The  vOECT                      glia and astrocytes. Following five washes for 10 minutes each in
+array is used as a target sample, with the bare HT22 medium as                     PBST,  the  slices  were  incubated  with  secondary  antibodies
+the control group. The vOECT arrays were extracted in culture                      (1 : 1000, Alexa Fluor 555, Alexa Fluor 633) for 2 hours at room
+media  for  24  h  incubation  at  37  1Cin5%CO2.  The  murine                     temperature. After two additional washes for 10 minutes each in
+hippocampal  neuronal  HT22  cells  and  HT22  medium  were                        PBST, the slices were incubated  for  10 minutes  at room  tem-
+purchased  from  Procell  Life  Science  &  Technology  Company                    perature  with  DAPI  (to  label  nuclei)  and  washed  three  times
+(Wuhan).  The  collected  murine  hippocampal  neuronal  HT22                      with  PBST.  Finally,  the  sections  were  mounted  and  imaged
+cells  were  then  plated  in 48-well  microculture  plates  in  com-              using a confocal microscope (SP5, Leica). Images were analyzed
+plete extract culture medium. At day 1 and day 5 in vitro, the                     using the image-processing software ImageJ (NIH). Raw fluores-
+cells were stained with Calcein-AM/PI Cell Viability/Cytotoxicity                  cence intensity values of every pixel in a ROI were averaged and
+Assay Kit (Beyotime). The cell morphology were observed with a                     then  normalized  to  the  ROI  area  (mean  intensity  mm/C02).
+fluorescence  microscope  (DMi8,  Leica).  For  CCK-8  assay,  the                 Neuronal  density  was  calculated  using  the  ITCN  plugin  of
+fresh  culture  medium  was  added  to  obtain  the  extracts  with                ImageJ (NIH). Neurons inside ROIs were counted on images of
+diﬀerent concentrations: 100%, 50%, 25%, 13%, 7%, and 4%                           NeuroTrace stained slices.
+following  the  calculation  100  /C2     1                  0mL  of  100%
+                                          2  =  50%,  i.e.,31
+extract in 60 mL of culture medium; 50 /C2          2 =  25%, i.e.,30mLof          Author contributions
+50% extract in 60 mL of culture medium, etc. After the cells had
+been seeded at a density of 5.0 /C2 104 cells per well into a 96-well              Xiaomin Xu conceived the topic and supervised the research. Wei Xu
+plate in duplicate and incubated at 37 1C for 24 h, the medium                     and   Yanlan   Zhu   designed   the   device   structure,   fabricated   the
+was replaced with the diluted extracts at six diﬀerent concen-                     ultraflexible  vOECT  arrays,  and  performed   the   analysis.   Xiaolin
+trations and a bare HT22 medium as control group. The cells                        Zhou,   Haoyue   Guo,   and   Jingxin   Wang   designed   the   backend
+were then incubated for a further 1 and 5 days at 37  1Cina                        recording  system.  Ruiqi  Zhu  and  Xing  Ma  performed  biocompat-
+humidified atmosphere containing 5% carbon dioxide. At day 1                       ibility test. Zhengwei Hu and Xiaojian Li measured neural signal and
+and day 5, each well was stained with CCK-8 solution (APExBIO,                     assisted in the signal analysis. Wei Ma and Xing Ma discussed and
+America).  The  viability  of  the  cell  cultures  of  each  well  was            revised the manuscript. Wei Xu, Yanlan Zhu, and Xiaomin Xu wrote
+measured using the microplate reader (TECAN Infinite 200 Pro)                      the manuscript. All authors discussed and revised the manuscript.
+Relative  cell  viability  was  defined  as  the  percentage  of  the
+optical density of a diluted extract containing medium to the
+optical density of the corresponding non-treated control.                          Data availability
+
+Immunohistochemistry                                                               The data supporting this article have been included as part of
+We  implanted  the  sensing  part  of  the  probe  in  the  brain  of              the ESI.†
+
+18–20 g mice. A 1.5 /C2 1.5 mm2 craniotomy was conducted in
+the right hemisphere above the somatosensory cortex. The dura                      Conflicts of interest
+mater  was  retracted,  and  the  sensing  part  of  the  array  was
+slowly lowered on the surface of the cortex. Three cranial nails                   There are no conflicts to declare.
+were  nailed  to  the  skull  to  better  hold  the  dental  cement  in
+place.  The  skull  and  OECT  platform  were  then  covered  with                 Acknowledgements
+biological  glue  and  dental  cement.  After  12  weeks,  the  mice
+were deeply anesthetized by intraperitoneal injection of pento-                    The authors acknowledge support from Ministry of Science and
+barbital  sodium  solution  and  perfused  and  fixed  using  a                    Technology  of  the  People’s  Republic  of  China  (National  Key
+fixative solution containing 4% paraformaldehyde (PFA, Beyo-                       R&D Program of China, no. 2023YFE0101400), National Natural
+time)  in  phosphate-buffered  saline  (PBS,  Beyotime),  pH  7.4.                 Science Foundation of China (no. 52273249), Natural Science Fund

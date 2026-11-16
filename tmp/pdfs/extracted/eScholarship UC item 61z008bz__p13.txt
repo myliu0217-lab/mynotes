@@ -1,0 +1,91 @@
+                              This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+12                                                                                                                                                                                                                        IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+[22]   W.  Biederman  et  al.,  “A  fully-integrated,   miniaturized  (0.125  mm2)                                                       Jiannan  Huang  (Member, IEEE) received  the B.S.
+       10.5 μW wireless  neural  sensor,”  IEEE J.  Solid-State  Circuits,  vol. 48,                                                     degree in electrical  engineering  from the University
+       no. 4, pp. 960–970, Apr. 2013.                                                                                                    of  Michigan,  Ann  Arbor,  MI,  USA,  with  outstand-
+[23]   R.  Ranjandish   and   A.  Schmid,  “Walsh–Hadamard-based   orthogonal                                                            ing  achievement,  and  Shanghai  Jiao  Tong  Univer-
+       sampling technique  for parallel  neural recording  systems,” IEEE Trans.                                                         sity,  Shanghai,  China,  in  2016,  and  the  M.S.  and
+       Circuits  Syst. I, Reg. Papers, vol. 68, no. 4, pp. 1740–1749, Apr. 2021.                                                         Ph.D.  degrees  in  electrical  and  computer  engineer-
+[24]   S.  Jung,  P.  Kwon,  D.  Piech,  M.  Maharbiz,  J.  Rabaey,  and  E.  Alon,                                                      ing  (ECE)  from  the  University  of  California  San
+       “A  2.7-μW  neuromodulation  AFE  with  200  mVpp  differential-mode                                                              Diego  (UCSD), San  Diego,  CA, USA, in  2018  and
+       stimulus  artifact  canceler  including  on-chip  LMS  adaptation,”  IEEE                                                         2021, respectively.
+       Solid-State  Circuits  Lett.,  vol. 1, no. 10,  pp. 194–197, Oct.  2018.                                                             He   has   held   Internship   Positions   with   Analog
+[25]   S. Pavan, R. Schreier, and G. C. Temes, “Delta-sigma DACs,” in Under-                                                             Devices,  Wilmington,  MA,  USA;  MaXentric  Tech-
+       standing  Delta-Sigma   Data  Converters.  Hoboken,  NJ,  USA:  Wiley,                           nologies,  San  Diego,  CA;  and  Movellus  Circuits,  Ann  Arbor,  MI,  where  he
+       2017, pp. 425–450.                                                                               worked on high-performance,  low-power (LP) mixed-signal circuits. In 2021,
+[26]   E.  Castagnola  et  al.,  “Smaller,  softer,  lower-impedance  electrodes  for                   he  joined  Qualcomm  Inc.,  San  Diego,  CA,  as  a  Senior  Design  Engineer,
+       human  neuroprosthesis:  A  pragmatic  approach,”  Frontiers  Neuroeng.,                         developing  high-performance  analog  to  digital  converters  (ADCs).  In  2021,
+       vol.  7, pp. 1–17, Apr. 2014.                                                                    he  joined  Qualcomm  Inc.,  as  an  Analog/Mixed-Signal  (AM     S)  Design  Engi-
+[27]   F.  Zhang,  J.  Holleman,  and  B.  P.  Otis,  “Design  of  ultra-low  power                     neer.  His research  interest  includes  AMS integrated  circuits  with a particular
+       biopotential   ampliﬁers   for  biosignal   acquisition   applications,”   IEEE                  focus on developing high-resolution voltage-controlled oscillator (VCO)-based
+       Trans. Biomed.  Circuits  Syst., vol.  6, no. 4, pp.  344–355, Aug. 2012.                        ADCs using digital  calibrations.
+[28]   M.   Sharma,   A.   Gardner,   H.   Strathman,   D.   Warren,   J.   Silver,   and
+       R. Walker,  “Acquisition  of  neural  action  potentials  using  rapid  multi-
+       plexing directly at the electrodes,” Micromachines, vol. 9, no. 10, p. 477,
+       Sep. 2018.                                                                                                                        Patrick P. Mercier (Senior Member, IEEE) received
+[29]   C.-C. Liu, S.-J. Chang, G.-Y. Huang, and Y.-Z. Lin, “A 10-bit 50-MS/s                                                             the  B.Sc.  degree  in  electrical  and  computer  engi-
+       SAR  ADC  with  a  monotonic  capacitor  switching  procedure,”  IEEE  J.                                                         neering  from  the  University  of  Alberta,  Edmonton,
+       Solid-State  Circuits,  vol.  45, no. 4, pp.  731–740, Apr. 2010.                                                                 AB,   Canada,   in   2006,   and   the   S.M.   and   Ph.D.
+                                                                                                                                         degrees  in  electrical  engineering  and  computer  sci-
+                                                                                                                                         ence  from  Massachusetts  Institute  of  Technology
+                                                                                                                                         (MIT),  Cambridge,  MA,  USA,  in  2008  and  2012,
+                                                                                                                                         respectively.
+                                                                                                                                            He is currently an Associate Professor of electrical
+                                                                                                                                         and  computer  engineering  with  the  University  of
+                                                                                                                                         California   San   Diego   (UCSD),   San   Diego,   CA,
+                                                                                                        USA, where he is also the Co-Director of the Center for Wearable Sensors and
+                                                                                                        the  Site  Director  of the  Power  Management  Integration  Center.  His  research
+                                                                                                        interest includes  the design of energy-efﬁcient  microsystems, focusing on the
+                                                                                                        design of RF circuits, power converters, and sensor interfaces for miniaturized
+                                                                                                        systems and  biomedical  applications.
+                                                                                                           Prof.  Mercier  is  a  member  of  the  International  Solid-State  Circuits  Con-
+                                                                                                        ference   (ISSCC)   International   Technical   Program   Committee,   the   CICC
+                                                                                                        Technical  Program  Committee,  and  the Very Large  Scale  Integration  (VLSI)
+                                                                                                        Symposium  Technical  Program  Committee.  He  was  a  recipient  of  the  Nat-
+                                                                                                        ural  Sciences  and  Engineering  Council  of  Canada  (NSERC)  Julie  Payette
+                                Nader   Sherif   Kassem   Fathy   (Graduate  Student                    Fellowship  in  2006,  NSERC  Postgraduate  Scholarships  in  2007  and  2009,
+                                Member,   IEEE)   received   the   B.Sc.   and   M.Sc.                  an Intel  Ph.D. Fellowship  in 2009, the 2009 IEEE ISSCC Jack Kilby Award
+                                degrees  in  electronics  and  telecommunication  engi-                 for  Outstanding  Student  Paper  at  ISSCC  2010,  a  Graduate  Teaching  Award
+                                neering  from  Ain  Shams  University,  Cairo,  Egypt,                  in  Electrical  and  Computer  Engineering  at  UCSD  in  2013,  the  Hellman
+                                in 2013 and 2018,  respectively.                                        Fellowship  Award in 2014, the Beckman  Young Investigator  Award in 2015,
+                                   From  2014  to  2016,  he  worked  as  a  Teaching                   the  DARPA  Young  Faculty  Award  in  2015,  the  UC  San  Diego  Academic
+                                Assistant  with  the  Department  of  Electronics  and                  Senate Distinguished Teaching Award in 2016, the Biocom Catalyst Award in
+                                Communications,  Ain  Shams  University.  He  was  a                    2017,  the  NSF  CAREER  Award  in  2018,  a  National  Academy  of  Engineer-
+                                former Senior Software Development Engineer with                        ing  Frontiers  of  Engineering  Lecture  in  2019,  and  the  San  Diego  County
+                                the Caliber Research and Development  Department,                       Engineering  Council  Outstanding  Engineer  Award  in  2020.  He  served  as
+                                Mentor  Graphics—Siemens,  Cairo,  from  2013  to                       an  Associate  Editor  of  the  IEEE  TRANSACTIONS ON VERY LARGE SCALE
+2018.  He  has  held  two  internships  with  Apple  Inc.,  Cupertino,  CA,  USA,                        INTEGRATION (TVLSI) from 2015 to 2017. Since 2013, he has served as an
+during  the  summer  of  2020  and  2021  with  the  Analog  Silicon  Engineering                       Associate  Editor  of  the  IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS
+Group  focusing  on  phase-locked   loop  (PLL)  designs.  He  is  currently   a                         AND SYSTEMS (TBioCAS).  He was  the  Coeditor  of  “Ultralow-Power  Short
+Graduate  Research  Assistant  working  on  biomedical  circuits  and  systems                          Range  Radios”  (Springer,  2015),  “Power  Management  Integrated  Circuits”
+design  with  the  University  of  California  San  Diego,  San  Diego,  CA.  His                       (CRC  Press,  2016),  and  “High-Density  Electrocortical  Neural  Interfaces”
+research interests are analog integrated circuits and systems design, biomedical                        (Academic Press, 2019). He is an Associate Editor of the IEEE SOLID-STATE
+circuits,  and  brain–machine  interfaces.                                                               CIRCUITS LETTERS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

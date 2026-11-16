@@ -1,0 +1,47 @@
+Figure              S2.        Long-term   recording   stability.                 a)      Transfer                curves             throughout                    80
+consecutive                      cycles.              b)   The          variations                   of       on-state                drain            current               and         peak
+transconductance                             with        the      number             of    test       cycles.            The       change            in peak         transconductance
+of     the       device            over         time  when          stored           c)  in     air      and  d)     in     PBS.  The        error  bars  were
+calculated by                      computing the standard                         deviation of four OECTs within one sample.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                            3

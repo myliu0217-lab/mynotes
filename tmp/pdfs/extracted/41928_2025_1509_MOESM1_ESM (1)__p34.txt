@@ -1,0 +1,21 @@
+Supplementary Fig. 6. Architecture of the pixel. (a) Functional diagram of pixel. (b) Schematic
+of the Gm-C integrator, implemented as an inverter-based amplifier. (c) Layout of the pixel. (d)
+Schematic of digital logic used for recording in each pixel. [c] and [r] correspond to the pixel’s
+column and row addresses. (e) Depiction of the boxcar averaging principle used for amplification.
+The input is a sine wave, and the output switch resets periodically for a very short time. If the reset
+frequency is much higher than the input signal frequency, the output of the integrator becomes a
+sampled, amplified version of the input. (f) The theoretical and simulated transfer functions of the
+amplifier input signal and noise.
+
+
+
+
+
+
+
+
+
+
+
+
+                                                             33

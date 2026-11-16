@@ -1,0 +1,58 @@
+Journal of Materials Chemistry C                                                                                                                                   Paper
+
+higher than that of the Pt electrodes, measured at 25.54 /C6 0.55 dB.                grounded all floating lines during  in  vivo  measurements  using
+The SNR for each device was calculated by measuring the highest                      the PXI setup. The schematic of the PXI setup is shown in Fig. S13
+peak   during   a   period   of   epileptiform   activity   relative   to   the      (ESI†). The PXIe-7858 and PXIe-7866 modules were used to pulse
+standard  deviation  (STD)  of  the  background  during  a  period  of               the  drain  voltage,  while  the  PXIe-4309  and  PXIe-6289  modules
+low biological activity, as described in the equation below:11                       were used to record data from the source and drain columns. The
+                                           /C18/C19Asignal                           sampling rate were adjusted through the PXI setup. We selected a
+                     SNR ¼ 20 /C2 log10      Anoise   ðÞ                (2)dB        sampling frequency of 250 Hz for capturing epileptic signals and
+                                                                                     625 Hz for whisker-related signals. The choice is based on the
+where Asignal refers to the amplitude of highest peak observed                       Nyquist—Shannon  sampling  theorem,  which  states  that  the
+during epileptiform activity, Anoise represents the amplitude of                     sampling  rate  must  be  at  least  twice  the  highest  frequency
+noise, indicated by the STD of the background signal during low                      component of the target signal to accurately reconstruct it.
+biological  activity. For OECTs, the  highest  observed  peak  was                       Fig. 4a illustrates the placement of the high-density device
+863.34 nA, with a background STD of 19.66 nA, resulting in an                        for seizure signal mapping, highlighting the selected recording
+SNR of 31.65 dB. The Pt electrodes displayed a peak of 430.54 mV                     sites.  The  exact  position  of  the  ECoG  array  on  the  mouse
+and  a  background  STD  of  20.28 mV,  yielding  a  lower  SNR  of                  cortical surface is depicted in the photograph (Fig. 4b), which
+26.53 dB.                                                                            focuses  on  signals  from  the  right  frontal  cortex  region.  This
+Long-term application stability                                                      region is situated 2 mm anterior to the bregma in the anterior–
+                                                                                     posterior (AP) direction and 2 mm in the medial-lateral (ML)
+We subsequently implanted the ultraflexible, 64-channel array                        direction. During epileptic seizures, the energy of the recorded
+onto the mouse cerebral cortex for long-term evaluation of its                       signals  was  integrated  to  generate  a  mapping  visualization
+recording capabilities (Fig. S11, ESI†). Fig. 3f shows represen-                     (Fig.  4c).  Detailed  waveforms  of  the  epileptic  signals  from
+tative seizure activity signals captured by the vOECT on days 1,                     selected channels are presented in Fig. 4d, where a comparison
+12,  26,  57,  and  92  post-implantations.  All  recordings  exhibit                between  normal  and  epileptic  states  confirms  the  successful
+characteristics  of  high-frequency  sharp  waves  and  fast  dis-                   establishment of the epilepsy model.
+charges,  accompanied  by  slow  waves.47  Analysis  of  the  wave-                      We  further  demonstrate  the  mapping  of  whisker-related
+forms  reveals that  the  amplitudes  of the  signals recorded  on                   neural  signals  using  a  diﬀerent  16  /C2  16  segment  from  the
+day 92 remain comparable to those observed on days 1, 12, 26,                        1024-channel  vOECT  array  positioned  over  the  barrel  cortex
+and  57.  Fig.  3g  presents  a  typical  data  trace  along  with  the              (schematic  illustrated in Fig.  5a). Whiskers  are essential  sen-
+corresponding spectrogram recorded on day 92, illustrating the                       sory organs for mice, enabling them to navigate their environ-
+transition of ECoG signals from a normal state to an epileptic                       ment,  forage  for  food,  and  engage  in  social  interactions.49
+state induced by bicuculline. During such transition, there was                      Understanding  whisker-related  ECoG  signals  is  crucial  for
+a  notable  increase  in  signal  intensity,  particularly  within  the              investigating  sensory  processing,  neural  circuitry,  and  behav-
+high-frequency range of 15–30 Hz, indicating a general upsurge                       ioural   responses.50   To   detect   the   signals   associated   with
+in neuronal activity during the epileptic event.47 The consistent                    external-induced  whisker  deflection,  the  high-density  vOECT
+ability to record such signals over a chronic period underscores                     array was positioned on the mouse cortex at a location 1.5 mm
+the reliability of the neural interface and the well-being of the                    posterior to bregma in the AP direction and 3 mm in the ML
+surrounding neural tissue. The observations above suggest that                       direction  within  the  barrel  cortex  (Fig.  5b).  Energy  mapping
+the ultraflexible, high-density vOECT array can maintain func-                       prior to whisker deflection is shown in Fig. 5c, while the maps
+tional integrity over an extended period of up to three months,                      following  whisker  flicking,  recorded  at  0.02  s  intervals,  are
+capable of chronic applications.                                                     displayed in Fig. 5d. Each map shows the total energy summed
+Neural signal mapping using high-density vOECT array                                 over signals within a 0.02 s interval, illustrating the strengthen-
+                                                                                     ing  and  subsequent  diminishing  of  signals  over  time.  The
+We  then  demonstrate  the  high  spatial  resolution  of  ECoG                      waveforms  from  selected  locations  within  the  high-density
+signal acquisition using a 16 /C2 16 segment of the ultraflexible,                   array  are  presented  in  Fig.  5e.  Points  with  stronger  energy,
+1024-channel vOECT array, which has a density of 10 000 sites                        such  as  channels  (7,7)  and  (8,8),  exhibit  more  pronounced
+per  cm2.  The  evaluation  employs  both  epileptic  signals  and                   signal  fluctuations  during  the  whisker  flicking.  The  precise
+externally  induced  whisker  models,  utilizing  a  PXI  system  as                 mapping of neural signals related to whisker flicking demon-
+the acquisition platform.                                                            strates that the OECT array can eﬀectively detect low-amplitude
+   Notably,  ungrounded  leads  typically  result  in  significant                   signals, with the potential for future applications in the accu-
+crosstalk,  where  current  from  adjacent  channels  aﬀects  the                    rate localization of specific brain activity signals.
+signals at the monitored sites48 (Fig. S12a and b, ESI†). On the
+other   hand,   grounding  had   a  minimal   impact  on   the   gm
+(Fig. S12c, ESI†). By covering non-target transistor sites with NaCl                 Conclusions
+droplets  during  testing  of  the  target  transistors,  we  show  that
+grounding   eﬀectively   reduces   crosstalk   (Fig.   S12d—f,   ESI†).              We report an ultraflexible, high-density vOECT array designed
+Therefore,  to  minimize  crosstalk  in  our  high-density  array,  we               with  vertically  stacked  source  and  drain  electrodes.  In  vivo

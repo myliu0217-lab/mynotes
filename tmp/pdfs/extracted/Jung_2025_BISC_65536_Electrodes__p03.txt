@@ -1,0 +1,88 @@
+ a                                                       bImplant
+
+
+                                                   Headsta                     Implant                                                                                          Rela      y station
+
+
+                                                       ge                                                                                                                                                   Zynq-7000
+                                                                                                           ± 1.5 V                                 13.56               Class-E
+                                                                                 65,536-electrode                           Wireless                MHz                power                               Python API
+                                                                                          AFE                                 power                                  amplifier
+
+                                                                                                                                                                                                          RESTful API
+                                                                                                                                                                                           HDMI
+                                                HDMI to pr                      Samples        Contr         ol                  1.5 V      REF                      Headsta            ge                  Pr  ocessor
+                                                                                                                1.5 V                       CLK
+                                                                                                                                                   108.48                                                    Ether        net
+                                                      ocessor                                                                                      Mbps
+                                                                                                            CMD             Wir    eless
+                                                                                      Contr         oller                 transceiv           er                        UWB                                    Wi-Fi
+                                                                                                            RSP                                                     transceiver
+                                                                                                                                                                                                             SD card
+                                                                                                             CLK                                   54.24
+                                                                                                                                                   Mbps
+
+  c                                                                                                                                      ed12 mm
+
+
+
+
+                                                                                                                                                                                                            14 µm
+                                                                                                                                                   Wireless
+                                                                                                                                                   transceiver
+                                                                                                                                                                                      29 µm
+
+
+                                                                                                                                                  Controller
+                                                                                                                                                  Working                       26.5 µm
+                                                                                                                                                  electrodes
+
+                                                                                                                                                   Wireless
+                                                                                                                                                   power
+
+
+
+
+
+                                                                                                  AFE            Reference
+                                                                                                                electrodes
+                     f                                                                                                                              g
+
+                               1,000                                                                                                                                40 mm
+                                                                             Neurali            nk*                             BISC
+
+                                                                                                                                                                                                             UWB
+                                                                                                                                                                                                             transceiver
+
+                                 100                        WAND
+
+                                                        WIMA    GINE*
+                                                       CorT      ec*                                                                                           75 mm                                            Power
+                                                                                                                                                                                                                amplifier
+
+                                   10             Neuropac               e†
+                                                                                              *: Approved                  for     clinic     al    trial
+                                                                                              †:   App     roved           for     clinical            use
+
+                                                                                                                                                                                                                   HDMI
+                                     1                                                                                                                                                                             connector
+                                   0.0001                      0.01                            1                            100                       10,000
+                                       Simultaneous recording channels per implant volume (mm3)
+
+Fig. 1 | BISC implant and relay station.                  a, Concept diagram of a BISC implant                      controller for AFE configuration and data packetization. Data move between the
+and a relay station. The relay station’s headstage provides wireless power and                                      headstage and processor modules, with the processor module controlled by a
+bidirectional communication from outside the body. The headstage module                                             computer through wired or wireless connections using Python/RESTful APIs.
+connects to the processor module (not shown) via an HDMI cable. b                                                                     , Schematic c, Mechanical flexibility of the BISC implant. d                                                         , Layout of the BISC implant.
+of the overall system. The implant has four main modules: an analogue front-end                                     e, Scanning electron microscopy image of the implant’s TiN electrodes.
+(AFE) for recording and stimulation, wireless power for power transfer through                                      f, Comparison of our work with other competing wireless BCI devices.
+an inductive link, a wireless transceiver for bidirectional data telemetry and a                                    g, Three-dimensional diagram of the headstage. Panel a                 created with BioRender.com                   .
+
+
+Discussion 3), with more than 90% of the channels functional for a                                                  into a 125-bit packet by the on-chip controller (Supplementary Discus-
+typical device (Extended Data Fig. 1c,f).                                                                           sion 2). The non-data bits in the packet are used for synchronization and
+       The PGA output is digitized with a pair of interleaved 10-bit                                                error correction coding (Supplementary Fig. 12). The transceiver has
+successive-approximation-register analogue-to-digital converters                                                    uplink and downlink data rates of 108 Mbps and 54 Mbps, respectively,
+running at 8.68 MS s−1. Ten samples of the digitized data are grouped                                               and supports time-division duplexing with a single on-chip antenna by
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                                                                      1274

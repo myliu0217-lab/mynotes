@@ -1,0 +1,68 @@
+     Recently, wireless electronics have been implemented to mitigate                     bending stiffness of approximately 130 μN m, and flexes to a radius
+these concerns, by either using short percutaneous connection to a                        of curvature of about 1 mm for a strain of 1% if crystalline defects are
+wearable headstage22–24 or implementing a fully subcutaneously inte-                      minimized during thinning.
+grated system25–27. However, current multichannel, high-bandwidth                               A fully processed BISC device has a total volume of 7.2 mm3 and
+wireless electronics rely on the assembly of discrete, often commercial                   includes 65,536 electrodes, from which up to 1,024 channels can be
+off-the-shelf components that lead to bulky form factors22–27, which                      recorded simultaneously. Here we define volumetric efficiency as
+complicate surgical placement, removal and revision28,29 . Combining                      the number of simultaneously recording channels per unit implant
+discrete components also results in suboptimal electrical performance                     volume (Fig. 1f and Supplementary Table 2) and compare our work
+compared with what is achievable with application-specific integrated                     with other state-of-the-art wireless BCIs. Since the implant volume
+circuits (ASICs) and is hindered by limited interconnect density. This                    establishes device invasiveness, we exclude the external relay station
+often becomes the bottleneck constraint on the number of recording                        from calculation, although some comparison systems integrate its
+channels and the scalability of these devices.                                            functionality into the implant. Owing to its fully integrated architec-
+     To implement the densest neural implants, electrodes and elec-                       ture, the BISC achieves over 400 times improvement in volumetric
+tronics need to be merged onto a single substrate. This has been the                      efficiency over the closest competitor. Additionally, our head-mount
+key to the success of Neuropixels17, which features penetrating neural                    relay station, which maintains a short-range data link with the implant,
+electrodes capable of simultaneously recording from several hundred                       offers distinct advantages including wireless uplink bandwidths over
+channels, with each probe equipped with thousands of electrodes and                       100 times higher than any comparison system and keeping the implant
+a wired connection to the probe. In this Article, we report a device that                 power within safe limits.
+monolithically integrates a 256 × 256 high-resolution μECoG electrode
+array with front-end analogue electronics, an on-chip controller, wire-                   BISC implant ASIC design
+less powering, a radio-frequency transceiver and antennas onto a single                   In the absence of any on-chip compression during recording, the num-
+complementary metal–oxide–semiconductor (CMOS) substrate30. For                           ber of simultaneous recording channels and the sampling rate are con-
+recording, the device, which is termed a bioelectronic interface system                   strained by the uplink data bandwidth budget of 108 Mbps. To utilize
+to the cortex (BISC), includes front-end circuitry for signal amplifi-                    the coverage and density of all the 65,536 available recording electrodes
+cation and filtering and a back-end analogue-to-digital converter.                        and to preserve the ability to capture the full temporal dynamics of
+BISC also supports stimulation by including programmable bipolar                          neural activity, we designed our device to digitize and transmit from
+constant-current sources. Our entire device is a 12 × 12-mm2 chip whose                   a spatially programmable subset of either 256 channels at 33.9 kS s−1
+total thickness is rendered to be less than 50 μm after die thinning and                  or 1,024 channels at 8.475 kS s−1.
+passivation, giving the device enough mechanical flexibility to follow                          Every group of 2 × 2 neighbouring electrodes in the array share the
+the contour of the brain.                                                                 same recording pixel circuitry, resulting in 16,384 total pixels. When
+     This miniaturization of function allows the BISC chip to be inserted                 recording from 256 channels, the active subset can be programmed
+under the dura on the pial matter using relatively simple and effi-                       to any rectangle of 16 × 16 pixel2, provided that their horizontal and
+cient surgical procedures, including the ability to replace chips at the                  vertical addresses are uniformly spaced. In this mode, only one of the
+same recording location after months, if necessary. Wireless powering                     four electrodes from each pixel is recorded. When recording from 1,024
+and bidirectional communication are provided by a wearable device                         channels, the same 16 × 16 pixel2 addressing constraint applies, but now
+positioned directly outside the skin over the implant site. We call this                  recording is taken from all four electrodes in each pixel (Methods and
+device a relay station (Fig. 1a) because it wirelessly powers and com     -               Supplementary Discussion 1).
+municates with the BISC implant and is capable of being an 802.11n                              Each pixel performs signal amplification, chopping and
+Wi-Fi device itself.                                                                      anti-aliasing filtering, and contains the associated digital logic to
+     We illustrate the recording fidelity and long-term stability of                      control these functions and occupies an area of only 53 × 58 μm2
+our device through a series of in vivo experiments on porcine and                         (Supplementary Fig. 6). This constrained area prevents the imple-
+non-human primate (NHP) subjects. We implant the device over mul-                         mentation of capacitor-based filtering31, servo-loop-feedback-based
+tiple anatomical areas of the cortex and demonstrate high-quality                         or high-dynamic-range direct-quantization-based circuit topologies32
+chronic recording and accurate decoding of somatosensory, motor and                       generally used to prevent saturation in the presence of electrochemical
+visual information. From macaque visual cortex recording, our device                      d.c. offsets. We instead rely on the use of TiN electrodes, known to form
+captured complex spatiotemporal patterns of stimuli-induced travel-                       non-Faradaic, capacitive interfaces33 to reduce electrochemical d.c.
+ling waves with spatial features on the scale of a few hundred microme-                   offsets. Electrochemical impedance spectroscopy characterization
+tres and decoded stimulus orientation at a rate of 45 bits per second.                    confirms these properties for the BISC electrodes across the frequency
+                                                                                          range from 0.1 Hz to 1 MHz with an impedance magnitude of 205 kΩ at
+BISC implant form factor                                                                  1 kHz, which is equivalent to an electrode capacitance of approximately
+A key metric for implantable brain–computer interface (BCI) devices                       0.77 nF (Extended Data Fig. 1a and Supplementary Fig. 4).
+is ‘volumetric efficiency’, a measure of functional capability per unit                         Instead of a traditional amplifier, the BISC pixel implements an
+of tissue displaced by the implant. Key to the volumetric efficiency of                   integrator to provide area-efficient anti-aliasing filtering from boxcar
+the BISC system is the chip, which constitutes the entire implanted                       sampling principles34 with an effective cut-off frequency of 15.1 kHz
+system (Fig. 1b–d and Supplementary Fig. 1). This chip integrates a                       (Extended Data Fig. 1b and Supplementary Figs. 6 and 15). The use of
+256 × 256 microelectrode array with a pitch of 26.5 × 29 μm, yielding a                   an integrator also helps to mitigate open-loop gain variation across
+total array area of 6.8 × 7.4 mm2 (Fig. 1d,e). Each 14 × 14-μm                                       2 electrode is pixels (Extended Data Fig. 1c). All active pixels are time-multiplexed
+composed of titanium nitride (TiN), fabricated via additional microfab-                   to share a single back-end programmable gain amplifier (PGA)
+rication steps that follow the standard CMOS foundry process (Methods                     through which a common gain is configured for all active pixels
+and Supplementary Figs. 3–5). As part of this ‘post-processing’, the                      (Extended Data Fig. 1b and Supplementary Figs. 7 and 15). For high-pass
+silicon substrate is also thinned to less than 25 μm. Combined with                       filtering, all the pixels implement a variable pseudo-resistor that is glob-
+the back-end metal stack, the total chip thickness becomes approxi-                       ally configured (Extended Data Fig. 1d and Supplementary Figs. 6 and
+mately 40 μm (Fig. 1c and Supplementary Fig. 1b,d). Polyimide is used                     15). Input-referred noise integrated from 10 Hz to 4 kHz was measured
+to encapsulate the front side and parylene, the back side, resulting                      to be 7.68 μVr.m.s. and 16.51 μVr.m.s. when recording from 256 and 1,024
+in a total device thickness of less than 50 μm. The final device has a                    channels, respectively (Extended Data Fig. 1e,f and Supplementary
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                               1273

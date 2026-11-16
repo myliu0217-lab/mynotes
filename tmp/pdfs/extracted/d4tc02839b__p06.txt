@@ -1,0 +1,78 @@
+Journal of Materials Chemistry C                                                                                                                                   Paper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 2    Ex vivo biocompatibility evaluation. (a) Fluorescent images of murine hippocampal HT22 neurons cultured in bare HT22 medium and in vOECT
+array extract solution at 1 day and 5 days post-culture. Scale bar, 75 mm. (b) Comparison of relative cell viability on day 1 (pink) and day 5 (green) for cells
+exposed to diﬀerent concentrations of vOECT array extract. (c) Microglia labeled with Iba-1 (red). (d) Astrocytes labeled with GFAP (green). (e) Cell nuclei
+stained with DAPI (blue). Insets in panels (c)–(e) display zoomed-in images showing the morphology of the labeled cells. Scale bars, 100mm for main
+images; 20 mm for insets. (f) Relative fluorescence intensities of GFAP, Iba-1, and DAPI compared to the control group.
+
+
+implantation. To detect multiplexed  signals, a custom circuit                         conventional technologies, we implanted a commercial Neuro-
+board  was  designed.  The  schematic  of  the  circuit  board  is                     Nexus ECoG array on the cortical surface of the contralateral
+illustrated  in  Fig.  S4  (ESI†).  Detailed  designs  for  the  circuit               hemisphere  in  the  same  C57  mouse  (Fig.  3a).  The  reference
+diagram and the PCB are found in Fig. S5–S7 (ESI†       ), with the                    array  consists  of  32  circular  Pt  electrodes,  each  measuring
+system overview presented in Fig. S8 (ESI†       ). The drain power                    50 mm  in  diameter,  with  a  substrate  area  of  1  /C2  2.2  mm2
+supply was set to /C01 V, ensuring the amplifying capability of                        (1111  electrodes  per  cm2).  This  configuration  enabled  the
+vOECT (Fig. S9, ESI†).                                                                 simultaneous recording of identical seizure activity,43 ensuring
+    With a thickness of 4.2 mm and a substrate area of 1.45 /C2                        a direct comparison between signal quality of the two systems.
+1.45 mm2, the 8 /C2 8 array features a density of 2500 transistors                         The temporal coincidence of the peaks in the signal trajec-
+per cm2. The electrical performance of the 64-channel array is                         tories demonstrates that the vOECTs capture the same informa-
+detailed in Fig. S10 (ESI†       ), showing highly uniform character-                  tion as the passive Pt electrodes,11 as depicted in Fig. 3c and d.
+istics, with an average gm of 4.19 /C6 0.26 mS and response time                       These figures display the average traces recorded by 64 vOECTs
+of 291.3 /C6 16.7 ms.                                                                  (Fig. 3c) and 32 Pt electrodes (Fig. 3d), capturing typical seizure-
+    Possessing  excellent  mechanical  flexibility,  the  ultrathin                    like  spiking activity  induced by  bicuculline.44,45 This  activity is
+vOECT array can  be closely  attached onto the brain of a C57                          characterized by high-frequency sharp waves or rapid discharges,
+mouse (Fig. 3a) without causing trauma.  The high density  of                          accompanied by slower waves in the range of 0.5–4 Hz.46 Time-
+the array allows all 64 sensing sites to be concentrated within a                      frequency analysis revealed the presence of high-frequency spikes
+small region of the somatosensory cortex (Fig. 3b). To evaluate                        up to 40 Hz (Fig. 3c and d, bottom panels) and demonstrated the
+the recording capabilities of the vOECT array in comparison to                         capability of vOECTs to detect low-amplitude signals that may be

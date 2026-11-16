@@ -1,0 +1,85 @@
+  a                                                                                                                   f       in-silico
+
+                     Fixation spot                                                                                           channels                   Gradient                    Single channel MEIs
+
+
+
+
+
+                                                                                                                                                         Ascent                  V1              V2             V4
+                                                                                                                      g
+            10°                                                       Head-fixed awake
+                                                                           recordings
+                  Presentation of                                    N=1 macaca mulatta
+              colored natural images
+
+
+  b                                                       Shared feature
+                    Pretrained ConvNet                          space                              Non-
+                                                                                                 linearity
+
+
+
+
+
+  184x184 px                                                                                             in-silico
+                              Identify best layer                      Transformer-based                channels
+                                                                   Cross-attention readout
+
+  c                                            d                                        e
+
+           0.9                                                                1.0
+
+
+
+
+
+
+           0.4
+
+               0.1                        0.5                                             0
+              Explainable variance               Explainable variance              Correlation to avg.
+
+Extended Data Fig. 2 | BISC recordings over visual cortex with natural images.                                    144 channels (explainable variance 0.24 ± 0.09, and correlation to average
+(a) We presented static colored natural images, while the monkey maintained                                       0.69 ± 0.14. values: mean ± SD). Only channels with an explainable variance
+fixation (120 ms presentation time per image, 15 images per trial, 1200 ms                                        greater than or equal to 0.1 are included in these analyses. (d            ) Spatial map of
+inter-trial period). Each image (10°×10°) was centered 3° to the right and below                                  explainable variance across the recording array (same layout as in Fig. 4                                        and
+the fixation spot. (b                                    ) Model architecture: Pre-processed stimuli (184 × 184 pixels) Fig. 5e). (e               ) Same as (d                        ), but showing the model’s predictive performance
+and neuronal responses were used to train a neural predictive model, which takes                                  (correlation to average neural response). (f           ) Schematic illustrating optimization
+images as an input and outputs an estimate of the underlying neuronal activity.                                   of maximally exciting images (MEIs). A random starting image was iteratively
+We passed the images through a ConvNext model, pre-trained on an image                                            optimized to elicit maximal activity for each in-silico channel, revealing the visual
+classification task to obtain image embeddings, that is a shared feature space.                                   features to which that channel is selective. Three example MEIs from areas V1,
+We then computed the neuronal responses by passing the feature activations                                        V2, and V4 are shown. (g              ) MEIs for all 144 channels across the array which reliably
+through a transformer-based readout followed by a non-linearity stage.                                            responded to repeated image presentations. MEIs in area V1 are characterized by
+(c) Explainable variance, a measure of response reliability to natural images,                                    oriented Gabor filters, while the channels overlying area V2 and V4 exhibit more
+plotted against the model’s predictive performance (correlation between                                           complex, color opponent feature tuning. Credit: cow image in a          ,b, Nicolas Vigier,
+prediction and average neural response to repeated presentations) of all                                          flickr under a Creative Commons license CC0    .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nature Electronics

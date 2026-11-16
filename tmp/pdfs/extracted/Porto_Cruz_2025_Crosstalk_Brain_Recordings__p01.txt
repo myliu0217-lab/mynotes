@@ -1,0 +1,58 @@
+Article                                                                                                                                                                             https://doi.org/10.1038/s41467-025-59391-0
+Bridging circuit modeling and signal analysis
+to understand the risk of crosstalk
+contamination in brain recordings
+
+
+
+
+Received: 9 March 2024                                 Maria F. Porto Cruz          1,2   , Elena Zucchini        2,MariaVomero            1,3,
+                                                       Aldo Pastore        2,4,IoanaG.Vasilaș           1,3, Emanuela Delﬁno           2,4,
+Accepted: 17 April 2025                                Michele Di Lauro          4,MariaAsplund           3,5,6, Luciano Fadiga         2,4 &
+                                                       Thomas Stieglitz         1,3,7
+
+
+   Check for updates
+                                                       Advancements in the ﬁeld of implantable neurotechnologies have enabled the
+                                                       integration of hundreds of microelectrodes on ultra-thin and ﬂexible sub-
+                                                       strates. Besides implantable components, also connectors, headstages and
+                                                       cables have to comply with the high-count demand, resulting in a complex and
+                                                       compact chain with reduced line spacing and smaller safety margins. Here, we
+                                                       show that epicortical recordings acquired from anesthetized rat brains with a
+                                                       state-of-art neural acquisition system are undoubtedly compromised by
+                                                       crosstalk, with signal coherence maps exhibiting a strong dependency to the
+                                                       routing layout. A crosstalk back-correction algorithm is developed, allowing to
+                                                       infer on how signals would look like under a zero-crosstalk scenario. We found
+                                                       that signal coherence between closely routed channels effectively drops after
+                                                       correction, corroborating crosstalk contamination. Our work stresses the
+                                                       importance of validating recorded data against the routing layout as a crucial
+                                                       step of data quality control, helping to come closer to ground truth data.
+
+
+
+
+The  idea  of  creating  direct  communication  pathways  between                  (SNR)  and  bandwidth,  which  ultimately  translates  into  higher
+humans and machines has been around  for half a century. As a                      information content9,10.
+product of decades of interdisciplinary research, brain-computer                        Miniaturized  and  high-density  implantable  devices  require  not
+interfaces  are  today  envisioned  as  highly  miniaturized  implan-              only  a decrease in electrode  diameter,  but, importantly, the down-
+table   devices   capable   of   establishing   intimate   information             sizing  of  all  elements  leading  up  to  the  ampliﬁer,  including  inter-
+streams with thousands of neural cells1–3.Strategiesemployedby                     connect  lines on  the arrays, connectors, adapters and cables11.The
+such devices include the use of advanced ultra-thin ﬂexible sub-                   limits  of  manufacturing  and  assembly  are  thus  tested,  resulting  in
+strates  that  reduce  the  mechanical  mismatch  to  the  soft  brain             reduced line clearances and smaller safety margins. Hence, as signal
+tissue and the integration of high-density microelectrode arrays                   quality expectations become higher (i.e. higher SNR and bandwidth),
+that  can  map  the  brain  with  spatial  resolutions  in  the  sub-              technical speciﬁcations become stricter.
+millimeter  range4–8.  Combining  structural  biocompatibility  with                    This study aims to ﬁll a gap in the literature on implications of
+ﬁne  spatial  localization  results  in  higher  signal-to-noise  ratio            densely routed interconnection lines, including miniaturized compact
+
+
+
+
+1Laboratory for Biomedical Microtechnology, Department of Microsystems Engineering (IMTEK), University of Freiburg, 79110 Freiburg, Germany. 2Depart-
+ment of Neuroscience and Rehabilitation, University of Ferrara, via Luigi Borsari 46, 44121 Ferrara, Italy. 3BrainLinks-BrainTools Center, University of Freiburg,
+79110 Freiburg, Germany. 4Center for Translational Neurophysiology of Speech and Communication, Istituto Italiano di Tecnologia, via Fossato di Mortara 19,
+44121 Ferrara, Italy. 5Freiburg Institute for Advanced Studies (FRIAS), University of Freiburg, Freiburg, Germany. 6Bernstein Center Freiburg, University of
+Freiburg, Freiburg, Germany. 7Department of Microtechnology and Nanoscience, Chalmers University of Technology, Kemivägen 9, 41296
+Gothenburg, Sweden.        e-mail: mfportocruz@gmail.com; thomas.stieglitz@imtek.uni-freiburg.de
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                             1

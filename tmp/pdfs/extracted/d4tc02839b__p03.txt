@@ -1,0 +1,58 @@
+Paper                                                                                                                                   Journal of Materials Chemistry C
+
+density  (CSD),  facilitating  the  precise  localization  of  specific              device  thickness  of  just  4.2 mm.  This  ultrathin  configuration
+signals.19–21  Additionally, a rapid device response is essential                    allows for a minimum bending radius down to 5 mm, demon-
+for capturing transient phenomena such as action potentials,                         strating exceptional mechanical compliance. For reference, the
+oscillatory brain activities, and the precise timing of neuronal                     conventional platinum (Pt) electrodes used in this study have a
+firing  patterns.22,23  For  high-density,  active  ECoG  arrays,  the               thickness  of  15 mm,  and  a  Young’s  modulus  in  GPa  level.
+transient  response  of  the  transistors—which  determines  the                     Additionally, we have developed a specialized data acquisition
+achievable   switching  speed—must   be   sufficiently   short   to                  circuit  board  and  a  test  solution  compatible  with  the  PCI
+ensure  high  temporal  resolution.23,24  To  fully  leverage  the                   extensions for instrumentation (PXI) for multiplexing purpose.
+opportunities presented by these advancements, ongoing devel-                        To  ensure  stable  connections  with  relatively  rigid  backend
+opments in OECT technology prioritize increasing the channel                         circuitry, we utilize polyimide tape to reinforce the device ends,
+density  and  the  response speed.  Such  advancements  necessi-                     facilitating  reliable  connections  through  a  zero-insertion-force
+tate device architectures that are both compact and responsive.                      (ZIF) connector. In our prototype demonstration, the 64-channel
+   To   address   these   needs,   a   vertically   configured   OECT                array is adopted for mapping epilepsy signals. This device array
+(vOECT)  was  developed  by  Kawahara   et   al.  in  2013,25  with                  boasts a spatial resolution of 50 mm and a signal-to-noise ratio of
+screen-printed  PEDOT:PSS  on  both  sides  of  a  paper  or  PET                    32 dB, demonstrating capability to discern current sources and
+substrate,  and  the  channel  formed  by  a  hole  through  the  sub-               sinks  and  showing  potential  for  localizing  abnormal  brain
+strate. At that time, the channel length was measured approxi-                       actives  in  vivo.  We  further  utilized  a  16  /C2  16  section  of  the
+mately 50 mm. In 2017, M. J. Donahue et al.26 introduced a step-                     1024-channel  array to  capture whisker-related  signals,  demon-
+like vOECT design that significantly reduced channel dimensions                      strating its effectiveness in recording local neural activities.
+to submicron levels, thereby enhancing gm and response speed,
+facilitating  potential  integration  into  high-density  arrays.  This
+design was  subsequently  utilized  in applications  such  as  com-                  Results and discussion
+plementary  inverters  for  on-site  bio-signal  amplification27  and                High-density, ultraflexible vOECT array
+arrays  for  monitoring  the  activity  of  islet  micro-organs.28  The
+configuration  features  a  parallel  stacking  of  source  and  drain               A  vOECT  array  consisting  of  1024  (32  /C2  32)  transistors  was
+electrodes, which allows for individual adjustment of transistor                     fabricated on 1.8 mm thick parylene film (Fig. S1, ESI†), within a
+biases.  However,  it  accommodates  fewer  than  hundreds  of                       total substrate area of 3.26 /C2 3.26 mm2, providing a channel
+transistors within the substrate, limiting its scalability.                          density of 10 000 pixels per square centimetre. The array forms
+   A diﬀerent form of vertically configured OECT, referred to as                     a  two-dimensional  (2D)  grid  by  vertically  stacking  the  source
+the sandwich-like vOECT, has been further developed. In this                         and  drain  electrodes  (Fig.  1a),  coloured  in  yellow  and  brown
+design,  the  channel  material  is  encased  by  vertically-stacked                 respectively.  At  each  intersection  of  the  source  and  drain,  a
+source  and  drain  electrodes.29  This  configuration  has  been                    vOECT  is  positioned,  indicated  by  the  blue  segment.  The
+integrated into high-density arrays,30,31 achieving a remarkable                     channel   consists   of   conducting   poly(2,3-dihydrothieno-1,4-
+density of approximately 7.2 million OECTs per cm2. The direct                       dioxin)-poly(styrenesulfonate)   (PEDOT:PSS)   pretreated   with
+exposure  of  metal  electrodes  to  biological  tissue  makes  this                 additives,  i.e.,  ethylene  glycol,  dodecyl  phenylpropyl  sulfonic
+configuration unsuitable for in vivo signal recording. Eﬀective                      acid   to   improve   conductivity   and   (3-glycidyloxypropyl)   tri-
+packaging  strategies  are  required  to  encapsulate  the  metal                    methoxy  silane  to  improve  the  channel  stability.  Right  panel
+components while ensuring communication between the chan-                            of Fig. 1a shows a zoom-in view of two adjacent pixels, illustrat-
+nel  and  the  external  solution.  At  present,  a  straightforward                 ing  both  the  side  and  top  views  of  the  vOECT.  This  design
+approach  for  constructing  high-density,  ultraflexible  OECT                      eliminates the need for additional space and circumvents the
+arrays has yet to be established.                                                    requirement of a re-distribution layer necessary in horizontal
+   Furthermore,  the  integration  of  flexible  front-end  sensing                  OECT arrays, thus simplifying the connectivity between devices
+components  with  rigid  backend  processing  units  may  pose                       and leads.
+challenges  concerning  interfacial  toughness  and  stability.32                       The  resulting  flexible  array  conforms  closely  to  a  brain
+Addressing these challenges is crucial for enhancing the relia-                      model (Fig. 1b), accommodating its complex surface topology.
+bility and performance of flexible electronic devices in practical                   The 1 : 1 scale human brain model simulates the topography of
+neural interface applications.                                                       the cerebral cortex, aiming to replicate the complex pattern of
+   Here,  we  report  a  high-density  OECT  array  featuring  a                     gyri and sulci. The l, representing the average distance between
+density up to 10 000 transistors per cm2 within an ultraflexible                     the  peaks  of  adjacent  gyri,  is  about  5  to  20  mm,  and  the  h,
+configuration. Each transistor is strategically positioned at the                    indicating the vertical distance from the peak of a gyrus to the
+intersection of the source–drain leads, thereby eliminating the                      bottom of an adjacent sulcus, is about 2 to 4 mm.40 The inset in
+need for additional spacing and the use of a redistribution layer                    Fig.  1b  shows  an  SEM  image  of  the  device  under  bending,
+typically required in horizontal arrays. This approach simplifies                    demonstrating  a  bending  radius  of  5 mm.  The  microscopic
+the device fabrication process. The substrate and encapsulation                      image of the array is depicted in Fig. 1c, revealing a channel
+layers  are  composed  of  1.8 mm-thick  parylene  films,  with  a                   width of 50 mm and 100 mm spacing between adjacent vOECTs,
+0.6 mm  parylene  intermediate  layer,  resulting  in  an  overall                   with an upper inset, Fig. 1c(ii), providing a magnified view to

@@ -1,0 +1,72 @@
+                      This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+10                                                                                                                                                                                                                  IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+                                                                                TABLE I
+                                           PERFORMANCE SUMMARY AND COMPARISON TO THE STATE-OF-THE-ART
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+although  the  recovery  time  is  not  dependent  on  the  input  to                  PV830  pneumatic  PicoPump  (World  Precision  Instruments,
+the  ADC,  as  the  saturation  detector  of  the  quantizer  works                    Inc.) with 1-s pulses to individually stimulate the contralateral-
+independently.  The  decimated  output  is  plotted  where  the                        side whiskers. Eight electrodes from the array were connected
+y-axis is input-referred [Fig. 20(b)]. The output saturates in the                     to  eight  recording  pixels  on  either  this  chip  or  the  Intan
+presence of the overranging pulse to 62.5 mV, the single-sided                         recording  IC.  A  Pt  wire  inserted  into  the  rat’s  skull  was
+FS range of the ADC. The recovery time, defined as the period                          used  as  the  reference  electrode.  The  entire  setup,  including
+required  to  recover  from  saturation  and  resume  recording,                       the  rat  and  the  recording  front  end,  was  placed  in  a  Faraday
+is dictated by the frequency response of the decimation filter                         cage connected to the ADC ground to filter out power supply
+(Tdec), as expected from the design. The ADC output recovers                           interference according to animal protocol #S16020, approved
+in one decimated sample (50 µs for 10 kHz BW). Fig.    20(c)                           by the Institutional Animal Care and Use Committee (IACUC)
+shows the recovery time across modes and the step response                             at  the  University  of  California,  San  Diego.  The  PC  and
+of the decimation filter.                                                              measurement  instruments  were  outside  the  cage.  An  FPGA
+                                                                                       (Opal  Kelly  XEM6310)  provided  the  ADC  clock,  captured
+B.  In Vivo Measurements                                                               the data, and sent it to a PC for processing.
+   An   in   vivo   brain   recording   experiment   was   performed                      Fig. 22 compares somatosensory evoked potentials induced
+to  compare  the  performance  with  and  without  stimulation                         by  1  Hz  air  puffs  on  the  rat’s  whiskers,  recorded  using  the
+against  a  commercial  chip,  the  Intan  RHD2164  [19].  The                         Intan  system  and  this  chip.  ECoG  activity  (70–200  Hz)  in
+electrode  grid  was  composed  of  8  platinum  nanorod  (PtNR)                       response  to  the  air  puff  was  simultaneously  captured  across
+contacts  [51]  with  200 µm  diameter  and  was  placed  on  the                      all eight pixels. Two pixels from each chip are shown, demon-
+primary somatosensory cortex of a rat. Mechanical deflections                          strating  comparable  SNR.  An  Intan  stimulator  (RHS  2116)
+of  the  rat  whiskers  by  timed  and  controlled  air  puffs  lead                   [54]  was  added  to  the  test  setup  to  compare  the  response
+to  somatosensory  evoked  potentials  measured  by  the  elec-                        in  the  presence  of  stimulation  artifacts.  All  16  stimulator
+trodes. The precise topographic arrangement of the responsive                          channels  were  connected  to  16  different  electrodes,  separate
+regions  is  referred  to  as  the  whisker  barrel  cortex  that  our                 from the recording electrodes. During monopolar stimulation
+team  used  in  prior  studies  to  validate  different  electrode                     (500 µA  at  100  Hz),  the  Intan  front  end  saturated,  resulting
+materials  and  recording  systems  [21],         [52],         [53].  Fig.         21 in  data  loss,  as  shown  in  Fig.  23.  We  chose  monopolar
+shows  the  measurement  setup  for  the  experiment  conducted                        stimulation  for  its  larger  volumetric  stimulation  impact  and
+on  a  Sprague-Dawley  rat  implanted  with  PtNR  electrodes.                         lower stimulation currents than bi-phasic stimulation. 500 µA
+The  electrode  contact  exhibited  an  impedance  of ∼10  k       at                 was selected to demonstrate the chip’s fast settling time even
+1  kHz  in  vivo.  The  impedance  is  predominantly  capacitive                       under  high-current  conditions,  as  it  is  the  maximum  current
+at  low  frequencies,  necessitating  a  high-impedance  ADC  to                       at  which  the  200 µm  diameter  PtNR  contact  remains  below
+prevent  signal  attenuation.  For  evoking  sensory  activity,  air                   the water electrolysis threshold [55]. Given that 50–500 Hz is
+puffs  were  delivered  through  a  microcapillary  tube  using  a                     standard  in  clinical  settings,  100  Hz  was  selected.  Since  the
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

@@ -1,0 +1,52 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                       available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+    craniotomy procedure. Body temperature was maintained through a surgical heating pad and
+    monitored throughout the experiment and recording. Recordings were performed in a faraday
+    cage which housed the custom acquisition equipment.
+              In the chronic study, the sterile 3D-printed enclosure which housed the implanted array
+    was made of ABS plastic and was secured to the rat skull using Metabond dental cement and
+    sealed closed using Gelfoam, Kwikcast silicone, an additional 3D printed cover-plate, and a final
+    Metabond layer. The scalp was sutured closed around the enclosure to reduce the wound area
+    and improve the surgical outcome. A topical antibiotic was applied to the scalp and edges of the
+    enclosure after suturing (and as needed after the surgery) and an anti-inflammatory (Carprofen)
+    was administered to the rat after surgery. Buprenorphine (Ethiqa XR) was also administered
+    during and after surgery. Rats were monitored for behavioral changes and weight loss throughout
+    the study. At the end of the studies, rats were euthanized under deep anesthesia using a 120
+    mg/kg sodium pentobarbital intraperitoneal injection.
+
+    Data Acquisition and Analysis
+              A fully custom battery-powered acquisition system was developed to                       record from the
+    TFT-based active neural interfaces. The system                consists of a dedicated microcontroller running
+    optimized firmware that controls voltage regulators, parallel ADCs and DACs, gate driver
+    circuits, and an electrically isolated transistor         -transistor logic (TTL) synchronizing output.
+    Arrays were connected via mezzanine connectors and a flat flexible cable interposer to this
+    external driver circuitry which generated sequential column address clocks while simultaneously
+    measuring pixel currents through 16 parallel transimpedance amplifiers (5.1 MΩ gain). Data
+    were streamed in real-time via USB 2.0 to a recording laptop running custom C++ software. A
+    worker thread serviced the data queue to main               tain negligible USB latency and ensure zero data
+    loss. Data were logged using memory-mapped binary files, enabling simultaneous acquisition
+    and visualization of both the 256-channels of 16-bit recording data and 256-channels of 16-bit
+    low-frequency drift data, and each parallel sample was packaged with timestamp and frame
+    number header data at the microcontroller-level to ensure consistency in acquisition                         sampling
+    frequency and to help check against data loss             . The graphical user interface displayed real           -time
+    waterfall plots and spatial heatmaps of both high              -frequency signals and pixel DC bias currents.
+    Auto-calibration sequences, system settings, and hardware-level debugging data were logged
+    alongside neural data and case notes to provide full visibility into system performance                         and to
+    streamline recording sessions.
+              For sensory-evoked experiments, the TTL output triggered a benchtop air                       -puff system
+    (PV830 Pneumatic Pump) to deliver contralateral whisker deflections at 20 psi with 0.5 Hz
+    frequency (2 second inter-trial interval). Trigger timing was automatically logged                        relative to
+    acquisition timestamps. Each recording file              typically consisted of up to 2 minutes of continuous
+    acquisition with an 11 second baseline preceding the first stimulus                    onset. Acute experiments
+    lasted several hours, and chronic recording sessions were limited to 1.5 hours to minimize
+    anesthetic duration.
+              Raw data were resampled using spline interpolation                 (effectively implementing         a digital
+    fractional-delay filter) to eliminate phase offsets between time                -division-multiplexed columns,
+    producing a uniform time vector at 16 times the per-pixel sampling rate (~6.4 kHz effective
+    sampling frequency). Digital filtering was implemented in MATLAB using the following
+    cascade: 2nd-order Butterworth bandstop filters at 60 Hz (59                  -61 Hz), 120 Hz (119-121 Hz), and
+    180 Hz (179-181 Hz) to remove line noise and harmonics, plu                     s a bandstop at Fs/4 to suppress

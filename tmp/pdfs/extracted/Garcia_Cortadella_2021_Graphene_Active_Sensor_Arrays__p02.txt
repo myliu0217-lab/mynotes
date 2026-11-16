@@ -1,0 +1,71 @@
+ARTICLE                                                                                          NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-20546-w
+
+
+    ncreasing the bandwidth of neuroelectronic interfaces in terms                       physiological role with an improved spatial resolution. However,
+    of spatial resolution and sensitivity in a wide frequency range                      in order to advance in the actual application of g-SGFET arrays,
+Iis a major and ongoing challenge in neural engineering. In the                          several technical aspects remain to be thoroughly evaluated.
+last decades, large efforts have been dedicated to the development                          In  this  article,  we  present  a  sensing  system  composed  of  a
+of neural sensing interfaces with high sensor-count on conformal                         ﬂexible  64-channel  g-SGFET  array  and  a  wireless  headstage
+substrates1–10,   which   are   required   for   highly   biocompatible                  (Fig. 1c–f and supplementary information S1), which we use to
+intracranial  neural  probes11–14.  In  this  line,  active  sensors  have               demonstrate  the  maturity  of  this  technology  in  terms  of  long-
+emerged as a promising building block for high-bandwidth neural                          term  and  wide  frequency  band  recording  capabilities  in  freely
+interfaces4,6,15–19 because they can be arranged in a multiplexed                        moving  animals  from  a  system  perspective.  First,  the  focus  is
+array2,4,6–9  enabling  high  sensor-count  probes.  The  detection                      placed  on  the  assessment  of  the  in  vitro  characteristics  of  the
+principle of active sensors is typically based on the modulation of                      system;  including  the  yield  and  homogeneity  of  the  graphene
+the  conductivity  of  a  transistor  channel,  which  is  electrically                  sensors,   their   intrinsic   noise   and   the   impact   of   the   data-
+coupled     with     the     biological     environment     through     its              acquisition  (DAQ)  system  on  the  sensitivity  of  these  devices.
+gate8,9,15,18,20–22,   producing   a   local   signal   pre-ampliﬁcation.                Second, critical aspects for their chronic application in vivo have
+Although  active  sensing  technologies  present  substantial  advan-                    been resolved; including the stability of the graphene doping, the
+tages   over   conventional   micro-electrode   arrays,   their   imple-                 long-term stability of the g-SGFETs sensitivity and their acute, as
+mentation   is   currently   limited   by   the   demanding   material                   well  as  chronic  biocompatibility.  Finally,  we  have  applied  this
+properties  required.  In  order  to  achieve  long-term  and  highly                    methodology  to  monitor  the  epicortical  local  ﬁeld  potentials
+sensitive   neural   recordings,   materials   for   active   sensing   are              (LFP) in a freely moving rat model simultaneously with its three-
+expected to exhibit semiconducting or semimetallic properties, a                         dimensional  (3D)-position during  long sessions  of up to ∼24 h.
+high electrical mobility and low intrinsic noise, in addition to a                       The combination of behavioral and electrophysiological data has
+high  stability,  easy  integration  in  ﬂexible  substrates  and  bio-                  been  used  to  assess  the  capabilities  of  the  wireless  recording
+compatibility.   Some   active   sensors   based   on   organic   semi-                  system to monitor brain dynamics across unperturbed alternation
+conductors    and    thin    Si    nanomembranes    have    exhibited                    of  brain  states  and  validate  its  sensitivity  to  detection  of  high-
+promising  performance,  with  novel  transistor  architectures17,22                     frequency oscillations associated with sparse behavioral events. As
+and  insulating  technologies4,14  improving  their  performance  in                     an  illustration  of  unique  features  of  the  g-SGFET  recording  we
+some   typically   constrained   aspects   such   as   their   frequency                 provide  a ﬁrst case  demonstration  of infra-slow topographically
+response   or   their   long-term   stability.   Graphene-based   active                 speciﬁc  and  brain-state  invariant  pattern  associated  with  high-
+sensors  are  another  promising  candidate  to  meet  these  require-                   voltage  spindles  (HVS).  Furthermore,  we ﬁnd  changes  in  infra-
+ments  due  to  the  ﬂexibility  of  graphene23,24,  its  high  expected                 slow signal power between slow wave sleep (SWS) and rapid eye
+stability25  and  biocompatibility26,27,  as  well  as  its  electronic                  movement  (REM)  sleep  and  identify  the  modulation  of  theta
+properties,  including  a  high  mobility  of  charge  carriers28,29.                    oscillations  and  sleep  spindles  by  the  phase  of  the  DC-signal
+Graphene solution-gated ﬁeld-effect transistors (g-SGFETs) have                          infra-slow  dynamics  during  REM  and  SWS,  respectively.  The
+demonstrated  a  high  sensitivity  for  the  detection  of  local  ﬁeld                 results  reported  here  demonstrate  that  neural  probes  based  on
+potentials15 (LFP), as well as a high performance in multiplexed                         graphene active sensor arrays represent a mature technology, with
+operation6,7. In addition, g-SGFETs have recently demonstrated a                         a high sensitivity, stability and biocompatibility, which allows to
+high  sensitivity  for  the  mapping  of  infra-slow  (<0.5 Hz)  brain                   chronically map wide frequency band epicortical brain dynamics
+activity (ISA)30–32 with high spatial resolution6,7,33,34.                               in freely behaving animals.
+   ISA has recently attracted increasing attention due to its unique
+neurophysiological  basis30  and  its  relation  to  resting  state  net-
+works31,35–37  and  to  brain  states36,38–40.  To  date,  ISA  has  been                Results
+typically   studied   using   full-band   electroencephalography   (fb-                  Homogeneity  and  sensitivity  of  graphene  active  sensor  tech-
+EEG)41,42.  However,  increasing  spatial  resolution  of  ISA  mon-                     nology. For the implementation of graphene active sensor arrays
+itoring by using small size electrodes is ultimately limited by the                      as   a   readily   available   tool   for   neuroscientiﬁc   research,   the
+dependence of the ampliﬁer gain on the impedance of the elec-                            maturity  of  large-scale,  ﬂexible  graphene  electronics  is  critical.
+trodes  used.  This  dependence  leads  to  signal-to-noise  loss  and                   Two  of  the  main  challenges  in  the  development  of  these  tech-
+signal distortion43 at low frequencies. For this reason, studies of                      nologies have typically been the production  of high-quality sin-
+ISA with high spatial resolution have been typically restricted to                       gle-layer  graphene  (SLG)  and  its  transfer  onto  the  required
+indirect   measurement   methods   such   as   functional   magnetic                     substrate.  The  development  of  wafer-scale  methods  to  produce
+resonance imaging31,37, optical methods44 or the analysis of infra-                      SLG  has  concentrated  many  efforts  and  investment  in  the  last
+slow changes of signal power at higher frequencies45. G-SGFETs,                          decade50, recently leading to important progress on the growth of
+as active sensors, transduce the electrochemical potential signals                       graphene by chemical-vapor deposition (CVD)51. Here, we show
+in the brain (Vsig) into drain-to-source current (Ids) signals (see                      that  the  quality  of  commercially  available  single-layer  graphene
+Fig. 1a). The amplitude of the transduced signals is proportional                        produced  by  CVD  and  transferred  on  a ﬂexible  polymeric  sub-
+to the transconductance (gm), deﬁned as the slope of the Ids–Vgs                         strate (spin-coated on a 4-inch Si wafer) is high enough to enable
+curves divided by Vds (see Fig. 1b). gm is proportional to the gate                      the  fabrication  of  g-SGFET  arrays  with  a  homogeneous  good
+capacitance  per  unit  area  (intensive  property)  and  to  the  W/L                   performance    both    in    terms    of    gm    and    electrical    low-
+ratio  of  transistor,   but   not  to  its   active   area17,46–49.   Signal            frequency noise.
+detection based on the ﬁeld-effect mechanism, therefore, allows to                          Figure 2a shows the boxplot for the gm of nine neural probes,
+prevent  the  signal  distortion  and  gain  loss  observed  for  small                  each of them containing 64 g-SGFETs (with a size of 100 × 100
+passive sensors in the infra-slow frequency band. This advantage                         μm2  chosen  for  mesoscale  epicortical  LFP  analysis10).  These
+is expected to be valid for all FET-based sensor technologies with                       probes  were  randomly  selected  from  three  wafers,  all  of  them
+stable  transfer  characteristics,  however,  experimental  proof  has                   processed in independent batches (see “Methods” for fabrication
+been only shown for g-SGFETs, which present a particularly high                          details). It is possible to observe a high homogeneity and yield in
+chemical inertness25,33. The properties of g-SGFETs represent a                          terms of gm, with 99% of channels working (deﬁned as transistors
+qualitative  change  in  the  study  of  ISA,  allowing  to  explore  its                having a gm above 0.7 times the median). The measured median
+
+2                                 NATURE COMMUNICATIONS |          (2021) 12:211  | https://doi.org/10.1038/s41467-020-20546-w | www.nature.com/naturecommunications

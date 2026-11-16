@@ -1,0 +1,19 @@
+Supplementary Fig. 7. Design and characterization of the programmable gain amplifier
+(PGA). (a) Design of a ping-pong charge amplifier. This is the first stage of the PGA. This charge
+amplifier moves the charge integrated inside the pixel to its transfer capacitors CT1 and CT2 in a
+time-multiplxed manner. The ping-pong operation eliminates the need for two charge amplifiers,
+thereby saving power. A single ended version is shown for clarity while the actual implementation
+is differential. The operational amplifier (OPAMP) is implemented as the folded cascaded
+operational transconductance amplifier (OTA) in (d). This OTA has cascaded current sources at
+the second stage to boost DC gain. (b) Design of a programmable gain ADC driver. This is the
+second stage of the PGA following the charge amplifier. Correlated double sampling is used to
+enhance the linearity as described in 83. A single-ended version is shown for clarity and the OTA
+is the same as (d) without the cascoding at the second stage. (c) The timing diagram of the switches
+in (a) and (b). (d) The OTA design with common-mode feedback. (e) The simulated linearity of
+the neural amplifier and the charge amplifier. Spurious free dynamic range (SFDR) exceeds 75
+dB. (f) The simulated linearity of the PGA. SFDR exceeds 71 dB.
+
+
+
+
+                                                          34

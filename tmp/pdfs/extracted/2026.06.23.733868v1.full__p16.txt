@@ -1,0 +1,52 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+              All fabrication was carried out at the UC San Diego Nanofabrication Facility (Nano3) on
+    4-inch silicon carrier wafers through a three-phase process (Supplementary Fig. 1). Phase 1
+    establishes the bottom metallization and hermetic vertical interconnects (vias). A 10 µm
+    polyimide film (HD MicroSystems PI2611) was spun-cast onto cleaned silicon wafers, followed
+    by atomic layer deposition of >30 nm Al2O3 at 200°C using trimethylaluminum and H2O
+    precursors. Chrome/gold bilayers (20/200 nm) were sputtered and patterned via a two-step
+    photolithography and wet etching process. A second Al2O3 layer conformally passivated the
+    metallization, and a 4.5 µm polyimide layer was spun-cast and cured on top. Vias were dry-
+    etched with oxygen plasma using high pressure (>30 mTorr) to achieve graded sidewall profiles,
+    then passivated with an additional ALD-deposited Al2O3 layer.
+              Phase 2 of the fabrication flow formed the dual-gate TFT stack. Chrome/gold (50/100
+    nm) formed the bottom gate, with gold removed selectively from the channel regions to reduce
+    electric field enhancement on sharp negative line edges. After cleaning with oxygen plasma and
+    heated Remover-PG, a 25 nm Al2O3 gate dielectric was deposited via thermal ALD with TMA a
+    pre-pulse nucleation recipe used to improve film density and reduce pin                    -hole formation. Samples
+    were immediately transferred to an ultra           -high vacuum RF magnetron sputtering system (base
+    pressure <4e-8 Torr) and slowly brought to a stable processing temperature of 200°C.                         A 30 nm
+    amorphous IGZO film was deposited at 2 mTorr with an O                     2:Ar partial pressure ranging from
+    15% to 30% based on desired device characteristics (with roughly a 4%/V linear relationship
+    observed between partial pressure and final threshold voltage). IGZO and bottom gate dielectric
+    were subsequently patterned via wet etching             . Source and drain contacts (20 nm Cr or Ti / 50nm
+    Au) were deposited via electron-beam evaporation following a low-power plasma treatment and
+    subsequently lifted off under Remover            -PG. Finally, the top gate dielectric (25 nm           Al2O3) and
+    Cr/Au top gate were sequentially deposited and patterned using ALD and sputtering respectively.
+              Phase 3 completed the encapsulation of the FICs. Another (>30nm) Al2O3 layer
+    passivated the TFT stack, and after patterning to open up contacts and expose underlying organic
+    layers (to improve adhesion) a final overmold of polyimide was spun-cast and cured under
+    vacuum-oven at 195°C, with carefully controlled ramping and environmental monitoring in place
+    to ensure consistency across fabricated batches. Top vias were dry-etched, and chrome/platinum
+    (20/200 nm) electrode metallization was sputtered and patterned via lift-off. Outlines were
+    defined through final dry-etching, and test coupons were then characterized using the B1500A
+    semiconductor device analyzer prior to mechanically peeling samples from the carrier wafer in
+    deionized water in an electrostatically controlled environment under microscope. Samples were
+    then electrically bonded to custom printed circuit boards through silver epoxy selectively applied
+    to bonding pads through a laser-cut stencil mask.
+
+    Animal Experiments and Surgical Procedures
+              All animal experiments were approved by the UCSD Institutional Animal Care and Use
+    Committee (IACUC), and a summary table of these experiments is included as Supplementary
+    Table 4. Adult male Sprague-Dawley rats were used in both the acute and chronic studies                          .
+    Craniotomies were performed in a sterile environment to expose the S1 sensory barrel field                         .
+    General anesthesia (4% isoflurane           gas) was administered to the rat through            a stereotaxic nose-
+    cone prior to surgical preparation, and titrated down to 1.5              -2.5% throughout the craniotomy
+    (adjusting as needed based on heart rate and respiration rate)               . Local anesthetic (lidocaine) was
+    also administered in the scalp prior to incision. To mitigate anesthetic impact on sensor                     y-evoked
+    activity animals were transferred from isoflurane to              a ketamine/xylazine mixture after the

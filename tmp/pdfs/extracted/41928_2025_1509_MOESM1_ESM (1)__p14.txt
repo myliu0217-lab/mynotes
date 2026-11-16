@@ -1,0 +1,48 @@
+Supplementary Discussion S3. Bench-top in vitro characterization
+
+BISC recording and stimulation (Extended Data Fig. 1,  Supplementary Fig. 15) were
+characterized from a fully wireless, in vitro measurement setup (Supplementary Fig. 15a). A
+custom 3D printed mold was used to create two separate chambers filled with electrolyte: one over
+the pixel array and the other over the reference/counter electrodes. Silicone sealant (Kwik-Cast™,
+World Precision Instruments) was used to attach the device to the mold to prevent any leakage
+between the two chambers. Because of small device feature size, however, the sealant inevitably
+flowed over to a small portion of the array, encasing some electrodes (< 5%) at the edge of the
+array.
+
+A sample processed with titanium nitride electrodes and front-side passivation was used for the
+measurement. Because of hydrophobicity of the polyimide used for front-side passivation, we
+needed to apply droplets of isopropyl alcohol over the electrodes as the “wetting layer” prior to
+filling the chambers with 1× phosphate-buffered saline (PBS) solution. For in vivo experiments,
+this step was not needed because EtO sterilization significantly reduced the hydrophobicity of the
+polyimide. Ag/AgCl pellet electrodes (EP1, World Precision Instrument) were used as the
+electrochemical interface between the 1× PBS and electrical cables.
+
+For recording frequency response and pixel gain characterization (Extended Data Fig. 1b,d-e,
+Supplementary Fig. 15b-e), electrical cables were driven by a 400 µVPP sinusoid (AWG3102C,
+Tektronix; in conjunction with -40 dB attenuator). For noise characterization (Extended Data Fig.
+1c,f), the two Ag/AgCl electrodes were shorted together. For both measurements, relay station
+headstage and the sample being measured were placed inside a Faraday cage. For stimulation
+characterization (Supplementary Fig. 15f-g), electrical cables were connected to a low noise
+current amplifier (SR570, Stanford Research System) to measure current waveforms.
+
+Supplementary Discussion S4. Mechanical flexibility of implanted devices
+
+To render BISC chips compatible with in vivo implantation (i.e., skull closure with minimal tissue
+damage and displacement and maximal conformability), we removed the bulk of the rigid silicon
+substrate to reduce volume and achieve sufficient mechanical flexibility. Any desired thickness of
+silicon can be removed using the mechanical or wet etch thinning processes described here. We
+identified a 10-μm thickness limit based on the depth of an n-type buried layer in the CMOS
+process. In the case of mechanical thinning, consideration must be made for grinding induced
+subsurface damage. We found that ~25 µm was a safe stopping point to guarantee chip
+functionality while also providing sufficient flexibility, while the 15 μm thickness was achievable
+with wet etching.
+Device mechanical stiffness
+The final implanted device is a thin plate comprising a multi-material stack of polyimide, metal
+interconnects and vias surrounded by interlayer dielectrics (BEOL), the silicon substrate, and
+finally a parylene backing layer. By summing the stiffnesses of each of the four layers, we can
+estimate a total device bending stiffness of ~130 µN∙m according to:
+                                                       ସ
+                                           𝐵௧௢௧௔௟ൌ෍   𝐸௜𝑡ଷ௜12ሺ1െ𝜗ଶ௜ሻ
+                                                      ௜ୀଵ
+
+                                                         13

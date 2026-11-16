@@ -1,0 +1,99 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+            a                                                                             bCrosstalk back-correction(X →     )X*
+                                                                                                                 c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                    4.3% amplitude        2.2% amplitude
+                                                                                                                                    drop                  drop
+
+
+
+
+
+Fig. 8 | Neural data reconstruction. a Coherence map of the original crosstalk-                column as a representative set (A, B, C and D). Signals after correction are sym-
+corrupted signals, computed from 3 Hz to 4 kHz for the full recorded response of               bolized by an asterisk (A*, B*, C* and D*). c) Raw signal, high-pass ﬁltered (HPF)
+one implanted device and taking electrode A (top-left electrode of the grid) as                signal (fc = 300 Hz) and detected spikes referring to 140 ms s of induced somato-
+reference. LFP and MUA bands are color-coded as red and gray, respectively.                    sensory evoked activity recorded by electrode A before (black) and after (blue)
+b Coherence before and after crosstalk back-correction, taking the ﬁrst electrode              correction.
+
+
+appropriate transfer function, according to the system of four Eq. 2.1-4,                      recorded by electrode A before and after correction. The raw and high-
+where the true signals are marked by an asterisk.                                              pass ﬁltered (fc = 300 Hz) SEP waveforms after correction are indis-
+                8                                                                              tinguishable from the originals. Ultimately, MUA is analyzed as spike
+                >   A = A*+HN /C1 B*+HM  /C1 C*+HF  /C1 D*                                     activity,  thus  requiring  spike  detection,  i.e.  the  task  of  identifying
+                >
+                >
+                <B = HN /C1 A*+B*+HN /C1 C*+HM  /C1 D*                                         neural  action  potentials,  or  spikes,  from  the  background  noise.
+                >C = HM  /C1 A*+HN /C1 B*+C*+HN /C1 D*                          ð2:1 /C0 4Þ    Although most spike events are common and coincident before and
+                >
+                >
+                :D = HF  /C1 A*+HM  /C1 B*+HN /C1 C*+D*                                        after correction, a few are, in fact, discarded in the process. Out of nine
+                                                                                               spikes originally represented in the considered time interval, two of
+      Channels A and D are coupled to one near-distant line, one mid-                          them cease to be detected after correction due to a 4.3 % and 2.2 %
+distant line and one far-distant line, while channels B and C are coupled                      drop in waveform amplitude. The present results suggest that, under
+to two near-distant lines and one mid-distant line. Solving the system                         the boundary conditions speciﬁctothisrecordingsystem,crosstalk
+allows to extract the four true signals A*, B*, C* and D*.                                     contamination is strong enough to cause spurious detection of spikes
+                                                                                               in  the  active  channel  recording  the  closest  from  the  signal  source.
+Validating algorithm with recorded ECoG data                                                   Furthermore,  it  is  important  to  note  that,  generally,  the  signals
+To validate the algorithm, ECoG recordings are analyzed and com-                               recorded by the passive channels, even though weaker in terms of
+pared on the basis of signal coherence (Coh), a statistical quantity                           information  content,  are  proportionally  more affected  by  crosstalk
+used to examine the relation between two data sets in terms of their                           contamination   precisely   due   to   the   smaller   amplitude   signals
+spectral densities. Being speciﬁed in frequency, coherence allows to                           (Figs. S2 and S3 in the supplementary material).
+investigate how the similarity between channels changes before (X)
+and after (X*) correction in the two frequency bands of interest, i.e.                         Discussion
+LFP and MUA.                                                                                   Understanding crosstalk and its impact on brain recordings
+      Taking the original signals, coherence plots are computed from                           The routing layout of the multi-channel recording system employed in
+3 Hz to 4 kHz for all sixteen electrodes using electrode A as reference                        this  work discernibly  boosts  crosstalk  within  sets of four  channels.
+and displayed according to the electrode grid layout (Fig. 8a). In the                         According to the electrode mapping, the four electrodes composing
+LFP  band  (highlighted  in  red),  coherence  decays  radially  from  the                     each column of the four-by-four grid are routed adjacently across all
+reference electrode. However, in the MUA band, coherence is clearly                            stages  of  the  recording  chain:  polyimide  substrate,  Omnetics-nano
+higher for the reference column, with a plateau at a coherence level of                        connector  stage  and ZIF-Clip®  headstage.  In  the  end,  electrical  cou-
+0.3 above 3 kHz, thus indicating crosstalk contamination. The cross-                           pling  between  adjacently  wired  channels  undoubtedly  distorts  the
+talk back-correction is performed on the set of four electrodes com-                           spectra of the respective recorded signals, resulting in highly increased
+posing  the  reference  column  (electrode  1,  5,  9  and  13)  and  the                      correlation levels in the MUA band, even if the electrodes themselves
+coherence  computed  on  the  corrected  signals  (Fig.  8b).  Coherence                       are placed far away on the cortex. According to volume conduction,
+levels drop signiﬁcantly in the spike band, while remaining unaltered in                       signal correlation should increase with proximity at the cortex level,
+the LFP band, as anticipated by the simulations predicting a signiﬁcant                        but never with proximity at the routing level.
+coupling only above 1 kHz (Fig. 6).                                                                  The crosstalk investigation conducted here calls attention to an
+      It is furthermore relevant to validate whether the corrected sig-                        important aspect. Crosstalk between active and passive lines occurs via
+nals  retain  their  signiﬁcance  in  terms  of  electrophysiological  infor-                  the two paths that physically couple them to one another: through the
+mation.  Figure 8c shows 140 ms s of evoked somatosensory activity                             insulation  at  the  implant  level  and  through  the  insulation  at  the
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                            8

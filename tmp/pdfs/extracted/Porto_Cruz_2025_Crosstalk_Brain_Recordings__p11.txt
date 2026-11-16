@@ -1,0 +1,81 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+
+
+                                                                                           Ø 100 µm
+                                  Polyimide substrate
+
+                                  Reference electrode
+
+                                           Fenestration
+
+                                                                             *
+                                                                        *                                                          Nanoconnector
+
+                                                                                            Ø 10 µm
+
+
+                                                                              * Pitch = 750 µm
+
+                                                                                                                                     Ceramic substrate
+
+
+
+
+                                                           Electrode Grid                                                     Thin-film device
+
+
+Fig. 9 | Implant design and connector assembly6. The polyimide-based device is               conﬁguration (not used for this study). Fenestrations on the polyimide substrate
+8 µm-thick and features a platinum metallization layer. The recording area com-              help with the drainage of ﬂuids and promote the growth of ﬁbrotic tissue through
+prises a four-by-four array (vertical and horizontal pitch of 750 µm) and each               the holes and around the device, rather than in the space between tissue and
+position of the array includes one large electrode (100 µm in diameter) and one              electrodes. For mechanical stability, the thin-ﬁlm interfaces the male Omnetics
+small electrode (10 µm in diameter). For this study, only the large electrodes were          connector via an intermediate ceramic board.
+used. Furthermore, an on-site reference electrode is included for bipolar recording
+
+
+
+co-ﬁred  ceramic)  precursor  tape  (44000,  ESL  ElectroScience,  Penn-                     the bone surface clean. The thin-ﬁlm was placed over the dura mater in
+sylvania, USA) were cut and pressed at 27 MPa, resulting in a single                         the primary somatosensory barrel ﬁeld (S1BF) and covered with Kwik-
+layer roughly 1 mm-thick. The outlines and holes through which the                           Sil silicone polymer (World Precision Instruments, Florida, USA) for
+connector pins were meant to be inserted were laser patterned on the                         protection. Five stainless steel bone screws were inserted in the skull,
+tape (DPL Genesis Marker, cab Produkttechnik GmbH, Germany). After                           with one serving as ground electrode. The Omnetics connector was
+an organic burnout at 550 °C and sintering at 1500 °C, silver-palladium                      ﬁxed to a custom-made chamber fabricated with a 3D printer (Voxel8
+paste was used to metalize the laser-structured holes. The paste was                         Inc., Massachusetts, USA), which was cemented to the skull and screws
+pressed into the holes from the top side of the ceramic and vacuumed                         using dental acrylic (Jet Repair Acrylic, Lang Dental Manufacturing,
+from the bottom side, resulting in metallization of the inner walls of                       Illinois, USA). Finally, the skin was sutured around the implant.
+the holes. The paste was ﬁred at 850 °C, followed by a grinding step on
+each side of the ceramic to remove the paste excess. The through-hole                        Rat recordings and sensory stimulation
+connector  (A79022-001,  Omnetics  Connector  Corporation,  Minnea-                          Neural  recordings  were  collected  on  implantation  day  from  four
+polis, USA) was then inserted into the ceramic and soldered. The solder                      anesthetized and head-ﬁxed rats using a Tucker Davis Technologies
+bumps were grinded until ﬂat. For mechanical stability and insulation,                       multi-channel  recording  system  3  (Tucker  Davis  Technologies  Inc.,
+epoxy  (EPO-TEK®  353ND-T,  Epoxy  Technology  Inc.,  Massachusetts,                         Florida, USA)  including  the  ZIF-Clip®  headstage  with  unity  gain,  the
+USA) was spread around the edge between connector and ceramic.                               PZ2-256  battery-powered  preampliﬁer  and  the  RZ2  real-time  pro-
+Lastly, to mount the thin-ﬁlm on the connector stage, the pads of the                        cessor.  Data  were  digitized  at  a  sample  rate  of  12207  samples
+thin-ﬁlm were aligned to the ﬂat contacts on the ceramic and subse-                          per  second  at  18-bit  resolution  and  transmitted  from  the  PZ2  pre-
+quently soldered using low-temperature soldering paste. The solder                           ampliﬁer to the RZ2 processor by fast ﬁber optic connection. Using
+bumps were protected and insulated with fast-curing two-component                            unipolar recording conﬁguration,  reference  and  ground  pins  of  the
+epoxy (UHU® Plus Schnellfest, UHU GmbH, Germany).                                            headstage were tied together and connected to a skull screw. A Fara-
+                                                                                             day cage was used to reduce electromagnetic interference.
+Animals and implantation procedure                                                                 To  elicit  the  neural  response  of  the  barrel  cortex,  a  vibrating
+The experimental plan was designed in compliance with the guidelines                         system  was  used  to  produce  deﬂection  of  the  whiskers  along  the
+established by the European Communities Council (Directive 2010/63/                          horizontal  plane.  Whiskers  contralateral  to  the  craniotomy  were
+EU, Italian Legislative Decree n. 26, 4/3/2014) and the protocol was                         shortened  and ﬁxed to a Velcro strip attached to a rod. For multi-
+approved  by  the  Ethics  Committee  for  animal  research of  the  Uni-                    whisker stimulation, all whiskers were ﬁxed to the strip, while, in the
+versity of Ferrara and by the Italian Ministry of Health (authorization n.                   case of single-whisker stimulation, only one whisker was attached. The
+989/2020-PR).  Four  adult  Long  Evans  rats  with  400–500 g  were                         rod was moved by a shaker (Type 4810 Mini Shaker, Bruel & Kjaer,
+anesthetized with a mixture of Zoletil (Virbac, France; 30 mg⋅kg‐1) and                      Denmark) controlled by a National Instruments board (Texas, USA).
+Xylazine (Bayer, Germany; 5 mg⋅kg-1) administered intraperitoneally.                         The deﬂection stimulus consisted of a sine waveform with a duration
+For the duration of the whole procedure, the depth of anesthesia was                         of 12 ms and an amplitude matching a deﬂection of 500 µmandwas
+monitored by testing the absence of hind limb withdrawal reﬂex and                           repeated 60 times with 4 s pause between repetitions.
+maintained  by  additional  intramuscular  doses  of  anesthetic.  The
+anesthetized animal was placed in a stereotaxic apparatus (David Kopf                        Rat data analysis
+Instruments, California, USA) equipped with ear bars (Model 957 for                          Neural signal analysis was performed using NeuroExplorer® software
+small animals) and a ≈ 2 cm-long incision was done along the midline                         (v. 5.211, Nex Technologies, USA) and MATLAB workspace (v. R2019b,
+of  the  cranium.  The  underlying  muscle  and  connective  tissue  were                    MathWorks, Massachusetts, USA). Signals were time-locked to the start
+retracted to expose the skull and a craniotomy ≈6×6 mm2 was made in                          of whisker stimulation (n = 60). Data were band-pass ﬁltered between
+the parietal bone to expose the somatosensory cortex (identiﬁed by                           3 Hz and 300 Hz for LFP analysis and between 300 Hz and 6 kHz for
+vascular  landmarks  and  stereotaxic  coordinates).  Sterile  saline  solu-                 MUA analysis (Butterworth ﬁlter of fourth-order). To verify the con-
+tion was dispensed while drilling to avoid any local heating and to keep                     sistency  of  the  multi-unit  activity  recorded  from  the  surface  of  the
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                                     11

@@ -1,0 +1,64 @@
+862                                                                                                           IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 15, NO. 5, OCTOBER 2021
+
+
+in  multiplexed  operation  [81],  [87].  The  good  sensitivity  of
+solution-gated GFETs stems from the high electrical mobility
+of charge carriers in graphene and the high capacitance at the
+graphene-electrolyte interface [88]. These two factors lead to
+a remarkable transconductance (Gm), which is reﬂected in the
+transfer characteristics of Fig. 2(b), and therefore to a strong
+modulation of the graphene conductance by electrical potentials
+in the brain. In order to polarize the solution-gated GFETs in a
+regime of maximal sensitivity, a controlled overpotential can be
+applied  between  the  graphene  sensors  and  a  stable  reference
+electrodes  in  the  aqueous  environment,  such  as  Ag/AgCl  in
+Fig. 2(a), to shift the Fermi level in the graphene channel. The
+potential at which the Fermi energy is closest, on average, to the
+Dirac point of graphene is referred to as the charge neutrality
+point (CNP) of Fig. 2(b).
+   Graphene  active  sensors  are  three  terminal  devices  and  as
+such can be arranged in a column/row addressable array follow-
+ing Fig. 2(c). Selective biasing of the column interconnections
+can  be  used  to  multiplex  the  GFET  signals  detected  at  the
+rows. Recent works have demonstrated the good sensitivity and
+promising  scalability  of  GFET  neural  probes  multiplexed  in
+the time-domain [81] as well as in the frequency-domain [46],
+[87]. The ROIC presented in this work allows to upscale the
+solution-gated GFET arrays multiplexed in the time-domain to
+1024 channels while providing a compact headstage for in-vivo
+electrophysiological  recordings.  Another  important  aspect  of
+solution-gated GFETs is their sensitivity in a wide frequency
+band. The electrical noise in these devices is dominated by their
+ﬂicker noise, originating in trapping-detrapping events [89] up to
+very high frequencies beyond the bandwidth of neural activity,
+as shown in Fig. 2(d). While the absolute noise is above the
+levels of micro-electrode technologies, solution-gated GFETs                        Fig. 3.     (a) Classic and (b) proposed time-domain multiplexing schemes for
+still show a high sensitivity compared to alternative multiplexed                   solution-gated GFET sensing arrays.
+active sensors. The state-of-the-art multiplexed             μECoG arrays
+is currently deﬁned by [90], in which the active sensors present
+a root mean square (RMS) noise of 58              μV in the 2 Hz–100 Hz             GFETs allows to polarize all the sensors close to the optimal
+band for 195     ×   270   μm2    devices. As shown in Fig. 2(d), the               bias simultaneously as seen in Fig. 2(b). In order to determine
+median RMS noise in our case is lower for the same frequency                        the optimal gate bias for the operation and to periodically correct
+band and for a smaller area of 50         ×   50  μm2.                              for slow drifts between the reference electrode and the graphene
+   In  addition  to  these  noise  characteristics,  solution-gated                 potentials, the recording system must provide the capabilities to
+GFETs   present   a   constant   frequency   response   for   clean                 acquire the transfer curves of the transistors online.
+graphene-electrolyte  interfaces  [83],  [91].  In  contrast  to  mi-
+croelectrodes, traditionally used in electrophysiology, graphene                        III.  TIME-DOMAIN        MULTIPLEXING OF         SOLUTION-GATED
+active sensors are fully DC coupled devices. The transfer char-                                             GFET SENSING         ARRAYS
+acteristics of these sensors represent their stationary response,
+and  therefore  any  change  in  the  DC  potential  at  the  gate  is                 Classic  time-domain  multiplexing  (TDM)  in  current-mode
+ideally transduced into a DC current shift, which is reﬂected                       sensing  arrays  usually  employs  a  selection  switch  per  pixel
+into a theoretically ﬂat frequency response down to arbitrarily                     following Fig. 3(a), where          Vrefg  and   Vrefd   stand here for the
+low frequencies [83], [91]. In the application of graphene active                   GFET equivalent        VGS    and   VDS   biasing,  respectively.  Thanks
+sensors in-vivo, the overpotential between graphene and the ref-                    to the column-wise scanning of these series switches, only one
+erence electrode may ﬂuctuate due to electrochemical changes                        GFET sensor is connected to each row at any time and its source
+in the reference electrode or the graphene channel. However,                        terminal is automatically biased to ground by the corresponding
+due to the chemical inertness of graphene, drifts occur only at                     row amperometric circuit in order to read out the output current
+very low rates, typically 50 mV/day when stabilized, allowing                       Irow  in parallel for all rows.
+VGS   retuning on a daily basis and also the detection of brain                        The circuit alternative shown in Fig. 3(b) is proposed for the
+signals in the infra-slow frequency regime [82], [83], [92], [93].                  TDM of GFET sensors instead, where all devices are perma-
+Furthermore, the high homogeneity in the CNP of solution-gated                      nently connected to their shared columns and rows of the array.
+
+
+
+        Authorized licensed use limited to: Tsinghua University. Downloaded on November 16,2026 at 04:18:00 UTC from IEEE Xplore.  Restrictions apply.

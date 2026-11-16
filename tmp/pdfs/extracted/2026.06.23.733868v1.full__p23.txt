@@ -1,0 +1,51 @@
+  bioRxiv preprint doi: https://doi.org/10.64898/2026.06.23.733868; this version posted June 24, 2026. The copyright holder for this preprint
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made
+                                      available under a CC-BY-NC-ND 4.0 International license.
+
+
+
+         42. Zhang, W., Fan, Z., Shen, A. & Dong, C. Atmosphere Effect in Post-Annealing
+              Treatments for Amorphous InGaZnO Thin-Film Transistors with SiOx Passivation
+              Layers. Micromachines (Basel) 12, 1551 (2021).
+         43. Work function — Periodic table. https://pse-
+              info.de/en/scale/work_function?utm_source=chatgpt.com.
+         44. Rivas-Aguilar, M. E., Hernandez-Como, N., Gutierrez-Heredia, G., Sánchez-Martínez,
+              A., Ramirez, M. M., Mejia, I. & Quevedo-López, M. A. Specific contact resistance of
+              IGZO thin film transistors with metallic and transparent conductive oxides electrodes and
+              XPS study of the contact/semiconductor interfaces. Current Applied Physics 18, 834-842
+              (2018).
+         45. Horváth, Á., Sulyok, A., Dücső, C. & Schiller, R. Work function of titanium thin layers. J
+              Appl Phys 134, (2023).
+         46. Dean, J. A. Lange’s Handbook of Chemistry, 12th ed. (1979).
+         47. Leybo, D., Etim, U. J., Monai, M., Bare, S. R., Zhong, Z. & Vogt, C. Supplementary
+              information Metal Support Interactions in Metal Oxide-Supported Atomic, Cluster, and
+              Nanoparticle Catalysis. (2024).
+         48. Haynes, W. M., Lide, D. R. & Bruno, T. J. CRC Handbook of Chemistry and Physics 97
+              th Edition.
+         49. InGaZnO4 (ZnGaInO4) Crystal Structure: Datasheet. Preprint at
+              https://materials.springer.com/isp/crystallographic/docs/sd_1402632.
+         50. Knobelspies, S., Takabayashi, A., Daus, A., Cantarella, G., Münzenrieder, N. & Tröster,
+              G. Improvement of contact resistance in flexible a-IGZO thin-film transistors by CF4/O2
+              plasma treatment. Solid State Electron 150, 23-27 (2018).
+         51. Wang, W., Li, L., Lu, C., Liu, Y., Lv, H., Xu, G., Ji, Z. & Liu, M. Analysis of the contact
+              resistance in amorphous InGaZnO thin film transistors. Appl Phys Lett 107, (2015).
+         52. Weibull, W. A Statistical Distribution Function of Wide Applicability. J Appl Mech 18,
+              293-297 (1951).
+         53. Wang, Y., Chan, Y. C., Gui, Z. L., Webb, D. P. & Li, L. T. Application of Weibull
+              distribution analysis to the dielectric failure of multilayer ceramic capacitors. Materials
+              Science and Engineering: B 47, 197-203 (1997).
+         54. Chiou, Y. L., Gambino, J. P. & Mohammad, M. Determination of the Fowler-Nordheim
+              tunneling parameters from the Fowler-Nordheim plot. Solid State Electron 45, 1787-1791
+              (2001).
+         55. Overview - Alumina, 96%, Al 2 O 3.
+              https://www.matweb.com/search/datasheet_print.aspx?matguid=204094cb0fd34c099b8a
+              52c9c7df1d5c.
+         56. Harper, A. F., Iwanowski, K., Witt, W. C., Payne, M. C. & Simoncelli, M. Vibrational
+              and thermal properties of amorphous alumina from first principles. Phys Rev Mater 8,
+              043601 (2024).
+         57. Kapton® HN. https://www.dupont.com/electronics-industrial/kapton-hn.html.
+         58. DuPontTM Kapton® 500VN Polyimide Film, 125 Micron Thickness.
+              https://www.matweb.com/search/datasheet_print.aspx?matguid=338573ad1bdf4586aa17f
+              ab95f3a57d7&utm_source=chatgpt.com.
+         59. Mohammadi, A., Bianchi, L., Asadi, S. & Saccomandi, P. Measurement of ex vivo liver,
+              brain and pancreas thermal properties as function of temperature. Sensors 21, (2021).

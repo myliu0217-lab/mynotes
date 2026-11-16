@@ -1,0 +1,7 @@
+Supplementary Fig. 21. Comparison of Fourier spectrum during fixation and grating stimuli
+for each channel. Each panel corresponds to one non-saturated channel. Solid lines are the trial
+average of Fourier spectrum, and shaded areas mark the standard deviation across trials. Y axis
+scales are different for each panel, however they all start from 0. Channels over V1 (inset) show
+more pronounced grating stimuli-induced response, which agrees with the dot stimuli-induced
+findings (see Fig. 5d-e, g).
+                                                         48

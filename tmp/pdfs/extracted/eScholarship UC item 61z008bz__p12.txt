@@ -1,0 +1,82 @@
+                             This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+FATHY  et al.:  DIGITALLY ASSISTED MULTIPLEXED NEURAL RECORDING SYSTEM                                                                                                                                         11
+
+
+                                                                                              TA BL E   II
+                                              PERFORMANCE SUMMARY OF DIFFERENT NEURAL RECORDING ARCHITECTURES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a differential ampliﬁer in the AMS loop while maintaining its                                          [10]   W.    Jiang,    V.    Hokhikyan,    H.    Chandrakumar,    V.    Karkare,    and
+full  cancellation  capabilities  in  terms  of  speed  and  accuracy.                                        D.  Markovic,    “A   ±50-mV    linear-input-range    VCO-based    neural-
+Fabricated  in  65-nm  technology,  this  technique  enables  a                                               recording front-end with digital nonlinearity  correction,” IEEE J. Solid-
+                                                                                                              State  Circuits,  vol.  52, no. 1, pp.  173–184, Jan. 2017.
+reduction in the per-channel area compared with other recent                                           [11]   N.   Verma,   A.   Shoeb,   J.   Bohorquez,   J.   Dawson,   J.   Guttag,   and
+approaches while  maintaining  LP  and  low-noise  capabilities.                                              A.  P.  Chandrakasan,  “A  micro-power  EEG  acquisition  SoC  with  inte-
+The proposed system power consumption is 3.38 μW/Ch, and                                                      grated   feature   extraction   processor   for   a   chronic   seizure   detection
+                                                                                                              system,”  IEEE  J.  Solid-State  Circuits,  vol.  45,  no.  4,  pp. 804–816,
+the  IRN  is  2.6 μVrms, which gives an noise efﬁciency factor                                                Apr. 2010.
+(NEF) of 1.83. The overall per-channel area is 0.00248 mm2,                                            [12]   Y.  Park,  S.-H.  Han,  W.  Byun,  J.-H.  Kim,  H.-C.  Lee,  and  S.-J.  Kim,
+of  which  68%  is  digital  area  which  is  highly  scalable  with                                          “A real-time depth of anesthesia monitoring system based on deep neural
+                                                                                                              network  with  large  EDO  tolerant  EEG analog  front-end,”  IEEE Trans.
+node technology.                                                                                              Biomed.  Circuits  Syst., vol. 14,  no. 4, pp. 825–837, Aug. 2020.
+                                                                                                       [13]   M.   R.   Pazhouhandeh,   M.   Chang,   T.   A.   Valiante,   and   R.   Genov,
+                                      REFERENCES                                                              “Track-and-zoom  neural  analog-to-digital  converter  with  blind  stimu-
+                                                                                                              lation  artifact  rejection,”  IEEE  J.  Solid-State  Circuits,  vol.  55,  no.  7,
+ [1]   N.  Fatima,  A.  Shuaib,  and  M.  Saqqur,  “Intra-cortical  brain-machine                             pp. 1984–1997, Jul. 2020.
+       interfaces  for  controlling  upper-limb  powered  muscle  and  robotic  sys-                   [14]   J.  Huang  et  al.,  “A  0.01-mm2  mostly  digital  capacitor-less  AFE  for
+       tems in spinal cord injury,” Clin. Neurol. Neurosurg., vol. 196, Sep. 2020,                            distributed  autonomous neural sensor nodes,” IEEE Solid-State  Circuits
+       Art.  no. 106069.                                                                                      Lett.,  vol. 1, no. 7,  pp. 162–165, Jul. 2018.
+ [2] D.A.Schwarzet al., “Chronic, wireless recordings  of large-scale  brain                           [15]   A. Uran, Y. Leblebici, A. Emami, and V. Cevher, “An AC-coupled wide-
+       activity  in  freely  moving  rhesus  monkeys,”  Nature  Methods,  vol.  11,                           band neural  recording  front-end  with sub 1mm2  fJ/conv-step  efﬁciency
+       no. 6, pp. 670–679, 2014.                                                                              and  0.97  NEF,”  IEEE  Solid-State  Circuits  Lett.,  vol.  3,  pp. 258–261,
+ [3]   S. Ha et al., “Silicon-integrated  high-density  electrocortical  interfaces,”                         2020.
+       Proc. IEEE, vol. 105,  no. 1, pp. 11–33, Jan.  2017.                                            [16]   M. R. Pazhouhandeh, H. Kassiri, A. Shoukry, I. Weisspapir, P. L. Carlen,
+ [4]   R. Müller,  S. Gambini,  and M. Jan Rabaey,  “A 0.013 mm2,5μW,   D C-                                  and R. Genov, “Opamp-less sub-μW/channel /Delta1-modulated neural-ADC
+       coupled neural signal acquisition  IC with 0.5 V supply,” IEEE J. Solid-                               with super-G/Omega1 input impedance,”  IEEE J. Solid-State  Circuits, vol. 56,
+       State  Circuits,  vol. 47, no.  1, pp. 232–243, Jan.  2012.                                            no. 5, pp.  1565–1575, May 2021.
+ [5]   R. R. Harrison and C. Charles, “A low-power low-noise CMOS ampliﬁer                             [17]   S.-J. Kim et al., “A sub-μW/Ch analog front-end for /Delta1-neural recording
+       for neural recording applications,”  IEEE J. Solid-State  Circuits, vol. 38,                           with spike-driven data compression,” IEEE Trans. Biomed. Circuits Syst.,
+       no. 6, pp. 958–965, Jun. 2003.                                                                         vol. 13,  no. 1, pp. 1–14, Feb.  2019.
+ [6]   T.  Denison,  K.  Consoer,  W.  Santa,  A.-T.  Avestruz,  J.  Cooley,  and                      [18]   M. Sharma, H. J. Strathman, and R. M. Walker, “Veriﬁcation of a rapidly
+       A.  Kelly,  “A  2  μW  100  nV/rtHz  chopper-stabilized  instrumentation                               multiplexed circuit for scalable action potential recording,” IEEE Trans.
+       ampliﬁer  for  chronic  measurement  of  neural  ﬁeld  potentials,”  IEEE  J.                          Biomed.  Circuits  Syst., vol. 13,  no. 6, pp. 1655–1663, Dec.  2019.
+       Solid-State  Circuits,  vol.  42, no. 12,  pp. 2934–2945, Dec. 2007.                            [19]   J. P. Uehlin,  W. A. Smith,  V. R. Pamula,  S. I. Perlmutter,  J. C. Rudell,
+ [7]   Q. Fan, F. Sebastiano, J. H. Huijsing, and K. A. A. Makinwa, “A 1.8 μW                                 and   V.   S.   Sathe,   “A   0.0023   mm2/ch.   delta-encoded,   time-division
+       60  nV/√Hz  capacitively-coupled  chopper  instrumentation  ampliﬁer  in                               multiplexed  mixed-signal  ECoG  recording  architecture  with  stimulus
+       65 nm CMOS for wireless sensor nodes,”  IEEE J. Solid-State  Circuits,                                 artifact suppression,” IEEE Trans. Biomed. Circuits Syst., vol. 14, no. 2,
+       vol.  46, no. 7, pp. 1534–1543, Jul.  2011.                                                            pp. 319–331, Apr. 2020.
+ [8]  Y.-C. Kuan, Y.-K. Lo, Y. Kim, M.-C. F. Chang, and W. Liu, “Wireless                              [20]   S. Ha et al., “Integrated circuits and electrode interfaces for noninvasive
+       gigabit data telemetry for large-scale neural recording,” IEEE J. Biomed.                              physiological  monitoring,”  IEEE  Trans.  Biomed.  Eng.,  vol.  61,  no.  5,
+       Health  Inform., vol.  19, no. 3, pp.  949–957, May 2015.                                              pp. 1522–1537, May 2014.
+ [9]   H.  Chandrakumar  and  D.  Markovi´c,  “A  high  dynamic-range  neural                          [21]   J. Warchall,  P. Theilmann, Y. Ouyang, H. Garudadri, and P. P. Mercier,
+       recording   chopper   ampliﬁer   for   simultaneous   neural   recording   and                         “Robust    biopotential    acquisition    via    a    distributed    multi-channel
+       stimulation,”  IEEE J.  Solid-State  Circuits,  vol.  52,  no.  3,  pp. 645–656,                       FM-ADC,”   IEEE   Trans.   Biomed.   Circuits   Syst.,   vol.   13,   no.   6,
+       Mar.  2017.                                                                                            pp. 1229–1242, Dec.  2019.
+
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

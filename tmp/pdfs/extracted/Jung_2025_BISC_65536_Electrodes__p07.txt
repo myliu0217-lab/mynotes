@@ -1,0 +1,71 @@
+convolutional neural network (CNN) that uses one-dimensional con-                                         The spatially dense recordings from the BISC implant also capture
+volution along the temporal dimension. The performance on a hold-out                                fine-grained spatiotemporal dynamics of LFPs that cannot be resolved
+set (containing trials not used during training) is shown in Fig. 4l. The                           in the sparse configuration. Specifically, in the BISC recordings, we
+mutual information I(θ;   r)= H(θ)−H(θ|r)                  between the predicted ori-               observe ‘travelling waves’—spatiotemporally coherent patterns of
+entation θ and BISC responses r          is computed to be approximately 2.27                       propagating neural oscillations—consistent with recent findings show-
+bits, corresponding to a data rate of 45 bits per second at a 50-ms frame                           ing that such waves can encode task-related spatial information48.
+rate (Supplementary Discussion 10 and Supplementary Figs. 24 and                                    We focused on identifying travelling waves in the γ band (30–90 Hz),
+25). The decoder prediction closely approximates the ground-truth                                   given the task-related oscillations in this range (Fig. 4f–j). To measure
+values (Fig. 4m), with a root mean squared error of 9.1° (Fig. 4n).                                 the γ-band travelling waves, we extracted the instantaneous phase
+      We mapped the spatial receptive fields (RFs) using a random dot                               of the γ oscillation at each channel in the dense configuration. Then,
+experiment, where single 0.51° dots appeared on a uniform grey back-                                we measured the topography of the γ travelling waves, using circular
+ground, changing the location and colour (black/white) every 50 ms                                  statistics to extract the instantaneous direction and strength of the γ
+(Fig. 5a). Dots were presented within a 6° × 6° rectangular field, centred                          phase gradient at each contact (Supplementary Discussion 10). With
+1.5° right and 3° below fixation. The monkey maintained fixation for                                this approach, we compared the strength of the γ travelling waves
+1,500 ms to receive a juice reward. After removing the Fourier compo-                               across dense recordings taken from 16 different locations of the array
+nents outside the 20-to-90-Hz band, the band-passed responses for all                               during dot viewing. The strongest travelling waves were recorded
+non-saturated channels are shown for one trial (Fig. 5b            ).                               from the top-left corner of the BISC array, corresponding to posterior
+      We computed the RF by dot-triggered averaging on wavelet-                                     medial recordings over the operculum in V1 (Fig. 6a(i), red outline).
+transformed responses. Multiple wavelet central frequencies were                                    Our subsequent analysis (Fig. 6a(ii),b–e) focuses on recordings from
+tested (Supplementary Videos 3–8) and almost all of them show a clean                               this section of the array.
+structure for channels in the V1 area. An example channel is shown in                                     First, we compared the spatial topographies of travelling waves
+Fig. 5c for the 64-Hz band. This channel is responsive to a dot shown in                            induced by dot stimuli (Fig. 6a), revealing distinct cortical patterns that
+the lower-right location ~40–80 ms after dot onset. By averaging the                                varied with the dot location in the visual field. To assess whether BISC’s
+spatiotemporal RF over time, we compute an estimate of the spatial                                  spatially dense recordings revealed additional stimulus-relevant infor-
+RFs, which are shown with a shared colour scale (Fig. 5d). Although                                 mation not present in the lower-density recordings, we used uniform
+channels in V1 have compact RFs, the presented dot size is too small                                manifold approximation and projection (UMAP) clustering analysis on
+to invoke a spatially structured response from the channels outside                                 responses to five example dot locations (Supplementary Discussion
+V1. We fit two-dimensional Gaussian functions to these spatial RFs and                              10). Spatially dense BISC recordings more effectively distinguished
+plot the retinotopic map using the fitted Gaussian centres (Fig. 5e). We                            wave patterns across dot locations compared with lower-resolution
+examined the chronic stability of these maps by comparing them from                                 measurements (Fig. 6b                                 ).
+day 36, days 41–48 and day 62 post-surgery. The RFs remained stable,                                      To further test whether travelling waves encoded information
+showing average changes of less than 0.05° in eccentricity and less                                 about dot locations across the visual field, we built a neural network
+than 2.7° in angle for all channels from day 36 to day 62 for both dense                            decoder to predict the horizontal and vertical coordinates of the dot
+(days 41–48) and sparse (days 36 and 62) recordings, demonstrating                                  viewed by the monkey based on the spatiotemporal pattern of the
+the stability of chronic BISC recordings (Fig. 5f                ).                                 BISC-measured travelling waves. This decoder uses a hybrid neural
+      To exploit the fine-pitch 65,536-electrode structure of the BISC chip,                        network architecture, including a CNN that assesses the topography
+we densely recorded (minimum electrode pitches at 26.5 μm × 29 μm)                                  of travelling waves at each moment and a transformer network to
+from the top-left quadrant of the electrode array through repeated,                                 extract long-range temporal correlations. The model was trained by
+contiguous recording blocks of 1,024 channels. The combined results                                 using the spatiotemporal sequence of travelling waves from each trial
+(Fig. 5g) are consistent with the findings in the sparse full-array record-                         to predict the current dot location viewed by the monkey (Fig. 6c, Sup                      -
+ings and provide a retinotopic map with a much higher resolution.                                   plementary Discussion 10 and Supplementary Video 9). We used this
+
+
+
+
+Fig. 4 | BISC recordings over visual cortex with grating stimuli.                                       a, Chip position from 500 to 1,500 ms divided by that during –300 to 0 ms. i                       , Orientation tuning
+on the cortex. The chip was implanted on the border between the V1 and                              of an example channel. We computed the grating-triggered average response
+V4 areas. Note that a mirrored image is used here as the chip is facing down.                       conditioned for each orientation. The simple average contains a strong
+b, Trial in the grating session. The monkey is required to fixate for at least 300 ms               orientation-independent component that reflects the switching of grating every
+before visual stimuli are presented on the monitor. Thirty static gratings with                     50 ms (Supplementary Discussion 9). The heat map shows the orientation-tuned
+random orientations are displayed in one trial, each lasting 50 ms. c                  , Spectrum   components after the removal of the orientation-independent component.
+comparison between fixation period and stimulus period. Fourier transform is                        j, Orientation selectivity maps of different bands. The orientation selectivity index
+applied to responses in the time window between –300 and 0 ms (blue) and                            is defined based on the tuned response during the time window from 88 to 112 ms
+the time window between 500 and 1,500 ms (red) relative to the grating stimulus                     after grating onset (Supplementary Discussion 10). k     , Orientation tuning curves
+onset. The solid lines are averaged over channels and trials and the shaded areas                   of all channels from the 64-Hz band. The tuned response averaged over the time
+mark the standard deviation of the trial average over channels. d                                      , Channel window from 88 to 112 ms as a function of the grating orientation is shown for all
+coordinates in the full-chip recording mode. We simultaneously record 256                           channels. The unit of each channel’s response is the standard deviation σ                        across
+channels at 33.9 kS s−1 from the full chip. e   , Filtered responses of example channels.           trials computed during the fixation period. l                                         , Orientation decoder performance.
+For 4 channels that are strongly responsive to grating stimuli, responses after                     We trained a decoder that takes raw responses from all channels in the time window
+removing the Fourier components below 20 Hz and above 90 Hz for 1 trial are                         from 0 to 200 ms after grating onset, and predicts the grating orientation.
+shown. The vertical lines indicate the onset of stimulation. f                                   , Trial-averaged The decoder outputs a distribution over orientations. The average decoder
+spectrogram of one channel. We applied wavelet transformation on the recorded                       output is shown for each orientation on a hold-out testing set of trials. Mutual
+signal and obtained the time-varying power for different frequency bands.                           information between the prediction and response is computed after discretizing
+g, Temporal profiles of the selected frequency bands. Six rows from f            are plotted        the orientation into 36 bins. m                              , Point estimation on the testing set. A circular
+as solid lines. The shaded area denotes the standard error of the mean across trials.               mean of the decoder outputs is computed as point estimations. n                                 , Histogram of
+The grey background marks the period in which the grating stimuli are presented.                    prediction error. The difference between point estimation and ground truth is
+h, Responsiveness maps of different bands. Responsiveness for each channel in                       gathered for all gratings in the testing trials. Brain rendering in a                                     adapted with
+the given frequency bands is defined as the signal power during the time window                     permission from ref. 71   , Elsevier and ref. 72   , Springer Nature Limited.
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                                                                      1278

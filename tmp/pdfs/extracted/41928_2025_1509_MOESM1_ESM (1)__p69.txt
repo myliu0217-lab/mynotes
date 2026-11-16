@@ -1,0 +1,49 @@
+52      Jia, X., Tanabe, S. & Kohn, A. Gamma and the coordination of spiking activity in early
+        visual cortex. Neuron 77, 762–774 (2013). https://doi.org/10.1016/j.neuron.2012.12.036
+53 Woo, S. et al. in Proceedings of the IEEE/CVF Conference on Computer Vision and
+        Pattern Recognition.  16133–16142.
+54 Pierzchlewicz, P. et al. Energy guided diffusion for generating neurally exciting images.
+        Advances in Neural Information Processing Systems 36 (2024).
+55    Cadena, S. A. et al. Diverse task-driven modeling of macaque V4 reveals functional
+        specialization towards semantic tasks. bioRxiv, 2022.2005. 2018.492503 (2022).
+        https://doi.org/10.1101/2022.05.18.492503
+56    Walker, E. Y. et al. Inception loops discover what excites neurons most using deep
+        predictive models. Nature neuroscience        22, 2060–2065 (2019).
+        https://doi.org/10.1038/s41593-019-0517-x
+57 Fu, J. et al. Pattern completion and disruption characterize contextual modulation in mouse
+        visual cortex. bioRxiv (2023). https://doi.org/10.1101/2023.03.13.532473
+58 Franke, K. et al. State-dependent pupil dilation rapidly shifts visual feature selectivity.
+        Nature 610, 128–134 (2022). https://doi.org/10.1038/s41586-022-05270-3
+59      Cowley, B. R., Stan, P. L., Pillow, J. W. & Smith, M. A. Compact deep neural network
+        models of visual cortex. bioRxiv (2023). https://doi.org/10.1101/2023.11.22.568315
+60        Bashivan, P., Kar, K. & DiCarlo, J. J. Neural population control via deep image synthesis.
+        Science 364, eaav9436 (2019). https://doi.org/10.1126/science.aav9436
+61    Zhang, H., Watrous, A. J., Patel, A. & Jacobs, J. Theta and Alpha Oscillations Are
+        Traveling Waves in the Human Neocortex. Neuron   98, 1269–1281.e1264 (2018).
+        https://doi.org/10.1016/j.neuron.2018.05.019
+62 Das, A. et al. Spontaneous neuronal oscillations in the human insula are hierarchically
+        organized traveling waves. eLife 11, e76702 (2022). https://doi.org/10.7554/eLife.76702
+63 Ohki, K. et al. Highly ordered arrangement of single neurons in orientation pinwheels.
+        Nature 442, 925–928 (2006). https://doi.org/10.1038/nature05019
+64        Kara, P. & Boyd, J. D. A micro-architecture for binocular disparity and ocular dominance
+        in visual cortex. Nature 458, 627–631 (2009). https://doi.org/10.1038/nature07721
+65       Willett, F. R. et al. A high-performance speech neuroprosthesis. Nature 620, 1031–1036
+        (2023). https://doi.org/10.1038/s41586-023-06377-x
+66 Metzger, S. L. et al. A high-performance neuroprosthesis for speech decoding and avatar
+        control. Nature 620, 1037–1046 (2023). https://doi.org/10.1038/s41586-023-06443-4
+67      Sokal, N. O. & Sokal, A. D. Class E-A new class of high-efficiency tuned single-ended
+        switching power amplifiers. IEEE Journal of Solid-State Circuits  10, 168–176 (1975).
+        https://doi.org/10.1109/jssc.1975.1050582
+68       Lim, Y., Tang, H., Lim, S. & Park, J. An Adaptive Impedance-Matching Network Based
+        on a Novel Capacitor Matrix for Wireless Power Transfer. IEEE Transactions on Power
+        Electronics 29, 4403–4413 (2014). https://doi.org/10.1109/tpel.2013.2292596
+69          Ferro, M. D. & Melosh, N. A. Electronic and ionic materials for neurointerfaces. Advanced
+        Functional Materials 28, 1704335 (2018). https://doi.org/10.1002/adfm.201704335
+70 Jung, T. et al. klshepard/bisc: Bioelectronic Interface System to the Cortex (A wireless
+        subdural-contained 65,536-electrode,1024-channel brain-computer interface),
+        <https://doi.org/10.5281/zenodo.17074065> (2025).
+71 Calabrese, E. et al. A diffusion tensor MRI atlas of the postmortem rhesus macaque brain.
+        Neuroimage 117, 408–416 (2015).
+72        Bakker, R., Tiesinga, P. & Kötter, R. The scalable brain atlas: instant web-based access to
+        public brain atlases and related content. Neuroinformatics 13, 353–366 (2015).
+                                                       68

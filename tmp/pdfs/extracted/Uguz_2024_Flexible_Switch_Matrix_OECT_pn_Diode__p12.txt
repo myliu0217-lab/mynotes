@@ -1,0 +1,72 @@
+Article                                                                                                                                                                     https://doi.org/10.1038/s41467-023-44024-1
+
+
+15.    Greco, F. et al. Ultra-thin conductive free-standing PEDOT/PSS                        38.   Zokaei, S. et al. Tuning of the elastic modulus of a soft poly-
+     nanoﬁlms. Soft Matter 7, 10642–10650 (2011).                                                  thiophene through molecular doping. Mater. Horiz. 9,
+16.    Uguz, I. & Shepard, K. L. Spatially controlled, bipolar, cortical stimu-                    433–443 (2022).
+     lation with high-capacitance, mechanically ﬂexible subdural surface                     39.   Kang, D., Standley, A., Chang, J. H. C., Liu, Y. & Tai, Y. C. Effects of
+     microelectrode arrays.vol.8https://www.science.org (2022).                                    deposition temperature on Parylene-C properties. in Proceedings of
+17.    Ganji, M. et al. Development and translation of PEDOT:PSS micro-                            the IEEE International Conference on Micro Electro Mechanical
+     electrodes for intraoperative monitoring. Adv. Funct. Mater. 28,                              Systems (MEMS). https://doi.org/10.1109/MEMSYS.2013.
+     1700232 (2018).                                                                               6474260 (2013).
+18.   Shor, E. et al. Sensitive and robust chemical detection using an                       40.  Zhang, Z., Li, F., Li, M. & Hu, D. Anesthesia enhances spontaneous
+     olfactory brain-computer interface. Biosens. Bioelectron. 195,                                low-frequency oscillations in the brain. Neuroreport https://doi.org/
+     113664 (2022).                                                                                10.1097/WNR.0000000000001418 (2020).
+19.   Khodagholy, D. et al. NeuroGrid: recording action potentials from                      41.   Spyropoulos, G. D., Gelinas, J. N. & Khodagholy, D. Internal ion-
+     the surface of the brain. Nat. Neurosci. 18,310–315 (2015).                                   gated organic electrochemical transistor: A building block for
+20.   Rivnay, J. et al. High-performance transistors for bioelectronics                            integrated bioelectronics. Sci. Adv. 5, eaau7378 (2020).
+     through tuning of channel thickness. Sci. Adv. 1, e1400251 (2015).                      42.   Cea, C. et al. Enhancement-mode ion-based transistor as a com-
+21.    Proctor, C. M., Rivnay, J. & Malliaras, G. G. Understanding volu-                           prehensive interface and real-time processing unit for in vivo
+     metric capacitance in conducting polymers. J. Polym. Sci. B Polym.                            electrophysiology. Nat. Mater. 19,679–686 (2020).
+     Phys. 54,1433–1436 (2016).                                                              43.   Donahue, M. J. et al. High-performance vertical organic electro-
+22.   Polyravas, A. G. et al. Effect of channel thickness on noise in organic                      chemical transistors. Adv. Mater. 30,1705031(2018).
+     electrochemical transistors. Appl. Phys. Lett. 117, 073302 (2020).                      44.   Koklu, A. et al. Microﬂuidic integrated organic electrochemical
+23. Lee,W.etal.Transparent,conformable, active multielectrode array                                transistor with a nanoporous membrane for amyloid-β detection.
+     using organic electrochemical transistors. Proc. Natl Acad. Sci. USA                          ACS Nano 15,8130–8141 (2021).
+     114,10554–10559 (2017).                                                                 45.   Uguz, I. et al. Autoclave sterilization of PEDOT:PSS electro-
+24.   Jimbo, Y. et al. An organic transistor matrix for multipoint intracel-                       physiology devices. Adv. Health. Mater. 5,3094–3098 (2016).
+     lular action potential recording. Proc.NatlAcad.Sci.USA118,
+     e2022300118 (2021).
+25.   Histed, M. H., Bonin, V. & Reid, R. C. Direct activation of sparse,                    Acknowledgements
+     distributed populations of cortical neurons by electrical micro-                        This work was supported in part by the Defense Advanced Research
+     stimulation. Neuron 63,508–522 (2009).                                                  Projects Agency (DARPA) under Contract N66001-17-C-4002 and by the
+26.   Lee, W. et al. Integration of organic electrochemical and ﬁeld-effect                  National Institutes of Health under Grants U01NS099726 and
+     transistors for ultraﬂexible, high temporal resolution electro-                         U01NS099697 (K.L.S.). This work was performed in part at the Columbia
+     physiology arrays. Adv. Mater. 28,9722–9728 (2016).                                     Nano Initiative and part at the CUNY Advanced Science Research Center
+27.   Kim, Y. et al. High-current-density organic electrochemical diodes                     Nanofabrication Facility. This work is partially supported by King
+     enabled by asymmetric active layer design. Adv. Mater. 34,                              Abdullah University of Science and Technology Research Funding under
+     e2107355 (2022).                                                                        Award No. ORA-2021-CRG10-4650 (S.I.).
+28.   Choi, K. H. et al. Fibriform organic electrochemical diodes with
+     rectifying, complementary logic and transient voltage suppression                       Author contributions
+     functions for wearable E-textile embedded circuits. ACS Nano                            I.U. conceived the research. I.U. performed the neural implantations.
+     https://doi.org/10.1021/acsnano.2c12418 (2022).                                         I.U., D.O., and V.A. conducted the device characterization. I.U. and J.W.S.
+29.   Moser, M. et al. Side chain redistribution as a strategy to boost                      conducted the device fabrication. R.S. synthesized p(g2T-TT), and S.G.
+     organic electrochemical transistor performance and stability. Adv.                      synthesized p(C6NDI-T), supervised by I.M. A.H. performed biocompat-
+     Mater. 32, e2002748 (2020).                                                             ibility studies. I.U., D.O., S.I., and K.L.S. wrote the manuscript. K.L.S.
+30.  Savva, A., Wustoni, S. & Inal, S. Ionic-to-electronic coupling efﬁ-                     provided overall project guidance.
+     ciency in PEDOT:PSS ﬁlms operated in aqueous electrolytes. J.
+     Mater. Chem. C Mater. 6, 12023–12030 (2018).                                            Competing interests
+31.   Stavrinidou, E. et al. Direct measurement of ion mobility in a con-                    The authors declare no competing interests.
+     ducting polymer. Adv. Mater. 25, 4488–4493 (2013).
+32.   Giovannitti, A. et al. Controlling the mode of operation of organic                    Additional information
+     transistors through side-chain engineering. Proc.NatlAcad.Sci.                          Supplementary information The online version contains
+     USA 113,12017–12022 (2016).                                                             supplementary material available at
+33. Pace,G.,Nordness,O.,Asham,K.,Clément,R.J.&Segalman,R.A.                                  https://doi.org/10.1038/s41467-023-44024-1.
+     Impact of side chain chemistry on lithium transport in mixed ion-
+     electron-conducting polymers. Chem. Mater. https://doi.org/10.                          Correspondence and requests for materials should be addressed to Ilke
+     1021/acs.chemmater.2c00592 (2022).                                                      Uguz.
+34.   Cherian, D. et al. Large-area printed organic electronic ion pumps.
+     Flex. Print. Electron. 4, 022001 (2019).                                                Peer review information Nature Communications thanks the anon-
+35.   Jonsson, A. et al. Bioelectronic neural pixel: chemical stimulation                    ymous reviewer(s) for their contribution to the peer review of this work. A
+     and electrical sensing at the same site. Proc. Natl Acad. Sci. USA 113,                 peer review ﬁle is available.
+     9440–9445 (2016).
+36.   Uguz, I. et al. A microﬂuidic ion pump for in vivo drug delivery. Adv.                 Reprints and permissions information is available at
+     Mater. 29, 1701217 (2017).                                                              http://www.nature.com/reprints
+37.   Bernards, D. A. & Malliaras, G. G. Steady-state and transient beha-
+     vior of organic electrochemical transistors. Adv. Funct. Mater. 17,                     Publisher’s note Springer Nature remains neutral with regard to jur-
+     3538–3544 (2007).                                                                       isdictional claims in published maps and institutional afﬁliations.
+
+
+
+
+Nature Communications |          (2024) 15:533                                                                                                                                            12

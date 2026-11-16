@@ -1,0 +1,78 @@
+                       This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                              content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                             7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 7 Proposed neural recording system block diagram.
+
+where tBW = 1/wBW, hence the dynamic error is defined as e =
+exp(-t/tBW).  Accordingly,          fBW ³    -fS  ln(e)   / 2p. If  the  system
+includes choppers, then, fS = 2 ´ fCHOP = 2 ´ N ´ fCH	´ a, where
+N=16 channels, fCH=10 kHz, and the oversampling factor is a =
+8. Therefore required amplifier BW is fBW ³ (-N a fCH/p) ´ ln(e).
+  The  noise     of  the  electrodes      should  be  carefully  studied  in
+TDMA systems as the analog multiplexer folds the noise power
+N-times   onto   the   channel   bandwidth.              This   issue   can   be
+mitigated by windowed-integration sampling (WIS) [22]. The
+noise equivalent bandwidth (NEB) of an in-pixel architecture is
+given by NEBIN-PIXEL = p fCH / 2, whereas in TDMA Non-WIS
+systems the NEBNON-WIS = p fBW / 2 = (-N a fCH / 2) ´ ln(e). On
+the other hand, the NEBWIS = fs / 2 = N a fCH, hence the ratio of
+the Non-WIS to the WIS multiplexed architecture is equal to
+the factor -ln(e) / 2.
+  The proposed system integrates the input neural signal current
+of each channel on the AC coupling capacitors at a rate of fchop.
+The integrated current is flushed by the reset signal after each
+sample  which  creates  a  windowed-integration  Sinc-filter  for                        Fig. 8 System transient simulation in calibration and mission modes.
+electrode noise with notches at integer multiples of fchop. This
+implies  that  the  proposed  chopper-TDMA  system  has  higher                          at DC. The DAC MSBs are sufficient to cancel the amplifier
+NEBWIS when compared to non-chopped solutions as in [22] by                              static offset regardless of the transient DAC LSBs values, so
+a factor of a. However, the proposed system contains a digital                           both   amplifier-offset   and            𝐺.-Path   calibrations   can   run
+RMA  which  reduces  the NEBWIS when  input-referred  by  the                            simultaneously. A ±1 dither is injected in 𝐺.-Path and the Sign-
+factor of a, giving NEBWIS-Input-Referred = N fCH. To account for this                   Sign LMS converges to estimate the value of 𝐺.. After 30 ms,
+noise   increase,   the   front-end   needs   to   be   designed   with                  the offset and 𝐺. are sampled in the digital domain and the static
+sufficiently low thermal noise floor which further motivates the                         offset calibration module is powered down. Finally, the same
+chopping approach.                                                                       dither is reapplied to the impedance booster DAC to determine
+B.   System Operation Phases                                                             𝐺6-path gain as given by
+
+  Initially, the system starts in calibration mode with SWCal set                                                   𝐺6   =	  𝐺123,7	𝐴4	𝐺213                             (4)
+to logic high, the amplifier static offset module shown in green
+in Fig. 7 runs first to bring the amplifier out of saturation. The                       which  is  required  to  predict  the  input  voltage  needed  for
+digital LPF k-factor is set k=15, this sets the filter cutoff almost                     impedance  boosting.  It  is  critical  to  note  that  the  LMS  loop
+
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                       © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

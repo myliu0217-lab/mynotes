@@ -1,0 +1,46 @@
+identify the location of somatosensory cortex 107. The same strip was used as a shuttle to slide our
+implant, from rostral to caudal in the subdural space targeting the cortical location of maximal
+somatosensory evoked potential (SSEP) response (Supplementary Fig. 17). The relay station was
+then draped and brought into the sterile field to test the device prior to dural closure. Once
+recording and stimulation function were confirmed, the dura was reapproximated and closed in
+watertight fashion with 4-0 Nurolon sutures. The craniotomy bone flap was microplated back into
+place with the nonmetallic cranial fixation system (Delta Resorbable Implant System, Stryker).
+The galea was closed with 3-0 Vicryl sutures and the skin with 3-0 nylons and surgical glue. The
+animal was recovered under veterinary observation.
+SSEP Recordings
+Two weeks after the implant, SSEP was recorded from the subject (28.5 kg) under stable
+anesthesia. Drug dosages of 17.5 – 28.1 µgꞏkg-1ꞏh-1 Fentanyl, 4.9 mgꞏkg-1ꞏh-1 Ketamine, 1.6 – 2.6
+µgꞏkg-1ꞏh-1 Dexmedetomidine were administered. The choice of drug was influenced by the
+subject’s allergic reaction to Propofol.
+Subdermal needle electrodes (RLSND110-1.5, Rhythmlink®) were used in conjunction with a
+commercial stimulator (XLTEK Protektor32, Natus Neuro) to deliver electrical stimulation.
+Needles were placed on median nerve and four different snout locations (Fig. 3a) with local
+reference pairing on the contralateral side of the implant. To invoke SSEP, we used a train of
+anodic pulses continuously running at 2.79 Hz with pulse width of 0.3 ms. Stimulation amplitude
+was gradually increased with increments of 0.5 mA until distinct twitching responses were
+observed (Supplementary Fig. 18b). For each location, we collected approximately 200 SSEP
+trials, where a trial refers to the delivery of each anodic pulse. Recording configuration used 16×16
+channels spatially programmed in the sparsest recording mode, minimum programmable gain
+amplifier (PGA) gain of 53.7 dB, and high-pass filter cut-off of 13 Hz.
+Histology
+Five weeks after the implant, we extracted the brain post-mortem for histological analysis. Coronal
+sections were taken from under the BISC electrode array, near the rostral edge of the implant where
+there was gross evidence of a mechanically induced injury, and from the ipsilateral occipital lobe
+as a control. Sections were stained with three different markers: hematoxylin & eosin (H&E, H:
+NC2072425, Fisher. E: 6766008, Fisher), NeuN (MAB377, Millipore), and Iba1 (NB100-1028,
+Novus Biologicals) (Supplementary Fig. 19). Although a small lesion was found near the rostral
+edge of our implant indicative of a mechanically induced placement injury, tissue section from
+directly under the electrode array showed no significant pathological change except for a mild
+microgliosis.
+Supplementary Discussion S6. Porcine somatosensory cortex recording data analysis
+Data pre-processing
+Non-functioning recording channels were identified from the baseline recordings that were taken
+without running any electrical stimulation. They were identified by labeling channels whose
+waveform root mean square (RMS) values are below a heuristic threshold of 1.7-bits after low-
+pass filtering (300 Hz, eight-order zero-phase Butterworth) or whose waveforms remained
+consistently saturated throughout the recordings. The BISC 10-bit ADC has an output range of [0,
+1023]. For porcine SSEP data analysis, we defined the non-saturated code range for the BISC ADC
+as [3, 1020] with any data point outside of this range considered saturated. By this means, 25 out
+of 256 channels were labeled as either dead or saturated and were eliminated from further analysis.
+
+                                                         16

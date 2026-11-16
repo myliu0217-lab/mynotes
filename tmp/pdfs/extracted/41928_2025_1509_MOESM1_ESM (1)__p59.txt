@@ -1,0 +1,26 @@
+Supplementary Video 3. Dot-triggered-average responses of all channels without filtering.
+Color maps are not shared; however, they are all symmetrical around 0, i.e. same as in Fig. 5d. A
+snapshot at 75 ms is shown.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         58

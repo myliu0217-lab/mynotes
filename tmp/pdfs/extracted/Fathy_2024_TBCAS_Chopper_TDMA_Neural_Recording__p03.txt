@@ -1,0 +1,66 @@
+                      This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                             content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                      3
+
+number of adders by 15× and cumulatively saving 3.6× and
+2.8× in  the  area  and  power  of  the  EOV/LFP  filter  module,
+respectively, when compared to the solution in [15]; 2) splits
+the MSBs and LSBs of the EOV/LFP feedback DAC into the
+digital and analog domains that, when combined with a digital
+Sign-Sign LMS filter with a dither calibration signal running at
+the ADC clock rate, relaxes the DAC requirements and saves
+10.1×    in  power  compared  to  the  conventional  oversampled
+DAC  truncation-error  DS-modulator                [15];  3)  adds  chopper
+stabilization after the MUX to reduce the total integrated noise
+across the modulated spectrum by 2.4× and 4.3× in LFP and
+AP  bands,  respectively;  4)  reuses  the  sign-sign  LMS  AF  to
+predict the input signal, whose output is then used to pre-charge
+the input AC capacitors via the existing mixed-signal feedback
+architecture and improve the input impedance by 39×, all with
+only a 7.1% increase in area.
+  The paper is organized as follows: In Section II, a study of the
+proposed neural recording system is presented. In Section III,
+the design architecture is introduced. In Section IV, the circuit
+implementations        are   illustrated.     Finally,   the    measurement
+results  and  conclusion  are  discussed  in  Section  V  and  VI,
+respectively.
+
+    II.   PROPOSED NEURAL RECORDING SYSTEM MODULES
+  Conventional    multiple-access    schemes    used    in    neural
+recording  systems,  as  depicted  in         Fig. 1,   suffer  from several
+issues.   These  issues  encompass  the  use  of  redundant  LPFs
+across N-channels, a considerable feedback DAC size, and the
+presence   of   flicker   noise   in   the   wide        bandwidth   neural
+amplifier. It is crucial to take these factors into account when
+designing neural recording systems to minimize the IRN and
+achieve the desired signal quality.
+A.   EOV/LFP Feedback Filter
+  The DSP block depicted in Fig. 1 features redundant LPFs,
+which is known to consume a considerable amount of digital
+power  and  area.  For  example,          when  implemented  in  65          nm
+CMOS  technology  for  N=16  channels,  the  EOV/LFP  digital
+module     occupies  an       area   of   ~0.016  mm2        and  the  power
+consumption  in  ~19        µW     [15].   This  work     proposes  a  novel
+solution in the form of a direct EOV/LFP digital filter, which
+offers  equivalent      functionality  to  the  aforementioned  DSP                   Fig. 4 Block diagram representation of feedback DAC in prior-art (a) using
+block while minimizing power and area overhead.                                       coarse and fine DACs [13], [16]; (b) using a DS truncation error DAC; and
+   To  explain  the  redundancy  in  the  conventional  systems                       (c) proposed DAC size reduction system block diagram via Sign-Sign LMS
+shown in Fig. 1, consider the path of the neural signals from the                     AF.
+ADC to the feedback DAC. After the ADC samples all N input                            the   EOV/LFP   directly,         and   thus    the   functionality      of   the
+channels in a time-multiplexed manner, the demodulator lowers                         proposed filter is similar to the DSP module on the path from
+the sampling rate of each channel by a factor of N; this forces                       x[n] to y[n] shown in Fig. 1. Since the ADC introduces 1-unit
+the LPFs (integrators) to stay idle for N´TCLK, where fCLK is the                     TCLK    delay   of  3.125    µs,  the  proposed  filter  adds        (N-1)-unit
+ADC     clock    frequency.     To  avoid  signal  aliasing,  the  ADC                delays such that the overall EOV/LFP loop undergoes N-unit
+sampling rate is set to fCLK = 2 N fBW, where fBW is the neural                       delay. This delay is necessary because the EOV/LFP feedback
+signal  BW. The  extracted  EOV  from  the  LPFs  are  then  up-                      loop  output-samples  must  align  with  the  input  multiplexed
+modulated and fed to a DAC to be subtracted from the neural                           samples of EOV/LFP. The proposed EOV/LFP filter in Fig. 2
+amplifier.                                                                            occupies an active area of 0.00425 mm2 and consumes 6.8 µW
+  In  contrast,    Fig.   2   shows  the  proposed         neural  recording          for N=16 channels. The proposed digital filter hence removes
+system with a direct EOV/LFP digital filter. The proposed filter                      the  redundant  LFPs        and  saves  N-1  digital  full-adders  when
+operates at the same clock frequency as the ADC and extracts
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                      © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

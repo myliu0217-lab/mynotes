@@ -1,0 +1,49 @@
+Supplementary Discussion S1. BISC implant design
+
+
+As illustrated in Supplementary Fig. 1, the implant circuitry consists of four primary top-level
+modules, each of which can be implemented and verified independently. These modules are the
+analog front-end (AFE), the controller, the wireless transceiver, and the wireless power transfer
+(WPT). The AFE is directly interfaced with the electrodes. It is responsible for sensing the neural
+signals on the electrodes, which are then amplified locally in the in-pixel amplifiers. The outputs
+from these amplifiers are time-multiplexed to a programmable gain amplifier (PGA) through
+column switches and subsequently digitized by a 10-bit successive-approximation-register (SAR)
+analog-to-digital converter (ADC). Additionally, the AFE is designed to drive stimulation currents
+through the electrodes from global current sources, utilizing the column and in-pixel switches. The
+controller plays a central role in managing the system. It sets all static configurations, including
+biasing and gain control for the AFE. Furthermore, it controls all dynamic switching signals into
+the pixel array and the column switches. The controller also receives digital samples from the ADC,
+packaging the data for transmission via the wireless transceiver, as well as receiving, depacketizing,
+and decoding serialized data from the wireless transceiver. While not explicitly shown in the
+diagram, the controller also controls the activation and deactivation of the voltage regulators for
+the AFE. The wireless transceiver module handles data transmission and reception via the UWB
+antenna. It also supplies the controller with a clock signal, which is generated in a phase-locked
+loop (PLL) using a reference clock from the WPT module. Lastly, the WPT module is designed to
+inductively receive radiofrequency power through a coil. This radiofrequency power is initially
+rectified to near 2V, and then further regulated by three separate 1.5V regulators dedicated to the
+AFE, the controller, and the transceiver. Additionally, the rectified 2V is converted to -2V, and
+then regulated to -1.5V specifically for the AFE.
+
+Design of the analog front-end
+
+The analog front-end (AFE) is an analog mixed-signal module that serves as the interface between
+the electrodes and the controller. Within this module, various circuit blocks are implemented along
+two primary signal paths. The first is the recording path, which originates at the electrodes and
+progresses through an in-pixel amplifier (Supplementary Fig. 6a), column switches, a
+programmable gain amplifier, and a 10-bit ADC, terminating at the controller. The design of the
+recording path was inspired by the architecture of an active-pixel sensor (APS) 73 photosensor 74,
+which utilizes a charge amplifier readout mechanism. The APS architecture was used to avoid long
+high-impedance routings from electrodes, which are susceptible to electromagnetic interference
+from the 13.56 MHz wireless powering frequency. Such interference, unless carefully filtered or
+mitigated, can lead to large offsets in the amplifiers due to circuit nonlinearity 75,76. To minimize
+the potential interference, the routings from the electrodes to the inputs of the in-pixel amplifiers
+are restricted to within 20 μm. Furthermore, the APS architecture relaxes the performance
+requirement of the shared back-end circuitry, allowing implementation of PGA and ADC with
+smaller area and lower power consumption.
+
+The pixels and column switches in the AFE utilize a dual rail ±1.5V power supply. This power
+supply configuration allows maximum safety because 0-V bias voltage can be applied on the
+electrodes and there is no DC voltage difference between the working, reference, counter
+electrodes, and the substrate. Potential current leakages are eliminated from all conductive parts
+of the implant. To support this, the pixels and column switches are implemented in a −1.5V deep
+                                                           3

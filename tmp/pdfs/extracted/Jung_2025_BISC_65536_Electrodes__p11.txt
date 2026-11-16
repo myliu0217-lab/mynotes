@@ -1,0 +1,86 @@
+from the surface, but at a dramatically higher electrode density. The                                    intracortical recordings for clinical translation is their stability over
+advantage this device has over those relying on intracortical electrodes,                                time, which was replicated in the BISC.
+particularly in the context of eventual human translation, lies in its                                         The BISC chip was designed with a front-end recording bandwidth
+surgical procedures: its removal and replacement are straightforward,                                    sufficient to capture the temporal dynamics of neural spiking activ-
+and results in little to no cortical damage. In the future, we expect to                                 ity. Our in vivo experiments did not demonstrate the existence of
+transition to even less invasive surgical procedures in which only a                                     large-scale spiking activity from BISC surface recordings. Future itera-
+small slit is made in the cranium and dura, and the BISC implant is slid                                 tions of BISC that focus only on LFP recordings can reduce the front-end
+under the skull.                                                                                         recording bandwidth and better utilize the available 108-Mbps data
+      Positioning the BISC implant on the pial brain surface allows it                                   bandwidth to simultaneously record from a larger number of channels.
+to naturally conform to the contour of the brain and move with the                                       The architecture of BISC in which full recording circuitry is present at
+brain, bringing advantages over devices with components attached                                         each electrode site allows this scalability. The high-density recording
+to the skull, which introduce relative motion between the device and                                     capability of the BISC device shows that even LFPs, when measured
+the brain. An additional benefit of subdural μECoG recordings over                                       with small surface electrodes placed directly on the pial surface, exhibit
+
+
+                    a    (i)                Wave strength                           (ii)
+
+
+                                                                 0.12                        Visual coordinate
+                                                                                                     X (°)
+
+
+
+                          P
+                      M        L                                 0.08
+                          A
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                  P
+                                                                                                                                                                              M        L
+                                                                                                                                        0.36 (mm)                                 A
+
+                    b            27.75 µm                        55.5 µm                                                               d
+                                                                                                            Clustering quality
+                                                                                                                                                    Decoding accuracy
+                                                                                                         0.3                               0                                        0.75
+                                                                                                                ***
+                                                                                                                                                                                    0.60
+                                                                                                         0.2
+                                                                                                                                                                                    0.45
+                               UMAP dim 2                                                                0.1
+                                                                                                                                                                                    0.3
+                                  111 µm                          222 µm                Stimulus
+                                                                                                           0                                                                        0.15
+
+                                                                                                                                           6                                        0
+                                                                                                                                             –1.5         0                                      4.5
+                                                                                                                      µm      222 µm                  Visual coordinate
+                                                                                                          27.75 µm          55.5 µm          111               x (°)
+                                                                                                             Electrode pitch
+
+                    c                 Travelling        Spatial attention         Temporal                   Stimulus                    e
+                                        waves                 (CNN)               attention                  dynamics                         0.5
+                                                                                (transformer)                                                           **         *
+
+                                                                                                                                              0.4
+
+                               Time                                                                       Time                                0.3
+
+
+                                                                                                                                              0.2
+                                                                      Predicted            True
+
+                                                                                                                                              0.1
+
+
+                                                                                                                                                0
+                                                                                                                                                                             Temporal
+                                                                                                                                                       µm             111 µm        222 µmcontrol
+                                                                                                                                                 27.75 µm           55.5 Electrode pitch
+                                    0            0.25         0.50          0.75                            1.25           1.50           1.75          2.001.00
+                                                                         Time (s)
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                                                                      1282

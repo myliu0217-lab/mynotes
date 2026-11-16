@@ -1,0 +1,71 @@
+                        This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+4                                                                                                                                                                                                                          IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+                                                                               TA BL E   I
+                                                       CDMA EXAMPLE OF AMS SYSTEM WITH (N = 4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+time-varying  EOV  which,  given  a  perfect  back  end,  can  be                        Fig.  3(c)  shows  the  proposed work  approach, which  is  an
+individually canceled at each measurement iteration.                                  extension of the work in [4], but with a multi-access technique
+                                                                                      and  simultaneous  EOV  cancellation  across  all  channels.  The
+A. Single-Channel Versus Multi-Access EOV Cancellation                                system  uses  an  analog  multiplexer  to  multiplex  all  channels
+                                                                                      into a single neural ampliﬁer and ADC with gain (GADC).The
+   Fig. 3(a) shows an example of a digital servo-loop applied to                      feedback loop consists of N-LPFs, an AF with gain (GAF) that
+a dc-coupled neural recording system block diagram. Solutions                         will  be  addressed  shortly  in  Section III-B,  and  a  DAC  with
+like  Sharma  et  al.  [18]  use  a  binary-search  algorithm  to                     gain (GDAC).
+remove EOV; this approach does not guarantee the complete                                Since  every  channel  is  connected  to  an  electrode  with
+continuous  removal  of  the  slowly  varying  EOV,  rather  it                       a  random  EOV  value,  the  TDMA  system  multiplexes  all
+considers  the  offset  as  a  static  voltage  which  is  not  always                channel  offsets  together  onto  a  single  wire,  which  creates  a
+guaranteed.                                                                           high-frequency EOV artifact that can easily saturate an ampli-
+   Other solutions like Muller et al. [4] use a mix of an IIR-                        ﬁer.  Whether  the  neural  ampliﬁer  is  ac-  or  dc-coupled,  this
+ﬁlter  and  binary-search  algorithm  for  partial  dynamic  EOV                      multiplexed EOV artifact can  pass  in  full magnitude directly
+removal as demonstrated in Fig. 3(b). Coarse and ﬁne extrac-                          to the neural ampliﬁer. Accordingly, a dedicated system must
+tion of EOV and neural LFP signals are performed by using a                           be  added  to  cancel  this  artifact  at  the  neural  ampliﬁer  input
+binary-search algorithm and LPF,  respectively. However, this                         nodes in a per-channel, time-multiplexed manner.
+approach is problematic when an on-chip IIR-LPF is used with                             In this work, a DSP module is modeled carefully to remove
+a known cutoff frequency (usually ∼300 Hz), and the gain of                           the  EOV  artifact  signal.  The  proposed  system  in  Fig.  3(c)
+the  ﬁlter  passband  region  must  be  exactly  equal  to  1/(AV×                    assumes that the ADC adds a unit delay (z−1),  and  the  DAC
+GADC ×  GDAC)  which  is  difﬁcult  due  to  process  variation                       adds no  delay.  Since  TDMA  is  used,  the  cancellation of  the
+that  affects  the  gain  of  each  stage  causing  incomplete offset                 EOV requires an additional (N − 1) delay units to be inserted
+cancellation.  On  the  other  hand,  if  the  LPF  is  implemented                   into the loop; this is to align each EOV sample to be subtracted
+as  an  integrator,  the  loop  gain  might  get  very  large  and                    from its corresponding channel in the analog domain. The  N-
+cause instability to the overall system; therefore, an attenuation                    delay units do not affect the cancellation functionality of the
+factor should be added to the loop to maintain stability. If the                      system because the ADC and digital are operating at a much
+attenuation  factor  is  too  small,  the  loop  might  not  track  the               higher  frequency  (2  ×   fs  ×  N)  compared  with  the  EOV
+slowly varying EOV and hence, cause the ampliﬁer to saturate.                         frequency;  hence,  the  slowly  varying  EOV  is  seen  virtually
+This  factor  can  be  manually  adjusted  after  fabrication  since                  constant with  N-digital delay cycles.
+the  loop  gain  is  prone  to  change  due  to  process  variations.                    Unfortunately, in a multi-channel TDMA solution, the addi-
+Accordingly, Muller et al. [4] designed the system to have an                         tional N-delay cycles disturb the stability of the loop. To make
+off-chip IIR ﬁlter and a  binary-search algorithm to manually                         the  loop  stable,  GAF  should  be  selected  to  be  very  small,
+control  the  ﬁlter  coefﬁcient  to  reach  optimum  performance                      taking  into  account  the  loop  gain  changes  of  the  ampliﬁer,
+in terms of EOV cancellation and cutoff frequency accuracy.                           ADC,  and  DAC  due  to  process  variations.  This  approach  is
+The transfer function of the LPF is very tricky to design for                         difﬁcult since  an arbitrary small value of  GAF  will cause the
+a single-channel system, as explained in [4], because the gain                        loop response to be slower than the change of the EOV, which
+coefﬁcient of the LPF controls two coupled parameters: 1) loop                        will lead to ampliﬁer saturation. The addition of an AF solves
+stability and 2) loop ﬁlter poles location. The stability becomes                     the  issue  because  GAF  starts  from  the  largest  possible  gain
+increasingly difﬁcult if the ADC and DAC introduced delays                            value,  in  which  the  loop  is  in  saturation,  and  then  starts  to
+higher than one unit delay [4].                                                       decrease  automatically  until  it  locks  to  the  largest  possible
+
+
+
+
+       Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on December 24,2021 at 04:12:00 UTC from IEEE Xplore.  Restrictions apply.

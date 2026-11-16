@@ -1,0 +1,67 @@
+                      This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+
+2                                                                                                                                                                                                                    IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+
+[9], requiring less than 10     µV    rms noise from the front end [10].
+Recording  neural  activity  has  been  most  commonly  accom-
+plished  with  metal  electrodes,  which  have  a  finite,  nonlinear
+electrochemical  impedance  at  the  electrode-tissue  interface.
+The interface impedance depends on the electrode dimensions
+but  is  relatively  high  at  low  frequencies  due  to  their  capac-
+itive  nature  (nF  range)  and  becomes  nearly  resistive  above
+1  kHz  [11].  For  capturing  low-frequency  neural  activity  and
+avoiding  signal  attenuation,  the  recording  front  end  requires
+Ms of input impedance to have a high-pass corner frequency
+of less than 1 Hz. The neural signals are captured by the analog
+front  end  (AFE)  and  then  processed  in  real-time  by  a  neural
+decoding  system,  often  using  algorithms  to  detect  pertinent
+patterns  or  anomalies  [12],        [13].  This  information  configures
+the  stimulator  to  deliver  electrical  stimulation  to  the  patient
+accordingly.
+   Simultaneous  recording  of  neural  signals  with  electrical
+stimulation  presents  a  technical  challenge  due  to  the  stim-                     Fig. 2.   Comparison of (a) PGA + ADC architecture with and (b) ac-coupled
+ulation  artifacts.  Electrical  stimulation  is  typically  delivered                  direct digitization architecture in the presence of stimulation artifacts.
+in  current  mode  for  precise  charge  control.  With  current
+amplitudes  up  to ±5  mA  and  electrode  impedances  above
+a  few  k,  the  excitation  voltages  can  exceed  10  V       [14].                  amplifiers  (PGAs)  and  a  shared  analog-to-digital  converter
+A  fraction  of  this  signal  may  appear  as  a  stimulation  arti-                   (ADC)[22], [23], [24],                                   [25],         [26].  The  amplification  stage
+fact  at  the  recording  circuit  input,  marked  by  large  voltage                   is  typically  implemented  as  an  ac-coupled  instrumentation
+transients coinciding with stimulation pulses, often exceeding                          amplifier  (IA)  with ∼40  dB  of  gain,  capable  of  effectively
+the neural signal by more than 100×       [15],        [16]. The stimulus               rejecting   the   tens   of   mVs   of   electrode   dc   offset   (EDO)
+induces pickup on other electrode channels through capacitive                           commonly  present  at  the  electrode-tissue  interface.  With  an
+crosstalk between stimulating and recording electrodes, direct                          input range of a few mVs, this type of AFE readily saturates
+conduction paths through cerebrospinal fluid, and/or capacitive                         during stimulation due to the high gain. The high-pass network
+coupling  to  the  recording  electronics  via  traces,  generating                     at  the  input,  furthermore,  requires  large  on-chip  capacitors
+substantial stimulation artifacts at the recording sites. Precise                       to  achieve  a  cutoff  frequency  of  less  than  1  Hz.  Because
+modeling of the artifact is impractical because their morpholo-                         of  this  fundamental  trade-off  with  the  cutoff  frequency  and
+gies  depend  on  stimulator  architecture,  current,  stimulation                      settling  time,  it  takes  hundreds  of  milliseconds  to  recover
+waveform, electrode configuration and placement, and patient                            from  an  artifact,  leading  to  critical  data  loss  [Fig.  2(a)].
+physiology [17],        [18].                                                           A  dc-coupled  AFE  with  a  mixed-signal  servo  loop  reduces
+   This  article  reports  a  4 ×  2  array  of  per-pixel  second-                     area by removing the ac-coupling capacitor, but it still suffers
+order  16   modulators   for   ECoG   (LFP  +   AP)   record-                           from stimulation artifacts due to its limited input range [27].
+ing  with  a  submillisecond  artifact  recovery  time,  enabling                       Other techniques have been reported to deal with the artifacts,
+in-stimulation recording. This is achieved using an ac-coupled                          such as blanking the recording during stimulation and adding
+architecture  with  a  time-based  ring-oscillator  quantizer  fea-                     a discharging circuit to the input [28]; however, with multiple
+turing fast recovery and overrange detection. The architecture                          independent,  spatially  distributed  stimulation  channels,  this
+also offers a unique power-efficient bandwidth scaling option.                          incurs significant information loss. Synchronizing the blanking
+The  performance  of  this  chip  was  demonstrated  through  an                        control signal requires precise design regarding its timing and
+in vivo whisker barrel rat experiment and compared against a                            placement  relative  to  the  stimulation  waveform.  Often,  this
+commercial  chip  (Intan  RHD2164)  [19].  This  article  extends                       synchronization necessitates incorporating a guard band period
+the work presented in [20].                                                             alongside  the  blanking  time,  which  can  result  in  further  data
+   The  rest  of  this  article  is  organized  as  follows.  Section  II               loss.  Another  drawback  of  this  architecture  is  the  need  for
+discusses  prior  art,  followed  by  the  proposed  architecture  in                   explicit antialiasing filters to prevent the folding of interference
+Section  III.  Section      IV  describes  the  circuit  implementation,                and out-of-band signals into the Nyquist band, which is often
+and Section V presents measurement results. Finally, conclud-                           neglected in the analysis [29],        [30].
+ing remarks are made in Section VI.                                                        Recent  advances  in  direct  digitization-based  AFEs  over-
+                               II.  PRIOR ART                                           come  this  artifact-related  saturation  limitation  by  forgoing
+                                                                                        the  amplifier  and  directly  connecting  the  electrode  to  a  high
+   Advancements  in  low-impedance,  high-density  recording                            dynamic  range  (DR)  ADC,  typically  a  continuous-time 16
+grids  [21]  have  paved  the  way  for  low-noise  neural  record-                     modulator (CT-16  M) [31],        [32],        [33],        [34],        [35],        [36],        [37],
+ing   systems   with   high   spatial   and   temporal   resolution.                    [38].  Removing  artifacts  from  a  digitized  signal  requires  a
+A  conventional  AFE  architecture  consists  of  a  high-density                       wide DR to quantize all signals without saturation. CT-16  Ms
+neural    recording    signal    path    with    programmable    gain                   also benefit from inherent antialiasing filtering, eliminating the
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on January 13,2025 at 05:01:38 UTC from IEEE Xplore.  Restrictions apply.

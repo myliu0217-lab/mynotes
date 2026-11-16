@@ -1,0 +1,61 @@
+Paper                                                                                                                                   Journal of Materials Chemistry C
+
+highlight  finer  structural  details.  The  lower  inset,  Fig.  1c(iii),          output current,41 reaches 291.3 /C6 16.7 ms  in our ultraflexible
+features a cross-sectional scanning electron microscopic (SEM)                      array,  with  a  coeﬃcient  of  determination  (R2)  of  0.992.  A
+image of a single device, revealing a channel length of 0.6 mm                      representative  temporal  response  curve  is  shown  in  Fig.  1h.
+and a thickness of 178 nm.                                                          The resulting cut-oﬀ frequency ( fT) exceeds 4 kHz, significantly
+   Transfer curves of 1024 transistors were tested, a represen-                     surpassing  the  requirement  for  recording  ECoG  signals,42
+tative one along with their respective transconductance curves                      which typically occur below 500 Hz.20
+are  shown  in  Fig.  1d.  Among  the  1024  transistors,  the  gm,
+calculated following:                                                               Biocompatibility
+                  8                                                                 Achieving long-term in vivo recording necessitates excellent bio-
+                  >         Wd                                                      compatibility.  To  validate  the  array’s  biocompatibility,  we  per-
+                  >/C0mC/C3      jj;           for  VDSjjo VGS /C0 Vthjj
+         @ID      <           L  VDS                                                formed tests assessing both in vitro cytotoxicity and in vivo tissue
+  gm ¼   @VG ¼    >                                                                 immune  response.  Fig.  2a  shows  the  morphology  of  murine
+                  >       Wd
+                  :mC/C3       jj;    for  VDSjj4 VGS /C0 Vthjj
+                           L  VGS /C0 Vth                                           hippocampal HT22 neuronal cells after exposed to 100% extracts
+                                                                          (1)       of  our  vOECT  array  for  1  day  and  5  days,  compared  with  cells
+                                                                                    incubated  solely  with  HT22  culture  medium.  There  were  no
+where  m  and  C*  denote  the  charge  carrier  mobility  and  the                 noticeable  morphological  changes  in  the  exposed  cells  relative
+volumetric  capacitance,  Wd/L  indicates  the  channel  geometry                   to the control group. These cells exhibited no adverse eﬀects such
+with W,     L, and d standing for the channel width, length, and                    as  reduced  growth,  shrinkage,  or  membrane blebbing.  Fig. 2b
+thickness, Vth is the threshold voltage. The calculated gm ranges                   summarizes the relative cell viability after 1 day and 5 days of
+from 1.4 to 2.6 mS, yielding an average value of 2.07 /C6 0.20 mS                   exposure to various concentrations of a 64 channel-OECT array
+(Fig.  1e),  with  its  transconductance  distribution  across  the                 extract.  After  5  days  in  vitro, the relative  cell  viability exceeded
+1024-channel array shown in Fig. 1f.                                                100%   across   all   tested   concentrations,   indicating   the   non-
+   Compared to existing OECT arrays and other solution-gated                        cytotoxic nature of our vOECT materials.
+transistors   utilized   for   electrophysiology,   the   ultraflexible                 To evaluate the tissue response elicited by the vOECT array,
+vOECT array developed in this study demonstrates substantial                        we  implanted  a  64  channel,  ultraflexible  OECT  array  onto  the
+improvements  in  channel  number,  density,  and sensing  area                     somatosensory  cortex  of  C57  mice  for  12  weeks.  Following  the
+(Fig.  1g  and  Table  S1,  ESI†).10,33–39  The  transistor  density                implantation  period,  we  conducted  immunohistology  analyses  to
+achieved in this study, in particular, sets a new record among                      investigate  the  biological  reactions  to  the  implant.  We  employed
+all  solution-gated  transistor  arrays  applied  for  electrophysiol-              triple-label immunohistochemistry, utilizing antibodies against
+ogy and in vivo.                                                                    glial  fibrillary  acidic  protein  (GFAP),  40,6-diamidino-2-phenyl-
+   We further evaluated the bias stability and long-term storage                    indole (DAPI), and ionized calcium-binding adapter molecule 1
+stability  of  the  OECT  array.  Bias  stability  was  assessed  by                (Iba-1) to assess the activation states of glial cells at 12 weeks
+continuously sweeping the transfer curves a total of 80 times                       post-implantation.  The  Iba-1  immunohistochemistry  revealed
+at a maintained drain voltage (VD)of/C00.6 V using an Ag/AgCl                       the  presence  of  both  resting  ramified  microglia  and  round
+gate electrode (Fig. S2a, ESI†). After completing 80 cycles, the                    activated microglia beneath the control electrode (Fig. 2c). GFAP
+OECT retained over 92.6% of its initial drain current (ID) and                      labelling, indicative of the astroglial response, recapitulated the
+85.9%  of  peak  gm  (Fig.  S2b,  ESI†).  For  long-term  stability                 typical response observed after cranial surgery, showing astro-
+evaluation, the ultraflexible OECTs were stored in ambient air                      cytes with bifurcated morphology (Fig. 2d). DAPI is utilized to
+and in a 0.01 M phosphate buﬀer saline solution (PBS), respec-                      assess the presence and integrity of DNA in various cell types,
+tively,  at  room  temperature.  Transfer  curves were  recorded  at                which  assists  in  evaluating  cell  viability  and  the  response  to
+VD = /C00.6 V from time to time. After a storage period exceeding                   treatments (Fig. 2e). Quantitative analyses of the relative fluores-
+50 days, the devices remained more than 80% of their initial                        cence intensities for GFAP, Iba-1, and DAPI in comparison to the
+performance,  specifically  81.9%  of  the  initial  peak  gm  in  air              control group are depicted in Fig. 2f. There were no significant
+(Fig. S2c, ESI†) and 88.3% in PBS (Fig. S2d, ESI†). This suggests                   diﬀerences in the signal intensities of GFAP labelling of reactive
+a lifetime t80 – defined as the duration during which the devices                   astrocytes and Iba-1 labelling in the superficial layers between
+maintain  over  80%  of  their  initial  performance—longer  than                   the  two  hemispheres,  with  values  of  0.98  /C6  0.01  for  GFAP,
+50 days. Atomic force microscopic (AFM) images revealed swel-                       0.99  /C6  0.11  for  Iba-1,  and  0.74  /C6  0.11  for  DAPI.  Collectively,
+ling of the devices when stored in PBS, as indicated by a slight                    these findings suggest minimal cytological changes in the cortex
+increase in surface roughness (RMS) to 4.55 nm, compared to                         underlying  the  ECoG  array  over  the  duration  of  the  study,
+3.93  nm  observed  in  samples  stored  in  air  (Fig.  S3,  ESI†).                indicating a tolerable level of glial activity and preserved tissue
+Despite  these  morphological  changes,  the  phase  diagrams  of                   integrity in response to the implanted device.
+PEDOT remained stable, with alternating phases that contribute
+to  compact  packing  of  PEDOT  chains  and  maintained  stable                    In vivo validation
+conductivity even after 51 days of immersion in PBS.                                We then validate the eﬃcacy of the OECT array in ECoG signal
+   The response time (t), defined as the duration required for                      acquisition while facilitating data processing, using a relatively
+the OECT to respond to an applied input signal and stabilize its                    lower  density  8  /C2  8  array  for  signal  recording  and  chronic

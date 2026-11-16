@@ -1,0 +1,77 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+
+
+                                        SIGNAL ANALYSIS              CIRCUIT MODELING          Discerning crosstalk from volume conduction
+                                                                                               Electrocorticography  (ECoG)  maps  of  brain  activity  are  analyzed  and
+     Formulate hypothesis on             Analyse recorded                                      interpreted under the premise that signals originating in deeper cortical
+     crosstalk contamination             data against the
+                                           routing layout                                      layers  travel  up to  the  epicortical  surface  by volume  conduction.  The
+                                                                                               spatio-temporally averaged potentials that reach the surface are picked
+                                                                    Model recording            up by the electrodes,  resulting in  signal  amplitudes that are  inversely
+                                                                      system as a              proportional to the distance to the signal source19. Importantly, these
+                                                                    transmission line
+                                                                                               signals should remain unchanged up to digitization to provide a realistic
+                                                                    Compute transfer           representation  of  the  dynamics  of  the  underlying  cortical  activity.
+                                                                    function between
+                                                                  neighboring channels         However, as miniaturization of neural implants is pushed to the limit,
+                                                                                               with  clearances  between  lines  as  small  as  a  few  micrometers,  the
+                                                                   Create a crosstak           question  is  raised  whether  the  inevitable  increase  in  crosstalk  might
+                                                                     back-correction           result  in  distortion  of  signal  transmission  and,  consequently,  mis-
+                                                                        algorithm
+                                                                                               representation of the spatial maps of activity (Fig. 1). It is important to
+                                         Run algorithm on                                      highlight that the focus of this study is on the research question whether
+                                          recorded data                                        distortions  in the  electrophysiological  recordings  due to limited insu-
+                                                                                               lation resistance in the technical setup can be identiﬁed. The question of
+     Validate hypothesis on             Compare datasets                                       how volume conduction in biological tissues inﬂuences the signal shape
+     crosstalk contamination             before and after                                      and frequency component from the source to the transducer and how
+                                            correction
+                                                                                               superposition of spatio-temporally distributed signal sources in such an
+Fig. 2 | Step-by-step approach employed in this work. Hypothesis on crosstalk                  environment works is not the aim of this investigation.
+contamination is formulated by analyzing in vivo recorded data from rat brains                       Here, somatosensory evoked potentials (SEP) are measured epi-
+against the routing layout of a state-of-the-art recording system. Following the               durally from the cortical barrel ﬁeld of rat brains using a state-of-the-
+routing layout, a lumped-element model is derived and the transfer function                    art  conformable  polyimide-based  implant  featuring  a  four  by  four
+between neighboring channels computed for prediction of the crosstalk between                  array  of  platinum  microelectrode  disks,  each  with  a  50 µmradius
+them. A crosstalk back-correction algorithm original to this work is developed,                (Fig. 3a, b)6. The acquired signals are analyzed in two activity bands: the
+allowing to infer on how signals would look like under a zero-crosstalk scenario.              local ﬁeld potential (LFP) band (3–300 Hz), typical of traditional ECoG
+The recorded data is fed into the algorithm and signal characteristics before and              monitoring, and the multi-unit activity (MUA) band (above 300 Hz),
+after correction are compared to validate the hypothesis.                                      today accepted as part of the microECoG recording range.
+                                                                                                     The barrel C2, located among the four electrodes composing the
+spectroscopy measurements, serving as a tool to simulate the cross-                            top-left quadrant of the array (Fig. 3a), is activated by mechanical sti-
+talk expected in the system in a step-by-step approach (Fig. 2). Then, in                      mulation of the corresponding whisker and the resulting SEP and MUA
+order to estimate its actual impact on the spectra of acquired ECoG                            spike waveforms are  plotted  for  increasing  interelectrode  distance,
+signals,  simulated  coupling  levels  are used  to  develop an unprece-                       taking  electrode  1  (top-left  electrode  of  the  top-left  quadrant)  as
+dented algorithm for crosstalk back-correction of the recorded data.                           reference. SEP waveforms show higher amplitude for the electrodes
+The  algorithm  effectively  yields  a  decrease  in  coherence  between                       composing to the top-left quadrant, as expected due to closer proxi-
+closely wired channels, thus conﬁrming crosstalk suspicions.                                   mity  to  the  signal  source,  and  progressively  decay  for  increasingly
+      The prevalent trend is to dramatically increase electrode count                          distant electrodes (Fig. 3c). MUA activity follows the spatial distribu-
+and  density  in  neural  implants,  at  the  risk  of  hastily  assuming  its                 tion of the LFP activity: the higher the SEP amplitude, the higher the
+beneﬁt before setting boundaries on what are acceptable electrical                             spike counts and spike amplitude, thus conﬁrming that high-frequency
+coupling levels between channels. To address the issue, this work                              signals collected from the surface of the cortex are directly linked to
+provides general guidelines and methodologies to identify cues for                             deeper cortical processes.
+crosstalk  contamination  in  in  vivo  electrophysiological  data.  Cou-                            Nonetheless,   when   computing   the   spike   cross-correlation
+pling levels can vary tremendously, depending not only on the setup                            between channels, taking electrode 1 as reference, it becomes visible
+itself,  but  also  on  the  tissue-electrode  interface  developed  after                     that  electrode  5,  followed  by  electrode  9  and  13,  have  a  cross-
+implantation. Therefore, it is crucial to include crosstalk evaluation                         correlation  higher  than  that  predicted  by  spatial  signal  dispersion
+as  part  of  data  quality  control,  since  resulting  distortions  may                      (Fig. 3d). To further explore the issue, signal correlation is computed
+otherwise lead to spatial discrimination loss or, even worse, to data                          for signals acquired from four arrays implanted on four animals, con-
+misrepresentation and its erroneous interpretation as valid electro-                           sidering LPF and MUA bands separately. Plotting the correlation values
+physiological information.                                                                     for increasing interelectrode distance (taking electrode 1 as reference)
+                                                                                               conﬁrms  that  correlation  in  the  LFP  band  follows  the  principle  of
+Results                                                                                        volume conduction, as correlation between electrodes decreases with
+An important clariﬁcation should be made on the terminology used                               increasing distance (Fig. 3e). However, the same plot for the MUA band
+in this paper. The term  ‘reference’ (as in reference electrode) refers                        shows that, once again, correlation to electrodes 5, 9 and 13 are con-
+to the channel  against  which correlation and coherence  maps  are                            sistently boosted with respect to the overall trend (Fig. 3f). According
+computed.  Only  in  the  methodology  section,  under  speciﬁcally                            to the electrode arrangement (Fig. 3a), these three electrodes belong
+contextualized  subsections,  is  the  term  ‘reference’  used  to  differ-                    to the same column as electrode 1. In fact, the four electrodes com-
+entiate  reference  and  ground  electrodes  from  a  recording  conﬁg-                        posing each column of the array are wired adjacently throughout the
+uration  standpoint  (in  this  study,  these  are  shorted  as  unipolar                      recording  chain.  Thus,  the  correlation  values  strongly  point  to  the
+recordings  are  used)  or  to  differentiate  reference,  counter  and                        hypothesis  that they  are,  in  fact,  falsely  increased  due  to  crosstalk
+working electrodes in an electrochemical setup. Placement of refer-                            between neighboring channels.
+ence  and  ground  electrodes  signiﬁcantly  inﬂuences  interferences
+(i.e. capacitive and/or inductive coupling from external sources) into                         Recording system: from brain to ampliﬁer
+the whole experimental setup but does not contribute to the effects                            As a ﬁrst step to understand how crosstalk affects the spectrum of the
+that were investigated in this study.                                                          recorded  signals,  it  is  useful  to  estimate  the  electrical  coupling
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                             3

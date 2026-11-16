@@ -1,0 +1,50 @@
+17 Steinmetz, N. A. et al. Neuropixels 2.0: A miniaturized high-density probe for stable, long-
+        term brain recordings. Science           372, eabf4588 (2021).
+        https://doi.org/10.1126/science.abf4588
+18      Carmena, J. M. et al. Learning to Control a Brain–Machine Interface for Reaching and
+        Grasping by Primates. PLoS Biology          1, e42 (2003).
+        https://doi.org/10.1371/journal.pbio.0000042
+19 Hochberg, L. R. et al. Reach and grasp by people with tetraplegia using a neurally
+        controlled robotic arm. Nature 485, 372–375 (2012). https://doi.org/10.1038/nature11076
+20   Gilletti, A. & Muthuswamy, J. Brain micromotion around implants in the rodent
+        somatosensory cortex. Journal of Neural Engineering     3, 189 (2006).
+        https://doi.org/10.1088/1741-2560/3/3/001
+21      Biran, R., Martin, D. C. & Tresco, P. A. The brain tissue response to implanted silicon
+        microelectrode arrays is increased when the device is tethered to the skull. Journal of
+        Biomedical Materials Research Part A       82A, 169–178 (2007).
+        https://doi.org/10.1002/jbm.a.31138
+22      Schwarz, D. A. et al. Chronic, wireless recordings of large-scale brain activity in freely
+        moving rhesus monkeys. Nature Methods       11, 670–676 (2014).
+        https://doi.org/10.1038/nmeth.2936
+23 Zhou, A. et al. A wireless and artefact-free 128-channel neuromodulation device for
+        closed-loop stimulation and recording in non-human primates. Nature Biomedical
+        Engineering 3, 15–26 (2018). https://doi.org/10.1038/s41551-018-0323-x
+24 Topalovic, U. et al. A wearable platform for closed-loop stimulation and recording of
+        single-neuron and local field potential activity in freely moving humans. Nature
+        Neuroscience (2023). https://doi.org/10.1038/s41593-023-01260-4
+25        Oxley, T. J. et al. Minimally invasive endovascular stent-electrode array for high-fidelity,
+        chronic recordings of cortical neural activity. Nature Biotechnology 34, 320–327 (2016).
+        https://doi.org/10.1038/nbt.3428
+26      Benabid, A. L. et al. An exoskeleton controlled by an epidural wireless brain–machine
+        interface in a tetraplegic patient: a proof-of-concept demonstration. The Lancet Neurology
+        18, 1112–1122 (2019). https://doi.org/10.1016/s1474-4422(19)30321-7
+27      Musk, E. An Integrated Brain-Machine Interface Platform With Thousands of Channels.
+        Journal of Medical Internet Research 21, e16194 (2019). https://doi.org/10.2196/16194
+28     Hariz, M. I. Complications of deep brain stimulation surgery. Movement Disorders 17,
+        S162–S166 (2002). https://doi.org/10.1002/mds.10159
+29 Jitkritsadakul, O. et al. Systematic review of hardware-related complications of Deep Brain
+        Stimulation: Do new indications pose an increased risk? Brain Stimulation 10, 967–976
+        (2017). https://doi.org/10.1016/j.brs.2017.07.003
+30 Zeng, N. et al. in 2023 IEEE Symposium on VLSI Technology and Circuits    1–2 (2023).
+31    Harrison, R. R. & Charles, C. A low-power, low-noise CMOS amplifier for neural
+        recording applications. IEEE Journal of Solid-State Circuits   38, 958–965 (2003).
+        https://doi.org/10.1109/JSSC.2003.811979
+32 Zhang, M. et al. Wireless Compact Neural Interface for Freely Moving Animal Subjects:
+        A Review on Wireless Neural Interface SoC Designs. IEEE Solid-State Circuits Magazine
+        15, 20–29 (2023). https://doi.org/10.1109/mssc.2023.3312227
+33         Weiland, J. D., Anderson, D. J. & Humayun, M. S. In vitro electrical properties for iridium
+        oxide versus titanium nitride stimulating electrodes. Biomedical Engineering, IEEE
+        Transactions on 49, 1574–1579 (2002). https://doi.org/10.1109/TBME.2002.805487
+
+
+                                                     66

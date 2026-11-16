@@ -1,0 +1,85 @@
+                       This article has been accepted for publication in IEEE Transactions on Biomedical Circuits and Systems. This is the author's version which has not been fully edited and
+                                               content may change prior to final publication. Citation information: DOI 10.1109/TBCAS.2024.3366649
+                                                                                                                                                                             11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Fig. 15 PSD measurement results of the proposed 16-channel neural recording system with simultaneous injected sinusoid input signals. All injected signals are
+ factors of: Aa = 1 mV, Ab = 1 mV, fa = 50 Hz, f b = 0.1 Hz. The signal amplitude is annotated by AS, the electrode offset is AE, the fs is the signal frequency, and
+ fE is the electrode offset frequency. The PSD plots are input-referred signals to the AFE input ports; the output signal codes are divided by the ADC and
+ amplifier gains (210´199.5).
+
+is 0.001787 µm2. The analog and digital modules are supplied
+by VDD of 1.2 V, and the total current consumption for all 16                                           −𝟏𝟓𝟑.𝟏𝟔𝒅𝑩⁄√𝑯𝒛       −𝟏𝟒𝟕.𝟏𝟓𝒅𝑩⁄√𝑯𝒛
+                                                                                                            𝟐.𝟏𝟗𝝁𝑽             𝟒.𝟐𝟕𝝁𝑽𝒓𝒎𝒔
+channels  is 75.6       µA.  The  digital  module  consumes 28.4                 µA                                𝒓𝒎𝒔
+                                                                                                                              −𝟏𝟒𝟎.𝟐𝒅𝑩⁄√𝑯𝒛
+from a 0.9 V supply, whereas the amplifier, the ADC and the                                                                     𝟗.𝟓𝟓𝝁𝑽𝒓𝒎𝒔
+DACs  consume  25.79            µA,  17.05 µA,  4.36 µA,  respectively,
+from a 1.2 V supply.  The lowest common mode rejection ratio
+(CMRR)  is  67.2  dB  with            ±50    mV  injected  EOV.  Without
+choppers,  the  CMRR  is  degraded  to  60.4  dB.  The  lowest
+measured power supply rejection ratio (PSRR) is 68 dB.
+  The SAR ADC runs at a 2.56 MSps speed, Fig. 13 shows the
+2048-FFT points power spectral density (PSD) of a 1.03 Vpp
+injected full-scale test signal at 1.24625 MHz. The measured
+SNR is 58.31 dB and SNDR is 56.83 dB resulting in ENOB 9.1
+bits.  Fig.   14   shows  the  SAR  ADC  measured  integral  non-                                           −𝟏𝟓𝟎.𝟐𝟐𝒅𝑩⁄√𝑯𝒛
+linearity (INL) and differential non-linearity (DNL).                                                           𝟑.𝟎𝟕𝝁𝑽𝒓𝒎𝒔
+  A 2048-FFT point PSD measurement of all 16 channels are
+measured  for  LFP  and  AP  bands  in              Fig.   15.  Due  to  limited                                            −𝟏𝟒𝟒. 𝟔 𝒅𝑩⁄√𝑯𝒛
+                                                                                                                              𝟓.𝟖𝟖𝝁𝑽𝒓𝒎𝒔
+number of IC pads, the inputs of channels (4, 12), (5, 13), (6,
+14), (7, 15), (8, 16) are shorted on the pads of this test IC. CH1
+is only injected with an EOV signal to measure the noise floor
+of the system, which is found to be to 2.07 µVrms for the AP
+band, and 2.4 µVrms for the LFP band. The lowest measured                                             −𝟏𝟓𝟐.𝟑𝟖𝟑𝒅𝑩⁄√𝑯𝒛
+                                                                                                           𝟐.𝟒𝝁𝑽𝒓𝒎𝒔
+EOV attenuation is 54 dB with ±50 mV injected EOV.
+  The measured input impedance for the fastest injected signal
+in CH9 with frequency 9.3066 kHz is measured to be 176 kW
+without  the  impedance  booster  circuit,  and  7.25-MW                       with        Fig. 16 CH1 measured PSD for different chopping and MA-filter modes of
+impedance boosting. The noise floor PSD is measured for this                               operation.
+channel to be 2.19 µVrms for AP band, the increase indicates                              that there was at least one dropped sample out of a = 8 samples
+                                                                                          on average. With modern microelectrodes, such as those based
+
+
+
+        Authorized licensed use limited to: Univ of  Calif San Diego. Downloaded on February 25,2024 at 01:44:08 UTC from IEEE Xplore.  Restrictions apply.
+                       © 2024 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.

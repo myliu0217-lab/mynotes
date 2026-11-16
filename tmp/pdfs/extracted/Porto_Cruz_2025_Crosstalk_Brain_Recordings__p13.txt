@@ -1,0 +1,75 @@
+Article                                                                                                                                                                        https://doi.org/10.1038/s41467-025-59391-0
+
+
+     challenges of an underestimated component. J. neural Eng. 16,                            Laboratory for Microelectronics at IMTEK, University of Freiburg for the
+     61002 (2019).                                                                            support developing the two-line electrical model.
+12.   Boehler, C., Carli, S., Fadiga, L., Stieglitz, T. & Asplund, M. Tutorial:
+     Guidelines for standardized performance tests for electrodes                             Author contributions
+     intended for neural interfaces and bioelectronics. Nat. Protoc. 15,                      M.F.P.C. wrote the paper; M.F.P.C., M.V., T.S. and L.F. conceptualized the
+     3557–3578 (2020).                                                                        work; M.F.P.C., E.Z. and M.V., designed the experiments; M.F.P.C., E.Z.
+13.    Du, J., Blanche, T. J., Harrison, R. R., Lester, H. A. & Masmanidis, S. C.             and I.G.V. acquired, analyzed and interpreted data; M.F.P.C., E.Z., A.P.,
+     Multiplexed, high density electrophysiology with nanofabricated                          E.D. and M.DL. developed the algorithm; M.F.P.C. and A.P. implemented
+     neural probes. PloS ONE 6, e26204 (2011).                                                the algorithm; E.Z., M.V., A.P., I.G.V., E.D., M.DL., M.A., L.F. and T.S.
+14.   Najaﬁ, K., Ji, J. & Wise, K. D. Scaling limitations of silicon                          revised the paper; M.A., L.F. and T.S. provided scientiﬁc advice; L.F. and
+     multichannel recording probes. IEEE Trans. Biomed. Eng. 37,                              T.S. funded the work.
+     1–11 (1990).
+15.    Du, J. et al. High-resolution three-dimensional extracellular                          Funding
+     recording of neuronal activity with microfabricated electrode                            Open Access funding enabled and organized by Projekt DEAL.
+     arrays. J. Neurophysiol. 101,1671–1678 (2009).
+16.   Seidl, K. et al. CMOS-Based high-density silicon microprobe arrays                      Competing interests
+     for electronic depth control in intracortical neural recording–                          The authors declare no competing interests.
+     characterization and application. Microelectromechanical systems.
+     J. Microelectromech. Syst. 21,1426–1435 (2012).                                          Additional information
+17.   Nelson, M. J., Valtcheva, S. & Venance, L. Magnitude and behavior                       Supplementary information The online version contains
+     of cross-talk effects in multichannel electro-physiology experi-                         supplementary material available at
+     ments. J. Neurophysiol. 118,574–594 (2017).                                              https://doi.org/10.1038/s41467-025-59391-0.
+18.   Qiang, Y. et al. Crosstalk in polymer microelectrode arrays. Nano
+     Res. 14,3240–3247 (2021).                                                                Correspondence and requests for materials should be addressed to
+19. Buzsáki,G.,Anastassiou,C.A.&Koch,C.Theoriginofextracellular                               Maria F. Porto Cruz or Thomas Stieglitz.
+     ﬁelds and currents-EEG, ECoG, LFP and spikes. Nat. Rev. Neurosci.
+     13,407–420 (2012).                                                                       Peer review information Nature Communications thanks Yashwanth
+20.   Ramon, C., Garguilo, P., Fridgeirsson, E. A. & Haueisen, J. Changes                     Vyza, Hans Kleemann, and the other, anonymous, reviewer(s) for
+     in scalp potentials and spatial smoothing effects of inclusion of                        their contribution to the peer review of this work. A peer review ﬁle is
+     dura layer in human head models for EEG simulations. Front. Neu-                         available.
+     roeng. 7,32(2014).
+21.    Newman, J. Resistance for ﬂow of current to a disk. J. Electrochem.                    Reprints and permissions information is available at
+     Soc. 113, 501 (1966).                                                                    http://www.nature.com/reprints
+22.   Dorigo, D. D. et al. Fully immersible subcortical neural probes with
+     modular architecture and a delta-sigma ADC integrated under each                         Publisher’s note Springer Nature remains neutral with regard to jur-
+     electrode for parallel readout of 144 recording Sites,. IEEE J. Solid-                   isdictional claims in published maps and institutional afﬁliations.
+     State Circuits 53, 3111–3125 (2018).
+23.   Di Lauro, M. et al. A novel biasing scheme of electrolyte-gated                         Open Access This article is licensed under a Creative Commons
+     organic transistors for safe in vivo ampliﬁcation of electro-                            Attribution 4.0 International License, which permits use, sharing,
+     physiological signals. Adv. Mater. Interfaces 9, 2101798 (2022).                         adaptation, distribution and reproduction in any medium or format, as
+24. Lewis,C.M.etal.Recordingqualityissystematicallyrelatedto                                  long as you give appropriate credit to the original author(s) and the
+     electrode impedance. Adv. Healthc. Mater. 13, 2303401 (2024).                            source, provide a link to the Creative Commons licence, and indicate if
+                                                                                              changes were made. The images or other third party material in this
+Acknowledgements                                                                              article are included in the article’s Creative Commons licence, unless
+This work was supported by the BrainLinks-BrainTools program, which was                       indicated otherwise in a credit line to the material. If material is not
+funded by the German Research Foundation (DFG, Grant No. EXC 1086)                            included in the article’s Creative Commons licence and your intended
+and is currently funded by the Federal Ministry of Economics, Science and                     use is not permitted by statutory regulation or exceeds the permitted
+Arts of Baden-Württemberg within the sustainability program for projects                      use, you will need to obtain permission directly from the copyright
+of the excellence initiative II. This work was also partially supported by                    holder. To view a copy of this licence, visit http://creativecommons.org/
+PNRR-POC-2022-12376380 to L.F. This project has received funding from                         licenses/by/4.0/.
+the European Union's Horizon-EIC-2022-Pathﬁnder Open program under
+grant agreement No. 101099366 (BioFINE). Funding goes to M.A. and T.S.                        © The Author(s) 2025
+The authors would like to thank Dr.-Ing. Daniel De Dorigo from the
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nature Communications |         (2025) 16:4744                                                                                                                                                     13

@@ -1,0 +1,8 @@
+Supplementary Fig. 18. Somatosensory evoked potential (SSEP) recording from porcine
+model. (a) Trial averaged (n = 100) SSEPs evoked from five different stimulation locations. Blue
+curves indicate the mean; shaded area indicates SD. (b) Stimulation current amplitude (2.79 Hz,
+pulse width 0.3 ms) applied to each location, and total number of SSEP trials recorded from each
+location. (c) Representation of mean responses in (a) aligned on the same time axis.
+
+
+                                                         45

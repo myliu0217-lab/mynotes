@@ -1,0 +1,77 @@
+patented under US patent 11617890, issued on 4 April 2023, and                                  Reprints and permissions information is available at
+exclusively licensed to Kampto from Columbia University. The other                              www.nature.com/reprints.
+authors declare no competing interests.
+                                                                                                Publisher’s note Springer Nature remains neutral with
+Additional information                                                                          regard to jurisdictional claims in published maps and institutional
+Extended data is available for this paper at                                                    affiliations.
+https://doi.org/10.1038/s41928-025-01509-9.
+                                                                                                Springer Nature or its licensor (e.g. a society or other
+Supplementary information The online version                                                    partner) holds exclusive rights to this article under a
+ contains supplementary material available at                                                   publishing agreement with the author(s) or other
+https://doi.org/10.1038/s41928-025-01509-9.                                                     rightsholder(s); author self-archiving of the accepted
+                                                                                                manuscript version of this article is solely governed by the
+Correspondence and requests for materials should be addressed to                                terms of such publishing agreement and applicable
+Andreas Tolias or Kenneth L. Shepard.                                                           law.
+
+Peer review information                     Nature Electronics thanks the anonymous             © The Author(s), under exclusive licence to Springer Nature Limited
+reviewers for their contribution to the peer review of this work.                               2025
+
+
+
+Taesung Jung             1,26, Nanyu Zeng            1,2,26, Jason D. Fabbri           1, Guy Eichler          3, Zhe Li       4,5,6, Erfan Zabeh           7, Anup Das          7,
+Konstantin Willeke4,5,6,8, Katie E. Wingel9,10, Agrita Dubey                               9,10, Rizwan Huq1, Mohit Sharma1, Yaoxing Hu1,
+Girish Ramakrishnan1, Kevin Tien1, Paolo Mantovani3, Abhinav Parihar                                           1, Heyu Yin         1, Denise Oswalt10,11,12,
+Alexander Misdorp                 3, Ilke Uguz1, Tori Shinn13, Gabrielle J. Rodriguez4,5,6, Cate Nealley                                 4,5,6, Tjitse van der Molen               14,15,
+Sophia Sanborn5,6, Ian Gonzales16, Michael Roukes                                 17,18,19, Jeffrey Knecht20, Kenneth S. Kosik14,15, Daniel Yoshor10,
+Peter Canoll           21, Eleonora Spinazzi              16, Luca P. Carloni            3, Bijan Pesaran9,10,11,12, Saumil Patel                 4,5,6, Joshua Jacobs            22,
+Brett Youngerman                16, R. James Cotton23,24, Andreas Tolias                       4,5,6,13,25   & Kenneth L. Shepard                  1,7,16
+
+
+
+
+
+1Department of Electrical Engineering, Columbia University, New York, NY, USA. 2Kampto Neurotech LLC, Troy, NY, USA. 3Department of Computer
+Science, Columbia University, New York, NY, USA. 4Department of Ophthalmology, Byers Eye Institute, Stanford University, Stanford, CA, USA. 5Stanford
+Bio-X, Stanford University, Stanford, CA, USA. 6Wu Tsai Neurosciences Institute, Stanford University, Stanford, CA, USA. 7Department of Biomedical
+Engineering, Columbia University, New York, NY, USA. 8Institute of Computer Science and Campus Institute Data Science, University of Göttingen,
+Göttingen, Germany. 9Center for Neural Science, New York University, New York, NY, USA. 10Department of Neurosurgery, University of Pennsylvania,
+Philadelphia, PA, USA. 11Department of Neuroscience, University of Pennsylvania, Philadelphia, PA, USA. 12Department of Bioengineering, University of
+Pennsylvania, Philadelphia, PA, USA. 13Center for Neuroscience and Artificial Intelligence, Department of Neuroscience, Baylor College of Medicine,
+Houston, TX, USA. 14Neuroscience Research Institute, University of California Santa Barbara, Santa Barbara, CA, USA. 15Department of Molecular, Cellular
+and Developmental Biology, University of California Santa Barbara, Santa Barbara, CA, USA. 16Department of Neurological Surgery, Columbia University,
+New York, NY, USA. 17Department of Applied Physics, Caltech, Pasadena, CA, USA. 18Department of Physics, Caltech, Pasadena, CA, USA. 19Department
+of Bioengineering, Caltech, Pasadena, CA, USA. 20Lincoln Laboratory, Massachusetts Institute of Technology, Lexington, MA, USA. 21Department of
+Pathology and Cell Biology, Columbia University, New York, NY, USA. 22Department of Neurology and Neuroscience Institute, University of Chicago,
+Chicago, IL, USA. 23Shirley Ryan Ability Labs, Chicago, IL, USA. 24Department of Physical Medicine and Rehabilitation, Northwestern University, Chicago,
+IL, USA. 25Department of Electrical Engineering, Stanford University, Stanford, CA, USA. 26These authors contributed equally: Taesung Jung, Nanyu Zeng.
+    e-mail: tolias@stanford.edu;       shepard@ee.columbia.edu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nature Electronics | Volume 8 | December                                                    2025 | 1272–1288                                                                                                                                                                                      1288
