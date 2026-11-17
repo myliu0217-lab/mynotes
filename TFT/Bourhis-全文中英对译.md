@@ -52,7 +52,9 @@ In this work, we present a fully monolithic flexible integrated circuit (FIC) pl
 
 Flexible Thin Film Integrated Circuit Platform for Neural Sensing Inspired by active-matrix organic light emitting diode (AMOLED) display technology, we developed a monolithic thin film transistor fabrication process enabling fully integrated flexible neural interfaces on biocompatible polyimide substrates ( Fig. 1). Our platform employs dual-gate amorphous indium gallium zinc oxide (a-IGZO) TFTs, selected for their exceptional electron mobility (~10-20 cm2/Vs), low-temperature processing compatibility (deposited at <=200°C), and substrate-agnostic fabrication. Unlike typical silicon-based approaches, which require post-fabrication transfer or aggressive thinning, the fabrication process (Supplementary Fig. 1) produces inherently flexible circuits without compromising hermetic encapsulation (Supplementary Fig. 2-5) or introducing mechanical failure modes associated with brittle semiconductors. Furthermore, the monolithic fabrication process allows for greater design flexibility compared to heterogeneous integration strategies which may, for example, rely on thick inorganic layers to mitigate seam or void formation around transferred layers. A monolithic fabrication strategy on the other hand can achieve much finer feature size and superior morphological feature control.
 
-**结果与讨论｜用于神经感测的柔性薄膜集成电路平台：**
+**结果与讨论**
+
+**用于神经信号传感的柔性薄膜集成电路平台**
 
 作者借鉴 AMOLED 技术，在生物相容的聚酰亚胺基底上开发单片 TFT 制程。所用双栅 a-IGZO TFT 具有约 10–20 cm²/(V·s) 的电子迁移率，可在不高于约 200 °C 的温度沉积，并适用于不同基底。与先制造硅器件再转移或极薄化的路径相比，该工艺直接形成柔性电路；单片方式还可避免异质器件转移接缝附近为防止空隙而引入较厚无机层，并有利于更小特征尺寸和形貌控制。
 
@@ -89,6 +91,10 @@ Benchtop characterization in phosphate-buffered saline using broadband chirp exc
 - 2 输入参考噪声如何计算得出
 - 3 电路结构？当前电路结构是否完全参考2025年的文章 二硫化钼
 - 4 电路中提到增加伪电阻和耦合电容是什么（阅读补充图8和9）
+![alt text](Bourhis-全文中英对译-images/image.png)
+
+A-B)  ixel circuit for depletion-mode TFTs and DC-coupled measurement. C-D)  ixel circuit for enhancement-mode TFTs – necessitating pull-down switch architecture and pseudo-resistor with coupling capacitor to set DC bias.  
+
 
 </span>
 
@@ -96,7 +102,9 @@ Benchtop characterization in phosphate-buffered saline using broadband chirp exc
 
 Thin Film Encapsulation and TFT Optimizations for Long-term Active Implants Hermetic encapsulation represents one of the most significant challenges for flexible active implants, as conventional thin-film polymers exhibit water vapor transmission rates (WVTR) orders of magnitude higher than their bulk-material counterparts. We developed a thin film encapsulation strategy employing polymer substrates and encapsulation layers together with conformal atomic layer deposited high-quality ceramic inter-layers which encapsulate sensitive electronic devices within the FIC. To validate long-term reliability of our hybrid ALD Al2O3/polyimide encapsulation strategy, we conducted accelerated aging studies at 50°C in phosphate-buffered saline solution with continuous +5V DC bias stress applied between the metal patterns and the surrounding saline over a 388-day period (Fig. 2 A-H). Three encapsulated metal test patterns (Fig. 2A) were monitored via electrochemical impedance spectroscopy throughout the accelerated aging study (Fig. 2G). As shown in Fig. 2H, the impedance magnitude of the insulation at 1kHz declined gradually over the year-long study. Based on fitting a linear degradation model to this data and extrapolating to a failure threshold of one order of magnitude below the initial 1kHz impedance magnitude, we project a lifetime of ~15.4 years at the 50°C and +5V stress conditions. Applying an Arrhenius acceleration factor of ~2.5x yields an estimated operational lifetime exceeding ~38.5 years - far surpassing the requirements for clinical semi-chronic neural interfaces and demonstrating a clear translational pathway for the proposed thin film encapsulation methodology.
 
-**薄膜封装与 TFT 优化：**柔性有源植入的一大难点是密封：常规薄膜聚合物的水汽透过率比块材高多个数量级。作者采用聚合物基底/封装层与高质量 ALD 陶瓷中间层构成屏障，并在 50 °C PBS 中对金属图形与周围盐水之间施加连续 +5 V 直流应力，进行 388 天加速老化实验。共测试了三种封装金属样片。作者在整个加速老化期间用电化学阻抗谱监测三种封装金属测试图形。1 kHz 绝缘阻抗幅值在一年中逐渐降低。以线性退化模型拟合，并把失效阈值定义为初始 1 kHz 阻抗下降一个数量级，推得在 50 °C、+5 V 应力条件下的寿命约 15.4 年；再乘约 2.5 的 Arrhenius 加速系数，得到超过约 38.5 年的预计工作寿命。后者是模型外推，并非已完成 38.5 年的实测。
+**薄膜封装与 TFT 优化** 
+
+柔性有源植入的一大难点是密封：常规薄膜聚合物的水汽透过率比块材高多个数量级。作者采用聚合物基底/封装层与高质量 ALD 陶瓷中间层构成屏障，并在 50 °C PBS 中对金属图形与周围盐水之间施加连续 +5 V 直流应力，进行 388 天加速老化实验。共测试了三种封装金属样片。作者在整个加速老化期间用电化学阻抗谱监测三种封装金属测试图形。1 kHz 绝缘阻抗幅值在一年中逐渐降低。以线性退化模型拟合，并把失效阈值定义为初始 1 kHz 阻抗下降一个数量级，推得在 50 °C、+5 V 应力条件下的寿命约 15.4 年；再乘约 2.5 的 Arrhenius 加速系数，得到超过约 38.5 年的预计工作寿命——这远远超过临床半慢性神经接口的要求，并展现出所提出的薄膜封装方法清晰的转化路径。
 
 <small>原 PDF 第 7–8 页</small>
 
@@ -106,7 +114,11 @@ Thin Film Encapsulation and TFT Optimizations for Long-term Active Implants Herm
 
 Figure 2. Overview of FIC technology developments. A-B) photograph and optical microscope image inset for encapsulation test samples used in accelerated aging benchtop study. C-D) rendering and corresponding photograph of a PDMS-based accelerated aging soak chamber consisting of a heated saline well wherein the sample shown in panel B was immersed for over one year at 50°C. E-F) Corresponding cross-sectional rendering showing the expected insulation impedance of the imbedded metal leads, together with dummy electrode contacts which were used to assess morphological impacts of thin film encapsulation failure. G-H) Electrochemical impedance spectra and corresponding 1khz impedance magnitude plotted over the duration of the 388-day study. This study was conducted with a 5V DC bias applied across the insulation shown in panels E-F to simulate worst-case scenario of constant operation. I-J) TFT source/drain contact location and corresponding energy diagram as a function of gate bias. K) Transfer curves measured for samples with Cr and Ti contacts before and after annealing. L) Corresponding device characteristics as function of channel length after annealing steps. M-N) Details on gate bias dependent contact resistance and barrier height highlighted for three plasma treatment conditions along with corresponding threshold voltages. O) Microscope image of test coupons used for reported measurements. P-Q) Transfer curves and capacitance-voltage curves for a set of different TFT architectures with details reported in Supplementary Fig. 14-16. Legend in panel P shows code corresponding to test coupons like that shown in panel O, where the letter corresponds to the column code and the number corresponds to the channel length.
 
-**图 2 图注：**FIC 技术开发概览。A–B：用于加速老化的样片照片和显微图。C–D：PDMS 浸泡腔示意和实物，样片在 50 °C 加热盐水中浸泡逾一年。E–F：嵌入金属线的绝缘截面与预期阻抗，以及用于观察封装失效形貌的虚设电极接点。G–H：388 天的电化学阻抗谱及 1 kHz 阻抗。该实验在绝缘层两端施加 5 V DC，以模拟持续工作的最不利情况。I–J：TFT 源漏接点位置及随栅偏置变化的能带示意。K：Cr 和 Ti 接点在退火前后的转移曲线。L：不同沟道长度器件的对应特性。M–N：三种等离子处理条件下，接触电阻、势垒高度的栅偏压依赖以及阈值电压。O：测试样片显微图。P–Q：不同 TFT 结构的转移曲线与电容–电压曲线；器件编号及结构细节见原文和其所引用的补充图。P 图图例中的字母对应图 2O 测试样片的列编号，数字对应沟道长度。
+**图 2 图注：** FIC 技术开发概览。A–B：用于加速老化的样片照片和显微图。C–D：PDMS 浸泡腔示意和实物，样片在 50 °C 加热盐水中浸泡逾一年。E–F：嵌入金属线的绝缘截面与预期阻抗，以及用于观察封装失效形貌的虚设电极接点。G–H：388 天的电化学阻抗谱及 1 kHz 阻抗。该实验在绝缘层两端施加 5 V DC，以模拟持续工作的最不利情况。I–J：TFT 源漏接点位置及随栅偏置变化的能带示意。K：Cr 和 Ti 接点在退火前后的转移曲线。L：不同沟道长度器件的对应特性。M–N：三种等离子处理条件下，接触电阻、势垒高度的栅偏压依赖以及阈值电压。O：测试样片显微图。P–Q：不同 TFT 结构的转移曲线与电容–电压曲线；器件编号及结构细节见原文和其所引用的补充图。P 图图例中的字母对应图 2O 测试样片的列编号，数字对应沟道长度。
+
+<span style="font-family: '宋体';color: #0000FF;">
+注：可以进行类似的加速老化实验
+</span>
 
 Scanning electron microscopy of the age-accelerated samples revealed surface contamination from the phosphate buffer and degraded thermocouple (Supplementary Fig. 4), but no visible delamination, cracking, pinhole defect propagation, or metal corrosion of the encapsulated traces was observed. The ALD alumina layers remained intact with no morphological changes evident, and the platinum dummy contacts from Pattern B (shown in Fig. 2A) appeared in good condition, with only occasional slight peeling at the edges of the contacts which was likely a result of surface scratching caused by intermittent handling during the study . The demonstrated longevity establishes that thin -film encapsulation, when properly engineered with high-quality conformal multi-layer ceramic/polymer stacks, can provide hermeticity at a level of robustness appropriate for implantable electronics applications while maintaining the mechanical compliance essential for highly scalable neural interfaces.
 
